@@ -89,15 +89,14 @@
                 <displayOrderInCategory>45</displayOrderInCategory>
                 <biostatMet>+1</biostatMet>
                 <statOffsets>
-                    <ShootingAccuracyPawn>-3</ShootingAccuracyPawn>
-                    <MeleeDodgeChance>-3</MeleeDodgeChance>
-                    <MeleeHitChance>-3</MeleeHitChance>
+                    <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
+                    <MeleeDodgeChance>-1.5</MeleeDodgeChance>
+                    <MeleeHitChance>-1.5</MeleeHitChance>
                     <TameAnimalChance>-0.1</TameAnimalChance>
                     <TrainAnimalChance>-0.1</TrainAnimalChance>
                 </statOffsets>
                 <exclusionTags>
                     <li>SuperPerceptions</li>
-                    <li>UnsuperAccuracies</li>
                 </exclusionTags>
             </GeneDef>
         </value>
@@ -143,13 +142,12 @@
                     <PawnTrapSpringChance>100</PawnTrapSpringChance>
                 </statFactors>
                 <statOffsets>
-                    <ShootingAccuracyPawn>-3</ShootingAccuracyPawn>
-                    <MeleeDodgeChance>-3</MeleeDodgeChance>
-                    <MeleeHitChance>-3</MeleeHitChance>
+                    <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
+                    <MeleeDodgeChance>-1.5</MeleeDodgeChance>
+                    <MeleeHitChance>-1.5</MeleeHitChance>
                 </statOffsets>
                 <exclusionTags>
                     <li>SuperPrecisions</li>
-                    <li>UnsuperAccuracies</li>
                 </exclusionTags>
             </GeneDef>
         </value>

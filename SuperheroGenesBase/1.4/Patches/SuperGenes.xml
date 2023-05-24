@@ -68,6 +68,7 @@
                 <preventPermanentWounds>true</preventPermanentWounds>
                 <biostatMet>-5</biostatMet>
                 <statFactors>
+                    <LifespanFactor>3</LifespanFactor>
                     <ImmunityGainSpeed>10</ImmunityGainSpeed>
                     <InjuryHealingFactor>10</InjuryHealingFactor>
                 </statFactors>
@@ -163,11 +164,11 @@
                 <capMods>
                   <li>
                     <capacity>Hearing</capacity>
-                    <offset>2.0</offset>
+                    <offset>1.0</offset>
                   </li>
                   <li>
                     <capacity>Sight</capacity>
-                    <offset>2.0</offset>
+                    <offset>1.0</offset>
                   </li>
                 </capMods>
                 <exclusionTags>
@@ -233,11 +234,11 @@
                 <capMods>
                   <li>
                     <capacity>Manipulation</capacity>
-                    <offset>2.0</offset>
+                    <offset>1.0</offset>
                   </li>
                   <li>
                     <capacity>Breathing</capacity>
-                    <offset>2.0</offset>
+                    <offset>1.0</offset>
                   </li>
                 </capMods>
                 <exclusionTags>
@@ -269,11 +270,11 @@
                 <capMods>
                   <li>
                     <capacity>BloodPumping</capacity>
-                    <offset>2.0</offset>
+                    <offset>1.0</offset>
                   </li>
                   <li>
                     <capacity>Breathing</capacity>
-                    <offset>2.0</offset>
+                    <offset>1.0</offset>
                   </li>
                   <li>
                     <capacity>Moving</capacity>
@@ -281,7 +282,7 @@
                   </li>
                   <li>
                     <capacity>Consciousness</capacity>
-                    <offset>2.0</offset>
+                    <offset>1.0</offset>
                   </li>
                 </capMods>
                 <exclusionTags>
