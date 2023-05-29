@@ -62,6 +62,7 @@
                 <description>Carriers of this gene are stronger and faster than almost any other xenotype. These enhancements alone are enough that there are some who believe those with this genes are actually demigods, using their existence to prove their religion correct.</description>
                 <iconPath>SuperheroGeneBase</iconPath>
                 <displayOrderInCategory>-999</displayOrderInCategory>
+                <foodPoisoningChanceFactor>0.01</foodPoisoningChanceFactor>                    
                 <biostatMet>0</biostatMet>
                 <statFactors>
                     <LifespanFactor>3</LifespanFactor>
