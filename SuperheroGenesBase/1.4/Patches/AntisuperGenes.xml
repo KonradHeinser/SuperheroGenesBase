@@ -39,8 +39,8 @@
                     <InjuryHealingFactor>.1</InjuryHealingFactor>
                 </statFactors>
                 <statOffsets>
-                    <ImmunityGainSpeed>.9</ImmunityGainSpeed>
-                    <InjuryHealingFactor>.1</InjuryHealingFactor>
+                    <ImmunityGainSpeed>-.1</ImmunityGainSpeed>
+                    <InjuryHealingFactor>-.1</InjuryHealingFactor>
                 </statOffsets>
                 <capMods>
                   <li>
