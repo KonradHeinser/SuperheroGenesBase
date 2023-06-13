@@ -16,6 +16,8 @@
             <ArmorRating_Blunt>-0.1</ArmorRating_Blunt>
             <ArmorRating_Sharp>-0.1</ArmorRating_Sharp>
             <ArmorRating_Heat>-0.1</ArmorRating_Heat>
+            <ComfyTemperatureMin>20</ComfyTemperatureMin>
+            <ComfyTemperatureMax>-20</ComfyTemperatureMax>
         </statOffsets>
         <exclusionTags>
             <li>SuperDurabilities</li>
