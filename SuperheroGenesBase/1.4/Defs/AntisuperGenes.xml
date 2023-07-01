@@ -4,7 +4,7 @@
         <defName>AntisuperDurability</defName>
         <label>antisuper durability</label>
         <description>This pawn's skin is abnormally fragile. So fragile that any decent attack could potentially kill them, and they would need some good armor counteract this problem.</description>
-        <iconPath>AntisuperDurability</iconPath>
+        <iconPath>Base/AntisuperDurability</iconPath>
         <prerequisite>UnsuperDurability</prerequisite>
         <displayOrderInCategory>3</displayOrderInCategory>
         <biostatMet>+3</biostatMet>
@@ -22,7 +22,7 @@
         <defName>AntisuperHealing</defName>
         <label>antisuper healing</label>
         <description>The natural antibodies and hemoglobin in the bloodstream of this pawn are far weaker than they are for even normal pawns. In fact, they are so low that this pawn must take extra precautions to never get sick or injured, lest they be bedridden for weeks.</description>
-        <iconPath>AntisuperHealing</iconPath>
+        <iconPath>Base/AntisuperHealing</iconPath>
         <prerequisite>UnsuperHealing</prerequisite>
         <displayOrderInCategory>23</displayOrderInCategory>
         <biostatMet>+5</biostatMet>
@@ -54,7 +54,7 @@
         <defName>AntisuperIntelligence</defName>
         <label>antisuper intelligence</label>
         <description>Carriers of this gene have smoother brains than normal pawns, drastically reducing the rate that they can take in and use new information.</description>
-        <iconPath>AntisuperIntelligence</iconPath>
+        <iconPath>Base/AntisuperIntelligence</iconPath>
         <prerequisite>UnsuperIntelligence</prerequisite>
         <displayOrderInCategory>33</displayOrderInCategory>
         <biostatMet>+3</biostatMet>
@@ -70,7 +70,7 @@
         <defName>AntisuperPerception</defName>
         <label>antisuper perception</label>
         <description>Heroes with this gene have issues perceiving things that even normal humans find painfully obvious to see.</description>
-        <iconPath>AntisuperPerception</iconPath>
+        <iconPath>Base/AntisuperPerception</iconPath>
         <prerequisite>UnsuperPerception</prerequisite>
         <displayOrderInCategory>43</displayOrderInCategory>
         <biostatMet>+2</biostatMet>
@@ -95,7 +95,7 @@
         <defName>AntisuperPersuasion</defName>
         <label>antisuper persuasion</label>
         <description>Carriers of this gene became hideously deformed thanks to their superhero gene, and their ability to speak has suffered as well.</description>
-        <iconPath>AntisuperPersuasion</iconPath>
+        <iconPath>Base/AntisuperPersuasion</iconPath>
         <prerequisite>UnsuperPersuasion</prerequisite>
         <displayOrderInCategory>53</displayOrderInCategory>
         <biostatMet>+4</biostatMet>
@@ -120,7 +120,7 @@
         <defName>AntisuperPrecision</defName>
         <label>antisuper precision</label>
         <description>Carriers of this gene are exceptionally clumsy, prone to dropping things while they work, and missing even the largest of foes when the carrier attacks.</description>
-        <iconPath>AntisuperPrecision</iconPath>
+        <iconPath>Base/AntisuperPrecision</iconPath>
         <prerequisite>UnsuperPrecision</prerequisite>
         <displayOrderInCategory>63</displayOrderInCategory>
         <biostatMet>+4</biostatMet>
@@ -143,7 +143,7 @@
         <defName>AntisuperSpeed</defName>
         <label>antisuper speed</label>
         <description>Carriers of this gene are slow, painfully slow. They may have issues keeping up with a one-legged human.</description>
-        <iconPath>AntisuperSpeed</iconPath>
+        <iconPath>Base/AntisuperSpeed</iconPath>
         <prerequisite>UnsuperSpeed</prerequisite>
         <displayOrderInCategory>73</displayOrderInCategory>
         <biostatMet>+2</biostatMet>
@@ -171,7 +171,7 @@
         <defName>AntisuperStrength</defName>
         <label>antisuper strength</label>
         <description>This pawn is pitifully weak. Their backs are too weak to carry anything heavy, and their strikes in melee combat are barely noticeable.</description>
-        <iconPath>AntisuperStrength</iconPath>
+        <iconPath>Base/AntisuperStrength</iconPath>
         <prerequisite>UnsuperStrength</prerequisite>
         <displayOrderInCategory>83</displayOrderInCategory>
         <biostatMet>+3</biostatMet>

@@ -4,7 +4,7 @@
         <defName>SuperDurability</defName>
         <label>super durability</label>
         <description>One of the most simplistic abilities super heroes often have, and yet it's also one of the most terrifying. Carriers of this gene are almost completely immune to damage. From clubs to flamethrowers to shotguns, only the luckiest will even pierce this hero's skin.</description>
-        <iconPath>SuperDurability</iconPath>
+        <iconPath>Base/SuperDurability</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>7</displayOrderInCategory>
         <biostatMet>-3</biostatMet>
@@ -25,7 +25,7 @@
         <defName>SuperGluttony</defName>
         <label>super gluttony</label>
         <description>Heroes with this gene feel a constant hunger deep inside, and fulfilling that hunger allows them to store far more food than normal, which results in them being able to go longer without food.</description>
-        <iconPath>SuperGluttony</iconPath>
+        <iconPath>Base/SuperGluttony</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>-3</displayOrderInCategory>
         <biostatMet>-1</biostatMet>
@@ -48,7 +48,7 @@
         <defName>SuperHealing</defName>
         <label>super healing</label>
         <description>Instant death may stop this hero in their tracks, anything less will heal quickly. This gene also provides immunity to many permanent effects and ailments that come with old age.</description>
-        <iconPath>SuperHealing</iconPath>
+        <iconPath>Base/SuperHealing</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <geneClass>Gene_Clotting</geneClass>
         <displayOrderInCategory>27</displayOrderInCategory>
@@ -97,8 +97,8 @@
     <GeneDef ParentName="SuperGeneBase">
         <defName>SuperIntelligence</defName>
         <label>super intelligence</label>
-        <description>Carriers of this gene have extremely efficient brains that make neurocalculators look like a glorified abacus. This efficiency also grants them a higher control of their body, thus increasing their ability to control their bodies and observe their environment.</description>
-        <iconPath>SuperIntelligence</iconPath>
+        <description>Carriers of this gene have extremely efficient brains that make a neurocalculator look like a glorified abacus. This efficiency also grants them a higher control of their body, thus increasing their ability to control their bodies and observe their environment.</description>
+        <iconPath>Base/SuperIntelligence</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>37</displayOrderInCategory>
         <biostatMet>-4</biostatMet>
@@ -129,7 +129,7 @@
         <defName>SuperPerception</defName>
         <label>super perception</label>
         <description>Heroes with this gene have hyperactive senses that allows them to observe their environment far better than most should be able to.</description>
-        <iconPath>SuperPerception</iconPath>
+        <iconPath>Base/SuperPerception</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>47</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
@@ -157,7 +157,7 @@
         <defName>SuperPersuasion</defName>
         <label>super persuasion</label>
         <description>Every part of this pawn is designed to win over people, from their appearance to their communication skills.</description>
-        <iconPath>SuperPersuasion</iconPath>
+        <iconPath>Base/SuperPersuasion</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>57</displayOrderInCategory>
         <biostatMet>-4</biostatMet>
@@ -187,7 +187,7 @@
         <defName>SuperPrecision</defName>
         <label>super precision</label>
         <description>The accuracy and control of this pawn is unmatched by even the best snipers and warriors the empire has ever made. Every step, move, and even breath is completely controlled, allowing carriers of this gene to dodge the undodgeable, and hit the unhittable.</description>
-        <iconPath>SuperPrecision</iconPath>
+        <iconPath>Base/SuperPrecision</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>67</displayOrderInCategory>
         <biostatMet>-4</biostatMet>
@@ -217,7 +217,7 @@
         <defName>SuperSpeed</defName>
         <label>super speed</label>
         <description>Carriers of this gene can move so quickly that even horses cannot keep up. They move several times faster than normal pawns, and can often take down unarmored foes before they have a chance to react.</description>
-        <iconPath>SuperSpeed</iconPath>
+        <iconPath>Base/SuperSpeed</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>77</displayOrderInCategory>
         <biostatMet>-5</biostatMet>
@@ -256,7 +256,7 @@
         <defName>SuperStrength</defName>
         <label>super strength</label>
         <description>One hit from this pawn can cause exceptional damage, and not only can they carry more than an elephant, they can carry multiple elephants at the same time.</description>
-        <iconPath>SuperStrength</iconPath>
+        <iconPath>Base/SuperStrength</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>87</displayOrderInCategory>
         <biostatMet>-6</biostatMet>
