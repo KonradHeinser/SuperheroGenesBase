@@ -18,6 +18,7 @@
     <li>Ludeon.RimWorld.Royalty</li>
     <li>Ludeon.RimWorld.Ideology</li>
     <li>Ludeon.RimWorld.Biotech</li>
+    <li>ceteam.combatextended</li>
   </loadAfter>
 
   <description>
@@ -35,6 +36,8 @@ This mod won't add the ability to turn invisible, shoot fire, or fly, mostly bec
 [url=https://steamcommunity.com/id/alite/myworkshopfiles/?appid=294100]Easy link to all of my Rimworld mods[/url]
 [url=https://github.com/KonradHeinser/SuperheroGenesBase][img]https://i.imgur.com/kTkpTOE.png[/img][/url]
 [url=https://ko-fi.com/alite56114][img]https://i.imgur.com/Utx6OIH.png[/img][/url]
+
+For those who are wondering, yes, I have added a CE compatibility patch.
 
 The primary types added by this mod are durability, healing, intelligence, perception, persuasion, precision, speed, and strength. These types contain genes that affect various stats and capacities conceptually related to the category. For example, durability alters a pawn's defenses while intelligence improves the rate that the pawn gets research and hacking points. Because many of these genes affect a wide range of things, I'm not going to write all of their effects here. The Superhero Genes category should be near the top of the list in the xenotype editor, so ideally it won't be too hard for everyone to find them.
 
