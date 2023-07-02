@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SHG_Prey"]/statFactors/IncomingDamageFactor</xpath>
+                <value>
+                    <IncomingDamageFactor>2</IncomingDamageFactor>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="AntisuperDurability"]/statFactors/IncomingDamageFactor</xpath>
+                <value>
+                    <IncomingDamageFactor>1.4</IncomingDamageFactor>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperDurability"]/statOffsets</xpath>
+                <value>
+                    <statOffsets>
+                        <ArmorRating_Blunt>100</ArmorRating_Blunt>
+                        <ArmorRating_Sharp>100</ArmorRating_Sharp>
+                        <ArmorRating_Heat>1</ArmorRating_Heat>
+                    </statOffsets>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SHG_SuperDenseBones"]/statOffsets/ArmorRating_Blunt</xpath>
+                <value>
+                    <ArmorRating_Blunt>100</ArmorRating_Blunt>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperHeroBase"]/statOffsets/ArmorRating_Blunt</xpath>
+                <value>
+                    <ArmorRating_Blunt>10</ArmorRating_Blunt>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="UnsuperDurability" or defName="AntisuperDurability"]/statOffsets/ArmorRating_Blunt</xpath>
+                <value>
+                    <ArmorRating_Blunt>-10</ArmorRating_Blunt>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperHeroBase"]/statOffsets/ArmorRating_Sharp</xpath>
+                <value>
+                    <ArmorRating_Sharp>10</ArmorRating_Sharp>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="UnsuperDurability" or defName="AntisuperDurability"]/statOffsets/ArmorRating_Sharp</xpath>
+                <value>
+                    <ArmorRating_Sharp>-10</ArmorRating_Sharp>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SHG_GhostlyPresence" or defName="SHG_Prey"]/statFactors/MeleeDodgeChance</xpath>
+                <value>
+                    <MeleeDodgeChance>1.125</MeleeDodgeChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperHeroBase"]/statOffsets/MeleeDodgeChance</xpath>
+                <value>
+                    <MeleeDodgeChance>0.1</MeleeDodgeChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="UnsuperPerception"]/statOffsets/MeleeDodgeChance</xpath>
+                <value>
+                    <MeleeDodgeChance>-0.05</MeleeDodgeChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="UnsuperPrecision"]/statOffsets/MeleeDodgeChance</xpath>
+                <value>
+                    <MeleeDodgeChance>-0.05</MeleeDodgeChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperHeroBase"]/statOffsets/MeleeHitChance</xpath>
+                <value>
+                    <MeleeHitChance>0.2</MeleeHitChance>
+                    <MeleeParryChance>0.2</MeleeParryChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="UnsuperPerception"]/statOffsets/MeleeHitChance</xpath>
+                <value>
+                    <MeleeHitChance>-0.1</MeleeHitChance>
+                    <MeleeParryChance>-0.1</MeleeParryChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="UnsuperPrecision"]/statOffsets/MeleeHitChance</xpath>
+                <value>
+                    <MeleeHitChance>-0.1</MeleeHitChance>
+                    <MeleeParryChance>-0.1</MeleeParryChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperSpeed"]/statOffsets</xpath>
+                <value>
+                    <statOffsets>
+                        <AimingDelayFactor>-2.5</AimingDelayFactor>
+                    </statOffsets>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperHeroBase"]/statOffsets/AimingDelayFactor</xpath>
+                <value>
+                    <AimingDelayFactor>-0.05</AimingDelayFactor>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="UnsuperSpeed"]/statOffsets/AimingDelayFactor</xpath>
+                <value>
+                    <AimingDelayFactor>0.05</AimingDelayFactor>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="AntisuperSpeed"]/statOffsets/AimingDelayFactor</xpath>
+                <value>
+                    <AimingDelayFactor>5</AimingDelayFactor>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SHG_Predator"]/statFactors/ShootingAccuracyPawn</xpath>
+                <value>
+                    <ShootingAccuracyPawn>1.8</ShootingAccuracyPawn>
+                    <AimingAccuracy>1.75</AimingAccuracy>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperHeroBase"]/statOffsets/ShootingAccuracyPawn</xpath>
+                <value>
+                    <ShootingAccuracyPawn>1</ShootingAccuracyPawn>
+                    <AimingAccuracy>0.75</AimingAccuracy>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="UnsuperPerception"]/statOffsets/ShootingAccuracyPawn</xpath>
+                <value>
+                    <ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+                    <AimingAccuracy>-0.35</AimingAccuracy>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="UnsuperPrecision"]/statOffsets/ShootingAccuracyPawn</xpath>
+                <value>
+                    <ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+                    <AimingAccuracy>-0.35</AimingAccuracy>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperHeroBase" or defName="SHG_Berserker"]/statFactors/IncomingDamageFactor</xpath>
+                <value>
+                    <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="UnsuperDurability"]/statFactors/IncomingDamageFactor</xpath>
+                <value>
+                    <IncomingDamageFactor>1.11</IncomingDamageFactor>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperHeroBase"]/statFactors/PawnTrapSpringChance</xpath>
+                <value>
+                    <PawnTrapSpringChance>0.1</PawnTrapSpringChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="UnsuperPrecision"]/statFactors/PawnTrapSpringChance</xpath>
+                <value>
+                    <PawnTrapSpringChance>10</PawnTrapSpringChance>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperHeroBase"]/statFactors/StaggerDurationFactor</xpath>
+                <value>
+                    <StaggerDurationFactor>0.9</StaggerDurationFactor>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="UnsuperSpeed"]/statFactors/StaggerDurationFactor</xpath>
+                <value>
+                    <StaggerDurationFactor>1.11</StaggerDurationFactor>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperHeroBase"]/statOffsets</xpath>
+                <value>
+                    <CarryBulk>50</CarryBulk>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="UnsuperStrength"]/statOffsets</xpath>
+                <value>
+                    <CarryBulk>-50</CarryBulk>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperPerception"]/statFactors</xpath>
+                <value>
+                    <statFactors>
+                        <ShootingAccuracyPawn>1.66</ShootingAccuracyPawn>
+                        <AimingAccuracy>1.5</AimingAccuracy>
+                        <MeleeDodgeChance>1.1</MeleeDodgeChance>
+                        <MeleeHitChance>1.2</MeleeHitChance>
+                        <MeleeParryChance>1.2</MeleeParryChance>
+                    </statFactors>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="AntisuperPerception"]/statFactors</xpath>
+                <value>
+                    <statFactors>
+                        <ShootingAccuracyPawn>0.85</ShootingAccuracyPawn>
+                        <AimingAccuracy>0.9</AimingAccuracy>
+                        <MeleeDodgeChance>0.85</MeleeDodgeChance>
+                        <MeleeHitChance>0.85</MeleeHitChance>
+                        <MeleeParryChance>0.85</MeleeParryChance>
+                    </statFactors>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperPrecision"]/statFactors</xpath>
+                <value>
+                    <statFactors>
+                        <ShootingAccuracyPawn>2.33</ShootingAccuracyPawn>
+                        <AimingAccuracy>2</AimingAccuracy>
+                        <MeleeDodgeChance>1.15</MeleeDodgeChance>
+                        <MeleeHitChance>1.25</MeleeHitChance>
+                        <MeleeParryChance>1.25</MeleeParryChance>
+                        <PawnTrapSpringChance>0.1</PawnTrapSpringChance>
+                        <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                    </statFactors>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="AntisuperPrecision"]/statFactors</xpath>
+                <value>
+                    <statFactors>
+                        <ShootingAccuracyPawn>0.3</ShootingAccuracyPawn>
+                        <AimingAccuracy>0.4</AimingAccuracy>
+                        <MeleeDodgeChance>0.25</MeleeDodgeChance>
+                        <MeleeHitChance>0.25</MeleeHitChance>
+                        <MeleeParryChance>0.25</MeleeParryChance>
+                        <PawnTrapSpringChance>10</PawnTrapSpringChance>
+                        <IncomingDamageFactor>1.4</IncomingDamageFactor>
+                    </statFactors>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperSpeed"]/statFactors</xpath>
+                <value>
+                    <statFactors>
+                        <StaggerDurationFactor>0.1</StaggerDurationFactor>
+                        <MeleeDodgeChance>1.15</MeleeDodgeChance>
+                        <MeleeHitChance>1.25</MeleeHitChance>
+                        <MeleeParryChance>1.25</MeleeParryChance>
+                    </statFactors>
+                </value>
+            </li>
+
+            <li Class="PatchOperationReplace" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="AntisuperSpeed"]/statFactors</xpath>
+                <value>
+                    <statFactors>
+                        <StaggerDurationFactor>4</StaggerDurationFactor>
+                        <MeleeDodgeChance>0.25</MeleeDodgeChance>
+                        <MeleeHitChance>0.25</MeleeHitChance>
+                        <MeleeParryChance>0.25</MeleeParryChance>
+                    </statFactors>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="SuperStrength"]/statFactors</xpath>
+                <value>
+                    <CarryBulk>100</CarryBulk>
+                </value>
+            </li>
+
+            <li Class="PatchOperationAdd" MayRequire="ceteam.combatextended">
+                <xpath>Defs/GeneDef[defName="AntisuperStrength"]/statFactors</xpath>
+                <value>
+                    <CarryBulk>0.1</CarryBulk>
+                </value>
+            </li>
+        </operations>
+    </Operation>  
+</Patch>
