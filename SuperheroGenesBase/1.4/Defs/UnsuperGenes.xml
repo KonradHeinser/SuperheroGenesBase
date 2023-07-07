@@ -96,7 +96,6 @@
             <Beauty>-5</Beauty>
             <SocialImpact>-0.5</SocialImpact>
             <NegotiationAbility>-0.5</NegotiationAbility>
-            <TradePriceImprovement>-0.5</TradePriceImprovement>
             <ConversionPower MayRequire="ludeon.rimworld.ideology">-0.5</ConversionPower>
         </statOffsets>
         <exclusionTags>

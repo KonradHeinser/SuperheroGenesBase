@@ -245,6 +245,7 @@
         <displayOrderInCategory>11</displayOrderInCategory>
         <statFactors>
             <ResearchSpeed>10</ResearchSpeed>
+            <MechBandwidth>3</MechBandwidth>
             <HackingSpeed MayRequire="ludeon.rimworld.ideology">10</HackingSpeed>
             <DrugSynthesisSpeed>10</DrugSynthesisSpeed>
             <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
@@ -260,6 +261,7 @@
         <displayOrderInCategory>12</displayOrderInCategory>
         <statFactors>
             <PruningSpeed MayRequire="Ludeon.RimWorld.Ideology">10</PruningSpeed>
+            <MeditationFocusGain MayRequire="Ludeon.RimWorld.Royalty">3</MeditationFocusGain>
             <PlantWorkSpeed>10</PlantWorkSpeed>
             <AnimalGatherSpeed>10</AnimalGatherSpeed>
             <WorkSpeedGlobal>0.5</WorkSpeedGlobal>

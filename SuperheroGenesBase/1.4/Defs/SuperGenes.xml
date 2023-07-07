@@ -165,7 +165,6 @@
             <Beauty>5</Beauty>
             <SocialImpact>3</SocialImpact>
             <NegotiationAbility>3</NegotiationAbility>
-            <TradePriceImprovement>3</TradePriceImprovement>
             <ConversionPower MayRequire="ludeon.rimworld.ideology">3</ConversionPower>
         </statFactors>
         <capMods>
