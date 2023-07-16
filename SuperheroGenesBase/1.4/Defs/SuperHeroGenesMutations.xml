@@ -125,7 +125,7 @@
             </li>
         </capMods>
         <exclusionTags>
-            <li>Aggression</li>
+            <li>Aggressive</li>
             <li>SuperSpeeds</li>
             <li>SuperMutations</li>
         </exclusionTags>
@@ -146,7 +146,7 @@
             <MeleeDamageFactor>2</MeleeDamageFactor>
         </statFactors>
         <exclusionTags>
-            <li>Aggression</li>
+            <li>Aggressive</li>
             <li>SuperStrengths</li>
             <li>SuperMutations</li>
         </exclusionTags>
@@ -188,6 +188,7 @@
             <MeleeDamageFactor>2</MeleeDamageFactor>
         </statFactors>
         <exclusionTags>
+            <li>Aggressive</li>
             <li>Aggression</li>
             <li>SuperMutations</li>
         </exclusionTags>
