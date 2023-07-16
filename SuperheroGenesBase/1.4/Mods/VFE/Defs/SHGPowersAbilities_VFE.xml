@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Flight</defName>
+        <label>faster flight</label>
+        <description>Push yourself to fly even faster than before.</description>
+        <iconPath>Powers/Gene_Flight</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>10000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>1</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Soaring</hediffDef>
+                <onlyBrain>True</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

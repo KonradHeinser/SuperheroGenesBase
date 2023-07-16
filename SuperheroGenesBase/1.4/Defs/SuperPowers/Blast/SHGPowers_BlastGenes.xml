@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersFireBase">
+        <defName>SHG_FireBlast</defName>
+        <label>fire blast</label>
+        <description>Supers with this power are able to summon a ball of fire that explodes to leave fuel all over the ground.\n\nThis doesn't render you immune to fire, so remember to get protection.\n\nThis ability was developed to give supers a method to deal with a large number enemies quickly. The original version of this gene was so destructive that it had to be intentionally weakened to avoid destroying everything in an area similar to an antigrain warhead.</description>
+        <iconPath>Projectiles/Projectile_FireBall</iconPath>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <abilities>
+            <li>SHG_FireBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_FireBlast</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersAcidBase">
+        <defName>SHG_AcidBlast</defName>
+        <label>acid blast</label>
+        <description>Supers with this power are able to summon a blob of acid that explodes to leave a burning feeling on the skin.\n\nThis doesn't render you immune to acid, so remember to get protection.\n\nThis ability was developed to give supers a method to deal with a large number enemies quickly. The original version of this gene was so destructive that it had to be intentionally weakened to avoid destroying everything in an area similar to an antigrain warhead.</description>
+        <iconPath>Projectiles/Projectile_AcidBall</iconPath>
+        <displayOrderInCategory>11</displayOrderInCategory>
+        <abilities>
+            <li>SHG_AcidBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_AcidBlast</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersLightningBase">
+        <defName>SHG_LightningBlast</defName>
+        <label>lightning blast</label>
+        <description>Supers with this power are able to summon a ball of lightning that explodes to cause damage to both flesh and electronics.\n\nThis ability was developed to give supers a method to deal with a large number enemies quickly. The original version of this gene was so destructive that it had to be intentionally weakened because it took far to much energy from the super to activate.</description>
+        <iconPath>Projectiles/Projectile_LightningBall</iconPath>
+        <displayOrderInCategory>21</displayOrderInCategory>
+        <abilities>
+            <li>SHG_LightningBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_LightningBlast</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersIceBase">
+        <defName>SHG_IceBlast</defName>
+        <label>ice blast</label>
+        <description>Supers with this power are able to summon a ball of ice explodes to rapidly freeze opponents.\n\nThis doesn't render you immune to ice, so remember to get protection.\n\nThis ability was developed to give supers a method to deal with a large number enemies quickly. The original version of this gene was so destructive that it had to be intentionally weakened to avoid destroying everything in an area similar to an antigrain warhead.</description>
+        <iconPath>Projectiles/Projectile_IceBall</iconPath>
+        <displayOrderInCategory>31</displayOrderInCategory>
+        <abilities>
+            <li>SHG_IceBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_IceBlast</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersToxicBase">
+        <defName>SHG_ToxBlast</defName>
+        <label>toxic blast</label>
+        <description>Supers with this power are able to summon a ball of poison explodes to create a cloud that inflicts toxic buildup.\n\nThis doesn't render you immune to toxins, so remember to get protection.\n\nThis ability was developed to give supers a method to deal with a large number enemies quickly. The original version of this gene was so destructive that it had to be intentionally weakened to avoid contaminating a large area for an extended period of time.</description>
+        <iconPath>Projectiles/Projectile_ToxicBall</iconPath>
+        <displayOrderInCategory>41</displayOrderInCategory>
+        <abilities>
+            <li>SHG_ToxBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_ToxBlast</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersEMPBase">
+        <defName>SHG_EMPBlast</defName>
+        <label>emp blast</label>
+        <description>Supers with this power are able to summon a ball of electricity that will explode and disable various electronics in an area. This ball is not strong enough to cause damage.\n\nThis ability was developed to give supers a method to deal with a large number enemies quickly. The original version of this gene was so destructive that it had to be intentionally weakened because it took far to much energy from the super to activate.</description>
+        <iconPath>Projectiles/Projectile_LightningBall</iconPath>
+        <displayOrderInCategory>51</displayOrderInCategory>
+        <abilities>
+            <li>SHG_EMPBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_EMPBlast</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersFoamBase">
+        <defName>SHG_FoamBlast</defName>
+        <label>foam blast</label>
+        <description>Supers with this power are able to summon a ball of foam that will explode and douse flames and prevent the area from catching on fire.\n\nThis ability was developed to give supers a method to deal with a large number enemies quickly. The original version of this gene was so destructive that it had to be intentionally weakened because it took far to much energy from the super to activate.</description>
+        <iconPath>Projectiles/Projectile_FoamBall</iconPath>
+        <displayOrderInCategory>61</displayOrderInCategory>
+        <abilities>
+            <li>SHG_FoamBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_FoamBlast</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+</Defs>

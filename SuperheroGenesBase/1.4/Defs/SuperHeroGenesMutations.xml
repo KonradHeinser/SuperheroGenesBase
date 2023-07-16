@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperMutationsBase">
+        <defName>SHG_DoubleHearted</defName>
+        <label>double hearted</label>
+        <description>A second heart rests in their chest, pumping more blood in exchange for stopping the lungs from working at full capacity. Should this pawn die, this heart will be consumed to bring them back to life. It takes around 15 days for it to return to its full function.\n\nIn the long run, their partially-immortal nature makes them perfect for leaving a lasting legacy about saving the colony from certain doom. In the short-term, watching this pawn die multiple times is quite tramatizing for all of their friends.</description>
+        <geneClass>SuperHeroGenesBase.Gene_DoubleHearted</geneClass>
+        <iconPath>Mutations/DoubleHearted</iconPath>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>Adds a Second Heart hediff that gives +100% Blood Pumping and Breathing is multiplied by 0.7.</li>
+        </customEffectDescriptions>
+        <exclusionTags>
+            <li>SuperHealings</li>
+            <li>SuperMutations</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperMutationsBase">
+        <defName>SHG_SuperPsychicPotential</defName>
+        <label>super psychic potential</label>
+        <description>Latent within this pawn is a psychic sensitivity that makes them twice as capable of manipulating psychic things than any other. Unfortunately, this also means that their weakness to psychic phenomenon is greater than it is for most heroes.\n\nDue to the fact that they are exceptionally vulnerable to psychic effects, they must take care of their mental health constantly lest they be driven insane by an errant psychic drone. Despite this major issue, their attunement to psychic forces makes them exceptional Mechinators and Gauranlen keepers.</description>
+        <iconPath>Mutations/SuperPsychicPotential</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <statFactors>
+            <MechBandwidth>2</MechBandwidth>
+            <PruningSpeed MayRequire="Ludeon.RimWorld.Ideology">2</PruningSpeed>
+            <PsychicSensitivity>5</PsychicSensitivity>
+            <MeditationFocusGain MayRequire="Ludeon.RimWorld.Royalty">2</MeditationFocusGain>
+            <PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">2</PsychicEntropyRecoveryRate>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperMutationsBase">
+        <defName>SHG_SuperDenseBones</defName>
+        <label>super dense bones</label>
+        <description>The bones of this super are nigh unbreakable, rendering this pawn nigh immune to blunt damage as most blunt attacks simply bounce off this pawn. This increased density makes it more difficult for the pawn to move around though.\n\nAll super, unsuper, and antisuper genes function by creating a large pool of life force that is rearranged to perform specific functions. Genes like this function by taking the portion of a life pool that was dedicated for altering a specific area of the pawn, in this case the pawn's durability.</description>
+        <iconPath>Mutations/SuperDenseBones</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <statOffsets>
+            <ArmorRating_Blunt>1</ArmorRating_Blunt>
+        </statOffsets>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <offset>-.1</offset>
+            </li>
+            <li>
+                <capacity>Moving</capacity>
+                <offset>-.1</offset>
+            </li>
+        </capMods>
+        <exclusionTags>
+            <li>SuperDurabilities</li>
+            <li>SuperMutations</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperMutationsBase">
+        <defName>SHG_Blindsight</defName>
+        <label>blindsight</label>
+        <description>This superhero is permanently blind, but their hearing is enhanced threefold and bodily control is enhanced twofold.\n\nA complete lack of vision makes it exceptionally difficult for this super to do what normal people do, and this frequently results in them being viewed as a lesser super. Right up until those people get into a fist fight with them, and find them to be disturbingly accurate for a blind person. Especially if the super has artificial parts helping them.</description>
+        <iconPath>Mutations/Blindsight</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>4</displayOrderInCategory>
+        <capMods>
+            <li>
+                <capacity>Sight</capacity>
+                <setMax>0</setMax>
+            </li>
+            <li>
+                <capacity>Hearing</capacity>
+                <postFactor>3</postFactor>
+            </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>2</postFactor>
+            </li>
+            <li>
+                <capacity>Moving</capacity>
+                <postFactor>2</postFactor>
+            </li>
+        </capMods>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperMutationsBase">
+        <defName>SHG_GhostlyPresence</defName>
+        <label>ghostly presence</label>
+        <description>Whether they want it or not, this super always ends up being difficult to notice. This makes them a lot harder to hit in melee combat, and far more stealthy while hunting, but their ability to communicate with others in greatly diminished.\n\nMost supers with this gene end up becoming assassins and hunters because of how difficult it is to notice them. Some of the less reputable nobles use them as bodyguards, loving to watch others die by this super's hands after failing to notice that the noble was not actually unprotected.</description>
+        <iconPath>Mutations/GhostlyPresence</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>5</displayOrderInCategory>
+        <statFactors>
+            <MeleeDodgeChance>2</MeleeDodgeChance>
+            <HuntingStealth>2</HuntingStealth>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Talking</capacity>
+                <offset>-.75</offset>
+            </li>
+        </capMods>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperMutationsBase">
+        <defName>SHG_Prey</defName>
+        <label>prey</label>
+        <description>This super fears combat instinctively, and their body is built for running away from anything that seeks to harm them.\n\nAll super, unsuper, and antisuper genes function by creating a large pool of life force that is rearranged to perform specific functions. Genes like this function by taking the portion of a life pool that was dedicated for altering a specific area of the pawn, in this case the pawn's speed.</description>
+        <iconPath>Mutations/Prey</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>6</displayOrderInCategory>
+        <socialFightChanceFactor>0</socialFightChanceFactor>
+        <aggroMentalBreakSelectionChanceFactor>0</aggroMentalBreakSelectionChanceFactor>
+        <statFactors>
+            <MeleeDodgeChance>2</MeleeDodgeChance>
+            <IncomingDamageFactor>1.5</IncomingDamageFactor>
+            <MeleeDamageFactor>0.5</MeleeDamageFactor>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Moving</capacity>
+                <postFactor>2</postFactor>
+            </li>
+        </capMods>
+        <exclusionTags>
+            <li>Aggressive</li>
+            <li>SuperSpeeds</li>
+            <li>SuperMutations</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperMutationsBase">
+        <defName>SHG_Predator</defName>
+        <label>predator</label>
+        <description>This super loves a hunt, and instinctively knows the best way to take down a target. Unfortunately this aggressive nature also extends into their social life.\n\nAll super, unsuper, and antisuper genes function by creating a large pool of life force that is rearranged to perform specific functions. Genes like this function by taking the portion of a life pool that was dedicated for altering a specific area of the pawn, in this case the pawn's strength.</description>
+        <iconPath>Mutations/Predator</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>7</displayOrderInCategory>
+        <socialFightChanceFactor>3</socialFightChanceFactor>
+        <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
+        <statFactors>
+            <HuntingStealth>2</HuntingStealth>
+            <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+            <MeleeDamageFactor>2</MeleeDamageFactor>
+        </statFactors>
+        <exclusionTags>
+            <li>Aggressive</li>
+            <li>SuperStrengths</li>
+            <li>SuperMutations</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperMutationsBase">
+        <defName>SHG_AdrenalineJunkie</defName>
+        <label>adrenaline junkie</label>
+        <description>This super loves a challenge, and challenging fights are the best challenge of all. All pain does is make them want to hit harder, and just to ensure their enemy can put up a good fight they won't even bother dodging.\n\nDue to their nature, adrenaline junkie supers often require Super Durability or Super Healings to survive. Of course, not having those isn't an issue, it just increases the thrill of the fight.</description>
+        <iconPath>Mutations/AdrenalineJunkie</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <causesNeed>KillThirst</causesNeed>
+        <displayOrderInCategory>8</displayOrderInCategory>
+        <painFactor>0</painFactor>
+        <statFactors>
+            <MeleeDodgeChance>0</MeleeDodgeChance>
+            <MeleeDamageFactor>2</MeleeDamageFactor>
+        </statFactors>
+        <exclusionTags>
+            <li>KillThirst</li>
+            <li>SuperMutations</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperMutationsBase">
+        <defName>SHG_Berserker</defName>
+        <label>berserker</label>
+        <description>This super feels a call for violence, a beast inside constantly yearning for release. It takes much less to make them snap, and when they do, they will keep swinging until their body gives out.\n\nWhile nobody knows when the first berserker super appeared, it is commonly believed that they came into existence accidentally when someone tried to combine the superhero gene with a hussar. Since the acclaimed incident, the superhero gene was stabilized considerably to avoid further surprises.</description>
+        <iconPath>Mutations/Berserker</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>9</displayOrderInCategory>
+        <painFactor>0</painFactor>
+        <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
+        <statOffsets>
+            <MentalBreakThreshold>0.15</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+            <IncomingDamageFactor>0.75</IncomingDamageFactor>
+            <MeleeDamageFactor>2</MeleeDamageFactor>
+        </statFactors>
+        <exclusionTags>
+            <li>Aggressive</li>
+            <li>SuperMutations</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperMutationsBase">
+        <defName>SHG_MadGenius</defName>
+        <label>mad genius</label>
+        <description>This pawn has an extreme level of intelligence that ends up making them alienate themselves from everyone else. They simply don't get why the simpletons around them just can't understand them, and it frustrates them greatly.\n\nAll super, unsuper, and antisuper genes function by creating a large pool of life force that is rearranged to perform specific functions. Genes like this function by taking the portion of a life pool that was dedicated for altering a specific area of the pawn, in this case the pawn's intelligence.</description>
+        <iconPath>Mutations/MadGenius</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>10</displayOrderInCategory>
+        <statOffsets>
+            <MentalBreakThreshold>0.15</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+            <ResearchSpeed>2</ResearchSpeed>
+            <DrugSynthesisSpeed>2</DrugSynthesisSpeed>
+            <GlobalLearningFactor>2</GlobalLearningFactor>
+            <LearningRateFactor>2</LearningRateFactor>
+            <HackingSpeed MayRequire="ludeon.rimworld.ideology">2</HackingSpeed>
+            <SocialImpact>0.5</SocialImpact>
+            <NegotiationAbility>0.5</NegotiationAbility>
+            <TradePriceImprovement>0.5</TradePriceImprovement>
+            <ConversionPower MayRequire="ludeon.rimworld.ideology">0.5</ConversionPower>
+        </statFactors>
+        <exclusionTags>
+            <li>SuperIntelligences</li>
+            <li>SuperMutations</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperMutationsBase">
+        <defName>SHG_Technophile</defName>
+        <label>technophile</label>
+        <description>This super has a love for technology and new advanced things that crosses the line into obsession. In fact, their obsession is so great that they would rather leave work to drones and robots, so they can get back to their technology.\n\nThe first supers with the technophile mutation were believed to be exceptionally lazy as they were being tested upon. Then one of those supers built a bomb that destroyed most of the facility using random things in their cell, and the general scientific community decided to not perform experiments on these supers.</description>
+        <iconPath>Mutations/Technophile</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>11</displayOrderInCategory>
+        <statFactors>
+            <ResearchSpeed>10</ResearchSpeed>
+            <MechBandwidth>3</MechBandwidth>
+            <HackingSpeed MayRequire="ludeon.rimworld.ideology">10</HackingSpeed>
+            <DrugSynthesisSpeed>10</DrugSynthesisSpeed>
+            <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperMutationsBase">
+        <defName>SHG_Naturalist</defName>
+        <label>naturalist</label>
+        <description>This super loves nature, from pruning and farming to animal handling. They feel uncomfortable working on anything that isn't nature based though.\n\nWhile their genetics does not cause them to innately hate urban areas and large groups of people, the destruction of wildlife that comes with those often creates the hatred just as easily.</description>
+        <iconPath>Mutations/Naturalist</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>12</displayOrderInCategory>
+        <statFactors>
+            <PruningSpeed MayRequire="Ludeon.RimWorld.Ideology">10</PruningSpeed>
+            <MeditationFocusGain MayRequire="Ludeon.RimWorld.Royalty">3</MeditationFocusGain>
+            <PlantWorkSpeed>10</PlantWorkSpeed>
+            <AnimalGatherSpeed>10</AnimalGatherSpeed>
+            <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+        </statFactors>
+    </GeneDef>
+</Defs>

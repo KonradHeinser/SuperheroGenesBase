@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_CommandAnimal</defName>
+        <label>command animal</label>
+        <description>Command an animal to fight for the colony for several hours.</description>
+        <iconPath>UI/Abilities/AnimalWarcall</iconPath>
+        <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+        <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+        <groupAbility>True</groupAbility>
+        <statBases>
+            <Ability_Duration>720</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <label>super's command</label>
+            <range>50</range>
+            <drawAimPie>True</drawAimPie>      
+            <requireLineOfSight>False</requireLineOfSight>
+            <warmupEffecter>AnimalWarcall_Warmup</warmupEffecter>
+            <targetParams>
+                <canTargetLocations>False</canTargetLocations>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetHumans>False</canTargetHumans>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetSelf>False</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveMentalState">
+                <compClass>CompAbilityEffect_GiveMentalState</compClass>
+                <stateDef>SHG_CommandAnimal</stateDef>
+                <goodwillImpact>-75</goodwillImpact>
+                <casterEffect>AnimalWarcall_Cast</casterEffect>
+                <targetEffect>AnimalWarcall_CastOnTarget</targetEffect>
+                <excludeNPCFactions>True</excludeNPCFactions>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_HeroicLeap</defName>
+        <label>heroic leap</label>
+        <description>Jump to a distant location.</description>
+        <iconPath>UI/Abilities/Longjump</iconPath>
+        <hostile>false</hostile>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityJump</verbClass>
+            <label>leap</label>
+            <violent>False</violent>
+            <forceNormalTimeSpeed>False</forceNormalTimeSpeed>
+            <range>40</range>
+            <requireLineOfSight>True</requireLineOfSight>
+            <soundCast>Longjump_Jump</soundCast>
+            <soundLanding>Longjump_Land</soundLanding>
+            <targetParams>
+                <canTargetLocations>True</canTargetLocations>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetBuildings>False</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+        <jobDef>CastJump</jobDef>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_SealWounds</defName>
+        <label>seal wounds</label>
+        <description>Seals a pawn's wounds to prevent further bleading.</description>
+        <iconPath>UI/Icons/Genes/Gene_Coagulate</iconPath>
+        <hostile>False</hostile>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <warmupMote>Mote_CoagulateStencil</warmupMote>
+        <warmupEffecter>Coagulate</warmupEffecter>
+        <warmupStartSound>Coagulate_Cast</warmupStartSound>
+        <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <label>heal</label>
+            <violent>False</violent>
+            <range>20</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <drawAimPie>False</drawAimPie>
+            <targetParams>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetBloodfeeders>True</canTargetBloodfeeders>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityCoagulate">
+                <tendQualityRange>0.98~0.99</tendQualityRange>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_ThrowSpike</defName>
+        <label>throw spike</label>
+        <description>Summon and throw a fast moving spike at a target.</description>
+        <iconPath>Powers/Gene_ThrowSpike</iconPath>
+        <aiCanUse>True</aiCanUse>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>30</range>
+            <soundCast>PiercingSpine_Launch</soundCast>
+        </verbProperties>
+        <comps>
+        <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>SHG_Spike</projectileDef>
+        </li>
+        </comps>
+    </AbilityDef>
+    <ThingDef ParentName="BaseBullet">
+        <defName>SHG_Spike</defName>
+        <label>summoned spike</label>
+        <graphicData>
+            <texPath>Things/Projectile/PiercingSpine</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.8</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>RangedStab</damageDef>
+            <damageAmountBase>5</damageAmountBase>
+            <armorPenetrationBase>1</armorPenetrationBase>
+            <stoppingPower>1</stoppingPower>
+            <speed>100</speed>
+        </projectile>
+    </ThingDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Revive</defName>
+        <label>revive</label>
+        <description>Revive a once living thing. This process takes a while to complete, and may be interrupted if the reviver is attacked.</description>
+        <iconPath>UI/Abilities/Resurrect</iconPath>
+        <warmupMote>Mote_ResurrectAbility</warmupMote>
+        <warmupStartSound>Resurrect_Cast</warmupStartSound>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <hostile>False</hostile>
+        <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>5</range>
+            <warmupTime>60</warmupTime>
+            <soundCast>Resurrect_Resolve</soundCast>
+            <targetParams>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetCorpses>False</canTargetCorpses>
+                <canTargetMechs>False</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_Resurrect" />
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Invisibility</defName>
+        <label>invisibility</label>
+        <description>Become invisible for some time. This is quite taxing on the body, so it can only be maintained for half an hour, and requires a few hours to recharge.</description>
+        <iconPath>UI/Abilities/Invisibility</iconPath>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <showCastingProgressBar>True</showCastingProgressBar>
+        <cooldownTicksRange>10000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>21</Ability_Duration>
+        </statBases>
+        <aiCanUse>true</aiCanUse>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <range>0.1</range>
+            <drawAimPie>False</drawAimPie>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Invisibility</hediffDef>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>PsycastPsychicEffect</fleckDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Blink</defName>
+        <label>blink</label>
+        <description>Teleport yourself randomly between 20 and 30 tiles away. This can be used to get yourself out of sticky situations quickly.</description>
+        <iconPath>UI/Abilities/SkipChaos</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <writeCombatLog>True</writeCombatLog>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <targetRequired>False</targetRequired>
+        <verbProperties>
+            <range>30</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityTeleport">
+                <compClass>CompAbilityEffect_Teleport</compClass>
+                <destination>RandomInRange</destination>
+                <randomRange>20~30</randomRange>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>10</clamorRadius>
+                <destClamorType>Ability</destClamorType>
+                <destClamorRadius>10</destClamorRadius>
+                <stunTicks>1~2</stunTicks>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Teleport</defName>
+        <label>teleport</label>
+        <description>Teleport a living thing to a desired position near where you currently stand.</description>
+        <iconPath>UI/Abilities/Skip</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <writeCombatLog>True</writeCombatLog>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <range>1</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityTeleport">
+                <compClass>CompAbilityEffect_Teleport</compClass>
+                <destination>Selected</destination>
+                <requiresLineOfSight>False</requiresLineOfSight>
+                <range>50</range>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>3</clamorRadius>
+                <destClamorType>Ability</destClamorType>
+                <destClamorRadius>3</destClamorRadius>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Gate</defName>
+        <label>open gate</label>
+        <description>Teleport yourself and everyone within 10 tiles to a distant location that has at least one colonist.</description>
+        <iconPath>UI/Abilities/Farskip</iconPath>
+        <hotKey>Misc12</hotKey>
+        <targetWorldCell>True</targetWorldCell>
+        <showGizmoOnWorldView>True</showGizmoOnWorldView>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <hostile>false</hostile>
+        <statBases>
+            <Ability_EffectRadius>10</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>10</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityFarskip">
+                <stunTicks>1~2</stunTicks>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>10</clamorRadius>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Rift</defName>
+        <label>open rift</label>
+        <description>Open a rift in the space time continuum that instantly teleports everyone within 200 tiles to a location that has at least one colonist.</description>
+        <iconPath>UI/Abilities/Farskip</iconPath>
+        <hotKey>Misc12</hotKey>
+        <targetWorldCell>True</targetWorldCell>
+        <showGizmoOnWorldView>True</showGizmoOnWorldView>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <hostile>false</hostile>
+        <statBases>
+            <Ability_EffectRadius>200</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>200</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityFarskip">
+                <stunTicks>1~2</stunTicks>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>10</clamorRadius>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

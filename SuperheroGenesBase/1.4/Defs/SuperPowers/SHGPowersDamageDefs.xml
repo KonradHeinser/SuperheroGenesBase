@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <DamageDef>
+        <defName>SHG_Lightning</defName>
+        <label>Lightning</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolenceForMechanoids>true</externalViolenceForMechanoids>
+        <deathMessage>{0} has been electrocuted to death.</deathMessage>
+        <makesBlood>false</makesBlood>
+        <impactSoundType>Electric</impactSoundType>
+        <hediff>Burn</hediff>
+        <defaultDamage>50</defaultDamage>
+        <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+        <explosionCellFleck>BlastEMP</explosionCellFleck>
+        <explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
+        <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+        <soundExplosion>Explosion_EMP</soundExplosion>
+        <combatLogRules>SHG_Damage_Lightning</combatLogRules>
+    </DamageDef>
+
+    <DamageDef>
+        <defName>SHG_Ice</defName>
+        <label>freezing</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>false</externalViolence>
+        <deathMessage>{0} has been frozen to death.</deathMessage>
+        <hediff>Frostbite</hediff>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+        <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+        <explosionCellFleck>BlastEMP</explosionCellFleck>
+        <explosionColorEdge>(0.0, 0.0, 0.8, 0.2)</explosionColorEdge>
+        <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+        <soundExplosion>Explosion_EMP</soundExplosion>
+        <combatLogRules>SHG_Damage_Ice</combatLogRules>
+    </DamageDef>
+
+    <DamageDef ParentName="Bullet">
+        <defName>SHG_ToxicBolt</defName>
+        <label>toxic bolt</label>
+        <additionalHediffs>
+            <li>
+                <hediff>ToxicBuildup</hediff>
+                <severityPerDamageDealt>0.015</severityPerDamageDealt>
+                <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+                <inverseStatScaling>true</inverseStatScaling>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+    </DamageDef>
+
+    <DamageDef>
+        <defName>SHG_ToxicCloud</defName>
+        <label>toxic burn</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>false</externalViolence>
+        <deathMessage>{0} has been poisoned to death.</deathMessage>
+        <hediff>AcidBurn</hediff>
+        <defaultDamage>1</defaultDamage>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+        <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+        <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+        <explosionColorEdge>(0.6, 0.8, 0.0, 0.2)</explosionColorEdge>
+        <soundExplosion>SHG_GasReleasing</soundExplosion>
+        <combatLogRules>Damage_Smoke</combatLogRules>
+        <additionalHediffs>
+            <li>
+                <hediff>ToxicBuildup</hediff>
+                <severityPerDamageDealt>0.1</severityPerDamageDealt>
+                <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+                <inverseStatScaling>true</inverseStatScaling>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+    </DamageDef>
+
+    <DamageDef>
+	    <defName>SHG_Beam</defName>
+        <label>superhero laser eyes beam</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has been beamed to death.</deathMessage>
+        <hediff>BeamWound</hediff>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <impactSoundType>Bullet</impactSoundType>
+        <armorCategory>Sharp</armorCategory>
+        <overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+        <isRanged>true</isRanged>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+        <defaultDamage>200</defaultDamage>
+        <defaultArmorPenetration>0.1</defaultArmorPenetration>
+    </DamageDef>
+</Defs>
+
+

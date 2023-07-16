@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Flight</defName>
+        <label>flight</label>
+        <description>Carriers of this gene are able to fly through the air, which can aid them greatly when travelling both short and long distances.\n\nWhile an infant, supers with this gene are still unable to fly around. However, as they age they quickly learn how to move themselve around by simply willing themselves to move in a direction.</description>
+        <iconPath>Powers/Gene_Flight</iconPath>
+        <abilities>
+            <li>SHG_Flight</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Flight</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-3</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>float</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>floater</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+		<customEffectDescriptions>
+			<li>Colonist will always be floating at least a little bit over the ground.</li>
+		</customEffectDescriptions>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<hediffToWholeBody>SHG_Flight</hediffToWholeBody>
+			</li>
+		</modExtensions>
+    </GeneDef>
+</Defs>

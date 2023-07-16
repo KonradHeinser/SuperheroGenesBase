@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef Abstract="true" Name="SHGPowerBoltBase" ParentName="SHGPowerAbilitiesBase">
+        <verbProperties>
+            <range>40</range>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_FireBolt</defName>
+        <label>fire bolt</label>
+        <description>Toss a bolt of summoned fire that will set a pawn on fire.</description>
+        <iconPath>Projectiles/Projectile_FireBolt</iconPath>
+        <verbProperties>
+            <soundCast>Explosion_Flame</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Fire</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_AcidBolt</defName>
+        <label>acid bolt</label>
+        <description>Toss a bolt of summoned acid that will leave corrode any pawn that it hits.</description>
+        <iconPath>Projectiles/Projectile_AcidBolt</iconPath>
+        <verbProperties>
+            <soundCast>AcidSpray_Resolve</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Acid</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_LightningBolt</defName>
+        <label>lightning bolt</label>
+        <description>Toss a bolt of summoned lightning that will electrocute whatever it hits. The damage is too destructive to cause an EMP effect.</description>
+        <iconPath>Projectiles/Projectile_LightningBolt</iconPath>
+        <verbProperties>
+            <soundCast>Explosion_EMP</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Lightning</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_IceBolt</defName>
+        <label>ice bolt</label>
+        <description>Toss a bolt of summoned ice that inflicts debilitating frostbite.</description>
+        <iconPath>Projectiles/Projectile_IceBolt</iconPath>
+        <verbProperties>
+            <soundCast>Foam_Impact</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Ice</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_ToxBolt</defName>
+        <label>toxic bolt</label>
+        <description>Toss a bolt of summoned poison that pierces into its target to inflict toxic buildup.</description>
+        <iconPath>Projectiles/Projectile_ToxicBolt</iconPath>
+        <verbProperties>
+            <soundCast>PiercingSpine_Launch</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Toxic</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_EMPBolt</defName>
+        <label>emp bolt</label>
+        <description>Toss a bolt of summoned electricity that will disable electronics that it hits for a while.</description>
+        <iconPath>Projectiles/Projectile_LightningBolt</iconPath>
+        <verbProperties>
+            <soundCast>Explosion_EMP</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_EMP</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_FoamBolt</defName>
+        <label>foam bolt</label>
+        <description>Toss a bolt of summoned foam that will douse flames on pawns and protect them from flames for a time.\n\nThis will NOT affect fires on the ground, item, or corpses.</description>
+        <iconPath>Projectiles/Projectile_FoamBolt</iconPath>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <soundCast>Foam_Impact</soundCast>
+            <targetParams>
+                <canTargetCorpses>true</canTargetCorpses>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Foam</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

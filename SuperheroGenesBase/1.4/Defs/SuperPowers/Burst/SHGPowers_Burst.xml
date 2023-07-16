@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef Abstract="true" Name="SHGPowerBurstBase" ParentName="SHGPowerAbilitiesBase">
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+        <targetRequired>false</targetRequired>
+        <showCastingProgressBar>true</showCastingProgressBar>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>false</requireLineOfSight>
+            <range>5</range>
+            <drawAimPie>false</drawAimPie>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBurstBase">
+        <defName>SHG_FireBurst</defName>
+        <label>fire burst</label>
+        <description>Emit a burst of burning fuel in all directions to form puddles of ignited liquid on the ground.</description>
+        <iconPath>UI/Abilities/FireBurst</iconPath>
+        <verbProperties>
+            <soundCast>Explosion_Flame</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityFireBurst">
+                <radius>5</radius>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <GeneDef ParentName="SuperPowersFireBase">
+        <defName>SHG_FireBurst</defName>
+        <label>fire burst</label>
+        <description>Carriers of this gene are able to set everything in the area around them on fire.\n\nThis doesn't render you immune to fire, so remember to get protection. This is exceptionally important for this ability as even the user will be affected.\n\nThis burst gene was originally created to give supers a way to fight a large number of enemies. \n\nMost of the burst abilities/genes rely on Alpha Genes being enabled because they utilize a function added by the creater of AG. If you are seeing this message then AG was not found in your modlist, and this is the only burst ability available through the vanilla system.</description>
+        <iconPath>UI/Abilities/FireBurst</iconPath>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <abilities>
+            <li>SHG_FireBurst</li>
+        </abilities>
+        <statFactors>
+            <Flammability>0.5</Flammability>
+        </statFactors>
+        <damageFactors>
+            <Flame>0.5</Flame>
+        </damageFactors>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_FireBurst</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+</Defs>

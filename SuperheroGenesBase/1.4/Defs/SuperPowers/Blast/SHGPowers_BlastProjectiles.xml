@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef Abstract="true" Name="SuperPowersBlastBase">
+        <thingClass>Projectile_Explosive</thingClass>
+        <category>Projectile</category>
+        <tickerType>Normal</tickerType>
+        <altitudeLayer>Projectile</altitudeLayer>
+        <useHitPoints>False</useHitPoints>
+        <neverMultiSelect>True</neverMultiSelect>
+        <projectile>
+            <explosionRadius>1</explosionRadius>
+            <speed>50</speed>
+            <damageAmountBase>15</damageAmountBase>
+            <arcHeightFactor>0.4</arcHeightFactor>
+            <armorPenetrationBase>0.8</armorPenetrationBase>
+            <stoppingPower>1</stoppingPower>
+            <shadowSize>0</shadowSize>
+            <ai_IsIncendiary>true</ai_IsIncendiary>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Fire</defName>
+        <label>fire ball</label>
+        <graphicData>
+            <texPath>Projectiles/Projectile_FireBall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>MoteGlow</shaderType>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+        <projectile>
+            <ai_IsIncendiary>true</ai_IsIncendiary>
+            <damageDef>Flame</damageDef>
+            <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+            <filthCount>1</filthCount>
+            <soundExplode>Explosion_Flame</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Acid</defName>
+        <label>acid ball</label>
+        <graphicData>
+            <texPath>Projectiles/Projectile_AcidBall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>MoteGlow</shaderType>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>AcidBurn</damageDef>
+            <preExplosionSpawnThingDef>Filth_SpentAcid</preExplosionSpawnThingDef>
+            <filthCount>1</filthCount>
+            <soundExplode>AcidSpray_Resolve</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Lightning</defName>
+        <label>lightning ball</label>
+        <graphicData>
+            <texPath>Projectiles/Projectile_LightningBall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+        <projectile>
+            <speed>100</speed>
+            <damageDef>SHG_Lightning</damageDef>
+            <soundExplode>Explosion_EMP</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Ice</defName>
+        <label>ice ball</label>
+        <graphicData>
+            <texPath>Projectiles/Projectile_IceBall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>SHG_Ice</damageDef>
+            <soundExplode>Foam_Impact</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Toxic</defName>
+        <label>toxic ball</label>
+        <graphicData>
+            <texPath>Projectiles/Projectile_ToxicBall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>ToxGas</damageDef>
+            <postExplosionGasType>ToxGas</postExplosionGasType>
+            <soundExplode>SHG_GasReleasing</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_EMP</defName>
+        <label>electricity ball</label>
+        <graphicData>
+            <texPath>Projectiles/Projectile_LightningBall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+        <projectile>
+            <ai_IsIncendiary>false</ai_IsIncendiary>
+            <damageDef>EMP</damageDef>
+            <soundExplode>Explosion_EMP</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Foam</defName>
+        <label>foam ball</label>
+        <graphicData>
+            <texPath>Projectiles/Projectile_FoamBall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>MoteGlow</shaderType>
+            <drawSize>1.35</drawSize>
+        </graphicData>
+        <projectile>
+            <ai_IsIncendiary>false</ai_IsIncendiary>
+            <damageAmountBase>9999</damageAmountBase>
+            <damageDef>Extinguish</damageDef>
+            <preExplosionSpawnThingDef>Filth_FireFoam</preExplosionSpawnThingDef>
+            <filthCount>1</filthCount>
+            <landedEffecter>ExtinguisherPuffSmall</landedEffecter>
+            <numExtraHitCells>10</numExtraHitCells>
+            <soundExplode>Foam_Impact</soundExplode>
+        </projectile>
+    </ThingDef>
+</Defs>

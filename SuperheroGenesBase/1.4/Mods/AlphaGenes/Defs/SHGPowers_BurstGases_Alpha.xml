@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="AG_BaseGas">
+        <defName>SHG_AcidGas</defName>
+        <label>acid mist</label>
+        <graphicData>
+            <texPath>Things/Gas/Puff</texPath>
+            <drawSize>2.2</drawSize>
+            <color>(0.2,0.8,0.2)</color>
+        </graphicData>
+        <gas>
+            <expireSeconds>
+                <min>2</min>
+                <max>3</max>
+            </expireSeconds>
+            <rotationSpeed>10</rotationSpeed>
+        </gas>
+    </ThingDef>
+
+    <ThingDef ParentName="AG_BaseGas">
+        <defName>SHG_ToxicGas</defName>
+        <label>toxic mist</label>
+        <graphicData>
+            <texPath>Things/Gas/Puff</texPath>
+            <drawSize>2.2</drawSize>
+            <color>(0.2,0.8,0.2,0.5)</color>
+        </graphicData>
+        <gas>
+            <expireSeconds>
+                <min>4</min>
+                <max>5</max>
+            </expireSeconds>
+            <rotationSpeed>10</rotationSpeed>
+        </gas>
+    </ThingDef>
+
+    <ThingDef ParentName="AG_BaseGas">
+        <defName>SHG_ElectricrifiedCloud</defName>
+        <label>electrified cloud</label>
+        <graphicData>
+            <texPath>Things/Gas/Puff</texPath>
+            <drawSize>2.2</drawSize>
+            <color>(0.4,0.6,0.7,0.5)</color>
+        </graphicData>
+        <gas>
+            <expireSeconds>
+                <min>1</min>
+                <max>1</max>
+            </expireSeconds>
+            <rotationSpeed>10</rotationSpeed>
+        </gas>
+    </ThingDef>
+
+    <ThingDef ParentName="AG_BaseGas">
+        <defName>SHG_IceCloud</defName>
+        <label>freezing cloud</label>
+        <graphicData>
+            <texPath>Things/Gas/Puff</texPath>
+            <drawSize>2.2</drawSize>
+            <color>(0.3,0.5,0.6,0.8)</color>
+        </graphicData>
+        <gas>
+            <expireSeconds>
+                <min>1</min>
+                <max>1</max>
+            </expireSeconds>
+            <rotationSpeed>10</rotationSpeed>
+        </gas>
+    </ThingDef>
+</Defs>

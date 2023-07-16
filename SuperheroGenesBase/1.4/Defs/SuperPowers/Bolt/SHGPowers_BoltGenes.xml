@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersFireBase">
+        <defName>SHG_FireBolt</defName>
+        <label>fire bolt</label>
+        <description>Supers with this power are able to summon a bolt of fire that catches most flammable things between it and its destination on fire.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets.</description>
+        <iconPath>Projectiles/Projectile_FireBolt</iconPath>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <abilities>
+            <li>SHG_FireBolt</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_FireBolt</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersAcidBase">
+        <defName>SHG_AcidBolt</defName>
+        <label>acid bolt</label>
+        <description>Supers with this power are able to summon a bolt of acid that corrodes whoever it hits.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets.</description>
+        <iconPath>Projectiles/Projectile_AcidBolt</iconPath>
+        <displayOrderInCategory>12</displayOrderInCategory>
+        <abilities>
+            <li>SHG_AcidBolt</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_AcidBolt</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersLightningBase">
+        <defName>SHG_LightningBolt</defName>
+        <label>lightning bolt</label>
+        <description>Supers with this power are able to summon a bolt of lightning that causes damage to both flesh and electronics.\n\nDue to the destructiveness of this ability, it will completely burn up electronics instead of just disabling them.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets.</description>
+        <iconPath>Projectiles/Projectile_LightningBolt</iconPath>
+        <displayOrderInCategory>22</displayOrderInCategory>
+        <abilities>
+            <li>SHG_LightningBolt</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_LightningBolt</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersIceBase">
+        <defName>SHG_IceBolt</defName>
+        <label>ice bolt</label>
+        <description>Supers with this power are able to summon a bolt of ice that rapidly freezes opponents.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets.</description>
+        <iconPath>Projectiles/Projectile_IceBolt</iconPath>
+        <displayOrderInCategory>32</displayOrderInCategory>
+        <abilities>
+            <li>SHG_IceBolt</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_IceBolt</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersToxicBase">
+        <defName>SHG_ToxBolt</defName>
+        <label>toxic bolt</label>
+        <description>Supers with this power are able to summon a bolt of poison that punches through opponents like a massive toxic needle.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets.</description>
+        <iconPath>Projectiles/Projectile_ToxicBolt</iconPath>
+        <displayOrderInCategory>42</displayOrderInCategory>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>SHG_ToxBolt</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_ToxBolt</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersEMPBase">
+        <defName>SHG_EMPBolt</defName>
+        <label>emp bolt</label>
+        <description>Supers with this power are able to summon a bolt of electricity that will disable various electronics in its path. This bolt is not strong enough to cause damage.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets. Disabling your own electronics would be exceptionally counterproductive.</description>
+        <iconPath>Projectiles/Projectile_LightningBolt</iconPath>
+        <displayOrderInCategory>52</displayOrderInCategory>
+        <abilities>
+            <li>SHG_EMPBolt</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_EMPBolt</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersFoamBase">
+        <defName>SHG_FoamBolt</defName>
+        <label>foam bolt</label>
+        <description>Supers with this power are able to summon a bolt of foam that will douse flames on pawns and protect them from flames for a time.\n\nThis will NOT affect fires on the ground, item, or corpses.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets. Protecting your enemies from catching on fire usually isn't very helpful.</description>
+        <iconPath>Projectiles/Projectile_FoamBolt</iconPath>
+        <displayOrderInCategory>62</displayOrderInCategory>
+        <abilities>
+            <li>SHG_FoamBolt</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_FoamBolt</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+</Defs>

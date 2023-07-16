@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_CommandAnimal</defName>
+        <label>command animal</label>
+        <description>Carriers of this gene can command animals to fight by their side for several hours.\n\nTo ensure no mistakes are made the super must command each animal one by one. This tends to be worth the effort though as there aren't many things that can stop a herd of angry muffalos and elephants from leveling a fortified location.</description>
+        <iconPath>UI/Icons/Genes/Gene_AnimalWarcall</iconPath>
+        <abilities>
+            <li>SHG_CommandAnimal</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_CommandAnimal</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-5</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>war</symbol></li>
+                <li><symbol>animal</symbol></li>
+                <li><symbol>commander</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>caller</symbol></li>
+                <li><symbol>hailer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_HeroicLeap</defName>
+        <label>heroic leap</label>
+        <description>Carriers of this gene are able to make long leaps that cover a lot of ground, usually involving a three-point landing at the end.\n\nIn glitterworld cities, use of this ability was banned due to multiple accidents involving a super breaking their legs or accidentally landing on someone.</description>
+        <iconPath>UI/Icons/Genes/Gene_LongJumpLegs</iconPath>
+        <abilities>
+            <li>SHG_HeroicLeap</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_HeroicLeap</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-2</biostatMet>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li><symbol>jumper</symbol></li>
+                <li><symbol>leaper</symbol></li>
+                <li><symbol>bouncer</symbol></li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li><symbol>jump</symbol></li>
+                <li><symbol>leap</symbol></li>
+                <li><symbol>vault</symbol></li>
+                <li><symbol>long</symbol></li>
+                <li><symbol>fly</symbol></li>
+                <li><symbol>hop</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_SealWounds</defName>
+        <label>seal wounds</label>
+        <description>Carriers of this gene are able to almost perfectly seal the wounds of a nearby pawn. This will not restore lost blood or completely heal the wound, but it will stop bleeding and aid the healing process greatly.\n\nRecently this ability is often overlooked on the battlefield due to the existence of superclotting and regeneration genes, but it was originally designed to create super medics who would use this in combination with the resurrection power to create an unstoppable army.</description>
+        <iconPath>UI/Icons/Genes/Gene_Coagulate</iconPath>
+        <abilities>
+            <li>SHG_SealWounds</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SealWounds</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-4</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>life</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>clotter</symbol></li>
+                <li><symbol>tender</symbol></li>
+                <li><symbol>healer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_ThrowSpike</defName>
+        <label>throw spike</label>
+        <description>Carriers of this gene are able to summon a spike that is launched at a larget at high speeds.\n\nWhile its damage is relatively low, the fact that it is extremely accurate and has exceptional armor penetration makes it very dangerous.</description>
+        <iconPath>Powers/Gene_ThrowSpike</iconPath>
+        <abilities>
+            <li>SHG_ThrowSpike</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_ThrowSpike</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-2</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>spike</symbol></li>
+                <li><symbol>thorn</symbol></li>
+                <li><symbol>bolt</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Revive</defName>
+        <label>revive</label>
+        <description>Carriers of this gene are able to revive a pawn they can touch.\n\nJust as the superhero gene frequently makes people believe the super is a demigod or god, this ability frequently makes people believe that this super is some sort of demon or other undefined evil their religion fights.</description>
+        <iconPath>UI/Icons/Genes/Gene_Resurrect</iconPath>
+        <abilities>
+            <li>SHG_Revive</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Revive</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-9</biostatMet>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li><symbol>resurrector</symbol></li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li><symbol>life</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Invisibility</defName>
+        <label>invisibility</label>
+        <description>Carriers of this gene are able to turn invisible for a short time every few hours.\n\nWhile there are many who worry that supers with this gene are going to sneak into places they shouldn't be, countless studies have found that it is far more likely that supers with this gene prefer to do harmless jump scares because watching people get spooked amuses them.</description>
+        <iconPath>UI/Abilities/Invisibility</iconPath>
+        <abilities>
+            <li>SHG_Invisibility</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Invisibility</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-3</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>camo</symbol></li>
+                <li><symbol>invis</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Blink</defName>
+        <label>blink</label>
+        <description>Carriers of this gene are able to blink themselves away from a location. The destination is a random point between 20 and 30 tiles away. Using this to get out of danger will either work very well, or very poorly.\n\nThis ability was initially developed when a super with a psylink was spooked during some testing. After discovering how well teleportation abilities worked with the superhero gene, military scientists sought to create a controlled version of this ability.</description>
+        <iconPath>UI/Abilities/SkipChaos</iconPath>
+        <displayOrderInCategory>-0.5</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Blink</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Blink</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-1</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>blink</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>port</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Teleport</defName>
+        <label>teleportation</label>
+        <description>Carriers of this gene are able to teleport themselves and any other living thing a short distance away.\n\nExpanding on the super's ability to randomly teleport, this was used as a way to get melee focused supers behind enemy lines. Sometimes middlemen were completely removed, and the super would teleport themselves into enemy lines, blinking out the moment things began going poorly.</description>
+        <iconPath>UI/Abilities/Skip</iconPath>
+        <prerequisite>SHG_Blink</prerequisite>
+        <displayOrderInCategory>-0.4</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Teleport</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Teleport</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-3</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>tele</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>port</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Gate</defName>
+        <label>teleportation gate</label>
+        <description>Carriers of this gene are able to teleport themselves everyone within 10 tiles to any location where the colony has people.\n\nAfter developing teleportation, the next logical step was to find a way to get squads of soldiers from one front to another front quickly. The end result was the creation of porters who would take squads of supers quickly from battle to battle, single-handedly turning the tides of wars.</description>
+        <iconPath>UI/Abilities/Farskip</iconPath>
+        <prerequisite>SHG_Blink</prerequisite>
+        <displayOrderInCategory>-0.3</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Gate</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Gate</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-5</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>gate</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>port</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Rift</defName>
+        <label>teleportation rift</label>
+        <description>Carriers of this gene are able to teleport themselves everyone within 200 tiles to any location where the colony has people.\n\nThis will teleport almost everyone on the current map to the desired location. If you use this in your colony, you will need to send someone back manually to be able to teleport back.\n\nWhen a losing battle turned devastating because the army's porter couldn't get enough people out of the fortification fast enough, this ability was developed to give supers a way to move entire platoons quickly. Moving a battalion quickly still required multiple porters, but teleportation rifts made the task only require 10% of the people it did before.</description>
+        <iconPath>UI/Abilities/Farskip</iconPath>
+        <prerequisite>SHG_Blink</prerequisite>
+        <displayOrderInCategory>-0.2</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Rift</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Rift</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-7</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>rift</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>port</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+</Defs>

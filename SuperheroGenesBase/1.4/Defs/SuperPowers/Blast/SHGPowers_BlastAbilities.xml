@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef Abstract="true" Name="SHGPowerBlastBase" ParentName="SHGPowerAbilitiesBase">
+        <verbProperties>
+            <range>20</range>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_FireBlast</defName>
+        <label>fire blast</label>
+        <description>Toss a ball of summoned fire that will burn everything in the area it lands.</description>
+        <iconPath>Projectiles/Projectile_FireBall</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySprayLiquid">
+                <projectileDef>SHG_Proj_Blast_Fire</projectileDef>
+                <numCellsToHit>9</numCellsToHit>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_AcidBlast</defName>
+        <label>acid blast</label>
+        <description>Toss a ball of summoned acid that will leave corrosive substance in a wide area wherever it lands.</description>
+        <iconPath>Projectiles/Projectile_AcidBall</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySprayLiquid">
+                <projectileDef>SHG_Proj_Blast_Acid</projectileDef>
+                <numCellsToHit>9</numCellsToHit>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_LightningBlast</defName>
+        <label>lightning blast</label>
+        <description>Toss a ball of summoned lightning that will electrocute everything in an area. The damage is too destructive to cause an EMP effect</description>
+        <iconPath>Projectiles/Projectile_LightningBall</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySprayLiquid">
+                <projectileDef>SHG_Proj_Blast_Lightning</projectileDef>
+                <numCellsToHit>9</numCellsToHit>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_IceBlast</defName>
+        <label>ice blast</label>
+        <description>Toss a ball of summoned ice that inflicts debilitating frostbite.</description>
+        <iconPath>Projectiles/Projectile_IceBall</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySprayLiquid">
+                <projectileDef>SHG_Proj_Blast_Ice</projectileDef>
+                <numCellsToHit>9</numCellsToHit>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_ToxBlast</defName>
+        <label>toxic blast</label>
+        <description>Toss a ball of summoned poison that creates a cloud that inflicts toxic buildup.</description>
+        <iconPath>Projectiles/Projectile_ToxicBall</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySprayLiquid">
+                <projectileDef>SHG_Proj_Blast_Toxic</projectileDef>
+                <numCellsToHit>9</numCellsToHit>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_EMPBlast</defName>
+        <label>emp blast</label>
+        <description>Toss a ball of summoned electricity that will disable electronics in an area for a while.</description>
+        <iconPath>Projectiles/Projectile_LightningBall</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySprayLiquid">
+                <projectileDef>SHG_Proj_Blast_EMP</projectileDef>
+                <numCellsToHit>9</numCellsToHit>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_FoamBlast</defName>
+        <label>foam blast</label>
+        <description>Toss a ball of summoned foam that stops all fires from passing.</description>
+        <iconPath>Projectiles/Projectile_FoamBall</iconPath>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <comps>
+            <li Class="CompProperties_AbilitySprayLiquid">
+                <projectileDef>SHG_Proj_Blast_Foam</projectileDef>
+                <numCellsToHit>9</numCellsToHit>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>
