@@ -151,9 +151,9 @@
             <warmupTime>60</warmupTime>
             <soundCast>Resurrect_Resolve</soundCast>
             <targetParams>
-                <canTargetPawns>False</canTargetPawns>
+                <canTargetPawns>True</canTargetPawns>
                 <canTargetBuildings>False</canTargetBuildings>
-                <canTargetCorpses>False</canTargetCorpses>
+                <canTargetCorpses>True</canTargetCorpses>
                 <canTargetMechs>False</canTargetMechs>
             </targetParams>
         </verbProperties>
