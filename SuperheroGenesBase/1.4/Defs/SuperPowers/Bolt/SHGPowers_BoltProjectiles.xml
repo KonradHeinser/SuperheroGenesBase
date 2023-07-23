@@ -102,4 +102,17 @@
             <damageDef>Extinguish</damageDef>
         </projectile>
     </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBoltBase">
+        <defName>SHG_Proj_Bolt_Petrification</defName>
+        <label>petrifying bolt</label>
+        <graphicData>
+            <texPath>Projectiles/Projectile_PetrifyBolt</texPath>
+        </graphicData>
+        <projectile>
+            <ai_IsIncendiary>false</ai_IsIncendiary>
+            <damageAmountBase>3</damageAmountBase>
+            <damageDef>SHG_Petrification</damageDef>
+        </projectile>
+    </ThingDef>
 </Defs>

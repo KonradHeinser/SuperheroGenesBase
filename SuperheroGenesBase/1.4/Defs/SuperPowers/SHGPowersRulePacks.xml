@@ -28,4 +28,17 @@
       </rulesStrings>
     </rulePack>
   </RulePackDef>
+
+  <RulePackDef>
+    <defName>SHG_Damage_Petrification</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>damaged_past->petrified</li>
+
+        <li>damaged_present->petrifying</li>
+
+        <li>destroyed_past->petrified off</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
 </Defs>

@@ -31,6 +31,7 @@
         <iconPath>Base/UnsuperHealing</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>25</displayOrderInCategory>
+        <foodPoisoningChanceFactor>100</foodPoisoningChanceFactor>
         <biostatMet>+1</biostatMet>
         <statFactors>
             <ImmunityGainSpeed>0.333</ImmunityGainSpeed>
@@ -93,7 +94,7 @@
         <displayOrderInCategory>55</displayOrderInCategory>
         <biostatMet>+1</biostatMet>
         <statOffsets>
-            <Beauty>-5</Beauty>
+            <PawnBeauty>-5</PawnBeauty>
             <SocialImpact>-0.5</SocialImpact>
             <NegotiationAbility>-0.5</NegotiationAbility>
             <ConversionPower MayRequire="ludeon.rimworld.ideology">-0.5</ConversionPower>

@@ -101,4 +101,19 @@
             </li>
         </comps>
     </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_PetrificationBlast</defName>
+        <label>petrification blast</label>
+        <description>Toss a ball of infused stone that invades the bloodstreams of everyone at the explosion sight. People will not become completely petrified by a single blast, and any pawns with a larger body size or innate blunt armor will be somewhat resistant to petrification.</description>
+        <iconPath>Projectiles/Projectile_FoamBall</iconPath>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <comps>
+            <li Class="CompProperties_AbilitySprayLiquid">
+                <projectileDef>SHG_Proj_Blast_Petrification</projectileDef>
+                <numCellsToHit>9</numCellsToHit>
+            </li>
+        </comps>
+    </AbilityDef>
 </Defs>

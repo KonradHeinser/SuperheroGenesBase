@@ -133,4 +133,23 @@
             <soundExplode>Foam_Impact</soundExplode>
         </projectile>
     </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Petrification</defName>
+        <label>petrification ball</label>
+        <graphicData>
+            <texPath>Projectiles/Projectile_PetrifyBall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>MoteGlow</shaderType>
+            <drawSize>1.35</drawSize>
+        </graphicData>
+        <projectile>
+            <damageAmountBase>2</damageAmountBase>
+            <damageDef>SHG_Petrification</damageDef>
+            <preExplosionSpawnThingDef>Filth_RubbleRock</preExplosionSpawnThingDef>
+            <filthCount>1</filthCount>
+            <numExtraHitCells>10</numExtraHitCells>
+            <soundExplode>BuildingDestroyed_Stone_Big</soundExplode>
+        </projectile>
+    </ThingDef>
 </Defs>

@@ -116,6 +116,23 @@
         </symbolPack>
     </GeneDef>
 
+    <GeneDef Abstract="true" Name="SuperPowersPetrificationBase" ParentName="SuperPowersSupportBase">
+        <biostatMet>-3</biostatMet>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li><symbol>petrifier</symbol></li>
+                <li><symbol>medusa</symbol></li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li><symbol>stone</symbol></li>
+                <li><symbol>petri</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>fier</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
     <AbilityDef Abstract="true" Name="SHGPowerAbilitiesBase">
         <aiCanUse>true</aiCanUse>
         <cooldownTicksRange>100</cooldownTicksRange>

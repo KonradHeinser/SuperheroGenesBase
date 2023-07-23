@@ -67,4 +67,21 @@
             <rotationSpeed>10</rotationSpeed>
         </gas>
     </ThingDef>
+
+    <ThingDef ParentName="AG_BaseGas">
+        <defName>SHG_PetrificationCloud</defName>
+        <label>stone dust cloud</label>
+        <graphicData>
+            <texPath>Things/Gas/Puff</texPath>
+            <drawSize>2.2</drawSize>
+            <color>(0.8,0.8,0.8,0.8)</color>
+        </graphicData>
+        <gas>
+            <expireSeconds>
+                <min>6</min>
+                <max>10</max>
+            </expireSeconds>
+            <rotationSpeed>10</rotationSpeed>
+        </gas>
+    </ThingDef>
 </Defs>

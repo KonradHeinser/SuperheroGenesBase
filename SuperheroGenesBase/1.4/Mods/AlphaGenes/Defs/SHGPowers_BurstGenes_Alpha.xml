@@ -99,4 +99,21 @@
             <AbilityDef>SHG_FoamBurst</AbilityDef>
         </descriptionHyperlinks>
     </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPetrificationBase">
+        <defName>SHG_PetrificationBurst</defName>
+        <label>petrification burst</label>
+        <description>Carriers of this gene are able to release a burst of infused stone dust that invades the blood streams of everyone in the area around tham, including themselves, like a toxin. The dust collects around veins and muscles, gradually restricting the individual's ability to move freely as it becomes denser.\n\nPetrification will not kill a target and gradually wears off. It is primarily for disabling people you want to capture. People will not become completely petrified by a single burst, and any pawns with a larger body size or innate blunt armor will be somewhat resistant to petrification. The innate armor this gene provides will protect the pawn from petrifying completely, but it will not stop the effects entirely.\n\nBurst genes were originally created to give supers a way to fight a large number of enemies. Most of them were designed to kick up a dust cloud to protect the super some while they deal with nearby enemies.\n\nThe ability this gene provides utilitzes code written by the creator of Alpha Genes, specifically the code used for the detonate abilities. All credit for said code belongs to them, all I did was plug in some new numbers for these genes.</description>
+        <iconPath>Powers/Gene_PetrifyBurst</iconPath>
+        <displayOrderInCategory>73</displayOrderInCategory>
+        <statOffsets>
+            <ArmorRating_Blunt>.1</ArmorRating_Blunt>
+        </statOffsets>
+        <abilities>
+            <li>SHG_PetrificationBurst</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_PetrificationBurst</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
 </Defs>

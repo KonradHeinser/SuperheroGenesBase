@@ -73,7 +73,7 @@
     <GeneDef ParentName="SuperPowersEMPBase">
         <defName>SHG_EMPBlast</defName>
         <label>emp blast</label>
-        <description>Supers with this power are able to summon a ball of electricity that will explode and disable various electronics in an area. This ball is not strong enough to cause damage.\n\nThis ability was developed to give supers a method to deal with a large number enemies quickly. The original version of this gene was so destructive that it had to be intentionally weakened because it took far to much energy from the super to activate.</description>
+        <description>Supers with this power are able to summon a ball of electricity that will explode and disable various electronics in an area. This ball is not strong enough to cause damage.\n\nThis ability was developed to give supers a method to deal with a large number enemies quickly. The original version of this gene was so explosive that it had to be intentionally weakened because it took far to much energy from the super to activate.</description>
         <iconPath>Projectiles/Projectile_LightningBall</iconPath>
         <displayOrderInCategory>51</displayOrderInCategory>
         <abilities>
@@ -87,7 +87,7 @@
     <GeneDef ParentName="SuperPowersFoamBase">
         <defName>SHG_FoamBlast</defName>
         <label>foam blast</label>
-        <description>Supers with this power are able to summon a ball of foam that will explode and douse flames and prevent the area from catching on fire.\n\nThis ability was developed to give supers a method to deal with a large number enemies quickly. The original version of this gene was so destructive that it had to be intentionally weakened because it took far to much energy from the super to activate.</description>
+        <description>Supers with this power are able to summon a ball of foam that will explode and douse flames and prevent the area from catching on fire.\n\nThis ability was developed to give supers a method to deal with a large number enemies quickly. The original version of this gene was so explosive that it had to be intentionally weakened because it took far to much energy from the super to activate.</description>
         <iconPath>Projectiles/Projectile_FoamBall</iconPath>
         <displayOrderInCategory>61</displayOrderInCategory>
         <abilities>
@@ -95,6 +95,20 @@
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_FoamBlast</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPetrificationBase">
+        <defName>SHG_PetrificationBlast</defName>
+        <label>petrification blast</label>
+        <description>Supers with this power are able to summon a ball of infused stone that will invade a targets bloodstream like a toxin.\n\nPetrification will not kill a target and gradually wears off. It is primarily for disabling people you want to capture.\n\nPetrification will have less effect on larger pawns/animals, along with any pawn that has innate blunt armor protection. The original version of this gene was so destructive that it had to be intentionally weakened because it would petrify far too many people for far too long.\n\nPawns with the Super Durability gene are completely immune to this, and pawns with a strong enough innate armor, whether due to genes or implants, are almost impossible to completely petrify, though they will still be slowed.</description>
+        <iconPath>Projectiles/Projectile_PetrifyBall</iconPath>
+        <displayOrderInCategory>71</displayOrderInCategory>
+        <abilities>
+            <li>SHG_PetrificationBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_PetrificationBlast</AbilityDef>
         </descriptionHyperlinks>
     </GeneDef>
 </Defs>

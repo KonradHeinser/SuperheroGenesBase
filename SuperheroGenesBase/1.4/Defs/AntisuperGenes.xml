@@ -106,7 +106,7 @@
             <ConversionPower MayRequire="ludeon.rimworld.ideology">.5</ConversionPower>
         </statFactors>
         <statOffsets>
-            <Beauty>-5</Beauty>
+            <PawnBeauty>-5</PawnBeauty>
         </statOffsets>
         <capMods>
           <li>

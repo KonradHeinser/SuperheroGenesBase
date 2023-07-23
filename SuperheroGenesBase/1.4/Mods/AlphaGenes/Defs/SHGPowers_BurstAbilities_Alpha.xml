@@ -57,7 +57,7 @@
     <AbilityDef ParentName="SHGPowerBurstBase">
         <defName>SHG_ToxicBurst</defName>
         <label>toxic burst</label>
-        <description>Emit a burst of acid in all directions that corrodes anything it touches. This will also kick up a dust cloud that may buy this super some time to heal themselves and plan their next move.\n\nThis ability utilizes code created in Alpha Genes, and all credit for said code belongs to them.</description>
+        <description>Emit a burst of acid in all directions that corrodes anything it touches.\n\nThis will also kick up a dust cloud that may buy this super some time to heal themselves and plan their next move.\n\nThis ability utilizes code created in Alpha Genes, and all credit for said code belongs to them.</description>
         <iconPath>Powers/Gene_IceBurst</iconPath>
         <comps>
             <li Class="AlphaGenes.CompProperties_Detonate">
@@ -75,7 +75,7 @@
     <AbilityDef ParentName="SHGPowerBurstBase">
         <defName>SHG_EMPBurst</defName>
         <label>EMP burst</label>
-        <description>Emit an EMP burst in all directions that disables all electronics for a time.\n\n This will also kick up a dust cloud that may buy this super some time to heal themselves and plan their next move.\n\nThis ability utilizes code created in Alpha Genes, and all credit for said code belongs to them.</description>
+        <description>Emit an EMP burst in all directions that disables all electronics for a time.\n\nThis will also kick up a dust cloud that may buy this super some time to heal themselves and plan their next move.\n\nThis ability utilizes code created in Alpha Genes, and all credit for said code belongs to them.</description>
         <iconPath>Powers/Gene_IceBurst</iconPath>
         <comps>
             <li Class="AlphaGenes.CompProperties_Detonate">
@@ -92,10 +92,10 @@
     <AbilityDef ParentName="SHGPowerBurstBase">
         <defName>SHG_FoamBurst</defName>
         <label>foam burst</label>
-        <description>Emit a burst of foam in all directions that removes fires and protects all pawns in the area from catching fire. This protection will only prevent the pawn from catching fire, and doesn't do anything against fire damage itself.\n\n This will also kick up a dust cloud that may buy this super some time to get a fallen ally out of the area.\n\nThis ability utilizes code created in Alpha Genes, and all credit for said code belongs to them.</description>
+        <description>Emit a burst of foam in all directions that removes fires and protects all pawns in the area from catching fire. This protection will only prevent the pawn from catching fire, and doesn't do anything against fire damage itself.\n\nThis will also kick up a dust cloud that may buy this super some time to get a fallen ally out of the area.\n\nThis ability utilizes code created in Alpha Genes, and all credit for said code belongs to them.</description>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-        <iconPath>Powers/Gene_IceBurst</iconPath>
+        <iconPath>Powers/Gene_FoamBurst</iconPath>
         <comps>
             <li Class="AlphaGenes.CompProperties_Detonate">
                 <radius>5</radius>
@@ -105,6 +105,24 @@
 				<thingCreated>Filth_FireFoam</thingCreated>
 				<thingCreatedChance>50</thingCreatedChance>
 				<damageAmount>9999</damageAmount>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBurstBase">
+        <defName>SHG_PetrificationBurst</defName>
+        <label>petrification burst</label>
+        <description>Emit a burst of infused stone that invades the bloodstreams of everyone at the explosion sight. People will not become completely petrified by a single blast, and any pawns with a larger body size or innate blunt armor will be somewhat resistant to petrification.\n\nThis will also kick up a dust cloud that may buy this super some time to allow the super to move away from the area to recover from the side effects of this ability, or to double down and use it again.\n\nThis ability utilizes code created in Alpha Genes, and all credit for said code belongs to them.</description>
+        <iconPath>Powers/Gene_PetrifyBurst</iconPath>
+        <comps>
+            <li Class="AlphaGenes.CompProperties_Detonate">
+                <radius>5</radius>
+				<damageType>SHG_Petrification</damageType>
+				<damageUser>true</damageUser>
+				<soundCreated>BuildingDestroyed_Stone_Big</soundCreated>
+				<thingCreated>Filth_RubbleRock</thingCreated>
+				<thingCreatedChance>50</thingCreatedChance>
+				<damageAmount>1</damageAmount>
             </li>
         </comps>
     </AbilityDef>

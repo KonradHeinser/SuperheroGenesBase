@@ -25,51 +25,69 @@
     </GeneCategoryDef>
 
     <GeneCategoryDef>
+        <defName>SuperPowersSpecialization</defName>
+        <label>super powers - specialization</label>
+        <displayPriorityInXenotype>999.8</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
         <defName>SuperMutations</defName>
         <label>super mutations</label>
-        <displayPriorityInXenotype>999.8</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.7</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
+        <defName>SuperPowersArchetypes</defName>
+        <label>super powers - archetypes</label>
+        <displayPriorityInXenotype>999.6</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersOffensive</defName>
         <label>super powers - attacks</label>
-        <displayPriorityInXenotype>999.7</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.5</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersSupport</defName>
         <label>super powers - supports</label>
-        <displayPriorityInXenotype>999.6</displayPriorityInXenotype>
-    </GeneCategoryDef>
-
-    <GeneCategoryDef>
-        <defName>SuperPowersPsychicDimensional</defName>
-        <label>super powers - dimensional psychic</label>
-        <displayPriorityInXenotype>999.5</displayPriorityInXenotype>
-    </GeneCategoryDef>
-
-    <GeneCategoryDef>
-        <defName>SuperPowersPsychicCommander</defName>
-        <label>super powers - commander psychic</label>
         <displayPriorityInXenotype>999.4</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
+        <defName>SuperPowersPsychicDimensional</defName>
+        <label>psionist powers - dimensional</label>
+        <displayPriorityInXenotype>989.9</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
+        <defName>SuperPowersPsychicCommander</defName>
+        <label>psionist powers - commander</label>
+        <displayPriorityInXenotype>989.8</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
         <defName>SuperPowersPsychicGuardian</defName>
-        <label>super powers - guardian psychic</label>
-        <displayPriorityInXenotype>999.3</displayPriorityInXenotype>
+        <label>psionist powers - guardian</label>
+        <displayPriorityInXenotype>989.7</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
+        <defName>SuperPowersPsychicTyrant</defName>
+        <label>psionist powers - tyrant</label>
+        <displayPriorityInXenotype>989.6</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersHemogen</defName>
         <label>super powers - blood</label>
-        <displayPriorityInXenotype>989.9</displayPriorityInXenotype>
+        <displayPriorityInXenotype>979.9</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SHG_Resistances</defName>
         <label>SHG Resistances</label>
-        <displayPriorityInXenotype>979.9</displayPriorityInXenotype>
+        <displayPriorityInXenotype>969.9</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneDef Name="SuperGeneBase" Abstract="True">
@@ -92,6 +110,16 @@
         <biostatCpx>1</biostatCpx>
     </GeneDef>
 
+    <GeneDef Name="SHG_SpecializationBase" Abstract="True">
+        <displayCategory>SuperPowersSpecialization</displayCategory>
+        <biostatCpx>0</biostatCpx>
+    </GeneDef>
+
+    <GeneDef Name="SHG_ArchtypeBase" Abstract="True">
+        <displayCategory>SuperPowersArchetypes</displayCategory>
+        <biostatCpx>4</biostatCpx>
+    </GeneDef>
+
     <GeneDef Name="SuperPowersOffensiveBase" Abstract="True">
         <displayCategory>SuperPowersOffensive</displayCategory>
         <biostatCpx>2</biostatCpx>
@@ -101,13 +129,6 @@
 
     <GeneDef Name="SuperPowersSupportBase" Abstract="True">
         <displayCategory>SuperPowersSupport</displayCategory>
-        <biostatCpx>2</biostatCpx>
-        <prerequisite>SuperHeroBase</prerequisite>
-        <marketValueFactor>1.1</marketValueFactor>
-    </GeneDef>
-
-    <GeneDef Name="SuperPowersHemogenBase" Abstract="True">
-        <displayCategory>SuperPowersHemogen</displayCategory>
         <biostatCpx>2</biostatCpx>
         <prerequisite>SuperHeroBase</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
@@ -134,13 +155,27 @@
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
+    <GeneDef Name="SuperPowersPsychicTyrantBase" Abstract="True">
+        <displayCategory>SuperPowersPsychicTyrant</displayCategory>
+        <biostatCpx>2</biostatCpx>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <marketValueFactor>1.1</marketValueFactor>
+    </GeneDef>
+
+    <GeneDef Name="SuperPowersHemogenBase" Abstract="True">
+        <displayCategory>SuperPowersHemogen</displayCategory>
+        <biostatCpx>2</biostatCpx>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <marketValueFactor>1.1</marketValueFactor>
+    </GeneDef>
+
     <GeneDef ParentName="SuperGeneBase">
         <defName>SuperHeroBase</defName>
         <label>Superhero gene</label>
         <description>Carriers of this gene are stronger and faster than almost any other xenotype. These enhancements alone are enough that there are some who believe those with this genes are actually demigods, using their existence to prove their religion correct.</description>
         <iconPath>Base/SuperheroGeneBase</iconPath>
         <displayOrderInCategory>-999</displayOrderInCategory>
-        <foodPoisoningChanceFactor>0.01</foodPoisoningChanceFactor>                    
+        <foodPoisoningChanceFactor>0.01</foodPoisoningChanceFactor>
         <biostatMet>0</biostatMet>
         <statFactors>
             <LifespanFactor>3</LifespanFactor>
@@ -166,7 +201,7 @@
             <MeleeHitChance>3</MeleeHitChance>
             <MentalBreakThreshold>-.15</MentalBreakThreshold>
             <PainShockThreshold>0.50</PainShockThreshold>
-            <PawnBeauty>5</PawnBeauty>
+            <PawnBeauty>5.0</PawnBeauty>
             <SocialImpact>.5</SocialImpact>
             <NegotiationAbility>.5</NegotiationAbility>
             <ConversionPower MayRequire="ludeon.rimworld.ideology">.5</ConversionPower>

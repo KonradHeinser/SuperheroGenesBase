@@ -91,6 +91,32 @@
         <defaultDamage>200</defaultDamage>
         <defaultArmorPenetration>0.1</defaultArmorPenetration>
     </DamageDef>
+
+    <DamageDef>
+        <defName>SHG_Petrification</defName>
+        <label>petrifying attack</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>false</externalViolence>
+        <deathMessage>{0} has been petrified.</deathMessage>
+        <hediff>Bruise</hediff>
+        <defaultDamage>2</defaultDamage>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+        <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+        <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+        <explosionColorEdge>(1, 1, 1, 0.2)</explosionColorEdge>
+        <soundExplosion>BuildingDestroyed_Stone_Big</soundExplosion>
+        <combatLogRules>SHG_Damage_Petrification</combatLogRules>
+        <additionalHediffs>
+            <li>
+                <hediff>SHG_Petrification</hediff>
+                <severityPerDamageDealt>0.15</severityPerDamageDealt>
+                <victimSeverityScaling>ArmorRating_Blunt</victimSeverityScaling>
+                <inverseStatScaling>true</inverseStatScaling>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+    </DamageDef>
 </Defs>
 
 

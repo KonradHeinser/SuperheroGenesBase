@@ -115,4 +115,19 @@
             </li>
         </comps>
     </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_PetrificationBolt</defName>
+        <label>petrification bolt</label>
+        <description>Toss a bolt of infused stone that will flow through a targets blood stream to gradually petrify them.\n\nPetrification will not kill a target and gradually wears off. It is primarily for disabling people you want to capture.</description>
+        <iconPath>Projectiles/Projectile_PetrifyBolt</iconPath>
+        <verbProperties>
+            <soundCast>BuildingDestroyed_Stone_Big</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Petrification</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
 </Defs>
