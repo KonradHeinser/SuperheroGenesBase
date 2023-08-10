@@ -9,7 +9,7 @@
         <displayOrderInCategory>3</displayOrderInCategory>
         <biostatMet>+3</biostatMet>
         <statFactors>
-            <IncomingDamageFactor>1.1</IncomingDamageFactor>
+            <IncomingDamageFactor>1.5</IncomingDamageFactor>
         </statFactors>
         <statOffsets>
             <ArmorRating_Blunt>-.1</ArmorRating_Blunt>
@@ -125,17 +125,17 @@
         <displayOrderInCategory>63</displayOrderInCategory>
         <biostatMet>+4</biostatMet>
         <statFactors>
-            <ShootingAccuracyPawn>.2</ShootingAccuracyPawn>
-            <MeleeDodgeChance>.2</MeleeDodgeChance>
-            <MeleeHitChance>.2</MeleeHitChance>
+            <ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
+            <MeleeDodgeChance>0.2</MeleeDodgeChance>
+            <MeleeHitChance>0.2</MeleeHitChance>
             <PawnTrapSpringChance>10</PawnTrapSpringChance>
             <IncomingDamageFactor>1.1</IncomingDamageFactor>
         </statFactors>
         <capMods>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>-.1</offset>
-          </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <offset>-0.1</offset>
+            </li>
         </capMods>
     </GeneDef>
 
@@ -156,14 +156,14 @@
             <AimingDelayFactor>5</AimingDelayFactor>
         </statOffsets>
         <capMods>
-          <li>
-            <capacity>BloodPumping</capacity>
-            <offset>-.1</offset>
-          </li>
-          <li>
-            <capacity>Moving</capacity>
-            <offset>-.1</offset>
-          </li>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <offset>-0.1</offset>
+            </li>
+            <li>
+                <capacity>Moving</capacity>
+                <offset>-0.1</offset>
+            </li>
         </capMods>
     </GeneDef>
 
@@ -181,10 +181,10 @@
             <MeleeArmorPenetration>.1</MeleeArmorPenetration>
         </statFactors>
         <capMods>
-          <li>
-            <capacity>BloodPumping</capacity>
-            <offset>-.1</offset>
-          </li>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <offset>-0.1</offset>
+            </li>
         </capMods>
     </GeneDef>
 </Defs>

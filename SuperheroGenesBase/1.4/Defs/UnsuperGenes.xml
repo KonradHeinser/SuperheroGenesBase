@@ -21,6 +21,7 @@
         </statOffsets>
         <exclusionTags>
             <li>SuperDurabilities</li>
+            <li>DurabilityPool</li>
         </exclusionTags>
     </GeneDef>
 
@@ -39,11 +40,12 @@
             <LifespanFactor>0.333</LifespanFactor>
         </statFactors>
         <statOffsets>
-            <ToxicEnvironmentResistance>.1</ToxicEnvironmentResistance>
-            <ToxicResistance>.1</ToxicResistance>
+            <ToxicEnvironmentResistance>-.1</ToxicEnvironmentResistance>
+            <ToxicResistance>-.1</ToxicResistance>
         </statOffsets>
         <exclusionTags>
             <li>SuperHealings</li>
+            <li>HealingPool</li>
         </exclusionTags>
     </GeneDef>
 
@@ -62,6 +64,7 @@
         </statFactors>
         <exclusionTags>
             <li>SuperIntelligences</li>
+            <li>IntelligencePool</li>
         </exclusionTags>
     </GeneDef>
 
@@ -82,6 +85,7 @@
         </statOffsets>
         <exclusionTags>
             <li>SuperPerceptions</li>
+            <li>PerceptionPool</li>
         </exclusionTags>
     </GeneDef>
 
@@ -101,6 +105,7 @@
         </statOffsets>
         <exclusionTags>
             <li>SuperPersuasions</li>
+            <li>PersuasionPool</li>
         </exclusionTags>
     </GeneDef>
 
@@ -122,6 +127,7 @@
         </statOffsets>
         <exclusionTags>
             <li>SuperPrecisions</li>
+            <li>PrecisionPool</li>
         </exclusionTags>
     </GeneDef>
 
@@ -142,6 +148,7 @@
         </statOffsets>
         <exclusionTags>
             <li>SuperSpeeds</li>
+            <li>SpeedPool</li>
         </exclusionTags>
     </GeneDef>
 
@@ -162,6 +169,7 @@
         </statOffsets>
         <exclusionTags>
             <li>SuperStrengths</li>
+            <li>StrengthPool</li>
         </exclusionTags>
     </GeneDef>
 </Defs>

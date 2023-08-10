@@ -20,7 +20,7 @@
         <defName>SHG_FireBurst</defName>
         <label>fire burst</label>
         <description>Emit a burst of burning fuel in all directions to form puddles of ignited liquid on the ground.</description>
-        <iconPath>UI/Abilities/FireBurst</iconPath>
+        <iconPath>Powers/FireBurst</iconPath>
         <verbProperties>
             <soundCast>Explosion_Flame</soundCast>
         </verbProperties>
@@ -35,7 +35,7 @@
         <defName>SHG_FireBurst</defName>
         <label>fire burst</label>
         <description>Carriers of this gene are able to set everything in the area around them on fire.\n\nThis doesn't render you immune to fire, so remember to get protection. This is exceptionally important for this ability as even the user will be affected.\n\nThis burst gene was originally created to give supers a way to fight a large number of enemies. \n\nMost of the burst abilities/genes rely on Alpha Genes being enabled because they utilize a function added by the creater of AG. If you are seeing this message then AG was not found in your modlist, and this is the only burst ability available through the vanilla system.</description>
-        <iconPath>UI/Abilities/FireBurst</iconPath>
+        <iconPath>Powers/FireBurst</iconPath>
         <displayOrderInCategory>3</displayOrderInCategory>
         <abilities>
             <li>SHG_FireBurst</li>
@@ -49,5 +49,8 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_FireBurst</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_PyromancerFireBurst</li>
+        </exclusionTags>
     </GeneDef>
 </Defs>

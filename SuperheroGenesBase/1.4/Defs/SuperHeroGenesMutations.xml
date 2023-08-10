@@ -3,7 +3,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_DoubleHearted</defName>
         <label>double hearted</label>
-        <description>A second heart rests in their chest, pumping more blood in exchange for stopping the lungs from working at full capacity. Should this pawn die, this heart will be consumed to bring them back to life. It takes around 15 days for it to return to its full function.\n\nIn the long run, their partially-immortal nature makes them perfect for leaving a lasting legacy about saving the colony from certain doom. In the short-term, watching this pawn die multiple times is quite tramatizing for all of their friends.</description>
+        <description>A second heart rests in their chest, pumping more blood in exchange for stopping the lungs from working at full capacity. Should this pawn die, this heart will be consumed to bring them back to life. It takes around 15 days for it to return to its full function.\n\nIn the long run, their partially-immortal nature makes them perfect for leaving a lasting legacy about saving the colony from certain doom. In the short-term, watching this pawn die multiple times is quite tramatizing for all of their friends.\n\nAll super, unsuper, and antisuper genes function by creating a large pool of life force that is rearranged to perform specific functions. Genes like this function by taking the portion of a life pool that was dedicated for altering a specific area of the pawn, in this case the pawn's healing.</description>
         <geneClass>SuperHeroGenesBase.Gene_DoubleHearted</geneClass>
         <iconPath>Mutations/DoubleHearted</iconPath>
         <displayOrderInCategory>1</displayOrderInCategory>
@@ -12,7 +12,7 @@
         </customEffectDescriptions>
         <exclusionTags>
             <li>SuperHealings</li>
-            <li>SuperMutations</li>
+            <li>HealingPool</li>
         </exclusionTags>
     </GeneDef>
 
@@ -54,7 +54,7 @@
         </capMods>
         <exclusionTags>
             <li>SuperDurabilities</li>
-            <li>SuperMutations</li>
+            <li>DurabilityPool</li>
         </exclusionTags>
     </GeneDef>
 
@@ -127,7 +127,7 @@
         <exclusionTags>
             <li>Aggressive</li>
             <li>SuperSpeeds</li>
-            <li>SuperMutations</li>
+            <li>SpeedPool</li>
         </exclusionTags>
     </GeneDef>
 
@@ -148,7 +148,7 @@
         <exclusionTags>
             <li>Aggressive</li>
             <li>SuperStrengths</li>
-            <li>SuperMutations</li>
+            <li>StrengthPool</li>
         </exclusionTags>
     </GeneDef>
 
@@ -167,7 +167,6 @@
         </statFactors>
         <exclusionTags>
             <li>KillThirst</li>
-            <li>SuperMutations</li>
         </exclusionTags>
     </GeneDef>
 
@@ -190,7 +189,6 @@
         <exclusionTags>
             <li>Aggressive</li>
             <li>Aggression</li>
-            <li>SuperMutations</li>
         </exclusionTags>
     </GeneDef>
 
@@ -217,7 +215,7 @@
         </statFactors>
         <exclusionTags>
             <li>SuperIntelligences</li>
-            <li>SuperMutations</li>
+            <li>IntelligencePool</li>
         </exclusionTags>
     </GeneDef>
 

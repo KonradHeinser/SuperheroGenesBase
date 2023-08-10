@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+            <!--Anti-super Durability-->
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Durability_MinorAura</defName>
+        <label>anti-durability aura(minor)</label>
+        <description>This ability will weaken the stats of everyone around this super for the next 12 hours, after which the super will lie comatose for 12 hours. While Super Durable pawns will barely feel anything, this will make supers unsuper, and make unsupers twice as weak.</description>
+        <iconPath>Base/UnsuperDurability</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>5</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Durability_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Durability_MajorAura</defName>
+        <label>anti-durability aura(major)</label>
+        <description>This ability will weaken the stats of everyone in a wide radius around this super for the next several hours, after which the super will lie comatose for 10 days. This will makebring Super Durability pawns down to a normal super, and will make everyone else unsupers at a minimum.</description>
+        <iconPath>Base/AntisuperDurability</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>20</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Durability_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+            <!--Anti-super Healing-->
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Healing_MinorAura</defName>
+        <label>anti-healing aura(minor)</label>
+        <description>This ability will weaken the stats of everyone around this super for the next 12 hours, after which the super will lie comatose for 12 hours. While Super Healing pawns will barely feel anything, this will make supers unsuper, and make unsupers twice as weak.</description>
+        <iconPath>Base/UnsuperHealing</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>5</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Healing_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Healing_MajorAura</defName>
+        <label>anti-healing aura(major)</label>
+        <description>This ability will weaken the stats of everyone in a wide radius around this super for the next several hours, after which the super will lie comatose for 10 days. This will bring Super Healing pawns down to a normal super, and will make everyone else as weak as unsupers at a minimum.</description>
+        <iconPath>Base/AntisuperHealing</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>20</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Healing_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+            <!--Anti-super Intelligence-->
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Intelligence_MinorAura</defName>
+        <label>anti-intelligence aura(minor)</label>
+        <description>This ability will weaken the stats of everyone around this super for the next 12 hours, after which the super will lie comatose for 12 hours. While Super Intelligent pawns will barely feel anything, this will make supers unsuper, and make unsupers twice as weak.</description>
+        <iconPath>Base/UnsuperIntelligence</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>5</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Intelligence_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Intelligence_MajorAura</defName>
+        <label>anti-intelligence aura(major)</label>
+        <description>This ability will weaken the stats of everyone in a wide radius around this super for the next several hours, after which the super will lie comatose for 10 days. This will bring Super Intelligent pawns down to a normal super, and will make everyone else as weak as unsupers at a minimum.</description>
+        <iconPath>Base/AntisuperIntelligence</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>20</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Intelligence_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+            <!--Anti-super Perception-->
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Perception_MinorAura</defName>
+        <label>anti-perception aura(minor)</label>
+        <description>This ability will weaken the stats of everyone around this super for the next 12 hours, after which the super will lie comatose for 12 hours. While Super Perception pawns will barely feel anything, this will make supers unsuper, and make unsupers twice as weak.</description>
+        <iconPath>Base/UnsuperPerception</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>5</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Perception_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Perception_MajorAura</defName>
+        <label>anti-perception aura(major)</label>
+        <description>This ability will weaken the stats of everyone in a wide radius around this super for the next several hours, after which the super will lie comatose for 10 days. This will bring Super Perception pawns down to a normal super, and will make everyone else as weak as unsupers at a minimum.</description>
+        <iconPath>Base/AntisuperPerception</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>20</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Perception_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+            <!--Anti-super Persuasion-->
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Persuasion_MinorAura</defName>
+        <label>anti-persuasion aura(minor)</label>
+        <description>This ability will weaken the stats of everyone around this super for the next 12 hours, after which the super will lie comatose for 12 hours. While Super Persuasion pawns will barely feel anything, this will make supers unsuper, and make unsupers twice as weak.</description>
+        <iconPath>Base/UnsuperPersuasion</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>5</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Persuasion_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Persuasion_MajorAura</defName>
+        <label>anti-persuasion aura(major)</label>
+        <description>This ability will weaken the stats of everyone in a wide radius around this super for the next several hours, after which the super will lie comatose for 10 days. This will bring Super Persuasion pawns down to a normal super, and will make everyone else as weak as unsupers at a minimum.</description>
+        <iconPath>Base/AntisuperPersuasion</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>20</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Persuasion_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+            <!--Anti-super Precision-->
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Precision_MinorAura</defName>
+        <label>anti-precision aura(minor)</label>
+        <description>This ability will weaken the stats of everyone around this super for the next 12 hours, after which the super will lie comatose for 12 hours. While Super Precise pawns will barely feel anything, this will make supers unsuper, and make unsupers twice as weak.</description>
+        <iconPath>Base/UnsuperPrecision</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>5</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Precision_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Precision_MajorAura</defName>
+        <label>anti-precision aura(major)</label>
+        <description>This ability will weaken the stats of everyone in a wide radius around this super for the next several hours, after which the super will lie comatose for 10 days. This will bring Super Precise pawns down to a normal super, and will make everyone else as weak as unsupers at a minimum.</description>
+        <iconPath>Base/AntisuperPrecision</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>20</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Precision_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+            <!--Anti-super Speed-->
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Speed_MinorAura</defName>
+        <label>anti-speed aura(minor)</label>
+        <description>This ability will weaken the stats of everyone around this super for the next 12 hours, after which the super will lie comatose for 12 hours. While Super Fast pawns will barely feel anything, this will make supers unsuper, and make unsupers twice as weak.</description>
+        <iconPath>Base/UnsuperSpeed</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>5</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Speed_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Speed_MajorAura</defName>
+        <label>anti-speed aura(major)</label>
+        <description>This ability will weaken the stats of everyone in a wide radius around this super for the next several hours, after which the super will lie comatose for 10 days. This will bring Super Fast pawns down to a normal super, and will make everyone else as weak as unsupers at a minimum.</description>
+        <iconPath>Base/AntisuperSpeed</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>20</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Speed_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+            <!--Anti-super Strength-->
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Strength_MinorAura</defName>
+        <label>anti-strength aura(minor)</label>
+        <description>This ability will weaken the stats of everyone around this super for the next 12 hours, after which the super will lie comatose for 12 hours. While Super Strong pawns will barely feel anything, this will make supers unsuper, and make unsupers twice as weak.</description>
+        <iconPath>Base/UnsuperStrength</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>5</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Speed_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_AntiPower_Strength_MajorAura</defName>
+        <label>anti-strength aura(major)</label>
+        <description>This ability will weaken the stats of everyone in a wide radius around this super for the next several hours, after which the super will lie comatose for 10 days. This will bring Super Strong pawns down to a normal super, and will make everyone else as weak as unsupers at a minimum.</description>
+        <iconPath>Base/AntisuperStrength</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>20</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Strength_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

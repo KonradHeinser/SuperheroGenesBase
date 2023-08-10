@@ -2,6 +2,7 @@
 <Defs>
     <MentalStateDef ParentName="BaseMentalState">
         <defName>SHG_CommandAnimal</defName>
+        <stateClass>MentalState_BerserkWarcall</stateClass>
         <label>super's call</label>
         <category>Aggro</category>
         <blockRandomInteraction>true</blockRandomInteraction>
@@ -9,6 +10,38 @@
         <beginLetter>{0} has been called by a super, and now [PAWN_pronoun] will attack all enemies of the colony.</beginLetter>
         <recoveryMessage>{0} must return to the wild to rest.</recoveryMessage>
         <baseInspectLine>Mental state: Super's summons</baseInspectLine>
+        <stateEffecter>AnimalWarcallMentalState</stateEffecter>
+        <recoverFromSleep>true</recoverFromSleep>
+        <inCaravanCanDo>true</inCaravanCanDo>
+        <blocksDefendAndExpandHive>true</blocksDefendAndExpandHive>
+    </MentalStateDef>
+
+    <MentalStateDef ParentName="BaseMentalState">
+        <defName>SHG_HackMech</defName>
+        <stateClass>MentalState_BerserkWarcall</stateClass>
+        <label>ack ack ack</label>
+        <category>Aggro</category>
+        <blockRandomInteraction>true</blockRandomInteraction>
+        <nameColor>(0.9,0.2,0.5)</nameColor>
+        <beginLetter>{0} has been hacked by a super, and now [PAWN_pronoun] will attack all enemies of the colony for a time.</beginLetter>
+        <recoveryMessage>{0} has become hostile once more.</recoveryMessage>
+        <baseInspectLine>Mental state: Hacked</baseInspectLine>
+        <stateEffecter>AnimalWarcallMentalState</stateEffecter>
+        <recoverFromSleep>true</recoverFromSleep>
+        <inCaravanCanDo>true</inCaravanCanDo>
+        <blocksDefendAndExpandHive>true</blocksDefendAndExpandHive>
+    </MentalStateDef>
+
+    <MentalStateDef ParentName="BaseMentalState">
+        <defName>SHG_Beguile</defName>
+        <stateClass>MentalState_BerserkWarcall</stateClass>
+        <label>beguiled</label>
+        <category>Aggro</category>
+        <blockRandomInteraction>true</blockRandomInteraction>
+        <nameColor>(0.9,0.2,0.5)</nameColor>
+        <beginLetter>{0} has been beguiled by a super, and now [PAWN_pronoun] will go on a rampage for a time.</beginLetter>
+        <recoveryMessage>{0} has become hostile once more.</recoveryMessage>
+        <baseInspectLine>Mental state: Beguiled</baseInspectLine>
         <stateEffecter>AnimalWarcallMentalState</stateEffecter>
         <recoverFromSleep>true</recoverFromSleep>
         <inCaravanCanDo>true</inCaravanCanDo>

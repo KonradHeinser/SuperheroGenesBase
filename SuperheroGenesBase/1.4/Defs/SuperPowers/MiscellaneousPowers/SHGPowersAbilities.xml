@@ -35,7 +35,7 @@
                 <goodwillImpact>-75</goodwillImpact>
                 <casterEffect>AnimalWarcall_Cast</casterEffect>
                 <targetEffect>AnimalWarcall_CastOnTarget</targetEffect>
-                <excludeNPCFactions>True</excludeNPCFactions>
+                <excludeNPCFactions>False</excludeNPCFactions>
             </li>
         </comps>
     </AbilityDef>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_AntiPower_Durability</defName>
+        <label>anti-power (Durability)</label>
+        <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them. This weapon comes in two forms, a minor aura and a major aura. The minor aura applies a debuff like the unsuper gene to everyone within a short radius for a day, though the super will be unconscious for the second half. In contrast, the major aura applies the full anti-super gene weakness to everyone in a large area for several hours, but render the super comatose for almost 10 days afterwards due to the burden. Their aura will continue to run rampant while they are immobile, which may help if they fell near their target, but may result in them needing to be quarantined as they heal.\n\nBoth abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.\n\nMany years ago, there was a large group of people that came together under one mission, killing rogue superheroes, or "Villains". Through much experimentation and sacrifice they found four methods for taking down supers, ranked by reliability. Psychic abilities. abnormal damage sources like lightning, ice, and toxins. followed by causing bloodloss through precise piercing attacks or hemogen powers. and as a last resort finding a special anti-super to cancel some of the super's powers.</description>
+        <iconPath>Base/AntisuperDurability</iconPath>
+        <prerequisite>AntisuperDurability</prerequisite>
+        <biostatMet>-1</biostatMet>
+        <displayOrderInCategory>-1</displayOrderInCategory>
+        <abilities>
+            <li>SHG_AntiPower_Durability_MinorAura</li>
+            <li>SHG_AntiPower_Durability_MajorAura</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_AntiPower_Durability_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Durability_MajorAura</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_AntiheroDurability</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_AntiPower_Healing</defName>
+        <label>anti-power (Healing)</label>
+        <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them. This weapon comes in two forms, a minor aura and a major aura. The minor aura applies a debuff like the unsuper gene to everyone within a short radius for a day, though the super will be unconscious for the second half. In contrast, the major aura applies the full anti-super gene weakness to everyone in a large area for several hours, but render the super comatose for almost 10 days afterwards due to the burden. Their aura will continue to run rampant while they are immobile, which may help if they fell near their target, but may result in them needing to be quarantined as they heal.\n\nBoth abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.\n\nMany years ago, there was a large group of people that came together under one mission, killing rogue superheroes, or "Villains". Through much experimentation and sacrifice they found four methods for taking down supers, ranked by reliability. Psychic abilities. abnormal damage sources like lightning, ice, and toxins. followed by causing bloodloss through precise piercing attacks or hemogen powers. and as a last resort finding a special anti-super to cancel some of the super's powers.</description>
+        <iconPath>Base/AntisuperHealing</iconPath>
+        <prerequisite>AntisuperHealing</prerequisite>
+        <biostatMet>-2</biostatMet>
+        <displayOrderInCategory>-1.1</displayOrderInCategory>
+        <abilities>
+            <li>SHG_AntiPower_Healing_MinorAura</li>
+            <li>SHG_AntiPower_Healing_MajorAura</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_AntiPower_Healing_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Healing_MajorAura</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_AntiheroHealing</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_AntiPower_Intelligence</defName>
+        <label>anti-power (Intelligence)</label>
+        <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them. This weapon comes in two forms, a minor aura and a major aura. The minor aura applies a debuff like the unsuper gene to everyone within a short radius for a day, though the super will be unconscious for the second half. In contrast, the major aura applies the full anti-super gene weakness to everyone in a large area for several hours, but render the super comatose for almost 10 days afterwards due to the burden. Their aura will continue to run rampant while they are immobile, which may help if they fell near their target, but may result in them needing to be quarantined as they heal.\n\nBoth abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.\n\nMany years ago, there was a large group of people that came together under one mission, killing rogue superheroes, or "Villains". Through much experimentation and sacrifice they found four methods for taking down supers, ranked by reliability. Psychic abilities. abnormal damage sources like lightning, ice, and toxins. followed by causing bloodloss through precise piercing attacks or hemogen powers. and as a last resort finding a special anti-super to cancel some of the super's powers.</description>
+        <iconPath>Base/AntisuperIntelligence</iconPath>
+        <prerequisite>AntisuperIntelligence</prerequisite>
+        <biostatMet>-1</biostatMet>
+        <displayOrderInCategory>-1.2</displayOrderInCategory>
+        <abilities>
+            <li>SHG_AntiPower_Intelligence_MinorAura</li>
+            <li>SHG_AntiPower_Intelligence_MajorAura</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_AntiPower_Intelligence_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Intelligence_MajorAura</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_AntiheroIntelligence</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_AntiPower_Perception</defName>
+        <label>anti-power (Perception)</label>
+        <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them. This weapon comes in two forms, a minor aura and a major aura. The minor aura applies a debuff like the unsuper gene to everyone within a short radius for a day, though the super will be unconscious for the second half. In contrast, the major aura applies the full anti-super gene weakness to everyone in a large area for several hours, but render the super comatose for almost 10 days afterwards due to the burden. Their aura will continue to run rampant while they are immobile, which may help if they fell near their target, but may result in them needing to be quarantined as they heal.\n\nBoth abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.\n\nMany years ago, there was a large group of people that came together under one mission, killing rogue superheroes, or "Villains". Through much experimentation and sacrifice they found four methods for taking down supers, ranked by reliability. Psychic abilities. abnormal damage sources like lightning, ice, and toxins. followed by causing bloodloss through precise piercing attacks or hemogen powers. and as a last resort finding a special anti-super to cancel some of the super's powers.</description>
+        <iconPath>Base/AntisuperPerception</iconPath>
+        <prerequisite>AntisuperPerception</prerequisite>
+        <biostatMet>-2</biostatMet>
+        <displayOrderInCategory>-1.3</displayOrderInCategory>
+        <abilities>
+            <li>SHG_AntiPower_Perception_MinorAura</li>
+            <li>SHG_AntiPower_Perception_MajorAura</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_AntiPower_Perception_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Perception_MajorAura</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_AntiheroPerception</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_AntiPower_Persuasion</defName>
+        <label>anti-power (Persuasion)</label>
+        <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them. This weapon comes in two forms, a minor aura and a major aura. The minor aura applies a debuff like the unsuper gene to everyone within a short radius for a day, though the super will be unconscious for the second half. In contrast, the major aura applies the full anti-super gene weakness to everyone in a large area for several hours, but render the super comatose for almost 10 days afterwards due to the burden. Their aura will continue to run rampant while they are immobile, which may help if they fell near their target, but may result in them needing to be quarantined as they heal.\n\nBoth abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.\n\nMany years ago, there was a large group of people that came together under one mission, killing rogue superheroes, or "Villains". Through much experimentation and sacrifice they found four methods for taking down supers, ranked by reliability. Psychic abilities. abnormal damage sources like lightning, ice, and toxins. followed by causing bloodloss through precise piercing attacks or hemogen powers. and as a last resort finding a special anti-super to cancel some of the super's powers.</description>
+        <iconPath>Base/AntisuperPersuasion</iconPath>
+        <prerequisite>AntisuperPersuasion</prerequisite>
+        <biostatMet>-1</biostatMet>
+        <displayOrderInCategory>-1.4</displayOrderInCategory>
+        <abilities>
+            <li>SHG_AntiPower_Persuasion_MinorAura</li>
+            <li>SHG_AntiPower_Persuasion_MajorAura</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_AntiPower_Persuasion_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Persuasion_MajorAura</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_AntiheroPersuasion</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_AntiPower_Precision</defName>
+        <label>anti-power (Precision)</label>
+        <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them. This weapon comes in two forms, a minor aura and a major aura. The minor aura applies a debuff like the unsuper gene to everyone within a short radius for a day, though the super will be unconscious for the second half. In contrast, the major aura applies the full anti-super gene weakness to everyone in a large area for several hours, but render the super comatose for almost 10 days afterwards due to the burden. Their aura will continue to run rampant while they are immobile, which may help if they fell near their target, but may result in them needing to be quarantined as they heal.\n\nBoth abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.\n\nMany years ago, there was a large group of people that came together under one mission, killing rogue superheroes, or "Villains". Through much experimentation and sacrifice they found four methods for taking down supers, ranked by reliability. Psychic abilities. abnormal damage sources like lightning, ice, and toxins. followed by causing bloodloss through precise piercing attacks or hemogen powers. and as a last resort finding a special anti-super to cancel some of the super's powers.</description>
+        <iconPath>Base/AntisuperPrecision</iconPath>
+        <prerequisite>AntisuperPrecision</prerequisite>
+        <biostatMet>-2</biostatMet>
+        <displayOrderInCategory>-1.5</displayOrderInCategory>
+        <abilities>
+            <li>SHG_AntiPower_Precision_MinorAura</li>
+            <li>SHG_AntiPower_Precision_MajorAura</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_AntiPower_Precision_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Precision_MajorAura</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_AntiheroPrecision</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_AntiPower_Speed</defName>
+        <label>anti-power (Speed)</label>
+        <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them. This weapon comes in two forms, a minor aura and a major aura. The minor aura applies a debuff like the unsuper gene to everyone within a short radius for a day, though the super will be unconscious for the second half. In contrast, the major aura applies the full anti-super gene weakness to everyone in a large area for several hours, but render the super comatose for almost 10 days afterwards due to the burden. Their aura will continue to run rampant while they are immobile, which may help if they fell near their target, but may result in them needing to be quarantined as they heal.\n\nBoth abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.\n\nMany years ago, there was a large group of people that came together under one mission, killing rogue superheroes, or "Villains". Through much experimentation and sacrifice they found four methods for taking down supers, ranked by reliability. Psychic abilities. abnormal damage sources like lightning, ice, and toxins. followed by causing bloodloss through precise piercing attacks or hemogen powers. and as a last resort finding a special anti-super to cancel some of the super's powers.</description>
+        <iconPath>Base/AntisuperSpeed</iconPath>
+        <prerequisite>AntisuperSpeed</prerequisite>
+        <biostatMet>-1</biostatMet>
+        <displayOrderInCategory>-1.6</displayOrderInCategory>
+        <abilities>
+            <li>SHG_AntiPower_Speed_MinorAura</li>
+            <li>SHG_AntiPower_Speed_MajorAura</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_AntiPower_Speed_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Speed_MajorAura</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_AntiheroSpeed</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_AntiPower_Strength</defName>
+        <label>anti-power (Strength)</label>
+        <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them. This weapon comes in two forms, a minor aura and a major aura. The minor aura applies a debuff like the unsuper gene to everyone within a short radius for a day, though the super will be unconscious for the second half. In contrast, the major aura applies the full anti-super gene weakness to everyone in a large area for several hours, but render the super comatose for almost 10 days afterwards due to the burden. Their aura will continue to run rampant while they are immobile, which may help if they fell near their target, but may result in them needing to be quarantined as they heal.\n\nBoth abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.\n\nMany years ago, there was a large group of people that came together under one mission, killing rogue superheroes, or "Villains". Through much experimentation and sacrifice they found four methods for taking down supers, ranked by reliability. Psychic abilities. abnormal damage sources like lightning, ice, and toxins. followed by causing bloodloss through precise piercing attacks or hemogen powers. and as a last resort finding a special anti-super to cancel some of the super's powers.</description>
+        <iconPath>Base/AntisuperStrength</iconPath>
+        <prerequisite>AntisuperStrength</prerequisite>
+        <biostatMet>-1</biostatMet>
+        <displayOrderInCategory>-1.7</displayOrderInCategory>
+        <abilities>
+            <li>SHG_AntiPower_Strength_MinorAura</li>
+            <li>SHG_AntiPower_Strength_MajorAura</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_AntiPower_Strength_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Strength_MajorAura</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_AntiheroStrength</li>
+        </exclusionTags>
+    </GeneDef>
+</Defs>

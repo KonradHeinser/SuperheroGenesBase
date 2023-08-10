@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_Pools_EndurePain</defName>
+        <label>endure pain</label>
+        <description>Carriers of this gene can use their innate superhero durability in one big burst for a couple hours. During this time, they will become immune to pain and somewhat resistant to all sources of external damage.\n\nMuch like with mutations, pool abilities function by utilizing a specific portion of the life energy pool that the superhero gene provides, in this case, the portion dedicated to enhancing the pawn's durability. Unlike those mutations, these function by using that pool in one large burst, which allows these to be used with any super gene that does not divert the pool's purpose like mutations and unsuper genes. Using the pool in one burst will stop the basic superhero gene from providing the related benefits for about a day as the pool refills.\n\nMost pool manipulation abilities function by using large amounts of energy in a single large burst. Because of the large amount of energy, the effects tend to last for some time. While the recovery of this energy is referred to as "refilling", it would be more accurate to call it "stabilization" as the energy is never truly gone, it is just redistributed and requires time to return to its proper function.</description>
+        <iconPath>Powers/Pools/Gene_EndurePain</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <biostatMet>-1</biostatMet>
+        <abilities>
+            <li>SHG_Pools_EndurePain</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Pools_EndurePain</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>DurabilityPool</li>
+            <li>Archetype_PugilistEndurePain</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_Pools_EmergencyShutdown</defName>
+        <label>emergency shutdown</label>
+        <description>Carriers of this gene can remotely trigger the emergency shutdown of a mechanoid for some time. After half an hour, the mechanoid's systems will process they were hacked and automatically reboot.\n\nMuch like with mutations, pool abilities function by utilizing a specific portion of the life energy pool that the superhero gene provides, in this case, the portion dedicated to enhancing the pawn's intellect. Unlike those mutations, these function by using that pool in one large burst, which allows these to be used with any super gene that does not divert the pool's purpose like mutations and unsuper genes. Using the pool in one burst will stop the basic superhero gene from providing the related benefits for about a day as the pool refills.\n\nMost pool manipulation abilities function by using large amounts of energy in a single large burst. Because of the large amount of energy, the effects tend to last for some time. While the recovery of this energy is referred to as "refilling", it would be more accurate to call it "stabilization" as the energy is never truly gone, it is just redistributed and requires time to return to its proper function.</description>
+        <iconPath>Powers/Pools/Gene_Shutdown</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>SHG_Pools_EmergencyShutdown</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Pools_EmergencyShutdown</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>IntelligencePool</li>
+            <li>Archetypes_HackerShutdown</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_LesserPortent</defName>
+        <label>lesser seer</label>
+        <description>Carriers of this gene can utilize their enhanced senses to predict what other beings around them will do with hightened accuracy. This allows them to dodge most melee attacks that come their way for an hour, and makes them more accurate in melee combat.\n\nMuch like with mutations, pool abilities function by utilizing a specific portion of the life energy pool that the superhero gene provides, in this case, the portion dedicated to enhancing the pawn's intellect. Unlike those mutations, these function by using that pool in one large burst, which allows these to be used with any super gene that does not divert the pool's purpose like mutations and unsuper genes. Using the pool in one burst will stop the basic superhero gene from providing the related benefits for about a day as the pool refills.\n\nMost pool manipulation abilities function by using large amounts of energy in a single large burst. Because of the large amount of energy, the effects tend to last for some time. While the recovery of this energy is referred to as "refilling", it would be more accurate to call it "stabilization" as the energy is never truly gone, it is just redistributed and requires time to return to its proper function.</description>
+        <iconPath>Powers/Pools/Gene_LesserPortent</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>SHG_LesserPortent</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_LesserPortent</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>PerceptionPool</li>
+            <li>Archetype_SkirmisherSeer</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_Pools_CalmingAura</defName>
+        <label>calming aura</label>
+        <description>Carriers of this gene can utilize their superior persuasion abilities to soothe everyone in a wide area around them for a day. During this time, the persuasion bonuses the super would receive from the base Superhero Gene is gone and they have a constant headache causing them both pain and a mood penalty of 20, but everyone within a radius of 50 receives a mood bonus of 10.\n\nMuch like with mutations, pool abilities function by utilizing a specific portion of the life energy pool that the superhero gene provides, in this case, the portion dedicated to enhancing the pawn's persuasion. Unlike those mutations, these function by using that pool in one large burst, which allows these to be used with any super gene that does not divert the pool's purpose like mutations and unsuper genes. Using the pool in one burst will stop the basic superhero gene from providing the related benefits for about a day as the pool refills.\n\nAura abilities involve releasing the life pool's effects to a wide area. This destabilizes the pool like other pool manipulation abilities, but often results in additional side effects beyond the standard pool loss debuffs due to the nature of auras.</description>
+        <iconPath>UI/Abilities/WordOfSerenity</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <biostatMet>-1</biostatMet>
+        <abilities>
+            <li>SHG_Pools_CalmingAura</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Pools_CalmingAura</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>PersuasionPool</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_Pools_SniperSquad</defName>
+        <label>sniping aura</label>
+        <description>Carriers of this gene can grant everyone around them some of their precision abilities for a day. During this time, the precision bonuses the super would receive from the base Superhero Gene is gone and their ability to move properly is diminished.\n\nMuch like with mutations, pool abilities function by utilizing a specific portion of the life energy pool that the superhero gene provides, in this case, the portion dedicated to enhancing the pawn's precision. Unlike those mutations, these function by using that pool in one large burst, which allows these to be used with any super gene that does not divert the pool's purpose like mutations and unsuper genes. Using the pool in one burst will stop the basic superhero gene from providing the related benefits for about a day as the pool refills.\n\nAura abilities involve releasing the life pool's effects to a wide area. This destabilizes the pool like other pool manipulation abilities, but often results in additional side effects beyond the standard pool loss debuffs due to the nature of auras.</description>
+        <iconPath>Powers/Pools/Gene_SniperSquad</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>SHG_Pools_SniperSquad</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Pools_SniperSquad</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>PrecisionPool</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_Pools_CrushingStrength</defName>
+        <label>crushing strength</label>
+        <description>Carriers of this gene can use their strength pool in one great burst to increase their melee damage considerably for an hour.\n\nMuch like with mutations, pool abilities function by utilizing a specific portion of the life energy pool that the superhero gene provides, in this case, the portion dedicated to enhancing the pawn's strength. Unlike those mutations, these function by using that pool in one large burst, which allows these to be used with any super gene that does not divert the pool's purpose like mutations and unsuper genes. Using the pool in one burst will stop the basic superhero gene from providing the related benefits for about a day as the pool refills.\n\nMost pool manipulation abilities function by using large amounts of energy in a single large burst. Because of the large amount of energy, the effects tend to last for some time. While the recovery of this energy is referred to as "refilling", it would be more accurate to call it "stabilization" as the energy is never truly gone, it is just redistributed and requires time to return to its proper function.</description>
+        <iconPath>Powers/Pools/Gene_CrushingStrength</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <biostatMet>-3</biostatMet>
+        <abilities>
+            <li>SHG_Pools_CrushingStrength</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Pools_CrushingStrength</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>StrengthPool</li>
+        </exclusionTags>
+    </GeneDef>
+</Defs>

@@ -12,6 +12,9 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_FireBolt</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_PyromancerFireBolt</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersAcidBase">
@@ -26,6 +29,9 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_AcidBolt</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_CaustimancerAcidBolt</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersLightningBase">
@@ -40,6 +46,9 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_LightningBolt</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_ElectromancerLightningBolt</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersIceBase">
@@ -54,6 +63,9 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_IceBolt</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_CryomancerIceBolt</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersToxicBase">
@@ -69,6 +81,10 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_ToxBolt</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_DruidToxBolt</li>
+            <li>Archetypes_ToximancerToxicBolt</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersEMPBase">
@@ -83,6 +99,9 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_EMPBolt</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_ElectromancerEMPBolt</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersFoamBase">
@@ -111,5 +130,8 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_PetrificationBolt</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_PetrimancerPetrificationBolt</li>
+        </exclusionTags>
     </GeneDef>
 </Defs>

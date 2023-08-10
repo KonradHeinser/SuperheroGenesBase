@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Fortress</defName>
+        <label>fortress</label>
+        <description>Fortify yourself to resist almost any attack that comes your way. This will not protect against many special damage sources like poison. This bonus gradually wears off, and once its gone the pawn will temporarily lose the benefits provided by Super Durability, along with durability related bonuses from the base Superhero gene.</description>
+        <iconPath>Powers/Specializations/Gene_Fortress</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>600000</cooldownTicksRange>
+        <verbProperties>
+            <range>1</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Fortress</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Beelzebub</defName>
+        <label>beelzebub</label>
+        <description>Absorb nutrtition from all living things around you, and even from the very ground you stand on. While the effects to the soil are negligible, this can cause great damage to all living things near you. Both the bonus to the super and the draining only lasts for 1 hour.</description>
+        <iconPath>Powers/Specializations/Gene_Beezlebub</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <warmupEffecter>Bloodfeed_Warmup</warmupEffecter>
+        <warmupStartSound>Bloodfeed_Cast</warmupStartSound>
+        <cooldownTicksRange>600000</cooldownTicksRange>
+        <targetRequired>False</targetRequired>
+        <hostile>true</hostile>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <range>10</range>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityRequiresCapacity">
+                <capacity>Eating</capacity>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Beelzebub</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_HackMech</defName>
+        <label>hack mech</label>
+        <description>Hack a mech to make it fight for the colony for several hours. The super will be unconscious for several days</description>
+        <iconPath>Powers/Specializations/Gene_HackMech</iconPath>
+        <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <groupAbility>True</groupAbility>
+        <stunTargetWhileCasting>true</stunTargetWhileCasting>
+        <statBases>
+            <Ability_Duration>720</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <label>ack ack ack</label>
+            <range>-1</range>
+            <drawAimPie>True</drawAimPie>      
+            <requireLineOfSight>true</requireLineOfSight>
+            <warmupEffecter>CommsConsoleBossgroupSummoned</warmupEffecter>
+            <targetParams>
+                <canTargetLocations>False</canTargetLocations>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetHumans>False</canTargetHumans>
+                <canTargetMechs>True</canTargetMechs>
+                <canTargetSelf>False</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveMentalState">
+                <compClass>CompAbilityEffect_GiveMentalState</compClass>
+                <stateDef>SHG_HackMech</stateDef>
+                <goodwillImpact>-75</goodwillImpact>
+                <casterEffect>AnimalWarcall_Cast</casterEffect>
+                <targetEffect>AnimalWarcall_CastOnTarget</targetEffect>
+                <excludeNPCFactions>false</excludeNPCFactions>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_HackMech</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Portent</defName>
+        <label>portent</label>
+        <description>Focus your senses to predict the future actions of everything around you. This allows you to deflect almost any attack that comes your way, though it requires a considerable amount of concentration. This bonus gradually wears off, and once its gone the pawn will temporarily lose the benefits provided by Super Perception, along with durability related bonuses from the base Superhero gene.</description>
+        <iconPath>Powers/Specializations/Gene_Portent</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>600000</cooldownTicksRange>
+        <verbProperties>
+            <range>1</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Portent</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Beguile</defName>
+        <label>beguile</label>
+        <description>Beguile a pawn to make it fight for the colony for several hours. The target will go on a rampage for about 4 hours. Using this ability will temporarily remove the benefits provided by Super Perception, along with perception related bonuses from the base Superhero gene.</description>
+        <iconPath>Powers/Specializations/Gene_Beguile</iconPath>
+        <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <groupAbility>True</groupAbility>
+        <stunTargetWhileCasting>true</stunTargetWhileCasting>
+        <statBases>
+            <Ability_Duration>720</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <label>beguiling</label>
+            <range>20</range>
+            <drawAimPie>True</drawAimPie>      
+            <requireLineOfSight>true</requireLineOfSight>
+            <warmupEffecter>AnimalWarcall_Warmup</warmupEffecter>
+            <targetParams>
+                <canTargetLocations>False</canTargetLocations>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetHumans>True</canTargetHumans>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetSelf>False</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveMentalState">
+                <compClass>CompAbilityEffect_GiveMentalState</compClass>
+                <stateDef>SHG_Beguile</stateDef>
+                <goodwillImpact>-75</goodwillImpact>
+                <casterEffect>AnimalWarcall_Cast</casterEffect>
+                <targetEffect>AnimalWarcall_CastOnTarget</targetEffect>
+                <excludeNPCFactions>false</excludeNPCFactions>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Beguile</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Snapshot</defName>
+        <label>snapshot</label>
+        <description>Let your subconscious take over the shooting for a few hours. During those hours, it is almost impossible for you to miss, and the time between your shots is greatly decreased. This bonus gradually wears off, and once its gone the pawn will temporarily lose the benefits provided by Super Perception, along with perception related bonuses from the base Superhero gene.</description>
+        <iconPath>Powers/Specializations/Gene_Snapshot</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>600000</cooldownTicksRange>
+        <verbProperties>
+            <range>1</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Snapshot</hediffDef>
+                <onlyBrain>True</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Sprinter</defName>
+        <label>sprinter</label>
+        <description>Push your body to move at physics defying levels. Over the span of 4 hours, the super will have extremely powerful bonuses that gradually diminish over time. Once they run out, the body will fall comatose for around 10 days to recover from the extreme strain this ability puts on the body.</description>
+        <iconPath>Powers/Specializations/Gene_Sprinter</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>600000</cooldownTicksRange>
+        <verbProperties>
+            <range>1</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Sprinter</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_TitanStrength</defName>
+        <label>titan strength</label>
+        <description>For two hours after using this ability, the super will have extreme bonuses in melee damage. These bonuses will gradually fade, and once they run out, the pawn will temporarily lose the benefits provided by Super Strength, along with strength related bonuses from the base Superhero gene.</description>
+        <iconPath>Powers/Specializations/Gene_TitanStrength</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>600000</cooldownTicksRange>
+        <verbProperties>
+            <range>1</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_TitanStrength</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

@@ -23,6 +23,9 @@
                 <li><symbol>hailer</symbol></li>
             </suffixSymbols>
         </symbolPack>
+        <exclusionTags>
+            <li>Archetype_DruidCommand</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersSupportBase">
@@ -37,6 +40,11 @@
             <AbilityDef>SHG_HeroicLeap</AbilityDef>
         </descriptionHyperlinks>
         <biostatMet>-2</biostatMet>
+        <exclusionTags>
+            <li>Archetypes_NinjaHeroicLeap</li>
+            <li>Archetype_SkirmisherLeap</li>
+            <li>Archetype_PugilistLeap</li>
+        </exclusionTags>
         <symbolPack>
             <wholeNameSymbols>
                 <li><symbol>jumper</symbol></li>
@@ -76,6 +84,10 @@
                 <li><symbol>healer</symbol></li>
             </suffixSymbols>
         </symbolPack>
+        <exclusionTags>
+            <li>Archetype_MedicSeal</li>
+            <li>Archetype_LifeBringerSeal</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersSupportBase">
@@ -97,12 +109,15 @@
                 <li><symbol>bolt</symbol></li>
             </prefixSymbols>
         </symbolPack>
+        <exclusionTags>
+            <li>Archetype_AnalzerSpike</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Revive</defName>
         <label>revive</label>
-        <description>Carriers of this gene are able to revive a pawn they can touch.\n\nJust as the superhero gene frequently makes people believe the super is a demigod or god, this ability frequently makes people believe that this super is some sort of demon or other undefined evil their religion fights.</description>
+        <description>Carriers of this gene are able to revive a nearby pawn.\n\nJust as the superhero gene frequently makes people believe the super is a demigod or god, this ability frequently makes people believe that this super is some sort of demon or other undefined evil their religion fights.</description>
         <iconPath>UI/Icons/Genes/Gene_Resurrect</iconPath>
         <abilities>
             <li>SHG_Revive</li>
@@ -119,6 +134,9 @@
                 <li><symbol>life</symbol></li>
             </prefixSymbols>
         </symbolPack>
+        <exclusionTags>
+            <li>Archetype_LifeBringerRevive</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersSupportBase">
@@ -126,13 +144,17 @@
         <label>invisibility</label>
         <description>Carriers of this gene are able to turn invisible for a short time every few hours.\n\nWhile there are many who worry that supers with this gene are going to sneak into places they shouldn't be, countless studies have found that it is far more likely that supers with this gene prefer to do harmless jump scares because watching people get spooked amuses them.</description>
         <iconPath>UI/Abilities/Invisibility</iconPath>
+        <biostatMet>-3</biostatMet>
         <abilities>
             <li>SHG_Invisibility</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_Invisibility</AbilityDef>
         </descriptionHyperlinks>
-        <biostatMet>-3</biostatMet>
+        <exclusionTags>
+            <li>Archetype_PhantomInvisibility</li>
+            <li>Archetypes_HackerInvisibility</li>
+        </exclusionTags>
         <symbolPack>
             <prefixSymbols>
                 <li><symbol>camo</symbol></li>
@@ -162,6 +184,9 @@
                 <li><symbol>port</symbol></li>
             </suffixSymbols>
         </symbolPack>
+        <exclusionTags>
+            <li>Archetype_PorterBlink</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersSupportBase">
@@ -186,6 +211,10 @@
                 <li><symbol>port</symbol></li>
             </suffixSymbols>
         </symbolPack>
+        <exclusionTags>
+            <li>Archetype_PorterTeleport</li>
+        </exclusionTags>
+
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersSupportBase">
@@ -210,6 +239,9 @@
                 <li><symbol>port</symbol></li>
             </suffixSymbols>
         </symbolPack>
+        <exclusionTags>
+            <li>Archetype_PorterGate</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersSupportBase">
@@ -234,5 +266,8 @@
                 <li><symbol>port</symbol></li>
             </suffixSymbols>
         </symbolPack>
+        <exclusionTags>
+            <li>Archetype_PorterRift</li>
+        </exclusionTags>
     </GeneDef>
 </Defs>

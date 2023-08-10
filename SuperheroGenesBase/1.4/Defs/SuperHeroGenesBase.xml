@@ -25,33 +25,39 @@
     </GeneCategoryDef>
 
     <GeneCategoryDef>
-        <defName>SuperPowersSpecialization</defName>
-        <label>super powers - specialization</label>
+        <defName>SuperMutations</defName>
+        <label>super mutations</label>
         <displayPriorityInXenotype>999.8</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
-        <defName>SuperMutations</defName>
-        <label>super mutations</label>
+        <defName>SuperPowersSpecialization</defName>
+        <label>super powers - specialization</label>
         <displayPriorityInXenotype>999.7</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
+        <defName>SuperPowersPools</defName>
+        <label>super powers - pool manipulation</label>
+        <displayPriorityInXenotype>999.6</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersArchetypes</defName>
         <label>super powers - archetypes</label>
-        <displayPriorityInXenotype>999.6</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.3</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersOffensive</defName>
         <label>super powers - attacks</label>
-        <displayPriorityInXenotype>999.5</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.2</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersSupport</defName>
         <label>super powers - supports</label>
-        <displayPriorityInXenotype>999.4</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.1</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
@@ -79,8 +85,14 @@
     </GeneCategoryDef>
 
     <GeneCategoryDef>
+        <defName>SuperPowersPsychicSoldier</defName>
+        <label>psionist powers - soldier</label>
+        <displayPriorityInXenotype>989.5</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
         <defName>SuperPowersHemogen</defName>
-        <label>super powers - blood</label>
+        <label>super powers - hemomancy</label>
         <displayPriorityInXenotype>979.9</displayPriorityInXenotype>
     </GeneCategoryDef>
 
@@ -92,7 +104,21 @@
 
     <GeneDef Name="SuperGeneBase" Abstract="True">
         <displayCategory>SuperGenes</displayCategory>
-        <biostatCpx>5</biostatCpx>
+        <biostatCpx>0</biostatCpx>
+    </GeneDef>
+
+    <GeneDef Name="SHG_SpecializationBase" Abstract="True">
+        <displayCategory>SuperPowersSpecialization</displayCategory>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-3</biostatMet>
+        <exclusionTags>
+            <li>SHG_Specializations</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef Name="SHG_PoolsBase" Abstract="True">
+        <displayCategory>SuperPowersPools</displayCategory>
+        <biostatCpx>1</biostatCpx>
     </GeneDef>
 
     <GeneDef Name="SuperMutationsBase" Abstract="True">
@@ -101,7 +127,7 @@
         <biostatMet>0</biostatMet>
         <prerequisite>SuperHeroBase</prerequisite>
         <exclusionTags>
-            <li>SuperMutations</li>
+            <li>SHG_SuperMutations</li>
         </exclusionTags>
     </GeneDef>
 
@@ -110,61 +136,66 @@
         <biostatCpx>1</biostatCpx>
     </GeneDef>
 
-    <GeneDef Name="SHG_SpecializationBase" Abstract="True">
-        <displayCategory>SuperPowersSpecialization</displayCategory>
-        <biostatCpx>0</biostatCpx>
-    </GeneDef>
-
-    <GeneDef Name="SHG_ArchtypeBase" Abstract="True">
+    <GeneDef Name="SHG_ArchetypeBase" Abstract="True">
         <displayCategory>SuperPowersArchetypes</displayCategory>
-        <biostatCpx>4</biostatCpx>
+        <biostatCpx>1</biostatCpx>
+        <exclusionTags>
+            <li>SHG_Archetypes</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef Name="SuperPowersOffensiveBase" Abstract="True">
         <displayCategory>SuperPowersOffensive</displayCategory>
-        <biostatCpx>2</biostatCpx>
+        <biostatCpx>0</biostatCpx>
         <prerequisite>SuperHeroBase</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
     <GeneDef Name="SuperPowersSupportBase" Abstract="True">
         <displayCategory>SuperPowersSupport</displayCategory>
-        <biostatCpx>2</biostatCpx>
+        <biostatCpx>0</biostatCpx>
         <prerequisite>SuperHeroBase</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
     <GeneDef Name="SuperPowersPsychicDimensionalBase" Abstract="True">
         <displayCategory>SuperPowersPsychicDimensional</displayCategory>
-        <biostatCpx>2</biostatCpx>
+        <biostatCpx>0</biostatCpx>
         <prerequisite>SuperHeroBase</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
     <GeneDef Name="SuperPowersPsychicCommanderBase" Abstract="True">
         <displayCategory>SuperPowersPsychicCommander</displayCategory>
-        <biostatCpx>2</biostatCpx>
+        <biostatCpx>0</biostatCpx>
         <prerequisite>SuperHeroBase</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
     <GeneDef Name="SuperPowersPsychicGuardianBase" Abstract="True">
         <displayCategory>SuperPowersPsychicGuardian</displayCategory>
-        <biostatCpx>2</biostatCpx>
+        <biostatCpx>0</biostatCpx>
         <prerequisite>SuperHeroBase</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
     <GeneDef Name="SuperPowersPsychicTyrantBase" Abstract="True">
         <displayCategory>SuperPowersPsychicTyrant</displayCategory>
-        <biostatCpx>2</biostatCpx>
+        <biostatCpx>0</biostatCpx>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <marketValueFactor>1.1</marketValueFactor>
+    </GeneDef>
+
+    <GeneDef Name="SuperPowersPsychicSoldierBase" Abstract="True">
+        <displayCategory>SuperPowersPsychicSoldier</displayCategory>
+        <biostatCpx>0</biostatCpx>
         <prerequisite>SuperHeroBase</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
     <GeneDef Name="SuperPowersHemogenBase" Abstract="True">
         <displayCategory>SuperPowersHemogen</displayCategory>
-        <biostatCpx>2</biostatCpx>
+        <biostatCpx>0</biostatCpx>
         <prerequisite>SuperHeroBase</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>

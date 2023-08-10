@@ -181,45 +181,4 @@
             </li>
         </comps>
     </HediffDef>
-
-<!--Add to archetype gene
-    <HediffDef>
-        <defName>SHG_Psionist</defName>
-        <label>psionist</label>
-        <description>This pawn's genetics grant an innate connection to the same archotech field that psylinks access. While this bond is not very strong by itself, it can be further enhanced by other means.</description>
-        <isBad>false</isBad>
-        <everCurableByItem>false</everCurableByItem>
-        <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-        <stages>
-            <li>
-                <statOffsets>
-                    <PsychicEntropyMax>100.0</PsychicEntropyMax>
-                    <PsychicEntropyRecoveryRate>1.0</PsychicEntropyRecoveryRate>
-                </statOffsets>
-            </li>
-        </stages>
-    </HediffDef>
-
-    Gene stuff
-		<modExtensions>
-			<li Class="VanillaGenesExpanded.GeneExtension">
-				<hediffsToBodyParts>
-					<li>
-						<hediff>SHG_Psionist</hediff>
-						<bodyparts>
-							<li>Brain</li>
-						</bodyparts>
-					</li>
-					<li>
-						<hediff>PsychicAmplifier</hediff>
-						<bodyparts>
-							<li>Brain</li>
-						</bodyparts>
-					</li>
-				</hediffsToBodyParts>
-			</li>
-		</modExtensions>
--->
 </Defs>
