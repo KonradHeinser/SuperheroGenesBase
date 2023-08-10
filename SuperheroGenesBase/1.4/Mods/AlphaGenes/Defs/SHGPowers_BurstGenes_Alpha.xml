@@ -15,6 +15,9 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_AcidBurst</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_CaustimancerAcidBurst</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersLightningBase">
@@ -32,6 +35,9 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_LightningBurst</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_ElectromancerLightningBurst</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersIceBase">
@@ -50,6 +56,9 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_IceBurst</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_CryomancerIceBurst</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersToxicBase">
@@ -67,6 +76,9 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_ToxicBurst</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_ToximancerToxicBurst</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersEMPBase">
@@ -84,6 +96,9 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_EMPBurst</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_ElectromancerEMPBurst</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersFoamBase">
@@ -115,5 +130,34 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_PetrificationBurst</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_PetrimancerPetrificationBurst</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersFoamBase">
+        <defName>SHG_SmokeBomb</defName>
+        <label>smoke bomb</label>
+        <description>Carriers of this gene are able to release of smoke that will leave everyone around them stunned for a while.\n\nBurst genes were originally created to give supers a way to fight a large number of enemies. Most of them were designed to kick up a dust cloud to protect the super some while they deal with nearby enemies.\n\nThe ability this gene provides utilitzes code written by the creator of Alpha Genes, specifically the code used for the detonate abilities. All credit for said code belongs to them, all I did was plug in some new numbers for these genes.</description>
+        <iconPath>Powers/Gene_SmokeBomb</iconPath>
+        <displayOrderInCategory>74</displayOrderInCategory>
+        <abilities>
+            <li>SHG_SmokeBomb</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SmokeBomb</AbilityDef>
+        </descriptionHyperlinks>
+        <symbolPack inherit="false">
+            <prefixSymbols>
+                <li><symbol>smoke</symbol></li>
+                <li><symbol>gas</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>smoker</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>Archetypes_NinjaSmokeBomb</li>
+        </exclusionTags>
     </GeneDef>
 </Defs>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/DamageDef[defName="SHG_Petrification"]/additionalHediffs/li/victimSeverityScaling</xpath>
+        <value><victimSeverityScaling>ToxicResistance</victimSeverityScaling></value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/GeneDef[defName="SHG_PetrificiationBolt"]/description</xpath>
+        <value>
+            <description>Supers with this power are able to shoot an infused stone that will invade a targets bloodstream like a toxin.\n\nPetrification will not kill a target and gradually wears off. It is primarily for disabling people you want to capture.\n\nPetrification will have less effect on larger pawns/animals, along with any pawn that has toxic resistance.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets. While the damage from the bolt isn't massive, people generally get annoyed by accidental petrifications.</description>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/GeneDef[defName="SHG_PetrificationBlast"]/description</xpath>
+        <value>
+        <description>Supers with this power are able to summon a ball of infused stone that will invade a targets bloodstream like a toxin.\n\nPetrification will not kill a target and gradually wears off. It is primarily for disabling people you want to capture.\n\nPetrification will have less effect on larger pawns/animals, along with any pawn that has toxic resistance. The original version of this gene was so destructive that it had to be intentionally weakened because it would petrify far too many people for far too long.</description>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/GeneDef[defName="SHG_PetrificationBurst"]</xpath>
+        <match Class="PatchOperationReplace">
+            <xpath>Defs/GeneDef[defName="SHG_PetrificationBurst"]/description</xpath>
+            <value>
+                <description>Carriers of this gene are able to release a burst of infused stone dust that invades the blood streams of everyone in the area around tham, including themselves, like a toxin. The dust collects around veins and muscles, gradually restricting the individual's ability to move freely as it becomes denser.\n\nPetrification will not kill a target and gradually wears off. It is primarily for disabling people you want to capture. People will not become completely petrified by a single burst, and any pawns with a larger body size or good toxin resilience will be somewhat resistant to petrification. The innate armor this gene provides will protect the pawn from petrifying completely, but it will not stop the effects entirely.\n\nBurst genes were originally created to give supers a way to fight a large number of enemies. Most of them were designed to kick up a dust cloud to protect the super some while they deal with nearby enemies.\n\nThe ability this gene provides utilitzes code written by the creator of Alpha Genes, specifically the code used for the detonate abilities. All credit for said code belongs to them, all I did was plug in some new numbers for these genes.</description>
+            </value>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/GeneDef[defName="SHG_PetrificationBurst"]</xpath>
+        <match Class="PatchOperationReplace">
+            <xpath>Defs/GeneDef[defName="SHG_PetrificationBurst"]/statOffsets</xpath>
+            <value>
+                <statOffsets>
+                    <ToxicResistance>.1</ToxicResistance>
+                </statOffsets>
+            </value>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="SHG_Petrification"]</xpath>
+        <value>
+            <HediffDef>
+                <defName>SHG_Petrification</defName>
+                <label>petrification</label>
+                <description>Stone dust infused by a super flows through this pawn's veins, gradually lining the pawn's veins and muscles. This lining will halt all toxins flowing through the blood just as it halts the pawn.It will take at least 3/4 of a day for a pawn to go from fully petrified to completely healed. The amount of time spent fully petrified usually does not exceed a few hours.</description>
+                <hediffClass>HediffWithComps</hediffClass>
+                <stages>
+                    <li>
+                        <label>body sluggish</label>
+                        <minSeverity>0.1</minSeverity>
+                        <capMods>
+                            <li>
+                                <capacity>Moving</capacity>
+                                <postFactor>0.9</postFactor>
+                            </li>
+                            <li>
+                                <capacity>Manipulation</capacity>
+                                <postFactor>0.9</postFactor>
+                            </li>
+                        </capMods>
+                    </li>
+                    <li>
+                        <label>body struggling</label>
+                        <minSeverity>0.25</minSeverity>
+                        <statOffsets>
+                            <ToxicResistance>.1</ToxicResistance>
+                        </statOffsets>
+                        <capMods>
+                            <li>
+                                <capacity>Moving</capacity>
+                                <postFactor>0.75</postFactor>
+                            </li>
+                            <li>
+                                <capacity>Manipulation</capacity>
+                                <postFactor>0.75</postFactor>
+                            </li>
+                        </capMods>
+                    </li>
+                    <li>
+                        <label>body stiffening</label>
+                        <minSeverity>0.4</minSeverity>
+                        <statOffsets>
+                            <ToxicResistance>.4</ToxicResistance>
+                        </statOffsets>
+                        <capMods>
+                            <li>
+                                <capacity>Moving</capacity>
+                                <postFactor>0.50</postFactor>
+                            </li>
+                            <li>
+                                <capacity>Manipulation</capacity>
+                                <postFactor>0.50</postFactor>
+                            </li>
+                        </capMods>
+                    </li>
+                    <li>
+                        <label>body leadened</label>
+                        <minSeverity>0.6</minSeverity>
+                        <statOffsets>
+                            <ToxicResistance>.7</ToxicResistance>
+                        </statOffsets>
+                        <capMods>
+                            <li>
+                                <capacity>Moving</capacity>
+                                <postFactor>0.25</postFactor>
+                            </li>
+                            <li>
+                                <capacity>Manipulation</capacity>
+                                <postFactor>0.25</postFactor>
+                            </li>
+                        </capMods>
+                    </li>
+                    <li>
+                        <label>petrified</label>
+                        <minSeverity>0.75</minSeverity>
+                        <statOffsets>
+                            <ToxicResistance>1</ToxicResistance>
+                        </statOffsets>
+                        <capMods>
+                            <li>
+                                <capacity>Moving</capacity>
+                                <setMax>0</setMax>
+                            </li>
+                            <li>
+                                <capacity>Manipulation</capacity>
+                                <setMax>0</setMax>
+                            </li>
+                        </capMods>
+                    </li>
+                </stages>
+                <comps>
+                    <li Class="HediffCompProperties_SeverityPerDay">
+                        <severityPerDay>-0.1</severityPerDay>
+                    </li>
+                </comps>
+            </HediffDef>
+        </value>
+    </Operation>
+</Patch>

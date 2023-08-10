@@ -126,4 +126,20 @@
             </li>
         </comps>
     </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBurstBase">
+        <defName>SHG_SmokeBomb</defName>
+        <label>smoke bomb</label>
+        <description>Emit a burst of smoke that stuns everyone around you.\n\nThis will also kick up a dust cloud that may buy this super some time to get out of the area.\n\nThis ability utilizes code created in Alpha Genes, and all credit for said code belongs to them.</description>
+        <iconPath>Powers/Gene_SmokeBomb</iconPath>
+        <comps>
+            <li Class="AlphaGenes.CompProperties_Detonate">
+                <radius>5</radius>
+				<damageType>Stun</damageType>
+				<damageUser>false</damageUser>
+				<soundCreated>MortarBomb_Explode</soundCreated>
+				<damageAmount>15</damageAmount>
+            </li>
+        </comps>
+    </AbilityDef>
 </Defs>

@@ -10,7 +10,7 @@
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/GeneDef[defName="AntisuperDurability"]/statFactors/IncomingDamageFactor</xpath>
         <value>
-            <IncomingDamageFactor>1.4</IncomingDamageFactor>
+            <IncomingDamageFactor>1.8</IncomingDamageFactor>
         </value>
     </Operation>
 
@@ -154,7 +154,7 @@
         <xpath>Defs/GeneDef[defName="SuperHeroBase"]/statOffsets/ShootingAccuracyPawn</xpath>
         <value>
             <ShootingAccuracyPawn>1</ShootingAccuracyPawn>
-            <AimingAccuracy>0.75</AimingAccuracy>
+            <AimingAccuracy>0.70</AimingAccuracy>
         </value>
     </Operation>
 

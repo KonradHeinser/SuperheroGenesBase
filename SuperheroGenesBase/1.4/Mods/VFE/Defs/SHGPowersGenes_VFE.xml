@@ -23,6 +23,9 @@
 		<customEffectDescriptions>
 			<li>Colonist will always be floating at least a little bit over the ground.</li>
 		</customEffectDescriptions>
+        <exclusionTags>
+            <li>Archetype_PhantomFlight</li>
+        </exclusionTags>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<hediffToWholeBody>SHG_Flight</hediffToWholeBody>
