@@ -4,7 +4,7 @@
         <defName>SHG_FireBolt</defName>
         <label>fire bolt</label>
         <description>Supers with this power are able to summon a bolt of fire that catches most flammable things between it and its destination on fire.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets.</description>
-        <iconPath>Projectiles/Projectile_FireBolt</iconPath>
+        <iconPath>Powers/Gene_FireBolt</iconPath>
         <displayOrderInCategory>2</displayOrderInCategory>
         <abilities>
             <li>SHG_FireBolt</li>
@@ -21,7 +21,7 @@
         <defName>SHG_AcidBolt</defName>
         <label>acid bolt</label>
         <description>Supers with this power are able to summon a bolt of acid that corrodes whoever it hits.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets.</description>
-        <iconPath>Projectiles/Projectile_AcidBolt</iconPath>
+        <iconPath>Powers/Gene_AcidBolt</iconPath>
         <displayOrderInCategory>12</displayOrderInCategory>
         <abilities>
             <li>SHG_AcidBolt</li>
@@ -38,7 +38,7 @@
         <defName>SHG_LightningBolt</defName>
         <label>lightning bolt</label>
         <description>Supers with this power are able to summon a bolt of lightning that causes damage to both flesh and electronics.\n\nDue to the destructiveness of this ability, it will completely burn up electronics instead of just disabling them.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets.</description>
-        <iconPath>Projectiles/Projectile_LightningBolt</iconPath>
+        <iconPath>Powers/Gene_LightningBolt</iconPath>
         <displayOrderInCategory>22</displayOrderInCategory>
         <abilities>
             <li>SHG_LightningBolt</li>
@@ -55,7 +55,7 @@
         <defName>SHG_IceBolt</defName>
         <label>ice bolt</label>
         <description>Supers with this power are able to summon a bolt of ice that rapidly freezes opponents.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets.</description>
-        <iconPath>Projectiles/Projectile_IceBolt</iconPath>
+        <iconPath>Powers/Gene_IceBolt</iconPath>
         <displayOrderInCategory>32</displayOrderInCategory>
         <abilities>
             <li>SHG_IceBolt</li>
@@ -72,7 +72,7 @@
         <defName>SHG_ToxBolt</defName>
         <label>toxic bolt</label>
         <description>Supers with this power are able to summon a bolt of poison that punches through opponents like a massive toxic needle.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets.</description>
-        <iconPath>Projectiles/Projectile_ToxicBolt</iconPath>
+        <iconPath>Powers/Gene_ToxicBolt</iconPath>
         <displayOrderInCategory>42</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
         <abilities>
@@ -91,7 +91,7 @@
         <defName>SHG_EMPBolt</defName>
         <label>emp bolt</label>
         <description>Supers with this power are able to summon a bolt of electricity that will disable various electronics in its path. This bolt is not strong enough to cause damage.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets. Disabling your own electronics would be exceptionally counterproductive.</description>
-        <iconPath>Projectiles/Projectile_LightningBolt</iconPath>
+        <iconPath>Powers/Gene_LightningBolt</iconPath>
         <displayOrderInCategory>52</displayOrderInCategory>
         <abilities>
             <li>SHG_EMPBolt</li>
@@ -108,7 +108,7 @@
         <defName>SHG_FoamBolt</defName>
         <label>foam bolt</label>
         <description>Supers with this power are able to summon a bolt of foam that will douse flames on pawns and protect them from flames for a time.\n\nThis will NOT affect fires on the ground, item, or corpses.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets. Protecting your enemies from catching on fire usually isn't very helpful.</description>
-        <iconPath>Projectiles/Projectile_FoamBolt</iconPath>
+        <iconPath>Powers/Gene_FoamBolt</iconPath>
         <displayOrderInCategory>62</displayOrderInCategory>
         <abilities>
             <li>SHG_FoamBolt</li>
@@ -122,7 +122,7 @@
         <defName>SHG_PetrificiationBolt</defName>
         <label>petrification bolt</label>
         <description>Supers with this power are able to shoot an infused stone that will invade a targets bloodstream like a toxin.\n\nPetrification will not kill a target and gradually wears off. It is primarily for disabling people you want to capture.\n\nPetrification will have less effect on larger pawns/animals, along with any pawn that has innate blunt armor protection.\n\nThis ability was developed shortly after blast abilities were developed when some people realized that explosive options don't always work, especially if there's some people in the target area that aren't desired targets. While the damage from the bolt isn't massive, people generally get annoyed by accidental petrifications.\n\nPawns with the Super Durability gene are completely immune to this, and pawns with a strong enough innate armor, whether due to genes or implants, are almost impossible to completely petrify, though they will still be slowed.</description>
-        <iconPath>Projectiles/Projectile_PetrifyBolt</iconPath>
+        <iconPath>Powers/Gene_PetrifyBolt</iconPath>
         <displayOrderInCategory>72</displayOrderInCategory>
         <abilities>
             <li>SHG_PetrificationBolt</li>

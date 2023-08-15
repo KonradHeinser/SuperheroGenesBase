@@ -10,7 +10,7 @@
         <defName>SHG_FireBolt</defName>
         <label>fire bolt</label>
         <description>Toss a bolt of summoned fire that will set a pawn on fire.</description>
-        <iconPath>Projectiles/Projectile_FireBolt</iconPath>
+        <iconPath>Powers/Gene_FireBolt</iconPath>
         <verbProperties>
             <soundCast>Explosion_Flame</soundCast>
         </verbProperties>
@@ -25,7 +25,7 @@
         <defName>SHG_AcidBolt</defName>
         <label>acid bolt</label>
         <description>Toss a bolt of summoned acid that will leave corrode any pawn that it hits.</description>
-        <iconPath>Projectiles/Projectile_AcidBolt</iconPath>
+        <iconPath>Powers/Gene_AcidBolt</iconPath>
         <verbProperties>
             <soundCast>AcidSpray_Resolve</soundCast>
         </verbProperties>
@@ -40,7 +40,7 @@
         <defName>SHG_LightningBolt</defName>
         <label>lightning bolt</label>
         <description>Toss a bolt of summoned lightning that will electrocute whatever it hits. The damage is too destructive to cause an EMP effect.</description>
-        <iconPath>Projectiles/Projectile_LightningBolt</iconPath>
+        <iconPath>Powers/Gene_LightningBolt</iconPath>
         <verbProperties>
             <soundCast>Explosion_EMP</soundCast>
         </verbProperties>
@@ -55,7 +55,7 @@
         <defName>SHG_IceBolt</defName>
         <label>ice bolt</label>
         <description>Toss a bolt of summoned ice that inflicts debilitating frostbite.</description>
-        <iconPath>Projectiles/Projectile_IceBolt</iconPath>
+        <iconPath>Powers/Gene_IceBolt</iconPath>
         <verbProperties>
             <soundCast>Foam_Impact</soundCast>
         </verbProperties>
@@ -70,7 +70,7 @@
         <defName>SHG_ToxBolt</defName>
         <label>toxic bolt</label>
         <description>Toss a bolt of summoned poison that pierces into its target to inflict toxic buildup.</description>
-        <iconPath>Projectiles/Projectile_ToxicBolt</iconPath>
+        <iconPath>Powers/Gene_ToxicBolt</iconPath>
         <verbProperties>
             <soundCast>PiercingSpine_Launch</soundCast>
         </verbProperties>
@@ -85,7 +85,7 @@
         <defName>SHG_EMPBolt</defName>
         <label>emp bolt</label>
         <description>Toss a bolt of summoned electricity that will disable electronics that it hits for a while.</description>
-        <iconPath>Projectiles/Projectile_LightningBolt</iconPath>
+        <iconPath>Powers/Gene_LightningBolt</iconPath>
         <verbProperties>
             <soundCast>Explosion_EMP</soundCast>
         </verbProperties>
@@ -100,7 +100,7 @@
         <defName>SHG_FoamBolt</defName>
         <label>foam bolt</label>
         <description>Toss a bolt of summoned foam that will douse flames on pawns and protect them from flames for a time.\n\nThis will NOT affect fires on the ground, item, or corpses.</description>
-        <iconPath>Projectiles/Projectile_FoamBolt</iconPath>
+        <iconPath>Powers/Gene_FoamBolt</iconPath>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <verbProperties>
@@ -120,7 +120,7 @@
         <defName>SHG_PetrificationBolt</defName>
         <label>petrification bolt</label>
         <description>Toss a bolt of infused stone that will flow through a targets blood stream to gradually petrify them.\n\nPetrification will not kill a target and gradually wears off. It is primarily for disabling people you want to capture.</description>
-        <iconPath>Projectiles/Projectile_PetrifyBolt</iconPath>
+        <iconPath>Powers/Gene_PetrifyBolt</iconPath>
         <verbProperties>
             <soundCast>BuildingDestroyed_Stone_Big</soundCast>
         </verbProperties>
