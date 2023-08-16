@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-    <Operation Class="PatchOperationAdd"> <!--Stops players from taking superclotting when they have SuperHealing because SuperHealing has superclotting as part of it-->
-        <xpath>/Defs/GeneDef[defName="Superclotting"]</xpath>
-        <value>
-            <exclusionTags>
-                <li>SuperHealings</li>
-            </exclusionTags>
-        </value>
+    <Operation Class="PatchOperationConditional"> <!--Stops players from taking superclotting when they have SuperHealing because SuperHealing has superclotting as part of it-->
+        <xpath>/Defs/GeneDef[defName="Superclotting"]/exclusionTags</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/GeneDef[defName="Superclotting"]/exclusionTags</xpath>
+            <value><li>SuperHealings</li></value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/GeneDef[defName="Superclotting"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>SuperHealings</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
     </Operation>
 </Patch>
