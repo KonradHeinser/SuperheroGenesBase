@@ -18,6 +18,7 @@
             </li>
         </suppressedTraits>
         <statOffsets>
+            <PsychicSensitivity>1</PsychicSensitivity>
             <PsychicEntropyMax>100.0</PsychicEntropyMax>
             <PsychicEntropyRecoveryRate>1.0</PsychicEntropyRecoveryRate>
             <MeditationFocusGain>1.0</MeditationFocusGain>
