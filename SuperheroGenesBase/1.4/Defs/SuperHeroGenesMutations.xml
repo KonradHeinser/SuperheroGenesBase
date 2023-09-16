@@ -19,7 +19,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_SuperPsychicPotential</defName>
         <label>super psychic potential</label>
-        <description>Latent within this pawn is a psychic sensitivity that makes them twice as capable of manipulating psychic things than any other. Unfortunately, this also means that their weakness to psychic phenomenon is greater than it is for most heroes.\n\nDue to the fact that they are exceptionally vulnerable to psychic effects, they must take care of their mental health constantly lest they be driven insane by an errant psychic drone. Despite this major issue, their attunement to psychic forces makes them exceptional Mechinators and Gauranlen keepers.</description>
+        <description>Latent within this pawn is a psychic sensitivity that makes them twice as capable of manipulating psychic things than any other. Unfortunately, this also means that their weakness to psychic phenomenon is greater than it is for most heroes.\n\nDue to the fact that they are exceptionally vulnerable to psychic effects, they must take care of their mental health constantly lest they be driven insane by an errant psychic drone. Despite this major issue, their attunement to psychic forces makes them exceptional Mechanitors, Gauranlen keepers, and Psionic Soldiers.</description>
         <iconPath>Mutations/SuperPsychicPotential</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>2</displayOrderInCategory>

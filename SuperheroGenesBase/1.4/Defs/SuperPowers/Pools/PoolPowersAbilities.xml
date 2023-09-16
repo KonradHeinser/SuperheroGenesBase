@@ -43,7 +43,7 @@
         <defName>SHG_Pools_EmergencyShutdown</defName>
         <label>hack mech</label>
         <description>Hack a mech to make it shutdown for about half an hour. This will disable the intelligence portion of the super's base Superhero Gene for about a day.</description>
-        <iconPath>Powers/Specializations/Gene_HackMech</iconPath>
+        <iconPath>Powers/Pools/Gene_Shutdown</iconPath>
         <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <groupAbility>True</groupAbility>

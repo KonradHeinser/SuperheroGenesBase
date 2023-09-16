@@ -11,7 +11,7 @@
         <stages>
             <li>
                 <statFactors>
-                    <MoveSpeed>1.25</MoveSpeed>
+                    <MoveSpeed>1.5</MoveSpeed>
                 </statFactors>
             </li>
         </stages>

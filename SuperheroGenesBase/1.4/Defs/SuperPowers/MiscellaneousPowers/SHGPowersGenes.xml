@@ -270,4 +270,21 @@
             <li>Archetype_PorterRift</li>
         </exclusionTags>
     </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_PsychicDisconnection</defName>
+        <label>psychic disconnection</label>
+        <description>Carriers of this gene are able to temporarily render people psychically deaf. This gene requires that the carrier does not have any other genes that manipulate their own psychic sensitivity.</description>
+        <iconPath>Powers/Gene_PsychicDisconnection</iconPath>
+        <abilities>
+            <li>SHG_PsychicDisconnection</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_PsychicDisconnection</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-3</biostatMet>
+        <exclusionTags>
+            <li>PsychicAbility</li>
+        </exclusionTags>
+    </GeneDef>
 </Defs>

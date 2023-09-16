@@ -139,7 +139,26 @@
         <category>SuperPowers</category>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
-            <warmupTime>0.5</warmupTime>
+            <warmupTime>1</warmupTime>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef Abstract="true" Name="SHGPsionicBase" ParentName="SHGPowerAbilitiesBase">
+        <abilityClass>Psycast</abilityClass>
+        <statBases>
+            <Ability_Duration>0</Ability_Duration>
+            <Ability_PsyfocusCost>0.0</Ability_PsyfocusCost>
+        </statBases>
+        <warmupSound>PsycastCastLoop</warmupSound>
+        <verbProperties>
+            <verbClass>Verb_CastPsycast</verbClass>
+            <requireLineOfSight>True</requireLineOfSight>
+            <targetParams>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetAnimals>True</canTargetAnimals>
+                <thingCategory>Item</thingCategory>
+                <mapObjectTargetsMustBeAutoAttackable>False</mapObjectTargetsMustBeAutoAttackable>
+            </targetParams>
         </verbProperties>
     </AbilityDef>
 </Defs>

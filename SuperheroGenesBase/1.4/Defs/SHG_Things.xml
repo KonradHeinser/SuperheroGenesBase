@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="EtherealThingBase">
+        <defName>SHG_Psionist_PsionicShield</defName>
+        <label>psionic shield</label>
+        <thingClass>ThingWithComps</thingClass>
+        <tickerType>Normal</tickerType>
+        <drawerType>RealtimeOnly</drawerType>
+        <drawOffscreen>true</drawOffscreen>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Ethereal/PsychicShieldRipples</texPath>
+            <shaderType>BulletShieldPsychic</shaderType>
+            <color>(180, 231, 237)</color>
+            <drawSize>3</drawSize>
+            <shaderParameters>
+                <_PulseInterval>0.5</_PulseInterval>
+                <_DistortionScale>0.5</_DistortionScale>
+                <_DistortionIntensity>0.15</_DistortionIntensity>
+                <_MinAlpha>0.1</_MinAlpha>
+                <_MaxAlpha>0.3</_MaxAlpha>
+                <_DistortionTex>/Things/Mote/SmokeTiled</_DistortionTex>
+            </shaderParameters>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_ProjectileInterceptor">
+                <radius>1</radius>
+                <interceptGroundProjectiles>true</interceptGroundProjectiles>
+                <interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+                <interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+                <interceptAirProjectiles>true</interceptAirProjectiles>
+                <color>(0.8, 0.2, 0.8)</color>
+                <minAlpha>0.2</minAlpha>
+                <interceptEffect>Interceptor_BlockedProjectilePsychic</interceptEffect>
+            </li>
+            <li Class="CompProperties_DestroyAfterDelay">
+                <delayTicks>2500</delayTicks>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="EtherealThingBase">
+        <defName>SHG_Psionist_MassProtection</defName>
+        <label>large psionic forcefield</label>
+        <thingClass>ThingWithComps</thingClass>
+        <tickerType>Normal</tickerType>
+        <drawerType>RealtimeOnly</drawerType>
+        <drawOffscreen>true</drawOffscreen>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Ethereal/PsychicShieldRipples</texPath>
+            <shaderType>BulletShieldPsychic</shaderType>
+            <color>(180, 231, 237)</color>
+            <drawSize>9.9</drawSize>
+            <shaderParameters>
+                <_PulseInterval>0.5</_PulseInterval>
+                <_DistortionScale>0.5</_DistortionScale>
+                <_DistortionIntensity>0.15</_DistortionIntensity>
+                <_MinAlpha>0.1</_MinAlpha>
+                <_MaxAlpha>0.3</_MaxAlpha>
+                <_DistortionTex>/Things/Mote/SmokeTiled</_DistortionTex>
+            </shaderParameters>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_ProjectileInterceptor">
+                <radius>12</radius>
+                <interceptGroundProjectiles>true</interceptGroundProjectiles>
+                <interceptNonHostileProjectiles>false</interceptNonHostileProjectiles>
+                <interceptOutgoingProjectiles>true</interceptOutgoingProjectiles>
+                <interceptAirProjectiles>true</interceptAirProjectiles>
+                <color>(0.8, 0.2, 0.8)</color>
+                <minAlpha>0.2</minAlpha>
+                <interceptEffect>Interceptor_BlockedProjectilePsychic</interceptEffect>
+            </li>
+            <li Class="CompProperties_DestroyAfterDelay">
+                <delayTicks>10000</delayTicks>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="EtherealThingBase">
+        <defName>SHG_Psionist_Star</defName>
+        <label>star rift</label>
+        <thingClass>ThingWithComps</thingClass>
+        <tickerType>Normal</tickerType>
+        <drawerType>RealtimeOnly</drawerType>
+        <drawOffscreen>true</drawOffscreen>
+        <category>PsychicEmitter</category>
+        <altitudeLayer>MoteOverheadLow</altitudeLayer>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Mote/SolarPinhole</texPath>
+            <shaderType>MoteGlowDistorted</shaderType>
+            <color>(255, 255, 245)</color>
+            <drawSize>10</drawSize>
+            <shaderParameters>
+                <_DistortionTex>/Other/Ripples</_DistortionTex>
+                <_distortionIntensity>0.05</_distortionIntensity>
+                <_DistortionScale>0.7</_DistortionScale>
+                <_distortionScrollSpeed>(0.07, 0.07, 0.0)</_distortionScrollSpeed>
+            </shaderParameters>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>50</glowRadius>
+                <glowColor>(217,217,208,0)</glowColor>
+            </li>
+            <li Class="CompProperties_HeatPusher">
+                <compClass>CompHeatPusherPowered</compClass>
+                <heatPerSecond>1000</heatPerSecond>
+                <heatPushMaxTemperature>1000</heatPushMaxTemperature>
+            </li>
+            <li Class="CompProperties_DestroyAfterDelay">
+                <delayTicks>300000</delayTicks>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

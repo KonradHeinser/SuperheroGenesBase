@@ -25,6 +25,7 @@
 		</customEffectDescriptions>
         <exclusionTags>
             <li>Archetype_PhantomFlight</li>
+            <li>Psionist_SoldierFlight</li>
         </exclusionTags>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">

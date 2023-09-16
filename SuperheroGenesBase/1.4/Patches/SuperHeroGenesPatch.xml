@@ -15,4 +15,11 @@
             </value>
         </nomatch>
     </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/StatDef[@Name="ArmorRatingBase"]/maxValue</xpath>
+        <match Class="PatchOperationRemove">
+            <xpath>Defs/StatDef[@Name="ArmorRatingBase"]/maxValue</xpath>
+        </match>
+    </Operation>
 </Patch>

@@ -70,7 +70,7 @@
         <defName>SHG_SealWounds</defName>
         <label>seal wounds</label>
         <description>Seals a pawn's wounds to prevent further bleading.</description>
-        <iconPath>UI/Icons/Genes/Gene_Coagulate</iconPath>
+        <iconPath>Powers/Gene_SealWounds</iconPath>
         <hostile>False</hostile>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
@@ -315,6 +315,35 @@
                 <stunTicks>1~2</stunTicks>
                 <clamorType>Ability</clamorType>
                 <clamorRadius>10</clamorRadius>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_PsychicDisconnection</defName>
+        <label>psychic disconnection</label>
+        <description>Disconnect a pawn from the psychic field, making them immune to many psychic effects and incapable of using psychic abilities for an hour. This will also interupt the pawn's ability to dispel neural heat and safely store neural heat.</description>
+        <iconPath>Powers/Gene_PsychicDisconnection</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <showCastingProgressBar>True</showCastingProgressBar>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <aiCanUse>true</aiCanUse>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <range>30</range>
+            <drawAimPie>False</drawAimPie>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_PsychicDisconnection</hediffDef>
             </li>
         </comps>
     </AbilityDef>

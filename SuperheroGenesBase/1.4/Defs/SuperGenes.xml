@@ -223,7 +223,7 @@
         <statFactors>
             <StaggerDurationFactor>0.01</StaggerDurationFactor>
             <MeleeDodgeChance>5</MeleeDodgeChance>
-            <MeleeDamageFactor>5</MeleeDamageFactor>
+            <MeleeDamageFactor>2</MeleeDamageFactor>
         </statFactors>
         <statOffsets>
             <AimingDelayFactor>-5</AimingDelayFactor>
@@ -261,7 +261,7 @@
         <biostatMet>-6</biostatMet>
         <statFactors>
             <CarryingCapacity>100</CarryingCapacity>
-            <MeleeDamageFactor>20</MeleeDamageFactor>
+            <MeleeDamageFactor>7</MeleeDamageFactor>
         </statFactors>
         <capMods>
           <li>

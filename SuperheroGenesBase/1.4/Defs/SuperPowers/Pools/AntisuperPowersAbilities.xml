@@ -6,7 +6,6 @@
         <label>anti-durability aura(minor)</label>
         <description>This ability will weaken the stats of everyone around this super for the next 12 hours, after which the super will lie comatose for 12 hours. While Super Durable pawns will barely feel anything, this will make supers unsuper, and make unsupers twice as weak.</description>
         <iconPath>Base/UnsuperDurability</iconPath>
-        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <targetRequired>False</targetRequired>
         <cooldownTicksRange>60000</cooldownTicksRange>
         <verbProperties>

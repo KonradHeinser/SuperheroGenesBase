@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersPsychicGuardianBase">
+        <defName>SHG_Psionist_Guardian</defName>
+        <label>psionic guardian</label>
+        <description>Psionic Guardians create a constant psychic aura around themselves that provides very small, but constant, bonuses to all nearby allies. Unlike most psionic paths, guardians don't need to choose when to activate these bonuses, and psychic sensitivity does not impact its power. With just a little bit of focus, they can help their allies with a wide variety of things. Also, unlike most psionic paths Psionic Guardians are not able to bring every situation to the colony's favor, but instead can tip the scales just enough to allow the colony to find a way.\n\nGuardians do not gain the bonuses their auras provide, which means the Guardian will often be the weak link that enemies may exploit. This can be countered by using equipement or other genes.\n\nThis will provide a Psionic Guardian hediff to the pawn, and a generic hediff to nearby allies called "Under a Guardian's Wings". To avoid flooding hediff pages with all the hediffs granted by this tree, these are the only ones that will normally be visible, and as long as a pawn has the Under a Guardian's Wings hediff, they will gain all of the bonuses granted through individual genes that the Guardian has.\n\nAny number of Superhero Psionic paths can be taken at the same time. The only limiting factor is metabolic efficiency.</description>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
+        <iconPath>Psionist/Guardian/Gene_Psionist_Guardian</iconPath>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>2.0</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffToWholeBody>SHG_Psionist_Guardian_Base</hediffToWholeBody>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicGuardianBase">
+        <defName>SHG_Psionist_Nimble</defName>
+        <label>nimble aura</label>
+        <description>This gene creates a constant aura that helps allies be more nimble. This will decrease the time required for aiming while increasing movement speed, dodge chance, and hunting stealth.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_Guardian</prerequisite>
+        <iconPath>Psionist/Guardian/Gene_Psionist_Nimble</iconPath>
+        <displayOrderInCategory>0.1</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffToWholeBody>SHG_Psionist_Nimble</hediffToWholeBody>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicGuardianBase">
+        <defName>SHG_Psionist_Destructive</defName>
+        <label>destructive aura</label>
+        <description>This gene creates a constant aura that helps allies be more cause more precise when manually destroying something. This will increase melee damage, butchery and shredding efficiency, and mining yield.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_Guardian</prerequisite>
+        <iconPath>Psionist/Guardian/Gene_Psionist_Destructive</iconPath>
+        <displayOrderInCategory>0.2</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffToWholeBody>SHG_Psionist_Destructive</hediffToWholeBody>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicGuardianBase">
+        <defName>SHG_Psionist_Precision</defName>
+        <label>precision aura</label>
+        <description>This gene creates a constant aura that helps allies be more precise, reducing the chance that they fail tasks. This will decrease the chances of cooked meals being poisoned, while also increasing tend quality, various success chances, and accuracy.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_Guardian</prerequisite>
+        <iconPath>Psionist/Guardian/Gene_Psionist_Precision</iconPath>
+        <displayOrderInCategory>0.3</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffToWholeBody>SHG_Psionist_Precision</hediffToWholeBody>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicGuardianBase">
+        <defName>SHG_Psionist_Industrious</defName>
+        <label>industrious aura</label>
+        <description>This gene creates a constant aura that helps allies be more industrious. This will increase their global work speed.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_Guardian</prerequisite>
+        <iconPath>Psionist/Guardian/Gene_Psionist_Industrious</iconPath>
+        <displayOrderInCategory>0.4</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffToWholeBody>SHG_Psionist_Industrious</hediffToWholeBody>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicGuardianBase">
+        <defName>SHG_Psionist_GuardianWarden</defName>
+        <label>psionic warden</label>
+        <description>Psionic Wardens help protect people from various dangers, like toxins and extreme temperatures. They are not quite strong enough to enhance more intricate parts of a pawn, like armor and healing, but their ability to defend against specific dangers can frequently save allies from death.</description>
+        <prerequisite>SHG_Psionist_Guardian</prerequisite>
+        <iconPath>Psionist/Guardian/Gene_Psionist_GuardianWarden</iconPath>
+        <displayOrderInCategory>5</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>2.0</MeditationFocusGain>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicGuardianBase">
+        <defName>SHG_Psionist_TemperatureResistance</defName>
+        <label>temperature resistance aura</label>
+        <description>This gene creates a constant aura that protects nearby allies from extreme temperatures.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_GuardianWarden</prerequisite>
+        <iconPath>Psionist/Guardian/Gene_Psionist_TemperatureResistance</iconPath>
+        <displayOrderInCategory>5.1</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffToWholeBody>SHG_Psionist_TemperatureResistance</hediffToWholeBody>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicGuardianBase">
+        <defName>SHG_Psionist_ToxicResistance</defName>
+        <label>toxic resistance aura</label>
+        <description>This gene creates a constant aura that protects nearby allies from toxic buildup.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_GuardianWarden</prerequisite>
+        <iconPath>Psionist/Guardian/Gene_Psionist_ToxicResistance</iconPath>
+        <displayOrderInCategory>5.2</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffToWholeBody>SHG_Psionist_ToxicResistance</hediffToWholeBody>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicGuardianBase">
+        <defName>SHG_Psionist_Solace</defName>
+        <label>solace aura</label>
+        <description>This gene creates a constant aura that calms nearby allies, and makes them more social. This increases mood, bond chance, meditation psyfocus gain, social impact, and negotiation ability.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_GuardianWarden</prerequisite>
+        <iconPath>Psionist/Guardian/Gene_Psionist_Solace</iconPath>
+        <displayOrderInCategory>5.3</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffToWholeBody>SHG_Psionist_Solace</hediffToWholeBody>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicGuardianBase">
+        <defName>SHG_Psionist_Enlightenment</defName>
+        <label>enlightenment aura</label>
+        <description>This gene creates a constant aura that helps nearby allies learn new things faster. This increases research speed and all learning rates.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_GuardianWarden</prerequisite>
+        <iconPath>Psionist/Guardian/Gene_Psionist_Enlightenment</iconPath>
+        <displayOrderInCategory>5.3</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffToWholeBody>SHG_Psionist_Enlightenment</hediffToWholeBody>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicGuardianBase">
+        <defName>SHG_Psionist_GuardianProtector</defName>
+        <label>psionic protector</label>
+        <description>Psionic Protectors can provide more broad protections to allies around them, like giving a simplistic psionic armor that can help defend against weaker attacks while still not being impacted by psycic sensitivity.</description>
+        <prerequisite>SHG_Psionist_GuardianWarden</prerequisite>
+        <iconPath>Psionist/Guardian/Gene_Psionist_GuardianProtector</iconPath>
+        <displayOrderInCategory>10</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>2.0</MeditationFocusGain>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicGuardianBase">
+        <defName>SHG_Psionist_Armor</defName>
+        <label>armor aura</label>
+        <description>This gene creates a constant aura that protects nearby allies from sharp and blunt attacks.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_GuardianProtector</prerequisite>
+        <iconPath>Psionist/Guardian/Gene_Psionist_Armor</iconPath>
+        <displayOrderInCategory>10.1</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffToWholeBody>SHG_Psionist_Armor</hediffToWholeBody>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicGuardianBase">
+        <defName>SHG_Psionist_PsionicEfficiency</defName>
+        <label>psionic efficiency aura</label>
+        <description>This gene creates a constant aura that slightly reduces the entropy gained when using psychic abilities.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_GuardianProtector</prerequisite>
+        <iconPath>Psionist/Guardian/Gene_Psionist_PsionicEfficiency</iconPath>
+        <displayOrderInCategory>10.2</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffToWholeBody>SHG_Psionist_PsionicEfficiency</hediffToWholeBody>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicGuardianBase">
+        <defName>SHG_Psionist_Life</defName>
+        <label>life aura</label>
+        <description>This gene creates a constant aura that constantly heals everyone around them and helps with developing immunities. If around a scarred pawn often enough, this can even mend those scars.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_GuardianProtector</prerequisite>
+        <iconPath>Psionist/Guardian/Gene_Psionist_Life</iconPath>
+        <displayOrderInCategory>10.3</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+                <hediffToWholeBody>SHG_Psionist_Life</hediffToWholeBody>
+			</li>
+		</modExtensions>
+    </GeneDef>
+</Defs>
+
+
+<!--
+Guardians create constant auras that provide various bonuses to nearby allies
+All genes add their own hediff with the same radius as the original, but only the main "Under the guardian's wing" hediff will be visible
+The main one is there to show the player that a pawn is under the effects, and the rest are hidden to avoid flooding the panel
+-->

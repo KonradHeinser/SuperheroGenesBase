@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef>
+        <defName>SHG_Psionist_Stasis</defName>
+		<label>stasis</label>
+		<description>This pawn was put into stasis by a Psionic Soldier. Any wounds they have will slowly heal.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ArmorRating_Blunt>1</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>1</ArmorRating_Sharp>
+                    <ArmorRating_Heat>1</ArmorRating_Heat>
+                </statOffsets>
+                <statFactors>
+                    <RestFallRateFactor>0</RestFallRateFactor>
+                </statFactors>
+                <hungerRateFactor>0</hungerRateFactor>
+            </li>
+        </stages>
+		<comps>
+            <li Class="AnimalBehaviours.HediffCompProperties_Regeneration">
+                <rateInTicks>100</rateInTicks>
+                <healAmount>0.1</healAmount>
+            </li>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>True</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+	</HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_PsionicFlight</defName>
+		<label>psionic flight</label>
+		<description>This super is always floating just a little bit off the ground, and their ability to move omnidirectionally makes it easier for them to move around quickly. The more psychic sensitivity the soldier has, the more they can propel themselves.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <MoveSpeed>1.25</MoveSpeed>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+            </li>
+        </stages>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_Floating" />
+		</comps>
+	</HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_PsionicInfusement</defName>
+        <label>psionic infusement</label>
+        <description>This Commando infuses their melee attacks with psionic energy to make them stronger. The multiplier listed here is the base amount, and are multiplied by psychic sensitivity.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+			<li>
+                <statFactors>
+                    <MeleeDamageFactor>1.5</MeleeDamageFactor>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_Entrench</defName>
+        <label>psionic infusement</label>
+        <description>This Commando infused their body with dense psionic energy that stops their movement, but stabilizes their body and provides some protection. The offsets listed here is the base amount, and is multiplied by psychic sensitivity.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+			<li>
+                <statFactors>
+                    <MoveSpeed>0</MoveSpeed>
+                </statFactors>
+                <statOffsets>
+                    <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+                    <ArmorRating_Blunt>.1</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>.1</ArmorRating_Sharp>
+                    <ArmorRating_Heat>.1</ArmorRating_Heat>
+                </statOffsets>
+                <statOffsetEffectMultiplier>PsychicSensitivity</statOffsetEffectMultiplier>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>True</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_SoldierImmortal</defName>
+        <label>nigh-immortal</label>
+        <description>Due to the psychic energy infused in this pawn's blood, they lose blood at 1% of the normal rate. For those use Bleeding Genes, this is not quite as good as Extreme Blood Clotting, but is still an extremely slow bleeding rate.</description>
+		<stages>
+			<li>
+                <totalBleedFactor>0.01</totalBleedFactor>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_PsionicArmor</defName>
+        <label>psionic armor</label>
+        <description>This Immortal is being protected by a psychic armor. The armor values listed are the base values, and are multiplied by psychic sensitivity.</description>
+		<stages>
+			<li>
+                <statOffsets>
+                    <ArmorRating_Blunt>.1</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>.1</ArmorRating_Sharp>
+                    <ArmorRating_Heat>.1</ArmorRating_Heat>
+                </statOffsets>
+                <statOffsetEffectMultiplier>PsychicSensitivity</statOffsetEffectMultiplier>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_PsionicRegeneration</defName>
+        <label>psionic regeneration</label>
+        <description>This Immortal is constanly healing themselves with psionic energy. The immunity gain listed is the base value, and is multiplied by psychic sensitivity.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+        <stages>
+			<li>
+                <statFactors>
+                    <ImmunityGainSpeed>1.5</ImmunityGainSpeed>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+            </li>
+        </stages>
+        <comps>
+            <li Class="AnimalBehaviours.HediffCompProperties_Regeneration">
+                <rateInTicks>1000</rateInTicks>
+                <healAmount>1</healAmount>
+            </li>
+		</comps>
+    </HediffDef>
+</Defs>
+

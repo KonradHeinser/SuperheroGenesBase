@@ -117,6 +117,32 @@
             </li>
         </additionalHediffs>
     </DamageDef>
+
+        <!--This damage def is for anyone who wants to add this to an attack. Every point of damage will cause 10% fear.-->
+    <DamageDef>
+        <defName>SHG_Fear</defName>
+        <label>fear</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>false</externalViolence>
+        <deathMessage>{0}'s heart gave out.</deathMessage>
+        <hediff>Bruise</hediff>
+        <defaultDamage>1</defaultDamage>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+        <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+        <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+        <explosionColorEdge>(1, 1, 1, 0.2)</explosionColorEdge>
+        <soundExplosion>BuildingDestroyed_Stone_Big</soundExplosion>
+        <combatLogRules>SHG_Damage_Fear</combatLogRules>
+        <additionalHediffs>
+            <li>
+                <hediff>SHG_Fear</hediff>
+                <severityPerDamageDealt>0.1</severityPerDamageDealt>
+                <victimSeverityScaling>SHG_FearSusceptibility</victimSeverityScaling>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+    </DamageDef>
 </Defs>
 
 

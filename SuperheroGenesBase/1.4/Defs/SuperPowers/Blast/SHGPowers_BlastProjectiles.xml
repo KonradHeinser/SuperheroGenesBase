@@ -29,7 +29,6 @@
             <drawSize>0.85</drawSize>
         </graphicData>
         <projectile>
-            <ai_IsIncendiary>true</ai_IsIncendiary>
             <damageDef>Flame</damageDef>
             <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
             <filthCount>1</filthCount>

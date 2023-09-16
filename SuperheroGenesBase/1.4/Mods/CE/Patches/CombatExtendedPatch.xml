@@ -299,6 +299,120 @@
     </Operation>
 
     <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[@Name="SuperPowersBlastBase"]/projectile</xpath>
+        <value>
+            <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                <explosionRadius>1</explosionRadius>
+                <speed>50</speed>
+                <damageAmountBase>15</damageAmountBase>
+                <arcHeightFactor>0.4</arcHeightFactor>
+                <armorPenetrationSharp>5</armorPenetrationSharp>
+				<armorPenetrationBlunt>8</armorPenetrationBlunt>
+                <stoppingPower>1</stoppingPower>
+                <shadowSize>0</shadowSize>
+                <ai_IsIncendiary>true</ai_IsIncendiary>
+            </projectile>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SHG_Proj_Blast_Fire"]/projectile</xpath>
+        <value>
+            <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                <damageDef>Flame</damageDef>
+                <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+                <filthCount>1</filthCount>
+                <soundExplode>Explosion_Flame</soundExplode>
+            </projectile>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SHG_Proj_Blast_Acid"]/projectile</xpath>
+        <value>
+            <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                <damageDef>AcidBurn</damageDef>
+                <preExplosionSpawnThingDef>Filth_SpentAcid</preExplosionSpawnThingDef>
+                <filthCount>1</filthCount>
+                <soundExplode>AcidSpray_Resolve</soundExplode>
+            </projectile>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SHG_Proj_Blast_Lightning"]/projectile</xpath>
+        <value>
+            <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                <speed>100</speed>
+                <damageDef>SHG_Lightning</damageDef>
+                <soundExplode>Explosion_EMP</soundExplode>
+            </projectile>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SHG_Proj_Blast_Ice"]/projectile</xpath>
+        <value>
+            <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                <damageDef>SHG_Ice</damageDef>
+                <soundExplode>Foam_Impact</soundExplode>
+            </projectile>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SHG_Proj_Blast_Toxic"]/projectile</xpath>
+        <value>
+            <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                <damageDef>ToxGas</damageDef>
+                <postExplosionGasType>ToxGas</postExplosionGasType>
+                <soundExplode>SHG_GasReleasing</soundExplode>
+            </projectile>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SHG_Proj_Blast_EMP"]/projectile</xpath>
+        <value>
+            <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                <ai_IsIncendiary>false</ai_IsIncendiary>
+                <damageDef>EMP</damageDef>
+                <soundExplode>Explosion_EMP</soundExplode>
+            </projectile>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SHG_Proj_Blast_Foam"]/projectile</xpath>
+        <value>
+            <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                <ai_IsIncendiary>false</ai_IsIncendiary>
+                <damageAmountBase>9999</damageAmountBase>
+                <damageDef>Extinguish</damageDef>
+                <preExplosionSpawnThingDef>Filth_FireFoam</preExplosionSpawnThingDef>
+                <filthCount>1</filthCount>
+                <landedEffecter>ExtinguisherPuffSmall</landedEffecter>
+                <numExtraHitCells>10</numExtraHitCells>
+                <soundExplode>Foam_Impact</soundExplode>
+            </projectile>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SHG_Proj_Blast_Petrification"]/projectile</xpath>
+        <value>
+            <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                <damageAmountBase>2</damageAmountBase>
+                <damageDef>SHG_Petrification</damageDef>
+                <preExplosionSpawnThingDef>Filth_RubbleRock</preExplosionSpawnThingDef>
+                <filthCount>1</filthCount>
+                <numExtraHitCells>10</numExtraHitCells>
+                <soundExplode>BuildingDestroyed_Stone_Big</soundExplode>
+            </projectile>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
         <xpath>Defs/GeneDef[defName="AntisuperSpeed"]/statFactors</xpath>
         <value>
             <statFactors>

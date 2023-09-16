@@ -357,6 +357,9 @@
         <damageFactors>
             <Flame>0</Flame>
         </damageFactors>
+        <statOffsets>
+            <ComfyTemperatureMax>20</ComfyTemperatureMax>
+        </statOffsets>
         <abilities>
             <li>SHG_FireBolt</li>
             <li>SHG_FireBlast</li>
@@ -400,6 +403,9 @@
             <CW_CryoDamageRailShot MayRequire="SA.Cryoweapons">0</CW_CryoDamageRailShot>
             <CW_SecondaryFrostBurn MayRequire="SA.Cryoweapons">0</CW_SecondaryFrostBurn>
         </damageFactors>
+        <statOffsets>
+            <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+        </statOffsets>
         <abilities>
             <li>SHG_IceBolt</li>
             <li>SHG_IceBlast</li>
@@ -510,6 +516,9 @@
         <iconPath>Archetypes/Gene_Hacker</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <biostatMet>-2</biostatMet>
+        <statFactors>
+            <HackingSpeed>2</HackingSpeed>
+        </statFactors>
         <abilities>
             <li>SHG_Pools_EmergencyShutdown</li>
             <li>SHG_HackMech</li>

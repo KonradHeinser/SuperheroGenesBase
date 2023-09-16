@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <HediffDef>
+        <defName>SHG_PsychicDisconnection</defName>
+        <label>psychic disconnection</label>
+        <description>This pawn has been temporarily disconnected from the psychic field. If they had neural heat before this then that heat will stop dissipating for a while, and begin causing issues.</description>
+        <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <stages>
+            <li>
+                <statFactors>
+                    <PsychicSensitivity>0</PsychicSensitivity>
+                    <PsychicEntropyMax>0</PsychicEntropyMax>
+                    <PsychicEntropyRecoveryRate>0</PsychicEntropyRecoveryRate>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>True</showRemainingTime>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
         <defName>SHG_Invisibility</defName>
         <label>invisibile super</label>
         <description>This super has become invisible to the naked eye.</description>

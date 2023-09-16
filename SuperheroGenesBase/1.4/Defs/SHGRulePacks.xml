@@ -41,4 +41,17 @@
       </rulesStrings>
     </rulePack>
   </RulePackDef>
+
+  <RulePackDef>
+    <defName>SHG_Damage_Fear</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>damaged_past->corrupted</li>
+
+        <li>damaged_present->corrupting</li>
+
+        <li>destroyed_past->corrupted</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
 </Defs>

@@ -160,35 +160,40 @@
 
     <GeneDef Name="SuperPowersPsychicDimensionalBase" Abstract="True">
         <displayCategory>SuperPowersPsychicDimensional</displayCategory>
-        <biostatCpx>0</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <biostatCpx>1</biostatCpx>
         <prerequisite>SuperHeroBase</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
     <GeneDef Name="SuperPowersPsychicCommanderBase" Abstract="True">
         <displayCategory>SuperPowersPsychicCommander</displayCategory>
-        <biostatCpx>0</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <biostatCpx>1</biostatCpx>
         <prerequisite>SuperHeroBase</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
     <GeneDef Name="SuperPowersPsychicGuardianBase" Abstract="True">
         <displayCategory>SuperPowersPsychicGuardian</displayCategory>
-        <biostatCpx>0</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <biostatCpx>1</biostatCpx>
         <prerequisite>SuperHeroBase</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
     <GeneDef Name="SuperPowersPsychicTyrantBase" Abstract="True">
         <displayCategory>SuperPowersPsychicTyrant</displayCategory>
-        <biostatCpx>0</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <biostatCpx>1</biostatCpx>
         <prerequisite>SuperHeroBase</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
     <GeneDef Name="SuperPowersPsychicSoldierBase" Abstract="True">
         <displayCategory>SuperPowersPsychicSoldier</displayCategory>
-        <biostatCpx>0</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <biostatCpx>1</biostatCpx>
         <prerequisite>SuperHeroBase</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
