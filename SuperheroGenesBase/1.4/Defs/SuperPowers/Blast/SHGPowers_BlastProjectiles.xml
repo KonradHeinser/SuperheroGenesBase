@@ -7,10 +7,14 @@
         <altitudeLayer>Projectile</altitudeLayer>
         <useHitPoints>False</useHitPoints>
         <neverMultiSelect>True</neverMultiSelect>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.85</drawSize>
+        </graphicData>
         <projectile>
             <explosionRadius>1</explosionRadius>
             <speed>50</speed>
-            <damageAmountBase>15</damageAmountBase>
+            <damageAmountBase>10</damageAmountBase>
             <arcHeightFactor>0.4</arcHeightFactor>
             <armorPenetrationBase>0.8</armorPenetrationBase>
             <stoppingPower>1</stoppingPower>
@@ -24,9 +28,7 @@
         <label>fire ball</label>
         <graphicData>
             <texPath>Projectiles/Projectile_FireBall</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
             <shaderType>MoteGlow</shaderType>
-            <drawSize>0.85</drawSize>
         </graphicData>
         <projectile>
             <damageDef>Flame</damageDef>
@@ -41,9 +43,7 @@
         <label>acid ball</label>
         <graphicData>
             <texPath>Projectiles/Projectile_AcidBall</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
             <shaderType>MoteGlow</shaderType>
-            <drawSize>0.85</drawSize>
         </graphicData>
         <projectile>
             <damageDef>AcidBurn</damageDef>
@@ -58,8 +58,7 @@
         <label>lightning ball</label>
         <graphicData>
             <texPath>Projectiles/Projectile_LightningBall</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>0.85</drawSize>
+            <shaderType>MoteGlow</shaderType>
         </graphicData>
         <projectile>
             <speed>100</speed>
@@ -73,8 +72,6 @@
         <label>ice ball</label>
         <graphicData>
             <texPath>Projectiles/Projectile_IceBall</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>0.85</drawSize>
         </graphicData>
         <projectile>
             <damageDef>SHG_Ice</damageDef>
@@ -87,8 +84,6 @@
         <label>toxic ball</label>
         <graphicData>
             <texPath>Projectiles/Projectile_ToxicBall</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>0.85</drawSize>
         </graphicData>
         <projectile>
             <damageDef>ToxGas</damageDef>
@@ -102,8 +97,7 @@
         <label>electricity ball</label>
         <graphicData>
             <texPath>Projectiles/Projectile_LightningBall</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>0.85</drawSize>
+            <shaderType>MoteGlow</shaderType>
         </graphicData>
         <projectile>
             <ai_IsIncendiary>false</ai_IsIncendiary>
@@ -117,9 +111,6 @@
         <label>foam ball</label>
         <graphicData>
             <texPath>Projectiles/Projectile_FoamBall</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <shaderType>MoteGlow</shaderType>
-            <drawSize>1.35</drawSize>
         </graphicData>
         <projectile>
             <ai_IsIncendiary>false</ai_IsIncendiary>
@@ -138,9 +129,6 @@
         <label>petrification ball</label>
         <graphicData>
             <texPath>Projectiles/Projectile_PetrifyBall</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <shaderType>MoteGlow</shaderType>
-            <drawSize>1.35</drawSize>
         </graphicData>
         <projectile>
             <damageAmountBase>2</damageAmountBase>
@@ -149,6 +137,22 @@
             <filthCount>1</filthCount>
             <numExtraHitCells>10</numExtraHitCells>
             <soundExplode>BuildingDestroyed_Stone_Big</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Water</defName>
+        <label>water ball</label>
+        <graphicData>
+            <texPath>Projectiles/Projectile_WaterBall</texPath>
+        </graphicData>
+        <projectile>
+            <damageDef>SHG_Water</damageDef>
+            <preExplosionSpawnThingDef>Filth_Water</preExplosionSpawnThingDef>
+            <filthCount>1</filthCount>
+            <numExtraHitCells>10</numExtraHitCells>
+            <soundExplode>Foam_Impact</soundExplode>
+            <speed>500</speed>      <!--It's really fast to both represent the high speed of pressurized water, and to help make the waterskip portion less intrusive-->
         </projectile>
     </ThingDef>
 </Defs>

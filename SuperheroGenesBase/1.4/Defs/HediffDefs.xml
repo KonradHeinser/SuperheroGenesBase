@@ -358,4 +358,23 @@
             </li>
         </comps>
     </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_WateryFoam</defName>
+        <label>watery foam</label>
+        <description>This pawn was hit by a super's pressurized water attack that attached a blob around the cut that sticks to the skin and creates a firefoam-like coating over them, making them feel uncomfortable while also preventing them from catching fire briefly. This discomfort can stack with the soaking wet thought.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <stages>
+            <li>
+                <statFactors>
+                    <Flammability>0</Flammability>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>900</disappearsAfterTicks>
+            </li>
+        </comps>
+    </HediffDef>
 </Defs>

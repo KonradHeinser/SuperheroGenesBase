@@ -168,7 +168,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_Enough</defName>
         <label>ENOUGH</label>
-        <description>With a shout infused with large amounts of psychic energy, the corruptor stops everyone in an area from moving for some time. The exact amount of time that this stuns targets for depends on psychic sensitivity.\n\nUsing this too close to the Corruptor will cause the ability to backfire, impacting everything around the target, including the Corruptor, without actually hitting the intended target.</description>
+        <description>With a shout infused with large amounts of psychic energy, the Corruptor stops everyone in an area from moving for some time. The exact amount of time that this stuns targets for depends on psychic sensitivity.\n\nUsing this too close to the Corruptor will cause the ability to backfire, impacting everything around the target, including the Corruptor, without actually hitting the intended target.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_TyrantCorruptor</iconPath>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -374,7 +374,6 @@
         <warmupPreEndSound>Psycast_Neuroquake_CastEnd</warmupPreEndSound>
         <warmupPreEndSoundSeconds>5</warmupPreEndSoundSeconds>
         <cooldownTicksRange>900000</cooldownTicksRange>
-        <hostile>false</hostile>
         <statBases>
             <Ability_EntropyGain>300</Ability_EntropyGain>
             <Ability_EffectRadius>15</Ability_EffectRadius>

@@ -3,14 +3,14 @@
     <HediffDef>
         <defName>SHG_PsychicDisconnection</defName>
         <label>psychic disconnection</label>
-        <description>This pawn has been temporarily disconnected from the psychic field. If they had neural heat before this then that heat will stop dissipating for a while, and begin causing issues.</description>
+        <description>This pawn has been temporarily disconnected from the psychic field. If they had neural heat before this then that heat will stop dissipating for a while, and likely begin causing issues.</description>
         <isBad>false</isBad>
         <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
                 <statFactors>
                     <PsychicSensitivity>0</PsychicSensitivity>
-                    <PsychicEntropyMax>0</PsychicEntropyMax>
+                    <PsychicEntropyMax>0.01</PsychicEntropyMax>
                     <PsychicEntropyRecoveryRate>0</PsychicEntropyRecoveryRate>
                 </statFactors>
             </li>
@@ -32,6 +32,27 @@
             <li Class="HediffCompProperties">
                 <compClass>HediffComp_Invisibility</compClass>
             </li>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>True</showRemainingTime>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_UntouchableBeauty</defName>
+        <label>untouchable beauty</label>
+        <description>This pawn is using their beauty as a distraction for melee attackers.</description>
+        <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <stages>
+            <li>
+                <statFactors>
+                    <MeleeDodgeChance>2</MeleeDodgeChance>
+                </statFactors>
+                <statFactorEffectMultiplier>PawnBeauty</statFactorEffectMultiplier>
+            </li>
+        </stages>
+        <comps>
             <li Class="HediffCompProperties_Disappears">
                 <showRemainingTime>True</showRemainingTime>
             </li>

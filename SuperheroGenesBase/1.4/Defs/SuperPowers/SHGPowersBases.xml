@@ -133,6 +133,23 @@
         </symbolPack>
     </GeneDef>
 
+    <GeneDef Abstract="true" Name="SuperPowersWaterBase" ParentName="SuperPowersOffensiveBase">
+        <biostatMet>-4</biostatMet>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li><symbol>hydrator</symbol></li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li><symbol>hydro</symbol></li>
+                <li><symbol>liq</symbol></li>
+                <li><symbol>water</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>douser</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
     <AbilityDef Abstract="true" Name="SHGPowerAbilitiesBase">
         <aiCanUse>true</aiCanUse>
         <cooldownTicksRange>100</cooldownTicksRange>
@@ -158,6 +175,23 @@
                 <canTargetAnimals>True</canTargetAnimals>
                 <thingCategory>Item</thingCategory>
                 <mapObjectTargetsMustBeAutoAttackable>False</mapObjectTargetsMustBeAutoAttackable>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef Abstract="true" Name="SHGSummoningBase" ParentName="SHGPowerAbilitiesBase">
+        <aiCanUse>false</aiCanUse>
+        <cooldownTicksRange>900000</cooldownTicksRange> <!--Default cooldown is one quadrum. Quantities are balanced for this time-->
+        <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <range>24.9</range>
+            <targetParams>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetLocations>True</canTargetLocations>
+                <canTargetPlants>False</canTargetPlants>
             </targetParams>
         </verbProperties>
     </AbilityDef>

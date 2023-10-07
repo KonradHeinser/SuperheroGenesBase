@@ -54,4 +54,19 @@
       </rulesStrings>
     </rulePack>
   </RulePackDef>
+
+  <RulePackDef>
+    <defName>SHG_Damage_Water</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>damaged_past->cut</li>
+        <li>damaged_past->sliced</li>
+
+        <li>damaged_present->cut</li>
+
+        <li>destroyed_past->cut</li>
+        <li>damaged_present->sliced</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
 </Defs>

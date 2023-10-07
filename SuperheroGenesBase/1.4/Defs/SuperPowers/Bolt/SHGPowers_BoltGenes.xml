@@ -116,6 +116,9 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_FoamBolt</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_FirefighterFoamBolt</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersPetrificationBase">
@@ -132,6 +135,24 @@
         </descriptionHyperlinks>
         <exclusionTags>
             <li>Archetypes_PetrimancerPetrificationBolt</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersWaterBase">
+        <defName>SHG_WaterBolt</defName>
+        <label>water bolt</label>
+        <description>Supers with this power are able to shoot a bolt of pressurized water that causes some damage on impact, and puts out fires. This also leaves a weird watery foam on the target that makes them feel uncomfortable, while also creating a firefoam-like layer over their body that prevents them from catching fire again for a time.</description>
+        <iconPath>Powers/Gene_WaterBolt</iconPath>
+        <displayOrderInCategory>82</displayOrderInCategory>
+        <abilities>
+            <li>SHG_WaterBolt</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_WaterBolt</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_HydromancerWaterBolt</li>
+            <li>Archetypes_FirefighterWaterBolt</li>
         </exclusionTags>
     </GeneDef>
 </Defs>

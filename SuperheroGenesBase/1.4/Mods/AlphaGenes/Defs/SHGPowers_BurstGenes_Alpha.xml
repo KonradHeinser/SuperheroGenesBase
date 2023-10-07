@@ -113,6 +113,9 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_FoamBurst</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_FirefighterFoamBurst</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersPetrificationBase">
@@ -132,6 +135,27 @@
         </descriptionHyperlinks>
         <exclusionTags>
             <li>Archetypes_PetrimancerPetrificationBurst</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersWaterBase">
+        <defName>SHG_WaterBurst</defName>
+        <label>water burst</label>
+        <description>Carriers of this gene are able to release a burst of pressurized water that shoots in all directions around the pawn. This will put out fires and stick clumps of a weird watery foam to everyone that feels very uncomfortable, but protects them similar to firefoam.\n\nBurst genes were originally created to give supers a way to fight a large number of enemies. Most of them were designed to kick up a dust cloud to protect the super some while they deal with nearby enemies.\n\nThe ability this gene provides utilitzes code written by the creator of Alpha Genes, specifically the code used for the detonate abilities. All credit for said code belongs to them, all I did was plug in some new numbers for these genes.</description>
+        <iconPath>Powers/Gene_WaterBurst</iconPath>
+        <displayOrderInCategory>83</displayOrderInCategory>
+        <damageFactors>
+            <SHG_Water>0.50</SHG_Water>
+        </damageFactors>
+        <abilities>
+            <li>SHG_WaterBurst</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_WaterBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_HydromancerWaterBurst</li>
+            <li>Archetypes_FirefighterWaterBurst</li>
         </exclusionTags>
     </GeneDef>
 

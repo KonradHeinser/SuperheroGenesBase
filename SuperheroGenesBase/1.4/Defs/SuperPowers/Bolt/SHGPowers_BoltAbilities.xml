@@ -130,4 +130,23 @@
             </li>
         </comps>
     </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_WaterBolt</defName>
+        <label>water bolt</label>
+        <description>Toss a bolt of summoned pressurized water that will cut a target and leave a weird substance on the target at the site of the wound that feels uncomfortable, but creates a thin coat of protective foam over their body similar to firefoam.</description>
+        <iconPath>Powers/Gene_WaterBolt</iconPath>
+        <statBases>
+            <Ability_EffectRadius>0.5</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <soundCast>Foam_Impact</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Water</projectileDef>
+            </li>
+            <li Class = "CompProperties_AbilityWaterskip" />
+        </comps>
+    </AbilityDef>
 </Defs>

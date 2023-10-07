@@ -151,7 +151,7 @@
             <warmupTime>60</warmupTime>
             <soundCast>Resurrect_Resolve</soundCast>
             <targetParams>
-                <canTargetPawns>True</canTargetPawns>
+                <canTargetPawns>False</canTargetPawns>
                 <canTargetBuildings>False</canTargetBuildings>
                 <canTargetCorpses>True</canTargetCorpses>
                 <canTargetMechs>False</canTargetMechs>
@@ -344,6 +344,144 @@
             <li Class = "CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>SHG_PsychicDisconnection</hediffDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_MassStoneShift</defName>
+        <label>mass stone shift</label>
+        <description>Teleport the closest 30 stone chunks to a target location.</description>
+        <iconPath>UI/Abilities/Chunkskip</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <hotKey>Misc10</hotKey>
+        <hostile>false</hostile>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <range>29.9</range>
+            <targetParams>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityChunkskip">
+                <chunkCount>30</chunkCount>
+                <scatterRadius>3.9</scatterRadius>
+                <psychic>False</psychic>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>60</clamorRadius>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_StunningAttraction</defName>
+        <label>stunning attraction</label>
+        <description>Make every being around this pawn become inexplicably attracted to them for a brief time. The targets will automatically crowd around the caster. This is affected by stun susceptibility.\n\nThe super will also be stunned for some time as they pose for their adoring audience.</description>
+        <iconPath>Powers/Gene_StunningAttraction</iconPath>
+        <jobDef>CastAbilityOnThingUninterruptible</jobDef>
+        <targetRequired>False</targetRequired>
+        <statBases>
+            <Ability_Duration>15</Ability_Duration>
+            <Ability_EffectRadius>10</Ability_EffectRadius>
+        </statBases>
+        <writeCombatLog>True</writeCombatLog>
+        <verbProperties>
+            <range>10</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityForceJob">
+                <compClass>CompAbilityEffect_ForceJob</compClass>
+                <jobDef>GotoMindControlled</jobDef>
+                <destination>Caster</destination>
+                <durationMultiplier>SHG_StunSusceptibility</durationMultiplier>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Narcissus</defName>
+        <label>narcissus</label>
+        <description>Put a seed of narcissistic thoughts into a target's head, blooming into an internal distraction with a duration based on how much beauty they have.</description>
+        <iconPath>Powers/Gene_Narcissus</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <statBases>
+            <Ability_Duration>5</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>True</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityEffectWithDuration">
+                <compClass>CompAbilityEffect_Stun</compClass>
+                <durationMultiplier>PawnBeauty</durationMultiplier>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Distraction</defName>
+        <label>distraction</label>
+        <description>Distract a target, stunning them for a duration based on the stun susceptibility. Base time is 10 seconds.</description>
+        <iconPath>Powers/Gene_Distraction</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <statBases>
+            <Ability_Duration>10</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>True</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityEffectWithDuration">
+                <compClass>CompAbilityEffect_Stun</compClass>
+                <durationMultiplier>SHG_StunSusceptibility</durationMultiplier>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_UntouchableBeauty</defName>
+        <label>untouchable beauty</label>
+        <description>Melee dodge chance increases based on how much beauty this pawn has for an hour.</description>
+        <iconPath>Powers/Gene_UntouchableBeauty</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>0.9</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class = "CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_UntouchableBeauty</hediffDef>
+                <replaceExisting>True</replaceExisting>
             </li>
         </comps>
     </AbilityDef>

@@ -80,7 +80,7 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+    <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_CompelledDuel</defName>
         <label>compelled duel</label>
         <description>Psionically force a distant target to attempt to fight you hand to hand. Enemies with a low enough psychic sensitivity are more likely to break free before reaching the Psionic Commando.</description>
@@ -112,7 +112,7 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+    <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_Entrench</defName>
         <label>entrench</label>
         <description>Infused your body with dense psionic energy that stops your movement, but stabilizes your body and provides some protection.\n\nDue to how the game handles movement, your pawn's movement will not be set to 0, but 0.15.</description>

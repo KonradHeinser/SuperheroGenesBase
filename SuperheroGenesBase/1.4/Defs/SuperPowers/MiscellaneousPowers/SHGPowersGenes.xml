@@ -90,7 +90,7 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperPowersSupportBase">
+    <GeneDef ParentName="SuperPowersOffensiveBase">
         <defName>SHG_ThrowSpike</defName>
         <label>throw spike</label>
         <description>Carriers of this gene are able to summon a spike that is launched at a larget at high speeds.\n\nWhile its damage is relatively low, the fact that it is extremely accurate and has exceptional armor penetration makes it very dangerous.</description>
@@ -285,6 +285,91 @@
         <biostatMet>-3</biostatMet>
         <exclusionTags>
             <li>PsychicAbility</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_MassStoneShift</defName>
+        <label>mass stone shift</label>
+        <description>Carriers of this gene are able to move massive amounts of stone chunks to a specified location instantly.</description>
+        <iconPath>UI/Abilities/Chunkskip</iconPath>
+        <abilities>
+            <li>SHG_MassStoneShift</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_MassStoneShift</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-1</biostatMet>
+        <exclusionTags>
+            <li>Archetype_GeomancerChunkSkip</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_StunningAttraction</defName>
+        <label>stunning attraction</label>
+        <description>Carriers of this gene are able to make every being around them become inexplicably attracted to them for a brief time. The pawns will automatically move towards the caster.\n\nThis is affected by stun susceptibility.</description>
+        <iconPath>Powers/Gene_StunningAttraction</iconPath>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>SHG_StunningAttraction</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_StunningAttraction</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_StunnerAttraction</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Narcissus</defName>
+        <label>narcissus</label>
+        <description>Carriers of this gene are able to put a seed of narcissistic thoughts into a target's head, blooming into an internal distraction with a duration based on how much beauty they have.</description>
+        <iconPath>Powers/Gene_Narcissus</iconPath>
+        <biostatMet>-4</biostatMet>
+        <abilities>
+            <li>SHG_Narcissus</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Narcissus</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_StunnerNarcissus</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Distraction</defName>
+        <label>distraction</label>
+        <description>Carriers of this gene are able to distract a target, stunning them for a time based on the stun susceptibility.</description>
+        <iconPath>Powers/Gene_Distraction</iconPath>
+        <biostatMet>-1</biostatMet>
+        <abilities>
+            <li>SHG_Distraction</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Distraction</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_StunnerDistraction</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_UntouchableBeauty</defName>
+        <label>untouchable beauty</label>
+        <description>Carriers of this gene are able to increase their melee dodge chance based on how much beauty this pawn has for an hour.</description>
+        <iconPath>Powers/Gene_UntouchableBeauty</iconPath>
+        <biostatMet>-1</biostatMet>
+        <abilities>
+            <li>SHG_UntouchableBeauty</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_UntouchableBeauty</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_StunnerUntouchable</li>
         </exclusionTags>
     </GeneDef>
 </Defs>

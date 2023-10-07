@@ -4,7 +4,7 @@
         <defName>SHG_AcidBurst</defName>
         <label>acid burst</label>
         <description>Emit a burst of acid in all directions that corrodes anything it touches.\n\nThis will also kick up a dust cloud that may buy this super some time to heal themselves and plan their next move.\n\nThis ability utilizes code created in Alpha Genes, and all credit for said code belongs to them.</description>
-        <iconPath>Powers/Gene_IceBurst</iconPath>
+        <iconPath>Powers/Gene_AcidBurst</iconPath>
         <comps>
             <li Class="AlphaGenes.CompProperties_Detonate">
                 <radius>5</radius>
@@ -13,7 +13,7 @@
 				<soundCreated>AcidSpray_Resolve</soundCreated>
 				<thingCreated>SHG_AcidGas</thingCreated>
 				<thingCreatedChance>50</thingCreatedChance>
-				<damageAmount>70</damageAmount>
+				<damageAmount>35</damageAmount>
             </li>
         </comps>
     </AbilityDef>
@@ -22,7 +22,7 @@
         <defName>SHG_LightningBurst</defName>
         <label>lightning burst</label>
         <description>Emit a burst of electricity in all directions that burns anything it touches. This will simply burn through electronics instead of disabling them.\n\nThis will also kick up a dust cloud that may buy this super some time to heal themselves and plan their next move.\n\nThis ability utilizes code created in Alpha Genes, and all credit for said code belongs to them.</description>
-        <iconPath>Powers/Gene_IceBurst</iconPath>
+        <iconPath>Powers/Gene_LightningBurst</iconPath>
         <comps>
             <li Class="AlphaGenes.CompProperties_Detonate">
                 <radius>5</radius>
@@ -31,7 +31,7 @@
 				<soundCreated>Explosion_EMP</soundCreated>
 				<thingCreated>SHG_ElectricrifiedCloud</thingCreated>
 				<thingCreatedChance>50</thingCreatedChance>
-				<damageAmount>70</damageAmount>
+				<damageAmount>35</damageAmount>
             </li>
         </comps>
     </AbilityDef>
@@ -49,7 +49,7 @@
 				<soundCreated>Foam_Impact</soundCreated>
 				<thingCreated>SHG_IceCloud</thingCreated>
 				<thingCreatedChance>50</thingCreatedChance>
-				<damageAmount>70</damageAmount>
+				<damageAmount>35</damageAmount>
             </li>
         </comps>
     </AbilityDef>
@@ -58,7 +58,7 @@
         <defName>SHG_ToxicBurst</defName>
         <label>toxic burst</label>
         <description>Emit a burst of acid in all directions that corrodes anything it touches.\n\nThis will also kick up a dust cloud that may buy this super some time to heal themselves and plan their next move.\n\nThis ability utilizes code created in Alpha Genes, and all credit for said code belongs to them.</description>
-        <iconPath>Powers/Gene_IceBurst</iconPath>
+        <iconPath>Powers/Gene_ToxicBurst</iconPath>
         <comps>
             <li Class="AlphaGenes.CompProperties_Detonate">
                 <radius>5</radius>
@@ -76,7 +76,7 @@
         <defName>SHG_EMPBurst</defName>
         <label>EMP burst</label>
         <description>Emit an EMP burst in all directions that disables all electronics for a time.\n\nThis will also kick up a dust cloud that may buy this super some time to heal themselves and plan their next move.\n\nThis ability utilizes code created in Alpha Genes, and all credit for said code belongs to them.</description>
-        <iconPath>Powers/Gene_IceBurst</iconPath>
+        <iconPath>Powers/Gene_LightningBurst</iconPath>
         <comps>
             <li Class="AlphaGenes.CompProperties_Detonate">
                 <radius>5</radius>
@@ -128,9 +128,31 @@
     </AbilityDef>
 
     <AbilityDef ParentName="SHGPowerBurstBase">
+        <defName>SHG_WaterBurst</defName>
+        <label>water burst</label>
+        <description>Emit a burst of pressurized water that shoots in all directions around the pawn. This will put out fires and stick clumps of a weird watery foam to everyone that feels very uncomfortable, but protects them similar to firefoam.\n\nThis will also kick up a dust cloud that may buy this super some time to allow the super to move away from the area to recover from the side effects of this ability, or to double down and use it again.\n\nThis ability utilizes code created in Alpha Genes, and all credit for said code belongs to them.</description>
+        <iconPath>Powers/Gene_WaterBurst</iconPath>
+        <statBases>
+            <Ability_EffectRadius>5</Ability_EffectRadius>
+        </statBases>
+        <comps>
+            <li Class="AlphaGenes.CompProperties_Detonate">
+                <radius>5</radius>
+				<damageType>SHG_Water</damageType>
+				<damageUser>true</damageUser>
+				<soundCreated>Foam_Impact</soundCreated>
+				<thingCreated>Filth_Water</thingCreated>
+				<thingCreatedChance>50</thingCreatedChance>
+				<damageAmount>35</damageAmount>
+            </li>
+            <li Class = "CompProperties_AbilityWaterskip" />
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBurstBase">
         <defName>SHG_SmokeBomb</defName>
         <label>smoke bomb</label>
-        <description>Emit a burst of smoke that stuns everyone around you.\n\nThis will also kick up a dust cloud that may buy this super some time to get out of the area.\n\nThis ability utilizes code created in Alpha Genes, and all credit for said code belongs to them.</description>
+        <description>Emit a burst of smoke that stuns everyone around you.\n\nThis will also kick up a dust cloud that may buy this super some time to get out of the area as it makes it more difficult to shoot through the area.\n\nThis ability utilizes code created in Alpha Genes, and all credit for said code belongs to them.</description>
         <iconPath>Powers/Gene_SmokeBomb</iconPath>
         <comps>
             <li Class="AlphaGenes.CompProperties_Detonate">

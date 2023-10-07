@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThoughtDef>
+        <defName>SHG_WateryFoam</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>SHG_WateryFoam</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <nullifyingGenes>
+            <li MayRequire="sarg.alphagenes">AG_ScalyBody</li>
+        </nullifyingGenes>
+        <stages>
+            <li>
+                <label>watery foam</label>
+                <description>A super hit me with a weird water attack that left an uncomfortable substance all over me.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

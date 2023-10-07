@@ -6,7 +6,7 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
 		<projectile>
-			<damageAmountBase>25</damageAmountBase>
+			<damageAmountBase>20</damageAmountBase>
 			<stoppingPower>3</stoppingPower>
 			<speed>100</speed>
 		</projectile>
@@ -113,6 +113,22 @@
             <ai_IsIncendiary>false</ai_IsIncendiary>
             <damageAmountBase>3</damageAmountBase>
             <damageDef>SHG_Petrification</damageDef>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBoltBase">
+        <defName>SHG_Proj_Bolt_Water</defName>
+        <label>water bolt</label>
+        <graphicData>
+            <texPath>Projectiles/Projectile_WaterBolt</texPath>
+        </graphicData>
+        <projectile>
+            <ai_IsIncendiary>false</ai_IsIncendiary>
+            <damageDef>SHG_Water</damageDef>
+            <preExplosionSpawnThingDef>Filth_Water</preExplosionSpawnThingDef>
+            <filthCount>1</filthCount>
+            <soundExplode>Foam_Impact</soundExplode>
+            <speed>500</speed>      <!--It's really fast to both represent the high speed of pressurized water, and to help make the waterskip portion less intrusive-->
         </projectile>
     </ThingDef>
 </Defs>

@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <!--Abilities should have <category>SuperPowers</category>-->
-    <!--Genes should have <displayCategory>SuperGenes</displayCategory>-->
+    <!-- Instructions for modders looking to make their own expansion to the mod
+        
+        If you're adding something to a specific group(i.e. a new archetype, attack power, mutation, or basic super gene), use the relevant parent.
+        The parents are set up to automatically handle things like category and cost(if applicable)
+        For example, all mutations use ParentName="SuperMutationsBase"
 
-    <!--Gene defs should look like <GeneDef ParentName="SuperGeneBase">, or have a parent that leads to SuperGeneBase-->
-    <!--<prerequisite>SuperHeroBase</prerequisite> is also required for Super/Unsuper genes, while AntiSuper ones require <prerequisite>UnsuperGeneName</prerequisite>-->
-    <!--New supergene levels should have a prerequisite that eventually leads up to SuperHeroBase-->
-    <!--<exclusionTags><li>SuperGeneNameS</li></exclusionTags> needs to be attached to the Super and Unsuper genes to ensure players don't try to make weird stacks-->
+        If you want to add a new type of power/category, please make the display order between 900 and 930.
+        I have made a note to reserve those spots in case people actually want to expand on this mod.
+        Using that range will ensure your categories don't end up tangled up with the ones from this mod, though other mods may still use these ranges.
+        There is an exception to this guidline if you're looking to add new paths to a set.
+        If this is the case, please use these ranges:
+            Psionic Path: 980.0~987.0
+            Hemogenic Path: 970.0~977.0
+            Radioactive Path: 960.0~967.0
 
-    <!--It also limits the number of supergenes that a single pawn can have at once. Xenotypes created through the xenotype menu are immune to this restriction.-->
+        Important files for various things
+        Fear: HediffDefs has the effects, SHG_Stats has the pawn stat, and SHGDamageDefs includes a special damage type if you plan on adding it as a secondary for a weapon
+        Ability Bases: SuperPowers/SHGPowersBases contains all ability bases, including the ones that normally only exist when certain mods are enabled
+        Barriers/Summons: SHG_Things contains stuff like the forcefields and the star. All summons like those will be put in here
+        Damage Types: In SHGDamageDefs you can find things like ice, lightning, and petrification damage. If you want normal resistances to work, you likely need to use these
 
-    <!--Currently, the order of genes within the types are specifically set up to add spaces for new categories, while new types belong in the series of 10 after whatever the last one has.-->
-    <!--The types currently have the antisuper category at 3, unsuper at 5, and super at 7-->
+        -->
 
     <AbilityCategoryDef>
         <defName>SuperPowers</defName>
@@ -61,6 +71,22 @@
     </GeneCategoryDef>
 
     <GeneCategoryDef>
+        <defName>SuperPowersSummoning</defName>
+        <label>super powers - summoning</label>
+        <displayPriorityInXenotype>999.0</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
+        <defName>SuperPowersResize</defName>
+        <label>super powers - resize - WARNING: Abilities have a chance to make Rimworld go into the fetal position. Use at own risk.</label>
+        <displayPriorityInXenotype>998.9</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <!--This section(990~999.9) is intended for "Official" Superhero Genes categories. 
+        If adding a new path, check just below this.
+        If adding entirely new categories, go to 900~930-->
+
+    <GeneCategoryDef>
         <defName>SuperPowersPsychicDimensional</defName>
         <label>psionist powers - dimensional</label>
         <displayPriorityInXenotype>989.9</displayPriorityInXenotype>
@@ -90,18 +116,54 @@
         <displayPriorityInXenotype>989.5</displayPriorityInXenotype>
     </GeneCategoryDef>
 
+    <!--980.0~987.0 are for outside paths. If base reaches this far, it's gone too far-->
+
     <GeneCategoryDef>
-        <defName>SuperPowersHemogen</defName>
-        <label>super powers - hemomancy</label>
+        <defName>SuperPowersHemoThief</defName>
+        <label>hemogen powers - hemothief</label>
         <displayPriorityInXenotype>979.9</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
-        <defName>SHG_Resistances</defName>
-        <label>SHG Resistances</label>
+        <defName>SuperPowersHemoIntiate</defName>
+        <label>hemogen powers - hemoinitiate</label>
+        <displayPriorityInXenotype>979.8</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
+        <defName>SuperPowersHemoWarrior</defName>
+        <label>hemogen powers - hemowarrior</label>
+        <displayPriorityInXenotype>979.7</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
+        <defName>SuperPowersHemoShifter</defName>
+        <label>hemogen powers - hemoshifter</label>
+        <displayPriorityInXenotype>979.6</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <!--970.0~977.0 are for outside paths. If base reaches this far, it's gone too far-->
+
+    <GeneCategoryDef>
+        <defName>SuperPowersRadioactiveDestroyer</defName>
+        <label>radioactive powers - destroyer</label>
         <displayPriorityInXenotype>969.9</displayPriorityInXenotype>
     </GeneCategoryDef>
 
+    <!--960.0~967.0 are for outside paths. If base reaches this far, it's gone too far-->
+
+    <!--Note for author from past Alite: 900~930 reserved for outside expansions. If you happen to get this far, it's time to start squeezing
+    Any category below 900 is miscellaneous stuff that doesn't fit the standard power stuff-->
+
+    <GeneCategoryDef> 
+        <defName>SHG_Resistances</defName>
+        <label>SHG Resistances</label>
+        <displayPriorityInXenotype>899.9</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    
+
+        <!--Basic bases-->
     <GeneDef Name="SuperGeneBase" Abstract="True">
         <displayCategory>SuperGenes</displayCategory>
         <biostatCpx>0</biostatCpx>
@@ -138,6 +200,7 @@
 
     <GeneDef Name="SHG_ArchetypeBase" Abstract="True">
         <displayCategory>SuperPowersArchetypes</displayCategory>
+        <prerequisite>SuperHeroBase</prerequisite>
         <biostatCpx>1</biostatCpx>
         <exclusionTags>
             <li>SHG_Archetypes</li>
@@ -158,6 +221,23 @@
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
+    <GeneDef Name="SuperPowersSummoningBase" Abstract="True">
+        <displayCategory>SuperPowersSummoning</displayCategory>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <marketValueFactor>1.1</marketValueFactor>
+    </GeneDef>
+
+    <GeneDef Name="SuperPowersResizeBase" Abstract="True">
+        <displayCategory>SuperPowersResize</displayCategory>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <marketValueFactor>1.1</marketValueFactor>
+    </GeneDef>
+
+        <!--Psionic bases. Uses superhero as a prereq to avoid hard VFE dependency, must be overwritten in all genes that don't use the base as a pre-->
     <GeneDef Name="SuperPowersPsychicDimensionalBase" Abstract="True">
         <displayCategory>SuperPowersPsychicDimensional</displayCategory>
         <biostatMet>-1</biostatMet>
@@ -198,12 +278,16 @@
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
-    <GeneDef Name="SuperPowersHemogenBase" Abstract="True">
-        <displayCategory>SuperPowersHemogen</displayCategory>
+        <!--Hemomancer bases-->
+    <GeneDef Name="SuperPowersHemoThiefBase" Abstract="True">
+        <displayCategory>SuperPowersHemoThief</displayCategory>
         <biostatCpx>0</biostatCpx>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <prerequisite>SHG_Archetypes_Hemomancer</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
+
+
+        <!--Radioactive bases-->
 
     <GeneDef ParentName="SuperGeneBase">
         <defName>SuperHeroBase</defName>

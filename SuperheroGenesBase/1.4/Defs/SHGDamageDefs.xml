@@ -109,7 +109,7 @@
         <combatLogRules>SHG_Damage_Petrification</combatLogRules>
         <additionalHediffs>
             <li>
-                <hediff>SHG_Petrification</hediff>
+                <hediff>SHG_Petrification</hediff> <!--See HediffDefs for more information-->
                 <severityPerDamageDealt>0.15</severityPerDamageDealt>
                 <victimSeverityScaling>ArmorRating_Blunt</victimSeverityScaling>
                 <inverseStatScaling>true</inverseStatScaling>
@@ -118,7 +118,8 @@
         </additionalHediffs>
     </DamageDef>
 
-        <!--This damage def is for anyone who wants to add this to an attack. Every point of damage will cause 10% fear.-->
+        <!--This damage def is for anyone who wants to add this to an attack. Every point of damage will cause 10% fear.
+        This is intended as a secondary attack as it may cause weird combat logs when used as a primary-->
     <DamageDef>
         <defName>SHG_Fear</defName>
         <label>fear</label>
@@ -131,6 +132,7 @@
         <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
         <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
         <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+        <harmsHealth>false</harmsHealth>
         <explosionColorEdge>(1, 1, 1, 0.2)</explosionColorEdge>
         <soundExplosion>BuildingDestroyed_Stone_Big</soundExplosion>
         <combatLogRules>SHG_Damage_Fear</combatLogRules>
@@ -140,6 +142,31 @@
                 <severityPerDamageDealt>0.1</severityPerDamageDealt>
                 <victimSeverityScaling>SHG_FearSusceptibility</victimSeverityScaling>
                 <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+    </DamageDef>
+
+    <DamageDef>
+        <defName>SHG_Water</defName>
+        <label>pressurized water</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <canInterruptJobs>false</canInterruptJobs>
+        <deathMessage>{0} has died from a pressurized water attack.</deathMessage>
+        <makesBlood>true</makesBlood>
+        <defaultDamage>20</defaultDamage>
+        <hediff>Cut</hediff>
+        <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+        <explosionColorEdge>(50, 50, 255, 0.05)</explosionColorEdge>
+        <soundExplosion>Foam_Impact</soundExplosion>
+        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+        <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+        <harmsHealth>true</harmsHealth>
+        <combatLogRules>SHG_Damage_Water</combatLogRules>
+        <consideredHelpful>false</consideredHelpful>
+        <additionalHediffs>
+            <li>
+                <hediff>SHG_WateryFoam</hediff>
+                <severityPerDamageDealt>0.1</severityPerDamageDealt>
             </li>
         </additionalHediffs>
     </DamageDef>

@@ -10,6 +10,7 @@
         <biostatMet>-3</biostatMet>
         <statFactors>
             <IncomingDamageFactor>0.5</IncomingDamageFactor>
+            <SHG_StunSusceptibility>0.5</SHG_StunSusceptibility>
         </statFactors>
         <statOffsets>
             <ArmorRating_Blunt>1</ArmorRating_Blunt>
@@ -109,6 +110,7 @@
             <GlobalLearningFactor>3</GlobalLearningFactor>
             <LearningRateFactor>3</LearningRateFactor>
             <HackingSpeed MayRequire="ludeon.rimworld.ideology">3</HackingSpeed>
+            <SHG_StunSusceptibility>0.5</SHG_StunSusceptibility>
         </statFactors>
         <capMods>
           <li>
