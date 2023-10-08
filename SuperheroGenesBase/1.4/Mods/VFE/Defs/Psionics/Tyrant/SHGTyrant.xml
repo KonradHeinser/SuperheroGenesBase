@@ -82,16 +82,17 @@
         </descriptionHyperlinks>
     </GeneDef>
 
+        <!--I mispelled corrupter the first time, so the gene defname is different-->
     <GeneDef ParentName="SuperPowersPsychicTyrantBase">
         <defName>SHG_Psionist_TyrantCorruptor</defName>
-        <label>psionic corruptor</label>
-        <description>Psionic Corruptors are known for their ability to sow chaos amongst their enemies, leaving them broken, with everything they own suddenly available for taking.</description>
+        <label>psionic corrupter</label>
+        <description>Psionic Corrupters are known for their ability to sow chaos amongst their enemies, leaving them broken, with everything they own suddenly available for taking.</description>
         <prerequisite>SHG_Psionist_Tyrant</prerequisite>
         <iconPath>Psionist/Tyrant/Gene_Psionist_TyrantCorruptor</iconPath>
         <displayOrderInCategory>5</displayOrderInCategory>
         <forcedTraits>
             <li>
-                <def>Jealous</def>
+                <def>Abrasive</def>
             </li>
         </forcedTraits>
         <abilities>
