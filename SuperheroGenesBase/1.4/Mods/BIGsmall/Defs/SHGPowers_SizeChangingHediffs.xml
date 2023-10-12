@@ -16,7 +16,6 @@
                     <SM_BodySizeMultiplier>0.01</SM_BodySizeMultiplier>
                     <IncomingDamageFactor>0.01</IncomingDamageFactor>
                     <MeleeDodgeChance>100</MeleeDodgeChance>
-                    <MeleeDamageFactor>0.01</MeleeDamageFactor>
                     <SM_RaidWealthMultiplier>0.01</SM_RaidWealthMultiplier>
                 </statFactors>
             </li>
@@ -28,7 +27,6 @@
                     <SM_BodySizeMultiplier>0.10</SM_BodySizeMultiplier>
                     <IncomingDamageFactor>0.10</IncomingDamageFactor>
                     <MeleeDodgeChance>90</MeleeDodgeChance>
-                    <MeleeDamageFactor>0.1</MeleeDamageFactor>
                     <SM_RaidWealthMultiplier>0.1</SM_RaidWealthMultiplier>
                 </statFactors>
             </li>
@@ -40,7 +38,6 @@
                     <SM_BodySizeMultiplier>0.25</SM_BodySizeMultiplier>
                     <IncomingDamageFactor>0.25</IncomingDamageFactor>
                     <MeleeDodgeChance>75</MeleeDodgeChance>
-                    <MeleeDamageFactor>0.25</MeleeDamageFactor>
                     <SM_RaidWealthMultiplier>0.25</SM_RaidWealthMultiplier>
                 </statFactors>
             </li>
@@ -52,7 +49,6 @@
                     <SM_BodySizeMultiplier>0.40</SM_BodySizeMultiplier>
                     <IncomingDamageFactor>0.40</IncomingDamageFactor>
                     <MeleeDodgeChance>60</MeleeDodgeChance>
-                    <MeleeDamageFactor>0.4</MeleeDamageFactor>
                     <SM_RaidWealthMultiplier>0.4</SM_RaidWealthMultiplier>
                 </statFactors>
             </li>
@@ -64,7 +60,6 @@
                     <SM_BodySizeMultiplier>0.55</SM_BodySizeMultiplier>
                     <IncomingDamageFactor>0.55</IncomingDamageFactor>
                     <MeleeDodgeChance>45</MeleeDodgeChance>
-                    <MeleeDamageFactor>0.55</MeleeDamageFactor>
                     <SM_RaidWealthMultiplier>0.55</SM_RaidWealthMultiplier>
                 </statFactors>
             </li>
@@ -76,7 +71,6 @@
                     <SM_BodySizeMultiplier>0.70</SM_BodySizeMultiplier>
                     <IncomingDamageFactor>0.70</IncomingDamageFactor>
                     <MeleeDodgeChance>30</MeleeDodgeChance>
-                    <MeleeDamageFactor>0.7</MeleeDamageFactor>
                     <SM_RaidWealthMultiplier>0.7</SM_RaidWealthMultiplier>
                 </statFactors>
             </li>
@@ -88,7 +82,6 @@
                     <SM_BodySizeMultiplier>0.85</SM_BodySizeMultiplier>
                     <IncomingDamageFactor>0.85</IncomingDamageFactor>
                     <MeleeDodgeChance>15</MeleeDodgeChance>
-                    <MeleeDamageFactor>0.85</MeleeDamageFactor>
                     <SM_RaidWealthMultiplier>0.85</SM_RaidWealthMultiplier>
                 </statFactors>
             </li>
@@ -99,7 +92,6 @@
                 <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
                 <statFactors>
                     <SM_BodySizeMultiplier>1.50</SM_BodySizeMultiplier>
-                    <MeleeDodgeChance>0.85</MeleeDodgeChance>
                     <MeleeDamageFactor>1.5</MeleeDamageFactor>
                     <SM_RaidWealthMultiplier>1.5</SM_RaidWealthMultiplier>
                 </statFactors>
@@ -110,7 +102,6 @@
                 <hungerRateFactorOffset>2</hungerRateFactorOffset>
                 <statFactors>
                     <SM_BodySizeMultiplier>2.00</SM_BodySizeMultiplier>
-                    <MeleeDodgeChance>0.8</MeleeDodgeChance>
                     <MeleeDamageFactor>2</MeleeDamageFactor>
                     <SM_RaidWealthMultiplier>2</SM_RaidWealthMultiplier>
                 </statFactors>
@@ -121,7 +112,6 @@
                 <hungerRateFactorOffset>2.5</hungerRateFactorOffset>
                 <statFactors>
                     <SM_BodySizeMultiplier>2.50</SM_BodySizeMultiplier>
-                    <MeleeDodgeChance>0.75</MeleeDodgeChance>
                     <MeleeDamageFactor>2.5</MeleeDamageFactor>
                     <SM_RaidWealthMultiplier>2.5</SM_RaidWealthMultiplier>
                 </statFactors>
@@ -132,7 +122,6 @@
                 <hungerRateFactorOffset>3</hungerRateFactorOffset>
                 <statFactors>
                     <SM_BodySizeMultiplier>3.00</SM_BodySizeMultiplier>
-                    <MeleeDodgeChance>0.7</MeleeDodgeChance>
                     <MeleeDamageFactor>3</MeleeDamageFactor>
                     <SM_RaidWealthMultiplier>3.0</SM_RaidWealthMultiplier>
                 </statFactors>
@@ -143,7 +132,6 @@
                 <hungerRateFactorOffset>3.5</hungerRateFactorOffset>
                 <statFactors>
                     <SM_BodySizeMultiplier>3.50</SM_BodySizeMultiplier>
-                    <MeleeDodgeChance>0.65</MeleeDodgeChance>
                     <MeleeDamageFactor>3.5</MeleeDamageFactor>
                     <SM_RaidWealthMultiplier>3.5</SM_RaidWealthMultiplier>
                 </statFactors>
@@ -154,7 +142,6 @@
                 <hungerRateFactorOffset>4</hungerRateFactorOffset>
                 <statFactors>
                     <SM_BodySizeMultiplier>4.00</SM_BodySizeMultiplier>
-                    <MeleeDodgeChance>0.6</MeleeDodgeChance>
                     <MeleeDamageFactor>4</MeleeDamageFactor>
                     <SM_RaidWealthMultiplier>4</SM_RaidWealthMultiplier>
                 </statFactors>
@@ -165,7 +152,6 @@
                 <hungerRateFactorOffset>5</hungerRateFactorOffset>
                 <statFactors>
                     <SM_BodySizeMultiplier>5.00</SM_BodySizeMultiplier>
-                    <MeleeDodgeChance>0.5</MeleeDodgeChance>
                     <MeleeDamageFactor>5</MeleeDamageFactor>
                     <SM_RaidWealthMultiplier>5</SM_RaidWealthMultiplier>
                 </statFactors>
