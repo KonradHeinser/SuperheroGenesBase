@@ -88,7 +88,7 @@
             <verbClass>Verb_CastAbility</verbClass>
             <requireLineOfSight>False</requireLineOfSight>
             <targetParams>
-                <canTargetSelf>True</canTargetSelf>
+                <canTargetSelf>False</canTargetSelf>
                 <canTargetPawns>True</canTargetPawns>
             </targetParams>
         </verbProperties>

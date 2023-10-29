@@ -7,6 +7,7 @@
         <iconPath>Archetypes/Gene_Psionist</iconPath>
         <prerequisite Inherit="False" />
         <biostatArc>1</biostatArc>
+        <displayOrderInCategory>-1</displayOrderInCategory>
         <suppressedTraits>
             <li>
                 <def>PsychicSensitivity</def>

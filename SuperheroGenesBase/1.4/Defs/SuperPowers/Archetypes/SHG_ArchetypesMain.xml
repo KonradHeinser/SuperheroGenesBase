@@ -9,8 +9,10 @@
         <iconPath>Archetypes/Gene_Hemomancer</iconPath>
         <prerequisite>Hemogenic</prerequisite>
         <geneClass>Gene_HemogenDrain</geneClass>
+        <resourceLabel>hemogen</resourceLabel>
         <biostatArc>1</biostatArc>
-        <resourceLossPerDay>-0.1</resourceLossPerDay>
+        <resourceLossPerDay>-1</resourceLossPerDay>
+        <displayOrderInCategory>-0.9</displayOrderInCategory>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
 				<hediffToWholeBody>SHG_Hemomancer</hediffToWholeBody>

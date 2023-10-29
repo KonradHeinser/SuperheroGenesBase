@@ -58,4 +58,93 @@
             </li>
         </comps>
     </HediffDef>
+
+    <HediffDef>
+		<defName>SHG_Regenesis</defName>
+		<label>regenesis</label>
+		<description>This pawn was put into a regenerating coma by a super.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <maxSeverity>4.0</maxSeverity>
+        <stages>
+            <li>
+                <minSeverity>0.001</minSeverity>
+                <label>slow heal</label>
+                <hungerRateFactorOffset>-0.75</hungerRateFactorOffset>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>1.001</minSeverity>
+                <label>healing</label>
+                <hungerRateFactorOffset>-0.75</hungerRateFactorOffset>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>2.001</minSeverity>
+                <label>slow regrowth</label>
+                <hungerRateFactorOffset>-0.75</hungerRateFactorOffset>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>3.001</minSeverity>
+                <label>rapid regrowth</label>
+                <hungerRateFactorOffset>-0.75</hungerRateFactorOffset>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
+                <regenSets>
+                    <li>
+                        <repeatHealCount>1</repeatHealCount>
+                        <healAmount>0.1</healAmount>
+                        <maxSeverity>1</maxSeverity>
+                    </li>
+                    <li>
+                        <repeatHealCount>10</repeatHealCount>
+                        <healAmount>0.1</healAmount>
+                        <minSeverity>1.001</minSeverity>
+                        <maxSeverity>2</maxSeverity>
+                    </li>
+                    <li>
+                        <ticksToRegrowPart>300000</ticksToRegrowPart>
+                        <repeatHealCount>10</repeatHealCount>
+                        <healAmount>0.1</healAmount>
+                        <minSeverity>2.001</minSeverity>
+                        <maxSeverity>3</maxSeverity>
+                    </li>
+                    <li>
+                        <ticksToRegrowPart>120000</ticksToRegrowPart>
+                        <repeatHealCount>10</repeatHealCount>
+                        <healAmount>0.3</healAmount>
+                        <minSeverity>3.001</minSeverity>
+                    </li>
+                </regenSets>
+            </li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>0.2</severityPerDay>
+            </li>
+        </comps>	
+	</HediffDef>
 </Defs>

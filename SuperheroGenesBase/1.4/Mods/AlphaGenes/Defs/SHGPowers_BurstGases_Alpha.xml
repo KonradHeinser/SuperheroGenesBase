@@ -84,4 +84,21 @@
             <rotationSpeed>10</rotationSpeed>
         </gas>
     </ThingDef>
+
+    <ThingDef ParentName="AG_BaseGas">
+        <defName>SHG_BloodMist</defName>
+        <label>blood mist</label>
+        <graphicData>
+            <texPath>Things/Gas/Puff</texPath>
+            <drawSize>2.2</drawSize>
+            <color>(0.8,0.2,0.2)</color>
+        </graphicData>
+        <gas>
+            <expireSeconds>
+                <min>1</min>
+                <max>1</max>
+            </expireSeconds>
+            <rotationSpeed>10</rotationSpeed>
+        </gas>
+    </ThingDef>
 </Defs>

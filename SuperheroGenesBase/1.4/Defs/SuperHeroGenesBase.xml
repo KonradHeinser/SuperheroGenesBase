@@ -11,9 +11,9 @@
         Using that range will ensure your categories don't end up tangled up with the ones from this mod, though other mods may still use these ranges.
         There is an exception to this guidline if you're looking to add new paths to a set.
         If this is the case, please use these ranges:
-            Psionic Path: 980.0~987.0
-            Hemogenic Path: 970.0~977.0
-            Radioactive Path: 960.0~967.0
+            Psionic Path: 980.0~987.9
+            Hemogenic Path: 970.0~977.9
+            Radioactive Path: 960.0~967.9
 
         Important files for various things
         Fear: HediffDefs has the effects, SHG_Stats has the pawn stat, and SHGDamageDefs includes a special damage type if you plan on adding it as a secondary for a weapon
@@ -116,7 +116,7 @@
         <displayPriorityInXenotype>989.5</displayPriorityInXenotype>
     </GeneCategoryDef>
 
-    <!--980.0~987.0 are for outside paths. If base reaches this far, it's gone too far-->
+    <!--980.0~987.9 are for outside paths. If base reaches this far, it's gone too far-->
 
     <GeneCategoryDef>
         <defName>SuperPowersHemoThief</defName>
@@ -142,7 +142,7 @@
         <displayPriorityInXenotype>979.6</displayPriorityInXenotype>
     </GeneCategoryDef>
 
-    <!--970.0~977.0 are for outside paths. If base reaches this far, it's gone too far-->
+    <!--970.0~977.9 are for outside paths. If base reaches this far, it's gone too far-->
 
     <GeneCategoryDef>
         <defName>SuperPowersRadioactiveDestroyer</defName>
@@ -150,7 +150,7 @@
         <displayPriorityInXenotype>969.9</displayPriorityInXenotype>
     </GeneCategoryDef>
 
-    <!--960.0~967.0 are for outside paths. If base reaches this far, it's gone too far-->
+    <!--960.0~967.9 are for outside paths. If base reaches this far, it's gone too far-->
 
     <!--Note for author from past Alite: 900~930 reserved for outside expansions. If you happen to get this far, it's time to start squeezing
     Any category below 900 is miscellaneous stuff that doesn't fit the standard power stuff-->
@@ -237,44 +237,44 @@
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
-        <!--Psionic bases. Uses superhero as a prereq to avoid hard VFE dependency, must be overwritten in all genes that don't use the base as a pre-->
-    <GeneDef Name="SuperPowersPsychicDimensionalBase" Abstract="True">
+        <!--Psionic bases-->
+    <GeneDef Name="SuperPowersPsychicDimensionalBase" Abstract="True" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
         <displayCategory>SuperPowersPsychicDimensional</displayCategory>
         <biostatMet>-1</biostatMet>
         <biostatCpx>1</biostatCpx>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
-    <GeneDef Name="SuperPowersPsychicCommanderBase" Abstract="True">
+    <GeneDef Name="SuperPowersPsychicCommanderBase" Abstract="True" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
         <displayCategory>SuperPowersPsychicCommander</displayCategory>
         <biostatMet>-1</biostatMet>
         <biostatCpx>1</biostatCpx>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
-    <GeneDef Name="SuperPowersPsychicGuardianBase" Abstract="True">
+    <GeneDef Name="SuperPowersPsychicGuardianBase" Abstract="True" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
         <displayCategory>SuperPowersPsychicGuardian</displayCategory>
         <biostatMet>-1</biostatMet>
         <biostatCpx>1</biostatCpx>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
-    <GeneDef Name="SuperPowersPsychicTyrantBase" Abstract="True">
+    <GeneDef Name="SuperPowersPsychicTyrantBase" Abstract="True" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
         <displayCategory>SuperPowersPsychicTyrant</displayCategory>
         <biostatMet>-1</biostatMet>
         <biostatCpx>1</biostatCpx>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
-    <GeneDef Name="SuperPowersPsychicSoldierBase" Abstract="True">
+    <GeneDef Name="SuperPowersPsychicSoldierBase" Abstract="True" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
         <displayCategory>SuperPowersPsychicSoldier</displayCategory>
         <biostatMet>-1</biostatMet>
         <biostatCpx>1</biostatCpx>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
@@ -282,10 +282,34 @@
     <GeneDef Name="SuperPowersHemoThiefBase" Abstract="True">
         <displayCategory>SuperPowersHemoThief</displayCategory>
         <biostatCpx>0</biostatCpx>
+        <biostatMet>-1</biostatMet>
         <prerequisite>SHG_Archetypes_Hemomancer</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
+    <GeneDef Name="SuperPowersHemoInitiateBase" Abstract="True">
+        <displayCategory>SuperPowersHemoIntiate</displayCategory>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <prerequisite>SHG_Archetypes_Hemomancer</prerequisite>
+        <marketValueFactor>1.1</marketValueFactor>
+    </GeneDef>
+
+    <GeneDef Name="SuperPowersHemoWarriorBase" Abstract="True">
+        <displayCategory>SuperPowersHemoWarrior</displayCategory>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <prerequisite>SHG_Archetypes_Hemomancer</prerequisite>
+        <marketValueFactor>1.1</marketValueFactor>
+    </GeneDef>
+
+    <GeneDef Name="SuperPowersHemoShifterBase" Abstract="True">
+        <displayCategory>SuperPowersHemoShifter</displayCategory>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <prerequisite>SHG_Archetypes_Hemomancer</prerequisite>
+        <marketValueFactor>1.1</marketValueFactor>
+    </GeneDef>
 
         <!--Radioactive bases-->
 

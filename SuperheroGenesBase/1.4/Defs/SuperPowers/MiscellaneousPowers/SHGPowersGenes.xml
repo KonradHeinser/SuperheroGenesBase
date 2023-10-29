@@ -372,4 +372,20 @@
             <li>Archetype_StunnerUntouchable</li>
         </exclusionTags>
     </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Regenesis</defName>
+        <label>regenesis</label>
+        <description>Carriers of this gene can put allies into a coma-like state. While in this state, the pawn will begin regenerating all wounds, and if in the coma for long enough, they will begin slowly regrowing lost parts. The pawn only requires 25% of their normal food intake.\n\nAfter a set number of days, the regeneration will become stronger.\n - 0 days: Begin slowly healing scars\n - 5 days: Scar healing rapidly accelerated\n 10 days: - Regrow 1 part every 5 days\n - 15 days: Regrow 1 part every 2 days\n\nWARNING: The only thing that can wake a pawn in regenesis is a pawn with the regenesis gene. The carrier cannot target themselves, so as long as they continue to survive, you should be able to wake your pawns without issue.</description>
+        <iconPath>Powers/Gene_Regenesis</iconPath>
+        <biostatMet>-3</biostatMet>
+        <abilities>
+            <li>SHG_Regenesis</li>
+            <li>SHG_RegenesisWake</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Regenesis</AbilityDef>
+            <AbilityDef>SHG_RegenesisWake</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
 </Defs>

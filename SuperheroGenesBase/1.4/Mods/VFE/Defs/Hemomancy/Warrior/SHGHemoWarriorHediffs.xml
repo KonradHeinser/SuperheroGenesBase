@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef Abstract="True" Name="SHG_WarriorBuffBase">
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay"> <!--All buff tiers come in severities of 0.5, so this drops it by 1 tier per day.-->
+                <severityPerDay>-0.5</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+        </comps>
+    </HediffDef>
+
+	<HediffDef>
+		<defName>SHG_Hemomancer_BloodClaws</defName>
+		<label>blood claw</label>
+        <labelNoun>a blood claw</labelNoun>
+		<description>Claws on the hands that can be used as a fast melee attack.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>		
+		<comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>claw</label>
+                        <capacities>
+                            <li>Scratch</li>
+                        </capacities>
+                        <power>20</power>
+                        <cooldownTime>2</cooldownTime>
+                        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                        <soundMeleeHit>Pawn_Melee_PowerClaw_Hit</soundMeleeHit>
+                        <soundMeleeMiss>Pawn_Melee_PowerClaw_Miss</soundMeleeMiss>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <addedPartProps>
+            <isGoodWeapon>true</isGoodWeapon>
+            <partEfficiency>1.00</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_WarriorBuffBase">
+        <defName>SHG_Hemomancer_BloodClawsBuff</defName>
+        <label>blood claws</label>
+        <description>Gives stacking melee damage buff that is affected by Hemomancy Proficiency.</description>
+        <stages>
+            <li>
+                <minSeverity>0.001</minSeverity>
+                <label>tier 1</label>
+				<statFactors>
+                    <MeleeDamageFactor>1.25</MeleeDamageFactor>
+                </statFactors>
+                <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>0.501</minSeverity>
+                <label>tier 2</label>
+				<statFactors>
+                    <MeleeDamageFactor>1.50</MeleeDamageFactor>
+                </statFactors>
+                <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>1.001</minSeverity>
+                <label>tier 3</label>
+				<statFactors>
+                    <MeleeDamageFactor>1.75</MeleeDamageFactor>
+                </statFactors>
+                <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>1.501</minSeverity>
+                <label>tier 4</label>
+				<statFactors>
+                    <MeleeDamageFactor>2.00</MeleeDamageFactor>
+                </statFactors>
+                <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>2.001</minSeverity>
+                <label>tier 5</label>
+				<statFactors>
+                    <MeleeDamageFactor>2.25</MeleeDamageFactor>
+                </statFactors>
+                <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>2.501</minSeverity>
+                <label>max tier</label>
+				<statFactors>
+                    <MeleeDamageFactor>2.50</MeleeDamageFactor>
+                </statFactors>
+                <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_WarriorBuffBase">
+        <defName>SHG_Hemomancer_BloodArmor</defName>
+        <label>blood armor</label>
+        <description>A coating of hemogen over the body that improves blunt and sharp armor based on Hemomancy Proficiency.</description>
+        <stages>
+            <li>
+                <minSeverity>0.001</minSeverity>
+                <label>tier 1</label>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+                </statOffsets>
+                <statOffsetEffectMultiplier>SHG_HemomancyProficiency</statOffsetEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>0.501</minSeverity>
+                <label>tier 2</label>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+                </statOffsets>
+                <statOffsetEffectMultiplier>SHG_HemomancyProficiency</statOffsetEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>1.001</minSeverity>
+                <label>tier 3</label>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+                </statOffsets>
+                <statOffsetEffectMultiplier>SHG_HemomancyProficiency</statOffsetEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>1.501</minSeverity>
+                <label>tier 4</label>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+                </statOffsets>
+                <statOffsetEffectMultiplier>SHG_HemomancyProficiency</statOffsetEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>2.001</minSeverity>
+                <label>tier 5</label>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+                </statOffsets>
+                <statOffsetEffectMultiplier>SHG_HemomancyProficiency</statOffsetEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>2.501</minSeverity>
+                <label>max tier</label>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+                </statOffsets>
+                <statOffsetEffectMultiplier>SHG_HemomancyProficiency</statOffsetEffectMultiplier>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_WarriorBuffBase">
+        <defName>SHG_Hemomancer_BloodInfusement</defName>
+        <label>blood infusement</label>
+        <description>Hemogen has been infused in the body to enhance global work speed and reduce the need to sleep. Only the work speed enhancement is affected by Hemomancy Proficiency.</description>
+        <stages>
+            <li>
+                <minSeverity>0.001</minSeverity>
+                <label>tier 1</label>
+				<statOffsets>
+                    <WorkSpeedGlobal>0.1</WorkSpeedGlobal>
+                </statOffsets>
+                <statFactors>
+                    <RestFallRateFactor>0.9</RestFallRateFactor>
+                </statFactors>
+                <statOffsetEffectMultiplier>SHG_HemomancyProficiency</statOffsetEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>0.501</minSeverity>
+                <label>tier 2</label>
+				<statOffsets>
+                    <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+                </statOffsets>
+                <statFactors>
+                    <RestFallRateFactor>0.8</RestFallRateFactor>
+                </statFactors>
+                <statOffsetEffectMultiplier>SHG_HemomancyProficiency</statOffsetEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>1.001</minSeverity>
+                <label>tier 3</label>
+				<statOffsets>
+                    <WorkSpeedGlobal>0.3</WorkSpeedGlobal>
+                </statOffsets>
+                <statFactors>
+                    <RestFallRateFactor>0.7</RestFallRateFactor>
+                </statFactors>
+                <statOffsetEffectMultiplier>SHG_HemomancyProficiency</statOffsetEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>1.501</minSeverity>
+                <label>tier 4</label>
+				<statOffsets>
+                    <WorkSpeedGlobal>0.4</WorkSpeedGlobal>
+                </statOffsets>
+                <statFactors>
+                    <RestFallRateFactor>0.6</RestFallRateFactor>
+                </statFactors>
+                <statOffsetEffectMultiplier>SHG_HemomancyProficiency</statOffsetEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>2.001</minSeverity>
+                <label>tier 5</label>
+				<statOffsets>
+                    <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+                </statOffsets>
+                <statFactors>
+                    <RestFallRateFactor>0.5</RestFallRateFactor>
+                </statFactors>
+                <statOffsetEffectMultiplier>SHG_HemomancyProficiency</statOffsetEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>2.501</minSeverity>
+                <label>max tier</label>
+				<statOffsets>
+                    <WorkSpeedGlobal>0.6</WorkSpeedGlobal>
+                </statOffsets>
+                <statFactors>
+                    <RestFallRateFactor>0.4</RestFallRateFactor>
+                </statFactors>
+                <statOffsetEffectMultiplier>SHG_HemomancyProficiency</statOffsetEffectMultiplier>
+            </li>
+        </stages>
+    </HediffDef>
+
+	<HediffDef>
+		<defName>SHG_Hemomancer_BloodAndDarkness</defName>
+		<label>blood and darkness</label>
+		<description>This pawn is temporarily blind and will bleed twice as much for an hour.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <totalBleedFactor>2.00</totalBleedFactor>
+                <capMods>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <setMax>0</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>2500</disappearsAfterTicks>   <!--1 hour-->
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+        </comps>	
+	</HediffDef>
+
+	<HediffDef>
+		<defName>SHG_Hemomancer_TrueRegeneration</defName>
+		<label>true regeneration</label>
+		<description>This hemochampion is constantly regenerating. Even lost parts will return with a little bit of time. Parts with more things attached, like arms, require extra time to properly regrow functioning appendages. Even regrowing fingers can take some time.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
+                <healWhileRegrowing>True</healWhileRegrowing>
+                <regenSets>
+                    <li>
+                        <ticksToRegrowPart>10000</ticksToRegrowPart>
+                        <repeatHealCount>10</repeatHealCount>
+                        <healAmount>0.3</healAmount>
+                    </li>
+                </regenSets>
+            </li>
+        </comps>	
+	</HediffDef>
+</Defs>

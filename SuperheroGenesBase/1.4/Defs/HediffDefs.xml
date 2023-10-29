@@ -377,4 +377,32 @@
             </li>
         </comps>
     </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_BloodPillHigh</defName>
+        <hediffClass>Hediff_High</hediffClass>
+        <label>blood pill</label>
+        <description>This stops the pawn from suffering from new wound infections, and enhances their ability to heal wounds and fight off all infections.</description>
+        <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <InjuryHealingFactor>3</InjuryHealingFactor>
+                    <ImmunityGainSpeed>3</ImmunityGainSpeed>
+                </statFactors>
+                <makeImmuneTo>
+                    <li>WoundInfection</li>
+                </makeImmuneTo>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.1</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+    </HediffDef>
 </Defs>

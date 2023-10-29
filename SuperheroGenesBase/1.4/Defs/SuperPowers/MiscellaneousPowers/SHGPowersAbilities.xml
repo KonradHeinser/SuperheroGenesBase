@@ -187,7 +187,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>SHG_Invisibility</hediffDef>
             </li>
@@ -216,7 +216,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityTeleport">
+            <li Class="CompProperties_AbilityTeleport">
                 <compClass>CompAbilityEffect_Teleport</compClass>
                 <destination>RandomInRange</destination>
                 <randomRange>20~30</randomRange>
@@ -250,7 +250,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityTeleport">
+            <li Class="CompProperties_AbilityTeleport">
                 <compClass>CompAbilityEffect_Teleport</compClass>
                 <destination>Selected</destination>
                 <requiresLineOfSight>False</requiresLineOfSight>
@@ -341,7 +341,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>SHG_PsychicDisconnection</hediffDef>
             </li>
@@ -398,7 +398,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityForceJob">
+            <li Class="CompProperties_AbilityForceJob">
                 <compClass>CompAbilityEffect_ForceJob</compClass>
                 <jobDef>GotoMindControlled</jobDef>
                 <destination>Caster</destination>
@@ -426,7 +426,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityEffectWithDuration">
+            <li Class="CompProperties_AbilityEffectWithDuration">
                 <compClass>CompAbilityEffect_Stun</compClass>
                 <durationMultiplier>PawnBeauty</durationMultiplier>
             </li>
@@ -452,7 +452,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityEffectWithDuration">
+            <li Class="CompProperties_AbilityEffectWithDuration">
                 <compClass>CompAbilityEffect_Stun</compClass>
                 <durationMultiplier>SHG_StunSusceptibility</durationMultiplier>
             </li>
@@ -478,10 +478,63 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>SHG_UntouchableBeauty</hediffDef>
                 <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Regenesis</defName>
+        <label>regenesis</label>
+        <description>Put a colonist into a regenerating coma.</description>
+        <iconPath>Powers/Gene_Regenesis</iconPath>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <range>-1</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <onlyTargetColonists>True</onlyTargetColonists>
+                <canTargetBuildings>False</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Regenesis</hediffDef>
+                <severity>0.001</severity>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_RegenesisWake</defName>
+        <label>wake from regenesis</label>
+        <description>Removes a regenesis state.</description>
+        <iconPath>Powers/Ability_RegenesisWake</iconPath>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <range>-1</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <onlyTargetColonists>True</onlyTargetColonists>
+                <canTargetBuildings>False</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityRemoveHediff">
+                <compClass>CompAbilityEffect_RemoveHediff</compClass>
+                <hediffDef>SHG_Regenesis</hediffDef>
+                <applyToTarget>True</applyToTarget>
             </li>
         </comps>
     </AbilityDef>

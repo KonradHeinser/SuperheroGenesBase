@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <GeneDef Abstract="true" Name="SuperPowersFireBase" ParentName="SuperPowersOffensiveBase">
+    <GeneDef Abstract="True" Name="SuperPowersFireBase" ParentName="SuperPowersOffensiveBase">
         <biostatMet>-5</biostatMet>
         <symbolPack>
             <wholeNameSymbols>
@@ -29,7 +29,7 @@
         </symbolPack>
     </GeneDef>
 
-    <GeneDef Abstract="true" Name="SuperPowersAcidBase" ParentName="SuperPowersOffensiveBase">
+    <GeneDef Abstract="True" Name="SuperPowersAcidBase" ParentName="SuperPowersOffensiveBase">
         <biostatMet>-2</biostatMet>
         <symbolPack>
             <prefixSymbols>
@@ -45,7 +45,7 @@
         </symbolPack>
     </GeneDef>
 
-    <GeneDef Abstract="true" Name="SuperPowersLightningBase" ParentName="SuperPowersOffensiveBase">
+    <GeneDef Abstract="True" Name="SuperPowersLightningBase" ParentName="SuperPowersOffensiveBase">
         <biostatMet>-2</biostatMet>
         <symbolPack>
             <prefixSymbols>
@@ -59,7 +59,7 @@
         </symbolPack>
     </GeneDef>
 
-    <GeneDef Abstract="true" Name="SuperPowersIceBase" ParentName="SuperPowersOffensiveBase">
+    <GeneDef Abstract="True" Name="SuperPowersIceBase" ParentName="SuperPowersOffensiveBase">
         <biostatMet>-4</biostatMet>
         <symbolPack>
             <prefixSymbols>
@@ -73,7 +73,7 @@
         </symbolPack>
     </GeneDef>
 
-    <GeneDef Abstract="true" Name="SuperPowersToxicBase" ParentName="SuperPowersSupportBase">
+    <GeneDef Abstract="True" Name="SuperPowersToxicBase" ParentName="SuperPowersSupportBase">
         <biostatMet>-1</biostatMet>
         <symbolPack>
             <prefixSymbols>
@@ -86,7 +86,7 @@
         </symbolPack>
     </GeneDef>
 
-    <GeneDef Abstract="true" Name="SuperPowersEMPBase" ParentName="SuperPowersSupportBase">
+    <GeneDef Abstract="True" Name="SuperPowersEMPBase" ParentName="SuperPowersSupportBase">
         <biostatMet>-1</biostatMet>
         <symbolPack>
             <prefixSymbols>
@@ -99,7 +99,7 @@
         </symbolPack>
     </GeneDef>
 
-    <GeneDef Abstract="true" Name="SuperPowersFoamBase" ParentName="SuperPowersSupportBase">
+    <GeneDef Abstract="True" Name="SuperPowersFoamBase" ParentName="SuperPowersSupportBase">
         <biostatMet>-1</biostatMet>
         <symbolPack>
             <wholeNameSymbols>
@@ -116,7 +116,7 @@
         </symbolPack>
     </GeneDef>
 
-    <GeneDef Abstract="true" Name="SuperPowersPetrificationBase" ParentName="SuperPowersSupportBase">
+    <GeneDef Abstract="True" Name="SuperPowersPetrificationBase" ParentName="SuperPowersSupportBase">
         <biostatMet>-3</biostatMet>
         <symbolPack>
             <wholeNameSymbols>
@@ -133,7 +133,7 @@
         </symbolPack>
     </GeneDef>
 
-    <GeneDef Abstract="true" Name="SuperPowersWaterBase" ParentName="SuperPowersOffensiveBase">
+    <GeneDef Abstract="True" Name="SuperPowersWaterBase" ParentName="SuperPowersOffensiveBase">
         <biostatMet>-4</biostatMet>
         <symbolPack>
             <wholeNameSymbols>
@@ -150,8 +150,8 @@
         </symbolPack>
     </GeneDef>
 
-    <AbilityDef Abstract="true" Name="SHGPowerAbilitiesBase">
-        <aiCanUse>true</aiCanUse>
+    <AbilityDef Abstract="True" Name="SHGPowerAbilitiesBase">
+        <aiCanUse>True</aiCanUse>
         <cooldownTicksRange>100</cooldownTicksRange>
         <category>SuperPowers</category>
         <verbProperties>
@@ -160,7 +160,7 @@
         </verbProperties>
     </AbilityDef>
 
-    <AbilityDef Abstract="true" Name="SHGPsionicBase" ParentName="SHGPowerAbilitiesBase">
+    <AbilityDef Abstract="True" Name="SHGPsionicBase" ParentName="SHGPowerAbilitiesBase">
         <abilityClass>Psycast</abilityClass>
         <statBases>
             <Ability_Duration>0</Ability_Duration>
@@ -179,18 +179,32 @@
         </verbProperties>
     </AbilityDef>
 
-    <AbilityDef Abstract="true" Name="SHGSummoningBase" ParentName="SHGPowerAbilitiesBase">
-        <aiCanUse>false</aiCanUse>
+    <AbilityDef Abstract="True" Name="SHGSummoningBase" ParentName="SHGPowerAbilitiesBase">
+        <aiCanUse>False</aiCanUse>
         <cooldownTicksRange>900000</cooldownTicksRange> <!--Default cooldown is one quadrum. Quantities are balanced for this time-->
         <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
-        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
-        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
         <verbProperties>
             <range>24.9</range>
             <targetParams>
                 <canTargetPawns>False</canTargetPawns>
-                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetBuildings>False</canTargetBuildings>
                 <canTargetLocations>True</canTargetLocations>
+                <canTargetPlants>False</canTargetPlants>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef Abstract="True" Name="SHGHemomancyBase" ParentName="SHGPowerAbilitiesBase">
+        <verbProperties>
+            <range>24.9</range>
+            <targetParams>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetLocations>False</canTargetLocations>
+                <canTargetMechs>False</canTargetMechs>
                 <canTargetPlants>False</canTargetPlants>
             </targetParams>
         </verbProperties>

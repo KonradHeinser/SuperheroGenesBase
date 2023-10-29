@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef>
+        <defName>SHG_Hemomancer_Hemoshift</defName>
+		<label>hemoshift</label>
+		<description>This pawn has used hemogen to alter their body structure slightly, making them take on some of the characteristics of a specific animal.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <stages>
+			<li>
+                <minSeverity>0.001</minSeverity>
+                <label>turtle</label>
+                <statOffsets>
+                    <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <postFactor>0.85</postFactor>
+                    </li>
+                </capMods>
+                <statOffsetEffectMultiplier>SHG_HemomancyProficiency</statOffsetEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>1</minSeverity>
+                <label>rabbit</label>
+				<statFactors>
+                    <MoveSpeed>1.5</MoveSpeed>
+                </statFactors>
+                <capMods>
+                    <li>
+                        <capacity>Metabolism</capacity>
+                        <postFactor>0.85</postFactor>
+                    </li>
+                </capMods>
+                <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>2</minSeverity>
+                <label>dog</label>
+				<statOffsets>
+                    <MentalBreakThreshold>-0.10</MentalBreakThreshold>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <postFactor>0.85</postFactor>
+                    </li>
+                </capMods>
+                <statOffsetEffectMultiplier>SHG_HemomancyProficiency</statOffsetEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>3</minSeverity>
+                <label>cat</label>
+				<statFactors>
+                    <MeleeDodgeChance>1.5</MeleeDodgeChance>
+                </statFactors>
+                <capMods>
+                    <li>
+                        <capacity>Talking</capacity>
+                        <postFactor>0.85</postFactor>
+                    </li>
+                </capMods>
+                <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>4</minSeverity>
+                <label>snake</label>
+				<statOffsets>
+                    <ToxicResistance>1</ToxicResistance>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>5</minSeverity>
+                <label>starfish</label>
+            </li>
+            <li>
+                <minSeverity>6</minSeverity>
+                <label>bear</label>
+                <statFactors>
+                    <MeleeDamageFactor>1.5</MeleeDamageFactor>
+                    <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+                </statFactors>
+                <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
+            </li>
+            <li>
+                <minSeverity>7</minSeverity>
+                <label>chameleon</label>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperheroGenesBase.HediffCompProperties_GiveAbilityAtSeverity">
+                <abilitiesAtSeverities>
+                    <li>
+                        <abilityDef>SHG_Hemomancer_ShiftNormal</abilityDef>
+                        <maxSeverity>99</maxSeverity>
+                    </li>
+                    <li>
+                        <abilityDef>SHG_Hemomancer_ShiftSnakeBolt</abilityDef>
+                        <minSeverity>4.0</minSeverity>
+                        <maxSeverity>4.9</maxSeverity>
+                    </li>
+                    <li>
+                        <abilityDef>SHG_Hemomancer_ShiftStarfishStartSplitting</abilityDef>
+                        <minSeverity>5.0</minSeverity>
+                        <maxSeverity>5.9</maxSeverity>
+                    </li>
+                    <li>
+                        <abilityDef>SHG_Hemomancer_ShiftBearHibernation</abilityDef>
+                        <minSeverity>6.0</minSeverity>
+                        <maxSeverity>6.9</maxSeverity>
+                    </li>
+                    <li>
+                        <abilityDef>SHG_Hemomancer_ShiftChameleonInvisibility</abilityDef>
+                        <minSeverity>7.0</minSeverity>
+                        <maxSeverity>7.9</maxSeverity>
+                    </li>
+                </abilitiesAtSeverities>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+		<defName>SHG_Hemomancer_StarfishSplitting</defName>
+		<label>splitting</label>
+		<description>A clump of hemogen inside this pawn is gradually morphing into a miniature version of this pawn. If the pawn shifts into a different form, this clump will still grow without issue. If they die, it will become a useless mass that the body will quickly destroy should the pawn be revived.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_AsexualReproduction">
+				<reproductionIntervalDays>1</reproductionIntervalDays>
+				<endogeneTransfer>true</endogeneTransfer>
+				<asexualHatchedMessage>SHG_Hemomancer_Starfish</asexualHatchedMessage>
+			</li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.999</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+	</HediffDef>
+
+    <HediffDef>
+		<defName>SHG_Hemomancer_BearHibernating</defName>
+		<label>hibernating</label>
+		<description>This hemomorph is in a hibernation state where their need for food is almost completely removed.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <hungerRateFactorOffset>-.9999</hungerRateFactorOffset>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.10</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+		<comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+	</HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Hemomancer_ChameleonInvisibility</defName>
+        <label>chameleon</label>
+        <description>This hemomorph is blending into their surroundings.</description>
+        <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <stages>
+            <li />
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties">
+                <compClass>HediffComp_Invisibility</compClass>
+            </li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-24</severityPerDay>
+            </li>
+        </comps>
+    </HediffDef>
+</Defs>

@@ -413,6 +413,20 @@
     </Operation>
 
     <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SHG_Proj_Blast_Water"]/projectile</xpath>
+        <value>
+            <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                <damageDef>SHG_Water</damageDef>
+                <preExplosionSpawnThingDef>Filth_Water</preExplosionSpawnThingDef>
+                <filthCount>1</filthCount>
+                <numExtraHitCells>10</numExtraHitCells>
+                <soundExplode>Foam_Impact</soundExplode>
+                <speed>500</speed>  
+            </projectile>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
         <xpath>Defs/GeneDef[defName="AntisuperSpeed"]/statFactors</xpath>
         <value>
             <statFactors>
@@ -469,7 +483,7 @@
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/DamageDef[defName="SHG_Beam"]/defaultArmorPenetration</xpath>
         <value>
-            <defaultArmorPenetration>1</defaultArmorPenetration>
+            <defaultArmorPenetration>10</defaultArmorPenetration>
         </value>
     </Operation>
 </Patch>

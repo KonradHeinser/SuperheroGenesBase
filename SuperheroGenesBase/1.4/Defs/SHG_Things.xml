@@ -117,6 +117,105 @@
         </comps>
     </ThingDef>
 
+        <!--Hemomancy-->
+    <ThingDef ParentName="DrugBase">
+        <defName>SHG_BloodPill</defName>
+        <label>blood pill</label>
+        <description>A drug for preventing wound infections and increasing the ability to heal wounds and fight current infections. If the pawn's ideology would make them hate bloodfeeders, that thought is suppressed for the duration.\n\nThis will NOT give a hemogenic pawn any hemogen.</description>
+        <possessionCount>10</possessionCount>
+        <descriptionHyperlinks><HediffDef>SHG_BloodPillHigh</HediffDef></descriptionHyperlinks>
+        <graphicData>
+            <texPath>Drug/SHG_BloodPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <socialPropernessMatters>false</socialPropernessMatters>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>600</WorkToMake>
+            <MarketValue>50</MarketValue>
+            <Mass>0.01</Mass>
+            <Flammability>0.1</Flammability>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>100</baseIngestTicks>
+            <chairSearchRadius>0</chairSearchRadius>
+            <ingestSound>Ingest_Pill</ingestSound>
+            <ingestHoldUsesTable>false</ingestHoldUsesTable>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <drugCategory>Medical</drugCategory>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>SHG_BloodPillHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Drug">
+                <listOrder>1000</listOrder>
+                <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>SHG_Hemomancer_BloodSpear</defName>
+        <label>blood spear</label>
+        <graphicData>
+            <texPath>Projectiles/SHG_Hemomancer_BloodSpear</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>RangedStab</damageDef>
+            <damageAmountBase>50</damageAmountBase>
+            <armorPenetrationBase>0.05</armorPenetrationBase>
+            <stoppingPower>1</stoppingPower>
+            <speed>55</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="EtherealThingBase">
+        <defName>SHG_Hemomancer_HemogenBarrier</defName>
+        <label>hemogen barrier</label>
+        <thingClass>ThingWithComps</thingClass>
+        <tickerType>Normal</tickerType>
+        <drawerType>RealtimeOnly</drawerType>
+        <drawOffscreen>true</drawOffscreen>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Ethereal/PsychicShieldRipples</texPath>
+            <shaderType>BulletShieldPsychic</shaderType>
+            <color>(230, 23, 23)</color>
+            <drawSize>1</drawSize>
+            <shaderParameters>
+                <_PulseInterval>0.5</_PulseInterval>
+                <_DistortionScale>0.5</_DistortionScale>
+                <_DistortionIntensity>0.15</_DistortionIntensity>
+                <_MinAlpha>0.1</_MinAlpha>
+                <_MaxAlpha>0.3</_MaxAlpha>
+                <_DistortionTex>/Things/Mote/SmokeTiled</_DistortionTex>
+            </shaderParameters>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_ProjectileInterceptor">
+                <radius>1</radius>
+                <interceptGroundProjectiles>true</interceptGroundProjectiles>
+                <interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+                <interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+                <interceptAirProjectiles>true</interceptAirProjectiles>
+                <color>(0.8, 0.2, 0.2)</color>
+                <minAlpha>0.2</minAlpha>
+                <interceptEffect>Interceptor_BlockedProjectilePsychic</interceptEffect>
+            </li>
+            <li Class="CompProperties_DestroyAfterDelay">
+                <delayTicks>2500</delayTicks>
+            </li>
+        </comps>
+    </ThingDef>
+
         <!--Plant Summons-->
     <ThingDef Name="SuperPlantBase" ParentName="PlantBase" Abstract="True">
         <statBases>
@@ -398,6 +497,7 @@
         <building>
             <mineableThing>WoodLog</mineableThing>
             <mineableYield>350</mineableYield>
+            <smoothedThing />
         </building>
     </ThingDef>
 
@@ -413,6 +513,7 @@
             <isResourceRock>true</isResourceRock>
             <mineableScatterCommonality>0</mineableScatterCommonality>
             <mineableScatterLumpSizeRange>1~1</mineableScatterLumpSizeRange>
+            <smoothedThing />
         </building>
     </ThingDef>
 
@@ -482,6 +583,7 @@
             <isResourceRock>true</isResourceRock>
             <mineableScatterCommonality>0</mineableScatterCommonality>
             <mineableScatterLumpSizeRange>1~1</mineableScatterLumpSizeRange>
+            <!--<smoothedThing />--> <!--If you want to stop the resources from appearing in meteorites, remote the comments around the tag-->
         </building>
     </ThingDef>
 
