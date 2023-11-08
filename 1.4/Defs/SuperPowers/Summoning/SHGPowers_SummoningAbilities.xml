@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+        <!--Biomancer-->
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonAnimaTree</defName>
+        <label>summon anima tree</label>
+        <description>Summons an anima tree at a location. The tree will be able to grow even if it's placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. You should still be able to interact with them like you could any other anima tree.</description>
+        <iconPath>Things/Plant/TreeAnima/TreeAnimaA</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>Plant_TreeAnima</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+                <sendSkipSignal>False</sendSkipSignal>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonPoluxTree</defName>
+        <label>summon polux tree</label>
+        <description>Summons an polux tree at a location. The tree will be able to grow even if it's placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. It should still act as any other polux tree would though.</description>
+        <iconPath>Things/Plant/TreePolux/PoluxTreeB</iconPath>
+        <cooldownTicksRange>3600000</cooldownTicksRange> <!--1 year-->
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>Plant_TreePolux</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+                <sendSkipSignal>False</sendSkipSignal>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonEnhancedCorn</defName>
+        <label>summon enhanced corn</label>
+        <description>Summons a super enhanced corn plant at a location. This plant will be able to grow even if it's placed on stone flooring, and will provide 10 times its normal yield.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. This issue should just be graphical though.</description>
+        <iconPath>Things/Plant/CornPlant/CornPlantA</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Plant_Corn</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+                <sendSkipSignal>False</sendSkipSignal>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonEnhancedDevilstrand</defName>
+        <label>summon enhanced devilstrand</label>
+        <description>Summons a super enhanced devilstrand plant at a location. This plant will be able to grow even if it's placed on stone flooring, and will provide 10 times its normal yield.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. This issue should just be graphical though.</description>
+        <iconPath>Things/Plant/Devilstrand/DevilstrandA</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Plant_Devilstrand</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+                <sendSkipSignal>False</sendSkipSignal>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonEnhancedHealroot</defName>
+        <label>summon enhanced healroot</label>
+        <description>Summons a super enhanced healroot plant at a location. This plant will be able to grow even if it's placed on stone flooring, and will provide 10 times its normal yield.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. This issue should just be graphical though.</description>
+        <iconPath>Things/Plant/Healroot/HealrootA</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Plant_Healroot</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+                <sendSkipSignal>False</sendSkipSignal>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonEnhancedHops</defName>
+        <label>summon enhanced hops</label>
+        <description>Summons a super enhanced hop plant at a location. This plant will be able to grow even if it's placed on stone flooring, and will provide 10 times its normal yield.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. This issue should just be graphical though.</description>
+        <iconPath>Things/Plant/HopsPlant/HopsPlantA</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Plant_Hops</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+                <sendSkipSignal>False</sendSkipSignal>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonEnhancedSmokeleaf</defName>
+        <label>summon enhanced smokeleaf</label>
+        <description>Summons a super enhanced smokeleaf plant at a location. This plant will be able to grow even if it's placed on stone flooring, and will provide 10 times its normal yield.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. This issue should just be graphical though.</description>
+        <iconPath>Things/Plant/SmokeleafPlant/SmokeleafPlantA</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Plant_Smokeleaf</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+                <sendSkipSignal>False</sendSkipSignal>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonEnhancedPsychoid</defName>
+        <label>summon enhanced psychoid</label>
+        <description>Summons a super enhanced psychoid plant at a location. This plant will be able to grow even if it's placed on stone flooring, and will provide 10 times its normal yield.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. This issue should just be graphical though.</description>
+        <iconPath>Things/Plant/PsychoidPlant/PsychoidPlantA</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Plant_Psychoid</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+                <sendSkipSignal>False</sendSkipSignal>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonEnhancedNutrifungus</defName>
+        <label>summon enhanced nutrifungus</label>
+        <description>Summons a super enhanced nutrifungus plant at a location. This plant will be able to grow even if it's placed on stone flooring, and will provide 10 times its normal yield.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. This issue should just be graphical though.</description>
+        <iconPath>Things/Plant/Nutrifungus/NutrifungusA</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Plant_Nutrifungus</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+                <sendSkipSignal>False</sendSkipSignal>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonEnhancedToxipotato</defName>
+        <label>summon enhanced toxipotato</label>
+        <description>Summons a super enhanced toxipotato plant at a location. This plant will be able to grow even if it's placed on stone flooring, and will provide 10 times its normal yield.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. This issue should just be graphical though.\n\nWARNING: This plant still requires the ground to be toxic, and if it is not then the plant will immediately die.</description>
+        <iconPath>Things/Plant/Toxipotato/ToxipotatoA</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Plant_Toxipotato</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+                <sendSkipSignal>False</sendSkipSignal>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonGlowPod</defName>
+        <label>summon glow pod</label>
+        <description>Summons a glow pod that lasts until it takes any amount of damage.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. This issue should just be graphical though.</description>
+        <iconPath>Things/Building/Natural/GlowPod</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_SummonedGlowPod</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+                <sendSkipSignal>False</sendSkipSignal>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonGauranlenPod</defName>
+        <label>summon gauranlen pod</label>
+        <description>Summons a gauranlen pod at a location.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. This issue should just be graphical though.\n\nWARNING: The pod will not spawn fully grown, and must be given an environment in which it can spend 5-6 days growing. Unlike normal summoned plants, the pod will be sensitive to fertility, so don't put it on stone.</description>
+        <iconPath>Things/Plant/GauranlenTree/GauranlenTreeA</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>Plant_PodGauranlen</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+                <sendSkipSignal>False</sendSkipSignal>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonMineableWood</defName>
+        <label>summon wood pillar</label>
+        <description>Summons a pillar of wood at a location that is so thick it requires a miner come to take it apart bit by bit.\n\nThis can be used as a method of getting wood without chopping down trees or planting something that gives wood.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <iconPath>Things/Item/Resource/WoodLog/WoodLog_c</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_MineableWood</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+        <!--Geomancer-->
+
+        <!--Stone icons are from the wiki-->
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonSandstone</defName>
+        <label>summon sandstone</label>
+        <description>Summons a pillar of sandstone at a location. This stone will always give 9 chunks, and cannot be smoothed down.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <iconPath>Summons/Sandstone_blocks</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Sandstone</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonGranite</defName>
+        <label>summon granite</label>
+        <description>Summons a pillar of granite at a location. This stone will always give 9 chunks, and cannot be smoothed down.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <iconPath>Summons/Granite_blocks</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Granite</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonLimestone</defName>
+        <label>summon limestone</label>
+        <description>Summons a pillar of limestone at a location. This stone will always give 9 chunks, and cannot be smoothed down.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <iconPath>Summons/Limestone_blocks</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Limestone</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonSlate</defName>
+        <label>summon slate</label>
+        <description>Summons a pillar of slate at a location. This stone will always give 9 chunks, and cannot be smoothed down.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <iconPath>Summons/Slate_blocks</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Slate</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonMarble</defName>
+        <label>summon marble</label>
+        <description>Summons a pillar of marble at a location. This stone will always give 9 chunks, and cannot be smoothed down.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <iconPath>Summons/Marble_blocks</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Marble</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonMineableSteel</defName>
+        <label>summon steel</label>
+        <description>Summons a pillar of steel at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <iconPath>Things/Item/Resource/Steel/Steel_c</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_MineableSteel</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonMineableSilver</defName>
+        <label>summon silver</label>
+        <description>Summons a pillar of silver at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <iconPath>Things/Item/Resource/Silver/Silver_c</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_MineableSilver</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonMineableGold</defName>
+        <label>summon gold</label>
+        <description>Summons a pillar of gold at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <iconPath>Things/Item/Resource/Gold/Gold_c</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_MineableGold</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonMineableUranium</defName>
+        <label>summon uranium</label>
+        <description>Summons a pillar of uranium at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <iconPath>Things/Item/Resource/Uranium/Uranium_c</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_MineableUranium</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonMineablePlasteel</defName>
+        <label>summon plasteel</label>
+        <description>Summons a pillar of plasteel at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <iconPath>Things/Item/Resource/Plasteel/Plasteel_c</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_MineablePlasteel</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonMineableJade</defName>
+        <label>summon jade</label>
+        <description>Summons a pillar of jade at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <iconPath>Things/Item/Resource/Jade/Jade_c</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_MineableJade</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonMineableComponentIndustrial</defName>
+        <label>summon components</label>
+        <description>Summons a pillar of useless stone with some components in it at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <iconPath>Things/Item/Resource/ComponentIndustrial/ComponentIndustrial</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_MineableComponentsIndustrial</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonMineableComponentSpacer</defName>
+        <label>summon advanced components</label>
+        <description>Summons a pillar of useless stone with some advanced components in it at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <iconPath>Things/Item/Resource/ComponentSpacer/ComponentSpacer</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_MineableComponentsSpacer</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

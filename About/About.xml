@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Superhero Genes - Base</name>
+  <author>alite</author>
+  <packageId>SuperheroGenesBase.Mod</packageId>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  
+  <modDependencies>
+    <li>
+      <packageId>ludeon.rimworld.royalty</packageId>
+      <displayName>Royalty</displayName>
+    </li>
+    <li>
+      <packageId>ludeon.rimworld.ideology</packageId>
+      <displayName>Ideology</displayName>
+    </li>
+    <li>
+      <packageId>ludeon.rimworld.biotech</packageId>
+      <displayName>Biotech</displayName>
+    </li>
+  </modDependencies>
+
+  <loadAfter>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>ceteam.combatextended</li>
+    <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+    <li>sarg.alphagenes</li>
+    <li>Sov.Homelander</li>
+  </loadAfter>
+
+  <description>
+Note about requirements: If, for whatever reason, you cannot or do not want to have one of the listed requirements, this mod will still work. This mod was designed in a way that made it so genes related to the requirements will not be added if the mod is disabled. If you cannot find a power that should be on the list please make sure all listed mods are enabled.
+
+Ever wanted your pawns to be able to lift extreme weights? Want them to be able to research things at frankly ridiculous speeds? This mod allows you to give pawns some of the more mundane super powers, like super strength and super speed. Much like in superhero movies, there is little balance in what they can do, but you didn't come here for common sense. In this base, there are 3 categories of powers, and 6 powers within each one, each power influencing a different aspect of the pawn, along with a straggler or two as a bonus. All superhero genes, from this mod or any that may or may not be made after this, have a prerequisite superhero gene that provides boosts to numerous aspects of the pawn at no cost.
+
+The three categories are Super, Unsuper, and AntiSuper. The supers increase stats even further beyond the what the base gene provides, while unsuper genes negate the base bonus for that type. Antisuper genes provide another penalty in addition to the unsuper version, and in exchange they increase metabolic efficiency by a decent chunk.
+
+Super Mutations Update - July 01, 2023: Added a new type of superhero genes, Super Mutations. These mutations can provide great bonuses, but often take their price not through Metabolic efficiency, but by being detrimental to the pawn's other abilities.
+
+Super Powers Update 1 - July 16, 2023: Added a bunch of super powers, from flight to invisibility to laser eyes to reviving the dead to just straight up exploding things.
+
+Super Powers Update 2 - August 2, 2023: Added super powers mostly related to buffing allies and debuffing enemies. Utilizing these will make the super weaker for a time, so use them wisely. Also, this update includes anti-powers, rated #4 on the list of most effective ways to stop another super. These are available to pawns who have the relevant anti-super gene.
+
+Archetypes Update - August 9, 2023: Added 19 new genes called archetypes. Archetypes are the type of hero a pawn is, and grant many abilities that are usually only obtainable through individual genes at a much lower cost. For example, the pyromancer gains fire bolt and fire blast (fire burst too if AG is enabled) for 5 metabolic efficiency instead of the 15 it would normally require. Each pawn can only have one archetype.
+
+Psionics Update - September 16, 2023: Added 70 new genes for Psionic abilities. Psionic abilities act just like standard psychic abilities, except the only way to gain and lose them is to alter the genetics of the Psionist. The abilities also seldom use focus as a cost, meaning Psionists spend less time meditating than those who rely on normal psychic abilities.
+
+_______________________________________________________
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2980131746]Superhero Genes - Villain and Stereotypes[/url] adds xenotypes that use these genes and a hostile faction. It's separate from this one so that people don't have a bunch of extra xenotypes filling their list, or a hostile faction of strong opponents disrupting their colony constantly.
+
+_______________________________________________________
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2986697224]Superhero Genes - Supers Everywhere[/url] gives all xenotypes the superhero gene, and replaces many negative genes with anti-super genes. The end result is that all of the negative aspects of each xenotype become more significant, and if you're using Villains and Stereotypes it makes it easier to find pawns that can fight Villains one on one.
+
+_______________________________________________________
+
+Want to make the super genes feel a little more balanced? [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3001897182]Superhero Genes - Activatable Super Genes[/url] moves many of the innate bonuses super genes provide into an activatable ability. When activated, the super will gain the full extent of that power for half an hour in exchange for multiplying the rate their body consumes nutrition by 1.2. This is kept separate because some people aren't here for balance, they just enjoy making godlike pawns.
+
+_______________________________________________________
+
+If you're just want the base superhero gene cost to be the same as what all of the unsupers combined give you, [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3007772504]Superhero Genes - Expensive Base[/url] sets the metabolic cost of the superhero gene to -8 and adds a new archetype called Dormant Super, which combines all of the unsuper genes into one gene.
+
+_______________________________________________________
+
+For those who expect to have a superhero pawn alive for a REALLY long time, check out my [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2985686809]Always Very Fertile[/url] mod. It removes the effects of fertility caused by old age.
+
+_______________________________________________________
+
+For anyone who's tempted to actually make religions based on a group of supers, I made [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2991154934]Increased Max Deities in Theist Relgions[/url], which increases the max gods you can assign to a theistic religion from 4 to 20.
+
+_______________________________________________________
+
+[url=https://discord.gg/fYP8qkcNDh]Discord link[/url] for those who want an easier way to ask questions, make requests, or just chat. I'll also be posting new releases there.
+
+[url=https://steamcommunity.com/id/alite/myworkshopfiles/?appid=294100]Easy link to all of my Rimworld mods[/url]
+
+[url=https://github.com/KonradHeinser/SuperheroGenesBase][img]https://i.imgur.com/kTkpTOE.png[/img][/url]
+[url=https://ko-fi.com/alite56114][img]https://i.imgur.com/Utx6OIH.png[/img][/url]
+
+For those who are wondering, yes, I have added a CE compatibility patch.
+
+_______________________________________________________
+
+
+While genes from this mod are not balanced for the game, they are supposed to be balanced for each other. If any one superhero gene feels useless or overpowered compared to other genes in its category, let me know. A monster might have eaten my balance when I wasn't looking.
+
+_______________________________________________________
+
+Want your superhero to be truly overpowered? The [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878925256]Metabolic Adjusters[/url] mod that Green Giggler made throws balance out the window by allowing you to add a bunch of metabolic efficiency for free.
+
+_______________________________________________________
+
+To help avoid weird inheritance issues, try using the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2881479142]Consistent Gene Inheritance[/url] mod that Sea made. With how the inheritance system is set up in the vanilla game, there's a chance that your pawns won't properly inherit superhero genes from their parents in situations where they logically should, and this mod should help protect you from that situation some.
+  </description>
+</ModMetaData>
+
+<!--Original textures for some of the powers are available on https://game-icons.net-->

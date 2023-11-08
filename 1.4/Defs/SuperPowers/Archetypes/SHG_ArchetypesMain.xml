@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+        <!--Supreme Archetypes: 
+                Originally just labeled Path-based Archetypes, CTH from discord came up with a much better name for it.-->
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Hemomancer</defName>
+        <label>hemomancer</label>
+        <description>Hemomancers, contrary to popular belief, don't gain their abilities from being superheroes, but from a mutated version of the hemogenic gene. This mutation initially caused extreme bloodlust, but that was removed about a decade later by introducing small portions of the superhero gene. The final version of the gene contains just enough of the superhero gene directly inside it to allow hemomancers to be classified as superheroes without actually having the superhero gene.\n\nThe prerequisite for this gene is Hemogenic, not the Superhero Gene. This gives access to the hemogen power paths.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Hemomancer</iconPath>
+        <prerequisite>Hemogenic</prerequisite>
+        <geneClass>Gene_HemogenDrain</geneClass>
+        <resourceLabel>hemogen</resourceLabel>
+        <biostatArc>1</biostatArc>
+        <resourceLossPerDay>-1</resourceLossPerDay>
+        <displayOrderInCategory>-0.9</displayOrderInCategory>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+				<hediffToWholeBody>SHG_Hemomancer</hediffToWholeBody>
+			</li>
+		</modExtensions>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>hemo</symbol></li>
+                <li><symbol>blood</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>mancer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <HediffDef>
+        <defName>SHG_Hemomancer</defName>
+        <label>hemomancer</label>
+        <description>This pawn's ability to control blood allows them to slow the rate that they lose blood from open wounds.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+                <totalBleedFactor>0.25</totalBleedFactor>
+            </li>
+        </stages>
+    </HediffDef>
+
+        <!--Mancers-->
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Electromancer</defName>
+        <label>electromancer</label>
+        <description>Electromancers specialize in the weaponization of electricity, from the electronics disabling EMPs to the flesh frying lightning.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Electromancer</iconPath>
+        <biostatMet>-3</biostatMet>
+        <damageFactors>
+            <SHG_Lightning>0</SHG_Lightning>
+            <AG_Electric MayRequire="sarg.alphagenes">0</AG_Electric>
+        </damageFactors>
+        <abilities>
+            <li>SHG_EMPBolt</li>
+            <li>SHG_LightningBolt</li>
+            <li>SHG_EMPBlast</li>
+            <li>SHG_LightningBlast</li>
+            <li MayRequire="sarg.alphagenes">SHG_EMPBurst</li>
+            <li MayRequire="sarg.alphagenes">SHG_LightningBurst</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_EMPBolt</AbilityDef>
+            <AbilityDef>SHG_LightningBolt</AbilityDef>
+            <AbilityDef>SHG_EMPBlast</AbilityDef>
+            <AbilityDef>SHG_LightningBlast</AbilityDef>
+            <AbilityDef MayRequire="sarg.alphagenes">SHG_EMPBurst</AbilityDef>
+            <AbilityDef MayRequire="sarg.alphagenes">SHG_LightningBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>LightningDamage</li>
+            <li>Archetypes_ElectromancerEMPBolt</li>
+            <li>Archetypes_ElectromancerLightningBolt</li>
+            <li>Archetypes_ElectromancerEMPBlast</li>
+            <li>Archetypes_ElectromancerLightningBlast</li>
+            <li>Archetypes_ElectromancerEMPBurst</li>
+            <li>Archetypes_ElectromancerLightningBurst</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>electro</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>mancer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Petrimancer</defName>
+        <label>petrimancer</label>
+        <description>Petrimancers specialize in petrifying opponents, and are vital in any colony that relies on large numbers of prisoners or slaves.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Petrimancer</iconPath>
+        <biostatMet>-3</biostatMet>
+        <damageFactors>
+            <SHG_Petrification>0</SHG_Petrification>
+        </damageFactors>
+        <abilities>
+            <li>SHG_PetrificationBolt</li>
+            <li>SHG_PetrificationBlast</li>
+            <li MayRequire="sarg.alphagenes">SHG_PetrificationBurst</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_PetrificationBolt</AbilityDef>
+            <AbilityDef>SHG_PetrificationBlast</AbilityDef>
+            <AbilityDef MayRequire="sarg.alphagenes">SHG_PetrificationBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_PetrimancerPetrificationBolt</li>
+            <li>Archetypes_PetrimancerPetrificationBlast</li>
+            <li>Archetypes_PetrimancerPetrificationBurst</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>petri</symbol></li>
+                <li><symbol>stone</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>mancer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Pyromancer</defName>
+        <label>pyromancer</label>
+        <description>Pyromancer specialize in burning everything around them to ashes, and usually the only way to stop them involves a lot of fireproofing.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Pyromancer</iconPath>
+        <biostatMet>-5</biostatMet>
+        <statFactors>
+            <Flammability>0</Flammability>
+        </statFactors>
+        <damageFactors>
+            <Flame>0</Flame>
+        </damageFactors>
+        <statOffsets>
+            <ComfyTemperatureMax>20</ComfyTemperatureMax>
+        </statOffsets>
+        <abilities>
+            <li>SHG_FireBolt</li>
+            <li>SHG_FireBlast</li>
+            <li>SHG_FireBurst</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_FireBolt</AbilityDef>
+            <AbilityDef>SHG_FireBlast</AbilityDef>
+            <AbilityDef>SHG_FireBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>FireDamage</li>
+            <li>Archetypes_PyromancerFireBolt</li>
+            <li>Archetypes_PyromancerFireBlast</li>
+            <li>Archetypes_PyromancerFireBurst</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>pyro</symbol></li>
+                <li><symbol>fire</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>mancer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Cryomancer</defName>
+        <label>cryomancer</label>
+        <description>Pyromancer specialize in inflicting debilating frostbite upon all their foes.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Cryomancer</iconPath>
+        <biostatMet>-4</biostatMet>
+        <damageFactors>
+            <Frostbite>0</Frostbite>
+            <SHG_Ice>0</SHG_Ice>
+            <CW_CryoDamagePistolBullet MayRequire="SA.Cryoweapons">0</CW_CryoDamagePistolBullet>
+            <CW_CryoDamageRifleBullet MayRequire="SA.Cryoweapons">0</CW_CryoDamageRifleBullet>
+            <CW_CryoDamageShell MayRequire="SA.Cryoweapons">0</CW_CryoDamageShell>
+            <CW_CryoDamageRailShot MayRequire="SA.Cryoweapons">0</CW_CryoDamageRailShot>
+            <CW_SecondaryFrostBurn MayRequire="SA.Cryoweapons">0</CW_SecondaryFrostBurn>
+        </damageFactors>
+        <statOffsets>
+            <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+        </statOffsets>
+        <abilities>
+            <li>SHG_IceBolt</li>
+            <li>SHG_IceBlast</li>
+            <li MayRequire="sarg.alphagenes">SHG_IceBurst</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_IceBolt</AbilityDef>
+            <AbilityDef>SHG_IceBlast</AbilityDef>
+            <AbilityDef MayRequire="sarg.alphagenes">SHG_IceBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>EBSG_FrostbiteResistance</li>
+            <li>Archetypes_CryomancerIceBolt</li>
+            <li>Archetypes_CryomancerIceBlast</li>
+            <li>Archetypes_CryomancerIceBurst</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>cryo</symbol></li>
+                <li><symbol>ice</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>mancer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Caustimancer</defName>
+        <label>caustimancer</label>
+        <description>Caustimancers specialize in throwing acid around, and frequently get banned from bars after a fight because of the mess they leave behind.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Caustimancer</iconPath>
+        <biostatMet>-2</biostatMet>
+        <damageFactors>
+            <AcidBurn>0</AcidBurn>
+            <AG_AcidSpit MayRequire="sarg.alphagenes">0</AG_AcidSpit>
+            <VEF_SecondaryAcidBurn MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0</VEF_SecondaryAcidBurn>
+        </damageFactors>
+        <abilities>
+            <li>SHG_AcidBolt</li>
+            <li>SHG_AcidBlast</li>
+            <li MayRequire="sarg.alphagenes">SHG_AcidBurst</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_AcidBolt</AbilityDef>
+            <AbilityDef>SHG_AcidBlast</AbilityDef>
+            <AbilityDef MayRequire="sarg.alphagenes">SHG_AcidBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>AcidDamage</li>
+            <li>Archetypes_CaustimancerAcidBolt</li>
+            <li>Archetypes_CaustimancerAcidBlast</li>
+            <li>Archetypes_CaustimancerAcidBurst</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>causti</symbol></li>
+                <li><symbol>acid</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>mancer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Toximancer</defName>
+        <label>toximancer</label>
+        <description>Toximancers tend to play more of a supporting roll on the battlefield. While their blasts may not kill anyone directly, they are excellent for forcing people to flee to new cover.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Toximancer</iconPath>
+        <biostatMet>-1</biostatMet>
+        <statOffsets>
+            <ToxicResistance>1</ToxicResistance>
+        </statOffsets>
+        <abilities>
+            <li>SHG_ToxBolt</li>
+            <li>SHG_ToxBlast</li>
+            <li MayRequire="sarg.alphagenes">SHG_ToxicBurst</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_ToxBolt</AbilityDef>
+            <AbilityDef>SHG_ToxBlast</AbilityDef>
+            <AbilityDef MayRequire="sarg.alphagenes">SHG_ToxicBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>ToxResistance</li>
+            <li>Archetypes_ToximancerToxicBolt</li>
+            <li>Archetypes_ToximancerToxicBlast</li>
+            <li>Archetypes_ToximancerToxicBurst</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>toxi</symbol></li>
+                <li><symbol>poison</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>mancer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Hydromancer</defName>
+        <label>hydromancer</label>
+        <description>Hydromancers shoot out streams of water at high pressures that can both kill fires and put out enemies.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Hydromancer</iconPath>
+        <biostatMet>-4</biostatMet>
+        <damageFactors>
+            <SHG_Water>0</SHG_Water>
+        </damageFactors>
+        <abilities>
+            <li>SHG_WaterBolt</li>
+            <li>SHG_WaterBlast</li>
+            <li MayRequire="sarg.alphagenes">SHG_WaterBurst</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_WaterBolt</AbilityDef>
+            <AbilityDef>SHG_WaterBlast</AbilityDef>
+            <AbilityDef MayRequire="sarg.alphagenes">SHG_WaterBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_HydromancerWaterBolt</li>
+            <li>Archetypes_HydromancerWaterBlast</li>
+            <li>Archetypes_HydromancerWaterBurst</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>water</symbol></li>
+                <li><symbol>hydro</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>mancer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+        <!--Other Standard-->
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Pugilist</defName>
+        <label>pugilist</label>
+        <description>Pugilists have been called many different things throughout the years. Boxers, brawlers, and sometimes just known by the generic term martial artists. A pugilist's true strength lies not in the innate powers of their archetype, but the training and equipment they use to compliment the abilities. They are often the first ones to the front lines, and the last ones to leave.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Pugilist</iconPath>
+        <biostatMet>-1</biostatMet>
+        <statOffsets>
+            <PainShockThreshold>0.25</PainShockThreshold>
+            <ComfyTemperatureMin>-5</ComfyTemperatureMin>
+            <ComfyTemperatureMax>5</ComfyTemperatureMax>
+        </statOffsets>
+        <abilities>
+            <li>SHG_HeroicLeap</li>
+            <li>SHG_Pools_EndurePain</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_HeroicLeap</AbilityDef>
+            <AbilityDef>SHG_Pools_EndurePain</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_PugilistLeap</li>
+            <li>Archetype_PugilistEndurePain</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>pugi</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Medic</defName>
+        <label>medic</label>
+        <description>Medics often spend their life constantly moving around. Every day there's a new person to patch up, a new triage clinic to tend to, a new person to bring back from the brink of death.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Medic</iconPath>
+        <biostatMet>-2</biostatMet>
+        <statFactors>
+            <MedicalTendQuality>1.5</MedicalTendQuality>
+            <MedicalTendSpeed>1.5</MedicalTendSpeed>
+            <MedicalOperationSpeed>1.5</MedicalOperationSpeed>
+            <MedicalSurgerySuccessChance>1.5</MedicalSurgerySuccessChance>
+        </statFactors>
+        <abilities>
+            <li>SHG_SealWounds</li>
+            <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Pools_HealAllies</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SealWounds</AbilityDef>
+            <AbilityDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Pools_HealAllies</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_MedicSeal</li>
+            <li>Archetype_MedicHeal</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>medi</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_LifeBringer</defName>
+        <label>life bringer</label>
+        <description>The very existence of Life Bringers defies common sense and the natural order. Those under the Life Bringer's care will find that wounds never last long, and death is nothing more than an inconvenience.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_LifeBringer</iconPath>
+        <biostatMet>-5</biostatMet>
+        <statFactors>
+            <MedicalTendQuality>2</MedicalTendQuality>
+            <MedicalTendSpeed>2</MedicalTendSpeed>
+            <MedicalOperationSpeed>2</MedicalOperationSpeed>
+            <MedicalSurgerySuccessChance>2</MedicalSurgerySuccessChance>
+        </statFactors>
+        <abilities>
+            <li>SHG_SealWounds</li>
+            <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Pools_HealAllies</li>
+            <li>SHG_Revive</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SealWounds</AbilityDef>
+            <AbilityDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Pools_HealAllies</AbilityDef>
+            <AbilityDef>SHG_Revive</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_LifeBringerSeal</li>
+            <li>Archetype_LifeBringerHeal</li>
+            <li>Archetype_LifeBringerRevive</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>life</symbol></li>
+                <li><symbol>revive</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>bringer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Druid</defName>
+        <label>druid</label>
+        <description>Most believe that druids seek to have balance with nature, to ensure it is not disrupted. This belief is what caused people to begin calling Druids as such, and it was only reinforced when they found their own animals turning against them.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Druid</iconPath>
+        <biostatMet>-2</biostatMet>
+        <statFactors>
+            <PruningSpeed>2</PruningSpeed>
+        </statFactors>
+        <abilities>
+            <li>SHG_CommandAnimal</li>
+            <li>SHG_ToxBolt</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_CommandAnimal</AbilityDef>
+            <AbilityDef>SHG_ToxBolt</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_DruidCommand</li>
+            <li>Archetype_DruidToxBolt</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>nature</symbol></li>
+                <li><symbol>plant</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Skirmisher</defName>
+        <label>skirmisher</label>
+        <description>Skirmishers tend to be extremely hard to pin down due to their dextrous nature. They leap in and out of battles with ease, and while it is minor, their ability to predict the actions of everyone near them makes them a deadly force. Lightly equipped Skirmishers will often leap to the back lines to tear apart the enemy's ranged troops, while heavily equipped Skirmishers will wade through enemies, leaping out of the way just before things really get dangerous.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Skirmisher</iconPath>
+        <biostatMet>-1</biostatMet>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <postFactor>1.25</postFactor>
+            </li>
+        </capMods>
+        <abilities>
+            <li>SHG_LesserPortent</li>
+            <li>SHG_HeroicLeap</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_LesserPortent</AbilityDef>
+            <AbilityDef>SHG_HeroicLeap</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_SkirmisherLeap</li>
+            <li>Archetype_SkirmisherSeer</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Analyzer</defName>
+        <label>analyzer</label>
+        <description>Analyzers are capable of viewing everything around them with extreme detail, and use this power to take down foes with extreme precision.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Analyzer</iconPath>
+        <biostatMet>-2</biostatMet>
+        <capMods>
+            <li>
+                <capacity>Breathing</capacity>
+                <offset>0.25</offset>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <postFactor>1.25</postFactor>
+            </li>
+        </capMods>
+        <abilities>
+            <li>SHG_Snapshot</li>
+            <li>SHG_ThrowSpike</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Snapshot</AbilityDef>
+            <AbilityDef>SHG_ThrowSpike</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_AnalyzerSnapshot</li>
+            <li>Archetype_AnalzerSpike</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Porter</defName>
+        <label>porter</label>
+        <description>Porters are capable of transporting large amounts of people and things from place to place with ease. While they themselves usually don't have much assistance to provide in direct combat, their abilities are still valued highly in any army or raiding party as all they require when moving large amounts of people is a person at the destination to act as a destination beacon.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Porter</iconPath>
+        <biostatMet>-5</biostatMet>
+        <abilities>
+            <li>SHG_Blink</li>
+            <li>SHG_Teleport</li>
+            <li>SHG_Gate</li>
+            <li>SHG_Rift</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Blink</AbilityDef>
+            <AbilityDef>SHG_Teleport</AbilityDef>
+            <AbilityDef>SHG_Gate</AbilityDef>
+            <AbilityDef>SHG_Rift</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_PorterBlink</li>
+            <li>Archetype_PorterTeleport</li>
+            <li>Archetype_PorterGate</li>
+            <li>Archetype_PorterRift</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>port</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Hacker</defName>
+        <label>hacker</label>
+        <description>Hackers excel when fighting mechanoids. Their excellence comes not from how much destruction they cause, but from the destruction the mechanoids can cause. All they need to do is touch the strongest mechanoid, and all that will be left is cleanup.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Hacker</iconPath>
+        <biostatMet>-2</biostatMet>
+        <statFactors>
+            <HackingSpeed>2</HackingSpeed>
+        </statFactors>
+        <abilities>
+            <li>SHG_Pools_EmergencyShutdown</li>
+            <li>SHG_HackMech</li>
+            <li>SHG_Invisibility</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Pools_EmergencyShutdown</AbilityDef>
+            <AbilityDef>SHG_HackMech</AbilityDef>
+            <AbilityDef>SHG_Invisibility</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_HackerShutdown</li>
+            <li>Archetypes_HackerHackMech</li>
+            <li>Archetypes_HackerInvisibility</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>hack</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Antihero</defName>
+        <label>anti-hero</label>
+        <description>When all hope is lost, when the villains run rampant and unkillable monsters infest the lands, the Anti-hero will be there. They turn strengths into weakness, and tear apart their enemies with brutal efficiency. No mercy will be given, and no weakness will be left unused. Some may be unsaveable, but all are killable.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Antihero</iconPath>
+        <biostatMet>-4</biostatMet>
+        <abilities>
+            <li>SHG_AntiPower_Durability_MinorAura</li>
+            <li>SHG_AntiPower_Durability_MajorAura</li>
+            <li>SHG_AntiPower_Healing_MinorAura</li>
+            <li>SHG_AntiPower_Healing_MajorAura</li>
+            <li>SHG_AntiPower_Intelligence_MinorAura</li>
+            <li>SHG_AntiPower_Intelligence_MajorAura</li>
+            <li>SHG_AntiPower_Perception_MinorAura</li>
+            <li>SHG_AntiPower_Perception_MajorAura</li>
+            <li>SHG_AntiPower_Persuasion_MinorAura</li>
+            <li>SHG_AntiPower_Persuasion_MajorAura</li>
+            <li>SHG_AntiPower_Precision_MinorAura</li>
+            <li>SHG_AntiPower_Precision_MajorAura</li>
+            <li>SHG_AntiPower_Speed_MinorAura</li>
+            <li>SHG_AntiPower_Speed_MajorAura</li>
+            <li>SHG_AntiPower_Strength_MinorAura</li>
+            <li>SHG_AntiPower_Strength_MajorAura</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_AntiPower_Durability_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Durability_MajorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Healing_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Healing_MajorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Intelligence_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Intelligence_MajorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Perception_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Perception_MajorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Persuasion_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Persuasion_MajorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Precision_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Precision_MajorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Speed_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Speed_MajorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Strength_MinorAura</AbilityDef>
+            <AbilityDef>SHG_AntiPower_Strength_MajorAura</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_AntiheroDurability</li>
+            <li>Archetypes_AntiheroHealing</li>
+            <li>Archetypes_AntiheroIntelligence</li>
+            <li>Archetypes_AntiheroPerception</li>
+            <li>Archetypes_AntiheroPersuasion</li>
+            <li>Archetypes_AntiheroPrecision</li>
+            <li>Archetypes_AntiheroSpeed</li>
+            <li>Archetypes_AntiheroStrength</li>
+        </exclusionTags>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li><symbol>anti-hero</symbol></li>
+            </wholeNameSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Firefighter</defName>
+        <label>firefighter</label>
+        <description>Firefighters specialize in exactly what their name states. Fighting fires. Should push come to shove their water abilties can also be turned to a more violent purpose as the high pressure water those abilities shoot is capable of destroying limbs.</description>
+        <iconPath>Archetypes/Gene_Firefighter</iconPath>
+        <biostatMet>-5</biostatMet>
+        <statFactors>
+            <Flammability>0</Flammability>
+        </statFactors>
+        <damageFactors>
+            <SHG_Water>0.50</SHG_Water>
+            <Flame>0.50</Flame>
+        </damageFactors>
+        <statOffsets>
+            <ComfyTemperatureMax>10</ComfyTemperatureMax>
+        </statOffsets>
+        <abilities>
+            <li>SHG_WaterBolt</li>
+            <li>SHG_WaterBlast</li>
+            <li MayRequire="sarg.alphagenes">SHG_WaterBurst</li>
+            <li>SHG_FoamBolt</li>
+            <li>SHG_FoamBlast</li>
+            <li MayRequire="sarg.alphagenes">SHG_FoamBurst</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_WaterBolt</AbilityDef>
+            <AbilityDef>SHG_WaterBlast</AbilityDef>
+            <AbilityDef MayRequire="sarg.alphagenes">SHG_WaterBurst</AbilityDef>
+            <AbilityDef>SHG_FoamBolt</AbilityDef>
+            <AbilityDef>SHG_FoamBlast</AbilityDef>
+            <AbilityDef MayRequire="sarg.alphagenes">SHG_FoamBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_FirefighterWaterBolt</li>
+            <li>Archetypes_FirefighterWaterBlast</li>
+            <li>Archetypes_FirefighterWaterBurst</li>
+            <li>Archetypes_FirefighterFoamBolt</li>
+            <li>Archetypes_FirefighterFoamBlast</li>
+            <li>Archetypes_FirefighterFoamBurst</li>
+        </exclusionTags>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li><symbol>firefighter</symbol></li>
+            </wholeNameSymbols>
+            <suffixSymbols>
+                <li><symbol>fighter</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Stunner</defName>
+        <label>stunner</label>
+        <description>Stunners specialize in using their superhero beauty as a weapon, distracting their enemies, allies, and sometimes themselves.</description>
+        <iconPath>Archetypes/Gene_Stunner</iconPath>
+        <biostatMet>-3</biostatMet>
+        <statFactors>
+            <SHG_StunSusceptibility>0.5</SHG_StunSusceptibility>
+            <PawnBeauty>2</PawnBeauty>
+        </statFactors>
+        <abilities>
+            <li>SHG_StunningAttraction</li>
+            <li>SHG_Narcissus</li>
+            <li>SHG_Distraction</li>
+            <li>SHG_UntouchableBeauty</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_StunningAttraction</AbilityDef>
+            <AbilityDef>SHG_Narcissus</AbilityDef>
+            <AbilityDef>SHG_Distraction</AbilityDef>
+            <AbilityDef>SHG_UntouchableBeauty</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_StunnerAttraction</li>
+            <li>Archetype_StunnerNarcissus</li>
+            <li>Archetype_StunnerDistraction</li>
+            <li>Archetype_StunnerUntouchable</li>
+        </exclusionTags>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li><symbol>stunner</symbol></li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li><symbol>stun</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <!--Summoning Archetypes-->
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Biomancer</defName>
+        <label>biomancer</label>
+        <description>Biomancers are capable of creating plants from seemingly nothing. These plants, usually trees and exotic plants, can survive in situations that would normally be inhospitable.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Biomancer</iconPath>
+        <biostatMet>-3</biostatMet>
+        <abilities>
+            <li MayRequire="Ludeon.Rimworld.Royalty">SHG_SummonAnimaTree</li>
+            <li>SHG_SummonPoluxTree</li>
+            <li>SHG_SummonGlowPod</li>
+            <li>SHG_SummonGauranlenPod</li>
+            <li>SHG_SummonMineableWood</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef MayRequire="Ludeon.Rimworld.Royalty">SHG_SummonAnimaTree</AbilityDef>
+            <AbilityDef>SHG_SummonPoluxTree</AbilityDef>
+            <AbilityDef>SHG_SummonGlowPod</AbilityDef>
+            <AbilityDef>SHG_SummonGauranlenPod</AbilityDef>
+            <AbilityDef>SHG_SummonMineableWood</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_BiomancerAnima</li>
+            <li>Archetype_BiomancerPolux</li>
+            <li>Archetype_BiomancerGlowPod</li>
+            <li>Archetype_BiomancerGauranlen</li>
+            <li>Archetype_BiomancerWood</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>bio</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>mancer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Farmer</defName>
+        <label>farmer</label>
+        <description>Farmers usually are often overlooked in more advanced worlds, but their ability to create crops that thrive even on solid stone can often save a struggling colony or tribe.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Farmer</iconPath>
+        <biostatMet>-2</biostatMet>
+        <statFactors>
+            <PlantWorkSpeed>2</PlantWorkSpeed>
+            <PlantHarvestYield>2</PlantHarvestYield>
+        </statFactors>
+        <abilities>
+            <li>SHG_SummonEnhancedCorn</li>
+            <li>SHG_SummonEnhancedDevilstrand</li>
+            <li MayRequire="Ludeon.Rimworld.Ideology">SHG_SummonEnhancedNutrifungus</li>
+            <li>SHG_SummonEnhancedToxipotato</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SummonEnhancedCorn</AbilityDef>
+            <AbilityDef>SHG_SummonEnhancedDevilstrand</AbilityDef>
+            <AbilityDef MayRequire="Ludeon.Rimworld.Ideology">SHG_SummonEnhancedNutrifungus</AbilityDef>
+            <AbilityDef>SHG_SummonEnhancedToxipotato</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_FarmerCorn</li>
+            <li>Archetype_FarmerDevilstrand</li>
+            <li>Archetype_FarmerNutrifungus</li>
+            <li>Archetype_FarmerToxipotato</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>farm</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Chemist</defName>
+        <label>chemist</label>
+        <description>With a little bit of time and equipment, a Chemist can easily create a stable supply of a variety of drugs, from lifesaving ones made from healroot to potent narcotics made from psychoid plants.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Chemist</iconPath>
+        <biostatMet>-2</biostatMet>
+        <statFactors>
+            <DrugSynthesisSpeed>2</DrugSynthesisSpeed>
+            <DrugHarvestYield>2</DrugHarvestYield>
+        </statFactors>
+        <abilities>
+            <li>SHG_SummonEnhancedHealroot</li>
+            <li>SHG_SummonEnhancedHops</li>
+            <li>SHG_SummonEnhancedSmokeleaf</li>
+            <li>SHG_SummonEnhancedPsychoid</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SummonEnhancedHealroot</AbilityDef>
+            <AbilityDef>SHG_SummonEnhancedHops</AbilityDef>
+            <AbilityDef>SHG_SummonEnhancedSmokeleaf</AbilityDef>
+            <AbilityDef>SHG_SummonEnhancedPsychoid</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_ChemistHealroot</li>
+            <li>Archetype_ChemistHops</li>
+            <li>Archetype_ChemistSmokeleaf</li>
+            <li>Archetype_ChemistPsychoid</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>chem</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>ist</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Geomancer</defName>
+        <label>geomancer</label>
+        <description>Unlike most supers with earth based powers, Geomancers have difficulty manipulating anything other than normal stones. However, through a lot of practice they have mastered this ability in a way that allows them to move stone precisely, leaving just valuable resources left.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Geomancer</iconPath>
+        <biostatMet>-2</biostatMet>
+        <statFactors>
+            <MiningSpeed>2</MiningSpeed>
+            <DeepDrillingSpeed>2</DeepDrillingSpeed>
+        </statFactors>
+        <abilities>
+            <li>SHG_SummonSandstone</li>
+            <li>SHG_SummonGranite</li>
+            <li>SHG_SummonLimestone</li>
+            <li>SHG_SummonSlate</li>
+            <li>SHG_SummonMarble</li>
+            <li>SHG_SummonMineableComponentIndustrial</li>
+            <li>SHG_SummonMineableComponentSpacer</li>
+            <li>SHG_MassStoneShift</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SummonSandstone</AbilityDef>
+            <AbilityDef>SHG_SummonGranite</AbilityDef>
+            <AbilityDef>SHG_SummonLimestone</AbilityDef>
+            <AbilityDef>SHG_SummonSlate</AbilityDef>
+            <AbilityDef>SHG_SummonMarble</AbilityDef>
+            <AbilityDef>SHG_SummonMineableComponentIndustrial</AbilityDef>
+            <AbilityDef>SHG_SummonMineableComponentSpacer</AbilityDef>
+            <AbilityDef>SHG_MassStoneShift</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_GeomancerStone</li>
+            <li>Archetype_GeomancerComponentIndustrial</li>
+            <li>Archetype_GeomancerComponentSpacer</li>
+            <li>Archetype_GeomancerChunkSkip</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>geo</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>mancer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Ferromancer</defName>
+        <label>ferromancer</label>
+        <description>Ferromancers specialize in moving mass amounts of metal from far undergound to the surface. They can also use their innate metal control to ensure they always have the best results when extracting resources from a location.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Ferromancer</iconPath>
+        <biostatMet>-4</biostatMet>
+        <statFactors>
+            <MiningYield>3</MiningYield>
+        </statFactors>
+        <abilities>
+            <li>SHG_SummonMineablePlasteel</li>
+            <li>SHG_SummonMineableUranium</li>
+            <li>SHG_SummonMineableSteel</li>
+            <li MayRequire="Grimworld.Core">SHG_SummonMineableGWAdamantium</li>
+            <li MayRequire="Grimworld.Core">SHG_SummonMineableGWAuramite</li>
+            <li MayRequire="Grimworld.Core">SHG_SummonMineableGWCeramite</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SummonMineablePlasteel</AbilityDef>
+            <AbilityDef>SHG_SummonMineableUranium</AbilityDef>
+            <AbilityDef>SHG_SummonMineableSteel</AbilityDef>
+            <AbilityDef MayRequire="Grimworld.Core">SHG_SummonMineableGWAdamantium</AbilityDef>
+            <AbilityDef MayRequire="Grimworld.Core">SHG_SummonMineableGWAuramite</AbilityDef>
+            <AbilityDef MayRequire="Grimworld.Core">SHG_SummonMineableGWCeramite</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_FerromancerPlasteel</li>
+            <li>Archetype_FerromancerUranium</li>
+            <li>Archetype_FerromancerSteel</li>
+            <li>Archetype_FerromancerAdmantium</li>
+            <li>Archetype_FerromancerAuramite</li>
+            <li>Archetype_FerromancerAdmantium</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>ferro</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>mancer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Midas</defName>
+        <label>midas</label>
+        <description>While a Midas can't actually turn things into gold, they frequently gather large amounts of wealth by pulling precious resources from deep underground to themselves, usually ordering someone else to break it apart in exchange for a couple trinkets.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Midas</iconPath>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>SHG_SummonMineableSilver</li>
+            <li>SHG_SummonMineableGold</li>
+            <li>SHG_SummonMineableJade</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SummonMineableSilver</AbilityDef>
+            <AbilityDef>SHG_SummonMineableGold</AbilityDef>
+            <AbilityDef>SHG_SummonMineableJade</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_MidasSilver</li>
+            <li>Archetype_MidasGold</li>
+            <li>Archetype_MidasJade</li>
+        </exclusionTags>
+    </GeneDef>
+</Defs>

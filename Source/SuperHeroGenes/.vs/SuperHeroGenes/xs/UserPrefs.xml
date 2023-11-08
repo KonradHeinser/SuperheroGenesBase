@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="GameCondition_ArmageddonClock.cs">
+    <Files>
+      <File FileName="HarmonyPatches.cs" Line="85" Column="30" />
+      <File FileName="SHGDefOf.cs" Line="15" Column="1" />
+      <File FileName="HediffComp_GainRandomGeneSet.cs" Line="73" Column="25" />
+      <File FileName="HediffCompProperties_GainRandomGeneSet.cs" Line="6" Column="29" />
+      <File FileName="GameCondition_ArmageddonClock.cs" Line="16" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
