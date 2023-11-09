@@ -538,4 +538,53 @@
             </li>
         </comps>
     </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase" MayRequire="Sov.Homelander">
+        <defName>SHG_LaserEyes</defName>
+        <label>superhero laser eyes</label>
+        <description>Shoot a highly focused laser that even other supers have difficulties defending themselves from.\n\nWARNING: Try to avoid using this ability on high value things unless you want to parody that Homelander "saves" a plane scene. The laser deals a large amount of damage in a really short time, so the chances of corpses and items surviving the situation are minimal.</description>
+        <iconPath>Powers/LaserEyes</iconPath>
+        <cooldownTicksRange>300</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <targetRequired>true</targetRequired>
+        <showCastingProgressBar>false</showCastingProgressBar>
+        <verbProperties>
+            <verbClass>UFO.CastBeam.Verb_AbilityCastBeam</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <hasStandardCommand>true</hasStandardCommand>
+            <warmupTime>0.1</warmupTime>
+            <range>40</range>
+            <beamFullWidthRange>7</beamFullWidthRange>
+            <burstShotCount>20</burstShotCount>
+            <beamWidth>5</beamWidth>
+            <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+            <beamDamageDef>SHG_Beam</beamDamageDef>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
+            <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
+            <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+            <beamMaxDeviation>0.1</beamMaxDeviation>
+            <beamCurvature>0.1</beamCurvature>
+            <beamMoteDef>Mote_GraserBeamBase</beamMoteDef>
+            <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
+            <beamChanceToStartFire>0</beamChanceToStartFire>
+            <beamChanceToAttachFire>0</beamChanceToAttachFire>
+            <beamFireSizeRange>0.55~0.85</beamFireSizeRange>
+            <beamLineFleckDef>Fleck_BeamSpark</beamLineFleckDef>
+            <beamStartOffset>0.8</beamStartOffset>
+            <beamLineFleckChanceCurve>
+                <points>
+                    <li>(0, 0)</li>
+                    <li>(0.65, 0)</li>
+                    <li>(1, 0)</li>
+                </points>
+            </beamLineFleckChanceCurve>
+            <targetParams>
+                <canTargetLocations>True</canTargetLocations>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetBuildings>True</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
 </Defs>

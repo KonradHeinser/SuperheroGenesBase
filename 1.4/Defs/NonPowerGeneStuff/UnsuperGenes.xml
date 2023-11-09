@@ -7,7 +7,10 @@
         <iconPath>Base/UnsuperDurability</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>5</displayOrderInCategory>
-        <biostatMet>+1</biostatMet>
+        <biostatMet>1</biostatMet>
+        <damageFactors>
+            <SHG_Beam MayRequire="Sov.Homelander">2</SHG_Beam>
+        </damageFactors>
         <statFactors>
             <IncomingDamageFactor>1.333</IncomingDamageFactor>
         </statFactors>
@@ -34,7 +37,7 @@
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>25</displayOrderInCategory>
         <foodPoisoningChanceFactor>100</foodPoisoningChanceFactor>
-        <biostatMet>+1</biostatMet>
+        <biostatMet>1</biostatMet>
         <statFactors>
             <ImmunityGainSpeed>0.333</ImmunityGainSpeed>
             <InjuryHealingFactor>0.333</InjuryHealingFactor>
@@ -58,7 +61,7 @@
         <iconPath>Base/UnsuperIntelligence</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>35</displayOrderInCategory>
-        <biostatMet>+1</biostatMet>
+        <biostatMet>1</biostatMet>
         <statFactors>
             <ResearchSpeed>0.5</ResearchSpeed>
             <GlobalLearningFactor>0.5</GlobalLearningFactor>
@@ -78,7 +81,7 @@
         <iconPath>Base/UnsuperPerception</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>45</displayOrderInCategory>
-        <biostatMet>+1</biostatMet>
+        <biostatMet>1</biostatMet>
         <statOffsets>
             <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
             <MeleeDodgeChance>-1.5</MeleeDodgeChance>
@@ -100,7 +103,7 @@
         <iconPath>Base/UnsuperPersuasion</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>55</displayOrderInCategory>
-        <biostatMet>+1</biostatMet>
+        <biostatMet>1</biostatMet>
         <statOffsets>
             <PawnBeauty>-5</PawnBeauty>
             <SocialImpact>-0.5</SocialImpact>
@@ -121,7 +124,7 @@
         <iconPath>Base/UnsuperPrecision</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>65</displayOrderInCategory>
-        <biostatMet>+1</biostatMet>
+        <biostatMet>1</biostatMet>
         <statFactors>
             <PawnTrapSpringChance>100</PawnTrapSpringChance>
         </statFactors>
@@ -144,7 +147,7 @@
         <iconPath>Base/UnsuperSpeed</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>75</displayOrderInCategory>
-        <biostatMet>+1</biostatMet>
+        <biostatMet>1</biostatMet>
         <statFactors>
             <StaggerDurationFactor>1.333</StaggerDurationFactor>
         </statFactors>
@@ -166,7 +169,7 @@
         <iconPath>Base/UnsuperStrength</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>85</displayOrderInCategory>
-        <biostatMet>+1</biostatMet>
+        <biostatMet>1</biostatMet>
         <statFactors>
             <MeleeDamageFactor>0.333</MeleeDamageFactor>
         </statFactors>

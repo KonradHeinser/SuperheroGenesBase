@@ -8,6 +8,9 @@
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>7</displayOrderInCategory>
         <biostatMet>-3</biostatMet>
+        <damageFactors>
+            <SHG_Beam MayRequire="Sov.Homelander">0.1</SHG_Beam>
+        </damageFactors>
         <statFactors>
             <IncomingDamageFactor>0.5</IncomingDamageFactor>
             <SHG_StunSusceptibility>0.5</SHG_StunSusceptibility>

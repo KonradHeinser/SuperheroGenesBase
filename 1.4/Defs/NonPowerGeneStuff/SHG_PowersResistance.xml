@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <GeneDef ParentName="SHG_ResistanceBase" MayRequire="Sov.Homelander">
+        <defName>SHG_LaserImmune</defName>
+        <label>eye laser immune</label> 
+        <description>Carriers of this gene are immune to beam damage.</description>
+        <iconPath>Powers/Gene_LaserEyeImmunity</iconPath>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <prerequisite>SuperDurability</prerequisite>
+        <damageFactors>
+            <SHG_Beam>0</SHG_Beam>
+            <Beam>0</Beam>
+        </damageFactors>
+        <biostatMet>-1</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>insulated</symbol></li>
+                <li><symbol>rubber</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
     <GeneDef ParentName="SHG_ResistanceBase">
         <defName>SHG_LightningImmune</defName>
         <label>lightning immune</label> 
@@ -87,4 +107,7 @@
             <li>LightningDamage</li>
         </exclusionTags>
     </GeneDef>
+
+    
+
 </Defs>

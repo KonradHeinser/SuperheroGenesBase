@@ -343,6 +343,10 @@
         <foodPoisoningChanceFactor>0.01</foodPoisoningChanceFactor>
         <deathHistoryEvent>SHG_SuperDied</deathHistoryEvent>
         <biostatMet>0</biostatMet>
+<!--All SHG_Beam references in the base mod are tied to the laser eyes mod until I either make my own version, or use the damage outside of the laser eyes power-->
+        <damageFactors>
+            <SHG_Beam MayRequire="Sov.Homelander">0.5</SHG_Beam>
+        </damageFactors>
         <statFactors>
             <LifespanFactor>3</LifespanFactor>
             <ImmunityGainSpeed>3</ImmunityGainSpeed>
