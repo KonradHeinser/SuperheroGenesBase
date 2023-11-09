@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef Name="SHG_BaseGas" Abstract="True">
-        <graphicData>
-            <texPath>Things/Gas/Puff</texPath>
-            <drawSize>2.2</drawSize>
-        </graphicData>
 		<thingClass>Gas</thingClass>
 		<label>gas</label>
 		<category>Gas</category>
@@ -14,6 +10,8 @@
 		<graphicData>
 			<graphicClass>Graphic_Gas</graphicClass>
 			<shaderType>Transparent</shaderType>
+            <texPath>Things/Gas/Puff</texPath>
+            <drawSize>2.2</drawSize>
 		</graphicData>
         <gas>
             <rotationSpeed>10</rotationSpeed>
