@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Patch>
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/GeneDef[defName="SHG_FireBurst"]/description</xpath>
-        <value>
-            <description>Carriers of this gene are able to set everything in the area around them on fire.\n\nThis doesn't render you immune to fire, so remember to get protection. This is exceptionally important for this ability as even the user will be affected.\n\nBurst genes were originally created to give supers a way to fight a large number of enemies. Most of them were designed to kick up a dust cloud to protect the super some while they deal with nearby enemies. This gene was one of the few exceptions as there would be little need to deal with nearby enemies while they are a little distracted trying to stop being on fire.</description>
-        </value>
-    </Operation>
-</Patch>

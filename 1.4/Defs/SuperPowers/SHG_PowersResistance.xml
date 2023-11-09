@@ -8,6 +8,7 @@
         <displayOrderInCategory>1</displayOrderInCategory>
         <damageFactors>
             <SHG_Lightning>0</SHG_Lightning>
+            <AG_Electric MayRequire="sarg.alphagenes">0</AG_Electric>
         </damageFactors>
         <biostatMet>-2</biostatMet>
         <symbolPack>
@@ -29,6 +30,7 @@
         <displayOrderInCategory>2</displayOrderInCategory>
         <damageFactors>
             <SHG_Lightning>0.5</SHG_Lightning>
+            <AG_Electric MayRequire="sarg.alphagenes">0.5</AG_Electric>
         </damageFactors>
         <biostatMet>-1</biostatMet>
         <symbolPack>
@@ -50,6 +52,7 @@
         <displayOrderInCategory>3</displayOrderInCategory>
         <damageFactors>
             <SHG_Lightning>2</SHG_Lightning>
+            <AG_Electric MayRequire="sarg.alphagenes">2</AG_Electric>
         </damageFactors>
         <biostatMet>1</biostatMet>
         <symbolPack>
@@ -71,6 +74,7 @@
         <displayOrderInCategory>4</displayOrderInCategory>
         <damageFactors>
             <SHG_Lightning>4</SHG_Lightning>
+            <AG_Electric MayRequire="sarg.alphagenes">4</AG_Electric>
         </damageFactors>
         <biostatMet>2</biostatMet>
         <symbolPack>

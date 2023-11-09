@@ -53,23 +53,23 @@
         <biostatMet>-3</biostatMet>
         <damageFactors>
             <SHG_Lightning>0</SHG_Lightning>
-            <AG_Electric MayRequire="sarg.alphagenes">0</AG_Electric>
+            <AG_Electric>0</AG_Electric>
         </damageFactors>
         <abilities>
             <li>SHG_EMPBolt</li>
             <li>SHG_LightningBolt</li>
             <li>SHG_EMPBlast</li>
             <li>SHG_LightningBlast</li>
-            <li MayRequire="sarg.alphagenes">SHG_EMPBurst</li>
-            <li MayRequire="sarg.alphagenes">SHG_LightningBurst</li>
+            <li>SHG_EMPBurst</li>
+            <li>SHG_LightningBurst</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_EMPBolt</AbilityDef>
             <AbilityDef>SHG_LightningBolt</AbilityDef>
             <AbilityDef>SHG_EMPBlast</AbilityDef>
             <AbilityDef>SHG_LightningBlast</AbilityDef>
-            <AbilityDef MayRequire="sarg.alphagenes">SHG_EMPBurst</AbilityDef>
-            <AbilityDef MayRequire="sarg.alphagenes">SHG_LightningBurst</AbilityDef>
+            <AbilityDef>SHG_EMPBurst</AbilityDef>
+            <AbilityDef>SHG_LightningBurst</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
             <li>LightningDamage</li>
@@ -102,12 +102,12 @@
         <abilities>
             <li>SHG_PetrificationBolt</li>
             <li>SHG_PetrificationBlast</li>
-            <li MayRequire="sarg.alphagenes">SHG_PetrificationBurst</li>
+            <li>SHG_PetrificationBurst</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_PetrificationBolt</AbilityDef>
             <AbilityDef>SHG_PetrificationBlast</AbilityDef>
-            <AbilityDef MayRequire="sarg.alphagenes">SHG_PetrificationBurst</AbilityDef>
+            <AbilityDef>SHG_PetrificationBurst</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
             <li>Archetypes_PetrimancerPetrificationBolt</li>
@@ -188,12 +188,12 @@
         <abilities>
             <li>SHG_IceBolt</li>
             <li>SHG_IceBlast</li>
-            <li MayRequire="sarg.alphagenes">SHG_IceBurst</li>
+            <li>SHG_IceBurst</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_IceBolt</AbilityDef>
             <AbilityDef>SHG_IceBlast</AbilityDef>
-            <AbilityDef MayRequire="sarg.alphagenes">SHG_IceBurst</AbilityDef>
+            <AbilityDef>SHG_IceBurst</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
             <li>EBSG_FrostbiteResistance</li>
@@ -220,18 +220,18 @@
         <biostatMet>-2</biostatMet>
         <damageFactors>
             <AcidBurn>0</AcidBurn>
-            <AG_AcidSpit MayRequire="sarg.alphagenes">0</AG_AcidSpit>
+            <AG_AcidSpit>0</AG_AcidSpit>
             <VEF_SecondaryAcidBurn MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0</VEF_SecondaryAcidBurn>
         </damageFactors>
         <abilities>
             <li>SHG_AcidBolt</li>
             <li>SHG_AcidBlast</li>
-            <li MayRequire="sarg.alphagenes">SHG_AcidBurst</li>
+            <li>SHG_AcidBurst</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_AcidBolt</AbilityDef>
             <AbilityDef>SHG_AcidBlast</AbilityDef>
-            <AbilityDef MayRequire="sarg.alphagenes">SHG_AcidBurst</AbilityDef>
+            <AbilityDef>SHG_AcidBurst</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
             <li>AcidDamage</li>
@@ -262,12 +262,12 @@
         <abilities>
             <li>SHG_ToxBolt</li>
             <li>SHG_ToxBlast</li>
-            <li MayRequire="sarg.alphagenes">SHG_ToxicBurst</li>
+            <li>SHG_ToxicBurst</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_ToxBolt</AbilityDef>
             <AbilityDef>SHG_ToxBlast</AbilityDef>
-            <AbilityDef MayRequire="sarg.alphagenes">SHG_ToxicBurst</AbilityDef>
+            <AbilityDef>SHG_ToxicBurst</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
             <li>ToxResistance</li>
@@ -298,12 +298,12 @@
         <abilities>
             <li>SHG_WaterBolt</li>
             <li>SHG_WaterBlast</li>
-            <li MayRequire="sarg.alphagenes">SHG_WaterBurst</li>
+            <li>SHG_WaterBurst</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_WaterBolt</AbilityDef>
             <AbilityDef>SHG_WaterBlast</AbilityDef>
-            <AbilityDef MayRequire="sarg.alphagenes">SHG_WaterBurst</AbilityDef>
+            <AbilityDef>SHG_WaterBurst</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
             <li>Archetypes_HydromancerWaterBolt</li>
@@ -646,18 +646,18 @@
         <abilities>
             <li>SHG_WaterBolt</li>
             <li>SHG_WaterBlast</li>
-            <li MayRequire="sarg.alphagenes">SHG_WaterBurst</li>
+            <li>SHG_WaterBurst</li>
             <li>SHG_FoamBolt</li>
             <li>SHG_FoamBlast</li>
-            <li MayRequire="sarg.alphagenes">SHG_FoamBurst</li>
+            <li>SHG_FoamBurst</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_WaterBolt</AbilityDef>
             <AbilityDef>SHG_WaterBlast</AbilityDef>
-            <AbilityDef MayRequire="sarg.alphagenes">SHG_WaterBurst</AbilityDef>
+            <AbilityDef>SHG_WaterBurst</AbilityDef>
             <AbilityDef>SHG_FoamBolt</AbilityDef>
             <AbilityDef>SHG_FoamBlast</AbilityDef>
-            <AbilityDef MayRequire="sarg.alphagenes">SHG_FoamBurst</AbilityDef>
+            <AbilityDef>SHG_FoamBurst</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
             <li>Archetypes_FirefighterWaterBolt</li>
@@ -711,6 +711,35 @@
             </wholeNameSymbols>
             <prefixSymbols>
                 <li><symbol>stun</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Ninja</defName>
+        <label>ninja</label>
+        <description>Ninjas are masters of the art of misdirection. With a smoke bomb here and a poison blast there, their enemies often end up running around blind, only realizing their target escaped when it's too late.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <iconPath>Archetypes/Gene_Ninja</iconPath>
+        <biostatMet>-1</biostatMet>
+        <abilities>
+            <li>SHG_HeroicLeap</li>
+            <li>SHG_SmokeBomb</li>
+            <li>SHG_ToxBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_HeroicLeap</AbilityDef>
+            <AbilityDef>SHG_SmokeBomb</AbilityDef>
+            <AbilityDef>SHG_ToxBlast</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>ToxResistance</li>
+            <li>Archetypes_NinjaHeroicLeap</li>
+            <li>Archetypes_NinjaSmokeBomb</li>
+            <li>Archetypes_NinjaToxicBlast</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>ninja</symbol></li>
             </prefixSymbols>
         </symbolPack>
     </GeneDef>

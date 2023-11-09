@@ -7,10 +7,10 @@ namespace SuperHeroGenesBase
 {
     public class HediffCompProperties_GainRandomGeneSet : HediffCompProperties
     {
-        public List<RandomXenoGenes> geneSets; // Named as such because it was originally solely to create entire xenotypes
+        public List<RandomXenoGenes> geneSets; // Named RandomXenoGenes because it was originally solely to create entire xenotypes
         public bool removeGenesFromOtherLists = true; // This being true means that while activating, the comp will remove any gene that exists on the other list(s), even if they are from the xenotype
         public bool inheritable = true; // The default behaviour is to make the genes inheritable(germline)
-        public int delayTicks = 10; // How long it waits until triggering. Should wait at least a few ticks
+        public int delayTicks = 10; // How long it waits until triggering. Will always wait at least 10 ticks, even if a lower number is given
         public List<GeneDef> alwaysAddedGenes; // These genes will be added regardless of the set picked
         public List<GeneDef> alwaysRemovedGenes; // These genes will be removed regardless of set picked
         public float minSeverity = 0; // Sets the minimum severity that the hediff must be at to start gene generation. Once this is reached, the hediff will disappear shortly after
@@ -26,7 +26,7 @@ namespace SuperHeroGenesBase
         ///  6) Hediff is removed
         /// 
         /// One of the reasons this was added to a hediffcomp instead of a gene extension to make it easier for fellow modders to create items that add items that add genes to pawns with items
-        /// If you need an example of this, take a look at Superhero Genes - Deus Ex Machina. If that doesn't exist yet, welcome to spoiler town again!
+        /// If you need an example of this, take a look at the Super Creating Pill, which does nothing but add the superhero gene to the pawn's germline genes
 
         public HediffCompProperties_GainRandomGeneSet()
         {

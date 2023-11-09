@@ -68,6 +68,8 @@
     <Compile Include="HediffComp_GainRandomGeneSet.cs" />
     <Compile Include="VanishingGene.cs" />
     <Compile Include="GameCondition_ArmageddonClock.cs" />
+    <Compile Include="CompProperties_SHGBurst.cs" />
+    <Compile Include="CompAbilityEffect_SHGBurst.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

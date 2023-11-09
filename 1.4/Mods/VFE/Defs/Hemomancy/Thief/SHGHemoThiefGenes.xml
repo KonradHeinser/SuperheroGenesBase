@@ -128,7 +128,7 @@
         </descriptionHyperlinks>
     </GeneDef>
 
-    <GeneDef ParentName="SuperPowersHemoThiefBase" MayRequire="sarg.alphagenes">
+    <GeneDef ParentName="SuperPowersHemoThiefBase">
         <defName>SHG_Hemomancer_BloodBoil</defName>
         <label>blood boil</label>
         <description>Carriers of this gene can release invisible balls of hemogen all around them that causes everyone nearby to suddenly suffer sever burns as some of their blood evaporates.\n\nThis will return some hemogen based on how many people are hit, and create a cloud around the Reaper that makes it harder for people to shoot.\n\nThis is not impacted by Hemomancy Proficiency.</description>

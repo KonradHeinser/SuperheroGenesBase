@@ -238,7 +238,7 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHGHemoThiefBase" MayRequire="sarg.alphagenes">
+    <AbilityDef ParentName="SHGHemoThiefBase">
         <defName>SHG_Hemomancer_BloodBoil</defName>
         <label>blood boil</label>
         <description>Release invisible balls of hemogen all around you that cause everyone around you to suddenly suffer sever burns as some of their blood evaporates.\n\nThis will return some hemogen based on how many people are hit, and create a cloud around the Reaper that makes it harder for people to shoot.\n\nThis will not raise hemogen to be above 80%.</description>
@@ -261,13 +261,13 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class="AlphaGenes.CompProperties_Detonate">
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
                 <radius>10</radius>
-				<damageType>Burn</damageType>
-				<damageUser>false</damageUser>
-				<soundCreated>Foam_Impact</soundCreated>
-				<thingCreated>SHG_BloodMist</thingCreated>
-				<thingCreatedChance>100</thingCreatedChance>
+				<damageDef>Burn</damageDef>
+				<injureSelf>false</injureSelf>
+				<explosionSound>Foam_Impact</explosionSound>
+				<postExplosionThing>SHG_BloodMist</postExplosionThing>
+				<postExplosionThingChance>100</postExplosionThingChance>
 				<damageAmount>40</damageAmount>
             </li>
             <li Class="SuperHeroGenesBase.CompProperties_AbilityBloodDrain">

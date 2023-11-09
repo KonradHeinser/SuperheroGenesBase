@@ -1,12 +1,23 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="GameCondition_ArmageddonClock.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CompProperties_SHGBurst.cs">
     <Files>
-      <File FileName="HarmonyPatches.cs" Line="85" Column="30" />
-      <File FileName="SHGDefOf.cs" Line="15" Column="1" />
-      <File FileName="HediffComp_GainRandomGeneSet.cs" Line="73" Column="25" />
-      <File FileName="HediffCompProperties_GainRandomGeneSet.cs" Line="6" Column="29" />
-      <File FileName="GameCondition_ArmageddonClock.cs" Line="16" Column="2" />
+      <File FileName="CompProperties_SHGBurst.cs" Line="30" Column="45" />
+      <File FileName="CompAbilityEffect_SHGBurst.cs" Line="39" Column="6" />
+      <File FileName="CompAbilityEffect_BloodDrain.cs" Line="1" Column="1" />
+      <File FileName="CompProperties_AbilityBloodDrain.cs" Line="13" Column="43" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SuperHeroGenes" expanded="True">
+            <Node name="SuperHeroGenes" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="CompProperties_SHGBurst.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

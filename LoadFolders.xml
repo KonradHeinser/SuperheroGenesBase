@@ -3,7 +3,6 @@
 	<v1.4>
 		<li>/</li>
 		<li>1.4</li>
-        <li IfModActive="sarg.alphagenes">1.4/Mods/AlphaGenes</li>
         <li IfModActive="Sov.Homelander">1.4/Mods/LaserEyes</li>
 		<li IfModActive="OskarPotocki.VanillaFactionsExpanded.Core">1.4/Mods/VFE</li>
         <li IfModActive="ceteam.combatextended">1.4/Mods/CE</li>
