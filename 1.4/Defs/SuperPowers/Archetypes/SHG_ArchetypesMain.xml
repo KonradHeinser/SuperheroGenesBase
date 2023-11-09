@@ -53,7 +53,7 @@
         <biostatMet>-3</biostatMet>
         <damageFactors>
             <SHG_Lightning>0</SHG_Lightning>
-            <AG_Electric>0</AG_Electric>
+            <AG_Electric MayRequire="sarg.alphagenes">0</AG_Electric>
         </damageFactors>
         <abilities>
             <li>SHG_EMPBolt</li>
@@ -220,7 +220,7 @@
         <biostatMet>-2</biostatMet>
         <damageFactors>
             <AcidBurn>0</AcidBurn>
-            <AG_AcidSpit>0</AG_AcidSpit>
+            <AG_AcidSpit MayRequire="sarg.alphagenes">0</AG_AcidSpit>
             <VEF_SecondaryAcidBurn MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0</VEF_SecondaryAcidBurn>
         </damageFactors>
         <abilities>

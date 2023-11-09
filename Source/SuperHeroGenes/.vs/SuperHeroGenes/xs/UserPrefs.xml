@@ -1,7 +1,7 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="CompProperties_SHGBurst.cs">
     <Files>
-      <File FileName="CompProperties_SHGBurst.cs" Line="36" Column="9" />
+      <File FileName="CompProperties_SHGBurst.cs" Line="43" Column="1" />
       <File FileName="CompAbilityEffect_SHGBurst.cs" Line="39" Column="6" />
       <File FileName="CompAbilityEffect_BloodDrain.cs" Line="1" Column="1" />
       <File FileName="CompProperties_AbilityBloodDrain.cs" Line="13" Column="43" />
