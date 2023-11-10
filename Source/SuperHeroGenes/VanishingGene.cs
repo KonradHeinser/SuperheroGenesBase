@@ -10,6 +10,7 @@ namespace SuperHeroGenesBase
 
         public override void Tick()
         {
+            base.Tick();
             if (ticksUntilVanish == 0)
             {
                 pawn.genes.RemoveGene(pawn.genes.GetGene(def));

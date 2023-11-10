@@ -1,0 +1,6 @@
+/home/robert/.steam/debian-installation/steamapps/common/RimWorld/Mods/SuperheroGenesBase/Assemblies/SuperHeroGenesBase.dll
+/home/robert/.steam/debian-installation/steamapps/common/RimWorld/Mods/SuperheroGenesBase/Assemblies/SuperHeroGenesBase.pdb
+/home/robert/.steam/debian-installation/steamapps/common/RimWorld/Mods/SuperheroGenesBase/Source/SuperHeroGenes/obj/Debug/SuperHeroGenes.csproj.AssemblyReference.cache
+/home/robert/.steam/debian-installation/steamapps/common/RimWorld/Mods/SuperheroGenesBase/Source/SuperHeroGenes/obj/Debug/SuperHeroGenes.csproj.CoreCompileInputs.cache
+/home/robert/.steam/debian-installation/steamapps/common/RimWorld/Mods/SuperheroGenesBase/Source/SuperHeroGenes/obj/Debug/SuperHeroGenesBase.dll
+/home/robert/.steam/debian-installation/steamapps/common/RimWorld/Mods/SuperheroGenesBase/Source/SuperHeroGenes/obj/Debug/SuperHeroGenesBase.pdb

@@ -6,7 +6,6 @@ namespace SuperHeroGenesBase
 {
     public class ThoughtWorker_Precept_GeneExtension_Social : ThoughtWorker_Precept_Social
     {
-        public static GeneDef relatedGene;
         protected override ThoughtState ShouldHaveThought(Pawn p, Pawn otherPawn)
         {
             if (!ModsConfig.BiotechActive || !ModsConfig.IdeologyActive)

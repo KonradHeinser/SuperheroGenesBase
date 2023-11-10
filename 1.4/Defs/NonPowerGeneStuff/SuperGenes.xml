@@ -55,7 +55,7 @@
         <description>Instant death may stop this hero in their tracks, but anything less will heal quickly. This gene also provides immunity to many permanent effects and ailments that come with old age.</description>
         <iconPath>Base/SuperHealing</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
-        <geneClass>Gene_Clotting</geneClass>
+        <geneClass>SuperHeroGenesBase.Gene_CustomizableClotting</geneClass>
         <displayOrderInCategory>27</displayOrderInCategory>
         <preventPermanentWounds>true</preventPermanentWounds>
         <biostatMet>-5</biostatMet>
@@ -98,6 +98,13 @@
             <li>Immunity</li>
             <li>RandomHealing</li>
         </exclusionTags>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <ClotCheckInterval>60</ClotCheckInterval>
+                <minTendQuality>0.8</minTendQuality>
+                <maxTendQuality>0.99</maxTendQuality>
+            </li>
+        </modExtensions>
     </GeneDef>
 
     <GeneDef ParentName="SuperGeneBase">

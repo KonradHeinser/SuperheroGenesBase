@@ -19,6 +19,10 @@ namespace SuperHeroGenesBase
             {
                 SHGExtension thingExtension = thingDef.GetModExtension<SHGExtension>();
             }
+            foreach (GeneDef geneDef in DefDatabase<GeneDef>.AllDefsListForReading)
+            {
+                SHGExtension geneExtension = geneDef.GetModExtension<SHGExtension>();
+            }
         }
 
         public static GeneDef relatedGene;
@@ -28,5 +32,8 @@ namespace SuperHeroGenesBase
         public static List<GeneDef> forbiddenGenesToEquip;
         public static List<XenotypeDef> requireOneOfXenotypeToEquip;
         public static List<XenotypeDef> forbiddenXenotypesToEquip;
+        public static int ClotCheckInterval = 360;
+        public static float minTendQuality = 0.2f;
+        public static float maxTendQuality = 0.7f;
     }
 }

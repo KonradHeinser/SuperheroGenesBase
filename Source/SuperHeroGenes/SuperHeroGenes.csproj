@@ -70,6 +70,7 @@
     <Compile Include="GameCondition_ArmageddonClock.cs" />
     <Compile Include="CompProperties_SHGBurst.cs" />
     <Compile Include="CompAbilityEffect_SHGBurst.cs" />
+    <Compile Include="Gene_CustomizableClotting.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
