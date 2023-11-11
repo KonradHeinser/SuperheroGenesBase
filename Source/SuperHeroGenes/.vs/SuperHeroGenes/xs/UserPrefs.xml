@@ -1,21 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Gene_CustomizableClotting.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HediffComp_GiveHediffsToNonAlliesInRange.cs">
     <Files>
-      <File FileName="CompProperties_SHGBurst.cs" Line="43" Column="1" />
-      <File FileName="CompAbilityEffect_SHGBurst.cs" Line="39" Column="6" />
-      <File FileName="CompAbilityEffect_BloodDrain.cs" Line="1" Column="1" />
-      <File FileName="CompProperties_AbilityBloodDrain.cs" Line="13" Column="43" />
-      <File FileName="Gene_DoubleHearted.cs" Line="1" Column="1" />
-      <File FileName="VanishingGene.cs" Line="13" Column="25" />
-      <File FileName="Gene_CustomizableClotting.cs" Line="30" Column="2" />
-      <File FileName="SHGExtension.cs" Line="14" Column="60" />
+      <File FileName="HediffCompProperties_GiveHediffsToNonAlliesInRange.cs" Line="11" Column="56" />
+      <File FileName="HediffComp_GiveHediffsToNonAlliesInRange.cs" Line="58" Column="22" />
+      <File FileName="GameCondition_ArmageddonClock.cs" Line="8" Column="76" />
+      <File FileName="AbilitiesAtSeverities.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Gene_CustomizableClotting.cs" selected="True" />
+              <Node name="References" expanded="True" />
+              <Node name="Gene_DoubleHearted.cs" selected="True" />
             </Node>
           </Node>
         </State>
