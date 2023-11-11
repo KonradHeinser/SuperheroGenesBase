@@ -15,7 +15,7 @@ namespace SuperHeroGenesBase
             SHGExtension extension = def.GetModExtension<SHGExtension>();
             if (!extension.checkNotPresent)
             {
-                return HasRelatedGene(otherPawn, extension.relatedGene);
+                return HasRelatedGene(otherPawn, extension.relatedGene); 
             }
             else
             {

@@ -1,10 +1,7 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="HediffComp_GiveHediffsToNonAlliesInRange.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Thoughts/ThoughtWorker_Precept_GeneExtension_Social.cs">
     <Files>
-      <File FileName="HediffCompProperties_GiveHediffsToNonAlliesInRange.cs" Line="11" Column="56" />
-      <File FileName="HediffComp_GiveHediffsToNonAlliesInRange.cs" Line="58" Column="22" />
-      <File FileName="GameCondition_ArmageddonClock.cs" Line="8" Column="76" />
-      <File FileName="AbilitiesAtSeverities.cs" Line="1" Column="1" />
+      <File FileName="Thoughts/ThoughtWorker_Precept_GeneExtension_Social.cs" Line="18" Column="74" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,7 +9,9 @@
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
               <Node name="References" expanded="True" />
-              <Node name="Gene_DoubleHearted.cs" selected="True" />
+              <Node name="Thoughts" expanded="True">
+                <Node name="ThoughtWorker_Precept_GeneExtension_Social.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
