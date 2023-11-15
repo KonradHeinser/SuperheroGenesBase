@@ -77,12 +77,15 @@
     <Compile Include="Thoughts\ThoughtWorker_Precept_HasRelatedGene.cs" />
     <Compile Include="Thoughts\ThoughtWorker_Precept_RelatedGeneColonist.cs" />
     <Compile Include="Thoughts\ThoughtWorker_Precept_RelatedGenePresent.cs" />
+    <Compile Include="Thoughts\ThoughtWorker_Gene_GeneSocial.cs" />
+    <Compile Include="DynamicResourceGenes\DRGExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />
     <Folder Include="Hediffs\" />
     <Folder Include="Genes\" />
     <Folder Include="Thoughts\" />
+    <Folder Include="DynamicResourceGenes\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

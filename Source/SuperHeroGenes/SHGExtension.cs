@@ -17,5 +17,11 @@ namespace SuperHeroGenesBase
         public List<GeneDef> forbiddenGenesToEquip; // Require none of these are on the pawn
         public List<XenotypeDef> requireOneOfXenotypeToEquip; // Require one of these xenotypes
         public List<XenotypeDef> forbiddenXenotypesToEquip; // Require pawn is not xenotype
+
+        // Used in ThoughtWorker_Gene_GeneSocial
+        public bool compoundingHatred = false; // When true, each gene that is found in checked genes increases the stage
+        public int maxStages = 1; // Required if compoundingHatred is true
+        public List<GeneDef> checkedGenes; // Genes checked for opinions
+        public List<GeneDef> nullifyingGenes; // Genes checked for early nullification. These cause the thought to never appear
     }
 }

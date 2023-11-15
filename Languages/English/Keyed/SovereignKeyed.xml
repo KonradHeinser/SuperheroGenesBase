@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <Grace>grace</Grace>
+    <GraceDesc>Grace is the energy angelic beings use both to survive and use their abilities.</GraceDesc>
+
+    <NotAllowedGrace>Grace packs disabled by food restriction.</NotAllowedGrace>
+    <AutoTakeGraceDesc>This determines whether {PAWN_nameDef} will automatically ingest grace packs when {PAWN_possessive} grace is below {MIN}.\n\nAutomatic ingestion is currently {ONOFF}.</AutoTakeGraceDesc>
+    <ConsumeGraceBelow>Consume grace below</ConsumeGraceBelow>
+    <NeverConsumeGrace>Never consume grace.</NeverConsumeGrace>
+
+    <AlertLowGrace>Low grace</AlertLowGrace>
+    <AlertLowGraceDesc>A colonist has low grace.</AlertLowGraceDesc>
+
+    <AbilityDisabledNoGraceGene>{0_labelShort} is not capable of using grace.</AbilityDisabledNoGraceGene>
+    <AbilityDisabledNoGrace>{0_labelShort} does not have enough grace.</AbilityDisabledNoGrace>
+    <AbilityGraceCost>Grace cost</AbilityGraceCost>
+    <AbilityGraceGain>Base grace gain</AbilityGraceGain>
+</LanguageData>

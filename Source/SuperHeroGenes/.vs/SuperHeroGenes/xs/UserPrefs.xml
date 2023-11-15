@@ -1,17 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Thoughts/ThoughtWorker_Precept_GeneExtension_Social.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HarmonyPatches.cs">
     <Files>
-      <File FileName="Thoughts/ThoughtWorker_Precept_GeneExtension_Social.cs" Line="18" Column="74" />
+      <File FileName="Thoughts/ThoughtWorker_Gene_GeneSocial.cs" Line="35" Column="22" />
+      <File FileName="SHGExtension.cs" Line="8" Column="48" />
+      <File FileName="DynamicResourceGenes/DRGExtension.cs" Line="13" Column="1" />
+      <File FileName="HarmonyPatches.cs" Line="89" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Thoughts" expanded="True">
-                <Node name="ThoughtWorker_Precept_GeneExtension_Social.cs" selected="True" />
-              </Node>
+              <Node name="DynamicResourceGenes" expanded="True" />
+              <Node name="HarmonyPatches.cs" selected="True" />
             </Node>
           </Node>
         </State>
