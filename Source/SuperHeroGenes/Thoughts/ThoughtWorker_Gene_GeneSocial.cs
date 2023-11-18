@@ -35,7 +35,7 @@ namespace SuperHeroGenesBase
                     }
                     else
                     {
-                        Log.Error(def + " doesn't have any hated genes, meaning it will always be inactive");
+                        Log.Error(def + " doesn't have any checked genes, meaning it will always be inactive");
                     }
                 }
                 else
@@ -52,7 +52,7 @@ namespace SuperHeroGenesBase
                     }
                     else
                     {
-                        Log.Error(def + " doesn't have any hated genes, meaning it will always be inactive");
+                        Log.Error(def + " doesn't have any checked genes, meaning it will always be inactive");
                     }
                 }
             }

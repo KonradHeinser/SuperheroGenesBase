@@ -1,11 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Thoughts/ThoughtWorker_Gene_GeneSocial.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SHGExtension.cs">
     <Files>
       <File FileName="Hediffs/HediffComp_GiveHediffsToNonAlliesInRange.cs" Line="43" Column="30" />
       <File FileName="Hediffs/HediffCompProperties_GiveHediffsToNonAlliesInRange.cs" Line="1" Column="1" />
       <File FileName="Hediffs/HediffComp_TieredRegeneration.cs" Line="1" Column="1" />
       <File FileName="Hediffs/RegenSet.cs" Line="1" Column="1" />
-      <File FileName="Thoughts/ThoughtWorker_Gene_GeneSocial.cs" Line="6" Column="47" />
+      <File FileName="Thoughts/ThoughtWorker_Gene_GeneSocial.cs" Line="55" Column="67" />
+      <File FileName="SHGDefOf.cs" Line="1" Column="1" />
+      <File FileName="HarmonyPatches.cs" Line="52" Column="1" />
+      <File FileName="CollectExtensionData.cs" Line="26" Column="1" />
+      <File FileName="SHGExtension.cs" Line="15" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,9 +17,8 @@
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
               <Node name="Hediffs" expanded="True" />
-              <Node name="Thoughts" expanded="True">
-                <Node name="ThoughtWorker_Gene_GeneSocial.cs" selected="True" />
-              </Node>
+              <Node name="Thoughts" expanded="True" />
+              <Node name="SHGExtension.cs" selected="True" />
             </Node>
           </Node>
         </State>
