@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 	<SHG_Hemomancer_Starfish>{0}'s clump of hemogen has successfully developed.</SHG_Hemomancer_Starfish>
-    <SHG_GeneRestrictedEquipment_All>Missing at least one required gene.</SHG_GeneRestrictedEquipment_All>
-    <SHG_GeneRestrictedEquipment_AnyOne>Has none of required genes.</SHG_GeneRestrictedEquipment_AnyOne>
-    <SHG_GeneRestrictedEquipment_None>has the gene {0}.</SHG_GeneRestrictedEquipment_None>
-    <SHG_XenoRestrictedEquipment_AnyOne>Is not any of the required xenotypes.</SHG_XenoRestrictedEquipment_AnyOne>
-    <SHG_XenoRestrictedEquipment_None>Is a {0}.</SHG_XenoRestrictedEquipment_None>
 </LanguageData>
