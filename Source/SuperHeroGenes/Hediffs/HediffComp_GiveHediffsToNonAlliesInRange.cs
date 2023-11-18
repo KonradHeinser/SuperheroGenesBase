@@ -38,7 +38,7 @@ namespace SuperHeroGenesBase
 
             foreach (Pawn item in list)
             {
-                if (!item.RaceProps.Humanlike || item.Dead || item.health == null || item == parent.pawn || !(item.Position.DistanceTo(parent.pawn.Position) <= Props.range) || !Props.targetingParameters.CanTarget(item))
+                if (!item.RaceProps.Humanlike || item.Dead || item.health == null || item == parent.pawn || !Props.targetingParameters.CanTarget(item))
                 {
                     continue;
                 }
