@@ -633,7 +633,6 @@
             <isResourceRock>true</isResourceRock>
             <mineableScatterCommonality>0</mineableScatterCommonality>
             <mineableScatterLumpSizeRange>1~1</mineableScatterLumpSizeRange>
-            <!--<smoothedThing />--> <!--If you want to stop the resources from appearing in meteorites, remote the comments around the tag-->
         </building>
     </ThingDef>
 

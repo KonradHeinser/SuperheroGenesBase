@@ -1,5 +1,4 @@
-﻿using System;
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
 namespace SuperHeroGenesBase
@@ -12,6 +11,7 @@ namespace SuperHeroGenesBase
         public HediffDef hediff;
         public ThingDef mote;
         public bool hideMoteWhenNotDrafted;
+        public bool psychic = true;
         public float initialSeverity = 1f;
 
         public HediffCompProperties_GiveHediffsToNonAlliesInRange()

@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 	<SHG_Hemomancer_Starfish>{0}'s clump of hemogen has successfully developed.</SHG_Hemomancer_Starfish>
+    <SHG_GeneticRomanceChance>Carrier Gene(s)</SHG_GeneticRomanceChance>
+    <SHG_ModName>Superhero Genes</SHG_ModName>
+
+    <SHG_CondensedMeteors>Allow Condensed Meteors (Restart Required)</SHG_CondensedMeteors>
+    <SHG_CondensedMeteorsDescription>Allows the condensed summons(i.e condensed steel, condensed jade, and condensed components) to appear as rare meteors. If enabled and a meteor lands, it's recommended that you DON'T mine it all immediately for obvious reasons (colony wealth increases).</SHG_CondensedMeteorsDescription>
 </LanguageData>

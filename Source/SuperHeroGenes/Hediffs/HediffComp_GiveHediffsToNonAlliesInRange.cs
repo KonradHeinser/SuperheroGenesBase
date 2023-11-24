@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -21,7 +20,6 @@ namespace SuperHeroGenesBase
             // Get all a list of all pawns, and a list of all player pawns
             List<Pawn> list = parent.pawn.Map.mapPawns.AllPawnsSpawned;
             List<Pawn> allies = parent.pawn.Map.mapPawns.SpawnedPawnsInFaction(parent.pawn.Faction);
-
             if (!Props.hideMoteWhenNotDrafted || parent.pawn.Drafted)
             {
                 if (Props.mote != null && (mote == null || mote.Destroyed))
@@ -36,38 +34,44 @@ namespace SuperHeroGenesBase
 
             foreach (Pawn ally in allies) list.Remove(ally); // Remove all player pawns from the list
 
-            foreach (Pawn item in list)
+            if (!list.NullOrEmpty())
             {
-                if (!item.RaceProps.Humanlike || item.Dead || item.health == null || item == parent.pawn || !Props.targetingParameters.CanTarget(item))
+                foreach (Pawn item in list)
                 {
-                    continue;
-                }
-                if (Props.rangeStat != null)
-                {
-                    if (!(item.Position.DistanceTo(parent.pawn.Position) <= parent.pawn.GetStatValue(Props.rangeStat))) continue;
-                }
-                else if (!(item.Position.DistanceTo(parent.pawn.Position) <= Props.range)) continue;
-
-                Hediff hediff = item.health.hediffSet.GetFirstHediffOfDef(Props.hediff);
-                if (hediff == null)
-                {
-                    hediff = item.health.AddHediff(Props.hediff, item.health.hediffSet.GetBrain());
-                    hediff.Severity = Props.initialSeverity;
-                    HediffComp_Link hediffComp_Link = hediff.TryGetComp<HediffComp_Link>();
-                    if (hediffComp_Link != null)
+                    if (item.Dead || item.health == null || (Props.targetingParameters != null && !Props.targetingParameters.CanTarget(item)))
                     {
-                        hediffComp_Link.drawConnection = true;
-                        hediffComp_Link.other = parent.pawn;
+                        continue;
                     }
-                }
-                HediffComp_Disappears hediffComp_Disappears = hediff.TryGetComp<HediffComp_Disappears>();
-                if (hediffComp_Disappears == null)
-                {
-                    Log.Error("HediffComp_GiveHediffsToNonAlliesInRange has a hediff in props which does not have a HediffComp_Disappears");
-                }
-                else
-                {
-                    hediffComp_Disappears.ticksToDisappear = 5;
+                    Log.Message("Checking range");
+                    if (Props.rangeStat != null)
+                    {
+                        if (!(item.Position.DistanceTo(parent.pawn.Position) <= parent.pawn.GetStatValue(Props.rangeStat))) continue;
+                    }
+                    else if (!(item.Position.DistanceTo(parent.pawn.Position) <= Props.range)) continue;
+                    if (Props.psychic && item.GetStatValue(StatDefOf.PsychicSensitivity) == 0) continue;
+                    Log.Message("Checking hediff");
+                    Hediff hediff = item.health.hediffSet.GetFirstHediffOfDef(Props.hediff);
+                    if (hediff == null)
+                    {
+                        Log.Message("Adding hediff");
+                        hediff = item.health.AddHediff(Props.hediff, item.health.hediffSet.GetBrain());
+                        hediff.Severity = Props.initialSeverity;
+                        HediffComp_Link hediffComp_Link = hediff.TryGetComp<HediffComp_Link>();
+                        if (hediffComp_Link != null)
+                        {
+                            hediffComp_Link.drawConnection = true;
+                            hediffComp_Link.other = parent.pawn;
+                        }
+                    }
+                    HediffComp_Disappears hediffComp_Disappears = hediff.TryGetComp<HediffComp_Disappears>();
+                    if (hediffComp_Disappears == null)
+                    {
+                        Log.Error("HediffComp_GiveHediffsToNonAlliesInRange has a hediff in props which does not have a HediffComp_Disappears");
+                    }
+                    else
+                    {
+                        hediffComp_Disappears.ticksToDisappear = 5;
+                    }
                 }
             }
         }

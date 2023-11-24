@@ -22,4 +22,12 @@
             <xpath>Defs/StatDef[@Name="ArmorRatingBase"]/maxValue</xpath>
         </match>
     </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>condensedMeteors</setting>
+        <inactive Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="SHG_MineableResourceBase"]/building</xpath>
+            <value><smoothedThing /></value>
+        </inactive>
+    </Operation>
 </Patch>

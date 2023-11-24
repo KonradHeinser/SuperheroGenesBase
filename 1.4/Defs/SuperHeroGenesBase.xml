@@ -116,6 +116,18 @@
         <displayPriorityInXenotype>989.5</displayPriorityInXenotype>
     </GeneCategoryDef>
 
+    <GeneCategoryDef>
+        <defName>SuperPowersPsychicEmpath</defName>
+        <label>psionist powers - empath</label>
+        <displayPriorityInXenotype>989.4</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
+        <defName>SuperPowersPsychicDebuffer</defName>
+        <label>psionist powers - debuffer</label>
+        <displayPriorityInXenotype>989.3</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
     <!--980.0~987.9 are for outside paths. If base reaches this far, it's gone too far-->
 
     <GeneCategoryDef>
@@ -278,6 +290,22 @@
 
     <GeneDef Name="SuperPowersPsychicSoldierBase" Abstract="True" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
         <displayCategory>SuperPowersPsychicSoldier</displayCategory>
+        <biostatMet>-1</biostatMet>
+        <biostatCpx>1</biostatCpx>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
+        <marketValueFactor>1.1</marketValueFactor>
+    </GeneDef>
+
+    <GeneDef Name="SuperPowersPsychicEmpathBase" Abstract="True" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <displayCategory>SuperPowersPsychicEmpath</displayCategory>
+        <biostatMet>-1</biostatMet>
+        <biostatCpx>1</biostatCpx>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
+        <marketValueFactor>1.1</marketValueFactor>
+    </GeneDef>
+
+    <GeneDef Name="SuperPowersPsychicDebufferBase" Abstract="True" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <displayCategory>SuperPowersPsychicDebuffer</displayCategory>
         <biostatMet>-1</biostatMet>
         <biostatCpx>1</biostatCpx>
         <prerequisite>SHG_Archetypes_Psionist</prerequisite>

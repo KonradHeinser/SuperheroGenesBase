@@ -1,0 +1,71 @@
+﻿using RimWorld;
+using Verse;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace SuperHeroGenesBase
+{
+    public class HediffComp_SeverityByNearbyPawns : HediffComp
+    {
+        public HediffCompProperties_SeverityByNearbyPawns Props => (HediffCompProperties_SeverityByNearbyPawns)props;
+
+        public override void CompPostTick(ref float severityAdjustment)
+        {
+            if (Props.onlyNonPlayer && Props.onlyPlayer)
+            {
+                Log.Error(parent.def + ": has both onlyPlayer and onlyNonPlayer, which makes no sense for obvious reasons");
+                Pawn.health.RemoveHediff(parent);
+                return;
+            }
+
+            List<Pawn> list = parent.pawn.Map.mapPawns.AllPawnsSpawned;
+            List<Pawn> allies = parent.pawn.Map.mapPawns.SpawnedPawnsInFaction(parent.pawn.Faction);
+            int severity = 0;
+
+            if (Props.onlyPlayer)
+            {
+                foreach (Pawn pawn in allies)
+                {
+                    if ((pawn == parent.pawn && !Props.includeSelf) || (!pawn.RaceProps.Humanlike && Props.onlyHumanlikes))
+                    {
+                        continue;
+                    }
+                    if (pawn.Position.DistanceTo(parent.pawn.Position) <= Props.range)
+                    {
+                        severity++;
+                    }
+                }
+            }
+            else if (Props.onlyNonPlayer)
+            {
+                foreach (Pawn pawn in list)
+                {
+                    if ((pawn == parent.pawn && !Props.includeSelf) || (!pawn.RaceProps.Humanlike && Props.onlyHumanlikes) || allies.Contains(pawn))
+                    {
+                        continue;
+                    }
+                    if (pawn.Position.DistanceTo(parent.pawn.Position) <= Props.range)
+                    {
+                        severity++;
+                    }
+                }
+            }
+            else
+            {
+                foreach (Pawn pawn in list)
+                {
+                    if ((pawn == parent.pawn && !Props.includeSelf) || (!pawn.RaceProps.Humanlike && Props.onlyHumanlikes))
+                    {
+                        continue;
+                    }
+                    if (pawn.Position.DistanceTo(parent.pawn.Position) <= Props.range)
+                    {
+                        severity++;
+                    }
+                }
+            }
+
+            parent.Severity = severity;
+        }
+    }
+}
