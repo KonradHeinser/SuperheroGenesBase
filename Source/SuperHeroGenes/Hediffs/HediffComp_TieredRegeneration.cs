@@ -65,7 +65,6 @@ namespace SuperHeroGenesBase
                 if (healTicksRemaining >= 0)
                 {
                     GetWounds();
-
                     if (wounds.Count == 0 || !healAllowed) // If there are no wounds or healing has been disabled, reset heal stuff
                     {
                         healTicksRemaining = -1;
@@ -74,10 +73,25 @@ namespace SuperHeroGenesBase
                     {
                         if (healTicksRemaining == 0) // If done healing, start grabbing random wounds and healing them
                         {
-                            for (int i = 0; i > repeatCount; i++)
+                            for (int i = 0; i < repeatCount; i++)
                             {
-                                wounds.RandomElement().Severity -= healAmount;
+                                Hediff_Injury wound = wounds.RandomElement();
+                                wound.Severity -= healAmount;
+                                if (wound.Severity <= 0)
+                                {
+                                    wounds.Remove(wound);
+                                    if (wounds.Count == 0) break;
+                                }
+                                if (wound.Severity >= wound.Part.def.hitPoints)
+                                {
+                                    // To avoid crazy damage and accidental killing from reverse healing, damage is limited to just before destruction
+
+                                    wound.Severity = wound.Part.def.hitPoints - 0.1f;
+                                    wounds.Remove(wound);
+                                    if (wounds.Count == 0) break;
+                                }
                             }
+                            healTicksRemaining = -1;
                         }
                         else { healTicksRemaining--; } // If not done healing, then tick on
                     }
@@ -149,7 +163,9 @@ namespace SuperHeroGenesBase
             for (int i = 0; i < Pawn.health.hediffSet.hediffs.Count; i++)
             {
                 Hediff_Injury hediff_Injury = Pawn.health.hediffSet.hediffs[i] as Hediff_Injury;
-                if (hediff_Injury != null)
+
+                // To avoid weird issues caused by reverse regen, a hard limit is placed on how much this can increase severity on a part's wound
+                if (hediff_Injury != null && hediff_Injury.Severity < hediff_Injury.Part.def.hitPoints - 0.1)
                 {
                     wounds.Add(hediff_Injury);
                 }

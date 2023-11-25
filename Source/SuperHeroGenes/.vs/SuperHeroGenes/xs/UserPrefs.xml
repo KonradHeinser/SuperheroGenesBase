@@ -1,19 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SHGExtension.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hediffs/HediffComp_TieredRegeneration.cs">
     <Files>
-      <File FileName="HarmonyPatches.cs" Line="61" Column="27" />
-      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="58" Column="1" />
-      <File FileName="ModSettings/PatchOperationSetting.cs" Line="30" Column="1" />
-      <File FileName="Thoughts/ThoughtWorker_Gene_GeneSocial.cs" Line="4" Column="29" />
-      <File FileName="SHGExtension.cs" Line="19" Column="42" />
+      <File FileName="Hediffs/RegenSet.cs" Line="7" Column="39" />
+      <File FileName="Hediffs/HediffCompProperties_TieredRegeneration.cs" Line="1" Column="1" />
+      <File FileName="Hediffs/HediffComp_TieredRegeneration.cs" Line="93" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
+              <Node name="Abilities" expanded="True" />
+              <Node name="Hediffs" expanded="True">
+                <Node name="HediffComp_TieredRegeneration.cs" selected="True" />
+              </Node>
               <Node name="Thoughts" expanded="True" />
-              <Node name="SHGExtension.cs" selected="True" />
             </Node>
           </Node>
         </State>

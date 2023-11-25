@@ -13,5 +13,16 @@
         </logRulesInitiator>
     </InteractionDef>
 
-
+    <InteractionDef>
+        <defName>SHG_Psionist_EmpathOpinionManipulation</defName>
+        <label>empath manipulation</label>
+        <workerClass>InteractionWorker</workerClass>
+        <ignoreTimeSinceLastInteraction>True</ignoreTimeSinceLastInteraction>
+        <symbol>Psionist/Empath/Gene_Psionist_DropTheirGuard</symbol>
+        <logRulesInitiator>
+            <rulesStrings>
+                <li>r_logentry->[RECIPIENT_nameDef]'s perception of [INITIATOR_nameDef] has been psychically improved for a time.</li>
+            </rulesStrings>
+        </logRulesInitiator>
+    </InteractionDef>
 </Defs>

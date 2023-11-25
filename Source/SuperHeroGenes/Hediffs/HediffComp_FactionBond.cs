@@ -15,7 +15,7 @@ namespace SuperHeroGenesBase
             List<Pawn> allies = parent.pawn.Map.mapPawns.SpawnedPawnsInFaction(parent.pawn.Faction);
             foreach (Pawn ally in allies)
             {
-                if (ally.health.hediffSet.HasHediff(parent.def)) bondedAllies++;
+                if (!ally.Dead && ally.health.hediffSet.HasHediff(parent.def)) bondedAllies++;
             }
             parent.Severity = bondedAllies;
         }
