@@ -48,7 +48,7 @@
 
     <HediffDef ParentName="SHG_GuardianBuffBase">
         <defName>SHG_Psionist_Guardian_Buff</defName>
-		<label>Under a Guardian's Wing</label>
+		<label>under a guardian's wing</label>
 		<description>This pawn is receiving various boons from a nearby guardian. To avoid flooding this page with all of the bonuses, the other ones have been hidden. If you can see this, then the pawn is gaining all bonuses that the guardian provides.</description>
 	</HediffDef>
 

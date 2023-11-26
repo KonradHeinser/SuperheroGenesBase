@@ -13,6 +13,7 @@ namespace SuperHeroGenesBase
         public bool hideMoteWhenNotDrafted;
         public bool psychic = true;
         public float initialSeverity = 1f;
+        public bool onlyWhileDrafted = true;
 
         public HediffCompProperties_GiveHediffsToNonAlliesInRange()
         {

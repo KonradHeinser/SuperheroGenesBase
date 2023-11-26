@@ -12,7 +12,7 @@ namespace SuperHeroGenesBase
 
         public override void CompPostTick(ref float severityAdjustment)
         {
-            if (!parent.pawn.Awake() || parent.pawn.health == null || parent.pawn.health.InPainShock || !parent.pawn.Spawned)
+            if (!parent.pawn.Awake() || parent.pawn.health == null || parent.pawn.health.InPainShock || !parent.pawn.Spawned || (Props.onlyWhileDrafted && !Pawn.Drafted))
             {
                 return;
             }
