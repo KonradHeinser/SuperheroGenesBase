@@ -32,13 +32,11 @@ namespace SuperHeroGenesBase
                 }
             }
 
-            foreach (Pawn ally in allies) list.Remove(ally); // Remove all player pawns from the list
-
             if (!list.NullOrEmpty())
             {
                 foreach (Pawn item in list)
                 {
-                    if (item.Dead || item.health == null || (Props.targetingParameters != null && !Props.targetingParameters.CanTarget(item)))
+                    if (item.Dead || item.health == null || (Props.targetingParameters != null && !Props.targetingParameters.CanTarget(item)) || allies.Contains(item))
                     {
                         continue;
                     }

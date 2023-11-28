@@ -411,6 +411,23 @@
             <ArmorRating_Sharp>.1</ArmorRating_Sharp>
             <ArmorRating_Heat>.1</ArmorRating_Heat>
         </statOffsets>
+        <customEffectDescriptions>
+            <li MayRequire="EBSG.Framework">Completely stops fertility loss due to old age.</li>
+        </customEffectDescriptions>
+        <modExtensions>
+            <li Class="EBSGFramework.EBSGExtension" MayRequire="EBSG.Framework">
+                <fertilityAgeFactor>
+                    <points>
+                        <li>(14, 0)</li>
+                        <li>(20, 1)</li>
+                        <li>(50, 1)</li>
+                    </points>
+                </fertilityAgeFactor>
+            </li>
+        </modExtensions>
+        <exclusionTags>
+            <li>EBSG_FertilityByAge</li>
+        </exclusionTags>
     </GeneDef>
 </Defs>
 

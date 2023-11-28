@@ -82,7 +82,6 @@
     <Compile Include="Thoughts\ThoughtWorker_Precept_RelatedGeneColonist.cs" />
     <Compile Include="Thoughts\ThoughtWorker_Precept_RelatedGenePresent.cs" />
     <Compile Include="Thoughts\ThoughtWorker_Gene_GeneSocial.cs" />
-    <Compile Include="DynamicResourceGenes\DRGExtension.cs" />
     <Compile Include="Abilities\CompProperties_LoveTheCaster.cs" />
     <Compile Include="Abilities\CompAbilityEffect_LoveTheCaster.cs" />
     <Compile Include="Abilities\Hediff_LoveTheCaster.cs" />
@@ -107,6 +106,9 @@
     <Folder Include="Thoughts\" />
     <Folder Include="DynamicResourceGenes\" />
     <Folder Include="ModSettings\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DynamicResourceGenes\DRGExtension.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

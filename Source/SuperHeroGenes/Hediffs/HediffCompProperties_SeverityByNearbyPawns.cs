@@ -11,7 +11,7 @@ namespace SuperHeroGenesBase
         public bool onlyNonPlayer; // Only counts pawns that aren't in the player's faction
         public bool onlyHumanlikes; // Only count pawns that are considered humanlike by Rimworld
         public bool onlyPlayer; // Only counts pawns in the player's faction
-        public bool includeSelf = true; // If false, the hediff will be gone when no valid pawns are nearby
+        public bool includeSelf = true; // If false, the hediff will be gone when no other pawns are nearby
 
         public HediffCompProperties_SeverityByNearbyPawns()
         {

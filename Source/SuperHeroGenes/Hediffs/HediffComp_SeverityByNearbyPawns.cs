@@ -40,7 +40,8 @@ namespace SuperHeroGenesBase
             {
                 foreach (Pawn pawn in list)
                 {
-                    if (!pawn.Dead && (pawn == parent.pawn && !Props.includeSelf) || (!pawn.RaceProps.Humanlike && Props.onlyHumanlikes) || allies.Contains(pawn))
+
+                    if (pawn.Dead || (!pawn.RaceProps.Humanlike && Props.onlyHumanlikes) || allies.Contains(pawn))
                     {
                         continue;
                     }
@@ -49,6 +50,7 @@ namespace SuperHeroGenesBase
                         severity++;
                     }
                 }
+                if (Props.includeSelf) severity++; // Apparently the basic list doesn't include the pawn themselves
             }
             else
             {
@@ -63,7 +65,9 @@ namespace SuperHeroGenesBase
                         severity++;
                     }
                 }
+                if (Props.includeSelf) severity++; // Apparently the basic list doesn't include the pawn themselves
             }
+
 
             parent.Severity = severity;
         }

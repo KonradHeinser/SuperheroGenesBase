@@ -1,27 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Hediffs/HediffComp_GiveHediffsToNonAlliesInRange.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ModSettings/PatchOperationSetting.cs">
     <Files>
-      <File FileName="Hediffs/RegenSet.cs" Line="7" Column="39" />
-      <File FileName="Hediffs/HediffCompProperties_TieredRegeneration.cs" Line="1" Column="1" />
-      <File FileName="Hediffs/HediffComp_TieredRegeneration.cs" Line="93" Column="30" />
-      <File FileName="Hediffs/HediffComp_GiveHediffsToNonAlliesInRange.cs" Line="8" Column="58" />
-      <File FileName="Hediffs/HediffCompProperties_GiveHediffsToNonAlliesInRange.cs" Line="23" Column="1" />
+      <File FileName="Hediffs/HediffCompProperties_SeverityByNearbyPawns.cs" Line="11" Column="34" />
+      <File FileName="Hediffs/HediffComp_SeverityByNearbyPawns.cs" Line="65" Column="26" />
+      <File FileName="Hediffs/HediffComp_GiveHediffsToNonAlliesInRange.cs" Line="30" Column="18" />
+      <File FileName="ModSettings/PatchOperationSetting.cs" Line="9" Column="39" />
+      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="52" Column="101" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SuperHeroGenes" expanded="True">
-            <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Abilities" expanded="True" />
-              <Node name="Hediffs" expanded="True">
-                <Node name="HediffComp_GiveHediffsToNonAlliesInRange.cs" selected="True" />
-              </Node>
-              <Node name="Thoughts" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

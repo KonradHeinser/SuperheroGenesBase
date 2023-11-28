@@ -2,8 +2,21 @@
 <LanguageData>
 	<SHG_Hemomancer_Starfish>{0}'s clump of hemogen has successfully developed.</SHG_Hemomancer_Starfish>
     <SHG_GeneticRomanceChance>Carrier Gene(s)</SHG_GeneticRomanceChance>
-    <SHG_ModName>Superhero Genes</SHG_ModName>
 
-    <SHG_CondensedMeteors>Allow Condensed Meteors (Restart Required)</SHG_CondensedMeteors>
+        <!--Settings stuff-->
+    <SHG_ModName>Superhero Genes - Base</SHG_ModName>
+
+    <SHG_CondensedMeteors>    Allow Condensed Meteors (Restart Required)</SHG_CondensedMeteors>
     <SHG_CondensedMeteorsDescription>Allows the condensed summons(i.e condensed steel, condensed jade, and condensed components) to appear as rare meteors. If enabled and a meteor lands, it's recommended that you DON'T mine it all immediately for obvious reasons (colony wealth increases).</SHG_CondensedMeteorsDescription>
+
+    <SHG_ExpensiveBase>    Expensive Base (Restart Required)</SHG_ExpensiveBase>
+    <SHG_ExpensiveBaseDescription>Sets the superhero base gene to have a metabolic efficiency of -8(equal to the bonus gained through taking all of the unsuper genes), and adds a dormant super archetype that is the equivalent of taking all the unsuper genes at once.</SHG_ExpensiveBaseDescription>
+
+    <SHG_SupersEverywhere>    Supers Everywhere (Restart Required)</SHG_SupersEverywhere>
+    <SHG_SupersEverywhereDescription>Makes all non-custom xenotypes gain the superhero base gene, and exchange some of their negative genes for their more severe antisuper counterparts. This will also catch xenotypes added by other mods, but because it always errs on the higher metabolic efficiency side, you may end up with some xenotypes with more than +5 metabolic efficiency. I have made some patches to correct some mods, but let me know if there's a particularly aggregious one you'd like taken care of.</SHG_SupersEverywhereDescription>
+
+    <SHG_ActivatableSuperGenes>    Activatable Super Genes (Restart Required)</SHG_ActivatableSuperGenes>
+    <SHG_ActivatableSuperGenesDescription>Instead of having all the genes give a bunch of constant bonuses, the bonuses are locked behind an ability that must be activated to receive those boons. If active long enough, the pawn will begin gaining increasing boosts to their consciousness, and ever increasing risk of heart attack. It takes half a day for the side effects to begin appearing.</SHG_ActivatableSuperGenesDescription>
+    <SHG_InterruptibleActivatables>    Interruptible Activatables (Restart Required)</SHG_InterruptibleActivatables>
+    <SHG_InterruptibleActivatablesDescription>Instead of activating almost instantly, the abilities take 10 seconds to activate, making it much harder to use them mid battle.</SHG_InterruptibleActivatablesDescription>
 </LanguageData>

@@ -44,10 +44,11 @@ namespace SuperHeroGenesBase
             }
             if (healInProgress)
             {
+                GetWounds();
                 // Regrowth stuff
                 if (regrowTicksRemaining >= 0)
-                {
-                    if (missingPart == null || !regrowthAllowed) // If regrowth is no longer possible, quit trying to regrow
+                { // If regrowth is no longer possible or there are new wounds while prioritizing healing, quit trying to regrow
+                    if (missingPart == null || !regrowthAllowed || (wounds.Count != 0 && Props.prioritizeHeal))
                     {
                         regrowTicksRemaining = -1;
                     }
@@ -64,7 +65,6 @@ namespace SuperHeroGenesBase
                 // Heal stuff
                 if (healTicksRemaining >= 0)
                 {
-                    GetWounds();
                     if (wounds.Count == 0 || !healAllowed) // If there are no wounds or healing has been disabled, reset heal stuff
                     {
                         healTicksRemaining = -1;

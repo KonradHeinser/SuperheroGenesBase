@@ -66,13 +66,13 @@
                 <thingDef>SHG_Psionist_PsionicShield</thingDef>
                 <psychic>True</psychic>
             </li>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>SHG_Psionist_Stasis</hediffDef>
                 <onlyBrain>False</onlyBrain>
                 <psychic>True</psychic>
             </li>
-            <li Class = "CompProperties_AbilityEffectWithDuration">
+            <li Class="CompProperties_AbilityEffectWithDuration">
                 <compClass>CompAbilityEffect_Stun</compClass>
                 <goodwillImpact>0</goodwillImpact>
                 <psychic>True</psychic>
@@ -99,7 +99,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityForceJob">
+            <li Class="CompProperties_AbilityForceJob">
                 <compClass>CompAbilityEffect_ForceJob</compClass>
                 <jobDef>SHG_Psionist_CompelledDuel</jobDef>
                 <destination>Caster</destination>
@@ -132,7 +132,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>SHG_Psionist_Entrench</hediffDef>
                 <onlyBrain>False</onlyBrain>
