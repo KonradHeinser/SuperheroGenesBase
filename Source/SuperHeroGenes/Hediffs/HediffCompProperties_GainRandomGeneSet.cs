@@ -15,6 +15,7 @@ namespace SuperHeroGenesBase
         public List<GeneDef> alwaysRemovedGenes; // These genes will be removed regardless of set picked
         public float minSeverity = 0; // Sets the minimum severity that the hediff must be at to start gene generation. Once this is reached, the hediff will disappear shortly after
         public float maxSeverity = 999; // If a hediff goes down in severity, use this instead of min
+        public bool suppressMessages = false; // Don't set to true unless you really want to hide something from the player
 
         /// For those interested, the order things are done in is 
         ///  1) Random set selection. A random number is selected between 0 and the total weight, and then from that a random set is picked, with lower numbers selecting earlier sets.

@@ -24,6 +24,8 @@ namespace SuperHeroGenesBase
                           postfix: new HarmonyMethod(patchType, nameof(SecondaryLovinChanceFactorPostFix)));
             harmony.Patch(AccessTools.Method(typeof(InteractionWorker_RomanceAttempt), nameof(InteractionWorker_RomanceAttempt.RomanceFactors)),
                           postfix: new HarmonyMethod(patchType, nameof(RomanceFactorsPostFix)));
+            harmony.Patch(AccessTools.PropertyGetter(typeof(Gene_Hemogen), nameof(Gene_Hemogen.InitialResourceMax)),
+                          postfix: new HarmonyMethod(patchType, nameof(HemomancerHemogenMaxPostFix)));
         }
 
 
@@ -122,6 +124,15 @@ namespace SuperHeroGenesBase
                     stringBuilder.AppendLine(" - " + "SHG_GeneticRomanceChance".Translate() + ": x" + num.ToStringPercent());
                     __result = stringBuilder.ToString();
                 }
+            }
+        }
+
+        public static void HemomancerHemogenMaxPostFix(ref float __result, ref Pawn ___pawn)
+        {
+            float hemomancyProficiency = ___pawn.GetStatValue(SHGDefOf.SHG_HemomancyProficiency);
+            if (hemomancyProficiency != 0)
+            {
+                __result += hemomancyProficiency;
             }
         }
     }

@@ -33,12 +33,14 @@ namespace SuperHeroGenesBase
     public class SuperheroGenes_Settings : ModSettings
     {
         public static bool condensedMeteors = true;
-        public static bool medievalVillains = false;
-        public static bool vengefulOne = true;
         public static bool expensiveBase = false;
         public static bool supersEverywhere = false;
         public static bool activatableSuperGenes = false;
         public static bool interruptibleActivatables = false;
+        public static bool hemomancerRefresher = false;
+
+        public static bool medievalVillains = false;
+        public static bool vengefulOne = true;
 
         public SuperheroGenes_Settings() { }
 
@@ -46,12 +48,13 @@ namespace SuperHeroGenesBase
         {
             base.ExposeData();
             Scribe_Values.Look(ref condensedMeteors, "condensedMeteors");
-            Scribe_Values.Look(ref medievalVillains, "medievalVillains");
-            Scribe_Values.Look(ref vengefulOne, "vengefulOne");
             Scribe_Values.Look(ref expensiveBase, "expensiveBase");
             Scribe_Values.Look(ref supersEverywhere, "supersEverywhere");
             Scribe_Values.Look(ref activatableSuperGenes, "activatableSuperGenes");
             Scribe_Values.Look(ref interruptibleActivatables, "interruptibleActivatables");
+
+            Scribe_Values.Look(ref medievalVillains, "medievalVillains");
+            Scribe_Values.Look(ref vengefulOne, "vengefulOne");
         }
 
         public void DoWindowContents(Rect inRect)

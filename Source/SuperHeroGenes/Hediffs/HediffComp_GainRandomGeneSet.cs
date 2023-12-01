@@ -55,24 +55,28 @@ namespace SuperHeroGenesBase
             // Select a geneSet to be added
             if (!Props.geneSets.NullOrEmpty())
             {
-                float totalWeight = 0;
-                foreach (RandomXenoGenes xenoGeneSet in Props.geneSets)
+                if (Props.geneSets.Count() == 1) genesToAdd = Props.geneSets[0].geneSet;
+                else
                 {
-                    totalWeight += xenoGeneSet.weightOfGeneSet;
-                }
-
-                double randomNumber = new Random().NextDouble() * totalWeight;
-                foreach (RandomXenoGenes xenoGeneSet in Props.geneSets)
-                {
-                    if (randomNumber <= xenoGeneSet.weightOfGeneSet)
+                    float totalWeight = 0;
+                    foreach (RandomXenoGenes xenoGeneSet in Props.geneSets)
                     {
-                        genesToAdd = xenoGeneSet.geneSet;
-                        reverseInheritence = xenoGeneSet.reverseInheritence;
-                        break;
+                        totalWeight += xenoGeneSet.weightOfGeneSet;
                     }
-                    else
+
+                    double randomNumber = new Random().NextDouble() * totalWeight;
+                    foreach (RandomXenoGenes xenoGeneSet in Props.geneSets)
                     {
-                        randomNumber -= xenoGeneSet.weightOfGeneSet;
+                        if (randomNumber <= xenoGeneSet.weightOfGeneSet)
+                        {
+                            genesToAdd = xenoGeneSet.geneSet;
+                            reverseInheritence = xenoGeneSet.reverseInheritence;
+                            break;
+                        }
+                        else
+                        {
+                            randomNumber -= xenoGeneSet.weightOfGeneSet;
+                        }
                     }
                 }
             }
@@ -155,7 +159,7 @@ namespace SuperHeroGenesBase
             parent.pawn.genes = currentGenes;
 
             // Wrap things up
-            if (parent.pawn.Faction == Faction.OfPlayer) // If the pawn is in the player faction, give a message based on what is most relevant to the player.
+            if (parent.pawn.Faction == Faction.OfPlayer && !Props.suppressMessages) // If the pawn is in the player faction, give a message based on what is most relevant to the player.
             {
                 if (!Props.geneSets.NullOrEmpty()) Messages.Message("Random genes successfully generated!", MessageTypeDefOf.NeutralEvent, false);
                 else if (!alwaysAddedGenes.NullOrEmpty()) Messages.Message("Genes successfully added to pawn!", MessageTypeDefOf.NeutralEvent, false);
