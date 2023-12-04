@@ -130,10 +130,7 @@ namespace SuperHeroGenesBase
         public static void HemomancerHemogenMaxPostFix(ref float __result, ref Pawn ___pawn)
         {
             float hemomancyProficiency = ___pawn.GetStatValue(SHGDefOf.SHG_HemomancyProficiency);
-            if (hemomancyProficiency != 0)
-            {
-                __result += hemomancyProficiency;
-            }
+            __result += hemomancyProficiency;
         }
     }
 }

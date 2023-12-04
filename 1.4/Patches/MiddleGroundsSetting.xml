@@ -52,11 +52,33 @@
                                     <offset>0.6</offset>
                                 </li>
                             </capMods>
+                            <customEffectDescriptions>
+                                <li MayRequire="EBSG.Framework">Age takes a much longer time to cause fertility issues, and never takes all fertility.</li>
+                            </customEffectDescriptions>
                             <modExtensions>
                                 <li Class="SuperHeroGenesBase.SHGExtension">
                                     <ClotCheckInterval>180</ClotCheckInterval>
                                     <minTendQuality>0.6</minTendQuality>
                                     <maxTendQuality>0.8</maxTendQuality>
+                                </li>
+                                <li Class="EBSGFramework.FertilityByGenderAgeExtension" MayRequire="EBSG.Framework">
+                                    <overridingGenes><li>SuperHealing</li></overridingGenes>
+                                    <maleFertilityAgeFactor>
+                                        <points>
+                                            <li>(14, 0)</li>
+                                            <li>(18, 1)</li>
+                                            <li>(440, 1)</li>
+                                            <li>(792, 0.62)</li>
+                                        </points>
+                                    </maleFertilityAgeFactor>
+                                    <femaleFertilityAgeFactor>
+                                        <points>
+                                            <li>(14, 0)</li>
+                                            <li>(20, 1)</li>
+                                            <li>(246, 1)</li>
+                                            <li>(308, 0.62)</li>
+                                        </points>
+                                    </femaleFertilityAgeFactor>
                                 </li>
                             </modExtensions>
                         </GeneDef>
@@ -446,6 +468,11 @@
                 <li Class="PatchOperationReplace">
                     <xpath>Defs/GeneDef[defName="AntisuperStrength"]/label</xpath>
                     <value><label>true antisuper strength</label></value>
+                </li>
+
+                <li Class="PatchOperationAdd" MayRequire="EBSG.Framework">
+                    <xpath>Defs/GeneDef[defName="SuperHeroBase"]/modExtensions/li[@Class="EBSGFramework.FertilityByGenderAgeExtension"]/overridingGenes</xpath>
+                    <value><li>SHG_SuperHealing3</li></value>
                 </li>
 
                 <li Class="PatchOperationFindMod">

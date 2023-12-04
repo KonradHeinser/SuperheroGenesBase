@@ -413,17 +413,29 @@
             <ArmorRating_Heat>.1</ArmorRating_Heat>
         </statOffsets>
         <customEffectDescriptions>
-            <li MayRequire="EBSG.Framework">Completely stops fertility loss due to old age.</li>
+            <li MayRequire="EBSG.Framework">Age takes a longer time to cause fertility issues, and never takes all fertility.</li>
         </customEffectDescriptions>
         <modExtensions>
-            <li Class="EBSGFramework.EBSGExtension" MayRequire="EBSG.Framework">
-                <fertilityAgeFactor>
+            <li Class="EBSGFramework.FertilityByGenderAgeExtension" MayRequire="EBSG.Framework">
+                <overridingGenes><li>SuperHealing</li></overridingGenes>
+                <maleFertilityAgeFactor>
+                    <points>
+                        <li>(14, 0)</li>
+                        <li>(18, 1)</li>
+                        <li>(200, 1)</li>
+                        <li>(360, 0.05)</li>
+                    </points>
+                </maleFertilityAgeFactor>
+                <femaleFertilityAgeFactor>
                     <points>
                         <li>(14, 0)</li>
                         <li>(20, 1)</li>
-                        <li>(50, 1)</li>
+                        <li>(112, 1)</li>
+                        <li>(140, 0.5)</li>
+                        <li>(160, 0.1)</li>
+                        <li>(180, 0.05)</li>
                     </points>
-                </fertilityAgeFactor>
+                </femaleFertilityAgeFactor>
             </li>
         </modExtensions>
         <exclusionTags>

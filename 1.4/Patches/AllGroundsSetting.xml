@@ -52,11 +52,33 @@
                                     <offset>0.2</offset>
                                 </li>
                             </capMods>
+                            <customEffectDescriptions>
+                                <li MayRequire="EBSG.Framework">Age takes a longer time to cause fertility issues, and never takes all fertility.</li>
+                            </customEffectDescriptions>
                             <modExtensions>
                                 <li Class="SuperHeroGenesBase.SHGExtension">
                                     <ClotCheckInterval>300</ClotCheckInterval>
                                     <minTendQuality>0.4</minTendQuality>
                                     <maxTendQuality>0.6</maxTendQuality>
+                                </li>
+                                <li Class="EBSGFramework.FertilityByGenderAgeExtension" MayRequire="EBSG.Framework">
+                                    <maleFertilityAgeFactor>
+                                        <points>
+                                            <li>(14, 0)</li>
+                                            <li>(18, 1)</li>
+                                            <li>(280, 1)</li>
+                                            <li>(504, 0.24)</li>
+                                        </points>
+                                    </maleFertilityAgeFactor>
+                                    <femaleFertilityAgeFactor>
+                                        <points>
+                                            <li>(14, 0)</li>
+                                            <li>(20, 1)</li>
+                                            <li>(157, 1)</li>
+                                            <li>(196, 0.5)</li>
+                                            <li>(224, 0.24)</li>
+                                        </points>
+                                    </femaleFertilityAgeFactor>
                                 </li>
                             </modExtensions>
                         </GeneDef>
@@ -86,11 +108,33 @@
                                     <offset>0.4</offset>
                                 </li>
                             </capMods>
+                            <customEffectDescriptions>
+                                <li MayRequire="EBSG.Framework">Age takes a longer time to cause fertility issues, and never takes all fertility.</li>
+                            </customEffectDescriptions>
                             <modExtensions>
                                 <li Class="SuperHeroGenesBase.SHGExtension">
                                     <ClotCheckInterval>240</ClotCheckInterval>
                                     <minTendQuality>0.5</minTendQuality>
                                     <maxTendQuality>0.7</maxTendQuality>
+                                </li>
+                                <li Class="EBSGFramework.FertilityByGenderAgeExtension" MayRequire="EBSG.Framework">
+                                    <maleFertilityAgeFactor>
+                                        <points>
+                                            <li>(14, 0)</li>
+                                            <li>(18, 1)</li>
+                                            <li>(360, 1)</li>
+                                            <li>(648, 0.43)</li>
+                                        </points>
+                                    </maleFertilityAgeFactor>
+                                    <femaleFertilityAgeFactor>
+                                        <points>
+                                            <li>(14, 0)</li>
+                                            <li>(20, 1)</li>
+                                            <li>(202, 1)</li>
+                                            <li>(252, 0.5)</li>
+                                            <li>(288, 0.43)</li>
+                                        </points>
+                                    </femaleFertilityAgeFactor>
                                 </li>
                             </modExtensions>
                         </GeneDef>
@@ -120,11 +164,32 @@
                                     <offset>0.8</offset>
                                 </li>
                             </capMods>
+                            <customEffectDescriptions>
+                                <li MayRequire="EBSG.Framework">Age takes a much longer time to cause fertility issues, and never takes all fertility.</li>
+                            </customEffectDescriptions>
                             <modExtensions>
                                 <li Class="SuperHeroGenesBase.SHGExtension">
                                     <ClotCheckInterval>120</ClotCheckInterval>
                                     <minTendQuality>0.7</minTendQuality>
                                     <maxTendQuality>0.9</maxTendQuality>
+                                </li>
+                                <li Class="EBSGFramework.FertilityByGenderAgeExtension" MayRequire="EBSG.Framework">
+                                    <maleFertilityAgeFactor>
+                                        <points>
+                                            <li>(14, 0)</li>
+                                            <li>(18, 1)</li>
+                                            <li>(520, 1)</li>
+                                            <li>(936, 0.81)</li>
+                                        </points>
+                                    </maleFertilityAgeFactor>
+                                    <femaleFertilityAgeFactor>
+                                        <points>
+                                            <li>(14, 0)</li>
+                                            <li>(20, 1)</li>
+                                            <li>(291, 1)</li>
+                                            <li>(364, 0.81)</li>
+                                        </points>
+                                    </femaleFertilityAgeFactor>
                                 </li>
                             </modExtensions>
                         </GeneDef>
@@ -674,6 +739,15 @@
                                 </li>
                             </capMods>
                         </GeneDef>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd" MayRequire="EBSG.Framework">
+                    <xpath>Defs/GeneDef[defName="SuperHeroBase"]/modExtensions/li[@Class="EBSGFramework.FertilityByGenderAgeExtension"]/overridingGenes</xpath>
+                    <value>
+                        <li>SHG_SuperHealing1</li>
+                        <li>SHG_SuperHealing2</li>
+                        <li>SHG_SuperHealing4</li>
                     </value>
                 </li>
 

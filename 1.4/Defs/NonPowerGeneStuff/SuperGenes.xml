@@ -33,6 +33,7 @@
             <li>WoundHealingRate</li>
             <li>Immunity</li>
             <li>RandomHealing</li>
+            <li>EBSG_FertilityByAge</li>
         </exclusionTags>
     </GeneDef>
 
@@ -148,6 +149,9 @@
             <ImmunityGainSpeed>10</ImmunityGainSpeed>
             <InjuryHealingFactor>10</InjuryHealingFactor>
         </statOffsets>
+        <customEffectDescriptions>
+            <li MayRequire="EBSG.Framework">Completely stops fertility loss due to old age.</li>
+        </customEffectDescriptions>
         <capMods>
             <li>
                 <capacity>BloodFiltration</capacity>
@@ -163,6 +167,15 @@
                 <ClotCheckInterval>60</ClotCheckInterval>
                 <minTendQuality>0.8</minTendQuality>
                 <maxTendQuality>0.99</maxTendQuality>
+            </li>
+            <li Class="EBSGFramework.FertilityByGenderAgeExtension" MayRequire="EBSG.Framework">
+                <fertilityAgeFactor>
+                    <points>
+                        <li>(14, 0)</li>
+                        <li>(20, 1)</li>
+                        <li>(50, 1)</li>
+                    </points>
+                </fertilityAgeFactor>
             </li>
         </modExtensions>
     </GeneDef>
