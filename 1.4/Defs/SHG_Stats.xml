@@ -24,12 +24,24 @@
         <displayPriorityInCategory>3451</displayPriorityInCategory>
     </StatDef>
 
+        <!--Psionist Stats-->
 
-        <!--Hemomancer Skills-->
+    <StatDef>
+        <defName>SHG_Debuffer_Range</defName>
+        <category>BasicsPawn</category>
+        <showIfUndefined>false</showIfUndefined>
+        <displayPriorityInCategory>3451</displayPriorityInCategory>
+        <alwaysHide>true</alwaysHide>
+        <label>debuffer aura range</label>
+        <description>The range stat for all debuffer auras, with the exception of Siphon which uses a static 15.</description>
+        <defaultBaseValue>15</defaultBaseValue>
+    </StatDef>
+
+        <!--Hemomancer Stats-->
     <StatDef>
         <defName>SHG_HemomancyProficiency</defName>
         <label>hemomancy proficiency</label>
-        <description>How well this pawn utilizes hemomantic super powers. This can impact things like self-buffing effects and their durations along with the range of many powers.\n\nBy default, this is only boosted through superhero genes, though due to how it is set up, it can also be boosted through hediffs, traits, and implants if another mod includes it.</description>
+        <description>How well this pawn utilizes hemomantic super powers. This can impact things like self-buffing effects and their durations along with the range of many powers.\n\nThis will attempt to increase the maximum hemogen available by 100 for every 100% in this, but due to weird Rimworld coding, this sometimes doesn't work properly. Unfortunately, I don't know how to fix it outside of using xenogerms create a new xenotype.\n\nBy default, this is only boosted through superhero genes, though due to how it is set up, it can also be boosted through hediffs, traits, and implants if another mod includes it.</description>
         <category>BasicsPawn</category>
         <defaultBaseValue>0</defaultBaseValue>
         <hideAtValue>0</hideAtValue>

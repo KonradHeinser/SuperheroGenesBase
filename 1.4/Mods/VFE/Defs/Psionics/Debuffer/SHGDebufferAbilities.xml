@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_PsychicAura_Dull</defName>
+        <label>switch to psychically dull aura</label>
+        <description>Makes nearby enemies receive lessened effects from many psychic abilities. If you don't have a mod that creates enemies that give psychic buffs, this is probably not going to help since it will lessen the penalties of most of auras.</description>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_PsychicAlterationAura</iconPath>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EntropyGain>50</Ability_EntropyGain>
+        </statBases>
+        <verbProperties>
+            <range>15</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <warmupTime>2</warmupTime>
+            <targetParams>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetMechs>False</canTargetMechs>
+                <onlyTargetColonistsOrPrisonersOrSlaves>true</onlyTargetColonistsOrPrisonersOrSlaves>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Psionist_PsychicAura_Dull</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+            <li Class="CompProperties_AbilityRemoveHediff">
+                <compClass>CompAbilityEffect_RemoveHediff</compClass>
+                <hediffDef>SHG_Psionist_PsychicAura_Sensitive</hediffDef>
+                <applyToSelf>True</applyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_PsychicAura_Sensitive</defName>
+        <label>switch to psychically sensitive aura</label>
+        <description>Makes nearby enemies receive increased effects from many psychic abilities.</description>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_PsychicAlterationAura</iconPath>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EntropyGain>50</Ability_EntropyGain>
+        </statBases>
+        <verbProperties>
+            <range>15</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <warmupTime>2</warmupTime>
+            <targetParams>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetMechs>False</canTargetMechs>
+                <onlyTargetColonistsOrPrisonersOrSlaves>true</onlyTargetColonistsOrPrisonersOrSlaves>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Psionist_PsychicAura_Sensitive</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+            <li Class="CompProperties_AbilityRemoveHediff">
+                <compClass>CompAbilityEffect_RemoveHediff</compClass>
+                <hediffDef>SHG_Psionist_PsychicAura_Dull</hediffDef>
+                <applyToSelf>True</applyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_AuraBurst</defName>
+        <label>aura burst</label>
+        <description>Increases the debuffer's aura range to 22.</description>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_AuraBurst</iconPath>
+        <targetRequired>False</targetRequired>
+        <statBases>
+            <Ability_EntropyGain>50</Ability_EntropyGain>
+            <Ability_Duration>168</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>0.9</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetMechs>False</canTargetMechs>
+                <onlyTargetColonistsOrPrisonersOrSlaves>true</onlyTargetColonistsOrPrisonersOrSlaves>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Psionist_AuraBurst</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_ChannelAura</defName>
+        <label>channel aura</label>
+        <description>Increases the debuffer's aura range to 37, stuns the caster, and gives them a psychic shield. This only protects against mundane ranged attacks, so it is recommended to have at least one wall between the Debilitator and their enemies.</description>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_ChannelAura</iconPath>
+        <targetRequired>False</targetRequired>
+        <statBases>
+            <Ability_EntropyGain>100</Ability_EntropyGain>
+            <Ability_Duration>168</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>0.9</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetMechs>False</canTargetMechs>
+                <onlyTargetColonistsOrPrisonersOrSlaves>true</onlyTargetColonistsOrPrisonersOrSlaves>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Psionist_ChannelAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Psionist_DebufferShield</thingDef>
+            </li>
+            <li Class="CompProperties_AbilityEffectWithDuration">
+                <compClass>CompAbilityEffect_Stun</compClass>
+                <goodwillImpact>0</goodwillImpact>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_RuinTheWorld</defName>
+        <label>ruin the world</label>
+        <description>Increases the debuffer's aura range to 75, stuns the caster, and gives them a psychic shield. This only protects against mundane ranged attacks, so it is recommended to have at least one wall between the Debilitator and their enemies.</description>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_RuinTheWorld</iconPath>
+        <targetRequired>False</targetRequired>
+        <statBases>
+            <Ability_EntropyGain>200</Ability_EntropyGain>
+            <Ability_Duration>168</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>0.9</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetMechs>False</canTargetMechs>
+                <onlyTargetColonistsOrPrisonersOrSlaves>true</onlyTargetColonistsOrPrisonersOrSlaves>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Psionist_RuinTheWorld</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Psionist_DebufferShield</thingDef>
+            </li>
+            <li Class="CompProperties_AbilityEffectWithDuration">
+                <compClass>CompAbilityEffect_Stun</compClass>
+                <goodwillImpact>0</goodwillImpact>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

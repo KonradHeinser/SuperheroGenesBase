@@ -12,7 +12,6 @@ namespace SuperHeroGenesBase
         {
             Pawn pawn = target.Pawn;
             Pawn caster = parent.pawn;
-
             if (pawn != null)
             {
                 if (pawn != caster || Props.damageSelf == true)

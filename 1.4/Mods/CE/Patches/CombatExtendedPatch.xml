@@ -138,7 +138,7 @@
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/GeneDef[defName="AntisuperSpeed"]/statOffsets/AimingDelayFactor</xpath>
         <value>
-            <AimingDelayFactor>5</AimingDelayFactor>
+            <AimingDelayFactor>2.5</AimingDelayFactor>
         </value>
     </Operation>
 
@@ -213,20 +213,6 @@
         <xpath>Defs/GeneDef[defName="UnsuperSpeed"]/statFactors/StaggerDurationFactor</xpath>
         <value>
             <StaggerDurationFactor>1.11</StaggerDurationFactor>
-        </value>
-    </Operation>
-
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/GeneDef[defName="SuperHeroBase"]/statOffsets</xpath>
-        <value>
-            <CarryBulk>50</CarryBulk>
-        </value>
-    </Operation>
-
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/GeneDef[defName="UnsuperStrength"]/statOffsets</xpath>
-        <value>
-            <CarryBulk>-50</CarryBulk>
         </value>
     </Operation>
 
@@ -435,20 +421,6 @@
                 <MeleeHitChance>0.25</MeleeHitChance>
                 <MeleeParryChance>0.25</MeleeParryChance>
             </statFactors>
-        </value>
-    </Operation>
-
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/GeneDef[defName="SuperStrength"]/statFactors</xpath>
-        <value>
-            <CarryBulk>100</CarryBulk>
-        </value>
-    </Operation>
-
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/GeneDef[defName="AntisuperStrength"]/statFactors</xpath>
-        <value>
-            <CarryBulk>0.1</CarryBulk>
         </value>
     </Operation>
 

@@ -126,4 +126,58 @@
             </li>
         </stages>
     </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Psionist_DropTheirGuard</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>ThoughtWorker_HediffWithTarget</workerClass>
+        <hediff>SHG_Psionist_DropTheirGuard</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>guard dropped</label>
+                <baseOpinionOffset>50</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Psionist_BelovedLeader</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>ThoughtWorker_HediffWithTarget</workerClass>
+        <hediff>SHG_Psionist_BelovedLeader</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>beloved leader</label>
+                <baseOpinionOffset>100</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Psionist_UniversallyLiked</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Gene_GeneSocial</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>universally liked</label>
+                <baseOpinionOffset>20</baseOpinionOffset>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <checkedGenes>
+                    <li>SHG_Psionist_UniversallyLiked</li>
+                </checkedGenes>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
 </Defs>

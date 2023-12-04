@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+        <!--Mundane Things-->
+    <ThingDef ParentName="DrugBase">
+        <defName>SHG_SuperCreatingPill</defName>
+        <label>super creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene without side effects. The gene will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <possessionCount>10</possessionCount>
+        <descriptionHyperlinks><HediffDef>SHG_SuperCreatingPill</HediffDef></descriptionHyperlinks>
+        <graphicData>
+            <texPath>Drug/SHG_BloodPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <socialPropernessMatters>false</socialPropernessMatters>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>600</WorkToMake>
+            <MarketValue>1000</MarketValue>
+            <Mass>0.01</Mass>
+            <Flammability>0.1</Flammability>
+        </statBases>
+        <techLevel>Spacer</techLevel>
+        <tradeTags Inherit="False">
+            <li>ExoticMisc</li>
+        </tradeTags>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>100</baseIngestTicks>
+            <chairSearchRadius>0</chairSearchRadius>
+            <ingestSound>Ingest_Pill</ingestSound>
+            <ingestHoldUsesTable>false</ingestHoldUsesTable>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <drugCategory>Medical</drugCategory>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>SHG_SuperCreatingPill</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Drug">
+                <listOrder>1000</listOrder>
+                <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
         <!--Psionic Things-->
     <ThingDef ParentName="EtherealThingBase">
         <defName>SHG_Psionist_PsionicShield</defName>
@@ -117,52 +164,44 @@
         </comps>
     </ThingDef>
 
-    <ThingDef ParentName="DrugBase">
-        <defName>SHG_SuperCreatingPill</defName>
-        <label>super creating pill</label>
-        <description>A pill that gives the pawn the superhero base gene without side effects. The gene will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
-        <possessionCount>10</possessionCount>
-        <descriptionHyperlinks><HediffDef>SHG_SuperCreatingPill</HediffDef></descriptionHyperlinks>
+    <ThingDef ParentName="EtherealThingBase">
+        <defName>SHG_Psionist_DebufferShield</defName>
+        <label>psionic shield</label>
+        <thingClass>ThingWithComps</thingClass>
+        <tickerType>Normal</tickerType>
+        <drawerType>RealtimeOnly</drawerType>
+        <drawOffscreen>true</drawOffscreen>
         <graphicData>
-            <texPath>Drug/SHG_BloodPill</texPath>
-            <graphicClass>Graphic_StackCount</graphicClass>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Ethereal/PsychicShieldRipples</texPath>
+            <shaderType>BulletShieldPsychic</shaderType>
+            <color>(180, 231, 237)</color>
+            <drawSize>3</drawSize>
+            <shaderParameters>
+                <_PulseInterval>0.5</_PulseInterval>
+                <_DistortionScale>0.5</_DistortionScale>
+                <_DistortionIntensity>0.15</_DistortionIntensity>
+                <_MinAlpha>0.1</_MinAlpha>
+                <_MaxAlpha>0.3</_MaxAlpha>
+                <_DistortionTex>/Things/Mote/SmokeTiled</_DistortionTex>
+            </shaderParameters>
         </graphicData>
-        <socialPropernessMatters>false</socialPropernessMatters>
-        <rotatable>false</rotatable>
-        <statBases>
-            <WorkToMake>600</WorkToMake>
-            <MarketValue>1000</MarketValue>
-            <Mass>0.01</Mass>
-            <Flammability>0.1</Flammability>
-        </statBases>
-        <techLevel>Spacer</techLevel>
-        <tradeTags Inherit="False">
-            <li>ExoticMisc</li>
-        </tradeTags>
-        <ingestible>
-            <foodType>Processed</foodType>
-            <baseIngestTicks>100</baseIngestTicks>
-            <chairSearchRadius>0</chairSearchRadius>
-            <ingestSound>Ingest_Pill</ingestSound>
-            <ingestHoldUsesTable>false</ingestHoldUsesTable>
-            <ingestCommandString>Take {0}</ingestCommandString>
-            <ingestReportString>Taking {0}.</ingestReportString>
-            <drugCategory>Medical</drugCategory>
-            <outcomeDoers>
-                <li Class="IngestionOutcomeDoer_GiveHediff">
-                    <hediffDef>SHG_SuperCreatingPill</hediffDef>
-                    <severity>1.0</severity>
-                </li>
-            </outcomeDoers>
-        </ingestible>
         <comps>
-            <li Class="CompProperties_Drug">
-                <listOrder>1000</listOrder>
-                <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+            <li Class="CompProperties_ProjectileInterceptor">
+                <radius>1</radius>
+                <interceptGroundProjectiles>true</interceptGroundProjectiles>
+                <interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+                <interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+                <interceptAirProjectiles>true</interceptAirProjectiles>
+                <color>(0.8, 0.2, 0.8)</color>
+                <minAlpha>0.2</minAlpha>
+                <interceptEffect>Interceptor_BlockedProjectilePsychic</interceptEffect>
+            </li>
+            <li Class="CompProperties_DestroyAfterDelay">
+                <delayTicks>10000</delayTicks>
             </li>
         </comps>
     </ThingDef>
-
 
         <!--Hemomancy-->
     <ThingDef ParentName="DrugBase">

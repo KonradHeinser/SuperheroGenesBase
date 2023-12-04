@@ -17,6 +17,12 @@
 
     <SHG_ActivatableSuperGenes>    Activatable Super Genes (Restart Required)</SHG_ActivatableSuperGenes>
     <SHG_ActivatableSuperGenesDescription>Instead of having all the genes give a bunch of constant bonuses, the bonuses are locked behind an ability that must be activated to receive those boons. If active long enough, the pawn will begin gaining increasing boosts to their consciousness, and ever increasing risk of heart attack. It takes half a day for the side effects to begin appearing.</SHG_ActivatableSuperGenesDescription>
-    <SHG_InterruptibleActivatables>    Interruptible Activatables (Restart Required)</SHG_InterruptibleActivatables>
+    <SHG_InterruptibleActivatables>        Interruptible Activatables (Restart Required)</SHG_InterruptibleActivatables>
     <SHG_InterruptibleActivatablesDescription>Instead of activating almost instantly, the abilities take 10 seconds to activate, making it much harder to use them mid battle.</SHG_InterruptibleActivatablesDescription>
+
+    <SHG_MiddleGrounds>    Middle Ground Basic Super Genes (Restart Required)</SHG_MiddleGrounds>
+    <SHG_MiddleGroundsDescription>Adds a second option for all of the basic super and antisuper genes. This adds 16 new genes.</SHG_MiddleGroundsDescription>
+    <SHG_AllGrounds>        All Ground Basic Super Genes (Restart Required)</SHG_AllGrounds>
+    <SHG_AllGroundsDescription>Extends the options for all of the basic super and antisuper genes to the maximum extent. This adds 27 new genes in addition to the 16 added by middle ground, for a total of 43 new genes.</SHG_AllGroundsDescription>
+
 </LanguageData>

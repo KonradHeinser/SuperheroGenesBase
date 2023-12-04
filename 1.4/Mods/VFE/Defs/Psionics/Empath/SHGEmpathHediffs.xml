@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef>
+        <defName>SHG_Psionist_PsionicManipulator</defName>
+        <label>psionic manipulator</label>
+        <description>This Empath is multiplying their social impact by 1.5 * psychic sensitivity.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+			<li>
+                <statFactors>
+                    <SocialImpact>1.50</SocialImpact>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_PsionicTerrorizer</defName>
+        <label>psionic terrorizer</label>
+        <description>This Empath is multiplying their arrest success chance and supression by 1.5 * psychic sensitivity.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+			<li>
+                <statFactors>
+                    <ArrestSuccessChance>1.50</ArrestSuccessChance>
+                    <SuppressionPower>1.50</SuppressionPower>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_PsionicInfluencer</defName>
+        <label>psionic manipulator</label>
+        <description>This Empath is multiplying their negotiation power by 1.5 * psychic sensitivity.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+			<li>
+                <statFactors>
+                    <NegotiationAbility>1.50</NegotiationAbility>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_PsionicMissionary</defName>
+        <label>psionic manipulator</label>
+        <description>This Empath is multiplying their religion spread frequency and conversion power by 1.5 * psychic sensitivity.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+			<li>
+                <statFactors>
+                    <ConversionPower>1.50</ConversionPower>
+                    <SocialIdeoSpreadFrequencyFactor>1.50</SocialIdeoSpreadFrequencyFactor>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_PsionicBond</defName>
+        <label>psionic bond</label>
+        <description>The more people in the faction with this hediff, the better the benefits. This caps at 5 pairs.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <minSeverity>1</minSeverity>
+                <label>alone</label>
+            </li>
+            <li>
+                <minSeverity>2</minSeverity>
+                <label>paired</label>
+                <statFactors>
+                    <WorkSpeedGlobal>1.20</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>1.20</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.20</MeleeHitChance>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>4</minSeverity>
+                <label>2 pairs</label>
+                <statFactors>
+                    <WorkSpeedGlobal>1.40</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>1.40</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.40</MeleeHitChance>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>6</minSeverity>
+                <label>3 pairs</label>
+                <statFactors>
+                    <WorkSpeedGlobal>1.60</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>1.60</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.60</MeleeHitChance>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>8</minSeverity>
+                <label>4 pairs</label>
+                <statFactors>
+                    <WorkSpeedGlobal>1.80</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>1.80</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.80</MeleeHitChance>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>10</minSeverity>
+                <label>5 pairs</label>
+                <statFactors>
+                    <WorkSpeedGlobal>2.00</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>2.00</ShootingAccuracyPawn>
+                    <MeleeHitChance>2.00</MeleeHitChance>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_FactionBond" />
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="PsycastHediffBase">
+        <defName>SHG_Psionist_DropTheirGuard</defName>
+        <label>guard dropped</label>
+        <description>Psychically-induced attachment to a Placater.</description>
+        <hediffClass>SuperHeroGenesBase.Hediff_LoveTheCaster</hediffClass>
+        <targetPrefix>for</targetPrefix>
+        <isBad>false</isBad>
+        <stages><li></li></stages>
+    </HediffDef>
+
+    <HediffDef ParentName="PsycastHediffBase">
+        <defName>SHG_Psionist_BelovedLeader</defName>
+        <label>beloved leader</label>
+        <description>Psychically-induced attachment to a Unifier.</description>
+        <hediffClass>SuperHeroGenesBase.Hediff_LoveTheCaster</hediffClass>
+        <targetPrefix>for</targetPrefix>
+        <isBad>false</isBad>
+        <stages><li></li></stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_UnshakableTeam</defName>
+        <label>unshakable team</label>
+        <description>The more people in the faction with this hediff, the better the benefits. This caps at 20 people.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <minSeverity>1</minSeverity>
+                <label>alone</label>
+                <statFactors>
+                    <WorkSpeedGlobal>0.80</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>0.80</ShootingAccuracyPawn>
+                    <MeleeHitChance>0.80</MeleeHitChance>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>2</minSeverity>
+                <label>duo</label>
+                <statFactors>
+                    <WorkSpeedGlobal>1.20</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>1.20</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.20</MeleeHitChance>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>3</minSeverity>
+                <label>trio</label>
+                <statFactors>
+                    <WorkSpeedGlobal>1.30</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>1.30</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.30</MeleeHitChance>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>4</minSeverity>
+                <label>small team</label>
+                <statFactors>
+                    <WorkSpeedGlobal>1.40</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>1.40</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.40</MeleeHitChance>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>6</minSeverity>
+                <label>team</label>
+                <statFactors>
+                    <WorkSpeedGlobal>1.60</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>1.60</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.60</MeleeHitChance>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>8</minSeverity>
+                <label>large team</label>
+                <statFactors>
+                    <WorkSpeedGlobal>1.80</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>1.80</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.80</MeleeHitChance>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>10</minSeverity>
+                <label>mini legion</label>
+                <statFactors>
+                    <WorkSpeedGlobal>2.00</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>2.00</ShootingAccuracyPawn>
+                    <MeleeHitChance>2.00</MeleeHitChance>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>12</minSeverity>
+                <label>tiny legion</label>
+                <statFactors>
+                    <WorkSpeedGlobal>2.40</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>2.40</ShootingAccuracyPawn>
+                    <MeleeHitChance>2.40</MeleeHitChance>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>14</minSeverity>
+                <label>small legion</label>
+                <statFactors>
+                    <WorkSpeedGlobal>2.80</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>2.80</ShootingAccuracyPawn>
+                    <MeleeHitChance>2.80</MeleeHitChance>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>16</minSeverity>
+                <label>minor legion</label>
+                <statFactors>
+                    <WorkSpeedGlobal>3.20</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>3.20</ShootingAccuracyPawn>
+                    <MeleeHitChance>3.20</MeleeHitChance>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>18</minSeverity>
+                <label>notable legion</label>
+                <statFactors>
+                    <WorkSpeedGlobal>3.60</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>3.60</ShootingAccuracyPawn>
+                    <MeleeHitChance>3.60</MeleeHitChance>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>20</minSeverity>
+                <label>we are legion</label>
+                <statFactors>
+                    <WorkSpeedGlobal>4.00</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>4.00</ShootingAccuracyPawn>
+                    <MeleeHitChance>4.00</MeleeHitChance>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_FactionBond" />
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_OneOfAMillion</defName>
+        <label>one of a million</label>
+        <description>The more player pawns near this pawn, the less damage they will take.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <minSeverity>1</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.95</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>2</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.90</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>3</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.85</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>4</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.80</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>6</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.70</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>8</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.60</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>10</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.50</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>12</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.40</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>14</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.30</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>16</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.20</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>18</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.10</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>20</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.00</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityByNearbyPawns">
+                <onlyPlayer>True</onlyPlayer>
+                <onlyHumanlikes>True</onlyHumanlikes>
+                <includeSelf>False</includeSelf>
+                <range>30</range>
+            </li>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>60000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+    </HediffDef>
+</Defs>

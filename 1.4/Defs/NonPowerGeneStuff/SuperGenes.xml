@@ -1,11 +1,99 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <GeneDef ParentName="SuperGeneBase">
-        <defName>SuperDurability</defName>
-        <label>super durability</label>
-        <description>One of the most simplistic abilities super heroes often have, and yet it's also one of the most terrifying. Carriers of this gene are almost completely immune to damage. From clubs to flamethrowers to shotguns, only the luckiest will even pierce this hero's skin.</description>
+    <GeneDef ParentName="SuperGeneBase" Name="SuperDurabilityBase" Abstract="True">
         <iconPath>Base/SuperDurability</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
+        <exclusionTags>
+            <li>SuperDurabilities</li>
+            <li>RandomDurability</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="SuperHealingBase" Abstract="True">
+        <iconPath>Base/SuperHealing</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <geneClass>SuperHeroGenesBase.Gene_CustomizableClotting</geneClass>
+        <preventPermanentWounds>true</preventPermanentWounds>
+        <customEffectDescriptions>
+            <li>Bleeding wounds close very quickly.</li>
+        </customEffectDescriptions>
+        <hediffGiversCannotGive>
+            <li>Carcinoma</li>
+            <li>HeartAttack</li>
+            <li>BadBack</li>
+            <li>Frail</li>
+            <li>Cataract</li>
+            <li>Dementia</li>
+            <li>Alzheimers</li>
+            <li>Asthma</li>
+            <li>HeartArteryBlockage</li>
+        </hediffGiversCannotGive>
+        <exclusionTags>
+            <li>SuperHealings</li>
+            <li>WoundHealingRate</li>
+            <li>Immunity</li>
+            <li>RandomHealing</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="SuperIntelligenceBase" Abstract="True">
+        <iconPath>Base/SuperIntelligence</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <exclusionTags>
+            <li>SuperIntelligences</li>
+            <li>RandomIntelligence</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="SuperPerceptionBase" Abstract="True">
+        <iconPath>Base/SuperPerception</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <exclusionTags>
+            <li>SuperPerceptions</li>
+            <li>RandomPerception</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="SuperPersuasionBase" Abstract="True">
+        <iconPath>Base/SuperPersuasion</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <exclusionTags>
+            <li>SuperPersuasions</li>
+            <li>RandomPersuasion</li>
+        </exclusionTags>
+    </GeneDef>
+    
+    <GeneDef ParentName="SuperGeneBase" Name="SuperPrecisionBase" Abstract="True">
+        <iconPath>Base/SuperPrecision</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <exclusionTags>
+            <li>SuperPrecisions</li>
+            <li>RandomPrecision</li>
+        </exclusionTags>
+    </GeneDef>
+    
+    <GeneDef ParentName="SuperGeneBase" Name="SuperSpeedBase" Abstract="True">
+        <iconPath>Base/SuperSpeed</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <exclusionTags>
+            <li>SuperSpeeds</li>
+            <li>RandomSpeed</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="SuperStrengthBase" Abstract="True">
+        <iconPath>Base/SuperStrength</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <exclusionTags>
+            <li>SuperStrengths</li>
+            <li>RandomStrength</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperDurabilityBase">
+        <defName>SuperDurability</defName>
+        <label>super durability</label>
+        <description>One of the most simplistic abilities super heroes often have, and yet it's also one of the most terrifying. Supers with this gene are almost completely immune to damage. From clubs to flamethrowers to shotguns, only the luckiest will even pierce this hero's skin.</description>
         <displayOrderInCategory>7</displayOrderInCategory>
         <biostatMet>-3</biostatMet>
         <damageFactors>
@@ -20,10 +108,6 @@
             <ArmorRating_Sharp>1</ArmorRating_Sharp>
             <ArmorRating_Heat>1</ArmorRating_Heat>
         </statOffsets>
-        <exclusionTags>
-            <li>SuperDurabilities</li>
-            <li>RandomDurability</li>
-        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperGeneBase">
@@ -49,15 +133,11 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperGeneBase">
+    <GeneDef ParentName="SuperHealingBase">
         <defName>SuperHealing</defName>
         <label>super healing</label>
         <description>Instant death may stop this hero in their tracks, but anything less will heal quickly. This gene also provides immunity to many permanent effects and ailments that come with old age.</description>
-        <iconPath>Base/SuperHealing</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
-        <geneClass>SuperHeroGenesBase.Gene_CustomizableClotting</geneClass>
-        <displayOrderInCategory>27</displayOrderInCategory>
-        <preventPermanentWounds>true</preventPermanentWounds>
+        <displayOrderInCategory>27</displayOrderInCategory> 
         <biostatMet>-5</biostatMet>
         <statFactors>
             <LifespanFactor>3</LifespanFactor>
@@ -68,36 +148,16 @@
             <ImmunityGainSpeed>10</ImmunityGainSpeed>
             <InjuryHealingFactor>10</InjuryHealingFactor>
         </statOffsets>
-        <customEffectDescriptions>
-            <li>Bleeding wounds close very quickly.</li>
-        </customEffectDescriptions>
         <capMods>
-          <li>
-            <capacity>BloodFiltration</capacity>
-            <offset>1.0</offset>
-          </li>
-          <li>
-            <capacity>BloodPumping</capacity>
-            <offset>1.0</offset>
-          </li>
+            <li>
+                <capacity>BloodFiltration</capacity>
+                <offset>1.0</offset>
+            </li>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <offset>1.0</offset>
+            </li>
         </capMods>
-        <hediffGiversCannotGive>
-            <li>Carcinoma</li>
-            <li>HeartAttack</li>
-            <li>BadBack</li>
-            <li>Frail</li>
-            <li>Cataract</li>
-            <li>Dementia</li>
-            <li>Alzheimers</li>
-            <li>Asthma</li>
-            <li>HeartArteryBlockage</li>
-        </hediffGiversCannotGive>
-        <exclusionTags>
-            <li>SuperHealings</li>
-            <li>WoundHealingRate</li>
-            <li>Immunity</li>
-            <li>RandomHealing</li>
-        </exclusionTags>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <ClotCheckInterval>60</ClotCheckInterval>
@@ -107,12 +167,10 @@
         </modExtensions>
     </GeneDef>
 
-    <GeneDef ParentName="SuperGeneBase">
+    <GeneDef ParentName="SuperIntelligenceBase">
         <defName>SuperIntelligence</defName>
         <label>super intelligence</label>
-        <description>Carriers of this gene have extremely efficient brains that make a neurocalculator look like a glorified abacus. This efficiency also grants them a higher control of their body, thus increasing their ability to control their bodies and observe their environment.</description>
-        <iconPath>Base/SuperIntelligence</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <description>Supers with this gene have extremely efficient brains that make a neurocalculator look like a glorified abacus. This efficiency also grants them a higher control of their body, thus increasing their ability to control their bodies and observe their environment.</description>
         <displayOrderInCategory>37</displayOrderInCategory>
         <biostatMet>-4</biostatMet>
         <statFactors>
@@ -125,27 +183,21 @@
             <SHG_StunSusceptibility>0.5</SHG_StunSusceptibility>
         </statFactors>
         <capMods>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>1.0</offset>
-          </li>
-          <li>
-            <capacity>Sight</capacity>
-            <offset>1.0</offset>
-          </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <offset>1.0</offset>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <offset>1.0</offset>
+            </li>
         </capMods>
-        <exclusionTags>
-            <li>SuperIntelligences</li>
-            <li>RandomIntelligence</li>
-        </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperGeneBase">
+    <GeneDef ParentName="SuperPerceptionBase">
         <defName>SuperPerception</defName>
         <label>super perception</label>
         <description>Heroes with this gene have hyperactive senses that allows them to observe their environment far better than most should be able to.</description>
-        <iconPath>Base/SuperPerception</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>47</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
         <statFactors>
@@ -154,27 +206,21 @@
             <MeleeHitChance>3</MeleeHitChance>
         </statFactors>
         <capMods>
-          <li>
-            <capacity>Hearing</capacity>
-            <offset>1.0</offset>
-          </li>
-          <li>
-            <capacity>Sight</capacity>
-            <offset>1.0</offset>
-          </li>
+            <li>
+                <capacity>Hearing</capacity>
+                <offset>1.0</offset>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <offset>1.0</offset>
+            </li>
         </capMods>
-        <exclusionTags>
-            <li>SuperPerceptions</li>
-            <li>RandomPerception</li>
-        </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperGeneBase">
+    <GeneDef ParentName="SuperPersuasionBase">
         <defName>SuperPersuasion</defName>
         <label>super persuasion</label>
-        <description>Every part of this pawn is designed to win over people, from their appearance to their communication skills.</description>
-        <iconPath>Base/SuperPersuasion</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <description>Every part of this super is designed to win over people, from their appearance to their communication skills.</description>
         <displayOrderInCategory>57</displayOrderInCategory>
         <biostatMet>-4</biostatMet>
         <statFactors>
@@ -184,27 +230,21 @@
             <ConversionPower MayRequire="ludeon.rimworld.ideology">3</ConversionPower>
         </statFactors>
         <capMods>
-          <li>
-            <capacity>Hearing</capacity>
-            <offset>1.0</offset>
-          </li>
-          <li>
-            <capacity>Talking</capacity>
-            <offset>2.0</offset>
-          </li>
+            <li>
+                <capacity>Hearing</capacity>
+                <offset>1.0</offset>
+            </li>
+            <li>
+                <capacity>Talking</capacity>
+                <offset>2.0</offset>
+            </li>
         </capMods>
-        <exclusionTags>
-            <li>SuperPersuasions</li>
-            <li>RandomPersuasion</li>
-        </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperGeneBase">
+    <GeneDef ParentName="SuperPrecisionBase">
         <defName>SuperPrecision</defName>
         <label>super precision</label>
-        <description>The accuracy and control of this pawn is unmatched by even the best snipers and warriors the empire has ever made. Every step, move, and even breath is completely controlled, allowing carriers of this gene to dodge the undodgeable, and hit the unhittable.</description>
-        <iconPath>Base/SuperPrecision</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <description>The accuracy and control of this super is unmatched by even the best snipers and warriors the empire has ever made. Every step, move, and even breath is completely controlled, allowing supers with this gene to dodge the undodgeable, and hit the unhittable.</description>
         <displayOrderInCategory>67</displayOrderInCategory>
         <biostatMet>-4</biostatMet>
         <statFactors>
@@ -215,27 +255,21 @@
             <IncomingDamageFactor>0.9</IncomingDamageFactor>
         </statFactors>
         <capMods>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>1.0</offset>
-          </li>
-          <li>
-            <capacity>Breathing</capacity>
-            <offset>1.0</offset>
-          </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <offset>1.0</offset>
+            </li>
+            <li>
+                <capacity>Breathing</capacity>
+                <offset>1.0</offset>
+            </li>
         </capMods>
-        <exclusionTags>
-            <li>SuperPrecisions</li>
-            <li>RandomPrecision</li>
-        </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperGeneBase">
+    <GeneDef ParentName="SuperSpeedBase">
         <defName>SuperSpeed</defName>
         <label>super speed</label>
-        <description>Carriers of this gene can move so quickly that even horses cannot keep up. They move several times faster than normal pawns, and can often take down unarmored foes before they have a chance to react.</description>
-        <iconPath>Base/SuperSpeed</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <description>Supers with this gene can move so quickly that even horses cannot keep up. They move several times faster than normal pawns, and can often take down unarmored foes before they have a chance to react.</description>
         <displayOrderInCategory>77</displayOrderInCategory>
         <biostatMet>-5</biostatMet>
         <statFactors>
@@ -247,39 +281,34 @@
             <AimingDelayFactor>-5</AimingDelayFactor>
         </statOffsets>
         <capMods>
-          <li>
-            <capacity>BloodPumping</capacity>
-            <offset>1.0</offset>
-          </li>
-          <li>
-            <capacity>Breathing</capacity>
-            <offset>1.0</offset>
-          </li>
-          <li>
-            <capacity>Moving</capacity>
-            <offset>2.0</offset>
-          </li>
-          <li>
-            <capacity>Consciousness</capacity>
-            <offset>1.0</offset>
-          </li>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <offset>1.0</offset>
+            </li>
+            <li>
+                <capacity>Breathing</capacity>
+                <offset>1.0</offset>
+            </li>
+            <li>
+                <capacity>Moving</capacity>
+                <offset>2.0</offset>
+            </li>
+            <li>
+                <capacity>Consciousness</capacity>
+                <offset>1.0</offset>
+            </li>
         </capMods>
-        <exclusionTags>
-            <li>SuperSpeeds</li>
-            <li>RandomSpeed</li>
-        </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperGeneBase">
+    <GeneDef ParentName="SuperStrengthBase">
         <defName>SuperStrength</defName>
         <label>super strength</label>
-        <description>One hit from this pawn can cause exceptional damage, and not only can they carry more than an elephant, they can carry multiple elephants at the same time.</description>
-        <iconPath>Base/SuperStrength</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <description>One hit from this super can cause exceptional damage, and not only can they carry more than an elephant, they can carry multiple elephants at the same time.</description>
         <displayOrderInCategory>87</displayOrderInCategory>
         <biostatMet>-6</biostatMet>
         <statFactors>
             <CarryingCapacity>100</CarryingCapacity>
+            <CarryBulk MayRequire="ceteam.combatextended">100</CarryBulk>
             <MeleeDamageFactor>7</MeleeDamageFactor>
         </statFactors>
         <capMods>
@@ -288,9 +317,5 @@
                 <offset>2.0</offset>
             </li>
         </capMods>
-        <exclusionTags>
-            <li>SuperStrengths</li>
-            <li>RandomStrength</li>
-        </exclusionTags>
     </GeneDef>
 </Defs>

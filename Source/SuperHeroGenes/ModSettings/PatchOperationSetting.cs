@@ -49,6 +49,21 @@ namespace SuperHeroGenesBase
                     return active.Apply(xml);
                 }
             }
+            else if (setting == "middleGrounds")
+            {
+                if (SuperheroGenes_Settings.middleGrounds && active != null)
+                {
+                    return active.Apply(xml);
+                }
+            }
+            else if (setting == "allGrounds")
+            {
+                if (SuperheroGenes_Settings.middleGrounds && SuperheroGenes_Settings.allGrounds && active != null)
+                {
+                    return active.Apply(xml);
+                }
+            }
+
             else if (setting == "medievalVillains")
             {
                 if (SuperheroGenes_Settings.medievalVillains && active != null)

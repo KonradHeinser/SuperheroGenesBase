@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_DropTheirGuard</defName>
+        <label>drop their guard</label>
+        <description>Make another pawn feel more comfortable around this Placater.</description>
+        <iconPath>Psionist/Empath/Gene_Psionist_DropTheirGuard</iconPath>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EntropyGain>50</Ability_EntropyGain>
+            <Ability_Duration>8000</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>15</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <warmupTime>2</warmupTime>
+            <targetParams>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetMechs>False</canTargetMechs>
+                <onlyTargetColonistsOrPrisonersOrSlaves>true</onlyTargetColonistsOrPrisonersOrSlaves>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_LoveTheCaster">
+                <psychic>True</psychic>
+                <hediffToApply>SHG_Psionist_DropTheirGuard</hediffToApply>
+            </li>
+            <li Class="CompProperties_AbilitySocialInteraction">
+                <interactionDef>SHG_Psionist_EmpathOpinionManipulation</interactionDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_PsionicBond</defName>
+        <label>psionic bond</label>
+        <description>Create a bond between the target and the caster that increases work speed and accuracy for both pawns. Pawns can't benefit from multiple bonds at the same time, but if multiple Placaters create bonds with other pawns, then the benefit increases for everyone who has the Psionic Bond hediff.</description>
+        <iconPath>Psionist/Empath/Gene_Psionist_PsionicBond</iconPath>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>900000</cooldownTicksRange>
+        <statBases>
+            <Ability_EntropyGain>100</Ability_EntropyGain>
+            <Ability_Duration>15000</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>15</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetMechs>False</canTargetMechs>
+                <onlyTargetColonistsOrPrisonersOrSlaves>true</onlyTargetColonistsOrPrisonersOrSlaves>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <applyToSelf>True</applyToSelf>
+                <hediffDef>SHG_Psionist_PsionicBond</hediffDef>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_BelovedLeader</defName>
+        <label>beloved leader</label>
+        <description>Give a brief speech while infusing the words with psychic energy to make all nearby allies feel more much comfortable around the Unifier.</description>
+        <iconPath>Psionist/Empath/Gene_Psionist_BelovedLeader</iconPath>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EntropyGain>100</Ability_EntropyGain>
+            <Ability_Duration>8000</Ability_Duration>
+            <Ability_EffectRadius>14.9</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>15</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <warmupTime>5</warmupTime>
+            <targetParams>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetMechs>False</canTargetMechs>
+                <onlyTargetColonistsOrPrisonersOrSlaves>true</onlyTargetColonistsOrPrisonersOrSlaves>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_LoveTheCaster">
+                <psychic>True</psychic>
+                <hediffToApply>SHG_Psionist_BelovedLeader</hediffToApply>
+            </li>
+            <li Class="CompProperties_AbilitySocialInteraction">
+                <interactionDef>SHG_Psionist_EmpathOpinionManipulation</interactionDef>
+            </li>
+            <li Class="CompProperties_AbilityRequiresCapacity">
+                <capacity>Talking</capacity>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_UnshakableTeam</defName>
+        <label>unshakable team</label>
+        <description>Add a pawn to the Psionic Network. If this is the first time the Unifier is using this ability and they were not made part of the network by another Unifier, they also gain the Unshakable Team hediff.</description>
+        <iconPath>Psionist/Empath/Gene_Psionist_PsionicBond</iconPath>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <statBases>
+            <Ability_EntropyGain>200</Ability_EntropyGain>
+        </statBases>
+        <verbProperties>
+            <range>15</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetMechs>False</canTargetMechs>
+                <onlyTargetColonistsOrPrisonersOrSlaves>true</onlyTargetColonistsOrPrisonersOrSlaves>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <applyToSelf>True</applyToSelf>
+                <hediffDef>SHG_Psionist_UnshakableTeam</hediffDef>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_OneOfAMillion</defName>
+        <label>one of a million</label>
+        <description>Reduces damage taken for a day based on the number of nearby ally pawns.</description>
+        <iconPath>Psionist/Empath/Gene_Psionist_PsionicBond</iconPath>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <statBases>
+            <Ability_EntropyGain>300</Ability_EntropyGain>
+            <Ability_Duration>1000</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>30</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetMechs>False</canTargetMechs>
+                <onlyTargetColonistsOrPrisonersOrSlaves>true</onlyTargetColonistsOrPrisonersOrSlaves>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <hediffDef>SHG_Psionist_OneOfAMillion</hediffDef>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

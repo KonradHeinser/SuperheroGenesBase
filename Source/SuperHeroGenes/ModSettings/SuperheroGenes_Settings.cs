@@ -37,7 +37,8 @@ namespace SuperHeroGenesBase
         public static bool supersEverywhere = false;
         public static bool activatableSuperGenes = false;
         public static bool interruptibleActivatables = false;
-        public static bool hemomancerRefresher = false;
+        public static bool middleGrounds = false;
+        public static bool allGrounds = false;
 
         public static bool medievalVillains = false;
         public static bool vengefulOne = true;
@@ -52,6 +53,8 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref supersEverywhere, "supersEverywhere");
             Scribe_Values.Look(ref activatableSuperGenes, "activatableSuperGenes");
             Scribe_Values.Look(ref interruptibleActivatables, "interruptibleActivatables");
+            Scribe_Values.Look(ref middleGrounds, "middleGrounds");
+            Scribe_Values.Look(ref allGrounds, "allGrounds");
 
             Scribe_Values.Look(ref medievalVillains, "medievalVillains");
             Scribe_Values.Look(ref vengefulOne, "vengefulOne");
@@ -75,6 +78,13 @@ namespace SuperHeroGenesBase
             if (activatableSuperGenes)
             {
                 optionsMenu.CheckboxLabeled("SHG_InterruptibleActivatables".Translate(), ref interruptibleActivatables, "SHG_InterruptibleActivatablesDescription".Translate());
+                optionsMenu.Gap(10f);
+            }
+            optionsMenu.CheckboxLabeled("SHG_MiddleGrounds".Translate(), ref middleGrounds, "SHG_MiddleGroundsDescription".Translate());
+            optionsMenu.Gap(10f);
+            if (middleGrounds)
+            {
+                optionsMenu.CheckboxLabeled("SHG_AllGrounds".Translate(), ref allGrounds, "SHG_AllGroundsDescription".Translate());
                 optionsMenu.Gap(10f);
             }
             if (ModsConfig.IsActive("SuperheroGenes.Villains"))
