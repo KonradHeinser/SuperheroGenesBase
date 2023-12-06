@@ -31,12 +31,4 @@
         </inactive>
     </Operation>
 
-    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
-        <setting>superHealingGivesAlwaysVeryFertile</setting>
-        <inactive Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[@Name="SHG_MineableResourceBase"]/building</xpath>
-            <value><smoothedThing /></value>
-        </inactive>
-    </Operation>
-
 </Patch>
