@@ -966,4 +966,48 @@
             <li>Archetype_MidasJade</li>
         </exclusionTags>
     </GeneDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_DormantSuper</defName>
+        <label>dormant super</label>
+        <description>At some point in this super's lineage, the superhero gene was introduced but never activated. While this pawn will likely never become a true super, one of their children may suddenly become far greater than their ancestors.\n\nAssuming no mods alter inheritence, there is a 50% for a given gene to be inherited if one parent has it, and a 100% chance of inheriting the gene if both do. There are some issues with vanilla's inheritence system, which are described more in the mod description. Assuming the gene inheritence system doesn't mess up, these are the chances of a child being a true super.\n\nBoth have Super: 50% Super 50% Dormant\nOnly one Super: 25% Super 25% Dormant 25% Both Lost 25% Complete Disappointment</description>
+        <iconPath>Archetypes/Gene_DormantSuper</iconPath>
+        <biostatMet>0</biostatMet>
+        <statFactors>
+            <LifespanFactor>0.333</LifespanFactor>
+            <ImmunityGainSpeed>0.333</ImmunityGainSpeed>
+            <IncomingDamageFactor>1.333</IncomingDamageFactor>
+            <InjuryHealingFactor>0.333</InjuryHealingFactor>
+            <MeleeDamageFactor>0.333</MeleeDamageFactor>
+            <PawnTrapSpringChance>100</PawnTrapSpringChance>
+            <StaggerDurationFactor>1.333</StaggerDurationFactor>
+            <GlobalLearningFactor>0.5</GlobalLearningFactor>
+            <LearningRateFactor>0.5</LearningRateFactor>
+            <ResearchSpeed>0.5</ResearchSpeed>
+            <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+        </statFactors>
+        <statOffsets>
+            <ComfyTemperatureMin>20</ComfyTemperatureMin>
+            <ComfyTemperatureMax>-20</ComfyTemperatureMax>
+            <AimingDelayFactor>.1</AimingDelayFactor>
+            <ShootingAccuracyPawn>-3</ShootingAccuracyPawn>
+            <CarryingCapacity>-100</CarryingCapacity>
+            <MoveSpeed>-5</MoveSpeed>
+            <MeleeDodgeChance>-3</MeleeDodgeChance>
+            <MeleeHitChance>-3</MeleeHitChance>
+            <MentalBreakThreshold>.15</MentalBreakThreshold>
+            <PainShockThreshold>-0.50</PainShockThreshold>
+            <PawnBeauty>-5.0</PawnBeauty>
+            <SocialImpact>-.5</SocialImpact>
+            <NegotiationAbility>-.5</NegotiationAbility>
+            <ConversionPower MayRequire="ludeon.rimworld.ideology">-.5</ConversionPower>
+            <ToxicEnvironmentResistance>-.1</ToxicEnvironmentResistance>
+            <ToxicResistance>-.1</ToxicResistance>
+            <TameAnimalChance>-.1</TameAnimalChance>
+            <TrainAnimalChance>-.1</TrainAnimalChance>
+            <ArmorRating_Blunt>-.1</ArmorRating_Blunt>
+            <ArmorRating_Sharp>-.1</ArmorRating_Sharp>
+            <ArmorRating_Heat>-.1</ArmorRating_Heat>
+        </statOffsets>
+    </GeneDef>
 </Defs>
