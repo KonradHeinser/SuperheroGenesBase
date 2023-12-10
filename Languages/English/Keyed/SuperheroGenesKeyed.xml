@@ -2,6 +2,11 @@
 <LanguageData>
 	<SHG_Hemomancer_Starfish>{0}'s clump of hemogen has successfully developed.</SHG_Hemomancer_Starfish>
     <SHG_GeneticRomanceChance>Carrier Gene(s)</SHG_GeneticRomanceChance>
+        
+        <!--DRG Stuff-->
+    <Cost>{0} cost</Cost>
+    <AlertLowResource>Low {0}</AlertLowResource>
+    <AlertLowResourceDesc>A colonist has low {0}.</AlertLowResourceDesc>
 
         <!--Settings stuff-->
     <SHG_ModName>Superhero Genes - Base</SHG_ModName>
@@ -24,5 +29,4 @@
     <SHG_MiddleGroundsDescription>Adds a second option for all of the basic super and antisuper genes. This adds 16 new genes.</SHG_MiddleGroundsDescription>
     <SHG_AllGrounds>        All Ground Basic Super Genes (Restart Required)</SHG_AllGrounds>
     <SHG_AllGroundsDescription>Extends the options for all of the basic super and antisuper genes to the maximum extent. This adds 27 new genes in addition to the 16 added by middle ground, for a total of 43 new genes.</SHG_AllGroundsDescription>
-
 </LanguageData>

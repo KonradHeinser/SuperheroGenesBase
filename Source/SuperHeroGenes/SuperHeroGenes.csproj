@@ -48,6 +48,10 @@
       <HintPath>..\..\..\..\RimWorldLinux_Data\Managed\System.Xml.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\RimWorldLinux_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,6 +102,18 @@
     <Compile Include="Hediffs\HediffCompProperties_SeverityByNearbyPawns.cs" />
     <Compile Include="ModSettings\SuperheroGenes_Settings.cs" />
     <Compile Include="ModSettings\PatchOperationSetting.cs" />
+    <Compile Include="DynamicResourceGenes\ResourceGene.cs" />
+    <Compile Include="DynamicResourceGenes\DRGExtension.cs" />
+    <Compile Include="DynamicResourceGenes\ResourceDrainGene.cs" />
+    <Compile Include="DynamicResourceGenes\Hediff_ResourceCraving.cs" />
+    <Compile Include="DynamicResourceGenes\HediffComp_SeverityFromResource.cs" />
+    <Compile Include="DynamicResourceGenes\HediffCompProperties_SeverityFromResource.cs" />
+    <Compile Include="DynamicResourceGenes\IngestionOutcomeDoer_OffsetResource.cs" />
+    <Compile Include="DynamicResourceGenes\CompProperties_AbilityResourceCost.cs" />
+    <Compile Include="DynamicResourceGenes\CompAbilityEffect_ResourceCost.cs" />
+    <Compile Include="DynamicResourceGenes\GeneGizmo_ResourceGene.cs" />
+    <Compile Include="DynamicResourceGenes\Alert_LowResource.cs" />
+    <Compile Include="DynamicResourceGenes\JobGiver_GetResourcePack.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />
@@ -106,9 +122,6 @@
     <Folder Include="Thoughts\" />
     <Folder Include="DynamicResourceGenes\" />
     <Folder Include="ModSettings\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="DynamicResourceGenes\DRGExtension.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
