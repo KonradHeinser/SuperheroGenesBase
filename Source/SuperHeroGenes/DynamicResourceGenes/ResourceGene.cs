@@ -127,6 +127,7 @@ namespace SuperHeroGenesBase
                 resourcePacksAllowed = extension.resourcePacksAllowed;
                 if (extension.maximum != 1f || extension.maxStat != null || extension.maxFactorStat != null) CreateMax(extension.maximum, extension.maxStat, extension.maxFactorStat);
             }
+            else Log.Error(def + "is missing the DRGExtension modex");
         }
 
         public void CreateMax(float maximum = 1f, StatDef maxStat = null, StatDef maxFactorStat = null)
@@ -183,9 +184,13 @@ namespace SuperHeroGenesBase
             if (resourceGene != null)
             {
                 resourceGene.Value += offset;
-                if (resourceGene.Value <= 0f && !pawn.health.hediffSet.HasHediff(extension.cravingHediff))
+                if (resourceGene.Value <= 0f && extension.cravingHediff != null && !pawn.health.hediffSet.HasHediff(extension.cravingHediff))
                 {
                     pawn.health.AddHediff(extension.cravingHediff);
+                }
+                if (resourceGene.Value >= resourceGene.max && extension.overchargeHediff != null && !pawn.health.hediffSet.HasHediff(extension.overchargeHediff))
+                {
+                    pawn.health.AddHediff(extension.overchargeHediff);
                 }
             }
         }

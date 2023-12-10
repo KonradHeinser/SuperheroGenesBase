@@ -44,6 +44,36 @@
         </stages>
     </HediffDef>
 
+    <GeneDef ParentName="SHG_ArchetypeBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Archetypes_Radiomancer</defName>
+        <label>radiomancer</label>
+        <description>Radiomancers constantly generate massive amounts of energy in their body .</description>
+        <iconPath>Archetypes/Gene_Radiomancer</iconPath>
+        <prerequisite />
+        <geneClass>SuperHeroGenesBase.ResourceGene</geneClass>
+        <resourceLabel>radiation</resourceLabel>
+        <biostatArc>1</biostatArc>
+        <resourceLossPerDay>-1</resourceLossPerDay>
+        <displayOrderInCategory>-0.8</displayOrderInCategory>
+		<modExtensions>
+			<li Class="SuperHeroGenesBase.DRGExtension">
+				<isMainGene>True</isMainGene>
+			</li>
+            <li Class="VanillaGenesExpanded.GeneExtension">
+				<hideGene>true</hideGene>
+			</li>
+		</modExtensions>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>radio</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>mancer</symbol></li>
+                <li><symbol>active</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
         <!--Mancers-->
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Electromancer</defName>

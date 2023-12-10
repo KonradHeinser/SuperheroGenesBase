@@ -32,7 +32,8 @@ namespace SuperHeroGenesBase
         {
             get
             {
-                if (cachedResourceGene == null || !cachedResourceGene.Active)
+                if (!def.HasModExtension<DRGExtension>()) Log.Error(def + "doesn't have the DRG extension, meaning the main resource gene cannot be found.");
+                else if (cachedResourceGene == null || !cachedResourceGene.Active)
                 {
                     cachedResourceGene = (ResourceGene)pawn.genes.GetGene(def.GetModExtension<DRGExtension>().mainResourceGene);
                 }

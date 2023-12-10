@@ -72,21 +72,19 @@ namespace SuperHeroGenesBase
 
         protected override Job TryGiveJob(Pawn pawn)
         {
-            if (!ModsConfig.BiotechActive)
-            {
-                return null;
-            }
-            ResourceGene resourceGene = pawn.genes?.GetFirstGeneOfType<ResourceGene>();
-            List<ResourceGene> resourcesPresent = new List<ResourceGene>();
+            if (!ModsConfig.BiotechActive) return null;
+            ResourceGene resourceGene = pawn.genes?.GetFirstGeneOfType<ResourceGene>(); // Verifies that any resource gene exists
             if (resourceGene == null)
             {
                 return null;
             }
+
+            List<ResourceGene> resourcesPresent = new List<ResourceGene>(); // Creates list of all resource genes
             foreach (Gene gene in pawn.genes?.GenesListForReading)
             {
                 if (gene.def.HasModExtension<DRGExtension>() && gene.def.GetModExtension<DRGExtension>().isMainGene) resourcesPresent.Add((ResourceGene)gene);
             }
-            foreach (ResourceGene resource in resourcesPresent)
+            foreach (ResourceGene resource in resourcesPresent) // Check each resource gene, and the moment a viable one appears, return job
             {
                 if (!resource.ShouldConsumeResourceNow())
                 {

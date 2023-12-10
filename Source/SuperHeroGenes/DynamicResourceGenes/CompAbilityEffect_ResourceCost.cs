@@ -13,7 +13,7 @@ namespace SuperHeroGenesBase
         {
             get
             {
-                Gene_Resource gene_Resource = parent.pawn.genes?.GetFirstGeneOfType<Gene_Resource>();
+                Gene_Resource gene_Resource = (ResourceGene)parent.pawn.genes.GetGene(Props.mainResourceGene);
                 if (gene_Resource == null || gene_Resource.Value < Props.resourceCost)
                 {
                     return false;
@@ -27,13 +27,17 @@ namespace SuperHeroGenesBase
             base.Apply(target, dest);
             Pawn pawn = parent.pawn;
             ResourceGene resourceGene;
-            resourceGene = (ResourceGene)pawn.genes.GetGene(Props.mainResourceGene);
-            ResourceGene.OffsetResource(pawn, 0f - Props.resourceCost, resourceGene, resourceGene.def.GetModExtension<DRGExtension>());
+            if (Props.mainResourceGene == null) Log.Error("A casted ability is missing a mainResourceGene, meaning it can't alter the resource levels");
+            else
+            {
+                resourceGene = (ResourceGene)pawn.genes.GetGene(Props.mainResourceGene);
+                ResourceGene.OffsetResource(pawn, 0f - Props.resourceCost, resourceGene, resourceGene.def.GetModExtension<DRGExtension>());
+            }
         }
 
         public override bool GizmoDisabled(out string reason)
         {
-            Gene_Resource gene_Resource = parent.pawn.genes?.GetFirstGeneOfType<Gene_Resource>();
+            Gene_Resource gene_Resource = (ResourceGene)parent.pawn.genes.GetGene(Props.mainResourceGene);
             if (gene_Resource == null)
             {
                 reason = "AbilityDisabledNoResourceGene".Translate(parent.pawn);

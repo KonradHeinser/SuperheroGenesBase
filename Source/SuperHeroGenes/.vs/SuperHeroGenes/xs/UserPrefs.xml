@@ -1,12 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="DynamicResourceGenes/JobGiver_GetResourcePack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DynamicResourceGenes/DRGExtension.cs">
     <Files>
-      <File FileName="DynamicResourceGenes/DRGExtension.cs" Line="12" Column="128" />
-      <File FileName="DynamicResourceGenes/ResourceGene.cs" Line="192" Column="1" />
-      <File FileName="DynamicResourceGenes/HediffCompProperties_SeverityFromResource.cs" Line="18" Column="1" />
-      <File FileName="DynamicResourceGenes/HediffComp_SeverityFromResource.cs" Line="19" Column="18" />
-      <File FileName="DynamicResourceGenes/JobGiver_GetResourcePack.cs" Line="71" Column="14" />
-      <File FileName="DynamicResourceGenes/Alert_LowResource.cs" Line="9" Column="6" />
+      <File FileName="DynamicResourceGenes/ResourceGene.cs" Line="193" Column="71" />
+      <File FileName="DynamicResourceGenes/IngestionOutcomeDoer_OffsetResource.cs" Line="16" Column="153" />
+      <File FileName="DynamicResourceGenes/DRGExtension.cs" Line="8" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,9 +11,10 @@
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
               <Node name="DynamicResourceGenes" expanded="True">
-                <Node name="JobGiver_GetResourcePack.cs" selected="True" />
+                <Node name="DRGExtension.cs" selected="True" />
               </Node>
               <Node name="Genes" expanded="True" />
+              <Node name="HiveMind" expanded="True" />
               <Node name="ModSettings" expanded="True" />
             </Node>
           </Node>

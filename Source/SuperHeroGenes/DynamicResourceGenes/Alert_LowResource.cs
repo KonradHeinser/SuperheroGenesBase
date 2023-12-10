@@ -20,7 +20,7 @@ namespace SuperHeroGenesBase
             }
         }
 
-        public override string GetLabel() // Make the pawn adding use loops to add to lists so the alerts can be iterated through
+        public override string GetLabel()
         {
             if (Targets.Count == 1)
             {

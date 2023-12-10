@@ -114,6 +114,12 @@
     <Compile Include="DynamicResourceGenes\GeneGizmo_ResourceGene.cs" />
     <Compile Include="DynamicResourceGenes\Alert_LowResource.cs" />
     <Compile Include="DynamicResourceGenes\JobGiver_GetResourcePack.cs" />
+    <Compile Include="DynamicResourceGenes\Workgiver_AdministerResource.cs" />
+    <Compile Include="DynamicResourceGenes\WorkGiver_Warden_DeliverResource.cs" />
+    <Compile Include="HiveMind\HiveRoleToCheckFor.cs" />
+    <Compile Include="HiveMind\HiveTier.cs" />
+    <Compile Include="HiveMind\HiveMindGene.cs" />
+    <Compile Include="HiveMind\HiveMindExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

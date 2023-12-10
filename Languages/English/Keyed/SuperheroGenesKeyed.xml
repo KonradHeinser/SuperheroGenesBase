@@ -5,8 +5,10 @@
         
         <!--DRG Stuff-->
     <Cost>{0} cost</Cost>
-    <AlertLowResource>Low {0}</AlertLowResource>
-    <AlertLowResourceDesc>A colonist has low {0}.</AlertLowResourceDesc>
+    <AlertLowResource>Low resource</AlertLowResource>
+    <AlertLowResourceDesc>A colonist is runnning out of a resource.</AlertLowResourceDesc>
+    <NoIngredients>No viable packs.</NoIngredients>
+    <NotAllowedResource>Resource packs disabled by food restriction.</NotAllowedResource>
 
         <!--Settings stuff-->
     <SHG_ModName>Superhero Genes - Base</SHG_ModName>
