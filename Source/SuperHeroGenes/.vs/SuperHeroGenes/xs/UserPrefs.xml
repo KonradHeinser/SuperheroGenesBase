@@ -1,7 +1,7 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="DynamicResourceGenes/Workgiver_AdministerResource.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DynamicResourceGenes/WorkGiver_Warden_DeliverResource.cs">
     <Files>
-      <File FileName="DynamicResourceGenes/Workgiver_AdministerResource.cs" Line="43" Column="18" />
+      <File FileName="DynamicResourceGenes/Workgiver_AdministerResource.cs" Line="48" Column="51" />
       <File FileName="DynamicResourceGenes/WorkGiver_Warden_DeliverResource.cs" Line="49" Column="14" />
     </Files>
     <Pads>
@@ -10,7 +10,7 @@
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
               <Node name="DynamicResourceGenes" expanded="True">
-                <Node name="Workgiver_AdministerResource.cs" selected="True" />
+                <Node name="WorkGiver_Warden_DeliverResource.cs" selected="True" />
               </Node>
               <Node name="HiveMind" expanded="True" />
               <Node name="ModSettings" expanded="True" />
