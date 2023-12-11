@@ -42,10 +42,27 @@ namespace SuperHeroGenesBase
                 if (item.RaceProps.Humanlike && item.Faction == Faction.OfPlayer)
                 {
                     ResourceGene resourceGene = item.genes?.GetFirstGeneOfType<ResourceGene>();
-                    if (resourceGene != null && resourceGene.Value < resourceGene.MinLevelForAlert)
+                    if (resourceGene == null) continue;
+                    if (resourceGene.Value < resourceGene.MinLevelForAlert)
                     {
                         targets.Add(item);
                         targetLabels.Add(item.NameShortColored.Resolve());
+                    }
+                    else
+                    {
+                        foreach (Gene gene in item.genes.GenesListForReading)
+                        {
+                            if (gene.def.HasModExtension<DRGExtension>() && gene.def.GetModExtension<DRGExtension>().isMainGene)
+                            {
+                                resourceGene = (ResourceGene)gene;
+                                if (resourceGene.Value < resourceGene.MinLevelForAlert)
+                                {
+                                    targets.Add(item);
+                                    targetLabels.Add(item.NameShortColored.Resolve());
+                                    break;
+                                }
+                            }
+                        }
                     }
                 }
             }

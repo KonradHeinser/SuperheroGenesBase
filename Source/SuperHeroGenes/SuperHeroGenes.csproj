@@ -120,6 +120,9 @@
     <Compile Include="HiveMind\HiveTier.cs" />
     <Compile Include="HiveMind\HiveMindGene.cs" />
     <Compile Include="HiveMind\HiveMindExtension.cs" />
+    <Compile Include="SHGUtilities.cs" />
+    <Compile Include="DynamicResourceGenes\CompProperties_AbilityConvertResource.cs" />
+    <Compile Include="DynamicResourceGenes\CompAbilityEffect_ConvertResource.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

@@ -86,10 +86,7 @@ namespace SuperHeroGenesBase
             }
             foreach (ResourceGene resource in resourcesPresent) // Check each resource gene, and the moment a viable one appears, return job
             {
-                if (!resource.ShouldConsumeResourceNow())
-                {
-                    continue;
-                }
+                if (!resource.ShouldConsumeResourceNow()) continue;
                 DRGExtension extension = resource.def.GetModExtension<DRGExtension>();
                 if (resource.resourcePacksAllowed && !extension.resourcePacks.NullOrEmpty())
                 {
@@ -126,10 +123,10 @@ namespace SuperHeroGenesBase
                         return pawn.inventory.innerContainer[i];
                     }
                 }
+                Thing returnThing = GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, pawn.Map.listerThings.ThingsOfDef(thingDef), PathEndMode.OnCell, TraverseParms.For(pawn), 9999f, (Thing t) => pawn.CanReserve(t) && !t.IsForbidden(pawn));
+                if (returnThing != null) return returnThing;
             }
-            List<Thing> resourcepackThings = new List<Thing>();
-            foreach (ThingDef thing in resourcePacks) resourcepackThings.Add(ThingMaker.MakeThing(thing));
-            return GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, resourcepackThings.AsEnumerable(), PathEndMode.OnCell, TraverseParms.For(pawn), 9999f, (Thing t) => pawn.CanReserve(t) && !t.IsForbidden(pawn));
+            return null;
         }
 
         public static AcceptanceReport CanFeedOnPrisoner(Pawn bloodfeeder, Pawn prisoner)

@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using System;
+using RimWorld;
 using UnityEngine;
 using Verse;
-using RimWorld;
 
 namespace SuperHeroGenesBase
 {
@@ -55,7 +54,7 @@ namespace SuperHeroGenesBase
 
         public Color GetHighlightColor()
         {
-            if (def.HasModExtension<DRGExtension>()) return def.GetModExtension<DRGExtension>().BarHighlightColor;
+            if (def.HasModExtension<DRGExtension>()) return def.GetModExtension<DRGExtension>().barHighlightColor;
             return new ColorInt(145, 42, 42).ToColor;
         }
 
@@ -118,18 +117,6 @@ namespace SuperHeroGenesBase
             OffsetResource(pawn, ResourceLossPerDay * -1, this, extension, false, true);
         }
 
-        public void InitializeExtension()
-        {
-            extension = def.GetModExtension<DRGExtension>();
-            extensionAlreadyChecked = true;
-            if (extension != null)
-            {
-                resourcePacksAllowed = extension.resourcePacksAllowed;
-                if (extension.maximum != 1f || extension.maxStat != null || extension.maxFactorStat != null) CreateMax(extension.maximum, extension.maxStat, extension.maxFactorStat);
-            }
-            else Log.Error(def + "is missing the DRGExtension modex");
-        }
-
         public void CreateMax(float maximum = 1f, StatDef maxStat = null, StatDef maxFactorStat = null)
         {
             float newMax;
@@ -151,22 +138,28 @@ namespace SuperHeroGenesBase
 
         public override IEnumerable<Gizmo> GetGizmos()
         {
-            if (Active)
+            foreach (Gizmo gizmo in base.GetGizmos())
             {
-                if (gizmo == null)
-                {
-                    gizmo = (GeneGizmo_Resource)Activator.CreateInstance(def.resourceGizmoType, this, DrainGenes, BarColor, BarHighlightColor);
-                }
-                if ((Find.Selector.SelectedPawns.Count == 1 || def.showGizmoOnMultiSelect) && (!pawn.Drafted || def.showGizmoWhenDrafted))
-                {
-                    yield return gizmo;
-                }
+                yield return gizmo;
             }
             foreach (Gizmo resourceDrainGizmo in GeneResourceDrainUtility.GetResourceDrainGizmos(this))
             {
                 yield return resourceDrainGizmo;
             }
         }
+
+        public void InitializeExtension()
+        {
+            extension = def.GetModExtension<DRGExtension>();
+            extensionAlreadyChecked = true;
+            if (extension != null)
+            {
+                resourcePacksAllowed = extension.resourcePacksAllowed;
+                if (extension.maximum != 1f || extension.maxStat != null || extension.maxFactorStat != null) CreateMax(extension.maximum, extension.maxStat, extension.maxFactorStat);
+            }
+            else Log.Error(def + "is missing the DRGExtension modex");
+        }
+
 
         public override void ExposeData()
         {
@@ -190,9 +183,11 @@ namespace SuperHeroGenesBase
                 }
                 if (resourceGene.Value >= resourceGene.max && extension.overchargeHediff != null && !pawn.health.hediffSet.HasHediff(extension.overchargeHediff))
                 {
+                    if (pawn.health.hediffSet.HasHediff(extension.overchargeHediff)) Log.Error("What the fuck");
                     pawn.health.AddHediff(extension.overchargeHediff);
                 }
             }
         }
+
     }
 }

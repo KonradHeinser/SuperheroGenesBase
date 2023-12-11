@@ -1,9 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="DynamicResourceGenes/DRGExtension.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DynamicResourceGenes/Workgiver_AdministerResource.cs">
     <Files>
-      <File FileName="DynamicResourceGenes/ResourceGene.cs" Line="193" Column="71" />
-      <File FileName="DynamicResourceGenes/IngestionOutcomeDoer_OffsetResource.cs" Line="16" Column="153" />
-      <File FileName="DynamicResourceGenes/DRGExtension.cs" Line="8" Column="30" />
+      <File FileName="DynamicResourceGenes/Workgiver_AdministerResource.cs" Line="43" Column="18" />
+      <File FileName="DynamicResourceGenes/WorkGiver_Warden_DeliverResource.cs" Line="49" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,9 +10,8 @@
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
               <Node name="DynamicResourceGenes" expanded="True">
-                <Node name="DRGExtension.cs" selected="True" />
+                <Node name="Workgiver_AdministerResource.cs" selected="True" />
               </Node>
-              <Node name="Genes" expanded="True" />
               <Node name="HiveMind" expanded="True" />
               <Node name="ModSettings" expanded="True" />
             </Node>

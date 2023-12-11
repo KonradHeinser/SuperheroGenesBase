@@ -38,7 +38,7 @@ namespace SuperHeroGenesBase
             {
                 foreach (CompAbilityEffect effectComp in command_Ability.Ability.EffectComps)
                 {
-                    if (effectComp is CompAbilityEffect_ResourceCost compAbilityEffect_ResourceCost && compAbilityEffect_ResourceCost.Props.resourceCost > float.Epsilon)
+                    if (effectComp is CompAbilityEffect_ResourceCost compAbilityEffect_ResourceCost && compAbilityEffect_ResourceCost.Props.mainResourceGene == gene.def && compAbilityEffect_ResourceCost.Props.resourceCost > float.Epsilon)
                     {
                         Rect rect = barRect.ContractedBy(3f);
                         float width = rect.width;
@@ -63,7 +63,7 @@ namespace SuperHeroGenesBase
             {
                 labelRect.xMax -= 24f;
                 Rect rect = new Rect(labelRect.xMax, labelRect.y, 24f, 24f);
-                if (resourceGene.def.HasModExtension<DRGExtension>()) Widgets.DefIcon(rect, resourceGene.def.GetModExtension<DRGExtension>().iconThing);
+                if (resourceGene.def.HasModExtension<DRGExtension>() && resourceGene.def.GetModExtension<DRGExtension>().iconThing != null) Widgets.DefIcon(rect, resourceGene.def.GetModExtension<DRGExtension>().iconThing);
                 else Widgets.DefIcon(rect, ThingDefOf.HemogenPack);
                 GUI.DrawTexture(new Rect(rect.center.x, rect.y, rect.width / 2f, rect.height / 2f), resourceGene.resourcePacksAllowed ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex);
                 if (Widgets.ButtonInvisible(rect))
@@ -82,7 +82,7 @@ namespace SuperHeroGenesBase
                 {
                     Widgets.DrawHighlight(rect);
                     string onOff = (resourceGene.resourcePacksAllowed ? "On" : "Off").Translate().ToString().UncapitalizeFirst();
-                    TooltipHandler.TipRegion(rect, () => "AutoTakeResourceDesc".Translate(gene.pawn.Named("PAWN"), resourceGene.PostProcessValue(resourceGene.targetValue).Named("MIN"), onOff.Named("ONOFF")).Resolve(), 828267373);
+                    TooltipHandler.TipRegion(rect, () => "AutoTakeResourceDesc".Translate(resourceGene.ResourceLabel.Named("RESOURCE"),  gene.pawn.Named("PAWN"), resourceGene.PostProcessValue(resourceGene.targetValue).Named("MIN"), onOff.Named("ONOFF")).Resolve(), 828267373);
                     mouseOverAnyHighlightableElement = true;
                 }
             }
@@ -95,7 +95,7 @@ namespace SuperHeroGenesBase
             string text = $"{gene.ResourceLabel.CapitalizeFirst().Colorize(ColoredText.TipSectionTitleColor)}: {gene.ValueForDisplay} / {gene.MaxForDisplay}\n";
             if (gene.pawn.IsColonistPlayerControlled || gene.pawn.IsPrisonerOfColony)
             {
-                text = ((!(gene.targetValue <= 0f)) ? (text + (string)("ConsumeResourceBelow".Translate() + ": ") + gene.PostProcessValue(gene.targetValue)) : (text + "NeverConsumeResource".Translate().ToString()));
+                text = ((!(gene.targetValue <= 0f)) ? (text + (string)("ConsumeResourceBelow".Translate(gene.ResourceLabel) + ": ") + gene.PostProcessValue(gene.targetValue)) : (text + "NeverConsumeResource".Translate().ToString()));
             }
             if (!drainGenes.NullOrEmpty())
             {

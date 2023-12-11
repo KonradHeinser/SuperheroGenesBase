@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using Verse;
 using RimWorld;
+using Verse;
 
 namespace SuperHeroGenesBase
 {
@@ -55,7 +55,7 @@ namespace SuperHeroGenesBase
                 extension = def.GetModExtension<DRGExtension>();
                 extensionAlreadyChecked = true;
             }
-            ResourceGene.OffsetResource(pawn, ResourceLossPerDay * -1, cachedResourceGene, extension, false, true);
+            if (Resource != null) ResourceGene.OffsetResource(pawn, ResourceLossPerDay * -1, cachedResourceGene, extension, false, true);
         }
 
         public override IEnumerable<Gizmo> GetGizmos()

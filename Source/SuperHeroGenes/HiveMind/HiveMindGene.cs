@@ -45,7 +45,7 @@ namespace SuperHeroGenesBase
             if (allHediffs.NullOrEmpty()) BuildAllHediffsList();
             if (completeWipe)
             {
-                EBSGUtilities.RemoveHediffs(pawn, null, allHediffs); // Wipe slate
+                SHGUtilities.RemoveHediffs(pawn, null, allHediffs); // Wipe slate
                 completeWipe = false;
             }
             StartHiveCheck();
@@ -54,7 +54,7 @@ namespace SuperHeroGenesBase
         public override void PostRemove()
         {
             base.PostRemove();
-            EBSGUtilities.RemoveHediffs(pawn, null, addedHediffs); // Wipe slate
+            SHGUtilities.RemoveHediffs(pawn, null, addedHediffs); // Wipe slate
         }
 
         public void StartHiveCheck()
@@ -62,7 +62,7 @@ namespace SuperHeroGenesBase
             List<Pawn> allies = GetAllies();
             if (allies.NullOrEmpty()) // If there's no allies, get out of here because this place is weird
             {
-                EBSGUtilities.RemoveHediffs(pawn, null, addedHediffs); // Wipe slate
+                SHGUtilities.RemoveHediffs(pawn, null, addedHediffs); // Wipe slate
                 previousCounts.Clear();
                 addedHediffs.Clear();
                 stillAlone = false; // Prep for less weird scenario
@@ -70,29 +70,29 @@ namespace SuperHeroGenesBase
             }
             if (!hiveCounts.NullOrEmpty()) previousCounts = new Dictionary<string, int>(hiveCounts);
             BuildHiveCount(allies);
-            if (previousCounts.NullOrEmpty() || !EBSGUtilities.EqualCountingDictionaries(previousCounts, hiveCounts)) // If there's a change in the hive
+            if (previousCounts.NullOrEmpty() || !SHGUtilities.EqualCountingDictionaries(previousCounts, hiveCounts)) // If there's a change in the hive
             {
                 if (hiveGenesPresent.Count == 1) // If this pawn is the only one in the hive, there's no reason to waste time trying to go through everyone's genes in depth, just apply the lonely hediffs
                 {
                     if (!stillAlone)
                     {
-                        EBSGUtilities.RemoveHediffs(pawn, null, addedHediffs); // Wipe slate
+                        SHGUtilities.RemoveHediffs(pawn, null, addedHediffs); // Wipe slate
                         previousCounts.Clear();
-                        addedHediffs = EBSGUtilities.ApplyHediffs(pawn, null, hediffsWhenNoAllies); // Add the lonely hediffs
+                        addedHediffs = SHGUtilities.ApplyHediffs(pawn, null, hediffsWhenNoAllies); // Add the lonely hediffs
                         stillAlone = true; // Prep for continued loneliness. No reason to keep removing and adding hediffs if still alone
                     }
                 }
                 else
                 {
 
-                    EBSGUtilities.RemoveHediffs(pawn, null, addedHediffs); // Wipe slate
+                    SHGUtilities.RemoveHediffs(pawn, null, addedHediffs); // Wipe slate
                     addedHediffs.Clear();
                     foreach (HiveRoleToCheckFor hiveRole in extension.hiveRolesToCheckFor)
                     {
                         List<HediffDef> tempHediffs = new List<HediffDef>();
-                        if (hiveCounts[hiveRole.checkKey] < hiveRole.minCount) tempHediffs = EBSGUtilities.ApplyHediffs(pawn, hiveRole.hediffWhenTooFew, hiveRole.hediffsWhenTooFew);
-                        else if (hiveRole.minCount <= hiveRole.maxCount && hiveCounts[hiveRole.checkKey] > hiveRole.maxCount) tempHediffs = EBSGUtilities.ApplyHediffs(pawn, hiveRole.hediffWhenTooMany, hiveRole.hediffsWhenTooMany);
-                        else tempHediffs = EBSGUtilities.ApplyHediffs(pawn, hiveRole.hediffWhenEnough, hiveRole.hediffsWhenEnough);
+                        if (hiveCounts[hiveRole.checkKey] < hiveRole.minCount) tempHediffs = SHGUtilities.ApplyHediffs(pawn, hiveRole.hediffWhenTooFew, hiveRole.hediffsWhenTooFew);
+                        else if (hiveRole.minCount <= hiveRole.maxCount && hiveCounts[hiveRole.checkKey] > hiveRole.maxCount) tempHediffs = SHGUtilities.ApplyHediffs(pawn, hiveRole.hediffWhenTooMany, hiveRole.hediffsWhenTooMany);
+                        else tempHediffs = SHGUtilities.ApplyHediffs(pawn, hiveRole.hediffWhenEnough, hiveRole.hediffsWhenEnough);
 
                         if (addedHediffs.NullOrEmpty()) addedHediffs = tempHediffs;
                         else if (!tempHediffs.NullOrEmpty()) foreach (HediffDef hediff in tempHediffs) addedHediffs.Add(hediff);

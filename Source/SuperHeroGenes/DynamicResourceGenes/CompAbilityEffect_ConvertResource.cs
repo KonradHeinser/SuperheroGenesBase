@@ -1,20 +1,26 @@
-﻿using Verse;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using Verse;
 using RimWorld;
-using System.Collections.Generic;
 
 namespace SuperHeroGenesBase
 {
-    public class CompAbilityEffect_ResourceCost : CompAbilityEffect
+    public class CompAbilityEffect_ConvertResource : CompAbilityEffect
     {
-        public new CompProperties_AbilityResourceCost Props => (CompProperties_AbilityResourceCost)props;
+        public new CompProperties_AbilityConvertResource Props => (CompProperties_AbilityConvertResource)props;
         public List<AbilityComp> comps;
 
         private bool HasEnoughResource
         {
             get
             {
-                ResourceGene gene_Resource = (ResourceGene)parent.pawn.genes.GetGene(Props.mainResourceGene);
+                ResourceGene gene_Resource = (ResourceGene)parent.pawn.genes.GetGene(Props.giver);
                 if (gene_Resource == null || gene_Resource.Value < Props.resourceCost)
+                {
+                    return false;
+                }
+                gene_Resource = (ResourceGene)parent.pawn.genes.GetGene(Props.receiver);
+                if (gene_Resource == null)
                 {
                     return false;
                 }
@@ -26,23 +32,32 @@ namespace SuperHeroGenesBase
         {
             base.Apply(target, dest);
             Pawn pawn = parent.pawn;
-            ResourceGene resourceGene;
-            if (Props.mainResourceGene == null) Log.Error("A casted ability is missing a designated mainResourceGene, meaning it can't alter the resource levels");
+            ResourceGene giverGene;
+            ResourceGene receiverGene;
+            if (Props.giver == null) Log.Error("A casted ability is missing a designated giver, meaning it can't alter the resource levels");
+            else if (Props.receiver == null) Log.Error("A casted ability is missing a designated receiver, meaning it can't alter the resource levels");
             else
             {
-                resourceGene = (ResourceGene)pawn.genes.GetGene(Props.mainResourceGene);
-                ResourceGene.OffsetResource(pawn, 0f - Props.resourceCost, resourceGene, resourceGene.def.GetModExtension<DRGExtension>());
+                giverGene = (ResourceGene)pawn.genes.GetGene(Props.giver);
+                ResourceGene.OffsetResource(pawn, 0f - Props.resourceCost, giverGene, giverGene.def.GetModExtension<DRGExtension>());
+                receiverGene = (ResourceGene)pawn.genes.GetGene(Props.receiver);
+                ResourceGene.OffsetResource(pawn, Props.resourceCost * Props.conversionEfficiency, receiverGene, receiverGene.def.GetModExtension<DRGExtension>());
             }
         }
 
         public override bool GizmoDisabled(out string reason)
         {
-            if (!parent.pawn.genes.HasGene(Props.mainResourceGene))
+            if (!parent.pawn.genes.HasGene(Props.giver))
             {
-                reason = "AbilityDisabledNoResourceGene".Translate(parent.pawn, Props.mainResourceGene.LabelCap);
+                reason = "AbilityDisabledNoResourceGene".Translate(parent.pawn, Props.giver.LabelCap);
                 return true;
             }
-            ResourceGene gene_Resource = (ResourceGene)parent.pawn.genes.GetGene(Props.mainResourceGene);
+            if (!parent.pawn.genes.HasGene(Props.receiver))
+            {
+                reason = "AbilityDisabledNoResourceGene".Translate(parent.pawn, Props.receiver.LabelCap);
+                return true;
+            }
+            ResourceGene gene_Resource = (ResourceGene)parent.pawn.genes.GetGene(Props.giver);
 
             if (gene_Resource.Value < Props.resourceCost)
             {

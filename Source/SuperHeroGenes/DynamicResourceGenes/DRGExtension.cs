@@ -20,8 +20,8 @@ namespace SuperHeroGenesBase
         public StatDef maxStat; // Overrides maximum. Optional
         public StatDef maxFactorStat; // Works with both maximum options. Optional
         public Color barColor = new ColorInt(138, 3, 3).ToColor; // This is the bar color when not hovering over it
-        public Color BarHighlightColor = new ColorInt(145, 42, 42).ToColor; // This is the bar color when hovering over it
-        public ThingDef iconThing = ThingDefOf.HemogenPack; // This changes the little icon on the label to something other than a hemogen pack
+        public Color barHighlightColor = new ColorInt(145, 42, 42).ToColor; // This is the bar color when hovering over it
+        public ThingDef iconThing; // This changes the little icon on the label to something other than a hemogen pack
 
         // Ingestion stuff - Offsets resource based on type. Also tied to ResourceGene
         public bool checkIngestion = false; // If this is false, then all of the below effects are ignored

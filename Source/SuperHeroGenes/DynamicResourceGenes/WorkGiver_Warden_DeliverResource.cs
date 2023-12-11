@@ -7,6 +7,15 @@ namespace SuperHeroGenesBase
 {
     public class WorkGiver_Warden_DeliverResource : WorkGiver_Warden
     {
+        public override ThingRequest PotentialWorkThingRequest => ThingRequest.ForGroup(ThingRequestGroup.Pawn);
+
+        public override PathEndMode PathEndMode => PathEndMode.ClosestTouch;
+
+        public override Danger MaxPathDanger(Pawn pawn)
+        {
+            return Danger.Deadly;
+        }
+
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
             if (!ModsConfig.BiotechActive) return null;
@@ -17,9 +26,8 @@ namespace SuperHeroGenesBase
                 // Checks all global reasons to not feed the prisoner resource packs. If there's no global reason, then there's no reason to find a local reason
                 return null;
             }
-
             List<ResourceGene> resourcesPresent = new List<ResourceGene>(); // Creates list of all resource genes
-            foreach (Gene gene in pawn.genes?.GenesListForReading)
+            foreach (Gene gene in prisoner.genes?.GenesListForReading)
             {
                 if (gene.def.HasModExtension<DRGExtension>() && gene.def.GetModExtension<DRGExtension>().isMainGene) resourcesPresent.Add((ResourceGene)gene);
             }
@@ -27,10 +35,8 @@ namespace SuperHeroGenesBase
             foreach (ResourceGene gene in resourcesPresent) // Go through all of the present resources to find any that need resupply
             {
                 if (!gene.resourcePacksAllowed || !gene.ShouldConsumeResourceNow()) return null; // Check if consumption is even needed
-
                 DRGExtension extension = gene.def.GetModExtension<DRGExtension>();
                 if (extension.resourcePacks.NullOrEmpty() || ResourcePackAlreadyAvailableFor(prisoner, extension.resourcePacks)) return null; // Check if there's already a resouce pack
-
                 foreach (ThingDef thingDef in extension.resourcePacks)
                 {
                     Thing thing = GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest.ForDef(thingDef), PathEndMode.OnCell, TraverseParms.For(pawn), 9999f, (Thing pack) => !pack.IsForbidden(pawn) && pawn.CanReserve(pack) && pack.GetRoom() != prisoner.GetRoom());
