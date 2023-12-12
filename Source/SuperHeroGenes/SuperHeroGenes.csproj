@@ -117,7 +117,6 @@
     <Compile Include="DynamicResourceGenes\Workgiver_AdministerResource.cs" />
     <Compile Include="DynamicResourceGenes\WorkGiver_Warden_DeliverResource.cs" />
     <Compile Include="HiveMind\HiveRoleToCheckFor.cs" />
-    <Compile Include="HiveMind\HiveTier.cs" />
     <Compile Include="HiveMind\HiveMindGene.cs" />
     <Compile Include="HiveMind\HiveMindExtension.cs" />
     <Compile Include="SHGUtilities.cs" />
