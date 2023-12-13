@@ -8,23 +8,8 @@
       <File FileName="DynamicResourceGenes/IngestionOutcomeDoer_OffsetResource.cs" Line="34" Column="1" />
       <File FileName="Genes/HediffAdder.cs" Line="72" Column="31" />
       <File FileName="Genes/HediffsToParts.cs" Line="2" Column="1" />
-      <File FileName="SHGExtension.cs" Line="15" Column="52" />
+      <File FileName="SHGExtension.cs" Line="16" Column="43" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SuperHeroGenes" expanded="True">
-            <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Genes" expanded="True">
-                <Node name="HediffAdder.cs" selected="True" />
-              </Node>
-              <Node name="HiveMind" expanded="True" />
-              <Node name="ModSettings" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
