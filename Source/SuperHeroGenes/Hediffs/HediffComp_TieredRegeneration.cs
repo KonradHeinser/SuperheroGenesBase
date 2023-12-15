@@ -200,5 +200,12 @@ namespace SuperHeroGenesBase
                 }
             }
         }
+
+        public override void CompExposeData()
+        {
+            base.CompExposeData();
+            Scribe_Deep.Look(ref healTicksRemaining, "SHG_healTicksRemaining", Pawn);
+            Scribe_Deep.Look(ref regrowTicksRemaining, "SHG_regrowTicksRemaining", Pawn);
+        }
     }
 }
