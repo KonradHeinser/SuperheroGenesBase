@@ -7,8 +7,8 @@ namespace SuperHeroGenesBase
     public class HediffComp_TieredRegeneration : HediffComp
     {
         private HediffCompProperties_TieredRegeneration Props => (HediffCompProperties_TieredRegeneration)props;
-        private int regrowTicksRemaining = -1;
-        private int healTicksRemaining = -1;
+        private int regrowTicksRemaining;
+        private int healTicksRemaining;
         private bool healInProgress = false;
         private bool healWhileRegrowing = false;
         private bool prioritizeHeal = false;
@@ -199,6 +199,13 @@ namespace SuperHeroGenesBase
                     break;
                 }
             }
+        }
+
+        public override void CompExposeData()
+        {
+            base.CompExposeData();
+            Scribe_Values.Look(ref regrowTicksRemaining, "SHG_regrowTicksRemaining", -1);
+            Scribe_Values.Look(ref healTicksRemaining, "SHG_healTicksRemaining", -1);
         }
     }
 }

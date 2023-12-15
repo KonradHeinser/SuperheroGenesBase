@@ -1,17 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Hediffs/HediffComp_GiveHediffsToNonAlliesInRange.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hediffs/HediffComp_TieredRegeneration.cs">
     <Files>
-      <File FileName="DynamicResourceGenes/Workgiver_AdministerResource.cs" Line="48" Column="51" />
-      <File FileName="DynamicResourceGenes/WorkGiver_Warden_DeliverResource.cs" Line="49" Column="14" />
-      <File FileName="Abilities/CompAbilityEffect_GiveMultipleHediffs.cs" Line="34" Column="14" />
-      <File FileName="DynamicResourceGenes/ResourceGene.cs" Line="177" Column="38" />
-      <File FileName="DynamicResourceGenes/IngestionOutcomeDoer_OffsetResource.cs" Line="34" Column="1" />
       <File FileName="Genes/HediffAdder.cs" Line="43" Column="30" />
-      <File FileName="Genes/HediffsToParts.cs" Line="2" Column="1" />
-      <File FileName="SHGExtension.cs" Line="16" Column="43" />
-      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="1" Column="1" />
-      <File FileName="Hediffs/HediffComp_TieredRegeneration.cs" Line="30" Column="64" />
-      <File FileName="Hediffs/HediffComp_GiveHediffsToNonAlliesInRange.cs" Line="40" Column="153" />
+      <File FileName="Hediffs/HediffComp_GiveHediffsToNonAlliesInRange.cs" Line="18" Column="14" />
+      <File FileName="Hediffs/HediffCompProperties_GiveHediffsToNonAlliesInRange.cs" Line="16" Column="45" />
+      <File FileName="Hediffs/HediffComp_TieredRegeneration.cs" Line="10" Column="41" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,8 +12,9 @@
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
               <Node name="Hediffs" expanded="True">
-                <Node name="HediffComp_GiveHediffsToNonAlliesInRange.cs" selected="True" />
+                <Node name="HediffComp_TieredRegeneration.cs" selected="True" />
               </Node>
+              <Node name="ModSettings" expanded="True" />
             </Node>
           </Node>
         </State>
