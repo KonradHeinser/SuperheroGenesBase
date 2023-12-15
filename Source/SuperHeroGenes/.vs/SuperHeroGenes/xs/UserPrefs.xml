@@ -1,5 +1,5 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Hediffs/HediffComp_TieredRegeneration.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hediffs/HediffComp_GiveHediffsToNonAlliesInRange.cs">
     <Files>
       <File FileName="DynamicResourceGenes/Workgiver_AdministerResource.cs" Line="48" Column="51" />
       <File FileName="DynamicResourceGenes/WorkGiver_Warden_DeliverResource.cs" Line="49" Column="14" />
@@ -10,8 +10,22 @@
       <File FileName="Genes/HediffsToParts.cs" Line="2" Column="1" />
       <File FileName="SHGExtension.cs" Line="16" Column="43" />
       <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="1" Column="1" />
-      <File FileName="Hediffs/HediffComp_TieredRegeneration.cs" Line="208" Column="60" />
+      <File FileName="Hediffs/HediffComp_TieredRegeneration.cs" Line="30" Column="64" />
+      <File FileName="Hediffs/HediffComp_GiveHediffsToNonAlliesInRange.cs" Line="40" Column="153" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SuperHeroGenes" expanded="True">
+            <Node name="SuperHeroGenes" expanded="True">
+              <Node name="Hediffs" expanded="True">
+                <Node name="HediffComp_GiveHediffsToNonAlliesInRange.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
