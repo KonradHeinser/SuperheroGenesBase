@@ -33,4 +33,22 @@
 			</li>
 		</modExtensions>
     </GeneDef>
+
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_Pools_WindStep</defName>
+        <label>wind step</label>
+        <description>Carriers of this gene can use their innate speed to fly for a day, at the expense of both their innate speed and some of their moving ability. While the effects to their speed is great, the ability simply fly over fortifications can help with breaking through fortifications.\n\nMuch like with mutations, pool abilities function by utilizing a specific portion of the life energy pool that the superhero gene provides, in this case, the portion dedicated to enhancing the pawn's speed. Unlike those mutations, these function by using that pool in one large burst, which allows these to be used with any super gene that does not divert the pool's purpose like mutations and unsuper genes. Using the pool in one burst will stop the basic superhero gene from providing the related benefits for about a day as the pool refills.\n\nSome pool manipulation abilities have characteristics of both auras and of standard pool manipulation abilities. In these cases, their effects only impact the super like normal pool manipulation abilities, but their benefits and side effects act similarly to an aura's.</description>
+        <iconPath>Powers/Pools/Gene_WindStep</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <biostatMet>-1</biostatMet>
+        <abilities>
+            <li>SHG_Pools_WindStep</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Pools_WindStep</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>SpeedPool</li>
+        </exclusionTags>
+    </GeneDef>
 </Defs>

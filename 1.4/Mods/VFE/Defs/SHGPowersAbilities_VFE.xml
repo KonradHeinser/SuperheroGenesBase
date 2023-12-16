@@ -29,4 +29,31 @@
             </li>
         </comps>
     </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Pools_WindStep</defName>
+        <label>wind step</label>
+        <description>Take flight for a day. During this day, you will be unaffected by ground obstacles, but will lose both your innate speed bonuses from the Superhero base gene along with an additional penalty on general moving abilities.</description>
+        <iconPath>Powers/Pools/Gene_WindStep</iconPath>
+        <targetRequired>False</targetRequired>
+        <statBases>
+            <Ability_Duration>1000</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>1</range>
+            <targetParams>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Pools_WindStep</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <applicableToMechs>False</applicableToMechs>
+            </li>
+        </comps>
+    </AbilityDef>
 </Defs>

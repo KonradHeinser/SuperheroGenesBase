@@ -29,6 +29,20 @@
     </GeneDef>
 
     <GeneDef ParentName="SHG_SpecializationBase">
+        <defName>SHG_Regenerator</defName>
+        <label>regenerator</label>
+        <description>Carriers of this gene can activate a regeneration effect that enhances their healing even further. This will gradually wear off over the span of two hours.\n\nSpecialization abilities can only be used once every 10 days due to physical limitations. Using this ability will drain the pawn's healing pool, reducing the benefits they receive from both the base Superhero Gene and the Super Healing gene until the pool completely recovers.\n\nEven when drained, the pawn can push their body to still pull energy from the pool to use an energy pool power. However, doing so often makes the effects of the pool loss much stronger while also making them last much longer.\n\nAura abilities involve releasing the life pool's effects to a wide area. This destabilizes the pool like other pool manipulation abilities, but often results in additional side effects beyond the standard pool loss debuffs due to the nature of auras.</description>
+        <iconPath>Powers/Specializations/Gene_Regenerator</iconPath>
+        <prerequisite>SuperHealing</prerequisite>
+        <abilities>
+            <li>SHG_Regenerator</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Regenerator</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_SpecializationBase">
         <defName>SHG_HackMech</defName>
         <label>hack mechanoid</label>
         <description>Carriers of this gene can quickly hack any mechanoid that they can touch, forcing it to turn violent against everything in the area. This is accomplished by transferring a portion of their mental acuity to the mech for a few hours, a feat that makes the pawn fall unconscious for some time.\n\nSpecialization abilities can only be used once every 10 days due to physical limitations. After using this ability, the super will be unconscious several days. They will not be targeted by the hacked mech or any other hostiles around them.</description>

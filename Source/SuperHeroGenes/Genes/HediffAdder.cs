@@ -1,5 +1,6 @@
 ﻿using Verse;
 using System.Collections.Generic;
+using System;
 
 namespace SuperHeroGenesBase
 {
@@ -30,28 +31,44 @@ namespace SuperHeroGenesBase
                                 }
                             }
                             if (bodyPart == null) continue; // If no part is found, just "continue" down the list
-                            if (!pawn.health.hediffSet.hediffs.NullOrEmpty())
+                            if (pawn.health.hediffSet?.HasHediff(hediffToParts.hediff) == true)
                             {
-                                foreach (Hediff hediff in pawn.health.hediffSet.hediffs) // Go through all the hediffs to try to find the hediff on the specified part
+                                Hediff testHediff = pawn.health.hediffSet.GetFirstHediffOfDef(hediffToParts.hediff);
+                                if (testHediff.Part.def == bodyPart.def) firstHediffOfDef = testHediff;
+                                else
                                 {
-                                    if (hediff.Part == bodyPart && hediff.def == hediffToParts.hediff) firstHediffOfDef = hediff;
-                                    break;
+                                    foreach (Hediff hediff in pawn.health.hediffSet.hediffs) // Go through all the hediffs to try to find the hediff on the specified part
+                                    {
+                                        if (hediff.Part == bodyPart && hediff.def == hediffToParts.hediff) firstHediffOfDef = hediff;
+                                        break;
+                                    }
                                 }
                             }
 
                             if (firstHediffOfDef != null)
                             {
                                 if (hediffToParts.onlyIfNew) continue;
-                                firstHediffOfDef.Severity += hediffToParts.severity;
+                                try
+                                {
+                                    try
+                                    {
+                                        Hediff_Psylink hediff_Level = (Hediff_Psylink)firstHediffOfDef;
+                                        hediff_Level.ChangeLevel((int)Math.Ceiling(hediffToParts.severity), false);
+                                    }
+                                    catch
+                                    {
+                                        Hediff_Level hediff_Level = (Hediff_Level)firstHediffOfDef;
+                                        hediff_Level.ChangeLevel((int)Math.Ceiling(hediffToParts.severity));
+                                    }
+                                }
+                                catch
+                                {
+                                    firstHediffOfDef.Severity += hediffToParts.severity;
+                                }
                             }
                             else
                             {
-                                pawn.health.AddHediff(hediffToParts.hediff, bodyPart);
-                                foreach (Hediff hediff in pawn.health.hediffSet.hediffs) // Go through all the hediffs to try to find the hediff on the specified part
-                                {
-                                    if (hediff.Part == bodyPart && hediff.def == hediffToParts.hediff) firstHediffOfDef = hediff;
-                                    break;
-                                }
+                                firstHediffOfDef = pawn.health.AddHediff(hediffToParts.hediff, bodyPart);
                                 firstHediffOfDef.Severity = hediffToParts.severity;
                             }
                         }
@@ -78,6 +95,7 @@ namespace SuperHeroGenesBase
             {
                 Log.Error(def + " could not find the hediffs to add list.");
             }
+            Log.Message("Ending add");
         }
     }
 }

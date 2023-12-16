@@ -231,6 +231,233 @@
     </HediffDef>
 
     <HediffDef>
+        <defName>SHG_Regenerator</defName>
+		<label>regenerating</label>
+		<description>This super is quickly regenerating wounds faster than they land. Their wounds heal far faster than normal, and will continue to do so until the main effects have worn off. However, once the regeneration ability has begun wearing off, their healing pool will be drained for around 10 days, reducing the benefits the pawn would receive from both the base Superhero gene and Super Healing(or that the ability provided by Super Healing would give, if you're using activatables).</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>1.0</initialSeverity>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <minSeverity>0.001</minSeverity>
+		        <label>healing pool mostly recovered</label>
+                <statFactors>
+                    <ImmunityGainSpeed>0.8</ImmunityGainSpeed>
+                    <InjuryHealingFactor>0.8</InjuryHealingFactor>
+                </statFactors>
+                <statOffsets>
+                    <ImmunityGainSpeed>-1</ImmunityGainSpeed>
+                    <InjuryHealingFactor>-1</InjuryHealingFactor>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.2</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-0.2</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.3</minSeverity>
+		        <label>healing pool filling</label>
+                <statFactors>
+                    <ImmunityGainSpeed>0.6</ImmunityGainSpeed>
+                    <InjuryHealingFactor>0.6</InjuryHealingFactor>
+                </statFactors>
+                <statOffsets>
+                    <ImmunityGainSpeed>-2</ImmunityGainSpeed>
+                    <InjuryHealingFactor>-2</InjuryHealingFactor>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.4</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-0.4</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.5</minSeverity>
+		        <label>healing pool half-filled</label>
+                <statFactors>
+                    <ImmunityGainSpeed>0.5</ImmunityGainSpeed>
+                    <InjuryHealingFactor>0.5</InjuryHealingFactor>
+                </statFactors>
+                <statOffsets>
+                    <ImmunityGainSpeed>-5</ImmunityGainSpeed>
+                    <InjuryHealingFactor>-5</InjuryHealingFactor>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.5</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-0.5</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.65</minSeverity>
+		        <label>healing pool recovering</label>
+                <statFactors>
+                    <ImmunityGainSpeed>0.3</ImmunityGainSpeed>
+                    <InjuryHealingFactor>0.3</InjuryHealingFactor>
+                    <LifespanFactor>0.75</LifespanFactor>
+                </statFactors>
+                <statOffsets>
+                    <ImmunityGainSpeed>-7</ImmunityGainSpeed>
+                    <InjuryHealingFactor>-7</InjuryHealingFactor>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.65</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-0.65</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.73</minSeverity>
+		        <label>healing pool recovering</label>
+                <statFactors>
+                    <ImmunityGainSpeed>0.25</ImmunityGainSpeed>
+                    <InjuryHealingFactor>0.25</InjuryHealingFactor>
+                    <LifespanFactor>0.6</LifespanFactor>
+                </statFactors>
+                <statOffsets>
+                    <ImmunityGainSpeed>-8</ImmunityGainSpeed>
+                    <InjuryHealingFactor>-8</InjuryHealingFactor>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.8</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-0.8</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.8</minSeverity>
+		        <label>healing pool recovering</label>
+                <statFactors>
+                    <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+                    <InjuryHealingFactor>0.2</InjuryHealingFactor>
+                    <LifespanFactor>0.4</LifespanFactor>
+                </statFactors>
+                <statOffsets>
+                    <ImmunityGainSpeed>-9</ImmunityGainSpeed>
+                    <InjuryHealingFactor>-9</InjuryHealingFactor>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.9</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-0.9</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.9</minSeverity>
+		        <label>healing pool base recovered</label>
+                <statFactors>
+                    <ImmunityGainSpeed>0.1</ImmunityGainSpeed>
+                    <InjuryHealingFactor>0.1</InjuryHealingFactor>
+                    <LifespanFactor>0.333</LifespanFactor>
+                </statFactors>
+                <statOffsets>
+                    <ImmunityGainSpeed>-10</ImmunityGainSpeed>
+                    <InjuryHealingFactor>-10</InjuryHealingFactor>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-1.0</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-1.0</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.975</minSeverity>
+		        <label>healing pool drained</label>
+                <statFactors>
+                    <ImmunityGainSpeed>0.0333</ImmunityGainSpeed>
+                    <InjuryHealingFactor>0.0333</InjuryHealingFactor>
+                    <LifespanFactor>0.111</LifespanFactor>
+                </statFactors>
+                <statOffsets>
+                    <ImmunityGainSpeed>-10</ImmunityGainSpeed>
+                    <InjuryHealingFactor>-10</InjuryHealingFactor>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-1.0</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>-1.0</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.99</minSeverity>
+		        <label>wearing off</label>
+                <statFactors>
+                    <InjuryHealingFactor>5</InjuryHealingFactor>
+                    <ImmunityGainSpeed>5</ImmunityGainSpeed>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>0.995</minSeverity>
+                <statFactors>
+                    <InjuryHealingFactor>10</InjuryHealingFactor>
+                    <ImmunityGainSpeed>10</ImmunityGainSpeed>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.1</severityPerDay>
+            </li>
+			<li Class="AnimalBehaviours.HediffCompProperties_Regeneration">
+				<rateInTicks>100</rateInTicks>
+                <healAmount>0.01</healAmount>
+			</li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
+                <regenSets>
+                    <li>
+                        <repeatHealCount>10</repeatHealCount>
+                        <healAmount>1</healAmount>
+                        <minSeverity>0.975</minSeverity>
+                    </li>
+                </regenSets>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef>
         <defName>SHG_Portent</defName>
 		<label>portent</label>
 		<description>This super is focusing their senses to such an extent that they can deflect most attacks. As the ability wears off, the effects will gradually become weaker. Once this ability has worn off, their perception pool will be drained for around 10 days, reducing the benefits the pawn would receive from both the base Superhero gene and Super Perception(or what the ability provided by Super Perception would give while active, if you're using activatables).</description>
@@ -958,6 +1185,7 @@
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-0.1</severityPerDay>
             </li>
+            <li Class="AnimalBehaviours.HediffCompProperties_Floating" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" />
         </comps>
     </HediffDef>
 

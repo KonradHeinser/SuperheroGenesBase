@@ -1,20 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Hediffs/HediffComp_TieredRegeneration.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SHGExtension.cs">
     <Files>
-      <File FileName="Genes/HediffAdder.cs" Line="43" Column="30" />
-      <File FileName="Hediffs/HediffComp_GiveHediffsToNonAlliesInRange.cs" Line="18" Column="14" />
-      <File FileName="Hediffs/HediffCompProperties_GiveHediffsToNonAlliesInRange.cs" Line="16" Column="45" />
-      <File FileName="Hediffs/HediffComp_TieredRegeneration.cs" Line="10" Column="41" />
+      <File FileName="Genes/HediffAdder.cs" Line="15" Column="56" />
+      <File FileName="Hediffs/RegenSet.cs" Line="7" Column="39" />
+      <File FileName="Genes/HediffsToParts.cs" Line="14" Column="1" />
+      <File FileName="SHGExtension.cs" Line="15" Column="51" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Hediffs" expanded="True">
-                <Node name="HediffComp_TieredRegeneration.cs" selected="True" />
-              </Node>
+              <Node name="Genes" expanded="True" />
+              <Node name="Hediffs" expanded="True" />
               <Node name="ModSettings" expanded="True" />
+              <Node name="SHGExtension.cs" selected="True" />
             </Node>
           </Node>
         </State>

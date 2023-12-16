@@ -110,4 +110,24 @@
             <li>StrengthPool</li>
         </exclusionTags>
     </GeneDef>
+
+    <GeneDef ParentName="SHG_PoolsBase">
+        <defName>SHG_Pools_HealAllies</defName>
+        <label>healing aura</label>
+        <description>Carriers of this gene can use their innate superhero healing to constantly heal all of their allies within a radius of 10 for a day. During this time, the super themselves will lose all healing bonuses from the base Superhero gene, and their wounds will be completely unable to heal. Genes that provide superclotting will still function, but they will only stop the bleeding itself.\n\nMuch like with mutations, pool abilities function by utilizing a specific portion of the life energy pool that the superhero gene provides, in this case, the portion dedicated to enhancing the pawn's durability. Unlike those mutations, these function by using that pool in one large burst, which allows these to be used with any super gene that does not divert the pool's purpose like mutations and unsuper genes. Using the pool in one burst will stop the basic superhero gene from providing the related benefits for about a day as the pool refills.\n\nAura abilities involve releasing the life pool's effects to a wide area. This destabilizes the pool, which often results in additional side effects beyond the standard pool loss debuffs.</description>
+        <iconPath>Powers/Pools/Gene_HealAllies</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>SHG_Pools_HealAllies</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Pools_HealAllies</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>HealingPool</li>
+            <li>Archetype_MedicHeal</li>
+            <li>Archetype_LifeBringerHeal</li>
+        </exclusionTags>
+    </GeneDef>
 </Defs>

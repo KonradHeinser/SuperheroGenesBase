@@ -37,4 +37,34 @@
             </li>
         </stages>
 	</HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Pools_WindStep</defName>
+		<label>wind step</label>
+		<description>This super is clumsily floating just a little bit off the ground, allowing them to move over all obstacles without issue with some minor mobility issues.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <StaggerDurationFactor>1.333</StaggerDurationFactor>
+                </statFactors>
+                <statOffsets>
+                    <MoveSpeed>-5</MoveSpeed>
+                    <AimingDelayFactor>.1</AimingDelayFactor>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <postFactor>0.95</postFactor>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_Floating" />
+		</comps>
+	</HediffDef>
 </Defs>

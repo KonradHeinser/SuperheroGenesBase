@@ -2,6 +2,57 @@
 <Defs>
         <!--Supreme Archetypes: 
                 Originally just labeled Path-based Archetypes, CTH from discord came up with a much better name for it.-->
+        <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Psionist</defName>
+        <label>psionist</label>
+        <description>Psionists have an innate connection to the psychic fields many royals use. This connection allows them to manipulate psychic energy far better than any human should be able to. This will give them an innate psylink to utilize their power.\n\nIf this gene is lost at any point, the psylink will go with it, though the abilities will remain. All psionic paths require this gene, and multiple paths can be used at the same time.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.\n\nThis can have weird interactions with VPE. Most things will work, but because this gene and the Psionic Soldier increase psychic sensitivity, this can end up having strange effects. For example, someone on the Discord server was able to confirm that the Frost Ray ability was channeling for so long that it was starving the Psionist. If you choose to use them together, please be careful with what VPE abilties you use.</description>
+        <iconPath>Archetypes/Gene_Psionist</iconPath>
+        <prerequisite Inherit="False" />
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <biostatArc>1</biostatArc>
+        <displayOrderInCategory>-1</displayOrderInCategory>
+        <suppressedTraits>
+            <li>
+                <def>PsychicSensitivity</def>
+                <degree>-1</degree>
+            </li>
+            <li>
+                <def>PsychicSensitivity</def>
+                <degree>-2</degree>
+            </li>
+        </suppressedTraits>
+        <statOffsets>
+            <PsychicSensitivity>1</PsychicSensitivity>
+            <PsychicEntropyMax>100.0</PsychicEntropyMax>
+            <PsychicEntropyRecoveryRate>1.0</PsychicEntropyRecoveryRate>
+            <MeditationFocusGain>1.0</MeditationFocusGain>
+        </statOffsets>
+        <exclusionTags>
+            <li>PsychicAbility</li>
+        </exclusionTags>
+		<modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply>
+                    <li>
+                        <hediff>PsychicAmplifier</hediff>
+                        <bodyParts>
+							<li>Brain</li>
+						</bodyParts>
+                        <severity>1</severity>
+                    </li>
+                </hediffsToApply>
+			</li>
+		</modExtensions>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>psion</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>psion</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Hemomancer</defName>
         <label>hemomancer</label>
@@ -366,11 +417,11 @@
         </statFactors>
         <abilities>
             <li>SHG_SealWounds</li>
-            <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Pools_HealAllies</li>
+            <li>SHG_Pools_HealAllies</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_SealWounds</AbilityDef>
-            <AbilityDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Pools_HealAllies</AbilityDef>
+            <AbilityDef>SHG_Pools_HealAllies</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
             <li>Archetype_MedicSeal</li>
@@ -397,12 +448,12 @@
         </statFactors>
         <abilities>
             <li>SHG_SealWounds</li>
-            <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Pools_HealAllies</li>
+            <li>SHG_Pools_HealAllies</li>
             <li>SHG_Revive</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_SealWounds</AbilityDef>
-            <AbilityDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Pools_HealAllies</AbilityDef>
+            <AbilityDef>SHG_Pools_HealAllies</AbilityDef>
             <AbilityDef>SHG_Revive</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>

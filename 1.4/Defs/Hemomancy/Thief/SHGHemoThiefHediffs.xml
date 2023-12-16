@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef Abstract="True" Name="SHG_ThiefStealBase">
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>2500</disappearsAfterTicks>   <!--1 hour-->
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_ThiefStealBase">
+        <defName>SHG_Hemomancer_StealPerceptiveness</defName>
+		<label>steal perceptiveness</label>
+		<description>This pawn has enhanced perception for a time after stealing from another pawn.</description>
+        <stages>
+			<li>
+				<statFactors>
+                    <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
+                    <MeleeDodgeChance>1.5</MeleeDodgeChance>
+                    <MeleeHitChance>1.5</MeleeHitChance>
+                </statFactors>
+                <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_ThiefStealBase">
+        <defName>SHG_Hemomancer_StealPerceptivenessDebuff</defName>
+		<label>steal perceptiveness mark</label>
+		<description>This pawn has reduced perception for a time after it was stolen by another pawn.</description>
+        <stages>
+			<li>
+				<statFactors>
+                    <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+                    <MeleeDodgeChance>0.5</MeleeDodgeChance>
+                    <MeleeHitChance>0.5</MeleeHitChance>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_ThiefStealBase">
+        <defName>SHG_Hemomancer_StealDefense</defName>
+		<label>steal defense</label>
+		<description>This pawn has enhanced innate armor for a time after stealing from another pawn.</description>
+        <stages>
+			<li>
+				<statFactors>
+                    <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+                    <ArmorRating_Heat>1.5</ArmorRating_Heat>
+                </statFactors>
+                <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_ThiefStealBase">
+        <defName>SHG_Hemomancer_StealDefenseDebuff</defName>
+		<label>steal defense mark</label>
+		<description>This pawn lost all innate armor for a time after it was stolen by another pawn.</description>
+        <stages>
+			<li>
+				<statFactors>
+                    <ArmorRating_Blunt>0</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0</ArmorRating_Heat>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_ThiefStealBase">
+        <defName>SHG_Hemomancer_StealStrength</defName>
+		<label>steal strength</label>
+		<description>This pawn has enhanced strength for a time after stealing from another pawn.</description>
+        <stages>
+			<li>
+				<statFactors>
+                    <MeleeDamageFactor>1.5</MeleeDamageFactor>
+                    <CarryingCapacity>1.5</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">1.5</CarryBulk>
+                </statFactors>
+                <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_ThiefStealBase">
+        <defName>SHG_Hemomancer_StealStrengthDebuff</defName>
+		<label>steal strength mark</label>
+		<description>This pawn reduced strength for a time after it was stolen by another pawn.</description>
+        <stages>
+			<li>
+				<statFactors>
+                    <MeleeDamageFactor>0.5</MeleeDamageFactor>
+                    <CarryingCapacity>0.5</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">0.5</CarryBulk>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Hemomancer_MarkForDeath</defName>
+		<label>marked for death</label>
+		<description>This pawn was marked for death by a Reaper. If they happen to survive for 5 hours after being marked, this hediff changes from Doomed to Defiance, granting a single-use Defy Death ability that removes most physical injuries, including blood loss.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <stages>
+			<li>
+                <minSeverity>0.001</minSeverity>
+                <label>defiance</label>
+            </li>
+            <li>
+                <minSeverity>0.4</minSeverity>
+                <label>doomed</label>
+                <totalBleedFactor>3</totalBleedFactor>
+				<statFactors>
+                    <ArmorRating_Blunt>0</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0</ArmorRating_Heat>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.5</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+            <li Class="SuperheroGenesBase.HediffCompProperties_GiveAbilityAtSeverity">
+                <abilitiesAtSeverities>
+                    <li>
+                        <abilityDef>SHG_Hemomancer_MarkForDeathDefiance</abilityDef>
+                        <maxSeverity>0.4</maxSeverity>
+                    </li>
+                </abilitiesAtSeverities>
+            </li>
+        </comps>
+    </HediffDef>
+</Defs>
+
+
