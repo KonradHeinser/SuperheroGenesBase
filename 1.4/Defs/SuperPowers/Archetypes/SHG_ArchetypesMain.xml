@@ -59,14 +59,14 @@
         <description>Hemomancers, contrary to popular belief, don't gain their abilities from being superheroes, but from a mutated version of the hemogenic gene. This mutation initially caused extreme bloodlust, but that was removed about a decade later by introducing small portions of the superhero gene. The final version of the gene contains just enough of the superhero gene directly inside it to allow hemomancers to be classified as superheroes without actually having the superhero gene.\n\nThe prerequisite for this gene is Hemogenic, not the Superhero Gene. This gives access to the hemogen power paths.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
         <iconPath>Archetypes/Gene_Hemomancer</iconPath>
         <prerequisite>Hemogenic</prerequisite>
-        <geneClass>Gene_HemogenDrain</geneClass>
+        <geneClass>SuperHeroGenesBase.Gene_HemoHediffAdder</geneClass>
         <resourceLabel>hemogen</resourceLabel>
         <biostatArc>1</biostatArc>
         <resourceLossPerDay>-1</resourceLossPerDay>
         <displayOrderInCategory>-0.9</displayOrderInCategory>
 		<modExtensions>
-			<li Class="VanillaGenesExpanded.GeneExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
-				<hediffToWholeBody>SHG_Hemomancer</hediffToWholeBody>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_Hemomancer</hediff></li></hediffsToApply>
 			</li>
 		</modExtensions>
         <symbolPack>

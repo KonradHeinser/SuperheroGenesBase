@@ -1,20 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SHGExtension.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Genes/Gene_HemoHediffAdder.cs">
     <Files>
-      <File FileName="Genes/HediffAdder.cs" Line="15" Column="56" />
-      <File FileName="Hediffs/RegenSet.cs" Line="7" Column="39" />
-      <File FileName="Genes/HediffsToParts.cs" Line="14" Column="1" />
-      <File FileName="SHGExtension.cs" Line="15" Column="51" />
+      <File FileName="Genes/HediffAdder.cs" Line="100" Column="2" />
+      <File FileName="Genes/HediffsToParts.cs" Line="2" Column="6" />
+      <File FileName="SHGExtension.cs" Line="8" Column="30" />
+      <File FileName="Genes/Gene_HemoHediffAdder.cs" Line="16" Column="83" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Genes" expanded="True" />
+              <Node name="Genes" expanded="True">
+                <Node name="Gene_HemoHediffAdder.cs" selected="True" />
+              </Node>
               <Node name="Hediffs" expanded="True" />
               <Node name="ModSettings" expanded="True" />
-              <Node name="SHGExtension.cs" selected="True" />
             </Node>
           </Node>
         </State>

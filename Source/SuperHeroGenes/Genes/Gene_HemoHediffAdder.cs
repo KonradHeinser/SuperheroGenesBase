@@ -1,10 +1,11 @@
 ﻿using Verse;
+using RimWorld;
 using System.Collections.Generic;
 using System;
 
 namespace SuperHeroGenesBase
 {
-    public class HediffAdder : Gene
+    public class Gene_HemoHediffAdder : Gene_HemogenDrain
     {
         public override void PostAdd()
         {

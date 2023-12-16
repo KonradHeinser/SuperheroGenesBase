@@ -124,6 +124,7 @@
     <Compile Include="DynamicResourceGenes\CompAbilityEffect_ConvertResource.cs" />
     <Compile Include="Genes\HediffAdder.cs" />
     <Compile Include="Genes\HediffsToParts.cs" />
+    <Compile Include="Genes\Gene_HemoHediffAdder.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

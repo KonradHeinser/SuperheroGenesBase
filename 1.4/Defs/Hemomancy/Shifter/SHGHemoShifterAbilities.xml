@@ -197,7 +197,7 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHGHemomancyBase">
+    <AbilityDef ParentName="SHGHemomancyBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
         <defName>SHG_Hemomancer_ShiftStarfishStartSplitting</defName>
         <label>start splitting</label>
         <description>Condense a large amount of hemogen into a clump that will begin developing into a human. This process will take 1 day, and will only be interrupted by death. The only penalty for changing forms is needing to spend hemogen to shift back into the starfish form to use this again.\n\nThe child created through this ability will not inherit xenogenes.</description>

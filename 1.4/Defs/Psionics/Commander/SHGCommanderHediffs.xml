@@ -103,7 +103,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
         <defName>SHG_Psionist_MassLevitation</defName>
 		<label>mass levitation</label>
 		<description>This Commander is temporarily floating in the air, and allies around them will do the same.</description>
@@ -131,7 +131,7 @@
 		</comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
         <defName>SHG_Psionist_MassLevitation_Buff</defName>
 		<label>mass levitation</label>
 		<description>This pawn is floating in the air due to a nearby Psionic General. They can now move around more freely, but being too far from the General will result in them no longer floating.</description>

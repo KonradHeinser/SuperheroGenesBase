@@ -441,10 +441,6 @@
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-0.1</severityPerDay>
             </li>
-			<li Class="AnimalBehaviours.HediffCompProperties_Regeneration">
-				<rateInTicks>100</rateInTicks>
-                <healAmount>0.01</healAmount>
-			</li>
             <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
                 <regenSets>
                     <li>
