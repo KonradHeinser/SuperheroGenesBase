@@ -39,8 +39,13 @@ namespace SuperHeroGenesBase
         public static bool interruptibleActivatables = false;
         public static bool middleGrounds = false;
         public static bool allGrounds = false;
+
+        // AI stuff
+        public static bool poolUsage = false;
         public static bool automaticHealer = false;
 
+
+        // Villains and Stereotypes stuff
         public static bool medievalVillains = false;
         public static bool vengefulOne = true;
 
@@ -56,6 +61,8 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref interruptibleActivatables, "interruptibleActivatables");
             Scribe_Values.Look(ref middleGrounds, "middleGrounds");
             Scribe_Values.Look(ref allGrounds, "allGrounds");
+
+            Scribe_Values.Look(ref poolUsage, "poolUsage");
             Scribe_Values.Look(ref automaticHealer, "automaticHealer");
 
             Scribe_Values.Look(ref medievalVillains, "medievalVillains");
@@ -104,6 +111,8 @@ namespace SuperHeroGenesBase
             optionsMenu.Gap(10f);
             optionsMenu.Label("SHG_SuperAI".Translate(), -1, "SHG_SuperAIDescription".Translate());
             optionsMenu.Gap(7f);
+            optionsMenu.CheckboxLabeled("SHG_AllowPoolUsage".Translate(), ref poolUsage, "SHG_AllowPoolUsageDescription".Translate());
+            optionsMenu.Gap(10f);
             optionsMenu.CheckboxLabeled("SHG_AutomaticHealer".Translate(), ref automaticHealer, "SHG_AutomaticHealerDescription".Translate());
             optionsMenu.Gap(10f);
 

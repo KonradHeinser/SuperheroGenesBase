@@ -64,6 +64,16 @@ namespace SuperHeroGenesBase
                 }
             }
 
+            // AI stuff
+
+            else if (setting == "poolUsage")
+            {
+                if (SuperheroGenes_Settings.poolUsage && active != null)
+                {
+                    return active.Apply(xml);
+                }
+            }
+
             else if (setting == "automaticHealer")
             {
                 if (SuperheroGenes_Settings.automaticHealer && active != null)

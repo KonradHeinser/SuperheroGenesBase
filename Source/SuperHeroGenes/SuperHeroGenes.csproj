@@ -126,6 +126,7 @@
     <Compile Include="Genes\HediffsToParts.cs" />
     <Compile Include="Genes\Gene_HemoHediffAdder.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalConcerningBleeding.cs" />
+    <Compile Include="SuperAI\ThinkNode_ConditionalNeedTending.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

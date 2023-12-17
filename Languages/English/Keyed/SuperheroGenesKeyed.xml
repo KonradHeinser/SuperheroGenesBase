@@ -45,5 +45,5 @@
     <SHG_AllowPoolUsageDescription>Some abilities grant powerful bonuses in the short term, but cause the super to have various debuffs afterwards. If this disabled, then these abilities will never be autocast.</SHG_AllowPoolUsageDescription>
 
     <SHG_AutomaticHealer>    Autocast Healing</SHG_AutomaticHealer>
-    <SHG_AutomaticHealerDescription>Makes multiple healing abilities automatically cast, along with the basic revive ability.\n\nYou will no longer be able to manually use revive, though it shouldn't be an issue.</SHG_AutomaticHealerDescription>
+    <SHG_AutomaticHealerDescription>Makes multiple healing abilities automatically cast, along with the basic revive ability.\n\nYou will no longer be able to manually use revive, though it shouldn't be an issue as the pawn will automatically go revive people whenever there aren't enemies on the map to interrupt the lengthy process. The few situations where I needed a revive mid-combat, I manage one due to constantly getting shot.</SHG_AutomaticHealerDescription>
 </LanguageData>

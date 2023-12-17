@@ -144,7 +144,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_PsionicShield</defName>
         <label>psionic shield</label>
-        <description>Create a small shield that stops all projectiles from entering. This will not stop people, and will cause items to explode on impact with the shield. This will last for about one hour.</description>
+        <description>Create a small shield that stops all projectiles from entering. This will not stop people, and can cause items to explode on impact with the shield. This will last for about one hour.</description>
         <iconPath>Psionist/Soldier/Gene_Psionist_PsionicShield</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <targetRequired>False</targetRequired>
