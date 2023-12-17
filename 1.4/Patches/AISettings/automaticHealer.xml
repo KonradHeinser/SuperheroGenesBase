@@ -86,6 +86,42 @@
                                 </li>
                             </subNodes>
                         </li>
+                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalTendableAlly">
+                            <subNodes>
+                                <li Class="ThinkNode_ConditionalHasAbility">
+                                    <ability>SHG_SealWounds</ability>
+                                    <subNodes>
+                                        <li Class="SuperHeroGenesBase.JobGiver_AICastHealingAbility">
+                                            <ability>SHG_SealWounds</ability>
+                                        </li>
+                                    </subNodes>
+                                </li>
+                                <li Class="ThinkNode_ConditionalHasAbility">
+                                    <ability>SHG_Hemomancer_Hemoclotting</ability>
+                                    <subNodes>
+                                        <li Class="SuperHeroGenesBase.JobGiver_AICastHealingAbility">
+                                            <ability>SHG_Hemomancer_Hemoclotting</ability>
+                                        </li>
+                                    </subNodes>
+                                </li>
+                                <li Class="ThinkNode_ConditionalHasAbility">
+                                    <ability>Coagulate</ability>
+                                    <subNodes>
+                                        <li Class="SuperHeroGenesBase.JobGiver_AICastHealingAbility">
+                                            <ability>Coagulate</ability>
+                                        </li>
+                                    </subNodes>
+                                </li>
+                                <li Class="ThinkNode_ConditionalHasAbility">
+                                    <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                                    <subNodes>
+                                        <li Class="SuperHeroGenesBase.JobGiver_AICastHealingAbility">
+                                            <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                                        </li>
+                                    </subNodes>
+                                </li>
+                            </subNodes>
+                        </li>
                     </value>
                 </li>
 
@@ -95,7 +131,7 @@
                         <li Class="ThinkNode_ConditionalHasAbility">
                             <ability>SHG_Revive</ability>
                             <subNodes>
-                                <li Class="JobGiver_AIResurrectTarget">
+                                <li Class="SuperHeroGenesBase.JobGiver_AIResurrectHumanoid">
                                     <ability>SHG_Revive</ability>
                                     <expiryInterval>5000</expiryInterval>
                                 </li>
@@ -104,9 +140,30 @@
                     </value>
                 </li>
 
-                <li Class="PatchOperationReplace">
-                    <xpath>Defs/AbilityDef[defName="SHG_Revive"]/jobDef</xpath>
-                    <value><jobDef>CastAbilityGoToThing</jobDef></value>
+                <li Class="SuperHeroGenesBase.PatchOperationSetting">
+                    <setting>poolUsage</setting>
+                    <active Class="PatchOperationSequence"> <!--If bleeding a lot, use a more potent ability-->
+                        <operations>
+                            <li Class="PatchOperationAdd">
+                                <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes</xpath>
+                                <value>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalConcerningBleeding">
+                                        <bleedThreshold>0.5</bleedThreshold>
+                                        <subNodes>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_Regenerator</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Regenerator</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </value>
+                            </li>
+                        </operations>
+                    </active>
                 </li>
             </operations>
         </active>

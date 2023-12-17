@@ -151,6 +151,7 @@
     </GeneDef>
 
     <AbilityDef Abstract="True" Name="SHGPowerAbilitiesBase">
+        <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
         <aiCanUse>True</aiCanUse>
         <cooldownTicksRange>100</cooldownTicksRange>
         <category>SuperPowers</category>

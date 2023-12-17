@@ -1,6 +1,8 @@
 ﻿using Verse;
 using System.Collections.Generic;
 using RimWorld;
+using Verse.AI;
+using System;
 
 namespace SuperHeroGenesBase
 {
@@ -66,6 +68,57 @@ namespace SuperHeroGenesBase
             }
             if (!dictionary2.NullOrEmpty()) return false;
             return true;
+        }
+
+
+        // AI stuff
+
+        public static bool NeedToMove(Ability ability, Pawn pawn, Pawn targetPawn = null)
+        {
+            if (ability.verb.verbProps.rangeStat != null) // If there's a range stat and the target is at risk for becoming too far away, move closer
+            {
+                if (targetPawn.pather.Moving)
+                {
+                    if (targetPawn.Position.DistanceTo(pawn.Position) > pawn.GetStatValue(ability.verb.verbProps.rangeStat))
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    if (targetPawn.Position.DistanceTo(pawn.Position) > Math.Ceiling(pawn.GetStatValue(ability.verb.verbProps.rangeStat) / 2))
+                    {
+                        return true;
+                    }
+                }
+            }
+            else // If there's no range stat, just try to get in normal range
+            {
+                if (targetPawn.pather.Moving)
+                {
+                    if (targetPawn.Position.DistanceTo(pawn.Position) > ability.verb.verbProps.range)
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    if (targetPawn.Position.DistanceTo(pawn.Position) > Math.Ceiling(ability.verb.verbProps.range / 2))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public static Job GoToTarget(LocalTargetInfo target)
+        {
+            Job job = JobMaker.MakeJob(JobDefOf.Goto, target);
+            job.checkOverrideOnExpire = true;
+            job.expiryInterval = 500;
+            job.collideWithPawns = true;
+            return job;
         }
     }
 }

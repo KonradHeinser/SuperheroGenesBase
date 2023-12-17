@@ -77,7 +77,6 @@
         <warmupMote>Mote_CoagulateStencil</warmupMote>
         <warmupEffecter>Coagulate</warmupEffecter>
         <warmupStartSound>Coagulate_Cast</warmupStartSound>
-        <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <label>heal</label>
@@ -144,7 +143,6 @@
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <hostile>False</hostile>
-        <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <range>5</range>
