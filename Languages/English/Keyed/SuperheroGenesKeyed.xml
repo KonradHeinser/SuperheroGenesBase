@@ -36,4 +36,14 @@
     <SHG_MiddleGroundsDescription>Adds a second option for all of the basic super and antisuper genes. This adds 16 new genes.</SHG_MiddleGroundsDescription>
     <SHG_AllGrounds>        All Ground Basic Super Genes (Restart Required)</SHG_AllGrounds>
     <SHG_AllGroundsDescription>Extends the options for all of the basic super and antisuper genes to the maximum extent. This adds 27 new genes in addition to the 16 added by middle ground, for a total of 43 new genes.</SHG_AllGroundsDescription>
+
+        <!--AI Settings-->
+    <SHG_SuperAI>    Autocast Abilities (Restart Required for any changes)</SHG_SuperAI>
+    <SHG_SuperAIDescription>This causes colonists to automatically try to use some of their super abilities when appropriate. This is disabled by default for a few reasons.\n\nFirst, some may not like the idea of having the pawns they are supposed to be controlling doing things on their own.\n\nSecond, this can cause the game to run slower due to the game needing to process more things by itself.\n\nAnd the last reason is that, as many of us have probably noticed, AIs have a tendency of getting caught up on the weirdest stuff, acting in ways that don't quite make sense and making it harder for you to play the game.\n\nMost abilities will not try to activate if the pawn is drafted, and some of them will interrupt you in specific situations(i.e. If autocast healing is enabled, the pawn has a sealing abiltity, and they are bleeding, they will first try to seal their wounds with said ability).</SHG_SuperAIDescription>
+
+    <SHG_AllowPoolUsage>    Allow Life Pool Usage</SHG_AllowPoolUsage>
+    <SHG_AllowPoolUsageDescription>Some abilities grant powerful bonuses in the short term, but cause the super to have various debuffs afterwards. If this disabled, then these abilities will never be autocast.</SHG_AllowPoolUsageDescription>
+
+    <SHG_AutomaticHealer>    Autocast Healing</SHG_AutomaticHealer>
+    <SHG_AutomaticHealerDescription>Makes multiple healing abilities automatically cast, along with the basic revive ability.\n\nYou will no longer be able to manually use revive, though it shouldn't be an issue.</SHG_AutomaticHealerDescription>
 </LanguageData>

@@ -156,7 +156,7 @@
         <category>SuperPowers</category>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
-            <warmupTime>2</warmupTime>
+            <warmupTime>1</warmupTime>
         </verbProperties>
     </AbilityDef>
 

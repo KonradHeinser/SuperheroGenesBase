@@ -39,6 +39,7 @@ namespace SuperHeroGenesBase
         public static bool interruptibleActivatables = false;
         public static bool middleGrounds = false;
         public static bool allGrounds = false;
+        public static bool automaticHealer = false;
 
         public static bool medievalVillains = false;
         public static bool vengefulOne = true;
@@ -55,6 +56,7 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref interruptibleActivatables, "interruptibleActivatables");
             Scribe_Values.Look(ref middleGrounds, "middleGrounds");
             Scribe_Values.Look(ref allGrounds, "allGrounds");
+            Scribe_Values.Look(ref automaticHealer, "automaticHealer");
 
             Scribe_Values.Look(ref medievalVillains, "medievalVillains");
             Scribe_Values.Look(ref vengefulOne, "vengefulOne");
@@ -87,6 +89,7 @@ namespace SuperHeroGenesBase
                 optionsMenu.CheckboxLabeled("SHG_AllGrounds".Translate(), ref allGrounds, "SHG_AllGroundsDescription".Translate());
                 optionsMenu.Gap(10f);
             }
+
             if (ModsConfig.IsActive("SuperheroGenes.Villains"))
             {
                 optionsMenu.Gap(10f);
@@ -97,6 +100,13 @@ namespace SuperHeroGenesBase
                 optionsMenu.CheckboxLabeled("SHG_VengefulOne".Translate(), ref vengefulOne, "SHG_VengefulOneDescription".Translate());
                 optionsMenu.Gap(10f);
             }
+
+            optionsMenu.Gap(10f);
+            optionsMenu.Label("SHG_SuperAI".Translate(), -1, "SHG_SuperAIDescription".Translate());
+            optionsMenu.Gap(7f);
+            optionsMenu.CheckboxLabeled("SHG_AutomaticHealer".Translate(), ref automaticHealer, "SHG_AutomaticHealerDescription".Translate());
+            optionsMenu.Gap(10f);
+
             optionsMenu.End();
             base.Write();
         }

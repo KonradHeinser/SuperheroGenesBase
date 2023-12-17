@@ -125,6 +125,7 @@
     <Compile Include="Genes\HediffAdder.cs" />
     <Compile Include="Genes\HediffsToParts.cs" />
     <Compile Include="Genes\Gene_HemoHediffAdder.cs" />
+    <Compile Include="SuperAI\ThinkNode_ConditionalConcerningBleeding.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />
@@ -133,6 +134,7 @@
     <Folder Include="Thoughts\" />
     <Folder Include="DynamicResourceGenes\" />
     <Folder Include="ModSettings\" />
+    <Folder Include="SuperAI\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
