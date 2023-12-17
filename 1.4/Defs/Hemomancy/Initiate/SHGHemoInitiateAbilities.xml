@@ -125,7 +125,7 @@
                 <replaceExisting>True</replaceExisting>
             </li>
             <li Class="CompProperties_AbilityHemogenCost">
-                <hemogenCost>0.7</hemogenCost>
+                <hemogenCost>0.1</hemogenCost>
             </li>
         </comps>
     </AbilityDef>
