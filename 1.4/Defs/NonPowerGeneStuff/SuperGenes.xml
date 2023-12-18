@@ -33,7 +33,6 @@
             <li>WoundHealingRate</li>
             <li>Immunity</li>
             <li>RandomHealing</li>
-            <li>EBSG_FertilityByAge</li>
         </exclusionTags>
     </GeneDef>
 
