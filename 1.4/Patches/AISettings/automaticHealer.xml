@@ -169,14 +169,3 @@
         </active>
     </Operation>
 </Patch>
-
-<!--
-<li Class="PatchOperationAdd">
-                    <xpath></xpath>
-                    <value>
-
-                    </value>
-                </li>
-
-
--->
