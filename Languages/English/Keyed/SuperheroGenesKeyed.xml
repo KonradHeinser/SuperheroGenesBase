@@ -38,7 +38,7 @@
     <SHG_AllGroundsDescription>Extends the options for all of the basic super and antisuper genes to the maximum extent. This adds 27 new genes in addition to the 16 added by middle ground, for a total of 43 new genes.</SHG_AllGroundsDescription>
 
         <!--AI Settings-->
-    <SHG_SuperAI>    Autocast Abilities (Restart Required for any changes)</SHG_SuperAI>
+    <SHG_SuperAI>Autocast Abilities (Restart Required for any changes)</SHG_SuperAI>
     <SHG_SuperAIDescription>This causes colonists to automatically try to use some of their super abilities when appropriate. This is disabled by default for a few reasons.\n\nFirst, some may not like the idea of having the pawns they are supposed to be controlling doing things on their own.\n\nSecond, this can cause the game to run slower due to the game needing to process more things by itself.\n\nAnd the last reason is that, as many of us have probably noticed, AIs have a tendency of getting caught up on the weirdest stuff, acting in ways that don't quite make sense and making it harder for you to play the game.\n\nMost abilities will not try to activate if the pawn is drafted, and some of them will interrupt you in specific situations(i.e. If autocast healing is enabled, the pawn has a sealing abiltity, and they are bleeding, they will first try to seal their wounds with said ability).</SHG_SuperAIDescription>
 
     <SHG_AllowPoolUsage>    Allow Life Pool Usage</SHG_AllowPoolUsage>
