@@ -6,15 +6,14 @@
       <File FileName="SuperAI/ThinkNode_ConditionalConcerningBleeding.cs" Line="7" Column="58" />
       <File FileName="SuperAI/ThinkNode_ConditionalNeedTending.cs" Line="14" Column="1" />
       <File FileName="SuperAI/JobGiver_AICastHealingAbility.cs" Line="33" Column="144" />
-      <File FileName="SHGUtilities.cs" Line="98" Column="46" />
-      <File FileName="SuperAI/JobGiver_AIResurrectHumanoid.cs" Line="36" Column="148" />
+      <File FileName="SHGUtilities.cs" Line="99" Column="73" />
+      <File FileName="SuperAI/JobGiver_AIResurrectHumanoid.cs" Line="61" Column="123" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Hediffs" expanded="True" />
               <Node name="ModSettings" expanded="True" />
               <Node name="SuperAI" expanded="True">
                 <Node name="JobGiver_AIResurrectHumanoid.cs" selected="True" />
