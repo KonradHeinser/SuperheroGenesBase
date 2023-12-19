@@ -43,7 +43,14 @@ namespace SuperHeroGenesBase
         // AI stuff
         public static bool poolUsage = false;
         public static bool automaticHealer = false;
-
+        public static bool automaticDefense = false;
+        public static bool automaticDefenseDrafted = false;
+        public static bool automaticBuffs= false;
+        public static bool automaticDebuffs = false;
+        public static bool automaticDebuffsDrafted = false;
+        public static bool automaticOffense = false;
+        public static bool automaticOffenseDrafted = false;
+        public static bool automaticFleeing= false;
 
         // Villains and Stereotypes stuff
         public static bool medievalVillains = false;

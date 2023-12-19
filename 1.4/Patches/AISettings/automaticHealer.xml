@@ -142,13 +142,13 @@
 
                 <li Class="SuperHeroGenesBase.PatchOperationSetting">
                     <setting>poolUsage</setting>
-                    <active Class="PatchOperationSequence"> <!--If bleeding a lot, use a more potent ability-->
+                    <active Class="PatchOperationSequence"> <!--If under half health, use a potent regeneration ability-->
                         <operations>
                             <li Class="PatchOperationAdd">
                                 <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes</xpath>
                                 <value>
-                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalConcerningBleeding">
-                                        <bleedThreshold>0.5</bleedThreshold>
+                                    <li Class="ThinkNode_ConditionalTotalDamage">
+                                        <thresholdPercent>0.50</thresholdPercent>
                                         <subNodes>
                                             <li Class="ThinkNode_ConditionalHasAbility">
                                                 <ability>SHG_Regenerator</ability>
