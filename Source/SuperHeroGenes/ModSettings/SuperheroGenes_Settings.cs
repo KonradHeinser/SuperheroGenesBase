@@ -69,9 +69,19 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref middleGrounds, "middleGrounds");
             Scribe_Values.Look(ref allGrounds, "allGrounds");
 
+            // AI stuff
             Scribe_Values.Look(ref poolUsage, "poolUsage");
             Scribe_Values.Look(ref automaticHealer, "automaticHealer");
+            Scribe_Values.Look(ref automaticDefense, "automaticDefense");
+            Scribe_Values.Look(ref automaticDefenseDrafted, "automaticDefenseDrafted");
+            Scribe_Values.Look(ref automaticBuffs, "automaticBuffs");
+            Scribe_Values.Look(ref automaticDebuffs, "automaticDebuffs");
+            Scribe_Values.Look(ref automaticDebuffsDrafted, "automaticDebuffsDrafted");
+            Scribe_Values.Look(ref automaticOffense, "automaticOffense");
+            Scribe_Values.Look(ref automaticOffenseDrafted, "automaticOffenseDrafted");
+            Scribe_Values.Look(ref automaticFleeing, "automaticFleeing");
 
+            // Villains and Stereotypes stuff
             Scribe_Values.Look(ref medievalVillains, "medievalVillains");
             Scribe_Values.Look(ref vengefulOne, "vengefulOne");
         }
@@ -122,6 +132,33 @@ namespace SuperHeroGenesBase
             optionsMenu.Gap(10f);
             optionsMenu.CheckboxLabeled("SHG_AutomaticHealer".Translate(), ref automaticHealer, "SHG_AutomaticHealerDescription".Translate());
             optionsMenu.Gap(10f);
+            optionsMenu.CheckboxLabeled("SHG_AutomaticDefense".Translate(), ref automaticDefense, "SHG_AutomaticDefenseDescription".Translate());
+            optionsMenu.Gap(10f);
+            if (automaticDefenseDrafted)
+            {
+                optionsMenu.CheckboxLabeled("SHG_AutomaticDefenseDrafted".Translate(), ref automaticDefenseDrafted, "SHG_AutomaticDefenseDraftedDescription".Translate());
+                optionsMenu.Gap(10f);
+            }
+            optionsMenu.CheckboxLabeled("SHG_AutomaticBuffs".Translate(), ref automaticBuffs, "SHG_AutomaticBuffsDescription".Translate());
+            optionsMenu.Gap(10f);
+            optionsMenu.CheckboxLabeled("SHG_AutomaticDebuff".Translate(), ref automaticDebuffs, "SHG_AutomaticDebuffDescription".Translate());
+            optionsMenu.Gap(10f);
+            if (automaticDebuffs)
+            {
+                optionsMenu.CheckboxLabeled("SHG_AutomaticDebuffDrafted".Translate(), ref automaticDebuffsDrafted, "SHG_AutomaticDebuffDraftedDescription".Translate());
+                optionsMenu.Gap(10f);
+            }
+            optionsMenu.CheckboxLabeled("SHG_AutomaticOffense".Translate(), ref automaticOffense, "SHG_AutomaticOffenseDescription".Translate());
+            optionsMenu.Gap(10f);
+            if (automaticOffense)
+            {
+                optionsMenu.CheckboxLabeled("SHG_AutomaticOffenseDrafted".Translate(), ref automaticOffenseDrafted, "SHG_AutomaticOffenseDraftedDescription".Translate());
+                optionsMenu.Gap(10f);
+            }
+            optionsMenu.CheckboxLabeled("SHG_AutomaticFleeing".Translate(), ref automaticFleeing, "SHG_AutomaticFleeingDescription".Translate());
+            optionsMenu.Gap(10f);
+
+
 
             optionsMenu.End();
             base.Write();

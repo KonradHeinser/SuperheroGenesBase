@@ -1,8 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="ModSettings/SuperheroGenes_Settings.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ModSettings/PatchOperationSetting.cs">
     <Files>
-      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="74" Column="66" />
-      <File FileName="ModSettings/PatchOperationSetting.cs" Line="69" Column="43" />
+      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="83" Column="1" />
+      <File FileName="ModSettings/PatchOperationSetting.cs" Line="106" Column="14" />
       <File FileName="SuperAI/ThinkNode_ConditionalConcerningBleeding.cs" Line="7" Column="58" />
       <File FileName="SuperAI/ThinkNode_ConditionalNeedTending.cs" Line="14" Column="1" />
       <File FileName="SuperAI/JobGiver_AICastHealingAbility.cs" Line="33" Column="144" />
