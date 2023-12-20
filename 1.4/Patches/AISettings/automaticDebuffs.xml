@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>automaticDebuffs</setting>
+        <active Class="PatchOperationSequence">
+            <operations>
+                
+            </operations>
+        </active>
+    </Operation>
+</Patch>
+
+<!--
+<li Class="PatchOperationAdd">
+                    <xpath></xpath>
+                    <value>
+
+                    </value>
+                </li>
+
+
+-->
