@@ -66,5 +66,5 @@
     <SHG_AutomaticOffenseDraftedDescription>Pawns will try to use the same abiilties as they would while undrafted in a dangerous situation. This is a separate option because you may encounter situations where pawns will ignore your commands for a couple seconds to use their offensive abilities, even if said orders are to run away from a situation.</SHG_AutomaticOffenseDraftedDescription>
 
     <SHG_AutomaticFleeing>    Autocast Fleeing Abilities</SHG_AutomaticFleeing>
-    <SHG_AutomaticFleeingDescription>While the pawn is undrafted, they will automatically try to flee when the situation warrants it. If they are actively fleeing, or their health drops below 50%, then they will use whatever escape abilities they have at their disposal, from blink to invisibility to leaping away. This includes the vanilla longjump legs as a method of last resort.</SHG_AutomaticFleeingDescription>
+    <SHG_AutomaticFleeingDescription>While the pawn is undrafted, they will automatically try to use their abilities while fleeing when the situation warrants it. They will use whatever escape abilities they have at their disposal, from blink to invisibility to heroically leaping away. This includes the vanilla invisibility and longjump legs as methods of last resort.</SHG_AutomaticFleeingDescription>
 </LanguageData>

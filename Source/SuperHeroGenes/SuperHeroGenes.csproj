@@ -130,6 +130,8 @@
     <Compile Include="SuperAI\JobGiver_AICastHealingAbility.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalTendableAlly.cs" />
     <Compile Include="SuperAI\JobGiver_AIResurrectHumanoid.cs" />
+    <Compile Include="SuperAI\ThinkNode_ConditionalColonistShouldFlee.cs" />
+    <Compile Include="SuperAI\JobGiver_AITeleportEscapeEnemies.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />
