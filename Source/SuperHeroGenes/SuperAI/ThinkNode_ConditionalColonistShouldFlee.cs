@@ -9,36 +9,23 @@ namespace SuperHeroGenesBase
     {
         protected override bool Satisfied(Pawn pawn)
         {
-            Pawn meleeThreat = pawn.mindState.meleeThreat;
-
-            if (meleeThreat == null)
-            {
-                return false;
-            }
-            if (meleeThreat.IsInvisible() || pawn.IsInvisible())
-            {
-                return false;
-            }
-            if (IsHunting(pawn, meleeThreat))
-            {
-                return false;
-            }
-            if (IsDueling(pawn, meleeThreat))
-            {
-                return false;
-            }
-            if (PawnUtility.PlayerForcedJobNowOrSoon(pawn))
-            {
-                return false;
-            }
-            if (!pawn.mindState.MeleeThreatStillThreat)
-            {
-                pawn.mindState.meleeThreat = null;
-                return false;
-            }
+            if (!pawn.Spawned || pawn.Downed) return false; // If you're not even able to flee, then don't try
+            if (pawn.IsInvisible()) return false; // If you're invisible, then you should be safe
+            if (PawnUtility.PlayerForcedJobNowOrSoon(pawn)) return false; // If there's a forced job, return false
+            if (pawn.CurJob != null && (pawn.CurJob.def == JobDefOf.Flee || pawn.CurJob.def == JobDefOf.FleeAndCower)) return true;
             if (pawn.playerSettings != null && pawn.playerSettings.UsesConfigurableHostilityResponse && pawn.playerSettings.hostilityResponse == HostilityResponseMode.Flee)
             {
-                return true;
+                // If shot recently, then it's a threat to avoid
+                if (pawn.mindState.lastRangedHarmTick > 0 && Find.TickManager.TicksGame < pawn.mindState.lastRangedHarmTick + 2500) return true;
+
+                // If it's in melee range and an active, non-invisible threat, flee
+                Pawn meleeThreat = pawn.mindState.meleeThreat;
+                if (meleeThreat != null && pawn.mindState.MeleeThreatStillThreat)
+                {
+                    if (!meleeThreat.IsInvisible() && !IsHunting(pawn, meleeThreat) && !IsDueling(pawn, meleeThreat)) return true;
+                }
+                // If any enemies are nearby, get out of there
+                if (PawnUtility.EnemiesAreNearby(pawn, 9, true, 20, 1)) return true;
             }
 
             return false;
