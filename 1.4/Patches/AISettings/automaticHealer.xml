@@ -8,7 +8,7 @@
                     <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes</xpath>
                     <value> <!--Always available, even to non~colonists-->
                         <li Class="SuperHeroGenesBase.ThinkNode_ConditionalConcerningBleeding">
-                            <bleedThreshold>0.1</bleedThreshold>
+                            <bleedThreshold>0.3</bleedThreshold>
                             <subNodes>
                                 <li Class="ThinkNode_ConditionalHasAbility">
                                     <ability>SHG_SealWounds</ability>
