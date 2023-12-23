@@ -62,14 +62,6 @@ namespace SuperHeroGenesBase
                             return new LocalTargetInfo(ally.Position);
                         }
                     }
-                    foreach (Pawn ally in allies) // Then look for any tendable hediff
-                    {
-                        if (ally.health.hediffSet.HasTendableHediff())
-                        {
-                            targetPawn = ally;
-                            return new LocalTargetInfo(ally.Position);
-                        }
-                    }
                 }
             }
             return LocalTargetInfo.Invalid;

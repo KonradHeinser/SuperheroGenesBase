@@ -11,7 +11,7 @@ namespace SuperHeroGenesBase
         {
             if (!pawn.Spawned || pawn.Downed) return false; // If you're not even able to flee, then don't try
             if (pawn.IsInvisible()) return false; // If you're invisible, then you should be safe
-            if (PawnUtility.PlayerForcedJobNowOrSoon(pawn)) return false; // If there's a forced job, return false
+            if (PawnUtility.PlayerForcedJobNowOrSoon(pawn) || pawn.Drafted) return false; // If there's a forced job, return false
             if (pawn.CurJob != null && (pawn.CurJob.def == JobDefOf.Flee || pawn.CurJob.def == JobDefOf.FleeAndCower)) return true;
             if (pawn.playerSettings != null && pawn.playerSettings.UsesConfigurableHostilityResponse && pawn.playerSettings.hostilityResponse == HostilityResponseMode.Flee)
             {

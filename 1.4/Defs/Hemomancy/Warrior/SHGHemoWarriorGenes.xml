@@ -150,7 +150,7 @@
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_TrueRegeneration</iconPath>
         <displayOrderInCategory>14</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Champion</prerequisite>
-        <geneClass>Gene_HemogenDrain</geneClass>
+        <geneClass>SuperHeroGenesBase.Gene_HemoHediffAdder</geneClass>
         <resourceLabel>hemogen</resourceLabel>
         <resourceLossPerDay>1</resourceLossPerDay>
         <modExtensions>
