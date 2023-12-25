@@ -1,15 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Genes/Gene_HemoHediffAdder.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/ThinkNode_ConditionalHasTargetNoFriendlyFire.cs">
     <Files>
       <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="83" Column="1" />
       <File FileName="ModSettings/PatchOperationSetting.cs" Line="93" Column="50" />
-      <File FileName="SuperAI/ThinkNode_ConditionalNeedTending.cs" Line="14" Column="1" />
-      <File FileName="SuperAI/JobGiver_AICastHealingAbility.cs" Line="65" Column="1" />
-      <File FileName="SuperAI/ThinkNode_ConditionalColonistShouldFlee.cs" Line="22" Column="63" />
-      <File FileName="SuperAI/JobGiver_AITeleportEscapeEnemies.cs" Line="48" Column="37" />
-      <File FileName="Genes/HediffAdder.cs" Line="25" Column="30" />
-      <File FileName="SHGUtilities.cs" Line="108" Column="18" />
-      <File FileName="Genes/Gene_HemoHediffAdder.cs" Line="12" Column="15" />
+      <File FileName="SuperAI/ThinkNode_ConditionalColonistShouldFlee.cs" Line="8" Column="57" />
+      <File FileName="SuperAI/ThinkNode_ConditionalHighResourceLevels.cs" Line="21" Column="56" />
+      <File FileName="SuperAI/ThinkNode_ConditionalTargetIsMechanoid.cs" Line="3" Column="1" />
+      <File FileName="SuperAI/JobGiver_AIResurrectHumanoid.cs" Line="75" Column="83" />
+      <File FileName="SuperAI/ThinkNode_ConditionalHasTargetNoFriendlyFire.cs" Line="37" Column="57" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,11 +15,12 @@
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
               <Node name="DynamicResourceGenes" expanded="True" />
-              <Node name="Genes" expanded="True">
-                <Node name="Gene_HemoHediffAdder.cs" selected="True" />
-              </Node>
+              <Node name="Genes" expanded="True" />
+              <Node name="Hediffs" expanded="True" />
               <Node name="ModSettings" expanded="True" />
-              <Node name="SuperAI" expanded="True" />
+              <Node name="SuperAI" expanded="True">
+                <Node name="ThinkNode_ConditionalHasTargetNoFriendlyFire.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

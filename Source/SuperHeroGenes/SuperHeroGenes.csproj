@@ -132,6 +132,10 @@
     <Compile Include="SuperAI\JobGiver_AIResurrectHumanoid.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalColonistShouldFlee.cs" />
     <Compile Include="SuperAI\JobGiver_AITeleportEscapeEnemies.cs" />
+    <Compile Include="SuperAI\ThinkNode_ConditionalAboveMood.cs" />
+    <Compile Include="SuperAI\ThinkNode_ConditionalHighResourceLevels.cs" />
+    <Compile Include="SuperAI\ThinkNode_ConditionalTargetIsMechanoid.cs" />
+    <Compile Include="SuperAI\ThinkNode_ConditionalHasTargetNoFriendlyFire.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

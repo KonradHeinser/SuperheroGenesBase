@@ -19,6 +19,7 @@ namespace SuperHeroGenesBase
 
             // Get all a list of all pawns, and a list of all player pawns
             List<Pawn> list = parent.pawn.Map.mapPawns.AllPawnsSpawned;
+            list.SortBy((Pawn c) => c.Position.DistanceToSquared(parent.pawn.Position));
             List<Pawn> allies = parent.pawn.Map.mapPawns.SpawnedPawnsInFaction(parent.pawn.Faction);
             if (!Props.hideMoteWhenNotDrafted || parent.pawn.Drafted)
             {
@@ -41,9 +42,9 @@ namespace SuperHeroGenesBase
                     Log.Message("Checking range");
                     if (Props.rangeStat != null)
                     {
-                        if (!(item.Position.DistanceTo(parent.pawn.Position) <= parent.pawn.GetStatValue(Props.rangeStat))) continue;
+                        if (!(item.Position.DistanceTo(parent.pawn.Position) <= parent.pawn.GetStatValue(Props.rangeStat))) break;
                     }
-                    else if (!(item.Position.DistanceTo(parent.pawn.Position) <= Props.range)) continue;
+                    else if (!(item.Position.DistanceTo(parent.pawn.Position) <= Props.range)) break;
                     if (Props.psychic && item.GetStatValue(StatDefOf.PsychicSensitivity) == 0) continue;
                     Log.Message("Checking hediff");
                     Hediff hediff = item.health.hediffSet.GetFirstHediffOfDef(Props.hediff);
