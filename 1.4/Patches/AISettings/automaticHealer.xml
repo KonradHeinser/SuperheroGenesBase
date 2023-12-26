@@ -48,7 +48,7 @@
                             <ability>SHG_Hemomancer_ReplenishBlood</ability>
                             <subNodes>
                                 <li Class="ThinkNode_ConditionalHasHediff">
-                                    <hediff>Bloodloss</hediff>
+                                    <hediff>BloodLoss</hediff>
                                     <severityRange>0.45</severityRange>
                                     <subNodes>
                                         <li Class="JobGiver_AICastAbilityOnSelf">
