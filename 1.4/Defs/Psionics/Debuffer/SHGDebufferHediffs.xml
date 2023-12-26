@@ -206,7 +206,7 @@
     <HediffDef>
         <defName>SHG_Psionist_AuraBurst</defName>
         <label>aura burst</label>
-        <description>This Empath is increasing their aura's range to 22.</description>
+        <description>This Debuffer is increasing their aura's range to 22.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
         <stages>
@@ -341,7 +341,7 @@
     <HediffDef>
         <defName>SHG_Psionist_ChannelAura</defName>
         <label>channel aura</label>
-        <description>This Empath is increasing their aura's range to 37.</description>
+        <description>This Debilitator is increasing their aura's range to 37.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
         <stages>
@@ -616,7 +616,7 @@
     <HediffDef>
         <defName>SHG_Psionist_RuinTheWorld</defName>
         <label>ruin the world</label>
-        <description>This Empath is increasing their aura's range to 75.</description>
+        <description>This Ruiner is increasing their aura's range to 75.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
         <stages>
@@ -634,5 +634,3 @@
         </comps>
     </HediffDef>
 </Defs>
-
-

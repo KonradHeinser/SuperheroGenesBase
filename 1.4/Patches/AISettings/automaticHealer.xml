@@ -44,6 +44,20 @@
                                 </li>
                             </subNodes>
                         </li>
+                        <li Class="ThinkNode_ConditionalHasAbility">
+                            <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                            <subNodes>
+                                <li Class="ThinkNode_ConditionalHasHediff">
+                                    <hediff>Bloodloss</hediff>
+                                    <severityRange>0.45</severityRange>
+                                    <subNodes>
+                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                            <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                                        </li>
+                                    </subNodes>
+                                </li>
+                            </subNodes>
+                        </li>
                     </value>
                 </li>
 
