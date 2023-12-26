@@ -44,20 +44,6 @@
                                 </li>
                             </subNodes>
                         </li>
-                        <li Class="ThinkNode_ConditionalHasAbility">
-                            <ability>SHG_Hemomancer_ReplenishBlood</ability>
-                            <subNodes>
-                                <li Class="ThinkNode_ConditionalHasHediff">
-                                    <hediff>BloodLoss</hediff>
-                                    <severityRange>0.45</severityRange>
-                                    <subNodes>
-                                        <li Class="JobGiver_AICastAbilityOnSelf">
-                                            <ability>SHG_Hemomancer_ReplenishBlood</ability>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                            </subNodes>
-                        </li>
                     </value>
                 </li>
 
@@ -130,6 +116,20 @@
                                     <ability>SHG_Hemomancer_ReplenishBlood</ability>
                                     <subNodes>
                                         <li Class="SuperHeroGenesBase.JobGiver_AICastHealingAbility">
+                                            <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                                        </li>
+                                    </subNodes>
+                                </li>
+                            </subNodes>
+                        </li>
+                        <li Class="ThinkNode_ConditionalHasHediff"> <!--Undrafted pawn with severe blood loss-->
+                            <hediff>BloodLoss</hediff>
+                            <severityRange>0.45</severityRange>
+                            <subNodes>
+                                <li Class="ThinkNode_ConditionalHasAbility">
+                                    <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                                    <subNodes>
+                                        <li Class="JobGiver_AICastAbilityOnSelf">
                                             <ability>SHG_Hemomancer_ReplenishBlood</ability>
                                         </li>
                                     </subNodes>
