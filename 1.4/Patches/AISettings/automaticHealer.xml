@@ -8,7 +8,7 @@
                     <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes</xpath>
                     <value> <!--Always available, even to non~colonists-->
                         <li Class="SuperHeroGenesBase.ThinkNode_ConditionalConcerningBleeding">
-                            <bleedThreshold>0.3</bleedThreshold>
+                            <bleedThreshold>1.0</bleedThreshold>
                             <subNodes>
                                 <li Class="ThinkNode_ConditionalHasAbility">
                                     <ability>SHG_SealWounds</ability>
@@ -48,7 +48,7 @@
                 </li>
 
                 <li Class="PatchOperationAdd"> <!--Undrafted pawn-->
-                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[1]/subNodes</xpath>
+                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes</xpath>
                     <value>
                         <li Class="SuperHeroGenesBase.ThinkNode_ConditionalNeedTending">
                             <subNodes>
@@ -140,7 +140,7 @@
                 </li>
 
                 <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[1]/subNodes/li[1]/subNodes</xpath>
+                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[1]/subNodes</xpath>
                     <value> <!--Undrafted pawn while no enemies are on map-->
                         <li Class="ThinkNode_ConditionalHasAbility">
                             <ability>SHG_Revive</ability>

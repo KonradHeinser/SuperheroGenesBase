@@ -5,7 +5,7 @@
         <active Class="PatchOperationSequence">
             <operations>
                 <li Class="PatchOperationAdd"> <!--Undrafted pawn that was shot recently-->
-                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[1]/subNodes/li[3]/subNodes</xpath>
+                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[3]/subNodes</xpath>
                     <value>
                         <li Class="ThinkNode_ConditionalHasAbility">
                             <ability>SHG_Psionist_SmokeScreen</ability>
@@ -24,7 +24,7 @@
                     </value>
                 </li>
                 <li Class="PatchOperationAdd"> <!--Undrafted pawn with several hostiles close to them-->
-                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[1]/subNodes/li[4]/subNodes</xpath>
+                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[4]/subNodes</xpath>
                     <value>
                         <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
                             <hediffs>
@@ -112,7 +112,7 @@
                     </value>
                 </li>
                 <li Class="PatchOperationAdd"> <!--Undrafted pawn while a hostile is almost in melee range-->
-                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[1]/subNodes/li[5]/subNodes</xpath>
+                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[5]/subNodes</xpath>
                     <value>
                         <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
                             <hediffs>
@@ -162,7 +162,7 @@
                     <active Class="PatchOperationSequence"> <!--If there are severaly hostiles nearby and pool using abilities are allowed, use them as needed-->
                         <operations>
                             <li Class="PatchOperationAdd">
-                                <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[1]/subNodes/li[4]/subNodes</xpath>
+                                <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[4]/subNodes</xpath>
                                 <value>
                                     <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
                                         <hediffs>
@@ -224,7 +224,7 @@
                     <active Class="PatchOperationSequence">
                         <operations>
                             <li Class="PatchOperationAdd"> <!--Undrafted pawn that was shot recently-->
-                                <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[2]/subNodes/li[2]/subNodes</xpath>
+                                <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[2]/subNodes/li[2]/subNodes</xpath>
                                 <value>
                                     <li Class="ThinkNode_ConditionalHasAbility">
                                         <ability>SHG_Psionist_SmokeScreen</ability>
@@ -243,7 +243,7 @@
                                 </value>
                             </li>
                             <li Class="PatchOperationAdd"> <!--Drafted pawn while there are several of hostiles close to them-->
-                                <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[2]/subNodes/li[3]/subNodes</xpath>
+                                <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[2]/subNodes/li[3]/subNodes</xpath>
                                 <value>
                                     <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
                                         <hediffs>
@@ -332,7 +332,7 @@
                                 </value>
                             </li>
                             <li Class="PatchOperationAdd"> <!--Drafted pawn while a hostile is almost in melee range-->
-                                <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[2]/subNodes/li[4]/subNodes</xpath>
+                                <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[2]/subNodes/li[4]/subNodes</xpath>
                                 <value>
                                     <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
                                         <hediffs>
@@ -383,7 +383,7 @@
                                 <active Class="PatchOperationSequence"> <!--If there are severaly hostiles nearby and pool using abilities are allowed, use them as needed-->
                                     <operations>
                                         <li Class="PatchOperationAdd">
-                                            <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[2]/subNodes/li[3]/subNodes</xpath>
+                                            <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[2]/subNodes/li[3]/subNodes</xpath>
                                             <value>
                                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
                                                     <hediffs>

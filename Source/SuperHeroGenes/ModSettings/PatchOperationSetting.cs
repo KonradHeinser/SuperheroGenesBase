@@ -62,7 +62,7 @@ namespace SuperHeroGenesBase
 
             else if (setting == "automaticDefenseDrafted")
             {
-                if (SuperheroGenes_Settings.automaticDefense && SuperheroGenes_Settings.automaticDefenseDrafted && active != null) return active.Apply(xml);
+                if (SuperheroGenes_Settings.automaticDefenseDrafted && active != null) return active.Apply(xml);
             }
 
             else if (setting == "automaticBuffs")
@@ -77,7 +77,7 @@ namespace SuperHeroGenesBase
 
             else if (setting == "automaticDebuffsDrafted")
             {
-                if (SuperheroGenes_Settings.automaticDebuffs && SuperheroGenes_Settings.automaticDebuffsDrafted && active != null) return active.Apply(xml);
+                if (SuperheroGenes_Settings.automaticDebuffsDrafted && active != null) return active.Apply(xml);
             }
 
             else if (setting == "automaticOffense")
@@ -87,7 +87,7 @@ namespace SuperHeroGenesBase
 
             else if (setting == "automaticOffenseDrafted")
             {
-                if (SuperheroGenes_Settings.automaticOffense && SuperheroGenes_Settings.automaticOffenseDrafted && active != null) return active.Apply(xml);
+                if (SuperheroGenes_Settings.automaticOffenseDrafted && active != null) return active.Apply(xml);
             }
 
             else if (setting == "automaticFleeing")

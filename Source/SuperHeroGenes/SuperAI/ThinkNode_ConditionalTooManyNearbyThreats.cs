@@ -21,7 +21,7 @@ namespace SuperHeroGenesBase
             {
                 if (p.Position.DistanceTo(pawn.Position) > dangerRadius) break;
                 if (p.Downed || p.Dead || !p.HostileTo(pawn)) continue;
-                CompCanBeDormant comp = pawn.GetComp<CompCanBeDormant>();
+                CompCanBeDormant comp = p.GetComp<CompCanBeDormant>();
                 if (comp != null && !comp.Awake) continue;
                 count++;
                 if (count >= minCount) return true;

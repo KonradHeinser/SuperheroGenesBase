@@ -1,6 +1,10 @@
 ﻿using RimWorld;
 using UnityEngine;
 using Verse;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 
 namespace SuperHeroGenesBase
 {
@@ -32,6 +36,8 @@ namespace SuperHeroGenesBase
 
     public class SuperheroGenes_Settings : ModSettings
     {
+        private static Vector2 scrollPosition = Vector2.zero;
+
         public static bool condensedMeteors = true;
         public static bool expensiveBase = false;
         public static bool supersEverywhere = false;
@@ -90,8 +96,29 @@ namespace SuperHeroGenesBase
         {
             Listing_Standard optionsMenu = new Listing_Standard();
 
-            optionsMenu.Begin(inRect);
-            optionsMenu.Label("SHG_ModName".Translate());
+            var scrollContainer = inRect.ContractedBy(10);
+            scrollContainer.height -= optionsMenu.CurHeight;
+            scrollContainer.y += optionsMenu.CurHeight;
+            Widgets.DrawBoxSolid(scrollContainer, Color.grey);
+            var innerContainer = scrollContainer.ContractedBy(1);
+            Widgets.DrawBoxSolid(scrollContainer, new ColorInt(42, 32, 32).ToColor);
+            var frameRect = innerContainer.ContractedBy(5);
+            frameRect.y += 15;
+            frameRect.height -= 15;
+            var contentRect = frameRect;
+            contentRect.x = 0;
+            contentRect.y = 0;
+            contentRect.width -= 20;
+
+            int numberOfOptions = 17;
+            if (ModsConfig.IsActive("SuperheroGenes.Villains")) numberOfOptions += 2;
+            contentRect.height = numberOfOptions * 40; // To avoid weird white space, height is based off of option count of present mods
+
+            Widgets.BeginScrollView(frameRect, ref scrollPosition, contentRect, true);
+
+            optionsMenu.Begin(contentRect.AtZero());
+
+            optionsMenu.Label("SHG_ModName".Translate(), tooltip: "SHG_ModDescription".Translate());
             optionsMenu.Gap(7f);
             optionsMenu.CheckboxLabeled("SHG_CondensedMeteors".Translate(), ref condensedMeteors, "SHG_CondensedMeteorsDescription".Translate());
             optionsMenu.Gap(10f);
@@ -117,7 +144,7 @@ namespace SuperHeroGenesBase
             if (ModsConfig.IsActive("SuperheroGenes.Villains"))
             {
                 optionsMenu.Gap(10f);
-                optionsMenu.Label("SHG_Villains_ModName".Translate());
+                optionsMenu.Label("SHG_Villains_ModName".Translate(), tooltip: "SHG_Villains_ModDescription".Translate());
                 optionsMenu.Gap(7f);
                 optionsMenu.CheckboxLabeled("SHG_MedievalVillains".Translate(), ref medievalVillains, "SHG_MedievalVillainsDescription".Translate());
                 optionsMenu.Gap(10f);
@@ -134,7 +161,7 @@ namespace SuperHeroGenesBase
             optionsMenu.Gap(10f);
             optionsMenu.CheckboxLabeled("SHG_AutomaticDefense".Translate(), ref automaticDefense, "SHG_AutomaticDefenseDescription".Translate());
             optionsMenu.Gap(10f);
-            if (automaticDefenseDrafted)
+            if (automaticDefense)
             {
                 optionsMenu.CheckboxLabeled("SHG_AutomaticDefenseDrafted".Translate(), ref automaticDefenseDrafted, "SHG_AutomaticDefenseDraftedDescription".Translate());
                 optionsMenu.Gap(10f);
@@ -158,9 +185,8 @@ namespace SuperHeroGenesBase
             optionsMenu.CheckboxLabeled("SHG_AutomaticFleeing".Translate(), ref automaticFleeing, "SHG_AutomaticFleeingDescription".Translate());
             optionsMenu.Gap(10f);
 
-
-
             optionsMenu.End();
+            Widgets.EndScrollView();
             base.Write();
         }
     }

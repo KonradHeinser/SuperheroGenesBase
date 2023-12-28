@@ -5,7 +5,7 @@
         <active Class="PatchOperationSequence">
             <operations>
                 <li Class="PatchOperationAdd"> <!--Undrafted pawn while no enemies are on the map-->
-                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[1]/subNodes/li[1]/subNodes</xpath>
+                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[1]/subNodes</xpath>
                     <value>
                         <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
                             <gene>Hemogenic</gene>
@@ -60,7 +60,7 @@
                     </value>
                 </li>
                 <li Class="PatchOperationAdd"> <!--Undrafted pawn-->
-                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[1]/subNodes</xpath>
+                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes</xpath>
                     <value>
                         <li Class="ThinkNode_ConditionalHasAbility" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
                             <ability>SHG_Psionist_MassLevitation</ability>
