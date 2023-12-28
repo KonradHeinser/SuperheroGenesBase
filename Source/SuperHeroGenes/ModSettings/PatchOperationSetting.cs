@@ -6,9 +6,9 @@ namespace SuperHeroGenesBase
 {
     public class PatchOperationSetting : PatchOperation
     {
-        private PatchOperation active;
+        private PatchOperation active = null;
 
-        private PatchOperation inactive;
+        private PatchOperation inactive = null;
 
         public string setting;
 

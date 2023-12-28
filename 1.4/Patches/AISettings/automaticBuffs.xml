@@ -132,21 +132,9 @@
                                 </li>
                             </subNodes>
                         </li>
-                        
                     </value>
                 </li>
             </operations>
         </active>
     </Operation>
 </Patch>
-
-<!--
-<li Class="PatchOperationAdd">
-                    <xpath></xpath>
-                    <value>
-
-                    </value>
-                </li>
-
-
--->

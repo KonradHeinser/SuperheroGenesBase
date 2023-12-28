@@ -136,6 +136,8 @@
     <Compile Include="SuperAI\ThinkNode_ConditionalHighResourceLevels.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalTargetIsMechanoid.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalHasTargetNoFriendlyFire.cs" />
+    <Compile Include="SuperAI\ThinkNode_ConditionalUsingRangedWeapon.cs" />
+    <Compile Include="SuperAI\ThinkNode_ConditionalHasAnyOfHediff.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

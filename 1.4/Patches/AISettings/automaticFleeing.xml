@@ -67,6 +67,14 @@
                                                 </li>
                                             </subNodes>
                                         </li>
+                                        <li Class="ThinkNode_ConditionalHasAbility">
+                                            <ability>SHG_Hemomancer_ShiftChameleonInvisibility</ability>
+                                            <subNodes>
+                                                <li Class="JobGiver_AICastAbilityOnSelf">
+                                                    <ability>SHG_Hemomancer_ShiftChameleonInvisibility</ability>
+                                                </li>
+                                            </subNodes>
+                                        </li>
                                     </subNodes>
                                 </li>
                             </subNodes>
@@ -77,14 +85,3 @@
         </active>
     </Operation>
 </Patch>
-
-<!--
-<li Class="PatchOperationAdd">
-                    <xpath></xpath>
-                    <value>
-
-                    </value>
-                </li>
-
-
--->

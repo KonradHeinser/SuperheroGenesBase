@@ -25,7 +25,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <durationMultiplier>PsychicSensitivity</durationMultiplier>
                 <psychic>True</psychic>
@@ -58,7 +58,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>SHG_Fear</hediffDef>
                 <durationMultiplier>SHG_FearSusceptibility</durationMultiplier>
@@ -93,7 +93,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <durationMultiplier>PsychicSensitivity</durationMultiplier>
                 <psychic>True</psychic>
@@ -155,7 +155,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <durationMultiplier>PsychicSensitivity</durationMultiplier>
                 <psychic>True</psychic>
@@ -188,7 +188,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityEffectWithDuration">
+            <li Class="CompProperties_AbilityEffectWithDuration">
                 <compClass>CompAbilityEffect_Stun</compClass>
                 <durationMultiplier>PsychicSensitivity</durationMultiplier>
                 <psychic>True</psychic>
@@ -220,7 +220,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveMentalState">
+            <li Class="CompProperties_AbilityGiveMentalState">
                 <compClass>CompAbilityEffect_GiveMentalState</compClass>
                 <stateDef>Berserk</stateDef>
                 <stateDefForMechs>BerserkMechanoid</stateDefForMechs>
@@ -284,7 +284,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityEffectWithDuration">
+            <li Class="CompProperties_AbilityEffectWithDuration">
                 <compClass>CompAbilityEffect_Stun</compClass>
                 <psychic>True</psychic>
                 <goodwillImpact>-15</goodwillImpact>
@@ -314,7 +314,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>SHG_Fear</hediffDef>
                 <durationMultiplier>SHG_FearSusceptibility</durationMultiplier>
@@ -346,7 +346,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <durationMultiplier>PsychicSensitivity</durationMultiplier>
                 <psychic>True</psychic>
@@ -464,7 +464,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>SHG_Fear</hediffDef>
                 <durationMultiplier>SHG_FearSusceptibility</durationMultiplier>

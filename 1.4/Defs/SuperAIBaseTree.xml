@@ -22,14 +22,34 @@
                                                 <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[1]/subNodes/li[1]/subNodes</xpath>-->
                                             </subNodes>
                                         </li>
-                                        <li Class="ThinkNode_ConditionalAnyEnemyInHostileMap">
+                                        <li Class="ThinkNode_ConditionalHasTarget">
                                             <subNodes>
                                                 <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[1]/subNodes/li[2]/subNodes</xpath>-->
                                             </subNodes>
                                         </li>
-                                        <li Class="ThinkNode_ConditionalHasTarget">
+                                        <li Class="ThinkNode_ConditionalShotRecently">
+                                            <thresholdTicks>600</thresholdTicks>
                                             <subNodes>
                                                 <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[1]/subNodes/li[3]/subNodes</xpath>-->
+                                            </subNodes>
+                                        </li>
+                                        <li Class="ThinkNodeConditional_UnderCombatPressure">
+                                            <maxThreatDistance>20</maxThreatDistance>
+                                            <minCloseTargets>5</minCloseTargets>
+                                            <subNodes>
+                                                <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[1]/subNodes/li[4]/subNodes</xpath>-->
+                                            </subNodes>
+                                        </li>
+                                        <li Class="ThinkNodeConditional_UnderCombatPressure">
+                                            <maxThreatDistance>5</maxThreatDistance>
+                                            <minCloseTargets>1</minCloseTargets>
+                                            <subNodes>
+                                                <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[1]/subNodes/li[5]/subNodes</xpath>-->
+                                            </subNodes>
+                                        </li>
+                                        <li Class="ThinkNode_ConditionalAnyEnemyInHostileMap">
+                                            <subNodes>
+                                                <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[1]/subNodes/li[6]/subNodes</xpath>-->
                                             </subNodes>
                                         </li>
                                     </subNodes>
@@ -42,19 +62,29 @@
                                                 <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[2]/subNodes/li[1]/subNodes</xpath>-->
                                             </subNodes>
                                         </li>
+                                        <li Class="ThinkNode_ConditionalShotRecently">
+                                            <thresholdTicks>600</thresholdTicks>
+                                            <subNodes>
+                                                <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[2]/subNodes/li[2]/subNodes</xpath>-->
+                                            </subNodes>
+                                        </li>
+                                        <li Class="ThinkNodeConditional_UnderCombatPressure">
+                                            <maxThreatDistance>20</maxThreatDistance>
+                                            <minCloseTargets>5</minCloseTargets>
+                                            <subNodes>
+                                              <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[2]/subNodes/li[3]/subNodes</xpath>-->
+                                            </subNodes>
+                                        </li>
+                                        <li Class="ThinkNodeConditional_UnderCombatPressure">
+                                            <maxThreatDistance>5</maxThreatDistance>
+                                            <minCloseTargets>1</minCloseTargets>
+                                            <subNodes>
+                                              <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[2]/subNodes/li[4]/subNodes</xpath>-->
+                                            </subNodes>
+                                        </li>
                                         <li Class="ThinkNode_ConditionalAnyEnemyInHostileMap">
                                             <subNodes>
-                                                <li Class="ThinkNode_ConditionalHasTarget">
-                                                    <subNodes>
-                                                        <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[2]/subNodes/li[2]/subNodes/li[1]/subNodes</xpath>-->
-                                                    </subNodes>
-                                                </li>
-                                                <li Class="ThinkNode_ConditionalHasTarget">
-                                                    <invert>true</invert>
-                                                    <subNodes>
-                                                        <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[2]/subNodes/li[2]/subNodes/li[2]/subNodes</xpath>-->
-                                                    </subNodes>
-                                                </li>
+                                                <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li/subNodes/li[2]/subNodes/li[5]/subNodes</xpath>-->
                                             </subNodes>
                                         </li>
                                     </subNodes>

@@ -1,7 +1,5 @@
 ﻿using Verse;
 using Verse.AI;
-using System.Linq;
-using Verse.AI.Group;
 using System.Collections.Generic;
 using RimWorld;
 
