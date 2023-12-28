@@ -8,6 +8,7 @@ namespace SuperHeroGenesBase
     public class ThinkNode_ConditionalHasTargetNoFriendlyFire : ThinkNode_Conditional
     {
         private float minRadius = -1;
+        private int minEnemies = 1;
         private AbilityDef ability = null;
         protected override bool Satisfied(Pawn pawn)
         {
@@ -15,6 +16,7 @@ namespace SuperHeroGenesBase
             Thing target = pawn.mindState.enemyTarget;
             List<Pawn> list = pawn.Map.mapPawns.AllPawnsSpawned;
             list.SortBy((Pawn c) => c.Position.DistanceToSquared(target.Position));
+            int targets = 0;
 
             float safetyRange = 0;
             if (ability != null && ability.EffectRadius > 0)
@@ -30,8 +32,9 @@ namespace SuperHeroGenesBase
                 if (p.Position.DistanceToSquared(target.Position) > minRadius) break; // Due to earlier sorting, every pawn beyond this point can be ignored
                 if (p.Faction != null && !p.Faction.HostileTo(pawn.Faction)) return false; // If the pawn belongs to a non-hostile faction, treat it as friendly fire
                 if (!p.HostileTo(pawn)) return false; // Secondary check for general hostility. This is intended to cover factionless things like animals while hopefully avoiding weird scenarios
+                targets++;
             }
-
+            if (targets < minEnemies) return false; // If there aren't enough targets to make the attack worth it, return false anyway
             return true; // If no non-enemies were found, fire away
         }
     }
