@@ -2,20 +2,19 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/ThinkNode_ConditionalHasAnyOfHediff.cs">
     <Files>
       <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="83" Column="1" />
-      <File FileName="ModSettings/PatchOperationSetting.cs" Line="63" Column="57" />
-      <File FileName="SuperAI/ThinkNode_ConditionalColonistShouldFlee.cs" Line="8" Column="57" />
+      <File FileName="ModSettings/PatchOperationSetting.cs" Line="24" Column="14" />
+      <File FileName="SuperAI/ThinkNode_ConditionalColonistShouldFlee.cs" Line="10" Column="53" />
       <File FileName="SuperAI/ThinkNode_ConditionalHighResourceLevels.cs" Line="29" Column="1" />
-      <File FileName="SuperAI/ThinkNode_ConditionalTargetIsMechanoid.cs" Line="8" Column="9" />
-      <File FileName="SuperAI/JobGiver_AIResurrectHumanoid.cs" Line="75" Column="83" />
-      <File FileName="SuperAI/ThinkNode_ConditionalHasTargetNoFriendlyFire.cs" Line="8" Column="86" />
-      <File FileName="SuperAI/ThinkNode_ConditionalUsingRangedWeapon.cs" Line="12" Column="6" />
-      <File FileName="SuperAI/ThinkNode_ConditionalHasAnyOfHediff.cs" Line="10" Column="6" />
+      <File FileName="SuperAI/ThinkNode_ConditionalHasAnyOfHediff.cs" Line="12" Column="13" />
+      <File FileName="SuperAI/ThinkNode_ConditionalAnyActiveEnemyInMap.cs" Line="5" Column="29" />
+      <File FileName="SuperAI/ThinkNode_ConditionalTooManyNearbyThreats.cs" Line="15" Column="39" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
+              <Node name="ModSettings" expanded="True" />
               <Node name="SuperAI" expanded="True">
                 <Node name="ThinkNode_ConditionalHasAnyOfHediff.cs" selected="True" />
               </Node>

@@ -138,6 +138,8 @@
     <Compile Include="SuperAI\ThinkNode_ConditionalHasTargetNoFriendlyFire.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalUsingRangedWeapon.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalHasAnyOfHediff.cs" />
+    <Compile Include="SuperAI\ThinkNode_ConditionalAnyActiveEnemyInMap.cs" />
+    <Compile Include="SuperAI\ThinkNode_ConditionalTooManyNearbyThreats.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />
