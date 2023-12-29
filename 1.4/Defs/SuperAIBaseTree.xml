@@ -48,7 +48,7 @@
                                 </li>
                             </subNodes>
                         </li>
-                        <li Class="ThinkNode_ConditionalDrafted">
+                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalPawnDraftedAndFree">
                             <subNodes>
                                 <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[2]/subNodes</xpath>-->
                                 <li Class="ThinkNode_ConditionalHasTarget">

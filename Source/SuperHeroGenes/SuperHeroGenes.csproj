@@ -140,6 +140,7 @@
     <Compile Include="SuperAI\ThinkNode_ConditionalHasAnyOfHediff.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalAnyActiveEnemyInMap.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalTooManyNearbyThreats.cs" />
+    <Compile Include="SuperAI\ThinkNode_ConditionalPawnDraftedAndFree.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />
