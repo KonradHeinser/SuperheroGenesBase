@@ -1,23 +1,26 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/ThinkNode_ConditionalPawnDraftedAndFree.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Abilities/HediffToGive.cs">
     <Files>
-      <File FileName="SuperAI/ThinkNode_ConditionalColonistShouldFlee.cs" Line="32" Column="10" />
-      <File FileName="SuperAI/ThinkNode_ConditionalHighResourceLevels.cs" Line="7" Column="81" />
-      <File FileName="SuperAI/ThinkNode_ConditionalHasAnyOfHediff.cs" Line="12" Column="1" />
-      <File FileName="SuperAI/ThinkNode_ConditionalTooManyNearbyThreats.cs" Line="24" Column="71" />
-      <File FileName="SuperAI/ThinkNode_ConditionalAnyActiveEnemyInMap.cs" Line="5" Column="29" />
-      <File FileName="SuperAI/ThinkNode_ConditionalHasTargetNoFriendlyFire.cs" Line="20" Column="13" />
-      <File FileName="SuperAI/ThinkNode_ConditionalPawnDraftedAndFree.cs" Line="16" Column="1" />
+      <File FileName="SuperAI/JobGiver_AICastBerserkAbility.cs" Line="42" Column="65" />
+      <File FileName="SuperAI/ThinkNode_ConditionalHasTargetNoFriendlyFire.cs" Line="26" Column="41" />
+      <File FileName="SuperAI/JobGiver_CastAnyOfAbilityOnEnemyTarget.cs" Line="46" Column="73" />
+      <File FileName="SuperAI/ThinkNode_ConditionalUsingRangedWeapon.cs" Line="6" Column="56" />
+      <File FileName="SuperAI/ThinkNode_ConditionalTargetIsMechanoid.cs" Line="17" Column="1" />
+      <File FileName="SHGUtilities.cs" Line="219" Column="41" />
+      <File FileName="Abilities/CompAbilityEffect_GiveMultipleHediffs.cs" Line="1" Column="1" />
+      <File FileName="Abilities/CompProperties_AbilityGiveMultipleHediffs.cs" Line="1" Column="1" />
+      <File FileName="Abilities/HediffToGive.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="ModSettings" expanded="True" />
-              <Node name="SuperAI" expanded="True">
-                <Node name="ThinkNode_ConditionalPawnDraftedAndFree.cs" selected="True" />
+              <Node name="Abilities" expanded="True">
+                <Node name="HediffToGive.cs" selected="True" />
               </Node>
+              <Node name="ModSettings" expanded="True" />
+              <Node name="SuperAI" expanded="True" />
             </Node>
           </Node>
         </State>

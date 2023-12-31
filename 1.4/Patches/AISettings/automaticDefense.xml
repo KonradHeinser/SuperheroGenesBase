@@ -171,7 +171,7 @@
                 </li>
                 <li Class="SuperHeroGenesBase.PatchOperationSetting">
                     <setting>poolUsage</setting>
-                    <active Class="PatchOperationSequence"> <!--If there are severaly hostiles nearby and pool using abilities are allowed, use them as needed-->
+                    <active Class="PatchOperationSequence"> <!--If there are several hostiles nearby and pool using abilities are allowed, use them as needed-->
                         <operations>
                             <li Class="PatchOperationAdd">
                                 <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[4]/subNodes</xpath>

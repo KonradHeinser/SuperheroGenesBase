@@ -141,6 +141,8 @@
     <Compile Include="SuperAI\ThinkNode_ConditionalAnyActiveEnemyInMap.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalTooManyNearbyThreats.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalPawnDraftedAndFree.cs" />
+    <Compile Include="SuperAI\JobGiver_AICastBerserkAbility.cs" />
+    <Compile Include="SuperAI\JobGiver_CastAnyOfAbilityOnEnemyTarget.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

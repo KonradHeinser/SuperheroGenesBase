@@ -10,22 +10,38 @@ namespace SuperHeroGenesBase
         private float minRadius = -1;
         private int minEnemies = 1;
         private AbilityDef ability = null;
+        private bool noTarget = false; // If you don't want to reference a specific ability for whatever reason, this can be used to signify the caster is the target
+        private bool avoidSelfHit = true; // For abilities like laser eyes that don't use traditional AoE's, this should be false. Burst types always treat this as false
         protected override bool Satisfied(Pawn pawn)
-        {
-            if (pawn.mindState.enemyTarget == null || (ability == null && minRadius < 0)) return false;
-            Thing target = pawn.mindState.enemyTarget;
-            List<Pawn> list = pawn.Map.mapPawns.AllPawnsSpawned;
-            list.SortBy((Pawn c) => c.Position.DistanceToSquared(target.Position));
-            int targets = 0;
+        { // Needs lots of log messages
+            if (ability != null && !ability.targetRequired)
+            {
+                avoidSelfHit = false; // Set to false because the ability is always centered on caster
+                noTarget = true;
+            }
+            Thing target = SHGUtilities.GetCurrentTarget(pawn);
+            if (!noTarget && target == null) return false;
+            if (ability == null && minRadius < 0) return false;
+
+            if (noTarget) target = pawn;
 
             float safetyRange = 0;
             if (ability != null && ability.EffectRadius > 0)
             {
+                if (avoidSelfHit && ability.targetRequired && target.Position.DistanceTo(pawn.Position) <= ability.EffectRadius) return false; // If the caster is too close, don't need to check anything else
                 if (ability.verbProperties.warmupTime > 5) return false; // There are too many things to try to predict to accept long charge times
-                if (ability.verbProperties.warmupTime > 1) safetyRange = ability.EffectRadius * 1.2f * ability.verbProperties.warmupTime; // Factors in warmup time when it may be a significant factor
-                else safetyRange = ability.EffectRadius * 1.2f; // The 1.2 is an extra "just to be safe"
+                if (ability.verbProperties.warmupTime > 1) safetyRange = ability.EffectRadius * 1.1f * ability.verbProperties.warmupTime; // Factors in warmup time when it may be a significant factor
+                else safetyRange = ability.EffectRadius * 1.1f; // The 1.2 is an extra "just to be safe"
             }
-            if (minRadius > safetyRange) safetyRange = minRadius;
+            if (minRadius > safetyRange)
+            {
+                safetyRange = minRadius;
+                if (ability.targetRequired && target.Position.DistanceTo(pawn.Position) <= minRadius) return false; // If the caster is too close, don't need to check anything else
+            }
+
+            List<Pawn> list = pawn.Map.mapPawns.AllPawnsSpawned;
+            list.SortBy((Pawn c) => c.Position.DistanceToSquared(target.Position));
+            int targets = 0;
 
             foreach (Pawn p in list)
             {

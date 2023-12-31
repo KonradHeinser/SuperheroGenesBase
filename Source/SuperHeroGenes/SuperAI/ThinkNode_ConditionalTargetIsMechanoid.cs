@@ -7,17 +7,13 @@ namespace SuperHeroGenesBase
     {
         protected override bool Satisfied(Pawn pawn)
         {
-            if (pawn.mindState.enemyTarget == null) return false;
-            try
+            Thing enemy = SHGUtilities.GetCurrentTarget(pawn);
+            if (enemy == null) return false;
+            if (enemy is Pawn target)
             {
-                Pawn target = (Pawn)pawn.mindState.enemyTarget;
                 return target.RaceProps.IsMechanoid;
             }
-            catch
-            {
-                return false;
-            }
-            
+            return false;
         }
     }
 }

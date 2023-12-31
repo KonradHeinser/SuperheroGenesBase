@@ -42,6 +42,14 @@
                                         </li>
                                     </subNodes>
                                 </li>
+                                <li Class="ThinkNode_ConditionalHasAbility">
+                                    <ability>SHG_Hemomancer_MarkForDeathDefiance</ability>
+                                    <subNodes>
+                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                            <ability>SHG_Hemomancer_MarkForDeathDefiance</ability>
+                                        </li>
+                                    </subNodes>
+                                </li>
                             </subNodes>
                         </li>
                     </value>

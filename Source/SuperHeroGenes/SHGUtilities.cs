@@ -195,6 +195,22 @@ namespace SuperHeroGenesBase
             return false;
         }
 
+        public static Thing GetCurrentTarget(Pawn pawn, bool onlyHostiles = true, bool onlyInFaction = false)
+        {
+            if (pawn.stances.curStance is Stance_Busy stance_Busy)
+            {
+                Thing thing = stance_Busy.verb.CurrentTarget.Thing;
+                if (onlyHostiles && !thing.HostileTo(pawn)) return null;
+                if (onlyInFaction)
+                {
+                    if (thing is Pawn otherPawn && otherPawn.Faction == pawn.Faction) return thing;
+                    return null;
+                }
+                return thing;
+            }
+            return null;
+        }
+
         public static Job GoToTarget(LocalTargetInfo target)
         {
             Job job = JobMaker.MakeJob(JobDefOf.Goto, target);

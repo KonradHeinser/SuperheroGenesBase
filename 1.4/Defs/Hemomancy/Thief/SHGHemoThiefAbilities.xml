@@ -175,7 +175,7 @@
     <AbilityDef ParentName="SHGHemoThiefBase">
         <defName>SHG_Hemomancer_MarkForDeath</defName>
         <label>mark for death</label>
-        <description>Mark a pawn for death, removing any innate armor they may have and making them bleed three times faster than normal. This will return some of the hemogen used to cast it by draining a little bit of blood from the target. This cannot raise hemogen above 80.\n\nIf the target survives for 5 hours after being marked for death, their stat will change from doomed to defiance, giving them a one time use ability that completely removes all injuries, excluding body part loss. If this ability is not used within 18 hours, it is lost.</description>
+        <description>Mark a pawn for death, removing any innate armor they may have and making them bleed three times faster than normal. This will return some of the hemogen used to cast it by draining a little bit of blood from the target. This cannot raise hemogen above 80.\n\nIf the target survives for 5 hours after being marked for death, their hediff will change from doomed to defiance, giving them a one-use ability that completely removes all injuries, excluding body part loss. If this ability is not used within 18-19 hours, it is lost.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_MarkForDeath</iconPath>
         <verbProperties>
             <range>23</range>

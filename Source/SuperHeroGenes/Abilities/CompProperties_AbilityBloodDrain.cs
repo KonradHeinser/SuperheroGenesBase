@@ -21,6 +21,7 @@ namespace SuperHeroGenesBase
         public HediffDef replacementHediff; // Applies this hediff to neck instead of bloodfeeder bite. This can be used to add a hediff to the target without using the addhediff comp. Is optional.
         public HediffDef hediffToSelf;      // Applies this hediff to caster. Is optional.
         public bool damageSelf = false;     // When false, aoe's don't impact this pawn.
+        public bool ignoreResistance = true; // If false, then the ability will check for "resistance" similar to normal bites.
                                             
         // Note to self, remember to make an AddMultipleHediffs(hediffsToTarget, hediffsToSelf, hediffsToBoth). Also, remember to delete this note when you do.
 
