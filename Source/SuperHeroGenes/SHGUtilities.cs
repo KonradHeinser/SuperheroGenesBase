@@ -208,6 +208,14 @@ namespace SuperHeroGenesBase
                 }
                 return thing;
             }
+            List<Pawn> pawns = pawn.Map.mapPawns.AllPawnsSpawned;
+            pawns.SortBy((Pawn c) => c.Position.DistanceToSquared(pawn.Position));
+            foreach (Pawn otherPawn in pawns)
+            {
+                if (otherPawn.Dead || otherPawn.Downed) continue;
+                if (onlyHostiles && otherPawn.HostileTo(pawn)) return otherPawn;
+                else if (onlyInFaction && otherPawn.Faction == pawn.Faction) return otherPawn;
+            }
             return null;
         }
 

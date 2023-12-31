@@ -9,19 +9,19 @@ namespace SuperHeroGenesBase
     public class JobGiver_CastAnyOfAbilityOnEnemyTarget : JobGiver_AICastAbility
     {
         private List<AbilityDef> abilities = null;
+        private int hashInterval = 3; // Alters the chances of the pawn actually trying to cast the ability. If this is set to 1, then the pawn will always attempt to use this, thus making it more difficult to use other abilties. Only recommended for abilities that should be constantly used, like attacks
         List<Ability> presentAbilities = new List<Ability>();
         static Random rnd = new Random();
         Thing currentEnemy = null;
         Ability chosenAbility = null;
 
-        protected override Job TryGiveJob(Pawn pawn)
+        protected override Job TryGiveJob(Pawn pawn) // Change this to select its own target instead of using the pawn's current one
         {
             presentAbilities.Clear();
             chosenAbility = null;
-
+            if (!pawn.IsHashIntervalTick(hashInterval)) return null;
             currentEnemy = SHGUtilities.GetCurrentTarget(pawn);
             if (currentEnemy == null) return null;
-
             IntVec3 enemyPosition = currentEnemy.Position;
             bool los = GenSight.LineOfSight(pawn.Position, enemyPosition, pawn.Map);
             foreach (AbilityDef abilityDef in abilities)
@@ -65,6 +65,17 @@ namespace SuperHeroGenesBase
                                     break;
                                 }
                             }
+                            else if (compAbility is CompAbilityEffect_Stun stunComp)
+                            {
+                                if (tempAbility.lastCastTick >= 0 && tempAbility.def.EffectDuration() > 0)
+                                {
+                                    if (Find.TickManager.TicksGame - tempAbility.lastCastTick < tempAbility.def.EffectDuration())
+                                    {
+                                        flag = true;
+                                        break;
+                                    }
+                                }
+                            }
                         }
                     }
                     if (flag) continue;
@@ -89,13 +100,17 @@ namespace SuperHeroGenesBase
                             presentAbilities.Add(tempAbility);
                         }
                     }
+                    Log.Message("Added " + tempAbility.def);
                 }
             }
             if (presentAbilities.NullOrEmpty()) return null;
             chosenAbility = presentAbilities[rnd.Next(presentAbilities.Count)];
-            Log.Message("Getting target for " + chosenAbility.def);
+            Log.Message("Casting " + chosenAbility.def);
             LocalTargetInfo target = GetTarget(pawn, chosenAbility);
+            Log.Message("Targetting " + target.Thing.Label);
             if (!target.IsValid) return null;
+            Log.Message("Target valid");
+            if (pawn.CurJobDef != null) Log.Message(pawn.CurJobDef.ToString());
             return chosenAbility.GetJob(target, target);
         }
 

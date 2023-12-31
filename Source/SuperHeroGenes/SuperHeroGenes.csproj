@@ -143,6 +143,7 @@
     <Compile Include="SuperAI\ThinkNode_ConditionalPawnDraftedAndFree.cs" />
     <Compile Include="SuperAI\JobGiver_AICastBerserkAbility.cs" />
     <Compile Include="SuperAI\JobGiver_CastAnyOfAbilityOnEnemyTarget.cs" />
+    <Compile Include="SuperAI\ThinkNode_ConditionalNearbyEnemyTarget.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

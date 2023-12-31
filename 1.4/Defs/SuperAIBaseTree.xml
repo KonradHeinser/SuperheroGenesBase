@@ -18,7 +18,7 @@
                                         <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[1]/subNodes</xpath>-->
                                     </subNodes>
                                 </li>
-                                <li Class="ThinkNode_ConditionalHasTarget">
+                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalNearbyEnemyTarget">
                                     <subNodes>
                                         <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[2]/subNodes</xpath>-->
                                     </subNodes>
@@ -51,7 +51,7 @@
                         <li Class="SuperHeroGenesBase.ThinkNode_ConditionalPawnDraftedAndFree">
                             <subNodes>
                                 <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[2]/subNodes</xpath>-->
-                                <li Class="ThinkNode_ConditionalHasTarget">
+                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalNearbyEnemyTarget">
                                     <subNodes>
                                         <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[2]/subNodes/li[1]/subNodes</xpath>-->
                                     </subNodes>
