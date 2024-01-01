@@ -5,7 +5,7 @@ namespace SuperHeroGenesBase
 {
     public class ThinkNode_ConditionalNearbyEnemyTarget : ThinkNode_Conditional
     {
-        private float searchRadius = 50f;
+        private float searchRadius = 40f;
         protected override bool Satisfied(Pawn pawn)
         {
             return SHGUtilities.GetCurrentTarget(pawn, searchRadius: searchRadius) != null;

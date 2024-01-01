@@ -118,7 +118,7 @@ namespace SuperHeroGenesBase
             // If targetting a pawn, but can't cast pawns, just target the ground
             if (currentEnemy is Pawn pawnTarget && !ability.verb.verbProps.targetParams.canTargetPawns) 
             {
-                return new LocalTargetInfo(caster.mindState.enemyTarget.Position);
+                return new LocalTargetInfo(currentEnemy);
             }
             if (!ability.CanApplyOn(new LocalTargetInfo(currentEnemy))) return LocalTargetInfo.Invalid;
             return new LocalTargetInfo(currentEnemy);

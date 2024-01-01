@@ -195,11 +195,12 @@ namespace SuperHeroGenesBase
             return false;
         }
 
-        public static Thing GetCurrentTarget(Pawn pawn, bool onlyHostiles = true, bool onlyInFaction = false, bool autoSearch = true, float searchRadius = 50)
+        public static Thing GetCurrentTarget(Pawn pawn, bool onlyHostiles = true, bool onlyInFaction = false, bool autoSearch = true, float searchRadius = 50, bool LoSRequired = false)
         {
             if (pawn.stances.curStance is Stance_Busy stance_Busy)
             {
                 Thing thing = stance_Busy.verb.CurrentTarget.Thing;
+                if (LoSRequired && !GenSight.LineOfSight(pawn.Position, thing.Position, pawn.Map)) return null;
                 if (onlyHostiles && !thing.HostileTo(pawn)) return null;
                 if (onlyInFaction)
                 {
@@ -214,10 +215,11 @@ namespace SuperHeroGenesBase
                 pawns.SortBy((Pawn c) => c.Position.DistanceToSquared(pawn.Position));
                 foreach (Pawn otherPawn in pawns)
                 {
+                    if (LoSRequired && !GenSight.LineOfSight(pawn.Position, otherPawn.Position, pawn.Map)) continue;
                     if (otherPawn.Dead || otherPawn.Downed) continue;
                     if (otherPawn.Position.DistanceTo(pawn.Position) > searchRadius) break;
                     if (onlyHostiles && otherPawn.HostileTo(pawn)) return otherPawn;
-                    else if (onlyInFaction && otherPawn.Faction == pawn.Faction) return otherPawn;
+                    if (onlyInFaction && otherPawn.Faction == pawn.Faction) return otherPawn;
                 }
             }
             return null;

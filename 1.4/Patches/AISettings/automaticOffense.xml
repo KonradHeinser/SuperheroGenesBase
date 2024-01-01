@@ -13,7 +13,7 @@
                                 <li Class="ThinkNode_ConditionalHasAbility">
                                     <ability>SHG_HeroicLeap</ability>
                                     <subNodes>
-                                        <li Class="JobGiver_AIJumpEscapeEnemies">
+                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAbilityGoToTarget">
                                             <ability>SHG_HeroicLeap</ability>
                                         </li>
                                     </subNodes>
@@ -21,7 +21,7 @@
                                 <li Class="ThinkNode_ConditionalHasAbility">
                                     <ability>SHG_Teleport</ability>
                                     <subNodes>
-                                        <li Class="SuperHeroGenesBase.JobGiver_AITeleportEscapeEnemies">
+                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAbilityGoToTarget">
                                             <ability>SHG_Teleport</ability>
                                         </li>
                                     </subNodes>
@@ -29,7 +29,7 @@
                                 <li Class="ThinkNode_ConditionalHasAbility">
                                     <ability>Longjump</ability>
                                     <subNodes>
-                                        <li Class="JobGiver_AIJumpEscapeEnemies">
+                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAbilityGoToTarget">
                                             <ability>Longjump</ability>
                                         </li>
                                     </subNodes>
@@ -42,7 +42,40 @@
                     <setting>automaticOffenseDrafted</setting>
                     <active Class="PatchOperationSequence">
                         <operations>
-                            
+                            <li Class="PatchOperationAdd">
+                                <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[2]/subNodes/li[1]/subNodes</xpath>
+                                <value>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon">
+                                        <invert>true</invert>
+                                        <subNodes>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_HeroicLeap</ability>
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAbilityGoToTarget">
+                                                        <ability>SHG_HeroicLeap</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_Teleport</ability>
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAbilityGoToTarget">
+                                                        <ability>SHG_Teleport</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>Longjump</ability>
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAbilityGoToTarget">
+                                                        <ability>Longjump</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </value>
+                            </li>
                         </operations>
                     </active>
                 </li>
