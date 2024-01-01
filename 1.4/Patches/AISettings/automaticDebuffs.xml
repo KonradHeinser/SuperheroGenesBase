@@ -32,22 +32,10 @@
                             <interval>3</interval>
                             <subNodes>
                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire">
-                                    <ability>SHG_Psionist_Psychedelic</ability>
-                                    <minEnemies>3</minEnemies>
-                                    <subNodes>
-                                        <li Class="SuperHeroGenesBase.JobGiver_CastAnyOfAbilityOnEnemyTarget">
-                                            <abilities>
-                                                <li>SHG_Psionist_Psychedelic</li>
-                                                <li>SHG_Hemomancer_BloodAndDarkness</li>
-                                            </abilities>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire">
                                     <ability>SHG_Psionist_IcePlanet</ability>
                                     <minEnemies>5</minEnemies>
                                     <subNodes>
-                                        <li Class="SuperHeroGenesBase.JobGiver_CastAnyOfAbilityOnEnemyTarget">
+                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
                                             <abilities>
                                                 <li>SHG_Psionist_IcePlanet</li>
                                                 <li>SHG_Psionist_Eldritch</li>
@@ -55,7 +43,19 @@
                                         </li>
                                     </subNodes>
                                 </li>
-                                <li Class="SuperHeroGenesBase.JobGiver_CastAnyOfAbilityOnEnemyTarget">
+                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire">
+                                    <ability>SHG_Psionist_Psychedelic</ability>
+                                    <minEnemies>3</minEnemies>
+                                    <subNodes>
+                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                            <abilities>
+                                                <li>SHG_Psionist_Psychedelic</li>
+                                                <li>SHG_Hemomancer_BloodAndDarkness</li>
+                                            </abilities>
+                                        </li>
+                                    </subNodes>
+                                </li>
+                                <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
                                     <abilities>
                                         <li>SHG_Psionist_InternalDebate</li>
                                         <li>SHG_Hemomancer_StealPerceptiveness</li>
@@ -67,7 +67,7 @@
                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon">
                                     <invert>true</invert>
                                     <subNodes>
-                                        <li Class="SuperHeroGenesBase.JobGiver_CastAnyOfAbilityOnEnemyTarget"> <!--A last ditch ability to use even though the target may be immune-->
+                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget"> <!--A last ditch ability to use even though the target may be immune-->
                                             <abilities>
                                                 <li>SHG_Psionist_CompelledDuel</li>
                                             </abilities>
@@ -111,22 +111,10 @@
                                         <interval>3</interval>
                                         <subNodes>
                                             <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire">
-                                                <ability>SHG_Psionist_Psychedelic</ability>
-                                                <minEnemies>3</minEnemies>
-                                                <subNodes>
-                                                    <li Class="SuperHeroGenesBase.JobGiver_CastAnyOfAbilityOnEnemyTarget">
-                                                        <abilities>
-                                                            <li>SHG_Psionist_Psychedelic</li>
-                                                            <li>SHG_Hemomancer_BloodAndDarkness</li>
-                                                        </abilities>
-                                                    </li>
-                                                </subNodes>
-                                            </li>
-                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire">
                                                 <ability>SHG_Psionist_IcePlanet</ability>
                                                 <minEnemies>5</minEnemies>
                                                 <subNodes>
-                                                    <li Class="SuperHeroGenesBase.JobGiver_CastAnyOfAbilityOnEnemyTarget">
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
                                                         <abilities>
                                                             <li>SHG_Psionist_IcePlanet</li>
                                                             <li>SHG_Psionist_Eldritch</li>
@@ -134,7 +122,19 @@
                                                     </li>
                                                 </subNodes>
                                             </li>
-                                            <li Class="SuperHeroGenesBase.JobGiver_CastAnyOfAbilityOnEnemyTarget">
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire">
+                                                <ability>SHG_Psionist_Psychedelic</ability>
+                                                <minEnemies>3</minEnemies>
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                        <abilities>
+                                                            <li>SHG_Psionist_Psychedelic</li>
+                                                            <li>SHG_Hemomancer_BloodAndDarkness</li>
+                                                        </abilities>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
                                                 <abilities>
                                                     <li>SHG_Psionist_InternalDebate</li>
                                                     <li>SHG_Hemomancer_StealPerceptiveness</li>
@@ -146,7 +146,7 @@
                                             <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon">
                                                 <invert>true</invert>
                                                 <subNodes>
-                                                    <li Class="SuperHeroGenesBase.JobGiver_CastAnyOfAbilityOnEnemyTarget"> <!--A last ditch ability to use even though the target may be immune-->
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget"> <!--A last ditch ability to use even though the target may be immune-->
                                                         <abilities>
                                                             <li>SHG_Psionist_CompelledDuel</li>
                                                         </abilities>

@@ -1,13 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/ThinkNode_ConditionalNearbyEnemyTarget.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/JobGiver_AICastAbilityGoToTarget.cs">
     <Files>
-      <File FileName="SuperAI/ThinkNode_ConditionalHasTargetNoFriendlyFire.cs" Line="41" Column="84" />
-      <File FileName="SuperAI/JobGiver_CastAnyOfAbilityOnEnemyTarget.cs" Line="78" Column="30" />
-      <File FileName="SuperAI/ThinkNode_ConditionalUsingRangedWeapon.cs" Line="6" Column="56" />
-      <File FileName="SuperAI/ThinkNode_ConditionalTargetIsMechanoid.cs" Line="17" Column="1" />
-      <File FileName="SHGUtilities.cs" Line="217" Column="14" />
-      <File FileName="SuperAI/ThinkNode_ConditionalColonistShouldFlee.cs" Line="26" Column="1" />
-      <File FileName="SuperAI/ThinkNode_ConditionalNearbyEnemyTarget.cs" Line="3" Column="1" />
+      <File FileName="SuperAI/ThinkNode_ConditionalAboveMood.cs" Line="8" Column="38" />
+      <File FileName="SuperAI/ThinkNode_ConditionalNearbyEnemyTarget.cs" Line="15" Column="1" />
+      <File FileName="SHGUtilities.cs" Line="226" Column="61" />
+      <File FileName="SuperAI/JobGiver_AICastAbilityGoToTarget.cs" Line="6" Column="1" />
+      <File FileName="SuperAI/JobGiver_CastAnyOfAbilityOnEnemyTarget.cs" Line="5" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,10 +13,11 @@
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
               <Node name="Abilities" expanded="True" />
+              <Node name="DynamicResourceGenes" expanded="True" />
               <Node name="Hediffs" expanded="True" />
               <Node name="ModSettings" expanded="True" />
               <Node name="SuperAI" expanded="True">
-                <Node name="ThinkNode_ConditionalNearbyEnemyTarget.cs" selected="True" />
+                <Node name="JobGiver_AICastAbilityGoToTarget.cs" selected="True" />
               </Node>
             </Node>
           </Node>

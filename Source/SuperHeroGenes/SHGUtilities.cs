@@ -195,7 +195,7 @@ namespace SuperHeroGenesBase
             return false;
         }
 
-        public static Thing GetCurrentTarget(Pawn pawn, bool onlyHostiles = true, bool onlyInFaction = false)
+        public static Thing GetCurrentTarget(Pawn pawn, bool onlyHostiles = true, bool onlyInFaction = false, bool autoSearch = true, float searchRadius = 50)
         {
             if (pawn.stances.curStance is Stance_Busy stance_Busy)
             {
@@ -208,13 +208,17 @@ namespace SuperHeroGenesBase
                 }
                 return thing;
             }
-            List<Pawn> pawns = pawn.Map.mapPawns.AllPawnsSpawned;
-            pawns.SortBy((Pawn c) => c.Position.DistanceToSquared(pawn.Position));
-            foreach (Pawn otherPawn in pawns)
+            if (autoSearch)
             {
-                if (otherPawn.Dead || otherPawn.Downed) continue;
-                if (onlyHostiles && otherPawn.HostileTo(pawn)) return otherPawn;
-                else if (onlyInFaction && otherPawn.Faction == pawn.Faction) return otherPawn;
+                List<Pawn> pawns = pawn.Map.mapPawns.AllPawnsSpawned;
+                pawns.SortBy((Pawn c) => c.Position.DistanceToSquared(pawn.Position));
+                foreach (Pawn otherPawn in pawns)
+                {
+                    if (otherPawn.Dead || otherPawn.Downed) continue;
+                    if (otherPawn.Position.DistanceTo(pawn.Position) > searchRadius) break;
+                    if (onlyHostiles && otherPawn.HostileTo(pawn)) return otherPawn;
+                    else if (onlyInFaction && otherPawn.Faction == pawn.Faction) return otherPawn;
+                }
             }
             return null;
         }
@@ -226,6 +230,12 @@ namespace SuperHeroGenesBase
             job.expiryInterval = 500;
             job.collideWithPawns = true;
             return job;
+        }
+
+        public static bool AutoAttackingColonist(Pawn pawn)
+        {
+            if (pawn.playerSettings != null && pawn.playerSettings.UsesConfigurableHostilityResponse && pawn.playerSettings.hostilityResponse == HostilityResponseMode.Attack) return true;
+            return false;
         }
     }
 }

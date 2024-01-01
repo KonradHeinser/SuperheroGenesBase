@@ -6,7 +6,7 @@ using System;
 
 namespace SuperHeroGenesBase
 {
-    public class JobGiver_CastAnyOfAbilityOnEnemyTarget : JobGiver_AICastAbility
+    public class JobGiver_AICastAnyOfAbilityOnEnemyTarget : JobGiver_AICastAbility
     {
         private List<AbilityDef> abilities = null;
         private int hashInterval = 3; // Alters the chances of the pawn actually trying to cast the ability. If this is set to 1, then the pawn will always attempt to use this, thus making it more difficult to use other abilties. Only recommended for abilities that should be constantly used, like attacks
@@ -105,11 +105,8 @@ namespace SuperHeroGenesBase
             }
             if (presentAbilities.NullOrEmpty()) return null;
             chosenAbility = presentAbilities[rnd.Next(presentAbilities.Count)];
-            Log.Message("Casting " + chosenAbility.def);
             LocalTargetInfo target = GetTarget(pawn, chosenAbility);
-            Log.Message("Targetting " + target.Thing.Label);
             if (!target.IsValid) return null;
-            Log.Message("Target valid");
             if (pawn.CurJobDef != null) Log.Message(pawn.CurJobDef.ToString());
             return chosenAbility.GetJob(target, target);
         }
