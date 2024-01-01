@@ -9,10 +9,12 @@ namespace SuperHeroGenesBase
     public class JobGiver_AICastAbilityGoToTarget : JobGiver_AICastAbility
     {
         private bool safeJumpsOnly = true; // Only jumps at a target if they are within half range to avoid pawns jumping too far ahead of allies
+        private bool onlyWhileWieldingMeleeWeapon = true;
         Thing currentEnemy = null;
 
         protected override Job TryGiveJob(Pawn pawn) // Change this to select its own target instead of using the pawn's current one
         {
+            if (onlyWhileWieldingMeleeWeapon && (pawn.equipment.Primary == null || pawn.equipment.Primary.def.IsRangedWeapon)) return null;
             Ability ability = pawn.abilities?.GetAbility(this.ability);
             if (ability == null || !ability.CanCast) return null;
             currentEnemy = SHGUtilities.GetCurrentTarget(pawn, LoSRequired:ability.verb.verbProps.requireLineOfSight);
