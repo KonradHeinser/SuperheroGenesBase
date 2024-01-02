@@ -39,6 +39,7 @@
                                             <abilities>
                                                 <li>SHG_Psionist_IcePlanet</li>
                                                 <li>SHG_Psionist_Eldritch</li>
+                                                <li>SHG_Psionist_GazeIntoTheAbyss</li> <!--In this category because it's not worth casting if there aren't a bunch of pawns to deal with-->
                                             </abilities>
                                         </li>
                                     </subNodes>
@@ -51,6 +52,18 @@
                                             <abilities>
                                                 <li>SHG_Psionist_Psychedelic</li>
                                                 <li>SHG_Hemomancer_BloodAndDarkness</li>
+                                                <li>SHG_Psionist_Enough</li>
+                                                <li>SHG_Psionist_InstigateConflict</li>
+                                                <li>SHG_Psionist_Despair</li>
+                                            </abilities>
+                                        </li>
+                                    </subNodes>
+                                </li>
+                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalTargetIsMechanoid">
+                                    <subNodes>
+                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                            <abilities>
+                                                <li>SHG_EMPBolt</li>
                                             </abilities>
                                         </li>
                                     </subNodes>
@@ -62,6 +75,10 @@
                                         <li>SHG_Hemomancer_StealDefense</li>
                                         <li>SHG_Hemomancer_StealStrength</li>
                                         <li>SHG_Hemomancer_MarkForDeath</li>
+                                        <li>SHG_Psionist_GraspHeart</li>
+                                        <li>SHG_Psionist_Dread</li>
+                                        <li>SHG_Distraction</li>
+                                        <li>SHG_Narcissus</li>
                                     </abilities>
                                 </li>
                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon">
@@ -118,6 +135,7 @@
                                                         <abilities>
                                                             <li>SHG_Psionist_IcePlanet</li>
                                                             <li>SHG_Psionist_Eldritch</li>
+                                                            <li>SHG_Psionist_GazeIntoTheAbyss</li> <!--In this category because it's not worth casting if there aren't a bunch of pawns to deal with-->
                                                         </abilities>
                                                     </li>
                                                 </subNodes>
@@ -130,6 +148,18 @@
                                                         <abilities>
                                                             <li>SHG_Psionist_Psychedelic</li>
                                                             <li>SHG_Hemomancer_BloodAndDarkness</li>
+                                                            <li>SHG_Psionist_Enough</li>
+                                                            <li>SHG_Psionist_InstigateConflict</li>
+                                                            <li>SHG_Psionist_Despair</li>
+                                                        </abilities>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalTargetIsMechanoid">
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                        <abilities>
+                                                            <li>SHG_EMPBolt</li>
                                                         </abilities>
                                                     </li>
                                                 </subNodes>
@@ -141,6 +171,10 @@
                                                     <li>SHG_Hemomancer_StealDefense</li>
                                                     <li>SHG_Hemomancer_StealStrength</li>
                                                     <li>SHG_Hemomancer_MarkForDeath</li>
+                                                    <li>SHG_Psionist_GraspHeart</li>
+                                                    <li>SHG_Psionist_Dread</li>
+                                                    <li>SHG_Distraction</li>
+                                                    <li>SHG_Narcissus</li>
                                                 </abilities>
                                             </li>
                                             <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon">

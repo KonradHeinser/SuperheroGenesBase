@@ -17,7 +17,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-        <li Class = "CompProperties_AbilitySmokepop">
+        <li Class="CompProperties_AbilitySmokepop">
             <smokeRadius>20</smokeRadius>
             <clamorType>Ability</clamorType>
             <clamorRadius>15</clamorRadius>
@@ -58,7 +58,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityWaterskip">
+            <li Class="CompProperties_AbilityWaterskip">
                 <screenShakeIntensity>0.5</screenShakeIntensity>
                 <clamorType>Ability</clamorType>
                 <clamorRadius>10</clamorRadius>
@@ -99,12 +99,12 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>SHG_Psionist_Psychedelic</hediffDef>
                 <onlyBrain>True</onlyBrain>
             </li>
-            <li Class = "CompProperties_AbilityGiveMentalState">
+            <li Class="CompProperties_AbilityGiveMentalState">
                 <compClass>CompAbilityEffect_GiveMentalState</compClass>
                 <stateDef>Berserk</stateDef>
                 <stateDefForMechs>BerserkMechanoid</stateDefForMechs>
@@ -180,7 +180,7 @@
             <li Class="CompProperties_AbilityFlashstorm">
                 <goodwillImpact>-30</goodwillImpact>
             </li>
-            <li Class = "CompProperties_AbilitySmokepop">
+            <li Class="CompProperties_AbilitySmokepop">
                 <smokeRadius>10</smokeRadius>
                 <clamorType>Ability</clamorType>
                 <clamorRadius>15</clamorRadius>
@@ -215,7 +215,7 @@
             <li Class="CompProperties_AbilityFlashstorm">
                 <goodwillImpact>-20</goodwillImpact>
             </li>
-            <li Class = "CompProperties_AbilitySmokepop">
+            <li Class="CompProperties_AbilitySmokepop">
                 <smokeRadius>20</smokeRadius>
                 <clamorType>Ability</clamorType>
                 <clamorRadius>15</clamorRadius>
@@ -250,7 +250,7 @@
             <li Class="CompProperties_AbilityFlashstorm">
                 <goodwillImpact>-10</goodwillImpact>
             </li>
-            <li Class = "CompProperties_AbilitySmokepop">
+            <li Class="CompProperties_AbilitySmokepop">
                 <smokeRadius>40</smokeRadius>
                 <clamorType>Ability</clamorType>
                 <clamorRadius>15</clamorRadius>
@@ -280,7 +280,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>Hypothermia</hediffDef>
                 <severity>0.6</severity>
@@ -308,7 +308,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>SHG_Fear</hediffDef>
                 <durationMultiplier>SHG_FearSusceptibility</durationMultiplier>
@@ -340,7 +340,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>SHG_Psionist_Chaotic</hediffDef>
             </li>
@@ -374,7 +374,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <psychic>True</psychic>
                 <hediffDef>SHG_Psionist_PsychicAnomaly</hediffDef>
@@ -455,7 +455,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>SHG_Psionist_Utopia</hediffDef>
             </li>

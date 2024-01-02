@@ -39,7 +39,9 @@ namespace SuperHeroGenesBase
                         {
                             if (compAbility is CompAbilityEffect_GiveHediff comp)
                             {
-                                if (SHGUtilities.HasHediff(otherPawn, comp.Props.hediffDef))
+                                if (comp.Props.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0) flag = true;
+                                else if (comp.Props.durationMultiplier != null && otherPawn.GetStatValue(comp.Props.durationMultiplier) <= 0) flag = true;
+                                else if (SHGUtilities.HasHediff(otherPawn, comp.Props.hediffDef))
                                 {
                                     flag = true;
                                     break;
@@ -47,19 +49,30 @@ namespace SuperHeroGenesBase
                             }
                             else if (compAbility is CompAbilityEffect_GiveMultipleHediffs multiComp)
                             {
-                                foreach (HediffToGive hediff in multiComp.Props.hediffsToGive)
+                                if (multiComp.Props.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0) flag = true;
+                                else if (multiComp.Props.durationMultiplier != null && otherPawn.GetStatValue(multiComp.Props.durationMultiplier) <= 0) flag = true;
+                                else
                                 {
-                                    if (SHGUtilities.HasHediff(otherPawn, hediff.hediffDef))
+                                    foreach (HediffToGive hediff in multiComp.Props.hediffsToGive)
                                     {
-                                        flag = true;
-                                        break;
+                                        if (hediff.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0)
+                                        {
+                                            flag = true;
+                                            break;
+                                        }
+                                        if (SHGUtilities.HasHediff(otherPawn, hediff.hediffDef))
+                                        {
+                                            flag = true;
+                                            break;
+                                        }
                                     }
                                 }
                                 if (flag) break;
                             }
                             else if (compAbility is CompAbilityEffect_BloodDrain bloodComp)
                             {
-                                if (bloodComp.Props.replacementHediff != null && SHGUtilities.HasHediff(otherPawn, bloodComp.Props.replacementHediff))
+                                if (bloodComp.Props.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0) flag = true;
+                                else if (bloodComp.Props.replacementHediff != null && SHGUtilities.HasHediff(otherPawn, bloodComp.Props.replacementHediff))
                                 {
                                     flag = true;
                                     break;
@@ -67,7 +80,9 @@ namespace SuperHeroGenesBase
                             }
                             else if (compAbility is CompAbilityEffect_Stun stunComp)
                             {
-                                if (tempAbility.lastCastTick >= 0 && tempAbility.def.EffectDuration() > 0)
+                                if (stunComp.Props.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0) flag = true;
+                                else if (stunComp.Props.durationMultiplier != null && otherPawn.GetStatValue(stunComp.Props.durationMultiplier) <= 0) flag = true;
+                                else if (tempAbility.lastCastTick >= 0 && tempAbility.def.EffectDuration() > 0)
                                 {
                                     if (Find.TickManager.TicksGame - tempAbility.lastCastTick < tempAbility.def.EffectDuration())
                                     {

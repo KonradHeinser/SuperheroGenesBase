@@ -19,7 +19,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-        <li Class = "CompProperties_AbilityWallraise">
+        <li Class="CompProperties_AbilityWallraise">
             <compClass>CompAbilityEffect_Wallraise</compClass>
             <pattern>
                     <!--Small walls near caster-->
@@ -89,7 +89,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-        <li Class = "CompProperties_AbilitySmokepop">
+        <li Class="CompProperties_AbilitySmokepop">
             <smokeRadius>7</smokeRadius>
             <clamorType>Ability</clamorType>
             <clamorRadius>15</clamorRadius>
@@ -128,7 +128,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>EntropyLink</hediffDef>
                 <psychic>True</psychic>
@@ -159,7 +159,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <psychic>True</psychic>
                 <hediffDef>SHG_Psionist_Encourage</hediffDef>
@@ -187,7 +187,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-        <li Class = "CompProperties_AbilityWallraise">
+        <li Class="CompProperties_AbilityWallraise">
             <compClass>CompAbilityEffect_Wallraise</compClass>
             <pattern>
                 <!--  First Circle  -->
@@ -285,7 +285,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <psychic>True</psychic>
                 <hediffDef>SHG_Psionist_AssassinSquad</hediffDef>
@@ -317,7 +317,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <psychic>True</psychic>
                 <hediffDef>SHG_Psionist_MassLevitation</hediffDef>
@@ -351,7 +351,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <psychic>True</psychic>
                 <hediffDef>SHG_Psionist_Inspire</hediffDef>
@@ -379,7 +379,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-        <li Class = "CompProperties_AbilityWallraise">
+        <li Class="CompProperties_AbilityWallraise">
             <compClass>CompAbilityEffect_Wallraise</compClass>
             <pattern>
                 <!--  First Circle  -->
@@ -555,7 +555,7 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <psychic>True</psychic>
                 <hediffDef>SHG_Psionist_Rally</hediffDef>

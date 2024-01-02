@@ -43,6 +43,7 @@ namespace SuperHeroGenesBase
             foreach (Pawn p in list)
             {
                 if (p.Position.DistanceTo(target.Position) > safetyRange) break; // Due to earlier sorting, every pawn beyond this point can be ignored
+                if (!avoidSelfHit && p == pawn) continue;
                 if (p.Faction != null && !p.Faction.HostileTo(pawn.Faction)) return false; // If the pawn belongs to a non-hostile faction, treat it as friendly fire
                 if (!p.HostileTo(pawn)) return false; // Secondary check for general hostility. This is intended to cover factionless things like animals while hopefully avoiding weird scenarios
                 targets++;
