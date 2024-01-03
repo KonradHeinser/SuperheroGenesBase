@@ -110,7 +110,7 @@
         <defName>SHG_Psionist_UnshakableTeam</defName>
         <label>unshakable team</label>
         <description>Add a pawn to the Psionic Network. If this is the first time the Unifier is using this ability and they were not made part of the network by another Unifier, they also gain the Unshakable Team hediff.</description>
-        <iconPath>Psionist/Empath/Gene_Psionist_PsionicBond</iconPath>
+        <iconPath>Psionist/Empath/Gene_Psionist_UnshakableTeam</iconPath>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <cooldownTicksRange>60000</cooldownTicksRange>

@@ -4,6 +4,7 @@
 		<li>/</li>
 		<li>1.4</li>
 		<li IfModActive="OskarPotocki.VanillaFactionsExpanded.Core">1.4/Mods/VFE</li>
+		<li IfModActive="vanillaexpanded.achievements">1.4/Mods/VAE</li>
         <li IfModActive="ceteam.combatextended">1.4/Mods/CE</li>
 		<li IfModActive="RedMattis.BetterPrerequisites">1.4/Mods/BIGsmall</li>
 		<li IfModActive="Grimworld.Core">1.4/Mods/Grimworld</li>

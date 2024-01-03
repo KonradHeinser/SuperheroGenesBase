@@ -43,6 +43,8 @@ namespace SuperHeroGenesBase
         private static bool showAutocastOptions = true;
 
         public static bool condensedMeteors = true;
+        public static bool multipleArchetypes = false;
+        public static bool multipleMutations = false;
         public static bool expensiveBase = false;
         public static bool supersEverywhere = false;
         public static bool activatableSuperGenes = false;
@@ -72,6 +74,8 @@ namespace SuperHeroGenesBase
         {
             base.ExposeData();
             Scribe_Values.Look(ref condensedMeteors, "condensedMeteors");
+            Scribe_Values.Look(ref multipleMutations, "multipleMutations");
+            Scribe_Values.Look(ref multipleArchetypes, "multipleArchetypes");
             Scribe_Values.Look(ref expensiveBase, "expensiveBase");
             Scribe_Values.Look(ref supersEverywhere, "supersEverywhere");
             Scribe_Values.Look(ref activatableSuperGenes, "activatableSuperGenes");
@@ -115,7 +119,7 @@ namespace SuperHeroGenesBase
             contentRect.width -= 20;
 
             int numberOfOptions = 3; // One for each section
-            if (showMainOptions) numberOfOptions += 7;
+            if (showMainOptions) numberOfOptions += 9;
             if (ModsConfig.IsActive("SuperheroGenes.Villains") && showVillainOptions) numberOfOptions += 2;
             if (showAutocastOptions) numberOfOptions += 10;
             contentRect.height = numberOfOptions * 35; // To avoid weird white space, height is based off of option count of present mods
@@ -129,6 +133,10 @@ namespace SuperHeroGenesBase
             if (showMainOptions)
             {
                 optionsMenu.CheckboxLabeled("SHG_CondensedMeteors".Translate(), ref condensedMeteors, "SHG_CondensedMeteorsDescription".Translate());
+                optionsMenu.Gap(10f);
+                optionsMenu.CheckboxLabeled("SHG_MultipleMutations".Translate(), ref multipleMutations, "SHG_MultipleMutationsDescription".Translate());
+                optionsMenu.Gap(10f);
+                optionsMenu.CheckboxLabeled("SHG_MultipleArchetypes".Translate(), ref multipleArchetypes, "SHG_MultipleArchetypesDescription".Translate());
                 optionsMenu.Gap(10f);
                 optionsMenu.CheckboxLabeled("SHG_ExpensiveBase".Translate(), ref expensiveBase, "SHG_ExpensiveBaseDescription".Translate());
                 optionsMenu.Gap(10f);

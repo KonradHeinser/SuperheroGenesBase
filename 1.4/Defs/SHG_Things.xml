@@ -39,6 +39,11 @@
                 </li>
             </outcomeDoers>
         </ingestible>
+        <thingSetMakerTags>
+            <li>SuperCreatingPill</li>
+            <li>SHGDrug</li>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
         <comps>
             <li Class="CompProperties_Drug">
                 <listOrder>1000</listOrder>
@@ -326,6 +331,10 @@
                 </li>
             </outcomeDoers>
         </ingestible>
+        <thingSetMakerTags>
+            <li>SHGDrug</li>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
         <comps>
             <li Class="CompProperties_Drug">
                 <listOrder>1000</listOrder>

@@ -40,8 +40,6 @@
                                     <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
                                         <hediffs>
                                             <li>SHG_UntouchableBeauty</li>
-                                            <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Entrench</li>
-                                            <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_OneOfAMillion</li>
                                             <li>SHG_Pools_EndurePain</li>
                                             <li>SHG_LesserPortent</li>
                                             <li>SHG_Fortress</li>
@@ -145,8 +143,6 @@
                                     <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
                                         <hediffs>
                                             <li>SHG_UntouchableBeauty</li>
-                                            <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Entrench</li>
-                                            <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_OneOfAMillion</li>
                                             <li>SHG_Pools_EndurePain</li>
                                             <li>SHG_LesserPortent</li>
                                             <li>SHG_Fortress</li>
@@ -203,8 +199,6 @@
                                         <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
                                             <hediffs>
                                                 <li>SHG_UntouchableBeauty</li>
-                                                <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Entrench</li>
-                                                <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_OneOfAMillion</li>
                                                 <li>SHG_Pools_EndurePain</li>
                                                 <li>SHG_LesserPortent</li>
                                                 <li>SHG_Fortress</li>
@@ -296,8 +290,6 @@
                                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
                                                     <hediffs>
                                                         <li>SHG_UntouchableBeauty</li>
-                                                        <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Entrench</li>
-                                                        <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_OneOfAMillion</li>
                                                         <li>SHG_Pools_EndurePain</li>
                                                         <li>SHG_LesserPortent</li>
                                                         <li>SHG_Fortress</li>
@@ -401,8 +393,6 @@
                                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
                                                     <hediffs>
                                                         <li>SHG_UntouchableBeauty</li>
-                                                        <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Entrench</li>
-                                                        <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_OneOfAMillion</li>
                                                         <li>SHG_Pools_EndurePain</li>
                                                         <li>SHG_LesserPortent</li>
                                                         <li>SHG_Fortress</li>
@@ -459,8 +449,6 @@
                                                     <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
                                                         <hediffs>
                                                             <li>SHG_UntouchableBeauty</li>
-                                                            <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Entrench</li>
-                                                            <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_OneOfAMillion</li>
                                                             <li>SHG_Pools_EndurePain</li>
                                                             <li>SHG_LesserPortent</li>
                                                             <li>SHG_Fortress</li>

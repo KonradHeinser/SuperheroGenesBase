@@ -18,6 +18,14 @@ namespace SuperHeroGenesBase
             {
                 if (!SuperheroGenes_Settings.condensedMeteors && inactive != null) return inactive.Apply(xml);
             }
+            else if (setting == "multipleArchetypes")
+            {
+                if (SuperheroGenes_Settings.multipleMutations && active != null) return active.Apply(xml);
+            }
+            else if (setting == "multipleMutations")
+            {
+                if (SuperheroGenes_Settings.multipleArchetypes && active != null) return active.Apply(xml);
+            }
             else if (setting == "expensiveBase")
             {
                 if (SuperheroGenes_Settings.expensiveBase && active != null) return active.Apply(xml);

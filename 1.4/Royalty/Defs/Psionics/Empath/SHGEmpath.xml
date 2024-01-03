@@ -131,7 +131,7 @@
         <label>psionic seducer</label>
         <description>Carriers of this gene have the weird ability to make others more likely to accept romance through a constant psychic aura. The chance is altered by the carriers psychic influence, and the romancee's if they have lowered psychic sensitivity. If the romancee is psychically deaf, they will feel a strange revulsion to the Placater that makes romancing impossible.</description>
         <prerequisite>SHG_Psionist_EmpathPlacater</prerequisite>
-        <iconPath>Psionist/Empath/Gene_Psionist_UniversallyLiked</iconPath>
+        <iconPath>Psionist/Empath/Gene_Psionist_PsionicSeducer</iconPath>
         <displayOrderInCategory>5.3</displayOrderInCategory>
         <statFactors>
             <PsychicSensitivity>0.95</PsychicSensitivity>

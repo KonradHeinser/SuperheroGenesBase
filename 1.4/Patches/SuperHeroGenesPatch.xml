@@ -31,4 +31,17 @@
         </inactive>
     </Operation>
 
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>multipleMutations</setting>
+        <active Class="PatchOperationRemove">
+            <xpath>Defs/GeneDef[@Name="SuperMutationsBase"]/exclusionTags</xpath>
+        </active>
+    </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>multipleArchetypes</setting>
+        <active Class="PatchOperationRemove">
+            <xpath>Defs/GeneDef[@Name="SHG_ArchetypeBase"]/exclusionTags</xpath>
+        </active>
+    </Operation>
 </Patch>

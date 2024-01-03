@@ -50,7 +50,7 @@
                                                 <avoidSelfHit>false</avoidSelfHit>
                                                 <subNodes>
                                                     <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget" MayRequire="Sov.Homelander">
-                                                        <hashInterval>1</hashInterval> <!--Replaces normal attacks if the pawn has enough powers-->
+                                                        <hashInterval>1</hashInterval> <!--Replaces normal attacks-->
                                                         <abilities>
                                                             <li>SHG_LaserEyes</li>
                                                         </abilities>
@@ -59,7 +59,7 @@
                                             </li>
                                         </subNodes>
                                     </li>
-                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire"> <!--Blast type size AoEs-->
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire"> <!--Blast genes-->
                                         <minRadius>5</minRadius>
                                         <minEnemies>3</minEnemies>
                                         <subNodes>
@@ -70,13 +70,24 @@
                                                     <li>SHG_LightningBlast</li>
                                                     <li>SHG_IceBlast</li>
                                                     <li>SHG_PetrificationBlast</li>
-                                                    <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Asteroid</li>
+                                                </abilities>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene"> <!--Blast type size AoEs-->
+                                        <minRadius>5</minRadius>
+                                        <minEnemies>3</minEnemies>
+                                        <subNodes>
+                                            <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                <hashInterval>2</hashInterval> <!--Avoid AoE spam-->
+                                                <abilities>
+                                                    <li>SHG_Psionist_Asteroid</li>
                                                 </abilities>
                                             </li>
                                         </subNodes>
                                     </li>
                                     <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget"> <!--Single Target-->
-                                        <hashInterval>1</hashInterval> <!--Replaces normal attacks if the pawn has enough powers-->
+                                        <hashInterval>1</hashInterval> <!--Replaces normal attacks-->
                                         <abilities>
                                             <li>SHG_ThrowSpike</li>
                                             <li>SHG_AcidBolt</li>
@@ -135,7 +146,7 @@
                                                         </li>
                                                     </subNodes>
                                                 </li>
-                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire"> <!--Blast type size AoEs-->
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire"> <!--Blast genes-->
                                                     <minRadius>5</minRadius>
                                                     <minEnemies>3</minEnemies>
                                                     <subNodes>
@@ -146,7 +157,18 @@
                                                                 <li>SHG_LightningBlast</li>
                                                                 <li>SHG_IceBlast</li>
                                                                 <li>SHG_PetrificationBlast</li>
-                                                                <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Asteroid</li>
+                                                            </abilities>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene"> <!--Blast type size AoEs-->
+                                                    <minRadius>5</minRadius>
+                                                    <minEnemies>3</minEnemies>
+                                                    <subNodes>
+                                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                            <hashInterval>2</hashInterval> <!--Avoid AoE spam-->
+                                                            <abilities>
+                                                                <li>SHG_Psionist_Asteroid</li>
                                                             </abilities>
                                                         </li>
                                                     </subNodes>
@@ -159,7 +181,7 @@
                                                             <avoidSelfHit>false</avoidSelfHit>
                                                             <subNodes>
                                                                 <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget" MayRequire="Sov.Homelander">
-                                                                    <hashInterval>1</hashInterval> <!--Replaces normal attacks if the pawn has enough powers-->
+                                                                    <hashInterval>1</hashInterval> <!--Replaces normal attacks-->
                                                                     <abilities>
                                                                         <li>SHG_LaserEyes</li>
                                                                     </abilities>
@@ -169,7 +191,7 @@
                                                     </subNodes>
                                                 </li>
                                                 <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget"> <!--Single Target-->
-                                                    <hashInterval>1</hashInterval> <!--Replaces normal attacks if the pawn has enough powers-->
+                                                    <hashInterval>1</hashInterval> <!--Replaces normal attacks-->
                                                     <abilities>
                                                         <li>SHG_ThrowSpike</li>
                                                         <li>SHG_AcidBolt</li>
@@ -178,6 +200,11 @@
                                                         <li>SHG_PetrificationBolt</li>
                                                         <li>SHG_Hemomancer_Drain</li>
                                                         <li>SHG_Hemomancer_Reap</li>
+                                                    </abilities>
+                                                </li>
+                                                <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget"> <!--Single Target-->
+                                                    <hashInterval>1</hashInterval> <!--Replaces normal attacks. These cost hemogen-->
+                                                    <abilities>
                                                         <li>SHG_Hemomancer_BloodSpear</li>
                                                     </abilities>
                                                 </li>
