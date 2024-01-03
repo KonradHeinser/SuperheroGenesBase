@@ -5,7 +5,6 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-        <warmupStartSound>CombatCommand_Warmup</warmupStartSound>
         <cooldownTicksRange>600</cooldownTicksRange>
         <aiCanUse>false</aiCanUse>
         <verbProperties>
@@ -207,7 +206,6 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-        <warmupStartSound>CombatCommand_Warmup</warmupStartSound>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <warmupTime>0.1</warmupTime>
@@ -244,7 +242,6 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-        <warmupStartSound>CombatCommand_Warmup</warmupStartSound>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <warmupTime>0.1</warmupTime>
@@ -280,7 +277,6 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-        <warmupStartSound>CombatCommand_Warmup</warmupStartSound>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <warmupTime>0.1</warmupTime>

@@ -46,10 +46,6 @@
                 <thought>SHG_ParticipatedInRaid_Supremacy</thought>
                 <eventDef>Raided</eventDef>
             </li>
-            <li Class="PreceptComp_DevelopmentPoints" MayRequire="SuperheroGenes.Villains">
-                <eventDef>SHG_VillainStartSuccess</eventDef>
-                <points>5</points>
-            </li>
         </comps>
     </PreceptDef>
 
@@ -410,10 +406,6 @@
                 <eventDef>SHG_SuperDied</eventDef>
                 <points>2</points>
             </li>
-            <li Class="PreceptComp_DevelopmentPoints" MayRequire="SuperheroGenes.Villains">
-                <eventDef>SHG_VillainStartRefused</eventDef>
-                <points>2</points>
-            </li>
         </comps>
   </PreceptDef>
 
@@ -519,10 +511,6 @@
             </li>
             <li Class="PreceptComp_DevelopmentPoints">
                 <eventDef>SHG_SuperDied</eventDef>
-                <points>5</points>
-            </li>
-            <li Class="PreceptComp_DevelopmentPoints" MayRequire="SuperheroGenes.Villains">
-                <eventDef>SHG_VillainStartRefused</eventDef>
                 <points>5</points>
             </li>
         </comps>

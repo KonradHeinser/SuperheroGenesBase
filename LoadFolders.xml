@@ -7,5 +7,7 @@
         <li IfModActive="ceteam.combatextended">1.4/Mods/CE</li>
 		<li IfModActive="RedMattis.BetterPrerequisites">1.4/Mods/BIGsmall</li>
 		<li IfModActive="Grimworld.Core">1.4/Mods/Grimworld</li>
+		<li IfModActive="Ludeon.Rimworld.Royalty">1.4/Royalty</li>
+		<li IfModActive="Ludeon.Rimworld.Ideology">1.4/Ideology</li>
 	</v1.4>
 </loadFolders>

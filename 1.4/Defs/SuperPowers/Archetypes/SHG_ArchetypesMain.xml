@@ -479,7 +479,7 @@
         <iconPath>Archetypes/Gene_Druid</iconPath>
         <biostatMet>-2</biostatMet>
         <statFactors>
-            <PruningSpeed>2</PruningSpeed>
+            <PruningSpeed MayRequire="Ludeon.Rimworld.Ideology">2</PruningSpeed>
         </statFactors>
         <abilities>
             <li>SHG_CommandAnimal</li>
@@ -595,7 +595,7 @@
         <iconPath>Archetypes/Gene_Hacker</iconPath>
         <biostatMet>-2</biostatMet>
         <statFactors>
-            <HackingSpeed>2</HackingSpeed>
+            <HackingSpeed MayRequire="Ludeon.Rimworld.Ideology">2</HackingSpeed>
         </statFactors>
         <abilities>
             <li>SHG_Pools_EmergencyShutdown</li>
@@ -806,14 +806,14 @@
             <li MayRequire="Ludeon.Rimworld.Royalty">SHG_SummonAnimaTree</li>
             <li>SHG_SummonPoluxTree</li>
             <li>SHG_SummonGlowPod</li>
-            <li>SHG_SummonGauranlenPod</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SHG_SummonGauranlenPod</li>
             <li>SHG_SummonMineableWood</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef MayRequire="Ludeon.Rimworld.Royalty">SHG_SummonAnimaTree</AbilityDef>
             <AbilityDef>SHG_SummonPoluxTree</AbilityDef>
             <AbilityDef>SHG_SummonGlowPod</AbilityDef>
-            <AbilityDef>SHG_SummonGauranlenPod</AbilityDef>
+            <AbilityDef MayRequire="Ludeon.RimWorld.Ideology">SHG_SummonGauranlenPod</AbilityDef>
             <AbilityDef>SHG_SummonMineableWood</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
@@ -1051,7 +1051,7 @@
             <PawnBeauty>-5.0</PawnBeauty>
             <SocialImpact>-.5</SocialImpact>
             <NegotiationAbility>-.5</NegotiationAbility>
-            <ConversionPower MayRequire="ludeon.rimworld.ideology">-.5</ConversionPower>
+            <ConversionPower MayRequire="Ludeon.Rimworld.Ideology">-.5</ConversionPower>
             <ToxicEnvironmentResistance>-.1</ToxicEnvironmentResistance>
             <ToxicResistance>-.1</ToxicResistance>
             <TameAnimalChance>-.1</TameAnimalChance>

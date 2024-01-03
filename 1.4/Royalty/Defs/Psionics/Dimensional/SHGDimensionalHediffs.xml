@@ -68,7 +68,7 @@
                         <mentalState>Tantrum</mentalState>
                         <mtbDays>1</mtbDays>
                     </li>
-                    <li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">
                         <mentalState>IdeoChange</mentalState>
                         <mtbDays>1</mtbDays>
                     </li>

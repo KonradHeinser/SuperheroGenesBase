@@ -139,27 +139,10 @@
         </comps>
     </HediffDef>
 
-    <ThingDef ParentName="MoteBase">
-        <defName>SHG_Mote_Calming</defName>
-        <thingClass>MoteAttached</thingClass>
-        <altitudeLayer>LightingOverlay</altitudeLayer>
-        <drawOffscreen>true</drawOffscreen>
-        <mote>
-            <solidTime>9999999</solidTime>
-            <needsMaintenance>true</needsMaintenance>
-        </mote>
-        <graphicData>
-            <graphicClass>Graphic_Mote</graphicClass>
-            <texPath>Things/Mote/CombatCommandMask</texPath>
-            <shaderType>MoteGlow</shaderType>
-            <color>(60, 60, 100)</color>
-            <drawSize>50</drawSize>
-        </graphicData>
-    </ThingDef>
-
-    <HediffDef ParentName="RoleStatBuff">
+    <HediffDef>
         <defName>SHG_Pools_CalmingAura_Buff</defName>
-        <label>healing</label>
+        <label>calm</label>
+        <defaultLabelColor>(0.52, 0.52, 0.95)</defaultLabelColor>
         <description>A nearby super is calming this person's mind. This pawn feels calmer, and their mind feels a little clearer.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
@@ -181,7 +164,7 @@
             <li Class="HediffCompProperties_Link">
                 <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
                 <maxDistance>50</maxDistance>
-                <customMote>Mote_CombatCommandLinkLine</customMote>
+                <customMote>SHG_Mote_Calming</customMote>
             </li>
         </comps>
     </HediffDef>
@@ -218,7 +201,7 @@
             </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>10</range>
-                <mote>SHG_Mote_SniperSquad</mote>
+                <mote>SHG_Mote_Combat</mote>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -231,27 +214,10 @@
         </comps>
     </HediffDef>
 
-    <ThingDef ParentName="MoteBase">
-        <defName>SHG_Mote_SniperSquad</defName>
-        <thingClass>MoteAttached</thingClass>
-        <altitudeLayer>LightingOverlay</altitudeLayer>
-        <drawOffscreen>true</drawOffscreen>
-        <mote>
-            <solidTime>9999999</solidTime>
-            <needsMaintenance>true</needsMaintenance>
-        </mote>
-        <graphicData>
-            <graphicClass>Graphic_Mote</graphicClass>
-            <texPath>Things/Mote/CombatCommandMask</texPath>
-            <shaderType>MoteGlow</shaderType>
-            <color>(60, 60, 100)</color>
-            <drawSize>10</drawSize>
-        </graphicData>
-    </ThingDef>
-
-    <HediffDef ParentName="RoleStatBuff">
+    <HediffDef>
         <defName>SHG_Pools_SniperSquad_Buff</defName>
-        <label>healing</label>
+        <label>focused shooting</label>
+        <defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
         <description>A nearby super is calming this person's mind. This pawn feels calmer, and their mind feels a little clearer.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
@@ -270,7 +236,7 @@
             <li Class="HediffCompProperties_Link">
                 <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
                 <maxDistance>10</maxDistance>
-                <customMote>Mote_CombatCommandLinkLine</customMote>
+                <customMote>SHG_Mote_Combat</customMote>
             </li>
         </comps>
     </HediffDef>
@@ -351,27 +317,10 @@
         </comps>
     </HediffDef>
 
-    <ThingDef ParentName="MoteBase">
-        <defName>SHG_Mote_Healing</defName>
-        <thingClass>MoteAttached</thingClass>
-        <altitudeLayer>LightingOverlay</altitudeLayer>
-        <drawOffscreen>true</drawOffscreen>
-        <mote>
-            <solidTime>9999999</solidTime>
-            <needsMaintenance>true</needsMaintenance>
-        </mote>
-        <graphicData>
-            <graphicClass>Graphic_Mote</graphicClass>
-            <texPath>Things/Mote/CombatCommandMask</texPath>
-            <shaderType>MoteGlow</shaderType>
-            <color>(72, 119, 72)</color>
-            <drawSize>10</drawSize>
-        </graphicData>
-    </ThingDef>
-
-    <HediffDef ParentName="RoleStatBuff">
+    <HediffDef>
         <defName>SHG_Pools_HealAllies_Buff</defName>
         <label>healing</label>
+        <defaultLabelColor>(0.52, 1, 0.52)</defaultLabelColor>
         <description>A nearby super is healing the wounds of everyone around them. To keep this benefit, it is best to stick close to the super.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
@@ -395,7 +344,7 @@
             <li Class="HediffCompProperties_Link">
                 <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
                 <maxDistance>10</maxDistance>
-                <customMote>Mote_CombatCommandLinkLine</customMote>
+                <customMote>SHG_Mote_Healing</customMote>
             </li>
         </comps>
     </HediffDef>

@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-            <!--Anti-super Durability-->
-    <HediffDef>
-        <defName>SHG_AntiPower_Durability_MinorAura</defName>
-        <label>minor anti-durability aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
+    <HediffDef Name="SHG_AntiPowerMinorBase" Abstract="true">
         <hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1.0</initialSeverity>
+        <isBad>false</isBad>
+        <initialSeverity>1.0</initialSeverity>
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
@@ -28,60 +25,12 @@
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-1</severityPerDay>
             </li>
-            <li Class="HediffCompProperties_GiveHediffsInRange">
-                <range>5</range>
-                <mote>Mote_SparkThrown</mote>
-                <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
-                <targetingParameters>
-                    <canTargetBuildings>false</canTargetBuildings>
-                    <canTargetAnimals>true</canTargetAnimals>
-                    <canTargetMechs>false</canTargetMechs>
-                    <onlyTargetColonists>false</onlyTargetColonists>
-                </targetingParameters>
-                <hediff>SHG_AntiPower_Durability_Minor</hediff>
-            </li>
         </comps>
     </HediffDef>
 
-    <HediffDef>
-        <defName>SHG_AntiPower_Durability_Minor</defName>
-        <label>minor anti-super aura</label>
-        <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
+    <HediffDef Name="SHG_AntiPowerMajorBase" Abstract="true">
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
-        <stages>
-            <li>
-                <statFactors>
-                    <IncomingDamageFactor>1.333</IncomingDamageFactor>
-                </statFactors>
-                <statOffsets>
-                    <PainShockThreshold>-0.50</PainShockThreshold>
-                    <ArmorRating_Blunt>-0.1</ArmorRating_Blunt>
-                    <ArmorRating_Sharp>-0.1</ArmorRating_Sharp>
-                    <ArmorRating_Heat>-0.1</ArmorRating_Heat>
-                    <ComfyTemperatureMin>20</ComfyTemperatureMin>
-                    <ComfyTemperatureMax>-20</ComfyTemperatureMax>
-                </statOffsets>
-            </li>
-        </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>5</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
-    </HediffDef>
-
-    <HediffDef>
-        <defName>SHG_AntiPower_Durability_MajorAura</defName>
-        <label>major anti-durability aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
-        <hediffClass>HediffWithComps</hediffClass>
 		<initialSeverity>1.0</initialSeverity>
         <stages>
             <li>
@@ -99,11 +48,94 @@
 		        <label>aura active</label>
             </li>
         </stages>
+
         <comps>
             <li Class="HediffCompProperties_DisappearsOnDeath"/>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-0.1</severityPerDay>
             </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef Name="SHG_AntiPowerMinor_VictimBase" Abstract="true">
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>false</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="HediffCompProperties_Link">
+                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+                <maxDistance>5</maxDistance>
+                <customMote>SHG_Mote_Debuff</customMote>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef Name="SHG_AntiPowerMajor_VictimBase" Abstract="true">
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>false</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="HediffCompProperties_Link">
+                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+                <maxDistance>20</maxDistance>
+                <customMote>SHG_Mote_Debuff</customMote>
+            </li>
+        </comps>
+    </HediffDef>
+
+            <!--Anti-super Durability-->
+    <HediffDef ParentName="SHG_AntiPowerMinorBase">
+        <defName>SHG_AntiPower_Durability_MinorAura</defName>
+        <label>minor anti-durability aura</label>
+        <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
+        <comps>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>5</range>
+                <mote>Mote_SparkThrown</mote>
+                <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>true</canTargetAnimals>
+                    <canTargetMechs>false</canTargetMechs>
+                    <onlyTargetColonists>false</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_AntiPower_Durability_Minor</hediff>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_AntiPowerMinor_VictimBase">
+        <defName>SHG_AntiPower_Durability_Minor</defName>
+        <label>minor anti-super aura</label>
+        <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
+        <stages>
+            <li>
+                <statFactors>
+                    <IncomingDamageFactor>1.333</IncomingDamageFactor>
+                </statFactors>
+                <statOffsets>
+                    <PainShockThreshold>-0.50</PainShockThreshold>
+                    <ArmorRating_Blunt>-0.1</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>-0.1</ArmorRating_Sharp>
+                    <ArmorRating_Heat>-0.1</ArmorRating_Heat>
+                    <ComfyTemperatureMin>20</ComfyTemperatureMin>
+                    <ComfyTemperatureMax>-20</ComfyTemperatureMax>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_AntiPowerMajorBase">
+        <defName>SHG_AntiPower_Durability_MajorAura</defName>
+        <label>major anti-durability aura</label>
+        <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
+        <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <mote>Mote_SparkThrown</mote>
@@ -119,12 +151,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMajor_VictimBase">
         <defName>SHG_AntiPower_Durability_Major</defName>
         <label>major anti-super aura</label>
         <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
             <li>
                 <statFactors>
@@ -140,47 +170,14 @@
                 </statOffsets>
             </li>
         </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>20</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
     </HediffDef>
 
             <!--Anti-super Healing-->
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMinorBase">
         <defName>SHG_AntiPower_Healing_MinorAura</defName>
         <label>minor anti-healing aura</label>
         <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1.0</initialSeverity>
-        <stages>
-            <li>
-                <minSeverity>0.001</minSeverity>
-                <label>comatose</label>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.5</minSeverity>
-		        <label>aura active</label>
-            </li>
-        </stages>
         <comps>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-1</severityPerDay>
-            </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
                 <mote>Mote_SparkThrown</mote>
@@ -196,7 +193,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMinor_VictimBase">
         <defName>SHG_AntiPower_Healing_Minor</defName>
         <label>minor anti-super aura</label>
         <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
@@ -215,46 +212,13 @@
                 </statOffsets>
             </li>
         </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>5</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMajorBase">
         <defName>SHG_AntiPower_Healing_MajorAura</defName>
         <label>major anti-healing aura</label>
         <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1.0</initialSeverity>
-        <stages>
-            <li>
-                <minSeverity>0.001</minSeverity>
-                <label>comatose</label>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.96</minSeverity>
-		        <label>aura active</label>
-            </li>
-        </stages>
         <comps>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-0.1</severityPerDay>
-            </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <mote>Mote_SparkThrown</mote>
@@ -270,12 +234,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMajor_VictimBase">
         <defName>SHG_AntiPower_Healing_Major</defName>
         <label>major anti-super aura</label>
         <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
             <li>
                 <statFactors>
@@ -298,47 +260,14 @@
                 </capMods>
             </li>
         </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>20</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
     </HediffDef>
 
             <!--Anti-super Intelligence-->
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMinorBase">
         <defName>SHG_AntiPower_Intelligence_MinorAura</defName>
         <label>minor anti-intelligence aura</label>
         <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1.0</initialSeverity>
-        <stages>
-            <li>
-                <minSeverity>0.001</minSeverity>
-                <label>comatose</label>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.5</minSeverity>
-		        <label>aura active</label>
-            </li>
-        </stages>
         <comps>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-1</severityPerDay>
-            </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
                 <mote>Mote_SparkThrown</mote>
@@ -354,7 +283,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMinor_VictimBase">
         <defName>SHG_AntiPower_Intelligence_Minor</defName>
         <label>minor anti-super aura</label>
         <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
@@ -369,46 +298,13 @@
                 </statFactors>
             </li>
         </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>5</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMajorBase">
         <defName>SHG_AntiPower_Intelligence_MajorAura</defName>
         <label>major anti-intelligence aura</label>
         <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1.0</initialSeverity>
-        <stages>
-            <li>
-                <minSeverity>0.001</minSeverity>
-                <label>comatose</label>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.96</minSeverity>
-		        <label>aura active</label>
-            </li>
-        </stages>
         <comps>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-0.1</severityPerDay>
-            </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <mote>Mote_SparkThrown</mote>
@@ -424,12 +320,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMajor_VictimBase">
         <defName>SHG_AntiPower_Intelligence_Major</defName>
         <label>major anti-super aura</label>
         <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
             <li>
                 <statFactors>
@@ -440,47 +334,14 @@
                 </statFactors>
             </li>
         </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>20</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
     </HediffDef>
 
             <!--Anti-super Perception-->
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMinorBase">
         <defName>SHG_AntiPower_Perception_MinorAura</defName>
         <label>minor anti-perception aura</label>
         <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1.0</initialSeverity>
-        <stages>
-            <li>
-                <minSeverity>0.001</minSeverity>
-                <label>comatose</label>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.5</minSeverity>
-		        <label>aura active</label>
-            </li>
-        </stages>
         <comps>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-1</severityPerDay>
-            </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
                 <mote>Mote_SparkThrown</mote>
@@ -496,7 +357,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMinor_VictimBase">
         <defName>SHG_AntiPower_Perception_Minor</defName>
         <label>minor anti-super aura</label>
         <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
@@ -513,46 +374,13 @@
                 </statOffsets>
             </li>
         </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>5</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMajorBase">
         <defName>SHG_AntiPower_Perception_MajorAura</defName>
         <label>major anti-perception aura</label>
         <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1.0</initialSeverity>
-        <stages>
-            <li>
-                <minSeverity>0.001</minSeverity>
-                <label>comatose</label>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.96</minSeverity>
-		        <label>aura active</label>
-            </li>
-        </stages>
         <comps>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-0.1</severityPerDay>
-            </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <mote>Mote_SparkThrown</mote>
@@ -568,12 +396,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMajor_VictimBase">
         <defName>SHG_AntiPower_Perception_Major</defName>
         <label>major anti-super aura</label>
         <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
             <li>
                 <statFactors>
@@ -593,47 +419,14 @@
                 </capMods>
             </li>
         </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>20</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
     </HediffDef>
 
             <!--Anti-super Persuasion-->
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMinorBase">
         <defName>SHG_AntiPower_Persuasion_MinorAura</defName>
         <label>minor anti-persuasion aura</label>
         <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1.0</initialSeverity>
-        <stages>
-            <li>
-                <minSeverity>0.001</minSeverity>
-                <label>comatose</label>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.5</minSeverity>
-		        <label>aura active</label>
-            </li>
-        </stages>
         <comps>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-1</severityPerDay>
-            </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
                 <mote>Mote_SparkThrown</mote>
@@ -649,7 +442,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMinor_VictimBase">
         <defName>SHG_AntiPower_Persuasion_Minor</defName>
         <label>minor anti-super aura</label>
         <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
@@ -665,46 +458,13 @@
                 </statOffsets>
             </li>
         </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>5</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMajorBase">
         <defName>SHG_AntiPower_Persuasion_MajorAura</defName>
         <label>major anti-persuasion aura</label>
         <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1.0</initialSeverity>
-        <stages>
-            <li>
-                <minSeverity>0.001</minSeverity>
-                <label>comatose</label>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.96</minSeverity>
-		        <label>aura active</label>
-            </li>
-        </stages>
         <comps>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-0.1</severityPerDay>
-            </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <mote>Mote_SparkThrown</mote>
@@ -720,12 +480,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMajor_VictimBase">
         <defName>SHG_AntiPower_Persuasion_Major</defName>
         <label>major anti-super aura</label>
         <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
             <li>
                 <statFactors>
@@ -745,47 +503,14 @@
                 </capMods>
             </li>
         </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>20</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
     </HediffDef>
 
             <!--Anti-super Precision-->
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMinorBase">
         <defName>SHG_AntiPower_Precision_MinorAura</defName>
         <label>minor anti-precision aura</label>
         <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1.0</initialSeverity>
-        <stages>
-            <li>
-                <minSeverity>0.001</minSeverity>
-                <label>comatose</label>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.5</minSeverity>
-		        <label>aura active</label>
-            </li>
-        </stages>
         <comps>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-1</severityPerDay>
-            </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
                 <mote>Mote_SparkThrown</mote>
@@ -801,7 +526,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMinor_VictimBase">
         <defName>SHG_AntiPower_Precision_Minor</defName>
         <label>minor anti-super aura</label>
         <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
@@ -819,46 +544,13 @@
                 </statOffsets>
             </li>
         </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>5</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMajorBase">
         <defName>SHG_AntiPower_Precision_MajorAura</defName>
         <label>major anti-precision aura</label>
         <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1.0</initialSeverity>
-        <stages>
-            <li>
-                <minSeverity>0.001</minSeverity>
-                <label>comatose</label>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.96</minSeverity>
-		        <label>aura active</label>
-            </li>
-        </stages>
         <comps>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-0.1</severityPerDay>
-            </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <mote>Mote_SparkThrown</mote>
@@ -874,12 +566,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMajor_VictimBase">
         <defName>SHG_AntiPower_Precision_Major</defName>
         <label>major anti-super aura</label>
         <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
             <li>
                 <statFactors>
@@ -897,47 +587,14 @@
                 </capMods>
             </li>
         </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>20</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
     </HediffDef>
 
             <!--Anti-super Speed-->
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMinorBase">
         <defName>SHG_AntiPower_Speed_MinorAura</defName>
         <label>minor anti-speed aura</label>
         <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1.0</initialSeverity>
-        <stages>
-            <li>
-                <minSeverity>0.001</minSeverity>
-                <label>comatose</label>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.5</minSeverity>
-		        <label>aura active</label>
-            </li>
-        </stages>
         <comps>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-1</severityPerDay>
-            </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
                 <mote>Mote_SparkThrown</mote>
@@ -953,7 +610,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMinor_VictimBase">
         <defName>SHG_AntiPower_Speed_Minor</defName>
         <label>minor anti-super aura</label>
         <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
@@ -970,46 +627,13 @@
                 </statOffsets>
             </li>
         </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>5</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMajorBase">
         <defName>SHG_AntiPower_Speed_MajorAura</defName>
         <label>major anti-speed aura</label>
         <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1.0</initialSeverity>
-        <stages>
-            <li>
-                <minSeverity>0.001</minSeverity>
-                <label>comatose</label>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.96</minSeverity>
-		        <label>aura active</label>
-            </li>
-        </stages>
         <comps>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-0.1</severityPerDay>
-            </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <mote>Mote_SparkThrown</mote>
@@ -1025,12 +649,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMajor_VictimBase">
         <defName>SHG_AntiPower_Speed_Major</defName>
         <label>major anti-super aura</label>
         <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
             <li>
                 <statFactors>
@@ -1053,47 +675,14 @@
                 </capMods>
             </li>
         </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>20</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
     </HediffDef>
 
             <!--Anti-super Strength-->
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMinorBase">
         <defName>SHG_AntiPower_Strength_MinorAura</defName>
         <label>minor anti-strength aura</label>
         <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1.0</initialSeverity>
-        <stages>
-            <li>
-                <minSeverity>0.001</minSeverity>
-                <label>comatose</label>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.5</minSeverity>
-		        <label>aura active</label>
-            </li>
-        </stages>
         <comps>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-1</severityPerDay>
-            </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
                 <mote>Mote_SparkThrown</mote>
@@ -1109,12 +698,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMinor_VictimBase">
         <defName>SHG_AntiPower_Strength_Minor</defName>
         <label>minor anti-super aura</label>
         <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
             <li>
                 <statFactors>
@@ -1126,46 +713,13 @@
                 </statOffsets>
             </li>
         </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>5</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMajorBase">
         <defName>SHG_AntiPower_Strength_MajorAura</defName>
         <label>major anti-strength aura</label>
         <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1.0</initialSeverity>
-        <stages>
-            <li>
-                <minSeverity>0.001</minSeverity>
-                <label>comatose</label>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <setMax>0.1</setMax>
-                    </li>
-                </capMods>
-            </li>
-            <li>
-                <minSeverity>0.96</minSeverity>
-		        <label>aura active</label>
-            </li>
-        </stages>
         <comps>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-0.1</severityPerDay>
-            </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <mote>Mote_SparkThrown</mote>
@@ -1181,12 +735,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_AntiPowerMajor_VictimBase">
         <defName>SHG_AntiPower_Strength_Major</defName>
         <label>major anti-super aura</label>
         <description>A nearby anti-super is weaponizing their nature to make everyone around them weaker.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
             <li>
                 <statFactors>
@@ -1202,16 +754,5 @@
                 </capMods>
             </li>
         </stages>
-        <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <showRemainingTime>false</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>20</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
-            </li>
-        </comps>
     </HediffDef>
 </Defs>

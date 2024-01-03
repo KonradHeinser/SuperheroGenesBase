@@ -6,77 +6,108 @@
         <insertPriority>100</insertPriority>
         <thinkRoot Class="ThinkNode_Priority">
             <subNodes>
+                <li Class="ThinkNode_SubtreesByTag">
+                    <insertTag>SHGAI_Pawn</insertTag>
+                </li>
                 <li Class="ThinkNode_ConditionalColonist">
                     <subNodes>
-                        <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes</xpath>-->
+                        <li Class="ThinkNode_SubtreesByTag">
+                            <insertTag>SHGAI_Colonist</insertTag>
+                        </li>
                         <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
                             <subNodes>
-                                <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes</xpath>-->
+                                <li Class="ThinkNode_SubtreesByTag">
+                                    <insertTag>SHGAI_UndraftedAndFreePawn</insertTag>
+                                </li>
                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalAnyActiveEnemyInMap">
                                     <invert>true</invert>
                                     <subNodes>
-                                        <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[1]/subNodes</xpath>-->
+                                        <li Class="ThinkNode_SubtreesByTag">
+                                            <insertTag>SHGAI_UndraftedPawn_NoEnemyOnMap</insertTag>
+                                        </li>
                                     </subNodes>
                                 </li>
                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalNearbyEnemyTarget">
                                     <subNodes>
-                                        <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[2]/subNodes</xpath>-->
+                                        <li Class="ThinkNode_SubtreesByTag">
+                                            <insertTag>SHGAI_UndraftedPawn_NearbyEnemy</insertTag>
+                                        </li>
                                     </subNodes>
                                 </li>
                                 <li Class="ThinkNode_ConditionalShotRecently">
                                     <thresholdTicks>600</thresholdTicks>
                                     <subNodes>
-                                        <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[3]/subNodes</xpath>-->
+                                        <li Class="ThinkNode_SubtreesByTag">
+                                            <insertTag>SHGAI_UndraftedPawn_ShotRecently</insertTag>
+                                        </li>
                                     </subNodes>
                                 </li>
                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalTooManyNearbyThreats">
                                     <dangerRadius>20</dangerRadius>
                                     <minCount>5</minCount>
                                     <subNodes>
-                                        <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[4]/subNodes</xpath>-->
+                                        <li Class="ThinkNode_SubtreesByTag">
+                                            <insertTag>SHGAI_UndraftedPawn_ManyNearbyThreats</insertTag>
+                                        </li>
                                     </subNodes>
                                 </li>
                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalTooManyNearbyThreats">
                                     <subNodes>
-                                        <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[5]/subNodes</xpath>-->
+                                        <li Class="ThinkNode_SubtreesByTag">
+                                            <insertTag>SHGAI_UndraftedPawn_MeleeThreat</insertTag>
+                                        </li>
                                     </subNodes>
                                 </li>
                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalAnyActiveEnemyInMap">
                                     <subNodes>
-                                        <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[6]/subNodes</xpath>-->
+                                        <li Class="ThinkNode_SubtreesByTag">
+                                            <insertTag>SHGAI_UndraftedPawn_EnemyOnMap</insertTag>
+                                        </li>
                                     </subNodes>
                                 </li>
                             </subNodes>
                         </li>
                         <li Class="SuperHeroGenesBase.ThinkNode_ConditionalPawnDraftedAndFree">
                             <subNodes>
-                                <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[2]/subNodes</xpath>-->
+                                <li Class="ThinkNode_SubtreesByTag">
+                                    <insertTag>SHGAI_DraftedAndFreePawn</insertTag>
+                                </li>
                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalNearbyEnemyTarget">
                                     <subNodes>
-                                        <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[2]/subNodes/li[1]/subNodes</xpath>-->
+                                        <li Class="ThinkNode_SubtreesByTag">
+                                            <insertTag>SHGAI_DraftedPawn_NearbyEnemy</insertTag>
+                                        </li>
                                     </subNodes>
                                 </li>
                                 <li Class="ThinkNode_ConditionalShotRecently">
                                     <thresholdTicks>600</thresholdTicks>
                                     <subNodes>
-                                        <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[2]/subNodes/li[2]/subNodes</xpath>-->
+                                        <li Class="ThinkNode_SubtreesByTag">
+                                            <insertTag>SHGAI_DraftedPawn_ShotRecently</insertTag>
+                                        </li>
                                     </subNodes>
                                 </li>
                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalTooManyNearbyThreats">
                                     <dangerRadius>20</dangerRadius>
                                     <minCount>5</minCount>
                                     <subNodes>
-                                      <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[2]/subNodes/li[3]/subNodes</xpath>-->
+                                        <li Class="ThinkNode_SubtreesByTag">
+                                            <insertTag>SHGAI_DraftedPawn_ManyNearbyThreats</insertTag>
+                                        </li>
                                     </subNodes>
                                 </li>
                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalTooManyNearbyThreats">
                                     <subNodes>
-                                      <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[2]/subNodes/li[4]/subNodes</xpath>-->
+                                        <li Class="ThinkNode_SubtreesByTag">
+                                            <insertTag>SHGAI_DraftedPawn_MeleeThreat</insertTag>
+                                        </li>
                                     </subNodes>
                                 </li>
                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalAnyActiveEnemyInMap">
                                     <subNodes>
-                                        <!--<xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[2]/subNodes/li[5]/subNodes</xpath>-->
+                                        <li Class="ThinkNode_SubtreesByTag">
+                                            <insertTag>SHGAI_DraftedPawn_EnemyOnMap</insertTag>
+                                        </li>
                                     </subNodes>
                                 </li>
                             </subNodes>
@@ -87,3 +118,16 @@
         </thinkRoot>
     </ThinkTreeDef>
 </Defs>
+
+<!-- 
+
+                                    <ThinkTreeDef>
+                                        <defName>SHG_SuperAI_</defName>
+                                        <insertTag>SHGAI_Pawn</insertTag>
+                                        <insertPriority>1</insertPriority>
+                                        <thinkRoot Class="ThinkNode_Priority">
+                                            <subNodes>
+                                            </subNodes>
+                                        </thinkRoot>
+                                    </ThinkTreeDef>
+-->

@@ -20,14 +20,14 @@
     <HediffDef>
         <defName>SHG_Psionist_PsionicTerrorizer</defName>
         <label>psionic terrorizer</label>
-        <description>This Empath is multiplying their arrest success chance and supression by 1.5 * psychic sensitivity.</description>
+        <description>This Empath is multiplying their arrest success chance and supression (if ideology is enabled) by 1.5 * psychic sensitivity.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
         <stages>
 			<li>
                 <statFactors>
                     <ArrestSuccessChance>1.50</ArrestSuccessChance>
-                    <SuppressionPower>1.50</SuppressionPower>
+                    <SuppressionPower MayRequire="Ludeon.Rimworld.Ideology">1.50</SuppressionPower>
                 </statFactors>
                 <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
                 <becomeVisible>false</becomeVisible>
@@ -52,7 +52,7 @@
         </stages>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef MayRequire="Ludeon.Rimworld.Ideology">
         <defName>SHG_Psionist_PsionicMissionary</defName>
         <label>psionic missionary</label>
         <description>This Empath is multiplying their religion spread frequency and conversion power by 1.5 * psychic sensitivity.</description>

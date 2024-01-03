@@ -61,7 +61,7 @@
         <defName>SHG_Pools_CalmingAura</defName>
         <label>calming aura</label>
         <description>Carriers of this gene can utilize their superior persuasion abilities to soothe everyone in a wide area around them for a day. During this time, the persuasion bonuses the super would receive from the base Superhero Gene is gone and they have a constant headache causing them both pain and a mood penalty of 20, but everyone within a radius of 50 receives a mood bonus of 10.\n\nMuch like with mutations, pool abilities function by utilizing a specific portion of the life energy pool that the superhero gene provides, in this case, the portion dedicated to enhancing the pawn's persuasion. Unlike those mutations, these function by using that pool in one large burst, which allows these to be used with any super gene that does not divert the pool's purpose like mutations and unsuper genes. Using the pool in one burst will stop the basic superhero gene from providing the related benefits for about a day as the pool refills.\n\nAura abilities involve releasing the life pool's effects to a wide area. This destabilizes the pool like other pool manipulation abilities, but often results in additional side effects beyond the standard pool loss debuffs due to the nature of auras.</description>
-        <iconPath>UI/Abilities/WordOfSerenity</iconPath>
+        <iconPath>Powers/Pools/Gene_CalmingAura</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <biostatMet>-1</biostatMet>
         <abilities>

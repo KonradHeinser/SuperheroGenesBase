@@ -225,7 +225,7 @@
             <li Class="HediffCompProperties_Link">
                 <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
                 <maxDistance>10</maxDistance>
-                <customMote>Mote_WorkCommandLinkLine</customMote>
+                <customMote>SHG_Mote_Generic</customMote>
             </li>
         </comps>
     </HediffDef>

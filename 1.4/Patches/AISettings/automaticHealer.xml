@@ -4,187 +4,209 @@
         <setting>automaticHealer</setting>
         <active Class="PatchOperationSequence">
             <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes</xpath>
-                    <value> <!--Always available, even to non~colonists-->
-                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalConcerningBleeding">
-                            <bleedThreshold>1.0</bleedThreshold>
-                            <subNodes>
-                                <li Class="ThinkNode_ConditionalHasAbility">
-                                    <ability>SHG_SealWounds</ability>
-                                    <subNodes>
-                                        <li Class="JobGiver_AICastAbilityOnSelf">
-                                            <ability>SHG_SealWounds</ability>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                                <li Class="ThinkNode_ConditionalHasAbility">
-                                    <ability>SHG_Psionist_EmergencyPatch</ability>
-                                    <subNodes>
-                                        <li Class="JobGiver_AICastAbilityOnSelf">
-                                            <ability>SHG_Psionist_EmergencyPatch</ability>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                                <li Class="ThinkNode_ConditionalHasAbility">
-                                    <ability>SHG_Hemomancer_Hemoclotting</ability>
-                                    <subNodes>
-                                        <li Class="JobGiver_AICastAbilityOnSelf">
-                                            <ability>SHG_Hemomancer_Hemoclotting</ability>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                                <li Class="ThinkNode_ConditionalHasAbility">
-                                    <ability>SHG_Hemomancer_ReplenishBlood</ability>
-                                    <subNodes>
-                                        <li Class="JobGiver_AICastAbilityOnSelf">
-                                            <ability>SHG_Hemomancer_ReplenishBlood</ability>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                                <li Class="ThinkNode_ConditionalHasAbility">
-                                    <ability>SHG_Hemomancer_MarkForDeathDefiance</ability>
-                                    <subNodes>
-                                        <li Class="JobGiver_AICastAbilityOnSelf">
-                                            <ability>SHG_Hemomancer_MarkForDeathDefiance</ability>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                            </subNodes>
-                        </li>
-                    </value>
-                </li>
-
                 <li Class="PatchOperationAdd"> <!--Undrafted pawn-->
-                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes</xpath>
+                    <xpath>Defs</xpath>
                     <value>
-                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalNeedTending">
-                            <subNodes>
-                                <li Class="ThinkNode_ConditionalHasAbility">
-                                    <ability>SHG_SealWounds</ability>
-                                    <subNodes>
-                                        <li Class="JobGiver_AICastAbilityOnSelf">
-                                            <ability>SHG_SealWounds</ability>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                                <li Class="ThinkNode_ConditionalHasAbility">
-                                    <ability>SHG_Psionist_EmergencyPatch</ability>
-                                    <subNodes>
-                                        <li Class="JobGiver_AICastAbilityOnSelf">
-                                            <ability>SHG_Psionist_EmergencyPatch</ability>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                                <li Class="ThinkNode_ConditionalHasAbility">
-                                    <ability>SHG_Hemomancer_Hemoclotting</ability>
-                                    <subNodes>
-                                        <li Class="JobGiver_AICastAbilityOnSelf">
-                                            <ability>SHG_Hemomancer_Hemoclotting</ability>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                                <li Class="ThinkNode_ConditionalHasAbility">
-                                    <ability>SHG_Hemomancer_ReplenishBlood</ability>
-                                    <subNodes>
-                                        <li Class="JobGiver_AICastAbilityOnSelf">
-                                            <ability>SHG_Hemomancer_ReplenishBlood</ability>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                            </subNodes>
-                        </li>
-                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalTendableAlly">
-                            <subNodes>
-                                <li Class="ThinkNode_ConditionalHasAbility">
-                                    <ability>SHG_SealWounds</ability>
-                                    <subNodes>
-                                        <li Class="SuperHeroGenesBase.JobGiver_AICastHealingAbility">
-                                            <ability>SHG_SealWounds</ability>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                                <li Class="ThinkNode_ConditionalHasAbility">
-                                    <ability>SHG_Hemomancer_Hemoclotting</ability>
-                                    <subNodes>
-                                        <li Class="SuperHeroGenesBase.JobGiver_AICastHealingAbility">
-                                            <ability>SHG_Hemomancer_Hemoclotting</ability>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                                <li Class="ThinkNode_ConditionalHasAbility">
-                                    <ability>Coagulate</ability>
-                                    <subNodes>
-                                        <li Class="SuperHeroGenesBase.JobGiver_AICastHealingAbility">
-                                            <ability>Coagulate</ability>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                                <li Class="ThinkNode_ConditionalHasAbility">
-                                    <ability>SHG_Hemomancer_ReplenishBlood</ability>
-                                    <subNodes>
-                                        <li Class="SuperHeroGenesBase.JobGiver_AICastHealingAbility">
-                                            <ability>SHG_Hemomancer_ReplenishBlood</ability>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                            </subNodes>
-                        </li>
-                        <li Class="ThinkNode_ConditionalHasHediff"> <!--Undrafted pawn with severe blood loss-->
-                            <hediff>BloodLoss</hediff>
-                            <severityRange>0.45</severityRange>
-                            <subNodes>
-                                <li Class="ThinkNode_ConditionalHasAbility">
-                                    <ability>SHG_Hemomancer_ReplenishBlood</ability>
-                                    <subNodes>
-                                        <li Class="JobGiver_AICastAbilityOnSelf">
-                                            <ability>SHG_Hemomancer_ReplenishBlood</ability>
-                                        </li>
-                                    </subNodes>
-                                </li>
-                            </subNodes>
-                        </li>
-                    </value>
-                </li>
-
-                <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes/li/subNodes/li[1]/subNodes/li[1]/subNodes</xpath>
-                    <value> <!--Undrafted pawn while no enemies are on map-->
-                        <li Class="ThinkNode_ConditionalHasAbility">
-                            <ability>SHG_Revive</ability>
-                            <subNodes>
-                                <li Class="SuperHeroGenesBase.JobGiver_AIResurrectHumanoid">
-                                    <ability>SHG_Revive</ability>
-                                    <expiryInterval>5000</expiryInterval>
-                                </li>
-                            </subNodes>
-                        </li>
-                    </value>
-                </li>
-
-                <li Class="SuperHeroGenesBase.PatchOperationSetting">
-                    <setting>poolUsage</setting>
-                    <active Class="PatchOperationSequence"> <!--If under half health, use a potent regeneration ability-->
-                        <operations>
-                            <li Class="PatchOperationAdd">
-                                <xpath>Defs/ThinkTreeDef[defName="SHG_SuperAI"]/thinkRoot/subNodes</xpath>
-                                <value>
-                                    <li Class="ThinkNode_ConditionalTotalDamage">
-                                        <thresholdPercent>0.50</thresholdPercent>
+                        <ThinkTreeDef>
+                            <defName>SHG_SuperAI_Healer_Pawn</defName>
+                            <insertTag>SHGAI_Pawn</insertTag>
+                            <insertPriority>500</insertPriority>
+                            <thinkRoot Class="ThinkNode_Priority">
+                                <subNodes>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalConcerningBleeding">
+                                        <bleedThreshold>1.0</bleedThreshold>
                                         <subNodes>
                                             <li Class="ThinkNode_ConditionalHasAbility">
-                                                <ability>SHG_Regenerator</ability>
+                                                <ability>SHG_SealWounds</ability>
                                                 <subNodes>
                                                     <li Class="JobGiver_AICastAbilityOnSelf">
-                                                        <ability>SHG_Regenerator</ability>
+                                                        <ability>SHG_SealWounds</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility" MayRequire="Ludeon.Rimworld.Royalty">
+                                                <ability>SHG_Psionist_EmergencyPatch</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Psionist_EmergencyPatch</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_Hemomancer_Hemoclotting</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Hemomancer_Hemoclotting</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_Hemomancer_MarkForDeathDefiance</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Hemomancer_MarkForDeathDefiance</ability>
                                                     </li>
                                                 </subNodes>
                                             </li>
                                         </subNodes>
                                     </li>
-                                </value>
-                            </li>
-                        </operations>
+                                </subNodes>
+                            </thinkRoot>
+                        </ThinkTreeDef>
+
+                        <ThinkTreeDef>
+                            <defName>SHG_SuperAI_UndraftedHealer_FreePawn</defName>
+                            <insertTag>SHGAI_UndraftedAndFreePawn</insertTag>
+                            <insertPriority>500</insertPriority>
+                            <thinkRoot Class="ThinkNode_Priority">
+                                <subNodes>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalNeedTending">
+                                        <subNodes>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_SealWounds</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_SealWounds</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility" MayRequire="Ludeon.Rimworld.Royalty">
+                                                <ability>SHG_Psionist_EmergencyPatch</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Psionist_EmergencyPatch</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_Hemomancer_Hemoclotting</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Hemomancer_Hemoclotting</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalTendableAlly">
+                                        <subNodes>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_SealWounds</ability>
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastHealingAbility">
+                                                        <ability>SHG_SealWounds</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_Hemomancer_Hemoclotting</ability>
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastHealingAbility">
+                                                        <ability>SHG_Hemomancer_Hemoclotting</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>Coagulate</ability>
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastHealingAbility">
+                                                        <ability>Coagulate</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastHealingAbility">
+                                                        <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                    <li Class="ThinkNode_ConditionalHasHediff"> <!--Undrafted pawn with severe blood loss-->
+                                        <hediff>BloodLoss</hediff>
+                                        <severityRange>0.45</severityRange>
+                                        <subNodes>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </thinkRoot>
+                        </ThinkTreeDef> 
+
+                        <ThinkTreeDef>
+                            <defName>SHG_SuperAI_UndraftedHealer_NoEnemyOnMap</defName>
+                            <insertTag>SHGAI_UndraftedPawn_NoEnemyOnMap</insertTag>
+                            <insertPriority>500</insertPriority>
+                            <thinkRoot Class="ThinkNode_Priority">
+                                <subNodes>
+                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                        <ability>SHG_Revive</ability>
+                                        <subNodes>
+                                            <li Class="SuperHeroGenesBase.JobGiver_AIResurrectHumanoid">
+                                                <ability>SHG_Revive</ability>
+                                                <expiryInterval>5000</expiryInterval>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </thinkRoot>
+                        </ThinkTreeDef>
+                    </value>
+                </li>
+
+                <li Class="SuperHeroGenesBase.PatchOperationSetting">
+                    <setting>poolUsage</setting>
+                    <active Class="PatchOperationAdd"> <!--If under half health, use a potent regeneration ability-->
+                        <xpath>Defs</xpath>
+                        <value>
+                            <ThinkTreeDef>
+                                <defName>SHG_SuperAI_PoolHealer_Pawn</defName>
+                                <insertTag>SHGAI_Pawn</insertTag>
+                                <insertPriority>450</insertPriority>
+                                <thinkRoot Class="ThinkNode_Priority">
+                                    <subNodes>
+                                        <li Class="ThinkNode_ConditionalTotalDamage">
+                                            <thresholdPercent>0.50</thresholdPercent>
+                                            <subNodes>
+                                                <li Class="ThinkNode_ConditionalHasAbility">
+                                                    <ability>SHG_Regenerator</ability>
+                                                    <subNodes>
+                                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                                            <ability>SHG_Regenerator</ability>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                            </subNodes>
+                                        </li>
+                                    </subNodes>
+                                </thinkRoot>
+                            </ThinkTreeDef>  
+                        </value>
                     </active>
                 </li>
             </operations>

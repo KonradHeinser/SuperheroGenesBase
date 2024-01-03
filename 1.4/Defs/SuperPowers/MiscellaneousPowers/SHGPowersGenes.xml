@@ -143,7 +143,7 @@
         <defName>SHG_Invisibility</defName>
         <label>invisibility</label>
         <description>Carriers of this gene are able to turn invisible for a short time every few hours.\n\nWhile there are many who worry that supers with this gene are going to sneak into places they shouldn't be, countless studies have found that it is far more likely that supers with this gene prefer to do harmless jump scares because watching people get spooked amuses them.</description>
-        <iconPath>UI/Abilities/Invisibility</iconPath>
+        <iconPath>Powers/Gene_Invisibility</iconPath>
         <biostatMet>-3</biostatMet>
         <abilities>
             <li>SHG_Invisibility</li>
@@ -167,7 +167,7 @@
         <defName>SHG_Blink</defName>
         <label>blink</label>
         <description>Carriers of this gene are able to blink themselves away from a location. The destination is a random point between 20 and 30 tiles away. Using this to get out of danger will either work very well, or very poorly.\n\nThis ability was initially developed when a super with a psylink was spooked during some testing. After discovering how well teleportation abilities worked with the superhero gene, military scientists sought to create a controlled version of this ability.</description>
-        <iconPath>UI/Abilities/SkipChaos</iconPath>
+        <iconPath>Powers/Gene_Blink</iconPath>
         <displayOrderInCategory>-0.5</displayOrderInCategory>
         <abilities>
             <li>SHG_Blink</li>
@@ -193,7 +193,7 @@
         <defName>SHG_Teleport</defName>
         <label>teleportation</label>
         <description>Carriers of this gene are able to teleport themselves and any other living thing a short distance away.\n\nExpanding on the super's ability to randomly teleport, this was used as a way to get melee focused supers behind enemy lines. Sometimes middlemen were completely removed, and the super would teleport themselves into enemy lines, blinking out the moment things began going poorly.</description>
-        <iconPath>UI/Abilities/Skip</iconPath>
+        <iconPath>Powers/Gene_Teleport</iconPath>
         <prerequisite>SHG_Blink</prerequisite>
         <displayOrderInCategory>-0.4</displayOrderInCategory>
         <abilities>
@@ -221,7 +221,7 @@
         <defName>SHG_Gate</defName>
         <label>teleportation gate</label>
         <description>Carriers of this gene are able to teleport themselves everyone within 10 tiles to any location where the colony has people.\n\nAfter developing teleportation, the next logical step was to find a way to get squads of soldiers from one front to another front quickly. The end result was the creation of porters who would take squads of supers quickly from battle to battle, single-handedly turning the tides of wars.</description>
-        <iconPath>UI/Abilities/Farskip</iconPath>
+        <iconPath>Powers/Gene_Gate</iconPath>
         <prerequisite>SHG_Blink</prerequisite>
         <displayOrderInCategory>-0.3</displayOrderInCategory>
         <abilities>
@@ -248,7 +248,7 @@
         <defName>SHG_Rift</defName>
         <label>teleportation rift</label>
         <description>Carriers of this gene are able to teleport themselves everyone within 200 tiles to any location where the colony has people.\n\nThis will teleport almost everyone on the current map to the desired location. If you use this in your colony, you will need to send someone back manually to be able to teleport back.\n\nWhen a losing battle turned devastating because the army's porter couldn't get enough people out of the fortification fast enough, this ability was developed to give supers a way to move entire platoons quickly. Moving a battalion quickly still required multiple porters, but teleportation rifts made the task only require 10% of the people it did before.</description>
-        <iconPath>UI/Abilities/Farskip</iconPath>
+        <iconPath>Powers/Gene_Rift</iconPath>
         <prerequisite>SHG_Blink</prerequisite>
         <displayOrderInCategory>-0.2</displayOrderInCategory>
         <abilities>
@@ -292,7 +292,7 @@
         <defName>SHG_MassStoneShift</defName>
         <label>mass stone shift</label>
         <description>Carriers of this gene are able to move massive amounts of stone chunks to a specified location instantly.</description>
-        <iconPath>UI/Abilities/Chunkskip</iconPath>
+        <iconPath>Powers/Gene_MassStoneShift</iconPath>
         <abilities>
             <li>SHG_MassStoneShift</li>
         </abilities>

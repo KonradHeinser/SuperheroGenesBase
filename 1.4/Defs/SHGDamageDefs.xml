@@ -88,7 +88,7 @@
         <overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
         <isRanged>true</isRanged>
         <makesAnimalsFlee>true</makesAnimalsFlee>
-        <defaultDamage>200</defaultDamage>
+        <defaultDamage>50</defaultDamage>
         <defaultArmorPenetration>0.1</defaultArmorPenetration>
     </DamageDef>
 
@@ -171,5 +171,3 @@
         </additionalHediffs>
     </DamageDef>
 </Defs>
-
-

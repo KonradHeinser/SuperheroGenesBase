@@ -17,15 +17,15 @@
         <description>This hemoinitiate regenerates hemomgen faster than normal hemomancers. If Ideology is enabled, ideology spread frequency is increased based on Hemomancy Proficiency.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_Praise</iconPath>
         <prerequisite>SHG_Hemomancer_Initiate</prerequisite>
-        <geneClass>SuperHeroGenesBase.Gene_HemoHediffAdder</geneClass>
+        <geneClass>Gene_HemogenDrain</geneClass>
         <resourceLabel>hemogen</resourceLabel>
         <displayOrderInCategory>1</displayOrderInCategory>
         <resourceLossPerDay>-0.5</resourceLossPerDay>
         <customEffectDescriptions>
-            <li>Increases ideology spread frequency based on Hemomancy Proficiency.</li>
+            <li MayRequire="Ludeon.Rimworld.Ideology">Increases ideology spread frequency based on Hemomancy Proficiency.</li>
         </customEffectDescriptions>
         <modExtensions>
-			<li Class="SuperHeroGenesBase.SHGExtension">
+			<li Class="SuperHeroGenesBase.SHGExtension" MayRequire="Ludeon.Rimworld.Ideology">
 				<hediffsToApply><li><hediff>SHG_Hemomancer_Praise</hediff></li></hediffsToApply>
 			</li>
 		</modExtensions>
@@ -100,15 +100,15 @@
         <description>This hemopriest regenerates hemomgen faster than normal hemomancers. If Ideology is enabled, ideology spread frequency is increased based on Hemomancy Proficiency. If the carrier also has praise, the regen is additive, and the ideology spread frequency is multiplicative.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_Worship</iconPath>
         <prerequisite>SHG_Hemomancer_Priest</prerequisite>
-        <geneClass>SuperHeroGenesBase.Gene_HemoHediffAdder</geneClass>
+        <geneClass>Gene_HemogenDrain</geneClass>
         <resourceLabel>hemogen</resourceLabel>
         <displayOrderInCategory>11</displayOrderInCategory>
         <resourceLossPerDay>-0.5</resourceLossPerDay>
         <customEffectDescriptions>
-            <li>Increases ideology spread frequency based on Hemomancy Proficiency.</li>
+            <li MayRequire="Ludeon.Rimworld.Ideology">Increases ideology spread frequency based on Hemomancy Proficiency.</li>
         </customEffectDescriptions>
         <modExtensions>
-			<li Class="SuperHeroGenesBase.SHGExtension">
+			<li Class="SuperHeroGenesBase.SHGExtension" MayRequire="Ludeon.Rimworld.Ideology">
 				<hediffsToApply><li><hediff>SHG_Hemomancer_Worship</hediff></li></hediffsToApply>
 			</li>
 		</modExtensions>

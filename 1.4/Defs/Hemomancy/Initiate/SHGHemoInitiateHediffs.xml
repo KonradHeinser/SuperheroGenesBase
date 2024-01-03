@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef>
+    <HediffDef MayRequire="Ludeon.Rimworld.Ideology">
         <defName>SHG_Hemomancer_Praise</defName>
 		<label>praise</label>
 		<description>This pawn will attempt to spread their religion more often. Higher Hemomancy Proficiency increases spread frequency more.</description>
@@ -112,7 +112,7 @@
         </comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef MayRequire="Ludeon.Rimworld.Ideology">
         <defName>SHG_Hemomancer_Worship</defName>
 		<label>worship</label>
 		<description>This pawn will attempt to spread their religion more often. Higher Hemomancy Proficiency increases spread frequency more.</description>

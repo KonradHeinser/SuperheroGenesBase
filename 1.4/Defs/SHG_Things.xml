@@ -47,8 +47,92 @@
         </comps>
     </ThingDef>
 
+    <ThingDef ParentName="MoteBase" Name="SHG_GenericMoteBase">
+        <defName>SHG_Mote_Generic</defName>
+        <thingClass>MoteDualAttached</thingClass>
+        <altitudeLayer>MoteLow</altitudeLayer>
+        <drawOffscreen>true</drawOffscreen>
+        <mote>
+            <fadeInTime>0.1</fadeInTime>
+            <fadeOutTime>0.1</fadeOutTime>
+            <solidTime>999999</solidTime>
+            <needsMaintenance>True</needsMaintenance>
+            <rotateTowardsTarget>True</rotateTowardsTarget>
+            <scaleToConnectTargets>True</scaleToConnectTargets>
+        </mote>
+        <graphicData>
+            <shaderType>MoteGlow</shaderType>
+            <texPath>Things/Mote/GraserBeam</texPath>
+            <color>(0.65, 0.52, 0.48, 1.0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_GenericMoteBase">
+        <defName>SHG_Mote_Calming</defName>
+        <graphicData>
+            <color>(0.60, 0.60, 1.00, 1.0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_GenericMoteBase">
+        <defName>SHG_Mote_Combat</defName>
+        <graphicData>
+            <color>(1.00, 0.60, 0.60, 1.0)</color>
+        </graphicData>
+    </ThingDef>
+    
+    <ThingDef ParentName="SHG_GenericMoteBase">
+        <defName>SHG_Mote_Healing</defName>
+        <graphicData>
+            <color>(0.60, 1.0, 0.60, 1.0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_GenericMoteBase">
+        <defName>SHG_Mote_Debuff</defName>
+        <graphicData>
+            <color>(0.40, 0.40, 0.40, 1.0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_GenericMoteBase">
+        <defName>SHG_Mote_Psionic</defName>
+        <graphicData>
+            <color>(0.8, 0.2, 0.8, 1.0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_GenericMoteBase">
+        <defName>SHG_Mote_Hemomancer</defName>
+        <graphicData>
+            <color>(1.0, 0.2, 0.2, 1.0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_GenericMoteBase" Name="SHG_LaserEyeBeamBase">
+        <defName>SHG_Mote_LaserEyeBeam</defName>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <mote>
+            <fadeInTime>0.2</fadeInTime>
+            <fadeOutTime>0.3</fadeOutTime>
+            <fadeOutUnmaintained>True</fadeOutUnmaintained>
+        </mote>
+        <graphicData>
+            <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+            <shaderType>MoteBeam</shaderType>
+            <shaderParameters>
+                <_ExtraTexA>/Things/Mote/BeamSecondaryNoise_A</_ExtraTexA>
+                <_ExtraTexB>/Things/Mote/BeamSecondaryNoise_B</_ExtraTexB>
+                <_ScrollSpeedA>-4 </_ScrollSpeedA>
+                <_ScrollSpeedB>3</_ScrollSpeedB>
+                <_Intensity>2</_Intensity>
+            </shaderParameters>
+            <color>(1, 0.1, 0)</color>
+        </graphicData>
+    </ThingDef>
+
         <!--Psionic Things-->
-    <ThingDef ParentName="EtherealThingBase">
+    <ThingDef ParentName="EtherealThingBase" MayRequire="Ludeon.Rimworld.Royalty">
         <defName>SHG_Psionist_PsionicShield</defName>
         <label>psionic shield</label>
         <thingClass>ThingWithComps</thingClass>
@@ -87,7 +171,7 @@
         </comps>
     </ThingDef>
 
-    <ThingDef ParentName="EtherealThingBase">
+    <ThingDef ParentName="EtherealThingBase" MayRequire="Ludeon.Rimworld.Royalty">
         <defName>SHG_Psionist_MassProtection</defName>
         <label>large psionic forcefield</label>
         <thingClass>ThingWithComps</thingClass>
@@ -126,7 +210,7 @@
         </comps>
     </ThingDef>
 
-    <ThingDef ParentName="EtherealThingBase">
+    <ThingDef ParentName="EtherealThingBase" MayRequire="Ludeon.Rimworld.Royalty">
         <defName>SHG_Psionist_Star</defName>
         <label>star rift</label>
         <thingClass>ThingWithComps</thingClass>
@@ -164,7 +248,7 @@
         </comps>
     </ThingDef>
 
-    <ThingDef ParentName="EtherealThingBase">
+    <ThingDef ParentName="EtherealThingBase" MayRequire="Ludeon.Rimworld.Royalty">
         <defName>SHG_Psionist_DebufferShield</defName>
         <label>psionic shield</label>
         <thingClass>ThingWithComps</thingClass>
@@ -266,7 +350,7 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="EtherealThingBase">
+    <ThingDef ParentName="EtherealThingBase" MayRequire="Ludeon.Rimworld.Royalty">
         <defName>SHG_Hemomancer_HemogenBarrier</defName>
         <label>hemogen barrier</label>
         <thingClass>ThingWithComps</thingClass>

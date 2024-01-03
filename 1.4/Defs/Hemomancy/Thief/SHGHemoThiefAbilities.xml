@@ -161,7 +161,7 @@
                     <li>Asthma</li>
                     <li>HeartArteryBlockage</li>
                     <li>Carcinoma</li>
-                    <li>Abasia</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">Abasia</li>
                     <li>BloodLoss</li>
                 </hediffs>
                 <recursiveChecks>5</recursiveChecks><!--Just in case the MissingBodyPart removal results in weird reactions-->

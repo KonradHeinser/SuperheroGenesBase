@@ -113,7 +113,7 @@
         <defName>SHG_Pools_CalmingAura</defName>
         <label>calming aura</label>
         <description>Release a calming aura that improves the mood of all allies around the super for a day at the expense of both the super's mood and persuasive abilities.</description>
-        <iconPath>UI/Abilities/WordOfSerenity</iconPath>
+        <iconPath>Powers/Pools/Gene_CalmingAura</iconPath>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <targetRequired>False</targetRequired>

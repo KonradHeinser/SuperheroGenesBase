@@ -33,7 +33,7 @@ namespace SuperHeroGenesBase
                     if (!tempAbility.ValidateGlobalTarget(currentEnemy)) continue;
                     if(tempAbility.verb.verbProps.requireLineOfSight && !los) continue;
                     bool flag = false;
-                    if (currentEnemy is Pawn otherPawn) 
+                    if (currentEnemy is Pawn otherPawn && !tempAbility.comps.NullOrEmpty()) 
                     {
                         foreach (AbilityComp compAbility in tempAbility.comps)
                         {

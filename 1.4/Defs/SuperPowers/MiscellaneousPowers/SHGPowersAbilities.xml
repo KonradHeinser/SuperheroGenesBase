@@ -164,7 +164,7 @@
         <defName>SHG_Invisibility</defName>
         <label>invisibility</label>
         <description>Become invisible for some time. This is quite taxing on the body, so it can only be maintained for half an hour, and requires a few hours to recharge.</description>
-        <iconPath>UI/Abilities/Invisibility</iconPath>
+        <iconPath>Powers/Gene_Invisibility</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -199,7 +199,7 @@
         <defName>SHG_Blink</defName>
         <label>blink</label>
         <description>Teleport yourself randomly between 20 and 30 tiles away. This can be used to get yourself out of sticky situations quickly.</description>
-        <iconPath>UI/Abilities/SkipChaos</iconPath>
+        <iconPath>Powers/Gene_Blink</iconPath>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <writeCombatLog>True</writeCombatLog>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -231,7 +231,7 @@
         <defName>SHG_Teleport</defName>
         <label>teleport</label>
         <description>Teleport a living thing to a desired position near where you currently stand.</description>
-        <iconPath>UI/Abilities/Skip</iconPath>
+        <iconPath>Powers/Gene_Teleport</iconPath>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <writeCombatLog>True</writeCombatLog>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -265,7 +265,7 @@
         <defName>SHG_Gate</defName>
         <label>open gate</label>
         <description>Teleport yourself and everyone within 10 tiles to a distant location that has at least one colonist.</description>
-        <iconPath>UI/Abilities/Farskip</iconPath>
+        <iconPath>Powers/Gene_Gate</iconPath>
         <hotKey>Misc12</hotKey>
         <targetWorldCell>True</targetWorldCell>
         <showGizmoOnWorldView>True</showGizmoOnWorldView>
@@ -293,7 +293,7 @@
         <defName>SHG_Rift</defName>
         <label>open rift</label>
         <description>Open a rift in the space time continuum that instantly teleports everyone within 200 tiles to a location that has at least one colonist.</description>
-        <iconPath>UI/Abilities/Farskip</iconPath>
+        <iconPath>Powers/Gene_Rift</iconPath>
         <hotKey>Misc12</hotKey>
         <targetWorldCell>True</targetWorldCell>
         <showGizmoOnWorldView>True</showGizmoOnWorldView>
@@ -350,7 +350,7 @@
         <defName>SHG_MassStoneShift</defName>
         <label>mass stone shift</label>
         <description>Teleport the closest 30 stone chunks to a target location.</description>
-        <iconPath>UI/Abilities/Chunkskip</iconPath>
+        <iconPath>Powers/Gene_MassStoneShift</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <hotKey>Misc10</hotKey>
         <hostile>false</hostile>
@@ -564,7 +564,7 @@
             <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
             <beamMaxDeviation>0.1</beamMaxDeviation>
             <beamCurvature>0.1</beamCurvature>
-            <beamMoteDef>Mote_GraserBeamBase</beamMoteDef>
+            <beamMoteDef>SHG_Mote_LaserEyeBeam</beamMoteDef>
             <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
             <beamChanceToStartFire>0</beamChanceToStartFire>
             <beamChanceToAttachFire>0</beamChanceToAttachFire>

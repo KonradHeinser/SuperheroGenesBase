@@ -33,7 +33,7 @@
     <GeneDef ParentName="SuperPowersPsychicEmpathBase">
         <defName>SHG_Psionist_PsionicTerrorizer</defName>
         <label>psionic terrorizer</label>
-        <description>Carriers of this gene have increased suppression power and arrest success chance based on their psychic sensitivity.</description>
+        <description>Carriers of this gene have increased arrest success chance and suppression power (if Ideology is enabled) based on their psychic sensitivity.</description>
         <prerequisite>SHG_Psionist_Empath</prerequisite>
         <iconPath>Psionist/Empath/Gene_Psionist_PsionicTerrorizer</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
@@ -66,7 +66,7 @@
 		</modExtensions>
     </GeneDef>
 
-    <GeneDef ParentName="SuperPowersPsychicEmpathBase">
+    <GeneDef ParentName="SuperPowersPsychicEmpathBase" MayRequire="Ludeon.Rimworld.Ideology">
         <defName>SHG_Psionist_PsionicMissionary</defName>
         <label>psionic missionary</label>
         <description>Carriers of this gene have increased religion spread frequency and conversion power based on their psychic sensitivity.</description>
