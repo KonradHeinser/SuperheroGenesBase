@@ -70,7 +70,7 @@
                                                     <li>SHG_LightningBlast</li>
                                                     <li>SHG_IceBlast</li>
                                                     <li>SHG_PetrificationBlast</li>
-                                                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_Asteroid</li>
+                                                    <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Asteroid</li>
                                                 </abilities>
                                             </li>
                                         </subNodes>
@@ -146,7 +146,7 @@
                                                                 <li>SHG_LightningBlast</li>
                                                                 <li>SHG_IceBlast</li>
                                                                 <li>SHG_PetrificationBlast</li>
-                                                                <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_Asteroid</li>
+                                                                <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Asteroid</li>
                                                             </abilities>
                                                         </li>
                                                     </subNodes>

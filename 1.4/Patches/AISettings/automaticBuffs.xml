@@ -5,7 +5,7 @@
         <active Class="PatchOperationAdd">
             <xpath>Defs</xpath>
             <value>
-                <ThinkTreeDef MayRequire="Ludeon.Rimworld.Royalty">
+                <ThinkTreeDef MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
                     <defName>SHG_SuperAI_UndraftedBuffs_Free</defName>
                     <insertTag>SHGAI_UndraftedAndFreePawn</insertTag>
                     <insertPriority>400</insertPriority>

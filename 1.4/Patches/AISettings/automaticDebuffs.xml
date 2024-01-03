@@ -16,15 +16,15 @@
                                     <li Class="ThinkNodeConditional_HashIntervalTick">
                                         <interval>3</interval>
                                         <subNodes>
-                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequire="Ludeon.Rimworld.Royalty">
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
                                                 <minRadius>30</minRadius>
                                                 <minEnemies>5</minEnemies>
                                                 <subNodes>
                                                     <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
                                                         <abilities>
-                                                            <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_IcePlanet</li>
-                                                            <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_Eldritch</li>
-                                                            <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_GazeIntoTheAbyss</li> <!--In this category because it's not worth casting if there aren't a bunch of pawns to deal with-->
+                                                            <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_IcePlanet</li>
+                                                            <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Eldritch</li>
+                                                            <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_GazeIntoTheAbyss</li> <!--In this category because it's not worth casting if there aren't a bunch of pawns to deal with-->
                                                         </abilities>
                                                     </li>
                                                 </subNodes>
@@ -35,11 +35,11 @@
                                                 <subNodes>
                                                     <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
                                                         <abilities>
-                                                            <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_Psychedelic</li>
+                                                            <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Psychedelic</li>
                                                             <li>SHG_Hemomancer_BloodAndDarkness</li>
-                                                            <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_Enough</li>
-                                                            <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_InstigateConflict</li>
-                                                            <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_Despair</li>
+                                                            <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Enough</li>
+                                                            <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_InstigateConflict</li>
+                                                            <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Despair</li>
                                                         </abilities>
                                                     </li>
                                                 </subNodes>
@@ -55,23 +55,23 @@
                                             </li>
                                             <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
                                                 <abilities>
-                                                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_InternalDebate</li>
+                                                    <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_InternalDebate</li>
                                                     <li>SHG_Hemomancer_StealPerceptiveness</li>
                                                     <li>SHG_Hemomancer_StealDefense</li>
                                                     <li>SHG_Hemomancer_StealStrength</li>
                                                     <li>SHG_Hemomancer_MarkForDeath</li>
-                                                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_GraspHeart</li>
-                                                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_Dread</li>
+                                                    <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_GraspHeart</li>
+                                                    <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Dread</li>
                                                     <li>SHG_Distraction</li>
                                                     <li>SHG_Narcissus</li>
                                                 </abilities>
                                             </li>
-                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon" MayRequire="Ludeon.Rimworld.Royalty">
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
                                                 <invert>true</invert>
                                                 <subNodes>
                                                     <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget"> <!--A last ditch ability to use even though the target may be immune-->
                                                         <abilities>
-                                                            <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_CompelledDuel</li>
+                                                            <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_CompelledDuel</li>
                                                         </abilities>
                                                     </li>
                                                 </subNodes>
@@ -124,15 +124,15 @@
                                         <li Class="ThinkNodeConditional_HashIntervalTick">
                                             <interval>3</interval>
                                             <subNodes>
-                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequire="Ludeon.Rimworld.Royalty">
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
                                                     <minRadius>30</minRadius>
                                                     <minEnemies>5</minEnemies>
                                                     <subNodes>
                                                         <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
                                                             <abilities>
-                                                                <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_IcePlanet</li>
-                                                                <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_Eldritch</li>
-                                                                <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_GazeIntoTheAbyss</li> <!--In this category because it's not worth casting if there aren't a bunch of pawns to deal with-->
+                                                                <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_IcePlanet</li>
+                                                                <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Eldritch</li>
+                                                                <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_GazeIntoTheAbyss</li> <!--In this category because it's not worth casting if there aren't a bunch of pawns to deal with-->
                                                             </abilities>
                                                         </li>
                                                     </subNodes>
@@ -143,11 +143,11 @@
                                                     <subNodes>
                                                         <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
                                                             <abilities>
-                                                                <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_Psychedelic</li>
+                                                                <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Psychedelic</li>
                                                                 <li>SHG_Hemomancer_BloodAndDarkness</li>
-                                                                <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_Enough</li>
-                                                                <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_InstigateConflict</li>
-                                                                <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_Despair</li>
+                                                                <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Enough</li>
+                                                                <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_InstigateConflict</li>
+                                                                <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Despair</li>
                                                             </abilities>
                                                         </li>
                                                     </subNodes>
@@ -163,23 +163,23 @@
                                                 </li>
                                                 <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
                                                     <abilities>
-                                                        <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_InternalDebate</li>
+                                                        <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_InternalDebate</li>
                                                         <li>SHG_Hemomancer_StealPerceptiveness</li>
                                                         <li>SHG_Hemomancer_StealDefense</li>
                                                         <li>SHG_Hemomancer_StealStrength</li>
                                                         <li>SHG_Hemomancer_MarkForDeath</li>
-                                                        <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_GraspHeart</li>
-                                                        <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_Dread</li>
+                                                        <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_GraspHeart</li>
+                                                        <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Dread</li>
                                                         <li>SHG_Distraction</li>
                                                         <li>SHG_Narcissus</li>
                                                     </abilities>
                                                 </li>
-                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon" MayRequire="Ludeon.Rimworld.Royalty">
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
                                                     <invert>true</invert>
                                                     <subNodes>
                                                         <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget"> <!--A last ditch ability to use even though the target may be immune-->
                                                             <abilities>
-                                                                <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Psionist_CompelledDuel</li>
+                                                                <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_CompelledDuel</li>
                                                             </abilities>
                                                         </li>
                                                     </subNodes>

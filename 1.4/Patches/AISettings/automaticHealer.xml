@@ -24,7 +24,7 @@
                                                     </li>
                                                 </subNodes>
                                             </li>
-                                            <li Class="ThinkNode_ConditionalHasAbility" MayRequire="Ludeon.Rimworld.Royalty">
+                                            <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
                                                 <ability>SHG_Psionist_EmergencyPatch</ability>
                                                 <subNodes>
                                                     <li Class="JobGiver_AICastAbilityOnSelf">
@@ -78,7 +78,7 @@
                                                     </li>
                                                 </subNodes>
                                             </li>
-                                            <li Class="ThinkNode_ConditionalHasAbility" MayRequire="Ludeon.Rimworld.Royalty">
+                                            <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
                                                 <ability>SHG_Psionist_EmergencyPatch</ability>
                                                 <subNodes>
                                                     <li Class="JobGiver_AICastAbilityOnSelf">
