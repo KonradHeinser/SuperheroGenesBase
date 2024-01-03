@@ -5,7 +5,6 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-        <warmupStartSound>CombatCommand_Warmup</warmupStartSound>
         <cooldownTicksRange>6000</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
         <verbProperties>

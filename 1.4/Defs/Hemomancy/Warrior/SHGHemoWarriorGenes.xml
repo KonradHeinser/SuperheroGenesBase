@@ -97,7 +97,7 @@
         </statOffsets>
     </GeneDef>
 
-    <GeneDef ParentName="SuperPowersHemoWarriorBase">
+    <GeneDef ParentName="SuperPowersHemoWarriorBase" MayRequire="Ludeon.Rimworld.Royalty">
         <defName>SHG_Hemomancer_HemogenBarrier</defName>
         <label>hemogen barrier</label>
         <description>Carriers of this gene can Create a small shield made of hemogen that stops all projectiles from entering. This will not stop people, and will cause items to explode on impact with the shield. This will last for about one hour. This is not influenced by Hemomancy Proficiency.</description>
@@ -150,7 +150,7 @@
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_TrueRegeneration</iconPath>
         <displayOrderInCategory>14</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Champion</prerequisite>
-        <geneClass>Gene_HemogenDrain</geneClass>
+        <geneClass>SuperHeroGenesBase.Gene_HemoHediffAdder</geneClass>
         <resourceLabel>hemogen</resourceLabel>
         <resourceLossPerDay>1</resourceLossPerDay>
         <modExtensions>

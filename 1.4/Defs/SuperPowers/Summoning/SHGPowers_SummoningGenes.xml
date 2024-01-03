@@ -3,7 +3,7 @@
         <!--Biomancer Display: 0~19.9
         Reserved Numbers
         -->
-    <GeneDef ParentName="SuperPowersSummoningBase">
+    <GeneDef ParentName="SuperPowersSummoningBase" MayRequire="Ludeon.Rimworld.Royalty">
         <defName>SHG_SummonAnimaTree</defName>
         <label>summon anima tree</label>
         <description>Carriers of this gene can summon an anima tree at a location once per quadrum. The tree will be able to grow even if placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. You should still be able to interact with them like you could any other anima tree.</description>
@@ -141,7 +141,7 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperPowersSummoningBase">
+    <GeneDef ParentName="SuperPowersSummoningBase" MayRequire="Ludeon.RimWorld.Ideology">
         <defName>SHG_SummonEnhancedNutrifungus</defName>
         <label>summon enhanced nutrifungus</label>
         <description>Carriers of this gene can summon a super enhanced nutrifungus plant at a location once per quadrum. The plant will be able to grow even if placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. The issue shouldn't cause any gameplay issues, it will just look strange.</description>
@@ -192,7 +192,7 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperPowersSummoningBase">
+    <GeneDef ParentName="SuperPowersSummoningBase" MayRequire="Ludeon.RimWorld.Ideology">
         <defName>SHG_SummonGauranlenPod</defName>
         <label>summon gauranlen pod</label>
         <description>Carriers of this gene can summon a gauranlen pod at a location once per quadrum.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. The issue shouldn't cause any gameplay issues, it will just look strange.</description>

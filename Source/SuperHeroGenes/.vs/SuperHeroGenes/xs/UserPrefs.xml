@@ -1,21 +1,22 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Genes/Gene_HemoHediffAdder.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/ThinkNode_RecordPassage.cs">
     <Files>
-      <File FileName="Genes/HediffAdder.cs" Line="100" Column="2" />
-      <File FileName="Genes/HediffsToParts.cs" Line="2" Column="6" />
-      <File FileName="SHGExtension.cs" Line="8" Column="30" />
-      <File FileName="Genes/Gene_HemoHediffAdder.cs" Line="16" Column="83" />
+      <File FileName="SuperAI/ThinkNode_ConditionalAboveMood.cs" Line="8" Column="38" />
+      <File FileName="SuperAI/ThinkNode_ConditionalNearbyEnemyTarget.cs" Line="15" Column="1" />
+      <File FileName="SHGUtilities.cs" Line="213" Column="14" />
+      <File FileName="SuperAI/JobGiver_AICastAbilityGoToTarget.cs" Line="7" Column="29" />
+      <File FileName="SuperAI/JobGiver_AICastAnyOfAbilityOnEnemyTarget.cs" Line="40" Column="82" />
+      <File FileName="SuperAI/ThinkNode_ConditionalHasTargetNoFriendlyFire.cs" Line="21" Column="14" />
+      <File FileName="SuperAI/ThinkNode_RecordPassage.cs" Line="31" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Genes" expanded="True">
-                <Node name="Gene_HemoHediffAdder.cs" selected="True" />
-              </Node>
-              <Node name="Hediffs" expanded="True" />
-              <Node name="ModSettings" expanded="True" />
+              <Node name="Abilities" expanded="True" />
+              <Node name="SuperAI" expanded="True" />
+              <Node name="GRCExtension.cs" selected="True" />
             </Node>
           </Node>
         </State>

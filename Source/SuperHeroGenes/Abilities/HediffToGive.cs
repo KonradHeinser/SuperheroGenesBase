@@ -17,5 +17,7 @@ namespace SuperHeroGenesBase
         public bool replaceExisting;
 
         public float severity = 1f;
+
+        public bool psychic = false;
     }
 }

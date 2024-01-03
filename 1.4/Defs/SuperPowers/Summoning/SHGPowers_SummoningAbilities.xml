@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
         <!--Biomancer-->
-    <AbilityDef ParentName="SHGSummoningBase">
+    <AbilityDef ParentName="SHGSummoningBase" MayRequire="Ludeon.Rimworld.Royalty">
         <defName>SHG_SummonAnimaTree</defName>
         <label>summon anima tree</label>
         <description>Summons an anima tree at a location. The tree will be able to grow even if it's placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. You should still be able to interact with them like you could any other anima tree.</description>
@@ -114,7 +114,7 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHGSummoningBase">
+    <AbilityDef ParentName="SHGSummoningBase" MayRequire="Ludeon.RimWorld.Ideology">
         <defName>SHG_SummonEnhancedNutrifungus</defName>
         <label>summon enhanced nutrifungus</label>
         <description>Summons a super enhanced nutrifungus plant at a location. This plant will be able to grow even if it's placed on stone flooring, and will provide 10 times its normal yield.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. This issue should just be graphical though.</description>
@@ -156,7 +156,7 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHGSummoningBase">
+    <AbilityDef ParentName="SHGSummoningBase" MayRequire="Ludeon.RimWorld.Ideology">
         <defName>SHG_SummonGauranlenPod</defName>
         <label>summon gauranlen pod</label>
         <description>Summons a gauranlen pod at a location.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. This issue should just be graphical though.\n\nWARNING: The pod will not spawn fully grown, and must be given an environment in which it can spend 5-6 days growing. Unlike normal summoned plants, the pod will be sensitive to fertility, so don't put it on stone.</description>

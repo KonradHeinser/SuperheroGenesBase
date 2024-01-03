@@ -151,12 +151,13 @@
     </GeneDef>
 
     <AbilityDef Abstract="True" Name="SHGPowerAbilitiesBase">
+        <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
         <aiCanUse>True</aiCanUse>
         <cooldownTicksRange>100</cooldownTicksRange>
         <category>SuperPowers</category>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
-            <warmupTime>2</warmupTime>
+            <warmupTime>1</warmupTime>
         </verbProperties>
     </AbilityDef>
 

@@ -9,14 +9,6 @@
   
   <modDependencies>
     <li>
-      <packageId>ludeon.rimworld.royalty</packageId>
-      <displayName>Royalty</displayName>
-    </li>
-    <li>
-      <packageId>ludeon.rimworld.ideology</packageId>
-      <displayName>Ideology</displayName>
-    </li>
-    <li>
       <packageId>ludeon.rimworld.biotech</packageId>
       <displayName>Biotech</displayName>
     </li>
@@ -38,16 +30,6 @@ Note about requirements: If, for whatever reason, you cannot or do not want to h
 Ever wanted your pawns to be able to lift extreme weights? Want them to be able to research things at frankly ridiculous speeds? This mod allows you to give pawns some of the more mundane super powers, like super strength and super speed. Much like in superhero movies, there is little balance in what they can do, but you didn't come here for common sense. In this base, there are 3 categories of powers, and 6 powers within each one, each power influencing a different aspect of the pawn, along with a straggler or two as a bonus. All superhero genes, from this mod or any that may or may not be made after this, have a prerequisite superhero gene that provides boosts to numerous aspects of the pawn at no cost.
 
 The three categories are Super, Unsuper, and AntiSuper. The supers increase stats even further beyond the what the base gene provides, while unsuper genes negate the base bonus for that type. Antisuper genes provide another penalty in addition to the unsuper version, and in exchange they increase metabolic efficiency by a decent chunk.
-
-Super Mutations Update - July 01, 2023: Added a new type of superhero genes, Super Mutations. These mutations can provide great bonuses, but often take their price not through Metabolic efficiency, but by being detrimental to the pawn's other abilities.
-
-Super Powers Update 1 - July 16, 2023: Added a bunch of super powers, from flight to invisibility to laser eyes to reviving the dead to just straight up exploding things.
-
-Super Powers Update 2 - August 2, 2023: Added super powers mostly related to buffing allies and debuffing enemies. Utilizing these will make the super weaker for a time, so use them wisely. Also, this update includes anti-powers, rated #4 on the list of most effective ways to stop another super. These are available to pawns who have the relevant anti-super gene.
-
-Archetypes Update - August 9, 2023: Added 19 new genes called archetypes. Archetypes are the type of hero a pawn is, and grant many abilities that are usually only obtainable through individual genes at a much lower cost. For example, the pyromancer gains fire bolt and fire blast (fire burst too if AG is enabled) for 5 metabolic efficiency instead of the 15 it would normally require. Each pawn can only have one archetype.
-
-Psionics Update - September 16, 2023: Added 70 new genes for Psionic abilities. Psionic abilities act just like standard psychic abilities, except the only way to gain and lose them is to alter the genetics of the Psionist. The abilities also seldom use focus as a cost, meaning Psionists spend less time meditating than those who rely on normal psychic abilities.
 
 _______________________________________________________
 

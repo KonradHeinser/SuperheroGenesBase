@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef>
+        <defName>SHG_Psionist_Psychedelic</defName>
+        <label>psychedelic spores</label>
+        <description>A Dimensional Psionist subjected this pawn to some extremely toxic spores that have left this pawn in a berserk state.</description>
+        <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <stages>
+            <li>
+                <painFactor>0</painFactor>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>True</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_Chaotic</defName>
+        <label>chaotic spores</label>
+        <description>An Astral Psionist subjected this pawn to a medley of extremely toxic spores that have unpredictable effects on people's mind. It may make them go berserk, it may make them feel like their starving, it may even make them wander off to seek an even greater high. In some cases, it causes no effects at all.</description>
+        <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <descriptionHyperlinks>
+            <HediffDef>HeartAttack</HediffDef>
+            <StatDef>SHG_FearSusceptibility</StatDef>
+        </descriptionHyperlinks>
+        <stages>
+            <li>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>Binging_DrugExtreme</mentalState>
+                        <mtbDays>1</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>Binging_DrugMajor</mentalState>
+                        <mtbDays>1</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>Binging_Food</mentalState>
+                        <mtbDays>1</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>Wander_Psychotic</mentalState>
+                        <mtbDays>1</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>Wander_Sad</mentalState>
+                        <mtbDays>1</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>WanderConfused</mentalState>
+                        <mtbDays>1</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>Berserk</mentalState>
+                        <mtbDays>1</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>FireStartingSpree</mentalState>
+                        <mtbDays>1</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>Tantrum</mentalState>
+                        <mtbDays>1</mtbDays>
+                    </li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">
+                        <mentalState>IdeoChange</mentalState>
+                        <mtbDays>1</mtbDays>
+                    </li>
+                </mentalStateGivers>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>True</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_PsychicAnomaly</defName>
+        <label>psychic anomaly</label>
+        <description>This Cosmic Psionist connected themselves to a psychic anomaly.</description>
+        <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <stages>
+            <li>
+                <statFactors>
+                    <PsychicEntropyGain>0.01</PsychicEntropyGain>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>True</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_Utopia</defName>
+        <label>utopia</label>
+        <description>A Cosmic Psionist opened a rift to a world so utopian it calms the minds of people who see it, however briefly that rift stays open.</description>
+        <isBad>false</isBad>
+        <hediffClass>HediffWithComps</hediffClass>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MentalBreakThreshold>-1</MentalBreakThreshold>
+                    <SHG_FearSusceptibility>-1</SHG_FearSusceptibility>
+                </statOffsets>
+                <statFactors>
+                    <WorkSpeedGlobal>1.5</WorkSpeedGlobal>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>True</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+</Defs>

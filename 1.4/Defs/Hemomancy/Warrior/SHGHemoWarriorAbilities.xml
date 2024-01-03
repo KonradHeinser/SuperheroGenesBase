@@ -5,7 +5,6 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
-        <warmupStartSound>CombatCommand_Warmup</warmupStartSound>
         <cooldownTicksRange>600</cooldownTicksRange>
         <aiCanUse>false</aiCanUse>
         <verbProperties>
@@ -94,7 +93,7 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHGHemomancyBase">
+    <AbilityDef ParentName="SHGHemomancyBase" MayRequire="Ludeon.Rimworld.Royalty">
         <defName>SHG_Hemomancer_HemogenBarrier</defName>
         <label>hemogen barrier</label>
         <description>Create a small shield made of hemogen that stops all projectiles from entering. This will not stop people, and will cause items to explode on impact with the shield. This will last for about one hour.</description>

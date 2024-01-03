@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <ThinkTreeDef>
-        <defName>DRG_PackRetrieval</defName>
+        <defName>DRG_SHG_PackRetrieval</defName>
         <insertTag>Humanlike_PostDuty</insertTag>
         <insertPriority>100</insertPriority>
         <thinkRoot Class="ThinkNode_Priority">
