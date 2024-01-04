@@ -148,7 +148,7 @@
 
 	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
 		<defName>SHG_MasterThief</defName>
-		<label>Master Thief?</label>
+		<label>Master Thief</label>
 		<description>Have a hemo-thief with all three stealing buffs active at the same time.</description>
 		<tracker Class="AchievementsExpanded.MultiHediffTracker">
 			<defs>
