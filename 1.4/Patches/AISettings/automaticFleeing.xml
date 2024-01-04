@@ -43,10 +43,10 @@
                                                 </li>
                                             </subNodes>
                                         </li>
-                                        <li Class="ThinkNode_ConditionalHasAbility">
+                                        <li Class="ThinkNode_ConditionalHasAbility" MayRequire="Ludeon.Rimworld.Royalty">
                                             <ability>Invisibility</ability>
                                             <subNodes>
-                                                <li Class="JobGiver_AICastAbilityOnSelf">
+                                                <li Class="JobGiver_AICastAbilityOnSelf" MayRequire="Ludeon.Rimworld.Royalty">
                                                     <ability>Invisibility</ability>
                                                 </li>
                                             </subNodes>

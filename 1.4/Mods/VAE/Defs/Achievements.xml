@@ -74,8 +74,8 @@
 	
 	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
 		<defName>SHG_GamblingIsFun</defName>
-		<label>Gambling is fun</label>
-		<description>Havea total of 50 pawns get affected by an Astral Psionist Chaotic Planet ability.</description>
+		<label>Gambling is Fun</label>
+		<description>Have a total of 50 pawns get affected by an Astral Psionist Chaotic Planet ability.</description>
 		<tracker Class="AchievementsExpanded.HediffTracker">
 			<def>SHG_Psionist_Chaotic</def>
 			<count>50</count>
@@ -86,7 +86,7 @@
 
 	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
 		<defName>SHG_WhyIsThereALimit</defName>
-		<label>Why Is There A Limit?</label>
+		<label>Why is There a Limit?</label>
 		<description>Build an Unshakable Team with a Psionic Unifier and wonder why it caps at 20 people.</description>
 		<tracker Class="AchievementsExpanded.HediffTracker">
 			<def>SHG_Psionist_UnshakableTeam</def>
@@ -99,7 +99,7 @@
 	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
 		<defName>SHG_Stasis</defName>
 		<label>Stasis</label>
-		<description>Put a pawn into stasis. Not much of a long term fix, but it'll do for now.</description>
+		<description>Put a pawn into stasis. Not much of a long term fix, but it can help in the short term.</description>
 		<tracker Class="AchievementsExpanded.HediffTracker">
 			<def>SHG_Psionist_Stasis</def>
 			<count>1</count>
@@ -136,7 +136,7 @@
 
 	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
 		<defName>SHG_ItsLikeRemovingAndRegrowingALimb</defName>
-		<label>It's Like Removing and Regrowing A Limb</label>
+		<label>It's Like Removing and Regrowing a Limb</label>
 		<description>Use the Hemomorph's Starfish split ability. Please don't try this at home.</description>
 		<tracker Class="AchievementsExpanded.HediffTracker">
 			<def>SHG_Hemomancer_StarfishSplitting</def>
@@ -172,7 +172,7 @@
 
 	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
 		<defName>SHG_BathingInBlood</defName>
-		<label>Bathing In Blood</label>
+		<label>Bathing in Blood</label>
 		<description>Have a hemo-warrior with all three basic buffs active at the same time.</description>
 		<tracker Class="AchievementsExpanded.MultiHediffTracker">
 			<defs>

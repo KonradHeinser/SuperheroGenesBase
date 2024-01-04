@@ -205,7 +205,7 @@
             <Ability_Duration>126</Ability_Duration>
         </statBases>
         <verbProperties>
-        <range>75</range>
+        <range>50</range>
         <targetParams>
             <canTargetPawns>False</canTargetPawns>
             <canTargetLocations>True</canTargetLocations>
@@ -240,7 +240,7 @@
             <Ability_Duration>252</Ability_Duration>
         </statBases>
         <verbProperties>
-        <range>100</range>
+        <range>50</range>
         <targetParams>
             <canTargetPawns>False</canTargetPawns>
             <canTargetLocations>True</canTargetLocations>
@@ -331,7 +331,7 @@
             <Ability_EffectRadius>30</Ability_EffectRadius>
         </statBases>
         <verbProperties>
-            <range>100</range>
+            <range>50</range>
             <targetParams>
                 <canTargetSelf>True</canTargetSelf>
                 <canTargetAnimals>True</canTargetAnimals>
@@ -405,7 +405,7 @@
             <Ability_Duration>1000</Ability_Duration>
         </statBases>
         <verbProperties>
-            <range>100</range>
+            <range>50</range>
             <targetParams>
                 <canTargetPawns>False</canTargetPawns>
                 <canTargetLocations>True</canTargetLocations>

@@ -136,20 +136,16 @@
         </graphicData>
     </ThingDef>
 
-        <!--Psionic Things-->
-    <ThingDef ParentName="EtherealThingBase" MayRequire="Ludeon.Rimworld.Royalty">
-        <defName>SHG_Psionist_PsionicShield</defName>
-        <label>psionic shield</label>
+    <ThingDef ParentName="EtherealThingBase" Name="SHG_ShieldBase" Abstract="True">
         <thingClass>ThingWithComps</thingClass>
         <tickerType>Normal</tickerType>
         <drawerType>RealtimeOnly</drawerType>
         <drawOffscreen>true</drawOffscreen>
         <graphicData>
-            <graphicClass>Graphic_Single</graphicClass>
-            <texPath>Things/Ethereal/PsychicShieldRipples</texPath>
-            <shaderType>BulletShieldPsychic</shaderType>
             <color>(180, 231, 237)</color>
-            <drawSize>3</drawSize>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>OtherSHG/Ripple</texPath> <!--Use OtherSHG/Line to create a blinking circle-->
+            <shaderType>SHG_Shield</shaderType>
             <shaderParameters>
                 <_PulseInterval>0.5</_PulseInterval>
                 <_DistortionScale>0.5</_DistortionScale>
@@ -158,6 +154,20 @@
                 <_MaxAlpha>0.3</_MaxAlpha>
                 <_DistortionTex>/Things/Mote/SmokeTiled</_DistortionTex>
             </shaderParameters>
+        </graphicData>
+    </ThingDef>
+
+    <ShaderTypeDef>
+        <defName>SHG_Shield</defName>
+        <shaderPath>Map/BulletShieldPsychic</shaderPath> <!--I don't know what this means or why it works, but it works-->
+    </ShaderTypeDef>    
+
+        <!--Psionic Things-->
+    <ThingDef ParentName="SHG_ShieldBase">
+        <defName>SHG_Psionist_PsionicShield</defName>
+        <label>psionic shield</label>
+        <graphicData>
+            <drawSize>3</drawSize>
         </graphicData>
         <comps>
             <li Class="CompProperties_ProjectileInterceptor">
@@ -168,7 +178,7 @@
                 <interceptAirProjectiles>true</interceptAirProjectiles>
                 <color>(0.8, 0.2, 0.8)</color>
                 <minAlpha>0.2</minAlpha>
-                <interceptEffect>Interceptor_BlockedProjectilePsychic</interceptEffect>
+                <interceptEffect>Interceptor_BlockedProjectile</interceptEffect>
             </li>
             <li Class="CompProperties_DestroyAfterDelay">
                 <delayTicks>2500</delayTicks>
@@ -176,27 +186,11 @@
         </comps>
     </ThingDef>
 
-    <ThingDef ParentName="EtherealThingBase" MayRequire="Ludeon.Rimworld.Royalty">
+    <ThingDef ParentName="SHG_ShieldBase">
         <defName>SHG_Psionist_MassProtection</defName>
         <label>large psionic forcefield</label>
-        <thingClass>ThingWithComps</thingClass>
-        <tickerType>Normal</tickerType>
-        <drawerType>RealtimeOnly</drawerType>
-        <drawOffscreen>true</drawOffscreen>
         <graphicData>
-            <graphicClass>Graphic_Single</graphicClass>
-            <texPath>Things/Ethereal/PsychicShieldRipples</texPath>
-            <shaderType>BulletShieldPsychic</shaderType>
-            <color>(180, 231, 237)</color>
             <drawSize>9.9</drawSize>
-            <shaderParameters>
-                <_PulseInterval>0.5</_PulseInterval>
-                <_DistortionScale>0.5</_DistortionScale>
-                <_DistortionIntensity>0.15</_DistortionIntensity>
-                <_MinAlpha>0.1</_MinAlpha>
-                <_MaxAlpha>0.3</_MaxAlpha>
-                <_DistortionTex>/Things/Mote/SmokeTiled</_DistortionTex>
-            </shaderParameters>
         </graphicData>
         <comps>
             <li Class="CompProperties_ProjectileInterceptor">
@@ -207,7 +201,7 @@
                 <interceptAirProjectiles>true</interceptAirProjectiles>
                 <color>(0.8, 0.2, 0.8)</color>
                 <minAlpha>0.2</minAlpha>
-                <interceptEffect>Interceptor_BlockedProjectilePsychic</interceptEffect>
+                <interceptEffect>Interceptor_BlockedProjectile</interceptEffect>
             </li>
             <li Class="CompProperties_DestroyAfterDelay">
                 <delayTicks>10000</delayTicks>
@@ -215,7 +209,7 @@
         </comps>
     </ThingDef>
 
-    <ThingDef ParentName="EtherealThingBase" MayRequire="Ludeon.Rimworld.Royalty">
+    <ThingDef ParentName="EtherealThingBase">
         <defName>SHG_Psionist_Star</defName>
         <label>star rift</label>
         <thingClass>ThingWithComps</thingClass>
@@ -226,7 +220,7 @@
         <altitudeLayer>MoteOverheadLow</altitudeLayer>
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
-            <texPath>Things/Mote/SolarPinhole</texPath>
+            <texPath>OtherSHG/Circle</texPath>
             <shaderType>MoteGlowDistorted</shaderType>
             <color>(255, 255, 245)</color>
             <drawSize>10</drawSize>
@@ -239,7 +233,7 @@
         </graphicData>
         <comps>
             <li Class="CompProperties_Glower">
-                <glowRadius>50</glowRadius>
+                <glowRadius>20</glowRadius>
                 <glowColor>(217,217,208,0)</glowColor>
             </li>
             <li Class="CompProperties_HeatPusher">
@@ -253,27 +247,12 @@
         </comps>
     </ThingDef>
 
-    <ThingDef ParentName="EtherealThingBase" MayRequire="Ludeon.Rimworld.Royalty">
+    <ThingDef ParentName="SHG_ShieldBase">
         <defName>SHG_Psionist_DebufferShield</defName>
         <label>psionic shield</label>
-        <thingClass>ThingWithComps</thingClass>
-        <tickerType>Normal</tickerType>
-        <drawerType>RealtimeOnly</drawerType>
-        <drawOffscreen>true</drawOffscreen>
         <graphicData>
-            <graphicClass>Graphic_Single</graphicClass>
-            <texPath>Things/Ethereal/PsychicShieldRipples</texPath>
-            <shaderType>BulletShieldPsychic</shaderType>
             <color>(180, 231, 237)</color>
             <drawSize>3</drawSize>
-            <shaderParameters>
-                <_PulseInterval>0.5</_PulseInterval>
-                <_DistortionScale>0.5</_DistortionScale>
-                <_DistortionIntensity>0.15</_DistortionIntensity>
-                <_MinAlpha>0.1</_MinAlpha>
-                <_MaxAlpha>0.3</_MaxAlpha>
-                <_DistortionTex>/Things/Mote/SmokeTiled</_DistortionTex>
-            </shaderParameters>
         </graphicData>
         <comps>
             <li Class="CompProperties_ProjectileInterceptor">
@@ -284,7 +263,7 @@
                 <interceptAirProjectiles>true</interceptAirProjectiles>
                 <color>(0.8, 0.2, 0.8)</color>
                 <minAlpha>0.2</minAlpha>
-                <interceptEffect>Interceptor_BlockedProjectilePsychic</interceptEffect>
+                <interceptEffect>Interceptor_BlockedProjectile</interceptEffect>
             </li>
             <li Class="CompProperties_DestroyAfterDelay">
                 <delayTicks>10000</delayTicks>
@@ -359,27 +338,12 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="EtherealThingBase" MayRequire="Ludeon.Rimworld.Royalty">
+    <ThingDef ParentName="SHG_ShieldBase">
         <defName>SHG_Hemomancer_HemogenBarrier</defName>
         <label>hemogen barrier</label>
-        <thingClass>ThingWithComps</thingClass>
-        <tickerType>Normal</tickerType>
-        <drawerType>RealtimeOnly</drawerType>
-        <drawOffscreen>true</drawOffscreen>
         <graphicData>
-            <graphicClass>Graphic_Single</graphicClass>
-            <texPath>Things/Ethereal/PsychicShieldRipples</texPath>
-            <shaderType>BulletShieldPsychic</shaderType>
             <color>(230, 23, 23)</color>
             <drawSize>1</drawSize>
-            <shaderParameters>
-                <_PulseInterval>0.5</_PulseInterval>
-                <_DistortionScale>0.5</_DistortionScale>
-                <_DistortionIntensity>0.15</_DistortionIntensity>
-                <_MinAlpha>0.1</_MinAlpha>
-                <_MaxAlpha>0.3</_MaxAlpha>
-                <_DistortionTex>/Things/Mote/SmokeTiled</_DistortionTex>
-            </shaderParameters>
         </graphicData>
         <comps>
             <li Class="CompProperties_ProjectileInterceptor">
@@ -390,7 +354,7 @@
                 <interceptAirProjectiles>true</interceptAirProjectiles>
                 <color>(0.8, 0.2, 0.2)</color>
                 <minAlpha>0.2</minAlpha>
-                <interceptEffect>Interceptor_BlockedProjectilePsychic</interceptEffect>
+                <interceptEffect>Interceptor_BlockedProjectile</interceptEffect>
             </li>
             <li Class="CompProperties_DestroyAfterDelay">
                 <delayTicks>2500</delayTicks>

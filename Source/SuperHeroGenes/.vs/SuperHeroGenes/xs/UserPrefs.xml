@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="ModSettings/SuperheroGenes_Settings.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Genes/HediffAdder.cs">
     <Files>
       <File FileName="SuperAI/ThinkNode_RecordPassage.cs" Line="31" Column="14" />
       <File FileName="ModSettings/PatchOperationSetting.cs" Line="17" Column="47" />
       <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="133" Column="33" />
+      <File FileName="Genes/HediffAdder.cs" Line="36" Column="80" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,9 +12,10 @@
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
               <Node name="Abilities" expanded="True" />
-              <Node name="ModSettings" expanded="True">
-                <Node name="SuperheroGenes_Settings.cs" selected="True" />
+              <Node name="Genes" expanded="True">
+                <Node name="HediffAdder.cs" selected="True" />
               </Node>
+              <Node name="ModSettings" expanded="True" />
               <Node name="SuperAI" expanded="True" />
             </Node>
           </Node>

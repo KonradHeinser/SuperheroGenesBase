@@ -93,7 +93,7 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHGHemomancyBase" MayRequire="Ludeon.Rimworld.Royalty">
+    <AbilityDef ParentName="SHGHemomancyBase">
         <defName>SHG_Hemomancer_HemogenBarrier</defName>
         <label>hemogen barrier</label>
         <description>Create a small shield made of hemogen that stops all projectiles from entering. This will not stop people, and will cause items to explode on impact with the shield. This will last for about one hour.</description>
