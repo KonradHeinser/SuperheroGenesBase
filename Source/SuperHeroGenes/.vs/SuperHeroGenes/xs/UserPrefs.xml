@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Genes/HediffAdder.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Genes/Gene_DoubleHearted.cs">
     <Files>
       <File FileName="SuperAI/ThinkNode_RecordPassage.cs" Line="31" Column="14" />
       <File FileName="ModSettings/PatchOperationSetting.cs" Line="17" Column="47" />
-      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="133" Column="33" />
-      <File FileName="Genes/HediffAdder.cs" Line="36" Column="80" />
+      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="73" Column="40" />
+      <File FileName="Genes/Gene_DoubleHearted.cs" Line="9" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +13,7 @@
             <Node name="SuperHeroGenes" expanded="True">
               <Node name="Abilities" expanded="True" />
               <Node name="Genes" expanded="True">
-                <Node name="HediffAdder.cs" selected="True" />
+                <Node name="Gene_DoubleHearted.cs" selected="True" />
               </Node>
               <Node name="ModSettings" expanded="True" />
               <Node name="SuperAI" expanded="True" />

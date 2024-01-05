@@ -256,7 +256,7 @@
     </GeneDef>
 
         <!--Psionic bases-->
-    <GeneDef Name="SuperPowersPsychicDimensionalBase" Abstract="True" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <GeneDef Name="SuperPowersPsychicDimensionalBase" Abstract="True">
         <displayCategory>SuperPowersPsychicDimensional</displayCategory>
         <biostatMet>-1</biostatMet>
         <biostatCpx>1</biostatCpx>
@@ -264,7 +264,7 @@
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
-    <GeneDef Name="SuperPowersPsychicCommanderBase" Abstract="True" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <GeneDef Name="SuperPowersPsychicCommanderBase" Abstract="True">
         <displayCategory>SuperPowersPsychicCommander</displayCategory>
         <biostatMet>-1</biostatMet>
         <biostatCpx>1</biostatCpx>
@@ -272,7 +272,7 @@
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
-    <GeneDef Name="SuperPowersPsychicGuardianBase" Abstract="True" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <GeneDef Name="SuperPowersPsychicGuardianBase" Abstract="True">
         <displayCategory>SuperPowersPsychicGuardian</displayCategory>
         <biostatMet>-1</biostatMet>
         <biostatCpx>1</biostatCpx>
@@ -280,7 +280,7 @@
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
-    <GeneDef Name="SuperPowersPsychicTyrantBase" Abstract="True" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <GeneDef Name="SuperPowersPsychicTyrantBase" Abstract="True">
         <displayCategory>SuperPowersPsychicTyrant</displayCategory>
         <biostatMet>-1</biostatMet>
         <biostatCpx>1</biostatCpx>
@@ -288,7 +288,7 @@
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
-    <GeneDef Name="SuperPowersPsychicSoldierBase" Abstract="True" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <GeneDef Name="SuperPowersPsychicSoldierBase" Abstract="True">
         <displayCategory>SuperPowersPsychicSoldier</displayCategory>
         <biostatMet>-1</biostatMet>
         <biostatCpx>1</biostatCpx>
@@ -296,7 +296,7 @@
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
-    <GeneDef Name="SuperPowersPsychicEmpathBase" Abstract="True" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <GeneDef Name="SuperPowersPsychicEmpathBase" Abstract="True">
         <displayCategory>SuperPowersPsychicEmpath</displayCategory>
         <biostatMet>-1</biostatMet>
         <biostatCpx>1</biostatCpx>
@@ -304,7 +304,7 @@
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
-    <GeneDef Name="SuperPowersPsychicDebufferBase" Abstract="True" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <GeneDef Name="SuperPowersPsychicDebufferBase" Abstract="True">
         <displayCategory>SuperPowersPsychicDebuffer</displayCategory>
         <biostatMet>-1</biostatMet>
         <biostatCpx>1</biostatCpx>
@@ -443,5 +443,3 @@
         </exclusionTags>
     </GeneDef>
 </Defs>
-
-
