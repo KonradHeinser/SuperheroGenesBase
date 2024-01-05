@@ -373,14 +373,14 @@
         <biostatMet>0</biostatMet>
 <!--All SHG_Beam references in the base mod are tied to the laser eyes mod until I either make my own version, or use the damage outside of the laser eyes power-->
         <damageFactors>
-            <SHG_Beam MayRequire="Sov.Homelander">0.5</SHG_Beam>
+            <SHG_Beam MayRequire="Sov.Homelander">0.75</SHG_Beam>
         </damageFactors>
         <statFactors>
-            <LifespanFactor>3</LifespanFactor>
-            <ImmunityGainSpeed>3</ImmunityGainSpeed>
+            <LifespanFactor>2</LifespanFactor>
+            <ImmunityGainSpeed>2</ImmunityGainSpeed>
             <IncomingDamageFactor>0.75</IncomingDamageFactor>
-            <InjuryHealingFactor>3</InjuryHealingFactor>
-            <MeleeDamageFactor>3</MeleeDamageFactor>
+            <InjuryHealingFactor>2</InjuryHealingFactor>
+            <MeleeDamageFactor>2</MeleeDamageFactor>
             <PawnTrapSpringChance>0.01</PawnTrapSpringChance>
             <StaggerDurationFactor>0.75</StaggerDurationFactor>
             <GlobalLearningFactor>2</GlobalLearningFactor>
@@ -393,14 +393,14 @@
             <ComfyTemperatureMax>20</ComfyTemperatureMax>
             <AimingDelayFactor>-.1</AimingDelayFactor>
             <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
-            <CarryingCapacity>100</CarryingCapacity>
-            <CarryBulk MayRequire="ceteam.combatextended">50</CarryBulk>
-            <MoveSpeed>5</MoveSpeed>
-            <MeleeDodgeChance>3</MeleeDodgeChance>
-            <MeleeHitChance>3</MeleeHitChance>
+            <CarryingCapacity>50</CarryingCapacity>
+            <CarryBulk MayRequire="ceteam.combatextended">25</CarryBulk>
+            <MoveSpeed>3</MoveSpeed>
+            <MeleeDodgeChance>5</MeleeDodgeChance>
+            <MeleeHitChance>5</MeleeHitChance>
             <MentalBreakThreshold>-.15</MentalBreakThreshold>
             <PainShockThreshold>0.50</PainShockThreshold>
-            <PawnBeauty>5.0</PawnBeauty>
+            <PawnBeauty>3.0</PawnBeauty>
             <SocialImpact>.5</SocialImpact>
             <NegotiationAbility>.5</NegotiationAbility>
             <ConversionPower MayRequire="ludeon.rimworld.ideology">.5</ConversionPower>
