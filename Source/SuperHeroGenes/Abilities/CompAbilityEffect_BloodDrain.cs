@@ -37,7 +37,7 @@ namespace SuperHeroGenesBase
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
             Pawn pawn = target.Pawn;
-            if (pawn == null || (Props.psychic || pawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0))
+            if (pawn == null || (Props.psychic && pawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0))
             {
                 return false;
             }
