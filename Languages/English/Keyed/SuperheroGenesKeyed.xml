@@ -15,6 +15,9 @@
     <AbilityDisabledNoResourceGene>{0_labelShort} lacks the {1} gene.</AbilityDisabledNoResourceGene>
     <AbilityDisabledNoResource>{0_labelShort} does not have enough {1}.</AbilityDisabledNoResource>
 
+    <LetterLabelTributeCaravanArrival>{0}</LetterLabelTributeCaravanArrival>
+    <LetterTributeCaravanArrival>A {0} from {FACTION_name} is approaching.\n\nThey will accept {1} you offer as tribute. The one who gives over the tribute will receive {FACTION_royalFavorLabel} for {2}.\n\nYou can expect a {0} to arrive {3} as long as you are not enemies with {FACTION_name}.</LetterTributeCaravanArrival>
+
         <!--Settings stuff-->
     <SHG_ModName>Superhero Genes - Base</SHG_ModName>
     <SHG_ModDescription>Much like the people in superhero stories, pawns with these genes can accomplish incomprehensible feats and slay countless foes with ease. Killing a super often requires extraordinary weapons, or a bigger monster.\n\nThe core module of the Superhero Genes series.\n\nThe checkboxes of each section only hide the options, they do not set anything.</SHG_ModDescription>

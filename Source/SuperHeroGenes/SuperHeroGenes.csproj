@@ -146,6 +146,7 @@
     <Compile Include="SuperAI\ThinkNode_ConditionalNearbyEnemyTarget.cs" />
     <Compile Include="SuperAI\ThinkNode_RecordPassage.cs" />
     <Compile Include="SuperAI\JobGiver_AICastAbilityGoToTarget.cs" />
+    <Compile Include="IncidentWorker_CaravanArrivalBetterTributeCollector.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />
