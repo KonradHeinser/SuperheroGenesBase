@@ -16,14 +16,14 @@ namespace SuperHeroGenesBase
         public override void Apply(GlobalTargetInfo target)
         {
             Caravan caravan = parent.pawn.GetCaravan();
-            Map targetMap = (target.WorldObject as MapParent)?.Map;
+            Map targetMap = GetMap(target);
 
             IntVec3 targetCell = IntVec3.Invalid;
             List<Pawn> list = PawnsToSkip().ToList();
             if (parent.pawn.Spawned)
             {
                 if (Props.effecterUsed != null)
-                { 
+                {
                     foreach (Pawn item in list)
                     {
                         parent.AddEffecterToMaintain(Props.effecterUsed.Spawn(item, item.Map), item.Position, 60);
@@ -46,67 +46,26 @@ namespace SuperHeroGenesBase
                 }
 
             }
-            if (ShouldEnterMap(target))
+            if (ShouldEnterMap(target, targetMap))
             {
                 if (!Props.requireAllyAtDestination && targetMap.IsPlayerHome)
                 {
                     targetCell = SHGUtilities.FindDestination(targetMap, true);
                 }
-                Pawn pawn = AlliedPawnOnMap(targetMap);
-                if (pawn != null)
+                if (!target.IsValid)
                 {
-                    targetCell = pawn.Position;
-                }
-                else if (!Props.requireAllyAtDestination)
-                {
-                    targetCell = SHGUtilities.FindDestination(targetMap);
-                }
-                else
-                {
-                    targetCell = parent.pawn.Position;
-                }
-            }
-
-            if (!targetCell.IsValid)
-            {
-                List<Settlement> playerSettlments = new List<Settlement>(Find.WorldObjects.Settlements.Where((Settlement s) => s.Faction == parent.pawn.Faction && s.Tile == target.Tile && s.HasMap && (!Props.requireAllyAtDestination || AlliedPawnOnMap(s.Map) != null)));
-                if (!playerSettlments.NullOrEmpty())
-                {
-                    foreach (Settlement settlement in playerSettlments)
+                    Pawn pawn = AlliedPawnOnMap(targetMap);
+                    if (pawn != null)
                     {
-                        if (Props.requireAllyAtDestination)
-                        {
-                            targetCell = AlliedPawnOnMap(settlement.Map).Position;
-                            break;
-                        }
-                        targetCell = SHGUtilities.FindDestination(settlement.Map, true);
-                        if (targetCell.IsValid)
-                        {
-                            targetMap = settlement.Map;
-                            break;
-                        }
-
+                        targetCell = pawn.Position;
                     }
-                }
-                if (!targetCell.IsValid && Find.WorldObjects.AnyMapParentAt(target.Tile))
-                {
-                    List<MapParent> maps = Find.WorldObjects.MapParents.Where((MapParent p) => p.Tile == target.Tile && p.HasMap && (!Props.requireAllyAtDestination || AlliedPawnOnMap(p.Map) != null)).ToList();
-                    if (!maps.NullOrEmpty())
+                    else if (!Props.requireAllyAtDestination)
                     {
-                        foreach (MapParent mapParent in maps)
-                        {
-                            if (Props.requireAllyAtDestination)
-                            {
-                                targetCell = AlliedPawnOnMap(mapParent.Map).Position;
-                                break;
-                            }
-                            targetCell = SHGUtilities.FindDestination(mapParent.Map);
-                            if (targetCell.IsValid)
-                            {
-                                targetMap = mapParent.Map;
-                                break;
-                            }
-                        }
+                        targetCell = SHGUtilities.FindDestination(targetMap);
+                    }
+                    else
+                    {
+                        targetCell = parent.pawn.Position;
                     }
                 }
             }
@@ -195,6 +154,25 @@ namespace SuperHeroGenesBase
             }
         }
 
+        private Map GetMap(GlobalTargetInfo target)
+        {
+            if ((target.WorldObject as MapParent)?.Map != null) return (target.WorldObject as MapParent)?.Map;
+            List<Settlement> playerSettlments = new List<Settlement>(Find.WorldObjects.Settlements.Where((Settlement s) => s.Faction == parent.pawn.Faction && s.Tile == target.Tile && s.HasMap && (!Props.requireAllyAtDestination || AlliedPawnOnMap(s.Map) != null)));
+            if (!playerSettlments.NullOrEmpty())
+            {
+                return playerSettlments[0].Map;
+            }
+            if (Find.WorldObjects.AnyMapParentAt(target.Tile))
+            {
+                List<MapParent> maps = Find.WorldObjects.MapParents.Where((MapParent p) => p.Tile == target.Tile && p.HasMap && (!Props.requireAllyAtDestination || AlliedPawnOnMap(p.Map) != null)).ToList();
+                if (!maps.NullOrEmpty())
+                {
+                    return maps[0].Map;
+                }
+            }
+            return null;
+        }
+
         public override IEnumerable<PreCastAction> GetPreCastActions()
         {
             yield return new PreCastAction
@@ -238,16 +216,15 @@ namespace SuperHeroGenesBase
             return targetMap.mapPawns.AllPawnsSpawned.FirstOrDefault((Pawn p) => !p.NonHumanlikeOrWildMan() && p.IsColonist && p.HomeFaction == parent.pawn.Faction && !PawnsToSkip().Contains(p));
         }
 
-        private bool ShouldEnterMap(GlobalTargetInfo target)
+        private bool ShouldEnterMap(GlobalTargetInfo target, Map targetMap)
         {
             if (target.WorldObject is Caravan caravan && caravan.Faction == parent.pawn.Faction)
             {
                 return false;
             }
-            Map targetMap = (target.WorldObject as MapParent)?.Map;
-            if (targetMap != null && Props.requireAllyAtDestination)
+            if (targetMap != null)
             {
-                if (AlliedPawnOnMap(targetMap) == null)
+                if (AlliedPawnOnMap(targetMap) == null && Props.requireAllyAtDestination)
                 {
                     return targetMap == parent.pawn.Map;
                 }
@@ -281,7 +258,8 @@ namespace SuperHeroGenesBase
             Caravan caravan2 = target.WorldObject as Caravan;
             if (caravan != null && caravan == caravan2) return false;
 
-            if (Props.requireAllyAtDestination && !ShouldEnterMap(target) && !ShouldJoinCaravan(target)) return false;
+            Map map = GetMap(target);
+            if (Props.requireAllyAtDestination && !ShouldEnterMap(target, map) && !ShouldJoinCaravan(target)) return false;
 
             return base.Valid(target, throwMessages);
         }
@@ -324,37 +302,17 @@ namespace SuperHeroGenesBase
 
             if (ShouldJoinCaravan(target)) return "AbilitySkipToJoinCaravan".Translate();
 
-            if (Valid(target) && target.WorldObject is MapParent map)
+            Map map = GetMap(target);
+            if (ShouldEnterMap(target, map))
             {
-                if (ShouldEnterMap(target))
-                {
-                    if (map.Map.IsPlayerHome) return "AbilityHomeTeleport".Translate();
+                if (map.IsPlayerHome) return "AbilityHomeTeleport".Translate();
 
-                    if (AlliedPawnOnMap(map.Map) != null) return "AbilitySkipToRandomAlly".Translate();
+                if (AlliedPawnOnMap(map) != null) return "AbilitySkipToRandomAlly".Translate();
 
-                    return "AbilityMapTeleport".Translate();
-                }
+                return "AbilityMapTeleport".Translate();
             }
 
-            if (CheckHomeTarget(target)) return "AbilityHomeTeleport".Translate();
-
-            if (CheckRandomTarget(target)) return "AbilityMapTeleport".Translate();
-
             return "AbilityTileTeleport".Translate();
-        }
-
-        private bool CheckHomeTarget(GlobalTargetInfo target)
-        {
-            List<Settlement> playerSettlments = new List<Settlement>(Find.WorldObjects.Settlements.Where((Settlement s) => s.Faction == parent.pawn.Faction && s.Tile == target.Tile && s.HasMap));
-            if (!playerSettlments.NullOrEmpty()) return true;
-            return false;
-        }
-
-        private bool CheckRandomTarget(GlobalTargetInfo target)
-        {
-            List<MapParent> maps = Find.WorldObjects.MapParents.Where((MapParent p) => p.Tile == target.Tile && p.HasMap).ToList();
-            if (!maps.NullOrEmpty()) return true;
-            return false;
         }
     }
 }

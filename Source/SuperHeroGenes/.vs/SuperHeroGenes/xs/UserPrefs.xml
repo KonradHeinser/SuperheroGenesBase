@@ -5,7 +5,7 @@
       <File FileName="IncidentWorker_CaravanArrivalBetterTributeCollector.cs" Line="37" Column="83" />
       <File FileName="Abilities/CompAbilityEffect_SHGBurst.cs" Line="41" Column="1" />
       <File FileName="Abilities/CompProperties_LongDistanceTeleport.cs" Line="22" Column="53" />
-      <File FileName="Abilities/CompAbilityEffect_LongDistanceTeleport.cs" Line="101" Column="39" />
+      <File FileName="Abilities/CompAbilityEffect_LongDistanceTeleport.cs" Line="47" Column="1" />
       <File FileName="SHGUtilities.cs" Line="86" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
