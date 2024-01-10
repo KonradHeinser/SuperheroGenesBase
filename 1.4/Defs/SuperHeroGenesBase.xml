@@ -400,7 +400,7 @@
             <MeleeHitChance>5</MeleeHitChance>
             <MentalBreakThreshold>-.15</MentalBreakThreshold>
             <PainShockThreshold>0.50</PainShockThreshold>
-            <PawnBeauty>3.0</PawnBeauty>
+            <PawnBeauty>3</PawnBeauty>
             <SocialImpact>.5</SocialImpact>
             <NegotiationAbility>.5</NegotiationAbility>
             <ConversionPower MayRequire="ludeon.rimworld.ideology">.5</ConversionPower>

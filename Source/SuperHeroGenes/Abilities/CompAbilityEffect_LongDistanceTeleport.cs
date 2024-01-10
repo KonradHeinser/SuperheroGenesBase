@@ -69,11 +69,16 @@ namespace SuperHeroGenesBase
 
             if (!targetCell.IsValid)
             {
-                List<Settlement> playerSettlments = new List<Settlement>(Find.WorldObjects.Settlements.Where((Settlement s) => s.Faction == parent.pawn.Faction && s.Tile == target.Tile && s.HasMap));
+                List<Settlement> playerSettlments = new List<Settlement>(Find.WorldObjects.Settlements.Where((Settlement s) => s.Faction == parent.pawn.Faction && s.Tile == target.Tile && s.HasMap && (!Props.requireAllyAtDestination || AlliedPawnOnMap(s.Map) != null)));
                 if (!playerSettlments.NullOrEmpty())
                 {
                     foreach (Settlement settlement in playerSettlments)
                     {
+                        if (Props.requireAllyAtDestination)
+                        {
+                            targetCell = AlliedPawnOnMap(settlement.Map).Position;
+                            break;
+                        }
                         targetCell = SHGUtilities.FindDestination(settlement.Map, true);
                         if (targetCell.IsValid)
                         {
@@ -85,11 +90,16 @@ namespace SuperHeroGenesBase
                 }
                 if (!targetCell.IsValid && Find.WorldObjects.AnyMapParentAt(target.Tile))
                 {
-                    List<MapParent> maps = Find.WorldObjects.MapParents.Where((MapParent p) => p.Tile == target.Tile && p.HasMap).ToList();
+                    List<MapParent> maps = Find.WorldObjects.MapParents.Where((MapParent p) => p.Tile == target.Tile && p.HasMap && (!Props.requireAllyAtDestination || AlliedPawnOnMap(p.Map) != null)).ToList();
                     if (!maps.NullOrEmpty())
                     {
                         foreach (MapParent mapParent in maps)
                         {
+                            if (Props.requireAllyAtDestination)
+                            {
+                                targetCell = AlliedPawnOnMap(mapParent.Map).Position;
+                                break;
+                            }
                             targetCell = SHGUtilities.FindDestination(mapParent.Map);
                             if (targetCell.IsValid)
                             {

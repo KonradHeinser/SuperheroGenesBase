@@ -1,27 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SHGUtilities.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Abilities/CompAbilityEffect_LongDistanceTeleport.cs">
     <Files>
       <File FileName="SHGExtension.cs" Line="31" Column="43" />
       <File FileName="IncidentWorker_CaravanArrivalBetterTributeCollector.cs" Line="37" Column="83" />
       <File FileName="Abilities/CompAbilityEffect_SHGBurst.cs" Line="41" Column="1" />
-      <File FileName="Abilities/CompProperties_LongDistanceTeleport.cs" Line="16" Column="37" />
-      <File FileName="Abilities/CompAbilityEffect_LongDistanceTeleport.cs" Line="81" Column="88" />
-      <File FileName="SHGUtilities.cs" Line="81" Column="1" />
+      <File FileName="Abilities/CompProperties_LongDistanceTeleport.cs" Line="22" Column="53" />
+      <File FileName="Abilities/CompAbilityEffect_LongDistanceTeleport.cs" Line="101" Column="39" />
+      <File FileName="SHGUtilities.cs" Line="86" Column="10" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SuperHeroGenes" expanded="True">
-            <Node name="SuperHeroGenes" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Abilities" expanded="True" />
-              <Node name="ModSettings" expanded="True" />
-              <Node name="SHGUtilities.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -9,7 +9,7 @@
         <displayOrderInCategory>5</displayOrderInCategory>
         <biostatMet>1</biostatMet>
         <damageFactors>
-            <SHG_Beam MayRequire="Sov.Homelander">2</SHG_Beam>
+            <SHG_Beam MayRequire="Sov.Homelander">1.33</SHG_Beam>
         </damageFactors>
         <statFactors>
             <IncomingDamageFactor>1.333</IncomingDamageFactor>
@@ -39,9 +39,9 @@
         <foodPoisoningChanceFactor>100</foodPoisoningChanceFactor>
         <biostatMet>1</biostatMet>
         <statFactors>
-            <ImmunityGainSpeed>0.333</ImmunityGainSpeed>
-            <InjuryHealingFactor>0.333</InjuryHealingFactor>
-            <LifespanFactor>0.333</LifespanFactor>
+            <ImmunityGainSpeed>0.5</ImmunityGainSpeed>
+            <InjuryHealingFactor>0.5</InjuryHealingFactor>
+            <LifespanFactor>0.5</LifespanFactor>
         </statFactors>
         <statOffsets>
             <ToxicEnvironmentResistance>-.1</ToxicEnvironmentResistance>
@@ -84,8 +84,8 @@
         <biostatMet>1</biostatMet>
         <statOffsets>
             <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
-            <MeleeDodgeChance>-1.5</MeleeDodgeChance>
-            <MeleeHitChance>-1.5</MeleeHitChance>
+            <MeleeDodgeChance>-2.5</MeleeDodgeChance>
+            <MeleeHitChance>-2.5</MeleeHitChance>
             <TameAnimalChance>-0.1</TameAnimalChance>
             <TrainAnimalChance>-0.1</TrainAnimalChance>
         </statOffsets>
@@ -105,7 +105,7 @@
         <displayOrderInCategory>55</displayOrderInCategory>
         <biostatMet>1</biostatMet>
         <statOffsets>
-            <PawnBeauty>-5</PawnBeauty>
+            <PawnBeauty>-3</PawnBeauty>
             <SocialImpact>-0.5</SocialImpact>
             <NegotiationAbility>-0.5</NegotiationAbility>
             <ConversionPower MayRequire="ludeon.rimworld.ideology">-0.5</ConversionPower>
@@ -130,8 +130,8 @@
         </statFactors>
         <statOffsets>
             <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
-            <MeleeDodgeChance>-1.5</MeleeDodgeChance>
-            <MeleeHitChance>-1.5</MeleeHitChance>
+            <MeleeDodgeChance>-2.5</MeleeDodgeChance>
+            <MeleeHitChance>-2.5</MeleeHitChance>
         </statOffsets>
         <exclusionTags>
             <li>SuperPrecisions</li>
@@ -152,7 +152,7 @@
             <StaggerDurationFactor>1.333</StaggerDurationFactor>
         </statFactors>
         <statOffsets>
-            <MoveSpeed>-5</MoveSpeed>
+            <MoveSpeed>-3</MoveSpeed>
             <AimingDelayFactor>.1</AimingDelayFactor>
         </statOffsets>
         <exclusionTags>
@@ -171,11 +171,11 @@
         <displayOrderInCategory>85</displayOrderInCategory>
         <biostatMet>1</biostatMet>
         <statFactors>
-            <MeleeDamageFactor>0.333</MeleeDamageFactor>
+            <MeleeDamageFactor>0.5</MeleeDamageFactor>
         </statFactors>
         <statOffsets>
-            <CarryingCapacity>-100</CarryingCapacity>
-            <CarryBulk MayRequire="ceteam.combatextended">-50</CarryBulk>
+            <CarryingCapacity>-50</CarryingCapacity>
+            <CarryBulk MayRequire="ceteam.combatextended">-25</CarryBulk>
             <MentalBreakThreshold>.15</MentalBreakThreshold>
         </statOffsets>
         <exclusionTags>

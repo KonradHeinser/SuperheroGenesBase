@@ -14,14 +14,12 @@ namespace SuperHeroGenesBase
         public int maintainDuration = 60;
 
         public int maxDistance = -1;
-
-        public EffecterDef exitEffecter;
-
+        
         public SoundDef soundPlayed;
 
         public SoundDef exitSound;
 
-        public bool requireAllyAtDestination = true;
+        public bool requireAllyAtDestination = false;
 
         public bool bringCorpses = false;
 
