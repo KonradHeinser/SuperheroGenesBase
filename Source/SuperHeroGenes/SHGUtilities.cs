@@ -1,6 +1,7 @@
 ﻿using Verse;
 using System.Collections.Generic;
 using RimWorld;
+using RimWorld.Planet;
 using Verse.AI;
 using System;
 
@@ -56,6 +57,32 @@ namespace SuperHeroGenesBase
                     if (hediffToRemove != null) pawn.health.RemoveHediff(hediffToRemove);
                 }
             }
+        }
+
+        public static IntVec3 FindDestination(Map targetMap, bool targetCenter = false)
+        {
+
+            IntVec3 target = IntVec3.Invalid;
+            if (targetCenter)
+            {
+                target = targetMap.Center;
+                if (target.Standable(targetMap))
+                {
+                    return target;
+                }
+                target = CellFinder.StandableCellNear(target, targetMap, 50);
+                if (target.IsValid) return target;
+            }
+            target = CellFinder.RandomEdgeCell(targetMap);
+            if (target.Standable(targetMap)) return target;
+            target = CellFinder.StandableCellNear(target, targetMap, 30);
+            if (target.IsValid) return target;
+
+            target = CellFinder.RandomEdgeCell(targetMap);
+            target = CellFinder.StandableCellNear(target, targetMap, 30); // If the first time fails try a second time just to see if the first one was bad luck
+            if (target.IsValid) return target;
+
+            return IntVec3.Invalid;
         }
 
         public static void AddOrAppendHediffs(Pawn pawn, float initialSeverity = 1, float severityPerTick = 0, HediffDef hediff = null, List<HediffDef> hediffs = null)

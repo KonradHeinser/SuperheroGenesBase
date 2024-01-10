@@ -147,6 +147,8 @@
     <Compile Include="SuperAI\ThinkNode_RecordPassage.cs" />
     <Compile Include="SuperAI\JobGiver_AICastAbilityGoToTarget.cs" />
     <Compile Include="IncidentWorker_CaravanArrivalBetterTributeCollector.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_LongDistanceTeleport.cs" />
+    <Compile Include="Abilities\CompProperties_LongDistanceTeleport.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

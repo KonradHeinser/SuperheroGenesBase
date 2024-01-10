@@ -2,6 +2,11 @@
 <LanguageData>
 	<SHG_Hemomancer_Starfish>{0}'s clump of hemogen has successfully developed.</SHG_Hemomancer_Starfish>
     <SHG_GeneticRomanceChance>Carrier Gene(s)</SHG_GeneticRomanceChance>
+    <AbilityHomeTeleport>Skip to random area in home</AbilityHomeTeleport>
+    <AbilityMapTeleport>Skip to random area in map</AbilityMapTeleport>
+    <AbilityTileTeleport>Skip to tile</AbilityTileTeleport>
+    <AbilityPassableOnly>Only passable tiles can be picked</AbilityPassableOnly>
+    <AbilityTooFarToTeleport>This tile is too far for this teleportation ability</AbilityTooFarToTeleport>
         
         <!--DRG Stuff-->
     <ResourceCost>{0} cost</ResourceCost>
