@@ -9,13 +9,14 @@ namespace SuperHeroGenesBase
     {
         // Tied to ResourceGene
 // This needs to be set to true on the main gene so some of the things can find the main gene. If vanilla was set up this way, Hemogenic would be True, while HemogenicDrain would be false
-        public bool isMainGene = false; 
+        public bool isMainGene = false;
 // resourcePacks is for the main resource packs/ingestibles, and should not include generic ingestibles(i.e. meat, eggs, etc.) unless A) those are the primary source, and B) you plan on adding all, or at least a large number, of them
         public List<ThingDef> resourcePacks;
         public bool resourcePacksAllowed = true; // If the resourcePacks is empty because you have no main resource sources, set this to false
         public HediffDef cravingHediff; // Optional
         public HediffDef overchargeHediff; // Optional
         public StatDef gainStat; // Optional
+        public StatDef passiveFactorStat; // Optional. Mutliplies daily values by this
         public float maximum = 1f; // This is the default for Hemogen. Optional
         public StatDef maxStat; // Overrides maximum. Optional
         public StatDef maxFactorStat; // Works with both maximum options. Optional
@@ -33,6 +34,5 @@ namespace SuperHeroGenesBase
 
         // Tied to ResourceDrainGene
         public GeneDef mainResourceGene;
-
     }
 }

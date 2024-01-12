@@ -6,20 +6,24 @@ namespace SuperHeroGenesBase
 {
     public class HediffAdder : Gene
     {
-        public Dictionary<BodyPartDef, int> foundParts = new Dictionary<BodyPartDef, int>();
-
         public override void PostAdd()
         {
             base.PostAdd();
-            SHGExtension extension = def.GetModExtension<SHGExtension>();
+            HediffAdding(pawn, this);
+        }
+
+        public static void HediffAdding(Pawn pawn, Gene gene)
+        {
+            SHGExtension extension = gene.def.GetModExtension<SHGExtension>();
             if (extension != null && !extension.hediffsToApply.NullOrEmpty())
             {
+                Dictionary<BodyPartDef, int> foundParts = new Dictionary<BodyPartDef, int>();
                 foreach (HediffsToParts hediffToParts in extension.hediffsToApply)
                 {
                     foundParts.Clear();
                     if (!hediffToParts.bodyParts.NullOrEmpty())
                     {
-                        foreach (BodyPartDef bodyPartDef in hediffToParts.bodyParts) 
+                        foreach (BodyPartDef bodyPartDef in hediffToParts.bodyParts)
                         {
                             if (pawn.RaceProps.body.GetPartsWithDef(bodyPartDef).NullOrEmpty()) continue;
                             if (foundParts.NullOrEmpty() || !foundParts.ContainsKey(bodyPartDef))
@@ -45,11 +49,7 @@ namespace SuperHeroGenesBase
                         }
                     }
                 }
-                if (extension.vanishingGene) pawn.genes.RemoveGene(this);
-            }
-            else
-            {
-                Log.Error(def + " could not find the hediffs to add list.");
+                if (extension.vanishingGene) pawn.genes.RemoveGene(gene);
             }
         }
     }

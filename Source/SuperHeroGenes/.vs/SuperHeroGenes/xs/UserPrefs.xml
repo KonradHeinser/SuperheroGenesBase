@@ -1,28 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Hediffs/HediffCompProperties_FactionBond.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DynamicResourceGenes/DRGExtension.cs">
     <Files>
-      <File FileName="Abilities/CompAbilityEffect_LongDistanceTeleport.cs" Line="196" Column="33" />
-      <File FileName="Genes/Gene_DoubleHearted.cs" Line="69" Column="10" />
-      <File FileName="Abilities/CompAbilityEffect_LoveTheCaster.cs" Line="2" Column="13" />
-      <File FileName="Abilities/CompProperties_LoveTheCaster.cs" Line="3" Column="16" />
-      <File FileName="Abilities/Hediff_LoveTheCaster.cs" Line="11" Column="1" />
-      <File FileName="Thoughts/ThoughtWorker_Gene_GeneSocial.cs" Line="62" Column="6" />
-      <File FileName="SHGExtension.cs" Line="24" Column="9" />
-      <File FileName="Hediffs/HediffCompProperties_SeverityByNearbyPawns.cs" Line="19" Column="10" />
-      <File FileName="Hediffs/HediffComp_SeverityByNearbyPawns.cs" Line="74" Column="6" />
-      <File FileName="Hediffs/HediffComp_FactionBond.cs" Line="22" Column="6" />
-      <File FileName="Hediffs/HediffCompProperties_FactionBond.cs" Line="5" Column="50" />
+      <File FileName="DynamicResourceGenes/CompAbilityEffect_ResourceCost.cs" Line="49" Column="14" />
+      <File FileName="DynamicResourceGenes/ResourceGene.cs" Line="56" Column="27" />
+      <File FileName="Genes/HediffAdder.cs" Line="38" Column="25" />
+      <File FileName="DynamicResourceGenes/DRGExtension.cs" Line="17" Column="55" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Abilities" expanded="True" />
-              <Node name="Genes" expanded="True" />
-              <Node name="Hediffs" expanded="True">
-                <Node name="HediffCompProperties_FactionBond.cs" selected="True" />
+              <Node name="DynamicResourceGenes" expanded="True">
+                <Node name="DRGExtension.cs" selected="True" />
               </Node>
+              <Node name="Genes" expanded="True" />
+              <Node name="Hediffs" expanded="True" />
               <Node name="Thoughts" expanded="True" />
             </Node>
           </Node>
