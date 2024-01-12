@@ -14,6 +14,7 @@ namespace SuperHeroGenesBase
             Rot = 24
         }
         public float radius;
+        public StatDef statRadius;
         public DamageDef damageDef;
         public int damageAmount = -1;
         public float armorPenetration = -1f;

@@ -20,7 +20,7 @@ namespace SuperHeroGenesBase
         public int maxStages = 1; // Required if compoundingHatred is true
         public List<GeneDef> checkedGenes; // Genes checked for opinions
         public List<GeneDef> nullifyingGenes; // Genes checked for early nullification. These cause the thought to never appear
-
+        public List<GeneDef> requiredGenes; // The observer musthave one of these genes to feel anything. Acts as a reverse nullifyingGenes
 
         public List<FactionDef> factions; // For anything that needs a list of factions. Currently not used
 

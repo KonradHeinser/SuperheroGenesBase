@@ -536,7 +536,7 @@
             </li>
             <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityByNearbyPawns">
                 <range>15</range>
-                <onlyNonPlayer>True</onlyNonPlayer>
+                <onlyEnemies>True</onlyEnemies>
                 <onlyHumanlikes>True</onlyHumanlikes>
             </li>
             <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
