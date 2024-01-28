@@ -1,26 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Abilities/CompAbilityEffect_SHGBurst.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SHGUtilities.cs">
     <Files>
-      <File FileName="Hediffs/HediffCompProperties_SeverityByNearbyPawns.cs" Line="6" Column="60" />
-      <File FileName="Abilities/CompProperties_SHGBurst.cs" Line="17" Column="35" />
-      <File FileName="Abilities/CompAbilityEffect_SHGBurst.cs" Line="32" Column="17" />
+      <File FileName="SHGUtilities.cs" Line="239" Column="59" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SuperHeroGenes" expanded="True">
-            <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Abilities" expanded="True">
-                <Node name="CompAbilityEffect_SHGBurst.cs" selected="True" />
-              </Node>
-              <Node name="Genes" expanded="True" />
-              <Node name="Hediffs" expanded="True" />
-              <Node name="Thoughts" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

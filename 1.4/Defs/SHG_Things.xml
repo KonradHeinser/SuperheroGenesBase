@@ -22,6 +22,7 @@
         <techLevel>Spacer</techLevel>
         <tradeTags Inherit="False">
             <li>ExoticMisc</li>
+            <li>SuperCreatingDrug</li>
         </tradeTags>
         <ingestible>
             <foodType>Processed</foodType>

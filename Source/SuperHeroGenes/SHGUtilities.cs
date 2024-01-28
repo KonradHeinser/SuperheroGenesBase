@@ -236,6 +236,21 @@ namespace SuperHeroGenesBase
                 }
                 return thing;
             }
+            if (pawn.IsAttacking() && pawn.CurJob != null)
+            {
+                Thing thing = pawn.CurJob.targetA.Thing;
+                if (thing != null)
+                {
+                    if (LoSRequired && !GenSight.LineOfSight(pawn.Position, thing.Position, pawn.Map)) return null;
+                    if (onlyHostiles && !thing.HostileTo(pawn)) return null;
+                    if (onlyInFaction)
+                    {
+                        if (thing is Pawn otherPawn && otherPawn.Faction == pawn.Faction) return thing;
+                        return null;
+                    }
+                    return thing;
+                }
+            }
             if (autoSearch)
             {
                 List<Pawn> pawns = pawn.Map.mapPawns.AllPawnsSpawned;
