@@ -1,7 +1,7 @@
 ﻿using Verse;
 using System.Collections.Generic;
 using RimWorld;
-using RimWorld.Planet;
+using System.Linq;
 using Verse.AI;
 using System;
 
@@ -265,6 +265,117 @@ namespace SuperHeroGenesBase
                 }
             }
             return null;
+        }
+
+        public static bool PawnHasAnyOfGenes(Pawn pawn, List<GeneDef> genesDefs = null, List<Gene> genes = null)
+        {
+            if (pawn.genes == null) return false;
+
+            if (!genesDefs.NullOrEmpty())
+            {
+                foreach (Gene gene in pawn.genes.GenesListForReading)
+                {
+                    if (genesDefs.Contains(gene.def)) return true;
+                }
+            }
+            if (!genes.NullOrEmpty())
+            {
+                foreach (Gene gene in pawn.genes.GenesListForReading)
+                {
+                    if (genes.Contains(gene)) return true;
+                }
+            }
+
+            return false;
+        }
+
+        public static void RemoveGenesFromPawn(Pawn pawn, List<GeneDef> genes = null, GeneDef gene = null)
+        {
+            if (pawn.genes == null) return;
+            if (gene != null)
+            {
+                Gene target = pawn.genes.GetGene(gene);
+                if (target != null) pawn.genes.RemoveGene(target);
+            }
+            if (!genes.NullOrEmpty())
+            {
+                foreach (GeneDef g in genes)
+                {
+                    Gene target = pawn.genes.GetGene(g);
+                    if (target != null) pawn.genes.RemoveGene(target);
+                }
+            }
+        }
+
+        public static List<GeneDef> AddGenesToPawn(Pawn pawn, bool xenogene = true, List<GeneDef> genes = null, GeneDef gene = null)
+        {
+            if (pawn.genes == null) return null;
+            List<GeneDef> addedGenes = new List<GeneDef>();
+
+            if (gene != null)
+            {
+                if (!pawn.genes.HasGene(gene))
+                {
+                    pawn.genes.AddGene(gene, xenogene);
+                    addedGenes.Add(gene);
+                }
+            }
+
+            if (!genes.NullOrEmpty())
+            {
+                foreach (GeneDef geneDef in genes)
+                {
+                    if (!pawn.genes.HasGene(geneDef))
+                    {
+                        pawn.genes.AddGene(geneDef, xenogene);
+                        addedGenes.Add(geneDef);
+                    }
+                }
+            }
+
+            return addedGenes;
+        }
+
+        public static bool EquivalentGeneLists(List<GeneDef> geneListA, List<GeneDef> geneListB)
+        {
+            if (geneListA.NullOrEmpty()) return geneListB.NullOrEmpty();
+            foreach (GeneDef gene in geneListA)
+            {
+                if (geneListB.NullOrEmpty()) return false;
+                if (geneListB.Contains(gene))
+                {
+                    geneListB.Remove(gene);
+                }
+                else return false;
+            }
+            if (!geneListB.NullOrEmpty()) return false;
+            return true;
+        }
+
+        public static void HandleNeedOffsets(Pawn pawn, List<NeedOffset> needOffsets, bool preventRepeats = true, int hashInterval = 200, bool hourlyRate = false, bool dailyRate = false)
+        {
+            if (needOffsets.NullOrEmpty()) return;
+            List<Need> alreadyPickedNeeds = new List<Need>();
+            foreach (NeedOffset needOffset in needOffsets)
+            {
+                Need need;
+                if (needOffset.need == null && preventRepeats)
+                {
+                    if (preventRepeats) need = pawn.needs.AllNeeds.Where((Need n) => !alreadyPickedNeeds.Contains(n)).RandomElement();
+                    else need = pawn.needs.AllNeeds.RandomElement();
+                }
+                else need = pawn.needs.TryGetNeed(needOffset.need);
+
+                if (need != null)
+                {
+                    alreadyPickedNeeds.Add(need);
+                    float offset = needOffset.offset;
+                    if (needOffset.offsetFactorStat != null) offset *= pawn.GetStatValue(needOffset.offsetFactorStat);
+                    if (hourlyRate) offset *= hashInterval / 2500f;
+                    else if (dailyRate) offset *= hashInterval / 60000f;
+                    need.CurLevel += offset;
+                }
+            }
         }
 
         public static Job GoToTarget(LocalTargetInfo target)

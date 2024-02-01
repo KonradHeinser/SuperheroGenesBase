@@ -34,7 +34,6 @@
             <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
                 <range>15</range>
                 <rangeStat>SHG_Debuffer_Range</rangeStat>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -60,7 +59,6 @@
             <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
                 <range>15</range>
                 <rangeStat>SHG_Debuffer_Range</rangeStat>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -97,7 +95,6 @@
             <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
                 <range>15</range>
                 <rangeStat>SHG_Debuffer_Range</rangeStat>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -136,7 +133,6 @@
             <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
                 <range>15</range>
                 <rangeStat>SHG_Debuffer_Range</rangeStat>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -175,7 +171,6 @@
             <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
                 <range>15</range>
                 <rangeStat>SHG_Debuffer_Range</rangeStat>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -232,7 +227,6 @@
             <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
                 <range>15</range>
                 <rangeStat>SHG_Debuffer_Range</rangeStat>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -270,7 +264,6 @@
             <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
                 <range>15</range>
                 <rangeStat>SHG_Debuffer_Range</rangeStat>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -310,7 +303,6 @@
             <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
                 <range>15</range>
                 <rangeStat>SHG_Debuffer_Range</rangeStat>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -367,7 +359,6 @@
             <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
                 <range>15</range>
                 <rangeStat>SHG_Debuffer_Range</rangeStat>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -525,7 +516,6 @@
             <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
                 <range>15</range>
                 <onlyWhileDrafted>False</onlyWhileDrafted>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>False</canTargetBuildings>

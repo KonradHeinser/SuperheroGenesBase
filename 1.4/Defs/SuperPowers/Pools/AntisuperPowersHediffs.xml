@@ -97,7 +97,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -138,7 +137,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -180,7 +178,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -221,7 +218,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -270,7 +266,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -307,7 +302,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -344,7 +338,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -383,7 +376,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -429,7 +421,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -467,7 +458,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -513,7 +503,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -553,7 +542,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -597,7 +585,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -636,7 +623,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -685,7 +671,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
@@ -722,7 +707,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>

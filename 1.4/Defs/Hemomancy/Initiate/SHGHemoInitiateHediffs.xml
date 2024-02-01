@@ -79,7 +79,6 @@
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>

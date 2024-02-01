@@ -193,7 +193,6 @@
             </li>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>9.9</range>
-                <mote>Mote_SparkThrown</mote>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
