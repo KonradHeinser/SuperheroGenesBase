@@ -1,19 +1,23 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="NeedOffset.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hediffs/HediffComp_GainRandomGeneSet.cs">
     <Files>
-      <File FileName="SHGUtilities.cs" Line="294" Column="10" />
+      <File FileName="SHGUtilities.cs" Line="407" Column="10" />
       <File FileName="Hediffs/AbilitiesAtSeverities.cs" Line="6" Column="29" />
       <File FileName="Hediffs/HediffComp_ExplodeOnDeath.cs" Line="3" Column="29" />
       <File FileName="Hediffs/HediffComp_HediffOnKill.cs" Line="11" Column="14" />
       <File FileName="Abilities/CompAbilityEffect_OffsetNeed.cs" Line="24" Column="1" />
-      <File FileName="NeedOffset.cs" Line="2" Column="1" />
+      <File FileName="NeedOffset.cs" Line="12" Column="1" />
+      <File FileName="Hediffs/HediffCompProperties_GainRandomGeneSet.cs" Line="36" Column="10" />
+      <File FileName="Hediffs/HediffComp_GainRandomGeneSet.cs" Line="32" Column="29" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="NeedOffset.cs" selected="True" />
+              <Node name="Hediffs" expanded="True">
+                <Node name="HediffComp_GainRandomGeneSet.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

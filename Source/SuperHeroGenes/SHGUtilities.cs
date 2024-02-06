@@ -336,6 +336,76 @@ namespace SuperHeroGenesBase
             return addedGenes;
         }
 
+        public static void GainRandomGeneSet(Pawn pawn, bool inheritGenes, bool removeGenesFromOtherLists,
+                List<RandomXenoGenes> geneSets = null, List<GeneDef> alwaysAddedGenes = null, List<GeneDef> alwaysRemovedGenes = null)
+        {
+            if (pawn.genes == null) return;
+            List<GeneDef> genesToAdd = new List<GeneDef>();
+            bool reverseInheritence = false;
+
+            List<GeneDef> remainingGenes = new List<GeneDef>();
+            foreach (Gene currentGene in pawn.genes.GenesListForReading) // Puts genes into a list that's easier to check
+            {
+                remainingGenes.Add(currentGene.def);
+            }
+
+            // Select a geneSet to be added
+            if (!geneSets.NullOrEmpty())
+            {
+                float totalWeight = 0;
+                foreach (RandomXenoGenes xenoGeneSet in geneSets)
+                {
+                    totalWeight += xenoGeneSet.weightOfGeneSet;
+                }
+
+                double randomNumber = new Random().NextDouble() * totalWeight;
+                foreach (RandomXenoGenes xenoGeneSet in geneSets)
+                {
+                    if (randomNumber <= xenoGeneSet.weightOfGeneSet)
+                    {
+                        genesToAdd = xenoGeneSet.geneSet;
+                        reverseInheritence = xenoGeneSet.reverseInheritence;
+                        break;
+                    }
+                    randomNumber -= xenoGeneSet.weightOfGeneSet;
+                }
+            }
+
+            if (reverseInheritence) inheritGenes = !inheritGenes;
+
+            if (removeGenesFromOtherLists && !geneSets.NullOrEmpty())
+            {
+                foreach (RandomXenoGenes xenoGeneSet in geneSets) // For each list
+                {
+                    RemoveGenesFromPawn(pawn, xenoGeneSet.geneSet);
+                }
+            }
+            else if (!geneSets.NullOrEmpty())
+            {
+                foreach (RandomXenoGenes xenoGeneSet in geneSets) // For each list
+                {
+                    if (xenoGeneSet.alwaysRemoveGenes)
+                    {
+                        RemoveGenesFromPawn(pawn, xenoGeneSet.geneSet);
+                    }
+                }
+            }
+
+            // Add and remove genes
+            AddGenesToPawn(pawn, !inheritGenes, alwaysAddedGenes);
+            AddGenesToPawn(pawn, !inheritGenes, genesToAdd);
+            RemoveGenesFromPawn(pawn, alwaysRemovedGenes);
+
+            // Wrap things up
+            if (pawn.Faction == Faction.OfPlayer) // If the pawn is in the player faction, give a message based on what is most relevant to the player.
+            {
+                if (!geneSets.NullOrEmpty()) Messages.Message("Random genes successfully generated!", MessageTypeDefOf.NeutralEvent, false);
+                else if (!alwaysAddedGenes.NullOrEmpty()) Messages.Message("Genes successfully added to pawn!", MessageTypeDefOf.NeutralEvent, false);
+                else if (!alwaysRemovedGenes.NullOrEmpty()) Messages.Message("Genes successfully removed from pawn!", MessageTypeDefOf.NeutralEvent, false);
+                else Messages.Message("A gene randomizer has been successfully processed, but the mod dev gave me NOTHING to work with. Why?", MessageTypeDefOf.NeutralEvent, false);
+            }
+        }
+
         public static bool EquivalentGeneLists(List<GeneDef> geneListA, List<GeneDef> geneListB)
         {
             if (geneListA.NullOrEmpty()) return geneListB.NullOrEmpty();
