@@ -164,6 +164,7 @@
     <Compile Include="Hediffs\HediffComp_TemporaryGenes.cs" />
     <Compile Include="Hediffs\HediffCompProperties_TemporaryGenes.cs" />
     <Compile Include="Hediffs\GenesAtSeverity.cs" />
+    <Compile Include="Abilities\Verb_CastAbilityLaserEyes.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

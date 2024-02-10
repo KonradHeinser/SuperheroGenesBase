@@ -9,7 +9,7 @@
         <displayOrderInCategory>5</displayOrderInCategory>
         <biostatMet>1</biostatMet>
         <damageFactors>
-            <SHG_Beam MayRequire="Sov.Homelander">1.33</SHG_Beam>
+            <SHG_Beam>1.33</SHG_Beam>
         </damageFactors>
         <statFactors>
             <IncomingDamageFactor>1.333</IncomingDamageFactor>

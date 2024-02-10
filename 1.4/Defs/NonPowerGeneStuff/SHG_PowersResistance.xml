@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <GeneDef ParentName="SHG_ResistanceBase" MayRequire="Sov.Homelander">
+    <GeneDef ParentName="SHG_ResistanceBase">
         <defName>SHG_LaserImmune</defName>
         <label>eye laser immune</label> 
         <description>Carriers of this gene are immune to beam damage.</description>

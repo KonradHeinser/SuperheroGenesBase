@@ -541,17 +541,16 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHGPowerAbilitiesBase" MayRequire="Sov.Homelander">
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_LaserEyes</defName>
         <label>superhero laser eyes</label>
         <description>Shoot a highly focused laser that even other supers have difficulties defending themselves from.\n\nWARNING: Try to avoid using this ability on high value things unless you want to parody that Homelander "saves" a plane scene. The laser deals a large amount of damage in a really short time, so the chances of corpses and items surviving the situation are minimal.</description>
         <iconPath>Powers/LaserEyes</iconPath>
         <cooldownTicksRange>300</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
-        <targetRequired>true</targetRequired>
         <showCastingProgressBar>false</showCastingProgressBar>
         <verbProperties>
-            <verbClass>UFO.CastBeam.Verb_AbilityCastBeam</verbClass>
+            <verbClass>SuperHeroGenesBase.Verb_CastAbilityLaserEyes</verbClass>
             <requireLineOfSight>False</requireLineOfSight>
             <hasStandardCommand>true</hasStandardCommand>
             <warmupTime>0.1</warmupTime>
@@ -570,9 +569,6 @@
             <beamCurvature>0.1</beamCurvature>
             <beamMoteDef>SHG_Mote_LaserEyeBeam</beamMoteDef>
             <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
-            <beamChanceToStartFire>0</beamChanceToStartFire>
-            <beamChanceToAttachFire>0</beamChanceToAttachFire>
-            <beamFireSizeRange>0.55~0.85</beamFireSizeRange>
             <beamLineFleckDef>Fleck_BeamSpark</beamLineFleckDef>
             <beamStartOffset>0.8</beamStartOffset>
             <beamLineFleckChanceCurve>

@@ -373,7 +373,7 @@
         <biostatMet>0</biostatMet>
 <!--All SHG_Beam references in the base mod are tied to the laser eyes mod until I either make my own version, or use the damage outside of the laser eyes power-->
         <damageFactors>
-            <SHG_Beam MayRequire="Sov.Homelander">0.75</SHG_Beam>
+            <SHG_Beam>0.75</SHG_Beam>
         </damageFactors>
         <statFactors>
             <LifespanFactor>2</LifespanFactor>

@@ -389,7 +389,7 @@
         </descriptionHyperlinks>
     </GeneDef>
 
-    <GeneDef ParentName="SuperPowersOffensiveBase" MayRequire="Sov.Homelander">
+    <GeneDef ParentName="SuperPowersOffensiveBase">
         <defName>SHG_LaserEyes</defName>
         <label>superhero laser eyes</label>
         <description>A version of the laser eyes gene that has been enhanced by the superhero gene, creating an even stronger laser.\n\nPlease make sure you go give Biotech Gene: Laser-Eyes a thumbs up for making this gene possible. Now on with the lasering!</description>

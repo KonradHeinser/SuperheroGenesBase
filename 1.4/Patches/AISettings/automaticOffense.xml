@@ -42,14 +42,14 @@
                                             </li>
                                         </subNodes>
                                     </li>
-                                    <li Class="ThinkNode_ConditionalHasAbility" MayRequire="Sov.Homelander">
+                                    <li Class="ThinkNode_ConditionalHasAbility">
                                         <ability>SHG_LaserEyes</ability>
                                         <subNodes>
-                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequire="Sov.Homelander"> <!--Laser eyes-->
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire"> <!--Laser eyes-->
                                                 <minRadius>2</minRadius>
                                                 <avoidSelfHit>false</avoidSelfHit>
                                                 <subNodes>
-                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget" MayRequire="Sov.Homelander">
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
                                                         <hashInterval>1</hashInterval> <!--Replaces normal attacks-->
                                                         <abilities>
                                                             <li>SHG_LaserEyes</li>
@@ -173,14 +173,14 @@
                                                         </li>
                                                     </subNodes>
                                                 </li>
-                                                <li Class="ThinkNode_ConditionalHasAbility" MayRequire="Sov.Homelander">
+                                                <li Class="ThinkNode_ConditionalHasAbility">
                                                     <ability>SHG_LaserEyes</ability>
                                                     <subNodes>
-                                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequire="Sov.Homelander"> <!--Laser eyes-->
+                                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire"> <!--Laser eyes-->
                                                             <minRadius>2</minRadius>
                                                             <avoidSelfHit>false</avoidSelfHit>
                                                             <subNodes>
-                                                                <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget" MayRequire="Sov.Homelander">
+                                                                <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
                                                                     <hashInterval>1</hashInterval> <!--Replaces normal attacks-->
                                                                     <abilities>
                                                                         <li>SHG_LaserEyes</li>
