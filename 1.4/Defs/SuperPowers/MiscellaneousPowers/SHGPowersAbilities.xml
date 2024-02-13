@@ -565,8 +565,7 @@
             <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
             <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
             <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
-            <beamMaxDeviation>0.1</beamMaxDeviation>
-            <beamCurvature>0.1</beamCurvature>
+            <beamCurvature>0.4</beamCurvature>
             <beamMoteDef>SHG_Mote_LaserEyeBeam</beamMoteDef>
             <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
             <beamLineFleckDef>Fleck_BeamSpark</beamLineFleckDef>
@@ -579,8 +578,8 @@
                 </points>
             </beamLineFleckChanceCurve>
             <targetParams>
-                <canTargetLocations>True</canTargetLocations>
-                <canTargetPawns>False</canTargetPawns>
+                <canTargetLocations>False</canTargetLocations>
+                <canTargetPawns>True</canTargetPawns>
                 <canTargetBuildings>True</canTargetBuildings>
             </targetParams>
         </verbProperties>

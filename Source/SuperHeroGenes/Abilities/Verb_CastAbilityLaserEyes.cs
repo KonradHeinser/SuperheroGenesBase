@@ -136,41 +136,39 @@ namespace SuperHeroGenesBase
             float magnitude = vector3_1.magnitude;
             Vector3 normalized = vector3_1.normalized;
             Vector3 vector3_2 = normalized.RotatedBy(-90f);
-            float num1 = verbProps.beamFullWidthRange > 0.0
-                ? Mathf.Min(magnitude / verbProps.beamFullWidthRange, 1f)
-                : 1f;
+            float num1 = verbProps.beamFullWidthRange > 0.0 ? Mathf.Min(magnitude / verbProps.beamFullWidthRange, 1f) : 1f;
             float num2 = (verbProps.beamWidth + 1f) * num1 / ShotsPerBurst;
-            Vector3 vector3_3 = currentTarget.CenterVector3.Yto0() -
-                                vector3_2 * verbProps.beamWidth / 2f * num1;
+            Vector3 vector3_3 = currentTarget.CenterVector3.Yto0() - vector3_2 * verbProps.beamWidth / 2f * num1;
             path.Add(vector3_3);
             for (int index = 0; index < ShotsPerBurst; ++index)
             {
-                Vector3 vector3_4 = normalized * (Rand.Value * verbProps.beamMaxDeviation) - normalized / 2f;
-                Vector3 vector3_5 =
-                    Mathf.Sin((float)((index / (double)ShotsPerBurst + 0.5) * 3.1415927410125732 *
-                                      57.295780181884766)) * verbProps.beamCurvature * -normalized -
-                    normalized * verbProps.beamMaxDeviation / 2f;
-                path.Add(vector3_3 + (vector3_4 + vector3_5) * num1);
+                Vector3 vector3_4 = normalized - normalized / 2f;
+                Vector3 vector3_5 = Mathf.Sin((float)((index / (double)ShotsPerBurst + 0.5) * 180)) * verbProps.beamCurvature * -normalized - normalized / 2f;
+                path.Add(vector3_3 + (vector3_4 - vector3_5) * num1);
                 vector3_3 += vector3_2 * num2;
+            }
+            Vector3 normalized2 = vector3_3 + (normalized - normalized / 2f - Mathf.Sin((float)((ShotsPerBurst / (double)ShotsPerBurst + 0.5) * 180)) * verbProps.beamCurvature * -normalized - normalized / 2f) * num1 + vector3_2 * num2;
+            for (int index = 0; index < ShotsPerBurst; ++index)
+            {
+                Vector3 vector3_4 = normalized2 + normalized2 / 2f;
+                Vector3 vector3_5 = Mathf.Sin((float)((index / (double)ShotsPerBurst + 0.5) * 180)) * verbProps.beamCurvature * normalized2 + normalized2 / 2f;
+                path.Add(vector3_3 - (vector3_4 + vector3_5) * num1);
+                vector3_3 -= vector3_2 * num2;
             }
 
             if (verbProps.beamMoteDef != null)
-                mote = MoteMaker.MakeInteractionOverlay(verbProps.beamMoteDef, (TargetInfo)caster,
+                mote = MoteMaker.MakeInteractionOverlay(verbProps.beamMoteDef, caster,
                     new TargetInfo(path[0].ToIntVec3(), caster.Map));
             TryCastNextBurstShot();
             ticksToNextPathStep = verbProps.ticksBetweenBurstShots;
             endEffecter?.Cleanup();
-            if (verbProps.soundCastBeam == null)
-                return;
-            sustainer =
-                verbProps.soundCastBeam.TrySpawnSustainer(SoundInfo.InMap((TargetInfo)caster,
-                    MaintenanceType.PerTick));
+            if (verbProps.soundCastBeam == null) return;
+            sustainer = verbProps.soundCastBeam.TrySpawnSustainer(SoundInfo.InMap(caster, MaintenanceType.PerTick));
         }
 
         private bool CanHit(Thing thing) => thing.Spawned && !CoverUtility.ThingCovered(thing, caster.Map);
 
-        private void HitCell(IntVec3 cell) => ApplyDamage(VerbUtility
-            .ThingsToHit(cell, caster.Map, CanHit).RandomElementWithFallback());
+        private void HitCell(IntVec3 cell) => ApplyDamage(VerbUtility.ThingsToHit(cell, caster.Map, CanHit).RandomElementWithFallback());
 
         private void ApplyDamage(Thing thing)
         {
