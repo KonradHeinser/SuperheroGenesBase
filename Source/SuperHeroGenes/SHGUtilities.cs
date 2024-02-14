@@ -406,6 +406,21 @@ namespace SuperHeroGenesBase
             }
         }
 
+        public static IEnumerable<IntVec3> AffectedCells(LocalTargetInfo target, Map map, Pawn pawn, float radius)
+        {
+            if (target.Cell.Filled(pawn.Map))
+            {
+                yield break;
+            }
+            foreach (IntVec3 item in GenRadial.RadialCellsAround(target.Cell, radius, true))
+            {
+                if (item.InBounds(map) && GenSight.LineOfSightToEdges(target.Cell, item, map, true))
+                {
+                    yield return item;
+                }
+            }
+        }
+
         public static bool EquivalentGeneLists(List<GeneDef> geneListA, List<GeneDef> geneListB)
         {
             if (geneListA.NullOrEmpty()) return geneListB.NullOrEmpty();
