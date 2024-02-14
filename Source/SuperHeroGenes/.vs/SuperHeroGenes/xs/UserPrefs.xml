@@ -3,7 +3,7 @@
     <Files>
       <File FileName="SHGUtilities.cs" Line="407" Column="10" />
       <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="162" Column="14" />
-      <File FileName="Abilities/Verb_CastAbilityLaserEyes.cs" Line="148" Column="104" />
+      <File FileName="Abilities/Verb_CastAbilityLaserEyes.cs" Line="166" Column="75" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -556,32 +556,43 @@
             <warmupTime>0.1</warmupTime>
             <range>40</range>
             <beamFullWidthRange>7</beamFullWidthRange>
-            <burstShotCount>20</burstShotCount>
+            <burstShotCount>7</burstShotCount>
             <beamWidth>5</beamWidth>
-            <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+            <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
             <beamDamageDef>SHG_Beam</beamDamageDef>
-            <soundCastTail>GunTail_Medium</soundCastTail>
-            <muzzleFlashScale>9</muzzleFlashScale>
-            <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
-            <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
+            <soundCastBeam>SHG_Laser_Shooting</soundCastBeam>
             <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
-            <beamCurvature>0.4</beamCurvature>
+            <beamCurvature>0.3</beamCurvature>
             <beamMoteDef>SHG_Mote_LaserEyeBeam</beamMoteDef>
             <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
-            <beamLineFleckDef>Fleck_BeamSpark</beamLineFleckDef>
             <beamStartOffset>0.8</beamStartOffset>
-            <beamLineFleckChanceCurve>
-                <points>
-                    <li>(0, 0)</li>
-                    <li>(0.65, 0)</li>
-                    <li>(1, 0)</li>
-                </points>
-            </beamLineFleckChanceCurve>
             <targetParams>
-                <canTargetLocations>False</canTargetLocations>
+                <canTargetLocations>True</canTargetLocations>
                 <canTargetPawns>True</canTargetPawns>
                 <canTargetBuildings>True</canTargetBuildings>
             </targetParams>
         </verbProperties>
     </AbilityDef>
+
+    <SoundDef>
+        <defName>SHG_Laser_Shooting</defName>
+        <sustain>true</sustain>
+        <context>MapOnly</context>
+        <maxSimultaneous>2</maxSimultaneous>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+            <li>
+                <tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipFolderPath>Weapon/Beamgraser/Fire</clipFolderPath>
+                    </li>
+                </grains>
+                <pitchRange>0.75</pitchRange>
+                <volumeRange>30</volumeRange>
+                <sustainRelease>2</sustainRelease>
+            </li>
+        </subSounds>
+    </SoundDef>
+    
 </Defs>

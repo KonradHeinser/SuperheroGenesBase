@@ -36,8 +36,7 @@ namespace SuperHeroGenesBase
             get
             {
                 Vector3 vector3 = CurrentTarget.CenterVector3 - initialTargetPosition;
-                return Vector3.Lerp(path[burstShotsLeft],
-                    path[Mathf.Min(burstShotsLeft + 1, path.Count - 1)], ShotProgress) + vector3;
+                return Vector3.Lerp(path[burstShotsLeft], path[Mathf.Min(burstShotsLeft + 1, path.Count - 1)], ShotProgress) + vector3;
             }
         }
 
@@ -53,8 +52,7 @@ namespace SuperHeroGenesBase
             lastShotTick = Find.TickManager.TicksGame;
             ticksToNextPathStep = verbProps.ticksBetweenBurstShots;
             IntVec3 intVec3_1 = InterpolatedPosition.Yto0().ToIntVec3();
-            IntVec3 intVec3_2 = GenSight.LastPointOnLineOfSight(caster.Position, intVec3_1,
-                c => c.CanBeSeenOverFast(caster.Map), true);
+            IntVec3 intVec3_2 = GenSight.LastPointOnLineOfSight(caster.Position, intVec3_1, c => c.CanBeSeenOverFast(caster.Map), true);
             HitCell(intVec3_2.IsValid ? intVec3_2 : intVec3_1);
             return true;
         }
@@ -74,8 +72,7 @@ namespace SuperHeroGenesBase
             Vector3 vector3_2 = InterpolatedPosition - caster.Position.ToVector3Shifted();
             float num1 = vector3_2.MagnitudeHorizontal();
             Vector3 normalized = vector3_2.Yto0().normalized;
-            IntVec3 intVec3_2 = GenSight.LastPointOnLineOfSight(caster.Position, intVec3_1,
-                c => c.CanBeSeenOverFast(caster.Map), true);
+            IntVec3 intVec3_2 = GenSight.LastPointOnLineOfSight(caster.Position, intVec3_1, c => c.CanBeSeenOverFast(caster.Map), true);
             IntVec3 intVec3_3;
             if (intVec3_2.IsValid)
             {
@@ -97,8 +94,6 @@ namespace SuperHeroGenesBase
                 mote.Maintain();
             }
 
-            if (verbProps.beamGroundFleckDef != null && Rand.Chance(verbProps.beamFleckChancePerTick))
-                FleckMaker.Static(vector3_1, caster.Map, verbProps.beamGroundFleckDef);
             if (endEffecter == null && verbProps.beamEndEffecterDef != null)
                 endEffecter = verbProps.beamEndEffecterDef.Spawn(intVec3_1, caster.Map, vector3_3);
             if (endEffecter != null)
@@ -107,28 +102,12 @@ namespace SuperHeroGenesBase
                 endEffecter.EffectTick(new TargetInfo(intVec3_1, caster.Map), TargetInfo.Invalid);
                 --endEffecter.ticksLeft;
             }
-
-            if (verbProps.beamLineFleckDef != null)
-            {
-                float num3 = 1f * num1;
-                for (int index = 0; index < (double)num3; ++index)
-                {
-                    if (Rand.Chance(verbProps.beamLineFleckChanceCurve.Evaluate(index / num3)))
-                    {
-                        Vector3 vector3_4 = index * normalized - normalized * Rand.Value + normalized / 2f;
-                        intVec3_3 = caster.Position;
-                        FleckMaker.Static(intVec3_3.ToVector3Shifted() + vector3_4, caster.Map,
-                            verbProps.beamLineFleckDef);
-                    }
-                }
-            }
-
             sustainer?.Maintain();
         }
 
         public override void WarmupComplete()
         {
-            burstShotsLeft = ShotsPerBurst;
+            burstShotsLeft = ShotsPerBurst * 2;
             state = VerbState.Bursting;
             initialTargetPosition = currentTarget.CenterVector3;
             path.Clear();
@@ -137,33 +116,27 @@ namespace SuperHeroGenesBase
             Vector3 normalized = vector3_1.normalized;
             Vector3 vector3_2 = normalized.RotatedBy(-90f);
             float num1 = verbProps.beamFullWidthRange > 0.0 ? Mathf.Min(magnitude / verbProps.beamFullWidthRange, 1f) : 1f;
-            float num2 = (verbProps.beamWidth + 1f) * num1 / ShotsPerBurst;
-            Vector3 vector3_3 = currentTarget.CenterVector3.Yto0() - vector3_2 * verbProps.beamWidth / 2f * num1;
+            float num2 = (verbProps.beamWidth + 1f) * num1 / ShotsPerBurst; Vector3 vector3_3 = currentTarget.CenterVector3.Yto0() - vector3_2 * verbProps.beamWidth / 2f * num1;
             path.Add(vector3_3);
             for (int index = 0; index < ShotsPerBurst; ++index)
             {
                 Vector3 vector3_4 = normalized - normalized / 2f;
                 Vector3 vector3_5 = Mathf.Sin((float)((index / (double)ShotsPerBurst + 0.5) * 180)) * verbProps.beamCurvature * -normalized - normalized / 2f;
-                path.Add(vector3_3 + (vector3_4 - vector3_5) * num1);
+                path.Add(vector3_3 + (vector3_4 + vector3_5) * num1);
                 vector3_3 += vector3_2 * num2;
             }
-            Vector3 normalized2 = vector3_3 + (normalized - normalized / 2f - Mathf.Sin((float)((ShotsPerBurst / (double)ShotsPerBurst + 0.5) * 180)) * verbProps.beamCurvature * -normalized - normalized / 2f) * num1 + vector3_2 * num2;
-            for (int index = 0; index < ShotsPerBurst; ++index)
-            {
-                Vector3 vector3_4 = normalized2 + normalized2 / 2f;
-                Vector3 vector3_5 = Mathf.Sin((float)((index / (double)ShotsPerBurst + 0.5) * 180)) * verbProps.beamCurvature * normalized2 + normalized2 / 2f;
-                path.Add(vector3_3 - (vector3_4 + vector3_5) * num1);
-                vector3_3 -= vector3_2 * num2;
-            }
 
-            if (verbProps.beamMoteDef != null)
-                mote = MoteMaker.MakeInteractionOverlay(verbProps.beamMoteDef, caster,
-                    new TargetInfo(path[0].ToIntVec3(), caster.Map));
+            List<Vector3> reversePath = new List<Vector3>(path);
+            reversePath.Reverse();
+            foreach (Vector3 vector in reversePath) path.Add(vector);
+
+            if (verbProps.beamMoteDef != null) mote = MoteMaker.MakeInteractionOverlay(verbProps.beamMoteDef, caster, new TargetInfo(path[0].ToIntVec3(), caster.Map));
             TryCastNextBurstShot();
             ticksToNextPathStep = verbProps.ticksBetweenBurstShots;
             endEffecter?.Cleanup();
             if (verbProps.soundCastBeam == null) return;
             sustainer = verbProps.soundCastBeam.TrySpawnSustainer(SoundInfo.InMap(caster, MaintenanceType.PerTick));
+
         }
 
         private bool CanHit(Thing thing) => thing.Spawned && !CoverUtility.ThingCovered(thing, caster.Map);
@@ -173,19 +146,14 @@ namespace SuperHeroGenesBase
         private void ApplyDamage(Thing thing)
         {
             IntVec3 intVec3_1 = InterpolatedPosition.Yto0().ToIntVec3();
-            IntVec3 intVec3_2 = GenSight.LastPointOnLineOfSight(caster.Position, intVec3_1,
-                c => c.CanBeSeenOverFast(caster.Map), true);
-            if (intVec3_2.IsValid)
-                intVec3_1 = intVec3_2;
+            IntVec3 intVec3_2 = GenSight.LastPointOnLineOfSight(caster.Position, intVec3_1, c => c.CanBeSeenOverFast(caster.Map), true);
+            if (intVec3_2.IsValid) intVec3_1 = intVec3_2;
             Map map = caster.Map;
-            if (thing == null || verbProps.beamDamageDef == null)
-                return;
+            if (thing == null || verbProps.beamDamageDef == null) return;
             float angleFlat = (currentTarget.Cell - caster.Position).AngleFlat;
-            BattleLogEntry_RangedImpact log = new BattleLogEntry_RangedImpact(caster, thing,
-                currentTarget.Thing, caster.def, null, null);
-            DamageInfo dinfo = new DamageInfo(verbProps.beamDamageDef,
-                verbProps.beamDamageDef.defaultDamage, verbProps.beamDamageDef.defaultArmorPenetration,
-                angleFlat, caster, weapon: caster.def, intendedTarget: currentTarget.Thing);
+            BattleLogEntry_RangedImpact log = new BattleLogEntry_RangedImpact(caster, thing, currentTarget.Thing, caster.def, null, null);
+            DamageInfo dinfo = new DamageInfo(verbProps.beamDamageDef, verbProps.beamDamageDef.defaultDamage,
+                verbProps.beamDamageDef.defaultArmorPenetration, angleFlat, caster, weapon: caster.def, intendedTarget: currentTarget.Thing);
             thing.TakeDamage(dinfo).AssociateWithLog(log);
         }
 
@@ -195,8 +163,7 @@ namespace SuperHeroGenesBase
             Scribe_Collections.Look(ref path, "path", LookMode.Value);
             Scribe_Values.Look(ref ticksToNextPathStep, "ticksToNextPathStep");
             Scribe_Values.Look(ref initialTargetPosition, "initialTargetPosition");
-            if (Scribe.mode != LoadSaveMode.PostLoadInit || path != null)
-                return;
+            if (Scribe.mode != LoadSaveMode.PostLoadInit || path != null) return;
             path = new List<Vector3>();
         }
 
