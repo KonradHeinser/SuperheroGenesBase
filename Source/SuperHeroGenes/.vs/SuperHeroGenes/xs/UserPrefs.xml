@@ -4,8 +4,8 @@
       <File FileName="SHGUtilities.cs" Line="422" Column="10" />
       <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="162" Column="14" />
       <File FileName="Abilities/CompProperties_SHGBlast.cs" Line="20" Column="39" />
-      <File FileName="Abilities/CompAbilityEffect_SHGBlast.cs" Line="4" Column="19" />
-      <File FileName="Abilities/CompAbilityEffect_SHGBurst.cs" Line="5" Column="12" />
+      <File FileName="Abilities/CompAbilityEffect_SHGBlast.cs" Line="80" Column="10" />
+      <File FileName="Abilities/CompAbilityEffect_SHGBurst.cs" Line="10" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
