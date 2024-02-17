@@ -13,6 +13,10 @@ namespace SuperHeroGenesBase
 
         DRGExtension extension = null;
 
+        public int cachedGeneCount = 0;
+
+        public List<AbilityDef> addedAbilities;
+
         public bool extensionAlreadyChecked = false;
 
         public Pawn Pawn => pawn;
@@ -74,10 +78,11 @@ namespace SuperHeroGenesBase
             base.PostAdd();
             if (extension == null) InitializeExtension();
             Reset();
-            SHGExtension EBSGextension = def.GetModExtension<SHGExtension>();
-            if (EBSGextension != null && !EBSGextension.hediffsToApply.NullOrEmpty())
+            SHGExtension SHGextension = def.GetModExtension<SHGExtension>();
+            if (SHGextension != null && !SHGextension.hediffsToApply.NullOrEmpty())
             {
                 HediffAdder.HediffAdding(pawn, this);
+                if (addedAbilities == null) addedAbilities = new List<AbilityDef>();
             }
         }
 
@@ -122,6 +127,18 @@ namespace SuperHeroGenesBase
         public override void Tick()
         {
             base.Tick();
+
+            if (pawn.IsHashIntervalTick(200))
+            {
+                SHGExtension SHGextension = def.GetModExtension<SHGExtension>();
+                if (SHGextension != null && !SHGextension.geneAbilities.NullOrEmpty() && pawn.genes.GenesListForReading.Count != cachedGeneCount)
+                {
+                    if (addedAbilities == null) addedAbilities = new List<AbilityDef>();
+                    addedAbilities = SHGUtilities.AbilitiesWithCertainGenes(pawn, SHGextension.geneAbilities, addedAbilities);
+                    cachedGeneCount = pawn.genes.GenesListForReading.Count;
+                }
+            }
+
             if (extension == null && !extensionAlreadyChecked)
             {
                 InitializeExtension();
@@ -237,6 +254,7 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref resourcePacksAllowed, "resourcePacksAllowed", true);
             Scribe_Values.Look(ref overchargeLeft, "overchargeLeft", 0f);
             Scribe_Values.Look(ref underchargeLeft, "underchargeLeft", 0f);
+            Scribe_Collections.Look(ref addedAbilities, "SHG_DRGAddedAbilities");
         }
     }
 }

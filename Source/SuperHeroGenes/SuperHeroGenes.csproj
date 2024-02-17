@@ -167,6 +167,7 @@
     <Compile Include="Abilities\Verb_CastAbilityLaserEyes.cs" />
     <Compile Include="Abilities\CompProperties_SHGBlast.cs" />
     <Compile Include="Abilities\CompAbilityEffect_SHGBlast.cs" />
+    <Compile Include="AbilityAndGeneLink.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

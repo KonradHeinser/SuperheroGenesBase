@@ -267,15 +267,16 @@ namespace SuperHeroGenesBase
             return null;
         }
 
-        public static bool PawnHasAnyOfGenes(Pawn pawn, List<GeneDef> genesDefs = null, List<Gene> genes = null)
+        public static bool PawnHasAnyOfGenes(Pawn pawn, List<GeneDef> geneDefs = null, List<Gene> genes = null)
         {
+            if (geneDefs.NullOrEmpty() && genes.NullOrEmpty()) return true;
             if (pawn.genes == null) return false;
 
-            if (!genesDefs.NullOrEmpty())
+            if (!geneDefs.NullOrEmpty())
             {
                 foreach (Gene gene in pawn.genes.GenesListForReading)
                 {
-                    if (genesDefs.Contains(gene.def)) return true;
+                    if (geneDefs.Contains(gene.def)) return true;
                 }
             }
             if (!genes.NullOrEmpty())
@@ -287,6 +288,29 @@ namespace SuperHeroGenesBase
             }
 
             return false;
+        }
+
+        public static bool PawnHasAllOfGenes(Pawn pawn, List<GeneDef> geneDefs = null, List<Gene> genes = null)
+        {
+            if (geneDefs.NullOrEmpty() && genes.NullOrEmpty()) return true;
+            if (pawn.genes == null) return false;
+
+            if (!geneDefs.NullOrEmpty())
+            {
+                foreach (GeneDef gene in geneDefs)
+                {
+                    if (!pawn.genes.HasGene(gene)) return false;
+                }
+            }
+            if (!genes.NullOrEmpty())
+            {
+                foreach (Gene gene in genes)
+                {
+                    if (!pawn.genes.HasGene(gene.def)) return false;
+                }
+            }
+
+            return true;
         }
 
         public static void RemoveGenesFromPawn(Pawn pawn, List<GeneDef> genes = null, GeneDef gene = null)
@@ -435,6 +459,80 @@ namespace SuperHeroGenesBase
             }
             if (!geneListB.NullOrEmpty()) return false;
             return true;
+        }
+
+        public static List<AbilityDef> AbilitiesWithCertainGenes(Pawn pawn, List<AbilityAndGeneLink> geneAbilities, List<AbilityDef> addedAbilities)
+        {
+            List<AbilityDef> abilitiesToAdd = new List<AbilityDef>();
+
+            RemovePawnAbilities(pawn, addedAbilities);
+
+            foreach (AbilityAndGeneLink link in geneAbilities)
+            {
+                if (link.abilities.NullOrEmpty()) continue;
+                if (PawnHasAnyOfGenes(pawn, link.requireOneOfGenes) && (link.forbiddenGenes.NullOrEmpty() || !PawnHasAnyOfGenes(pawn, link.forbiddenGenes)) && PawnHasAllOfGenes(pawn, link.requiredGenes))
+                {
+                    foreach (AbilityDef ability in link.abilities) abilitiesToAdd.Add(ability);
+                }
+            }
+
+            return GivePawnAbilities(pawn, abilitiesToAdd);
+        }
+
+        public static List<AbilityDef> GivePawnAbilities(Pawn pawn, List<AbilityDef> abilities = null, AbilityDef ability = null)
+        {
+            List<AbilityDef> addedAbilities = new List<AbilityDef>();
+
+            if (ability != null)
+            {
+                if (pawn.abilities.GetAbility(ability) == null)
+                {
+                    pawn.abilities.GainAbility(ability);
+                    addedAbilities.Add(ability);
+                }
+            }
+
+            if (!abilities.NullOrEmpty())
+            {
+                foreach (AbilityDef abilityDef in abilities)
+                {
+                    if (pawn.abilities.GetAbility(abilityDef) == null)
+                    {
+                        pawn.abilities.GainAbility(abilityDef);
+                        addedAbilities.Add(abilityDef);
+                    }
+                }
+            }
+
+            return addedAbilities;
+        }
+
+        public static List<AbilityDef> RemovePawnAbilities(Pawn pawn, List<AbilityDef> abilities = null, AbilityDef ability = null)
+        {
+            List<AbilityDef> removedAbilities = new List<AbilityDef>();
+
+            if (ability != null)
+            {
+                if (pawn.abilities.GetAbility(ability) != null)
+                {
+                    pawn.abilities.RemoveAbility(ability);
+                    removedAbilities.Add(ability);
+                }
+            }
+
+            if (!abilities.NullOrEmpty())
+            {
+                foreach (AbilityDef abilityDef in abilities)
+                {
+                    if (pawn.abilities.GetAbility(abilityDef) != null)
+                    {
+                        pawn.abilities.RemoveAbility(abilityDef);
+                        removedAbilities.Add(abilityDef);
+                    }
+                }
+            }
+
+            return removedAbilities;
         }
 
         public static void HandleNeedOffsets(Pawn pawn, List<NeedOffset> needOffsets, bool preventRepeats = true, int hashInterval = 200, bool hourlyRate = false, bool dailyRate = false)

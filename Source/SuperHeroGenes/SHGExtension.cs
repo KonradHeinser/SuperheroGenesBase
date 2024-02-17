@@ -15,6 +15,9 @@ namespace SuperHeroGenesBase
         public List<HediffsToParts> hediffsToApply;
         public bool vanishingGene = false;
 
+
+        public List<AbilityAndGeneLink> geneAbilities;
+
         // Used in ThoughtWorker_Gene_GeneSocial
         public bool compoundingHatred = false; // When true, each gene that is found in checked genes increases the stage
         public int maxStages = 1; // Required if compoundingHatred is true
