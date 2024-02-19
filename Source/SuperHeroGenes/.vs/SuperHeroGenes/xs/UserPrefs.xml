@@ -1,21 +1,24 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SHGExtension.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VFECompatabilityUtilities.cs">
     <Files>
       <File FileName="SHGUtilities.cs" Line="477" Column="14" />
       <File FileName="DynamicResourceGenes/ResourceDrainGene.cs" Line="20" Column="28" />
-      <File FileName="DynamicResourceGenes/ResourceGene.cs" Line="120" Column="21" />
+      <File FileName="DynamicResourceGenes/ResourceGene.cs" Line="137" Column="125" />
       <File FileName="AbilityAndGeneLink.cs" Line="15" Column="1" />
-      <File FileName="Genes/HediffAdder.cs" Line="1" Column="1" />
-      <File FileName="SHGExtension.cs" Line="18" Column="9" />
+      <File FileName="Abilities/CompAbilityAffect_CreateItems.cs" Line="31" Column="78" />
+      <File FileName="Abilities/CompProperties_AbilityCreateItems.cs" Line="7" Column="51" />
+      <File FileName="Abilities/ThingPatternPart.cs" Line="18" Column="1" />
+      <File FileName="Abilities/CompAbilityEffect_InstantKill.cs" Line="46" Column="29" />
+      <File FileName="Abilities/CompProperties_InstantKill.cs" Line="3" Column="1" />
+      <File FileName="VFECompatabilityUtilities.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="DynamicResourceGenes" expanded="True" />
+              <Node name="References" selected="True" />
               <Node name="Genes" expanded="True" />
-              <Node name="SHGExtension.cs" selected="True" />
             </Node>
           </Node>
         </State>

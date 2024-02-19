@@ -156,11 +156,6 @@
 
     <!--970.0~977.9 are for outside paths. If base reaches this far, it's gone too far-->
 
-    <GeneCategoryDef>
-        <defName>SuperPowersRadioactiveDestroyer</defName>
-        <label>radioactive powers - destroyer</label>
-        <displayPriorityInXenotype>969.9</displayPriorityInXenotype>
-    </GeneCategoryDef>
 
     <!--960.0~967.9 are for outside paths. If base reaches this far, it's gone too far-->
 
@@ -345,7 +340,7 @@
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
-        <!--Radioactive bases-->
+        <!--Radiomancer bases-->
 
 
         <!--Superhero Gene Base-->

@@ -52,6 +52,10 @@
       <HintPath>..\..\..\..\RimWorldLinux_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="VFECore">
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\2023507013\1.4\Assemblies\VFECore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,14 +70,6 @@
     <Compile Include="Abilities\CompProperties_AbilityBloodDrain.cs" />
     <Compile Include="Abilities\CompProperties_AbilityRemoveMultipleHediffs.cs" />
     <Compile Include="Abilities\CompProperties_SHGBurst.cs" />
-    <Compile Include="Hediffs\HediffComp_GainRandomGeneSet.cs" />
-    <Compile Include="Hediffs\HediffComp_GiveAbilityAtSeverity.cs" />
-    <Compile Include="Hediffs\HediffComp_GiveHediffsToNonAlliesInRange.cs" />
-    <Compile Include="Hediffs\HediffComp_TieredRegeneration.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_GainRandomGeneSet.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_GiveAbilityAtSeverity.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_GiveHediffsToNonAlliesInRange.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_TieredRegeneration.cs" />
     <Compile Include="Hediffs\RandomXenoGenes.cs" />
     <Compile Include="Hediffs\RegenSet.cs" />
     <Compile Include="Genes\Hediff_SecondHeart.cs" />
@@ -89,17 +85,11 @@
     <Compile Include="Abilities\CompProperties_LoveTheCaster.cs" />
     <Compile Include="Abilities\CompAbilityEffect_LoveTheCaster.cs" />
     <Compile Include="Abilities\Hediff_LoveTheCaster.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_FactionBond.cs" />
-    <Compile Include="Hediffs\HediffComp_FactionBond.cs" />
     <Compile Include="Abilities\HediffToGive.cs" />
     <Compile Include="Abilities\CompProperties_AbilityGiveMultipleHediffs.cs" />
     <Compile Include="Abilities\CompAbilityEffect_GiveMultipleHediffs.cs" />
     <Compile Include="GRCExtension.cs" />
-    <Compile Include="Hediffs\HediffComp_CreateOtherHediffs.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_CreateOtherHediffs.cs" />
     <Compile Include="Hediffs\HediffsAtSeverities.cs" />
-    <Compile Include="Hediffs\HediffComp_SeverityByNearbyPawns.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_SeverityByNearbyPawns.cs" />
     <Compile Include="ModSettings\SuperheroGenes_Settings.cs" />
     <Compile Include="ModSettings\PatchOperationSetting.cs" />
     <Compile Include="DynamicResourceGenes\ResourceGene.cs" />
@@ -149,25 +139,45 @@
     <Compile Include="IncidentWorker_CaravanArrivalBetterTributeCollector.cs" />
     <Compile Include="Abilities\CompAbilityEffect_LongDistanceTeleport.cs" />
     <Compile Include="Abilities\CompProperties_LongDistanceTeleport.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_SeverityByMentalState.cs" />
     <Compile Include="Hediffs\BurstHediffCompBase.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_HediffOnKill.cs" />
-    <Compile Include="Hediffs\HediffComp_ExplodeOnDeath.cs" />
     <Compile Include="Hediffs\MentalStateEffect.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_ExplodeOnDeath.cs" />
     <Compile Include="Hediffs\BurstHediffPropertiesBase.cs" />
-    <Compile Include="Hediffs\HediffComp_SeverityByMentalState.cs" />
-    <Compile Include="Hediffs\HediffComp_HediffOnKill.cs" />
     <Compile Include="Abilities\CompProperties_AbilityOffsetNeed.cs" />
     <Compile Include="Abilities\CompAbilityEffect_OffsetNeed.cs" />
     <Compile Include="NeedOffset.cs" />
-    <Compile Include="Hediffs\HediffComp_TemporaryGenes.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_TemporaryGenes.cs" />
     <Compile Include="Hediffs\GenesAtSeverity.cs" />
     <Compile Include="Abilities\Verb_CastAbilityLaserEyes.cs" />
     <Compile Include="Abilities\CompProperties_SHGBlast.cs" />
     <Compile Include="Abilities\CompAbilityEffect_SHGBlast.cs" />
     <Compile Include="AbilityAndGeneLink.cs" />
+    <Compile Include="Abilities\CompProperties_AbilityCreateItems.cs" />
+    <Compile Include="Abilities\CompAbilityAffect_CreateItems.cs" />
+    <Compile Include="Abilities\ThingPatternPart.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_InstantKill.cs" />
+    <Compile Include="Abilities\CompProperties_InstantKill.cs" />
+    <Compile Include="VFECompatabilityUtilities.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_CreateOtherHediffs.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_ExplodeOnDeath.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_FactionBond.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_GainRandomGeneSet.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_GiveAbilityAtSeverity.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_GiveHediffsToNonAlliesInRange.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_HediffOnKill.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_SeverityByMentalState.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_SeverityByNearbyPawns.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_TemporaryGenes.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_TieredRegeneration.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_CreateOtherHediffs.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_ExplodeOnDeath.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_FactionBond.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_GainRandomGeneSet.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_GiveAbilityAtSeverity.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_GiveHediffsToNonAlliesInRange.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_HediffOnKill.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_SeverityByMentalState.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_SeverityByNearbyPawns.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_TemporaryGenes.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_TieredRegeneration.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />
@@ -177,6 +187,8 @@
     <Folder Include="DynamicResourceGenes\" />
     <Folder Include="ModSettings\" />
     <Folder Include="SuperAI\" />
+    <Folder Include="Hediffs\Comps\" />
+    <Folder Include="Hediffs\CompProperties\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

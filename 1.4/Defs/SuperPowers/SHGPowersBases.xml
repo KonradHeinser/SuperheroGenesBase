@@ -186,6 +186,7 @@
         <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <hostile>false</hostile>
         <verbProperties>
             <range>24.9</range>
             <targetParams>

@@ -27,7 +27,7 @@
         <defName>SHG_Proj_Blast_Fire</defName>
         <label>fire ball</label>
         <graphicData>
-            <texPath>Things/Projectile/Acid</texPath>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
             <shaderType>MoteGlow</shaderType>
         </graphicData>
         <projectile>
@@ -42,7 +42,7 @@
         <defName>SHG_Proj_Blast_Acid</defName>
         <label>acid ball</label>
         <graphicData>
-            <texPath>Things/Projectile/Acid</texPath>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
             <shaderType>MoteGlow</shaderType>
         </graphicData>
         <projectile>
@@ -57,7 +57,7 @@
         <defName>SHG_Proj_Blast_Lightning</defName>
         <label>lightning ball</label>
         <graphicData>
-            <texPath>Things/Projectile/Acid</texPath>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
             <shaderType>MoteGlow</shaderType>
         </graphicData>
         <projectile>
@@ -71,7 +71,7 @@
         <defName>SHG_Proj_Blast_Ice</defName>
         <label>ice ball</label>
         <graphicData>
-            <texPath>Things/Projectile/Acid</texPath>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
         </graphicData>
         <projectile>
             <damageDef>SHG_Ice</damageDef>
@@ -83,7 +83,7 @@
         <defName>SHG_Proj_Blast_Toxic</defName>
         <label>toxic ball</label>
         <graphicData>
-            <texPath>Things/Projectile/Acid</texPath>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
         </graphicData>
         <projectile>
             <damageDef>ToxGas</damageDef>
@@ -96,7 +96,7 @@
         <defName>SHG_Proj_Blast_EMP</defName>
         <label>electricity ball</label>
         <graphicData>
-            <texPath>Things/Projectile/Acid</texPath>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
             <shaderType>MoteGlow</shaderType>
         </graphicData>
         <projectile>
@@ -110,7 +110,7 @@
         <defName>SHG_Proj_Blast_Foam</defName>
         <label>foam ball</label>
         <graphicData>
-            <texPath>Things/Projectile/Acid</texPath>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
         </graphicData>
         <projectile>
             <ai_IsIncendiary>false</ai_IsIncendiary>
@@ -128,7 +128,7 @@
         <defName>SHG_Proj_Blast_Petrification</defName>
         <label>petrification ball</label>
         <graphicData>
-            <texPath>Things/Projectile/Acid</texPath>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
         </graphicData>
         <projectile>
             <damageAmountBase>2</damageAmountBase>
@@ -144,7 +144,7 @@
         <defName>SHG_Proj_Blast_Water</defName>
         <label>water ball</label>
         <graphicData>
-            <texPath>Things/Projectile/Acid</texPath>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
         </graphicData>
         <projectile>
             <damageDef>SHG_Water</damageDef>
