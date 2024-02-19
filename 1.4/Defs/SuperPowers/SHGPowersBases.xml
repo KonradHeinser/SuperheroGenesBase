@@ -167,7 +167,6 @@
             <Ability_Duration>0</Ability_Duration>
             <Ability_PsyfocusCost>0.0</Ability_PsyfocusCost>
         </statBases>
-        <warmupSound>PsycastCastLoop</warmupSound>
         <verbProperties>
             <verbClass>Verb_CastPsycast</verbClass>
             <requireLineOfSight>True</requireLineOfSight>

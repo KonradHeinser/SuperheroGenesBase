@@ -10,15 +10,18 @@
       <File FileName="Abilities/ThingPatternPart.cs" Line="18" Column="1" />
       <File FileName="Abilities/CompAbilityEffect_InstantKill.cs" Line="46" Column="29" />
       <File FileName="Abilities/CompProperties_InstantKill.cs" Line="3" Column="1" />
-      <File FileName="VFECompatabilityUtilities.cs" Line="1" Column="1" />
+      <File FileName="VFECompatabilityUtilities.cs" Line="18" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="References" selected="True" />
               <Node name="Genes" expanded="True" />
+              <Node name="Hediffs" expanded="True">
+                <Node name="CompProperties" expanded="True" />
+                <Node name="Comps" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
