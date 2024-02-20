@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <AbilityDef Abstract="true" Name="SHGPowerBurstBase" ParentName="SHGPowerAbilitiesBase">
-        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+    <AbilityDef Abstract="true" Name="SHGPowerBurstBase" ParentName="SHGSelfCastBase">
         <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
-        <targetRequired>false</targetRequired>
-        <showCastingProgressBar>true</showCastingProgressBar>
-        <verbProperties>
-            <verbClass>Verb_CastAbility</verbClass>
-            <requireLineOfSight>false</requireLineOfSight>
-            <range>5</range>
-            <drawAimPie>false</drawAimPie>
-            <targetParams>
-                <canTargetSelf>true</canTargetSelf>
-            </targetParams>
-        </verbProperties>
     </AbilityDef>
 
     <AbilityDef ParentName="SHGPowerBurstBase">

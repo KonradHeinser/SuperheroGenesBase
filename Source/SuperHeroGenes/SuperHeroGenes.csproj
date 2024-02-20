@@ -178,6 +178,8 @@
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_SeverityByNearbyPawns.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_TemporaryGenes.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_TieredRegeneration.cs" />
+    <Compile Include="DynamicResourceGenes\CompProperties_EnergyBurst.cs" />
+    <Compile Include="DynamicResourceGenes\CompAbilityEffect_EnergyBurst.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

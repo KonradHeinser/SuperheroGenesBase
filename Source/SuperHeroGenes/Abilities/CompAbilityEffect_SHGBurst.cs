@@ -42,7 +42,10 @@ namespace SuperHeroGenesBase
 
         public override void DrawEffectPreview(LocalTargetInfo target)
         {
-            GenDraw.DrawFieldEdges(SHGUtilities.AffectedCells(parent.pawn, parent.pawn.Map, parent.pawn, Props.radius).ToList(), Valid(target) ? Color.white : Color.red);
+            float radius = Props.radius;
+            if (Props.statRadius != null && parent.pawn.GetStatValue(Props.statRadius) >= 0) radius = parent.pawn.GetStatValue(Props.statRadius);
+
+            GenDraw.DrawFieldEdges(SHGUtilities.AffectedCells(parent.pawn, parent.pawn.Map, parent.pawn, radius).ToList(), Valid(target) ? Color.white : Color.red);
         }
     }
 }

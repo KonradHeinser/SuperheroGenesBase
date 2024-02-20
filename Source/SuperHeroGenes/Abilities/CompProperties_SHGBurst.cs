@@ -34,8 +34,7 @@ namespace SuperHeroGenesBase
         public float screenShakeFactor = 0;
         public bool injureSelf = true;
 
-
-        public CompProperties_SHGBurst() 
+        public CompProperties_SHGBurst()
         {
             compClass = typeof(CompAbilityEffect_SHGBurst);
         }

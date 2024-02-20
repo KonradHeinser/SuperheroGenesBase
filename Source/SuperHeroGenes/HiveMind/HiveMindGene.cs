@@ -18,7 +18,7 @@ namespace SuperHeroGenesBase
         public override void PostAdd()
         {
             base.PostAdd();
-            if (def.HasModExtension<HiveMindExtension>()) 
+            if (def.HasModExtension<HiveMindExtension>())
             {
                 extension = def.GetModExtension<HiveMindExtension>();
                 if (!extension.hiveRolesToCheckFor.NullOrEmpty())
@@ -105,30 +105,34 @@ namespace SuperHeroGenesBase
         public List<Pawn> GetAllies()
         {
             hiveGenesPresent.Clear();
-            List<Pawn> allies = new List<Pawn>(pawn.Map.mapPawns.SpawnedPawnsInFaction(pawn.Faction));
+            List<Pawn> allies = new List<Pawn>();
+            if (pawn.Map != null) allies = new List<Pawn>(pawn.Map.mapPawns.SpawnedPawnsInFaction(pawn.Faction));
             List<Pawn> removeAllies = new List<Pawn>();
-            foreach(Pawn ally in allies)
+            if (!allies.NullOrEmpty())
             {
-                bool flag = true;
-                if (!ally.Dead && ally.genes != null)
+                foreach (Pawn ally in allies)
                 {
-                    if (ally.genes?.GetFirstGeneOfType<HiveMindGene>() != null)
+                    bool flag = true;
+                    if (!ally.Dead && ally.genes != null)
                     {
-                        List<Gene> genesListForReading = new List<Gene>(ally.genes.GenesListForReading);
-                        foreach (Gene gene in genesListForReading)
+                        if (ally.genes?.GetFirstGeneOfType<HiveMindGene>() != null)
                         {
-                            if (gene.Active && gene.def.HasModExtension<HiveMindExtension>() && gene.def.GetModExtension<HiveMindExtension>().hiveKey == extension.hiveKey)
+                            List<Gene> genesListForReading = new List<Gene>(ally.genes.GenesListForReading);
+                            foreach (Gene gene in genesListForReading)
                             {
-                                hiveGenesPresent.Add(gene.def);
-                                flag = false;
-                                break;
+                                if (gene.Active && gene.def.HasModExtension<HiveMindExtension>() && gene.def.GetModExtension<HiveMindExtension>().hiveKey == extension.hiveKey)
+                                {
+                                    hiveGenesPresent.Add(gene.def);
+                                    flag = false;
+                                    break;
+                                }
                             }
                         }
                     }
+                    if (flag) removeAllies.Add(ally);
                 }
-                if (flag) removeAllies.Add(ally);
+                foreach (Pawn ally in removeAllies) allies.Remove(ally);
             }
-            foreach (Pawn ally in removeAllies) allies.Remove(ally);
             return allies;
         }
 
@@ -192,7 +196,7 @@ namespace SuperHeroGenesBase
         }
 
         public void BuildHiveCount(List<Pawn> allies)
-        { 
+        {
             hiveCounts.Clear();
             foreach (GeneDef gene in hiveGenesPresent)
             {

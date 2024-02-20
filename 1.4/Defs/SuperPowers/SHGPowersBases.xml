@@ -161,6 +161,20 @@
         </verbProperties>
     </AbilityDef>
 
+    <AbilityDef Abstract="True" ParentName="SHGPowerAbilitiesBase" Name="SHGSelfCastBase">
+        <targetRequired>false</targetRequired>
+        <showCastingProgressBar>true</showCastingProgressBar>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>false</requireLineOfSight>
+            <range>0.9</range>
+            <drawAimPie>false</drawAimPie>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
     <AbilityDef Abstract="True" Name="SHGPsionicBase" ParentName="SHGPowerAbilitiesBase">
         <abilityClass>Psycast</abilityClass>
         <statBases>

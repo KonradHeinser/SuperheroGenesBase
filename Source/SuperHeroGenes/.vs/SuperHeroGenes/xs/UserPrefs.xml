@@ -1,27 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="VFECompatabilityUtilities.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DynamicResourceGenes/CompAbilityEffect_EnergyBurst.cs">
     <Files>
-      <File FileName="SHGUtilities.cs" Line="477" Column="14" />
-      <File FileName="DynamicResourceGenes/ResourceDrainGene.cs" Line="20" Column="28" />
-      <File FileName="DynamicResourceGenes/ResourceGene.cs" Line="137" Column="125" />
-      <File FileName="AbilityAndGeneLink.cs" Line="15" Column="1" />
-      <File FileName="Abilities/CompAbilityAffect_CreateItems.cs" Line="31" Column="78" />
-      <File FileName="Abilities/CompProperties_AbilityCreateItems.cs" Line="7" Column="51" />
-      <File FileName="Abilities/ThingPatternPart.cs" Line="18" Column="1" />
-      <File FileName="Abilities/CompAbilityEffect_InstantKill.cs" Line="46" Column="29" />
-      <File FileName="Abilities/CompProperties_InstantKill.cs" Line="3" Column="1" />
-      <File FileName="VFECompatabilityUtilities.cs" Line="18" Column="1" />
+      <File FileName="Abilities/CompAbilityEffect_SHGBurst.cs" Line="43" Column="47" />
+      <File FileName="Abilities/CompProperties_SHGBurst.cs" Line="7" Column="41" />
+      <File FileName="DynamicResourceGenes/CompAbilityEffect_EnergyBurst.cs" Line="158" Column="68" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Genes" expanded="True" />
-              <Node name="Hediffs" expanded="True">
-                <Node name="CompProperties" expanded="True" />
-                <Node name="Comps" expanded="True" />
+              <Node name="Abilities" expanded="True" />
+              <Node name="DynamicResourceGenes" expanded="True">
+                <Node name="CompAbilityEffect_EnergyBurst.cs" selected="True" />
               </Node>
+              <Node name="Genes" expanded="True" />
+              <Node name="HiveMind" expanded="True" />
             </Node>
           </Node>
         </State>
