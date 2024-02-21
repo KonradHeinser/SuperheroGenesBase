@@ -30,6 +30,25 @@ namespace SuperHeroGenesBase
             {
                 if (Active)
                 {
+                    if (extension == null && !extensionAlreadyChecked) InitializeExtension();
+                    if (extension != null)
+                    {
+                        float time = GenLocalDate.DayPercent(Pawn);
+                        if (time < extension.startTime || time > extension.endTime) return false;
+
+                        if (extension.minLightLevel > 0 || extension.maxLightLevel > 0)
+                        {
+                            float light = pawn.Map.glowGrid.GameGlowAt(pawn.Position, false);
+                            if (extension.minLightLevel > 0 && light < extension.minLightLevel) return false;
+                            if (extension.maxLightLevel > 0 && light > extension.maxLightLevel) return false;
+                        }
+
+                        if (!extension.requireOneOfHediffs.NullOrEmpty() && !SHGUtilities.PawnHasAnyOfHediffs(pawn, extension.requireOneOfHediffs)) return false;
+                        if (!SHGUtilities.PawnHasAllOfHediffs(pawn, extension.requiredHediffs)) return false;
+                        if (SHGUtilities.PawnHasAnyOfHediffs(pawn, extension.forbiddenHediffs)) return false;
+
+                        if (!SHGUtilities.AllNeedLevelsMet(pawn, extension.needLevels)) return false;
+                    }
                     return true;
                 }
                 return false;
@@ -147,7 +166,7 @@ namespace SuperHeroGenesBase
             {
                 if (extension.maxStat != null || extension.maxFactorStat != null) CreateMax(extension.maximum, extension.maxStat, extension.maxFactorStat);
             }
-            OffsetResource(pawn, ResourceLossPerDay * -1, this, extension, false, true, true);
+            if (CanOffset) OffsetResource(pawn, ResourceLossPerDay * -1, this, extension, false, true, true);
         }
 
         public void CreateMax(float maximum = 1f, StatDef maxStat = null, StatDef maxFactorStat = null)
@@ -190,7 +209,7 @@ namespace SuperHeroGenesBase
                 resourcePacksAllowed = extension.resourcePacksAllowed;
                 if (extension.maximum != 1f || extension.maxStat != null || extension.maxFactorStat != null) CreateMax(extension.maximum, extension.maxStat, extension.maxFactorStat);
             }
-            else Log.Error(def + "is missing the DRGExtension modex");
+            else Log.Error(def + "is missing the DRGExtension modextension");
         }
 
         public static void OffsetResource(Pawn pawn, float offset, ResourceGene resourceGene, DRGExtension extension = null, bool applyStatFactor = false, bool dailyValue = false, bool checkPassiveStat = false, bool storeLimitPassing = false)

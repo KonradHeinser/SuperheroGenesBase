@@ -212,7 +212,7 @@
 
     <ThingDef ParentName="EtherealThingBase">
         <defName>SHG_Psionist_Star</defName>
-        <label>star rift</label>
+        <label>star</label>
         <thingClass>ThingWithComps</thingClass>
         <tickerType>Normal</tickerType>
         <drawerType>RealtimeOnly</drawerType>
@@ -234,6 +234,7 @@
         </graphicData>
         <comps>
             <li Class="CompProperties_Glower">
+                <overlightRadius>10</overlightRadius>
                 <glowRadius>20</glowRadius>
                 <glowColor>(217,217,208,0)</glowColor>
             </li>

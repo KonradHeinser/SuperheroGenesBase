@@ -151,7 +151,7 @@
     <Compile Include="Abilities\CompAbilityEffect_SHGBlast.cs" />
     <Compile Include="AbilityAndGeneLink.cs" />
     <Compile Include="Abilities\CompProperties_AbilityCreateItems.cs" />
-    <Compile Include="Abilities\CompAbilityAffect_CreateItems.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_CreateItems.cs" />
     <Compile Include="Abilities\ThingPatternPart.cs" />
     <Compile Include="Abilities\CompAbilityEffect_InstantKill.cs" />
     <Compile Include="Abilities\CompProperties_InstantKill.cs" />
@@ -180,6 +180,7 @@
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_TieredRegeneration.cs" />
     <Compile Include="DynamicResourceGenes\CompProperties_EnergyBurst.cs" />
     <Compile Include="DynamicResourceGenes\CompAbilityEffect_EnergyBurst.cs" />
+    <Compile Include="DynamicResourceGenes\NeedLevel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

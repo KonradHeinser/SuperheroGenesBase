@@ -12,7 +12,7 @@ namespace SuperHeroGenesBase
 
         public CompProperties_AbilityCreateItems()
         {
-            compClass = typeof(CompAbilityAffect_CreateItems);
+            compClass = typeof(CompAbilityEffect_CreateItems);
         }
     }
 }

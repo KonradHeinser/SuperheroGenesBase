@@ -1,9 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="DynamicResourceGenes/CompAbilityEffect_EnergyBurst.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SHGUtilities.cs">
     <Files>
-      <File FileName="Abilities/CompAbilityEffect_SHGBurst.cs" Line="43" Column="47" />
-      <File FileName="Abilities/CompProperties_SHGBurst.cs" Line="7" Column="41" />
-      <File FileName="DynamicResourceGenes/CompAbilityEffect_EnergyBurst.cs" Line="158" Column="68" />
+      <File FileName="DynamicResourceGenes/DRGExtension.cs" Line="43" Column="61" />
+      <File FileName="DynamicResourceGenes/ResourceGene.cs" Line="46" Column="86" />
+      <File FileName="DynamicResourceGenes/ResourceDrainGene.cs" Line="28" Column="21" />
+      <File FileName="DynamicResourceGenes/NeedLevels.cs" Line="12" Column="1" />
+      <File FileName="DynamicResourceGenes/GeneGizmo_ResourceGene.cs" Line="20" Column="10" />
+      <File FileName="SHGUtilities.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,11 +14,9 @@
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
               <Node name="Abilities" expanded="True" />
-              <Node name="DynamicResourceGenes" expanded="True">
-                <Node name="CompAbilityEffect_EnergyBurst.cs" selected="True" />
-              </Node>
+              <Node name="DynamicResourceGenes" expanded="True" />
               <Node name="Genes" expanded="True" />
-              <Node name="HiveMind" expanded="True" />
+              <Node name="SHGUtilities.cs" selected="True" />
             </Node>
           </Node>
         </State>

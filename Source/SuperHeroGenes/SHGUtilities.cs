@@ -181,6 +181,40 @@ namespace SuperHeroGenesBase
             return false;
         }
 
+        public static bool PawnHasAnyOfHediffs(Pawn pawn, List<HediffDef> hediffs)
+        {
+            if (hediffs.NullOrEmpty()) return false;
+            foreach (HediffDef hediff in hediffs)
+            {
+                if (HasHediff(pawn, hediff)) return true;
+            }
+            return false;
+        }
+
+        public static bool PawnHasAllOfHediffs(Pawn pawn, List<HediffDef> hediffs)
+        {
+            if (hediffs.NullOrEmpty()) return true;
+            foreach (HediffDef hediff in hediffs)
+            {
+                if (!HasHediff(pawn, hediff)) return false;
+            }
+            return true;
+        }
+
+        public static bool AllNeedLevelsMet(Pawn pawn, List<NeedLevel> needLevels)
+        {
+            if (needLevels.NullOrEmpty() || pawn.needs == null) return true;
+            foreach (NeedLevel needLevel in needLevels)
+            {
+                Need need = pawn.needs.TryGetNeed(needLevel.need);
+                if (need != null)
+                {
+                    if (need.CurLevel < needLevel.minNeedLevel || need.CurLevel > needLevel.maxNeedLevel) return false;
+                }
+            }
+            return true;
+        }
+
         // AI stuff
 
         public static bool NeedToMove(Ability ability, Pawn pawn, Pawn targetPawn = null)

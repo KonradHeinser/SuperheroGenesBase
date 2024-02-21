@@ -7,7 +7,7 @@ using System;
 
 namespace SuperHeroGenesBase
 {
-    public class CompAbilityAffect_CreateItems : CompAbilityEffect
+    public class CompAbilityEffect_CreateItems : CompAbilityEffect
     {
         public new CompProperties_AbilityCreateItems Props => (CompProperties_AbilityCreateItems)props;
 
@@ -25,17 +25,13 @@ namespace SuperHeroGenesBase
             {
                 item.DeSpawn();
             }
-            Log.Message("Done despawning");
             foreach (IntVec3 item2 in AffectedCells(target, map))
             {
-                Log.Message("Placing an item at " + item2.x + " " + item2.z);
-                for (int i = 0; i < Math.Max(partList[item2].count, partList[item2].thing.stackLimit); i++)
-                {
-                    GenSpawn.Spawn(partList[item2].thing, item2, map);
-                }
+                Thing thing = ThingMaker.MakeThing(partList[item2].thing);
+                thing.stackCount = Math.Max(partList[item2].count, partList[item2].thing.stackLimit);
+                GenSpawn.Spawn(thing, item2, map);
                 if (Props.sendSkipSignal) CompAbilityEffect_Teleport.SendSkipUsedSignal(item2, parent.pawn);
             }
-            Log.Message("Done spawning");
             foreach (Thing item3 in list)
             {
                 IntVec3 intVec = IntVec3.Invalid;
