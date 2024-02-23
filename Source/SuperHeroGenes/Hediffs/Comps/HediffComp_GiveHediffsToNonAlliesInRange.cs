@@ -39,18 +39,15 @@ namespace SuperHeroGenesBase
                 {
                     if (allies.Contains(item) || (item.Faction != null && item.Faction.AllyOrNeutralTo(Pawn.Faction))) continue; // If it's an ally/non-enemy
                     if (item.Dead || item.health == null || (Props.targetingParameters != null && !Props.targetingParameters.CanTarget(item))) continue;
-                    Log.Message("Checking range");
                     if (Props.rangeStat != null)
                     {
                         if (!(item.Position.DistanceTo(parent.pawn.Position) <= parent.pawn.GetStatValue(Props.rangeStat))) break;
                     }
                     else if (!(item.Position.DistanceTo(parent.pawn.Position) <= Props.range)) break;
                     if (Props.psychic && item.GetStatValue(StatDefOf.PsychicSensitivity) == 0) continue;
-                    Log.Message("Checking hediff");
                     Hediff hediff = item.health.hediffSet.GetFirstHediffOfDef(Props.hediff);
                     if (hediff == null)
                     {
-                        Log.Message("Adding hediff");
                         hediff = item.health.AddHediff(Props.hediff, item.health.hediffSet.GetBrain());
                         hediff.Severity = Props.initialSeverity;
                         HediffComp_Link hediffComp_Link = hediff.TryGetComp<HediffComp_Link>();

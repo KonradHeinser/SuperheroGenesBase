@@ -36,8 +36,6 @@ namespace SuperHeroGenesBase
 
         public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            base.Apply(target, dest);
-
             if (target.Pawn != null && target.Pawn.ageTracker.AgeBiologicalYearsFloat < 16f)
             {
                 Messages.Message("CannotUseAbility".Translate(parent.def.label) + ": " + "AbilityCantApplyTooYoung".Translate(target.Pawn), target.Pawn, MessageTypeDefOf.RejectInput, historical: false);

@@ -250,4 +250,142 @@
             <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
         </statFactors>
     </GeneDef>
+
+    <GeneDef ParentName="SuperMutationsBase">
+        <defName>SHG_HALK</defName>
+        <label>HALK</label>
+        <description>HALKs, or Hyper-Agressive Large Killers, first came into existence long before even the first supers. After an extremely long development with many destroyed labs and dead scientists, it was eventually integrated with the superhero gene in hopes to avoid more destroyed labs and dead people with some success. While calm, HALKs display an exceptional level of intelligence, though faulty genetic sequences cause them to be almost completely useless for tasks like hunting and hauling due to their greatly weakened bodies. When they choose to fight though, they become extremely dangerous killing machines.\n\nScientists have found two major downsides to this mutation. One, its genetic rewriting makes it impossible to apply some other genes, and two, if the pawn experiences a violent mental break, they become even stronger than they would be if just drafted, making them very difficult to stop.\n\nWhile historians cannot find the exact point when the name was decided, it is commonly believed that what it meant was decided second, and the strange color the pawn turns into is caused for a related reason.</description>
+        <iconPath>Mutations/HALK</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>13</displayOrderInCategory>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <aggroMentalBreakSelectionChanceFactor>999</aggroMentalBreakSelectionChanceFactor>
+        <customEffectDescriptions>
+            <li>Very weak and very intelligence while undrafted.</li>
+            <li>Exceptional melee and shooting while drafted.</li>
+            <li>In case of violent mental break, may need to pray to your deity of choice, plus a few extra to be safe.</li>
+            <li>This "constantly mutates" the pawn's genes causing this to be incompatible with various other genes, most notable ones being various combat genes.</li>
+            <li>Having RedMattis's framework installed causes size changes while drafted or violent.</li>
+        </customEffectDescriptions>
+        <exclusionTags>
+            <li>Beauty</li>
+            <li>MeleeDamage</li>
+            <li>Aptitude_Shooting</li>
+            <li>Aptitude_Melee</li>
+            <li>Aptitude_Social</li>
+            <li>Aptitude_Intellectual</li>
+            <li>Aggressive</li>
+            <li>Aggression</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply>
+                    <li>
+                        <hediff>SHG_HALK</hediff>
+                        <severity>1</severity>
+                    </li>
+                </hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <HediffDef>
+        <defName>SHG_HALK</defName>
+        <label>HALK</label>
+        <description>This pawn is a Hyper-Agressive Large Killer, completely distinct from any fictional superheroes in ancient stories.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <initialSeverity>0.001</initialSeverity>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>3.0</maxSeverity>
+        <stages>
+            <li>
+                <minSeverity>1</minSeverity>
+                <label>calm</label>
+                <statFactors>
+                    <CarryingCapacity>0.5</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">0.5</CarryBulk>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>2</minSeverity>
+                <label>fighting</label>
+                <statFactors>
+                    <SM_BodySizeMultiplier MayRequire="RedMattis.BetterPrerequisites">2.00</SM_BodySizeMultiplier>
+                    <IncomingDamageFactor>0.75</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>3</minSeverity>
+                <label>RAMPAGE!!!</label>
+                <statFactors>
+                    <SM_BodySizeMultiplier MayRequire="RedMattis.BetterPrerequisites">3.00</SM_BodySizeMultiplier>
+                    <IncomingDamageFactor>0.50</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityByMentalState">
+                <mentalStateEffects>
+                    <li>
+                        <mentalStates>
+                            <li>Berserk</li>
+                            <li>Slaughterer</li>
+                            <li>MurderousRage</li>
+                            <li>Tantrum</li>
+                            <li>TargetedTantrum</li>
+                            <li>BedroomTantrum</li>
+                            <li>SadisticRage</li>
+                            <li>SocialFighting</li>
+                        </mentalStates>
+                    </li>
+                    <li MayRequire="Ludeon.Rimworld.Ideology">
+                        <mentalState>BerserkTrance</mentalState>
+                    </li>
+                    <li MayRequire="Ludeon.Rimworld.Ideology">
+                        <mentalState>Rebellion</mentalState>
+                    </li>
+                </mentalStateEffects>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TemporaryGenes">
+                <genesAtSeverities>
+                    <li>
+                        <genes>
+                            <li>AptitudeRemarkable_Intellectual</li>
+                            <li>AptitudeRemarkable_Social</li>
+                            <li>AptitudeTerrible_Melee</li>
+                            <li>AptitudeTerrible_Shooting</li>
+                            <li>MeleeDamage_Weak</li>
+                        </genes>
+                        <maxSeverity>1</maxSeverity>
+                    </li>
+                    <li>
+                        <genes>
+                            <li>AptitudeTerrible_Intellectual</li>
+                            <li>AptitudeTerrible_Social</li>
+                            <li>AptitudeRemarkable_Melee</li>
+                            <li>AptitudeRemarkable_Shooting</li>
+                            <li>Skin_Orange</li>
+                            <li>Beauty_VeryUgly</li>
+                        </genes>
+                        <minSeverity>1</minSeverity>
+                        <maxSeverity>2</maxSeverity>
+                    </li>
+                    <li>
+                        <genes>
+                            <li>AptitudeTerrible_Intellectual</li>
+                            <li>AptitudeTerrible_Social</li>
+                            <li>AptitudeRemarkable_Melee</li>
+                            <li>MeleeDamage_Strong</li>
+                            <li>Skin_Orange</li>
+                            <li>Beauty_VeryUgly</li>
+                        </genes>
+                        <minSeverity>2</minSeverity>
+                        <maxSeverity>3</maxSeverity>
+                    </li>
+                </genesAtSeverities>
+            </li>
+        </comps>
+    </HediffDef>
+
 </Defs>

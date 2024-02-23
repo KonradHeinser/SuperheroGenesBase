@@ -33,8 +33,8 @@ namespace SuperHeroGenesBase
         public float genericMeatIngestionEffect = 0f; // This is just raw meat
 
         // Can offset conditions
-        public float minLightLevel = -1f;
-        public float maxLightLevel = -1f;
+        public float minLightLevel = 0f;
+        public float maxLightLevel = 1f;
         public List<NeedLevel> needLevels;
         public List<HediffDef> requiredHediffs; // Require all of these on the pawn
         public List<HediffDef> requireOneOfHediffs; // Require any one of these on the pawn

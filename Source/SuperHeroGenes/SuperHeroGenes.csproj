@@ -181,6 +181,13 @@
     <Compile Include="DynamicResourceGenes\CompProperties_EnergyBurst.cs" />
     <Compile Include="DynamicResourceGenes\CompAbilityEffect_EnergyBurst.cs" />
     <Compile Include="DynamicResourceGenes\NeedLevel.cs" />
+    <Compile Include="DynamicResourceGenes\CompProperties_AbilityResourceToBattery.cs" />
+    <Compile Include="DynamicResourceGenes\CompAbilityEffect_ResourceToBattery.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_Aging.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_Aging.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Abilities\CompProperties_CreateLinkedHediff.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_CreateLinkedHediff.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

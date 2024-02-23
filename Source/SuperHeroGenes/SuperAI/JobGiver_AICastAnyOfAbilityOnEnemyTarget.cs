@@ -31,9 +31,9 @@ namespace SuperHeroGenesBase
                 if (tempAbility != null && tempAbility.CanCast)
                 {
                     if (!tempAbility.ValidateGlobalTarget(currentEnemy)) continue;
-                    if(tempAbility.verb.verbProps.requireLineOfSight && !los) continue;
+                    if (tempAbility.verb.verbProps.requireLineOfSight && !los) continue;
                     bool flag = false;
-                    if (currentEnemy is Pawn otherPawn && !tempAbility.comps.NullOrEmpty()) 
+                    if (currentEnemy is Pawn otherPawn && !tempAbility.comps.NullOrEmpty())
                     {
                         foreach (AbilityComp compAbility in tempAbility.comps)
                         {
@@ -115,14 +115,12 @@ namespace SuperHeroGenesBase
                             presentAbilities.Add(tempAbility);
                         }
                     }
-                    Log.Message("Added " + tempAbility.def);
                 }
             }
             if (presentAbilities.NullOrEmpty()) return null;
             chosenAbility = presentAbilities[rnd.Next(presentAbilities.Count)];
             LocalTargetInfo target = GetTarget(pawn, chosenAbility);
             if (!target.IsValid) return null;
-            if (pawn.CurJobDef != null) Log.Message(pawn.CurJobDef.ToString());
             return chosenAbility.GetJob(target, target);
         }
 
@@ -131,7 +129,7 @@ namespace SuperHeroGenesBase
             // If it's supposed to be cast on the caster (i.e. a burst) return the caster
             if (!ability.def.targetRequired) return new LocalTargetInfo(caster);
             // If targetting a pawn, but can't cast pawns, just target the ground
-            if (currentEnemy is Pawn pawnTarget && !ability.verb.verbProps.targetParams.canTargetPawns) 
+            if (currentEnemy is Pawn pawnTarget && !ability.verb.verbProps.targetParams.canTargetPawns)
             {
                 return new LocalTargetInfo(currentEnemy);
             }

@@ -8,7 +8,6 @@ namespace SuperHeroGenesBase
 
         public override void Notify_PawnDied()
         {
-            Log.Message("Pawn died");
             DoExplosion(parent.pawn.Corpse.Position);
         }
     }

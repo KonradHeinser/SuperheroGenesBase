@@ -143,7 +143,7 @@ namespace SuperHeroGenesBase
                         null, true, 1f, Props.excludeRadius, true, Props.postExplosionThingWater, Props.screenShakeFactor);
                 }
 
-                ResourceGene.OffsetResource(caster, 0f - CurrentCost, ResourceGene, ResourceGene.def.GetModExtension<DRGExtension>());
+                ResourceGene.OffsetResource(caster, 0f - CurrentCost, ResourceGene);
             }
         }
 

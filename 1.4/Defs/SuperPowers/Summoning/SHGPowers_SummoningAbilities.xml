@@ -183,6 +183,55 @@
         </comps>
     </AbilityDef>
 
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_CreateGeyser</defName>
+        <label>create geyser</label>
+        <description>Blast a hole that goes deep underground to a heated water pocket underground, turning it into a new steam geyser.</description>
+        <iconPath>Things/Building/Natural/SteamGeyser</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityCreateItems">
+                <waterForbidden>True</waterForbidden>
+                <thingPattern>
+                    <li>
+                        <thing>SteamGeyser</thing>
+                    </li>
+                    <li>
+                        <relativeLocation>(0, 1)</relativeLocation>
+                        <reservedForLargeThing>True</reservedForLargeThing>
+                    </li>
+                    <li>
+                        <relativeLocation>(1, 1)</relativeLocation>
+                        <reservedForLargeThing>True</reservedForLargeThing>
+                    </li>
+                    <li>
+                        <relativeLocation>(1, 0)</relativeLocation>
+                        <reservedForLargeThing>True</reservedForLargeThing>
+                    </li>
+                    <li>
+                        <relativeLocation>(0, -1)</relativeLocation>
+                        <reservedForLargeThing>True</reservedForLargeThing>
+                    </li>
+                    <li>
+                        <relativeLocation>(-1, -1)</relativeLocation>
+                        <reservedForLargeThing>True</reservedForLargeThing>
+                    </li>
+                    <li>
+                        <relativeLocation>(-1, 0)</relativeLocation>
+                        <reservedForLargeThing>True</reservedForLargeThing>
+                    </li>
+                    <li>
+                        <relativeLocation>(1, -1)</relativeLocation>
+                        <reservedForLargeThing>True</reservedForLargeThing>
+                    </li>
+                    <li>
+                        <relativeLocation>(-1, 1)</relativeLocation>
+                        <reservedForLargeThing>True</reservedForLargeThing>
+                    </li>
+                </thingPattern>
+            </li>
+        </comps>
+    </AbilityDef>
+
         <!--Geomancer-->
 
         <!--Stone icons are from the wiki-->

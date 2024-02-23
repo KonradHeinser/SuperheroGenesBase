@@ -7,6 +7,15 @@
     <AbilityTileTeleport>Skip to tile</AbilityTileTeleport>
     <AbilityPassableOnly>Only passable tiles can be picked</AbilityPassableOnly>
     <AbilityTooFarToTeleport>This tile is too far for this teleportation ability</AbilityTooFarToTeleport>
+
+    <AbilityWater>Must target an area without water.</AbilityWater>
+    <AbilityNoWater>Must target an area filled with water.</AbilityNoWater>
+    <AbilityPollution>Must target an area without pollution.</AbilityPollution>
+    <AbilityNoPollution>Must target an area filled with pollution.</AbilityNoPollution>
+    <AbilityNoRoof>Must target an area that is completely roofed.</AbilityNoRoof>
+    <AbilityPlant>Must target an area that has no plants.</AbilityPlant>
+    <AbilityThing>Must target an area that has nothing in it.</AbilityThing>
+    <AbilityNotBattery>Must target a battery.</AbilityNotBattery>
         
         <!--DRG Stuff-->
     <ResourceCost>{0} cost</ResourceCost>

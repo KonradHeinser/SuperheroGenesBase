@@ -29,12 +29,8 @@ namespace SuperHeroGenesBase
                         float time = GenLocalDate.DayPercent(Pawn);
                         if (time < extension.startTime || time > extension.endTime) return false;
 
-                        if (extension.minLightLevel > 0 || extension.maxLightLevel > 0)
-                        {
-                            float light = pawn.Map.glowGrid.GameGlowAt(pawn.Position, false);
-                            if (extension.minLightLevel > 0 && light < extension.minLightLevel) return false;
-                            if (extension.maxLightLevel > 0 && light > extension.maxLightLevel) return false;
-                        }
+                        float light = pawn.Map.glowGrid.GameGlowAt(pawn.Position, false);
+                        if (light < extension.minLightLevel || light > extension.maxLightLevel) return false;
 
                         if (!extension.requireOneOfHediffs.NullOrEmpty() && !SHGUtilities.PawnHasAnyOfHediffs(pawn, extension.requireOneOfHediffs)) return false;
                         if (!SHGUtilities.PawnHasAllOfHediffs(pawn, extension.requiredHediffs)) return false;

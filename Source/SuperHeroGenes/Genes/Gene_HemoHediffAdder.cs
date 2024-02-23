@@ -27,7 +27,6 @@ namespace SuperHeroGenesBase
                             {
                                 foundParts.Add(bodyPartDef, 0);
                             }
-                            Log.Message(pawn.RaceProps.body.GetPartsWithDef(bodyPartDef).ToArray()[foundParts[bodyPartDef]].Label);
                             if (hediffToParts.onlyIfNew) SHGUtilities.AddHediffToPart(pawn, pawn.RaceProps.body.GetPartsWithDef(bodyPartDef).ToArray()[foundParts[bodyPartDef]], hediffToParts.hediff, hediffToParts.severity);
                             else SHGUtilities.AddHediffToPart(pawn, pawn.RaceProps.body.GetPartsWithDef(bodyPartDef).ToArray()[foundParts[bodyPartDef]], hediffToParts.hediff, hediffToParts.severity, hediffToParts.severity);
                             foundParts[bodyPartDef]++;
