@@ -31,7 +31,7 @@ namespace SuperHeroGenesBase
         public float excludeRadius = 0f; // Usability is questionable
         public ThingDef postExplosionThingWater = null;
         public float screenShakeFactor = 0;
-        public bool injureSelf = false;
+        public bool injureSelf = true;
         public bool injureAllies = true;
         public bool injureNonHostiles = true;
 

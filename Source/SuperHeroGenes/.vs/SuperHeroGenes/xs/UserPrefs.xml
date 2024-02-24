@@ -1,22 +1,24 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SHGUtilities.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Abilities/Verb_CastAbilityLaserEyes.cs">
     <Files>
       <File FileName="DynamicResourceGenes/CompProperties_EnergyBlast.cs" Line="13" Column="21" />
       <File FileName="DynamicResourceGenes/CompAbilityEffect_EnergyBlast.cs" Line="130" Column="57" />
       <File FileName="DynamicResourceGenes/CompAbilityEffect_EnergyBurst.cs" Line="196" Column="14" />
       <File FileName="Abilities/CompAbilityEffect_SHGBlast.cs" Line="23" Column="14" />
       <File FileName="Abilities/CompProperties_InstantKill.cs" Line="15" Column="9" />
-      <File FileName="HarmonyPatches.cs" Line="180" Column="30" />
-      <File FileName="SHGUtilities.cs" Line="293" Column="18" />
+      <File FileName="HarmonyPatches.cs" Line="168" Column="9" />
+      <File FileName="SHGUtilities.cs" Line="260" Column="10" />
+      <File FileName="Abilities/Verb_CastAbilityLaserEyes.cs" Line="20" Column="43" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Abilities" expanded="True" />
+              <Node name="Abilities" expanded="True">
+                <Node name="Verb_CastAbilityLaserEyes.cs" selected="True" />
+              </Node>
               <Node name="DynamicResourceGenes" expanded="True" />
-              <Node name="SHGUtilities.cs" selected="True" />
             </Node>
           </Node>
         </State>

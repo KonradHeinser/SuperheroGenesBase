@@ -172,13 +172,12 @@ namespace SuperHeroGenesBase
             {
                 if (HasSpecialExplosion(pawn) && !DoingSpecialExplosion(pawn, dinfo, __instance))
                 {
-                    if (SHGUtilities.GetCurrentTarget(pawn, false) == __instance)
+                    if (SHGUtilities.GetCurrentTarget(pawn, false) == __instance && !SHGUtilities.CastingAbility(pawn))
                     {
                         foreach (Hediff hediff in pawn.health.hediffSet.hediffs)
                         {
                             if (!dinfo.Def.isExplosive && !dinfo.Def.isRanged)
                             {
-                                Log.Message("Exploding");
                                 HediffComp_ExplodingMeleeAttacks meleeExplodingComp = hediff.TryGetComp<HediffComp_ExplodingMeleeAttacks>();
                                 if (meleeExplodingComp != null)
                                 {

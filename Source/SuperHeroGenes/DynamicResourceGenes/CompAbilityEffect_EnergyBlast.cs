@@ -9,7 +9,7 @@ namespace SuperHeroGenesBase
 {
     public class CompAbilityEffect_EnergyBlast : CompAbilityEffect
     {
-        public new CompProperties_EnergyBurst Props => (CompProperties_EnergyBurst)props;
+        public new CompProperties_EnergyBlast Props => (CompProperties_EnergyBlast)props;
         public List<AbilityComp> comps;
         ResourceGene cachedResourceGene;
 
@@ -149,7 +149,7 @@ namespace SuperHeroGenesBase
 
         public override void DrawEffectPreview(LocalTargetInfo target)
         {
-            GenDraw.DrawFieldEdges(SHGUtilities.AffectedCells(parent.pawn, parent.pawn.Map, parent.pawn, Radius).ToList(), Color.magenta);
+            GenDraw.DrawFieldEdges(SHGUtilities.AffectedCells(target, parent.pawn.Map, parent.pawn, Radius).ToList(), Valid(target) ? Color.white : Color.red);
         }
 
         public override bool GizmoDisabled(out string reason)

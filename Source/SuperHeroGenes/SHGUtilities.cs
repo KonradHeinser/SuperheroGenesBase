@@ -260,6 +260,7 @@ namespace SuperHeroGenesBase
         {
             if (pawn.stances.curStance is Stance_Busy stance_Busy)
             {
+                if (stance_Busy.verb.verbProps.verbClass == typeof(Verb_CastAbility)) return true;
             }
             return false;
         }
@@ -268,7 +269,6 @@ namespace SuperHeroGenesBase
         {
             if (pawn.stances.curStance is Stance_Busy stance_Busy)
             {
-                Log.Message("Busy");
                 Thing thing = stance_Busy.verb.CurrentTarget.Thing;
                 if (LoSRequired && !GenSight.LineOfSight(pawn.Position, thing.Position, pawn.Map)) return null;
                 if (onlyHostiles && !thing.HostileTo(pawn)) return null;
