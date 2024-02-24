@@ -88,6 +88,8 @@ namespace SuperHeroGenesBase
 
         public override bool Valid(LocalTargetInfo target, bool throwMessages = false)
         {
+            if (!base.Valid(target, throwMessages)) return false;
+
             Map map = parent.pawn.Map;
             if (AffectedCells(target, parent.pawn.Map).Any((IntVec3 c) => c.Filled(map)))
             {

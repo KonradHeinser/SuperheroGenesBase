@@ -155,6 +155,7 @@
         <aiCanUse>True</aiCanUse>
         <cooldownTicksRange>100</cooldownTicksRange>
         <category>SuperPowers</category>
+        <hostile>true</hostile>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <warmupTime>1</warmupTime>

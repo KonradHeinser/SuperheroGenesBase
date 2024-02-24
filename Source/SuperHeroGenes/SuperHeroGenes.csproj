@@ -188,6 +188,19 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Abilities\CompProperties_CreateLinkedHediff.cs" />
     <Compile Include="Abilities\CompAbilityEffect_CreateLinkedHediff.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_SeverityChangePerAttack.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_SeverityChangePerAttack.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_ExplodingMeleeAttacks.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_ExplodingMeleeAttacks.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_SeverityByLightLevel.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_SeverityByLightLevel.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_DisplaySeverity.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_DisplaySeverity.cs" />
+    <Compile Include="Abilities\CompProperties_TriggerGameCondition.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_TriggerGameCondition.cs" />
+    <Compile Include="Abilities\ConditionDuration.cs" />
+    <Compile Include="DynamicResourceGenes\CompProperties_EnergyBlast.cs" />
+    <Compile Include="DynamicResourceGenes\CompAbilityEffect_EnergyBlast.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

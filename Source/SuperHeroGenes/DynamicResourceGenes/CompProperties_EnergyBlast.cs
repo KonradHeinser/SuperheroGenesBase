@@ -3,7 +3,7 @@ using Verse;
 
 namespace SuperHeroGenesBase
 {
-    public class CompProperties_EnergyBurst : CompProperties_AbilityEffect
+    public class CompProperties_EnergyBlast : CompProperties_AbilityEffect
     {
         public enum Gases
         {
@@ -41,9 +41,9 @@ namespace SuperHeroGenesBase
         public GeneDef mainResourceGene;
         public StatDef costFactorStat;
 
-        public CompProperties_EnergyBurst()
+        public CompProperties_EnergyBlast()
         {
-            compClass = typeof(CompAbilityEffect_EnergyBurst);
+            compClass = typeof(CompAbilityEffect_EnergyBlast);
         }
     }
 }

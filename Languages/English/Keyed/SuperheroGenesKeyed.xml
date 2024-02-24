@@ -16,6 +16,7 @@
     <AbilityPlant>Must target an area that has no plants.</AbilityPlant>
     <AbilityThing>Must target an area that has nothing in it.</AbilityThing>
     <AbilityNotBattery>Must target a battery.</AbilityNotBattery>
+    <AbilityGameCondition>An existing map condition is obstructing the ability.</AbilityGameCondition>
         
         <!--DRG Stuff-->
     <ResourceCost>{0} cost</ResourceCost>

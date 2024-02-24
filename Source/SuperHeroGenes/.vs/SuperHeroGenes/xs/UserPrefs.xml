@@ -1,25 +1,22 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Abilities/CompAbilityEffect_CreateLinkedHediff.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SHGUtilities.cs">
     <Files>
-      <File FileName="Abilities/CompProperties_LoveTheCaster.cs" Line="14" Column="65" />
-      <File FileName="Abilities/CompAbilityEffect_LoveTheCaster.cs" Line="30" Column="87" />
-      <File FileName="Abilities/CompProperties_CreateLinkedHediff.cs" Line="14" Column="40" />
-      <File FileName="Abilities/CompAbilityEffect_CreateLinkedHediff.cs" Line="62" Column="2" />
+      <File FileName="DynamicResourceGenes/CompProperties_EnergyBlast.cs" Line="13" Column="21" />
+      <File FileName="DynamicResourceGenes/CompAbilityEffect_EnergyBlast.cs" Line="130" Column="57" />
+      <File FileName="DynamicResourceGenes/CompAbilityEffect_EnergyBurst.cs" Line="196" Column="14" />
+      <File FileName="Abilities/CompAbilityEffect_SHGBlast.cs" Line="23" Column="14" />
+      <File FileName="Abilities/CompProperties_InstantKill.cs" Line="15" Column="9" />
+      <File FileName="HarmonyPatches.cs" Line="180" Column="30" />
+      <File FileName="SHGUtilities.cs" Line="293" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Abilities" expanded="True">
-                <Node name="CompAbilityEffect_CreateLinkedHediff.cs" selected="True" />
-              </Node>
+              <Node name="Abilities" expanded="True" />
               <Node name="DynamicResourceGenes" expanded="True" />
-              <Node name="Hediffs" expanded="True">
-                <Node name="CompProperties" expanded="True" />
-                <Node name="Comps" expanded="True" />
-              </Node>
-              <Node name="SuperAI" expanded="True" />
+              <Node name="SHGUtilities.cs" selected="True" />
             </Node>
           </Node>
         </State>

@@ -16,7 +16,11 @@ namespace SuperHeroGenesBase
             List<Thing> ignoreList = new List<Thing>();
             Pawn caster = parent.pawn;
             float radius = Props.radius;
-            if (Props.statRadius != null && caster.GetStatValue(Props.statRadius) > 0) radius = caster.GetStatValue(Props.statRadius);
+            if (Props.statRadius != null)
+            {
+                if (caster.GetStatValue(Props.statRadius) > 0) radius = caster.GetStatValue(Props.statRadius);
+                else radius = 0;
+            }
             if (!Props.injureSelf)
             {
                 ignoreList.Add(caster);

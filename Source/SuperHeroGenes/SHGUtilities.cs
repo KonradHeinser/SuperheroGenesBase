@@ -256,10 +256,19 @@ namespace SuperHeroGenesBase
             return false;
         }
 
+        public static bool CastingAbility(Pawn pawn)
+        {
+            if (pawn.stances.curStance is Stance_Busy stance_Busy)
+            {
+            }
+            return false;
+        }
+
         public static Thing GetCurrentTarget(Pawn pawn, bool onlyHostiles = true, bool onlyInFaction = false, bool autoSearch = true, float searchRadius = 50, bool LoSRequired = false)
         {
             if (pawn.stances.curStance is Stance_Busy stance_Busy)
             {
+                Log.Message("Busy");
                 Thing thing = stance_Busy.verb.CurrentTarget.Thing;
                 if (LoSRequired && !GenSight.LineOfSight(pawn.Position, thing.Position, pawn.Map)) return null;
                 if (onlyHostiles && !thing.HostileTo(pawn)) return null;
@@ -287,15 +296,15 @@ namespace SuperHeroGenesBase
             }
             if (autoSearch)
             {
-                List<Pawn> pawns = pawn.Map.mapPawns.AllPawnsSpawned;
+                List<Pawn> pawns = pawn.Map.mapPawns.AllPawnsSpawned.Where((Pawn p) => p.Position.DistanceTo(pawn.Position) <= searchRadius && p != pawn).ToList();
                 pawns.SortBy((Pawn c) => c.Position.DistanceToSquared(pawn.Position));
                 foreach (Pawn otherPawn in pawns)
                 {
                     if (LoSRequired && !GenSight.LineOfSight(pawn.Position, otherPawn.Position, pawn.Map)) continue;
                     if (otherPawn.Dead || otherPawn.Downed) continue;
-                    if (otherPawn.Position.DistanceTo(pawn.Position) > searchRadius) break;
-                    if (onlyHostiles && otherPawn.HostileTo(pawn)) return otherPawn;
+                    if (onlyHostiles && (otherPawn.HostileTo(pawn) || otherPawn.Faction != null && pawn.Faction != null && otherPawn.Faction.HostileTo(pawn.Faction))) return otherPawn;
                     if (onlyInFaction && otherPawn.Faction == pawn.Faction) return otherPawn;
+                    if (!onlyHostiles && !onlyInFaction) return otherPawn;
                 }
             }
             return null;

@@ -5,6 +5,7 @@ using HarmonyLib;
 using RimWorld;
 using Verse;
 using System.Text;
+using UnityEngine;
 
 namespace SuperHeroGenesBase
 {
@@ -26,6 +27,8 @@ namespace SuperHeroGenesBase
                           postfix: new HarmonyMethod(patchType, nameof(RomanceFactorsPostFix)));
             harmony.Patch(AccessTools.PropertyGetter(typeof(Gene_Hemogen), nameof(Gene_Hemogen.InitialResourceMax)),
                           postfix: new HarmonyMethod(patchType, nameof(HemomancerHemogenMaxPostFix)));
+            harmony.Patch(AccessTools.Method(typeof(Thing), nameof(Thing.TakeDamage)),
+                prefix: new HarmonyMethod(patchType, nameof(TakeDamagePrefix)));
         }
 
 
@@ -131,6 +134,63 @@ namespace SuperHeroGenesBase
         {
             float hemomancyProficiency = ___pawn.GetStatValue(SHGDefOf.SHG_HemomancyProficiency);
             __result += hemomancyProficiency;
+        }
+
+        public static bool HasSpecialExplosion(Pawn pawn)
+        {
+            if (!pawn.Dead && pawn.health != null && !pawn.health.hediffSet.hediffs.NullOrEmpty())
+            {
+                foreach (Hediff hediff in pawn.health.hediffSet.hediffs)
+                {
+                    HediffComp_ExplodingMeleeAttacks meleeExplodingComp = hediff.TryGetComp<HediffComp_ExplodingMeleeAttacks>();
+                    if (meleeExplodingComp != null) return true;
+                }
+            }
+
+            return false;
+        }
+
+        public static bool DoingSpecialExplosion(Pawn pawn, DamageInfo dinfo, Thing mainTarget)
+        {
+            if (pawn.health.hediffSet != null)
+            {
+                foreach (Hediff hediff in pawn.health.hediffSet.hediffs)
+                {
+                    HediffComp_ExplodingMeleeAttacks meleeExplodingComp = hediff.TryGetComp<HediffComp_ExplodingMeleeAttacks>();
+                    if (meleeExplodingComp != null)
+                    {
+                        if (dinfo.Def == meleeExplodingComp.Props.damageDef && meleeExplodingComp.currentlyExploding) return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public static bool TakeDamagePrefix(DamageInfo dinfo, Thing __instance, DamageWorker.DamageResult __result)
+        {
+            if (dinfo.Instigator != null && dinfo.Instigator is Pawn pawn)
+            {
+                if (HasSpecialExplosion(pawn) && !DoingSpecialExplosion(pawn, dinfo, __instance))
+                {
+                    if (SHGUtilities.GetCurrentTarget(pawn, false) == __instance)
+                    {
+                        foreach (Hediff hediff in pawn.health.hediffSet.hediffs)
+                        {
+                            if (!dinfo.Def.isExplosive && !dinfo.Def.isRanged)
+                            {
+                                Log.Message("Exploding");
+                                HediffComp_ExplodingMeleeAttacks meleeExplodingComp = hediff.TryGetComp<HediffComp_ExplodingMeleeAttacks>();
+                                if (meleeExplodingComp != null)
+                                {
+                                    meleeExplodingComp.currentlyExploding = true;
+                                    meleeExplodingComp.DoExplosion(__instance.Position);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return true;
         }
     }
 }

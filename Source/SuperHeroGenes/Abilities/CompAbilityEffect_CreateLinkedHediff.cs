@@ -11,7 +11,7 @@ namespace SuperHeroGenesBase
         {
             if (target.Pawn == null || target.Pawn == parent.pawn) return;
             Pawn targetPawn = target.Pawn;
-            Pawn caster = target.Pawn;
+            Pawn caster = parent.pawn;
 
             if (Props.hediffOnTarget != null)
             {
@@ -29,6 +29,7 @@ namespace SuperHeroGenesBase
                     {
                         float num = parent.def.EffectDuration(parent.pawn);
                         num *= targetPawn.GetStatValue(StatDefOf.PsychicSensitivity);
+                        num *= caster.GetStatValue(StatDefOf.PsychicSensitivity);
                         hediffComp_Disappears.ticksToDisappear = num.SecondsToTicks();
                     }
                 }
@@ -43,7 +44,7 @@ namespace SuperHeroGenesBase
                 {
                     caster.health.RemoveHediff(firstHediffOfDef);
                 }
-                HediffWithTarget casterHediff = (HediffWithTarget)HediffMaker.MakeHediff(Props.hediffOnCaster, targetPawn, Props.casterHediffOnBrain ? caster.health.hediffSet.GetBrain() : null);
+                HediffWithTarget casterHediff = (HediffWithTarget)HediffMaker.MakeHediff(Props.hediffOnCaster, caster, Props.casterHediffOnBrain ? caster.health.hediffSet.GetBrain() : null);
                 casterHediff.target = targetPawn;
                 if (Props.psychic)
                 {
@@ -52,6 +53,7 @@ namespace SuperHeroGenesBase
                     {
                         float num = parent.def.EffectDuration(parent.pawn);
                         num *= caster.GetStatValue(StatDefOf.PsychicSensitivity);
+                        num *= targetPawn.GetStatValue(StatDefOf.PsychicSensitivity);
                         hediffComp_Disappears.ticksToDisappear = num.SecondsToTicks();
                     }
                 }

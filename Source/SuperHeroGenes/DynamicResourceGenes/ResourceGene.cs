@@ -28,7 +28,7 @@ namespace SuperHeroGenesBase
         {
             get
             {
-                if (Active)
+                if (Active && !pawn.Dead)
                 {
                     if (extension == null && !extensionAlreadyChecked) InitializeExtension();
                     if (extension != null)
