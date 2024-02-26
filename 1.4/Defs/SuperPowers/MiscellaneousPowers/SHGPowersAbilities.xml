@@ -542,7 +542,7 @@
     </AbilityDef>
 
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
-        <defName>SHG_LaserEyes</defName>
+        <defName>SHG_NewLaserEyes</defName>
         <label>superhero laser eyes</label>
         <description>Shoot a highly focused laser that even other supers have difficulties defending themselves from.\n\nWARNING: Try to avoid using this ability on high value things unless you want to parody that Homelander "saves" a plane scene. The laser deals a large amount of damage in a really short time, so the chances of corpses and items surviving the situation are minimal.</description>
         <iconPath>Powers/LaserEyes</iconPath>

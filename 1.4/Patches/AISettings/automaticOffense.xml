@@ -43,7 +43,7 @@
                                         </subNodes>
                                     </li>
                                     <li Class="ThinkNode_ConditionalHasAbility">
-                                        <ability>SHG_LaserEyes</ability>
+                                        <ability>SHG_NewLaserEyes</ability>
                                         <subNodes>
                                             <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire"> <!--Laser eyes-->
                                                 <minRadius>2</minRadius>
@@ -52,7 +52,7 @@
                                                     <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
                                                         <hashInterval>1</hashInterval> <!--Replaces normal attacks-->
                                                         <abilities>
-                                                            <li>SHG_LaserEyes</li>
+                                                            <li>SHG_NewLaserEyes</li>
                                                         </abilities>
                                                     </li>
                                                 </subNodes>
@@ -174,7 +174,7 @@
                                                     </subNodes>
                                                 </li>
                                                 <li Class="ThinkNode_ConditionalHasAbility">
-                                                    <ability>SHG_LaserEyes</ability>
+                                                    <ability>SHG_NewLaserEyes</ability>
                                                     <subNodes>
                                                         <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire"> <!--Laser eyes-->
                                                             <minRadius>2</minRadius>
@@ -183,7 +183,7 @@
                                                                 <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
                                                                     <hashInterval>1</hashInterval> <!--Replaces normal attacks-->
                                                                     <abilities>
-                                                                        <li>SHG_LaserEyes</li>
+                                                                        <li>SHG_NewLaserEyes</li>
                                                                     </abilities>
                                                                 </li>
                                                             </subNodes>

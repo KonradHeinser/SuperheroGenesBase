@@ -29,7 +29,7 @@ namespace SuperHeroGenesBase
             if (delayTicks == 0)
             {
                 delayTicks--;
-                SHGUtilities.GainRandomGeneSet(parent.pawn, Props.inheritable, Props.removeGenesFromOtherLists, Props.geneSets, Props.alwaysAddedGenes, Props.alwaysRemovedGenes);
+                SHGUtilities.GainRandomGeneSet(parent.pawn, Props.inheritable, Props.removeGenesFromOtherLists, Props.geneSets, Props.alwaysAddedGenes, Props.alwaysRemovedGenes, Props.showMessage);
                 if (parent.pawn.health.hediffSet.GetFirstHediffOfDef(parent.def) != null && Props.removeHediffAfterwards)
                 {
                     parent.pawn.health.RemoveHediff(parent.pawn.health.hediffSet.GetFirstHediffOfDef(parent.def));
