@@ -1,24 +1,27 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Abilities/Verb_CastAbilityLaserEyes.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hediffs/Comps/HediffComp_SeverityByOtherHediffSeverities.cs">
     <Files>
-      <File FileName="DynamicResourceGenes/CompProperties_EnergyBlast.cs" Line="13" Column="21" />
-      <File FileName="DynamicResourceGenes/CompAbilityEffect_EnergyBlast.cs" Line="130" Column="57" />
-      <File FileName="DynamicResourceGenes/CompAbilityEffect_EnergyBurst.cs" Line="196" Column="14" />
-      <File FileName="Abilities/CompAbilityEffect_SHGBlast.cs" Line="23" Column="14" />
-      <File FileName="Abilities/CompProperties_InstantKill.cs" Line="15" Column="9" />
-      <File FileName="HarmonyPatches.cs" Line="168" Column="9" />
       <File FileName="SHGUtilities.cs" Line="260" Column="10" />
       <File FileName="Abilities/Verb_CastAbilityLaserEyes.cs" Line="20" Column="43" />
+      <File FileName="Hediffs/CompProperties/HediffCompProperties_SeverityByOtherHediffSeverities.cs" Line="17" Column="1" />
+      <File FileName="Hediffs/Comps/HediffComp_SeverityByOtherHediffSeverities.cs" Line="9" Column="9" />
+      <File FileName="Hediffs/HediffSeverityFactor.cs" Line="12" Column="1" />
+      <File FileName="Hediffs/CompProperties/HediffCompProperties_SeverityChangePerAttack.cs" Line="16" Column="68" />
+      <File FileName="Hediffs/Comps/HediffComp_SeverityChangePerAttack.cs" Line="8" Column="123" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Abilities" expanded="True">
-                <Node name="Verb_CastAbilityLaserEyes.cs" selected="True" />
-              </Node>
+              <Node name="Abilities" expanded="True" />
               <Node name="DynamicResourceGenes" expanded="True" />
+              <Node name="Hediffs" expanded="True">
+                <Node name="CompProperties" expanded="True" />
+                <Node name="Comps" expanded="True">
+                  <Node name="HediffComp_SeverityByOtherHediffSeverities.cs" selected="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
