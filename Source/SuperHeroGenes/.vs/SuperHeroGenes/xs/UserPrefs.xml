@@ -4,7 +4,7 @@
       <File FileName="SHGUtilities.cs" Line="260" Column="10" />
       <File FileName="Abilities/Verb_CastAbilityLaserEyes.cs" Line="20" Column="43" />
       <File FileName="Hediffs/CompProperties/HediffCompProperties_SeverityByOtherHediffSeverities.cs" Line="17" Column="1" />
-      <File FileName="Hediffs/Comps/HediffComp_SeverityByOtherHediffSeverities.cs" Line="16" Column="52" />
+      <File FileName="Hediffs/Comps/HediffComp_SeverityByOtherHediffSeverities.cs" Line="28" Column="21" />
       <File FileName="Hediffs/HediffSeverityFactor.cs" Line="12" Column="1" />
       <File FileName="Hediffs/CompProperties/HediffCompProperties_SeverityChangePerAttack.cs" Line="16" Column="68" />
       <File FileName="Hediffs/Comps/HediffComp_SeverityChangePerAttack.cs" Line="8" Column="123" />
