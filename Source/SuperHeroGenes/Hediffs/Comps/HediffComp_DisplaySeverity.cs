@@ -11,12 +11,12 @@ namespace SuperHeroGenesBase
         {
             get
             {
-                string output = Props.prependString;
+                string output = "\n";
+                if (Props.prependString != null) output += Props.prependString;
 
-                if (output == null) output = Math.Round((decimal)(parent.Severity * Props.postFactor), Props.roundDigits).ToString();
-                else output += (parent.Severity * Props.postFactor).ToString();
+                output += Math.Round((decimal)(parent.Severity * Props.postFactor), Props.roundDigits).ToString();
 
-                if (Props.appendString != null && output != null) output += Props.appendString;
+                if (Props.appendString != null) output += Props.appendString;
 
                 return output;
             }
