@@ -1,30 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Hediffs/Comps/HediffComp_DisplaySeverity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Genes/HediffAdder.cs">
     <Files>
-      <File FileName="SHGUtilities.cs" Line="260" Column="10" />
-      <File FileName="Abilities/Verb_CastAbilityLaserEyes.cs" Line="20" Column="43" />
-      <File FileName="Hediffs/CompProperties/HediffCompProperties_SeverityByOtherHediffSeverities.cs" Line="17" Column="1" />
-      <File FileName="Hediffs/Comps/HediffComp_SeverityByOtherHediffSeverities.cs" Line="28" Column="21" />
-      <File FileName="Hediffs/HediffSeverityFactor.cs" Line="12" Column="1" />
-      <File FileName="Hediffs/CompProperties/HediffCompProperties_SeverityChangePerAttack.cs" Line="16" Column="68" />
-      <File FileName="Hediffs/Comps/HediffComp_SeverityChangePerAttack.cs" Line="8" Column="123" />
       <File FileName="Hediffs/CompProperties/HediffCompProperties_GainRandomGeneSet.cs" Line="12" Column="32" />
       <File FileName="Abilities/CompAbilityEffect_GiveMultipleHediffs.cs" Line="4" Column="29" />
       <File FileName="Abilities/CompProperties_AbilityGiveMultipleHediffs.cs" Line="8" Column="48" />
       <File FileName="Abilities/HediffToGive.cs" Line="24" Column="1" />
       <File FileName="Hediffs/Comps/HediffComp_DisplaySeverity.cs" Line="26" Column="1" />
+      <File FileName="Genes/HediffAdder.cs" Line="15" Column="42" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Abilities" expanded="True" />
-              <Node name="Hediffs" expanded="True">
-                <Node name="CompProperties" expanded="True" />
-                <Node name="Comps" expanded="True">
-                  <Node name="HediffComp_DisplaySeverity.cs" selected="True" />
-                </Node>
+              <Node name="Genes" expanded="True">
+                <Node name="HediffAdder.cs" selected="True" />
               </Node>
             </Node>
           </Node>

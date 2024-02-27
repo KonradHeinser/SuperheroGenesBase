@@ -12,6 +12,12 @@ namespace SuperHeroGenesBase
             HediffAdding(pawn, this);
         }
 
+        public override void PostRemove()
+        {
+            base.PostRemove();
+            HediffRemoving(pawn, this);
+        }
+
         public static void HediffAdding(Pawn pawn, Gene gene)
         {
             SHGExtension extension = gene.def.GetModExtension<SHGExtension>();
@@ -50,6 +56,15 @@ namespace SuperHeroGenesBase
                     }
                 }
                 if (extension.vanishingGene) pawn.genes.RemoveGene(gene);
+            }
+        }
+
+        public static void HediffRemoving(Pawn pawn, Gene gene)
+        {
+            SHGExtension extension = gene.def.GetModExtension<SHGExtension>();
+            if (extension != null && !extension.vanishingGene && !extension.hediffsToApply.NullOrEmpty())
+            {
+                SHGUtilities.RemoveHediffsFromParts(pawn, extension.hediffsToApply);
             }
         }
     }
