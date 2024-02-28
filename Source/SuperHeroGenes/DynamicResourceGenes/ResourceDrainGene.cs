@@ -27,6 +27,7 @@ namespace SuperHeroGenesBase
                     if (extension != null)
                     {
                         float time = GenLocalDate.DayPercent(Pawn);
+
                         if (time < extension.startTime || time > extension.endTime) return false;
 
                         float light = pawn.Map.glowGrid.GameGlowAt(pawn.Position, false);

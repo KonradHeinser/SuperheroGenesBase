@@ -8,6 +8,7 @@
     <AbilityPassableOnly>Only passable tiles can be picked</AbilityPassableOnly>
     <AbilityTooFarToTeleport>This tile is too far for this teleportation ability</AbilityTooFarToTeleport>
 
+        <!--Item Creator-->
     <AbilityWater>Must target an area without water.</AbilityWater>
     <AbilityNoWater>Must target an area filled with water.</AbilityNoWater>
     <AbilityPollution>Must target an area without pollution.</AbilityPollution>
@@ -17,6 +18,33 @@
     <AbilityThing>Must target an area that has nothing in it.</AbilityThing>
     <AbilityNotBattery>Must target a battery.</AbilityNotBattery>
     <AbilityGameCondition>An existing map condition is obstructing the ability.</AbilityGameCondition>
+
+        <!--Ability Validator Stuff-->
+    <AbilityNoGeneOne>Target must have the gene {0} for this ability to work.</AbilityNoGeneOne>
+    <AbilityNoGene>Target is missing a required gene for this ability to work.</AbilityNoGene>
+    <AbilityGeneOne>Target has the gene {0}, preventing this ability from working.</AbilityGeneOne>
+    <AbilityGene>Target has a gene  preventing this ability from working.</AbilityGene>
+
+    <AbilityNoTargetHediffOne>Target must have the hediff {0} for this ability to work.</AbilityNoTargetHediffOne>
+    <AbilityNoTargetHediff>Target is missing a required hediff for this ability to work.</AbilityNoTargetHediff>
+    <AbilityTargetHediffOne>Target has the hediff {0}, preventing this ability from working.</AbilityTargetHediffOne>
+    <AbilityTargetHediff>Target has a hediff preventing this ability from working.</AbilityTargetHediff>
+
+    <AbilityNoCasterHediffOne>Caster must have the hediff {0} for this ability to work.</AbilityNoCasterHediffOne>
+    <AbilityNoCasterHediff>Caster is missing a required hediff for this ability to work.</AbilityNoCasterHediff>
+    <AbilityCasterHediffOne>Caster has the hediff {0}, preventing this ability from working.</AbilityCasterHediffOne>
+    <AbilityCasterHediff>Caster has a hediff preventing this ability from working.</AbilityCasterHediff>
+
+    <AbilityGameNoConditionOne>This map is not currently experiencing a(n) {0}.</AbilityGameNoConditionOne>
+    <AbilityGameNoCondition>The map must be experiencing certain conditions for this ability.</AbilityGameNoCondition>
+    <AbilityWeatherOne>Map currently has bad weather for this ability: {0}</AbilityWeatherOne>
+    <AbilityWeather>Map currently has bad weather for this ability.</AbilityWeather>
+    <AbilityNoWeatherOne>Map needs specific weather for this ability: {0}</AbilityNoWeatherOne>
+    <AbilityNoWeather>Map needs specific weather for this ability.</AbilityNoWeather>
+
+    <AbilityTargetLightLevel>Target must be in a light level between {0} and {1}</AbilityTargetLightLevel>
+    <AbilityCasterLightLevel>{2_labelShort} must be in a light level between {0} and {1}</AbilityCasterLightLevel>
+    <AbilityTime>Hour must be between {0} and {1} to use this ability.</AbilityTime>
         
         <!--DRG Stuff-->
     <ResourceCost>{0} cost</ResourceCost>

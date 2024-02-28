@@ -1,21 +1,22 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Genes/HediffAdder.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Abilities/CompProperties_AbilityAbilityValidator.cs">
     <Files>
-      <File FileName="Hediffs/CompProperties/HediffCompProperties_GainRandomGeneSet.cs" Line="12" Column="32" />
-      <File FileName="Abilities/CompAbilityEffect_GiveMultipleHediffs.cs" Line="4" Column="29" />
-      <File FileName="Abilities/CompProperties_AbilityGiveMultipleHediffs.cs" Line="8" Column="48" />
-      <File FileName="Abilities/HediffToGive.cs" Line="24" Column="1" />
-      <File FileName="Hediffs/Comps/HediffComp_DisplaySeverity.cs" Line="26" Column="1" />
-      <File FileName="Genes/HediffAdder.cs" Line="15" Column="42" />
+      <File FileName="Abilities/CompAbilityEffect_CreateItems.cs" Line="12" Column="104" />
+      <File FileName="Abilities/CompProperties_AbilityAbilityValidator.cs" Line="24" Column="31" />
+      <File FileName="Abilities/CompAbilityEffect_AbilityValidator.cs" Line="29" Column="9" />
+      <File FileName="Abilities/CompProperties_AbilityCreateItems.cs" Line="7" Column="51" />
+      <File FileName="DynamicResourceGenes/CompAbilityEffect_ResourceCost.cs" Line="3" Column="34" />
+      <File FileName="DynamicResourceGenes/ResourceDrainGene.cs" Line="31" Column="98" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Genes" expanded="True">
-                <Node name="HediffAdder.cs" selected="True" />
+              <Node name="Abilities" expanded="True">
+                <Node name="CompProperties_AbilityAbilityValidator.cs" selected="True" />
               </Node>
+              <Node name="DynamicResourceGenes" expanded="True" />
             </Node>
           </Node>
         </State>
