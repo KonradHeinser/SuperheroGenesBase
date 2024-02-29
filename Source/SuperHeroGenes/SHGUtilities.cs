@@ -9,6 +9,31 @@ namespace SuperHeroGenesBase
 {
     public class SHGUtilities
     {
+        public static bool TargetIsPawn(LocalTargetInfo target, out Pawn pawn)
+        {
+            if (target.HasThing && target.Thing is Pawn targetPawn)
+            {
+                pawn = targetPawn;
+                return true;
+            }
+
+            pawn = null;
+            return false;
+        }
+
+        public static bool ConditionOrExclusiveIsActive(GameConditionDef gameCondition, Map map)
+        {
+            if (map.GameConditionManager != null && !map.GameConditionManager.ActiveConditions.NullOrEmpty())
+            {
+                if (map.GameConditionManager.ConditionIsActive(gameCondition)) return true;
+                foreach (GameCondition condition in map.GameConditionManager.ActiveConditions)
+                {
+                    if (!condition.def.CanCoexistWith(gameCondition) || !gameCondition.CanCoexistWith(condition.def)) return true;
+                }
+            }
+            return false;
+        }
+
         public static List<HediffDef> ApplyHediffs(Pawn pawn, HediffDef hediff = null, List<HediffDef> hediffs = null)
         {
             List<HediffDef> addedHediffs = new List<HediffDef>();

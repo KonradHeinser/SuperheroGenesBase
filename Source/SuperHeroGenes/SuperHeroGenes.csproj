@@ -204,8 +204,8 @@
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_SeverityByOtherHediffSeverities.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_SeverityByOtherHediffSeverities.cs" />
     <Compile Include="Hediffs\HediffSeverityFactor.cs" />
-    <Compile Include="Abilities\CompAbilityEffect_AbilityValidator.cs" />
     <Compile Include="Abilities\CompProperties_AbilityAbilityValidator.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_AbilityValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

@@ -20,11 +20,11 @@ namespace SuperHeroGenesBase
             if (!needOffsets.NullOrEmpty())
             {
                 yield return "";
-                yield return "EBSG_NeedOffsets".Translate();
+                yield return "SHG_NeedOffsets".Translate();
                 foreach (NeedOffset needOffset in needOffsets)
                 {
                     string buildString = " - ";
-                    if (needOffset.need == null) buildString += "EBSG_Random".Translate();
+                    if (needOffset.need == null) buildString += "SHG_Random".Translate();
                     else buildString += needOffset.need.LabelCap;
                     buildString += " ";
 

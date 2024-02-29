@@ -101,6 +101,17 @@ namespace SuperHeroGenesBase
             }
         }
 
+        public override void PostRemove()
+        {
+            base.PostRemove();
+            HediffAdder.HediffRemoving(pawn, this);
+
+            if (!addedAbilities.NullOrEmpty())
+            {
+                SHGUtilities.RemovePawnAbilities(pawn, addedAbilities);
+            }
+        }
+
         private List<IGeneResourceDrain> DrainGenes
         {
             get
