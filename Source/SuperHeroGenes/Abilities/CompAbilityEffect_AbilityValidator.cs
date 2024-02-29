@@ -65,6 +65,12 @@ namespace SuperHeroGenesBase
                     Messages.Message(baseExplanation + targetHediffExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
                 return false;
             }
+            if (!CheckTargetGenes(target, out string targetGeneExplanation))
+            {
+                if (throwMessages)
+                    Messages.Message(baseExplanation + targetGeneExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
+                return false;
+            }
 
             return true;
         }

@@ -22,9 +22,9 @@
     <AbilityGameCondition>An existing map condition is obstructing the ability from working.</AbilityGameCondition>
 
         <!--Ability Validator Stuff-->
-    <AbilityNoTargetGeneOne>Target must have the gene {0} for this ability to work.</AbilityNoTargetGeneOne>
+    <AbilityNoTargetGeneOne>Target must have the {0} gene for this ability to work.</AbilityNoTargetGeneOne>
     <AbilityNoTargetGene>Target is missing a required gene for this ability to work.</AbilityNoTargetGene>
-    <AbilityTargetGeneOne>Target has the gene {0}, preventing this ability from working.</AbilityTargetGeneOne>
+    <AbilityTargetGeneOne>Target has the {0} gene, preventing this ability from working.</AbilityTargetGeneOne>
     <AbilityTargetGene>Target has a gene  preventing this ability from working.</AbilityTargetGene>
 
     <AbilityNoTargetHediffOne>Target must have the {0} hediff for this ability to work.</AbilityNoTargetHediffOne>
