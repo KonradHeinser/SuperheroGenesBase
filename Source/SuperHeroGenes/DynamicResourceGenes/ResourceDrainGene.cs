@@ -13,6 +13,10 @@ namespace SuperHeroGenesBase
 
         public bool extensionAlreadyChecked = false;
 
+        public List<AbilityDef> addedAbilities;
+
+        public int cachedGeneCount = 0;
+
         public bool CanOffset
         {
             get
@@ -67,9 +71,44 @@ namespace SuperHeroGenesBase
 
         public string DisplayLabel => Label + " (" + "Gene".Translate() + ")";
 
+        public override void PostAdd()
+        {
+            base.PostAdd();
+            SHGExtension SHGextension = def.GetModExtension<SHGExtension>();
+            if (SHGextension != null && !SHGextension.hediffsToApply.NullOrEmpty())
+            {
+                HediffAdder.HediffAdding(pawn, this);
+                if (addedAbilities == null) addedAbilities = new List<AbilityDef>();
+                cachedGeneCount = pawn.genes.GenesListForReading.Count;
+            }
+        }
+
+        public override void PostRemove()
+        {
+            base.PostRemove();
+            HediffAdder.HediffRemoving(pawn, this);
+
+            if (!addedAbilities.NullOrEmpty())
+            {
+                SHGUtilities.RemovePawnAbilities(pawn, addedAbilities);
+            }
+        }
+
         public override void Tick()
         {
             base.Tick();
+
+            if (pawn.IsHashIntervalTick(200))
+            {
+                SHGExtension SHGextension = def.GetModExtension<SHGExtension>();
+                if (SHGextension != null && !SHGextension.geneAbilities.NullOrEmpty() && pawn.genes.GenesListForReading.Count != cachedGeneCount)
+                {
+                    if (addedAbilities == null) addedAbilities = new List<AbilityDef>();
+                    addedAbilities = SHGUtilities.AbilitiesWithCertainGenes(pawn, SHGextension.geneAbilities, addedAbilities);
+                    cachedGeneCount = pawn.genes.GenesListForReading.Count;
+                }
+            }
+
             if (extension == null && !extensionAlreadyChecked)
             {
                 extension = def.GetModExtension<DRGExtension>();
@@ -84,6 +123,12 @@ namespace SuperHeroGenesBase
             {
                 yield return resourceDrainGizmo;
             }
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Collections.Look(ref addedAbilities, "SHG_DRGDAddedAbilities");
         }
     }
 }

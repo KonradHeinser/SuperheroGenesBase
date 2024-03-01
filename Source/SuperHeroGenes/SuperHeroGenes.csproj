@@ -208,6 +208,8 @@
     <Compile Include="Abilities\CompAbilityEffect_AbilityValidator.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_GiveHediffsInRangeGeneRestricting.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_GiveHediffsInRangeGeneRestricting.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_ExplodeWhenDamaged.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_ExplodeOnDamaged.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

@@ -15,7 +15,7 @@ namespace SuperHeroGenesBase
         {
             get
             {
-                if (Props.mainResourceGene == null) Log.Error(parent.Label + "is missing the mainResource gene, meaning it can't increase the resource level.");
+                if (Props.mainResourceGene == null) Log.Error(parent.Label + "is missing the mainResource gene, meaning it can't check the resource level.");
                 else if (cachedResourceGene == null || !cachedResourceGene.Active)
                 {
                     cachedResourceGene = (ResourceGene)base.Pawn.genes.GetGene(Props.mainResourceGene);

@@ -98,6 +98,7 @@ namespace SuperHeroGenesBase
             {
                 HediffAdder.HediffAdding(pawn, this);
                 if (addedAbilities == null) addedAbilities = new List<AbilityDef>();
+                cachedGeneCount = pawn.genes.GenesListForReading.Count;
             }
         }
 

@@ -143,7 +143,7 @@ namespace SuperHeroGenesBase
                 foreach (Hediff hediff in pawn.health.hediffSet.hediffs)
                 {
                     HediffComp_ExplodingMeleeAttacks meleeExplodingComp = hediff.TryGetComp<HediffComp_ExplodingMeleeAttacks>();
-                    if (meleeExplodingComp != null) return true;
+                    if (meleeExplodingComp != null && hediff.Severity >= meleeExplodingComp.Props.minSeverity && hediff.Severity <= meleeExplodingComp.Props.maxSeverity) return true;
                 }
             }
 
@@ -179,7 +179,7 @@ namespace SuperHeroGenesBase
                             if (!dinfo.Def.isExplosive && !dinfo.Def.isRanged)
                             {
                                 HediffComp_ExplodingMeleeAttacks meleeExplodingComp = hediff.TryGetComp<HediffComp_ExplodingMeleeAttacks>();
-                                if (meleeExplodingComp != null)
+                                if (meleeExplodingComp != null && hediff.Severity >= meleeExplodingComp.Props.minSeverity && hediff.Severity <= meleeExplodingComp.Props.maxSeverity)
                                 {
                                     meleeExplodingComp.currentlyExploding = true;
                                     meleeExplodingComp.DoExplosion(__instance.Position);

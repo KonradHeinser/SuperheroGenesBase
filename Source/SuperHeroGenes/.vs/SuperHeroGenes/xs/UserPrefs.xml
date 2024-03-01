@@ -1,23 +1,26 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="AbilityAndGeneLink.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HarmonyPatches.cs">
     <Files>
-      <File FileName="Hediffs/CompProperties/HediffCompProperties_GiveHediffsInRangeGeneRestricting.cs" Line="12" Column="9" />
-      <File FileName="Hediffs/Comps/HediffComp_GiveHediffsInRangeGeneRestricting.cs" Line="6" Column="29" />
-      <File FileName="SHGExtension.cs" Line="21" Column="49" />
-      <File FileName="AbilityAndGeneLink.cs" Line="11" Column="43" />
+      <File FileName="Genes/HediffAdder.cs" Line="30" Column="76" />
+      <File FileName="Genes/HediffsToParts.cs" Line="1" Column="1" />
+      <File FileName="SHGUtilities.cs" Line="113" Column="46" />
+      <File FileName="DynamicResourceGenes/ResourceDrainGene.cs" Line="111" Column="13" />
+      <File FileName="DynamicResourceGenes/ResourceGene.cs" Line="167" Column="14" />
+      <File FileName="Hediffs/Comps/HediffComp_ExplodeOnDamaged.cs" Line="10" Column="54" />
+      <File FileName="Hediffs/BurstHediffPropertiesBase.cs" Line="39" Column="51" />
+      <File FileName="HarmonyPatches.cs" Line="146" Column="159" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Abilities" expanded="True" />
               <Node name="DynamicResourceGenes" expanded="True" />
+              <Node name="Genes" expanded="True" />
               <Node name="Hediffs" expanded="True">
-                <Node name="CompProperties" expanded="True" />
                 <Node name="Comps" expanded="True" />
               </Node>
-              <Node name="AbilityAndGeneLink.cs" selected="True" />
+              <Node name="HarmonyPatches.cs" selected="True" />
             </Node>
           </Node>
         </State>
