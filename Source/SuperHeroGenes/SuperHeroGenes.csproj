@@ -206,6 +206,8 @@
     <Compile Include="Hediffs\HediffSeverityFactor.cs" />
     <Compile Include="Abilities\CompProperties_AbilityAbilityValidator.cs" />
     <Compile Include="Abilities\CompAbilityEffect_AbilityValidator.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_GiveHediffsInRangeGeneRestricting.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_GiveHediffsInRangeGeneRestricting.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

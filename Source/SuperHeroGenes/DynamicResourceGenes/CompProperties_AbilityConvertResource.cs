@@ -22,8 +22,8 @@ namespace SuperHeroGenesBase
 
         public override IEnumerable<string> ExtraStatSummary()
         {
-            yield return (string)("ResourceCost".Translate(giver.resourceLabel) + ": ") + Mathf.RoundToInt(resourceCost * 100f);
-            yield return (string)("ResourceGain".Translate(receiver.resourceLabel) + ": ") + Mathf.RoundToInt(resourceCost * -100f * conversionEfficiency);
+            yield return (string)("ResourceCost".Translate(giver.resourceLabel.CapitalizeFirst()) + ": ") + Mathf.RoundToInt(resourceCost * 100f);
+            yield return (string)("ResourceGain".Translate(receiver.resourceLabel.CapitalizeFirst()) + ": ") + Mathf.RoundToInt(resourceCost * -100f * conversionEfficiency);
         }
     }
 }

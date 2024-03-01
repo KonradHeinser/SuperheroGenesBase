@@ -1,23 +1,23 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Abilities/CompAbilityEffect_AbilityValidator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AbilityAndGeneLink.cs">
     <Files>
-      <File FileName="Abilities/CompProperties_AbilityAbilityValidator.cs" Line="34" Column="34" />
-      <File FileName="Genes/HediffAdder.cs" Line="35" Column="42" />
+      <File FileName="Hediffs/CompProperties/HediffCompProperties_GiveHediffsInRangeGeneRestricting.cs" Line="12" Column="9" />
+      <File FileName="Hediffs/Comps/HediffComp_GiveHediffsInRangeGeneRestricting.cs" Line="6" Column="29" />
       <File FileName="SHGExtension.cs" Line="21" Column="49" />
       <File FileName="AbilityAndGeneLink.cs" Line="11" Column="43" />
-      <File FileName="DynamicResourceGenes/ResourceGene.cs" Line="107" Column="52" />
-      <File FileName="SHGUtilities.cs" Line="602" Column="10" />
-      <File FileName="Abilities/CompAbilityEffect_AbilityValidator.cs" Line="351" Column="37" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Abilities" expanded="True">
-                <Node name="CompAbilityEffect_AbilityValidator.cs" selected="True" />
+              <Node name="Abilities" expanded="True" />
+              <Node name="DynamicResourceGenes" expanded="True" />
+              <Node name="Hediffs" expanded="True">
+                <Node name="CompProperties" expanded="True" />
+                <Node name="Comps" expanded="True" />
               </Node>
-              <Node name="Genes" expanded="True" />
+              <Node name="AbilityAndGeneLink.cs" selected="True" />
             </Node>
           </Node>
         </State>
