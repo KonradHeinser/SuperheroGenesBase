@@ -32,6 +32,13 @@ namespace SuperHeroGenesBase
                     Messages.Message(baseExplanation + casterHediffExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
                 return false;
             }
+            if (!CheckCasterPawn(out string casterExplanation))
+            {
+                if (throwMessages)
+                    Messages.Message(baseExplanation + casterExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
+                return true;
+            }
+
             // Caster map checks
             if (!CheckCondition(out string conditionExplanation))
             {
@@ -71,6 +78,12 @@ namespace SuperHeroGenesBase
                     Messages.Message(baseExplanation + targetGeneExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
                 return false;
             }
+            if (!CheckTargetPawn(target, out string targetExplanation))
+            {
+                if (throwMessages)
+                    Messages.Message(baseExplanation + targetExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
+                return true;
+            }
 
             return true;
         }
@@ -102,6 +115,11 @@ namespace SuperHeroGenesBase
                 if (!CheckHour(out string hourExplanation))
                 {
                     reason = hourExplanation;
+                    return true;
+                }
+                if (!CheckCasterPawn(out string casterExplanation))
+                {
+                    reason = casterExplanation;
                     return true;
                 }
             }
@@ -169,6 +187,83 @@ namespace SuperHeroGenesBase
                     if (Props.casterHasNoneOfHediffs.Count == 1) explanation = "AbilityCasterHediffOne".Translate(Props.casterHasNoneOfHediffs[0].label);
                     else explanation = "AbilityCasterHediff".Translate();
                     return false;
+                }
+            }
+
+            explanation = null;
+            return true;
+        }
+
+        public bool CheckCasterPawn(out string explanation)
+        {
+            Pawn pawn = parent.pawn;
+            if (!Props.casterCapLimiters.NullOrEmpty())
+            {
+                foreach (CapCheck capCheck in Props.casterCapLimiters)
+                {
+                    if (pawn.health.capacities.CapableOf(capCheck.capacity))
+                    {
+                        if (capCheck.minCapValue > 0)
+                        {
+                            explanation = "AbilityCasterNoneCheck".Translate(capCheck.capacity.LabelCap);
+                            return false;
+                        }
+                        continue;
+                    }
+                    float capValue = pawn.health.capacities.GetLevel(capCheck.capacity);
+                    if (capValue < capCheck.minCapValue)
+                    {
+                        explanation = "AbilityCasterLowCheck".Translate(capCheck.capacity.LabelCap);
+                        return false;
+                    }
+                    if (capValue > capCheck.maxCapValue)
+                    {
+                        explanation = "AbilityCasterHighCheck".Translate(capCheck.capacity.LabelCap);
+                        return false;
+                    }
+                }
+            }
+            if (!Props.casterStatLimiters.NullOrEmpty())
+            {
+                foreach (StatCheck statCheck in Props.casterStatLimiters)
+                {
+                    float statValue = pawn.GetStatValue(statCheck.stat);
+                    if (statValue < statCheck.minStatValue)
+                    {
+                        explanation = "AbilityCasterLowCheck".Translate(statCheck.stat.LabelCap);
+                        return false;
+                    }
+                    if (statValue > statCheck.maxStatValue)
+                    {
+                        explanation = "AbilityCasterHighCheck".Translate(statCheck.stat.LabelCap);
+                        return false;
+                    }
+                }
+            }
+            if (!Props.casterSkillLimiters.NullOrEmpty())
+            {
+                foreach (SkillCheck skillCheck in Props.casterSkillLimiters)
+                {
+                    SkillRecord skill = pawn.skills.GetSkill(skillCheck.skill);
+                    if (skill == null || skill.TotallyDisabled || skill.PermanentlyDisabled)
+                    {
+                        if (skillCheck.minLevel > 0)
+                        {
+                            explanation = "AbilityCasterNoneCheck".Translate(skillCheck.skill.LabelCap);
+                            return false;
+                        }
+                        continue;
+                    }
+                    if (skill.Level < skillCheck.minLevel)
+                    {
+                        explanation = "AbilityCasterLowCheck".Translate(skillCheck.skill.LabelCap);
+                        return false;
+                    }
+                    if (skill.Level > skillCheck.maxLevel)
+                    {
+                        explanation = "AbilityCasterHighCheck".Translate(skillCheck.skill.LabelCap);
+                        return false;
+                    }
                 }
             }
 
@@ -349,6 +444,21 @@ namespace SuperHeroGenesBase
                     }
                 }
             }
+            else
+            {
+                if (!Props.targetHasAllOfHediffs.NullOrEmpty())
+                {
+                    if (Props.targetHasAllOfHediffs.Count == 1 && Props.targetHasAllOfHediffs.NullOrEmpty()) explanation = "AbilityNoTargetHediffOne".Translate(Props.targetHasAllOfHediffs[0].label);
+                    else explanation = "AbilityNoTargetHediff".Translate();
+                    return false;
+                }
+                if (!Props.targetHasAnyOfHediffs.NullOrEmpty())
+                {
+                    if (Props.targetHasAnyOfHediffs.Count == 1) explanation = "AbilityNoTargetHediffOne".Translate(Props.targetHasAnyOfHediffs[0].label);
+                    else explanation = "AbilityNoTargetHediff".Translate();
+                    return false;
+                }
+            }
 
             explanation = null;
             return true;
@@ -392,6 +502,155 @@ namespace SuperHeroGenesBase
                         if (Props.targetHasNoneOfGenes.Count == 1) explanation = "AbilityTargetGeneOne".Translate(Props.targetHasNoneOfGenes[0].label);
                         else explanation = "AbilityTargetGene".Translate();
                         return false;
+                    }
+                }
+            }
+            else
+            {
+                if (!Props.targetHasAllOfGenes.NullOrEmpty())
+                {
+                    if (Props.targetHasAllOfGenes.Count == 1 && Props.targetHasAllOfGenes.NullOrEmpty()) explanation = "AbilityNoTargetGeneOne".Translate(Props.targetHasAllOfGenes[0].label);
+                    else explanation = "AbilityNoTargetGene".Translate();
+                    return false;
+                }
+                if (!Props.targetHasAnyOfGenes.NullOrEmpty())
+                {
+                    if (Props.targetHasAnyOfGenes.Count == 1) explanation = "AbilityNoTargetGeneOne".Translate(Props.targetHasAnyOfGenes[0].label);
+                    else explanation = "AbilityNoTargetGene".Translate();
+                    return false;
+                }
+            }
+
+            explanation = null;
+            return true;
+        }
+
+        public bool CheckTargetPawn(LocalTargetInfo target, out string explanation)
+        {
+            if (SHGUtilities.TargetIsPawn(target, out Pawn pawn))
+            {
+                if (!Props.targetCapLimiters.NullOrEmpty())
+                {
+                    foreach (CapCheck capCheck in Props.targetCapLimiters)
+                    {
+                        if (pawn.health.capacities.CapableOf(capCheck.capacity))
+                        {
+                            if (capCheck.minCapValue > 0)
+                            {
+                                explanation = "AbilityTargetNoneCheck".Translate(capCheck.capacity.LabelCap);
+                                return false;
+                            }
+                            continue;
+                        }
+                        float capValue = pawn.health.capacities.GetLevel(capCheck.capacity);
+                        if (capValue < capCheck.minCapValue)
+                        {
+                            explanation = "AbilityTargetLowCheck".Translate(capCheck.capacity.LabelCap);
+                            return false;
+                        }
+                        if (capValue > capCheck.maxCapValue)
+                        {
+                            explanation = "AbilityTargetHighCheck".Translate(capCheck.capacity.LabelCap);
+                            return false;
+                        }
+                    }
+                }
+                if (!Props.targetStatLimiters.NullOrEmpty())
+                {
+                    foreach (StatCheck statCheck in Props.targetStatLimiters)
+                    {
+                        float statValue = pawn.GetStatValue(statCheck.stat);
+                        if (statValue < statCheck.minStatValue)
+                        {
+                            explanation = "AbilityTargetLowCheck".Translate(statCheck.stat.LabelCap);
+                            return false;
+                        }
+                        if (statValue > statCheck.maxStatValue)
+                        {
+                            explanation = "AbilityTargetHighCheck".Translate(statCheck.stat.LabelCap);
+                            return false;
+                        }
+                    }
+                }
+                if (!Props.targetSkillLimiters.NullOrEmpty())
+                {
+                    foreach (SkillCheck skillCheck in Props.targetSkillLimiters)
+                    {
+                        SkillRecord skill = pawn.skills.GetSkill(skillCheck.skill);
+                        if (skill == null || skill.TotallyDisabled || skill.PermanentlyDisabled)
+                        {
+                            if (skillCheck.minLevel > 0)
+                            {
+                                explanation = "AbilityTargetNoneCheck".Translate(skillCheck.skill.LabelCap);
+                                return false;
+                            }
+                            continue;
+                        }
+                        if (skill.Level < skillCheck.minLevel)
+                        {
+                            explanation = "AbilityTargetLowCheck".Translate(skillCheck.skill.LabelCap);
+                            return false;
+                        }
+                        if (skill.Level > skillCheck.maxLevel)
+                        {
+                            explanation = "AbilityTargetHighCheck".Translate(skillCheck.skill.LabelCap);
+                            return false;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (!Props.targetCapLimiters.NullOrEmpty())
+                {
+                    foreach (CapCheck capCheck in Props.targetCapLimiters)
+                    {
+                        if (capCheck.minCapValue > 0)
+                        {
+                            explanation = "AbilityTargetNoneCheck".Translate(capCheck.capacity.LabelCap);
+                            return false;
+                        }
+                    }
+                }
+                if (!Props.targetSkillLimiters.NullOrEmpty())
+                {
+                    foreach (SkillCheck skillCheck in Props.targetSkillLimiters)
+                    {
+                        if (skillCheck.minLevel > 0)
+                        {
+                            explanation = "AbilityTargetNoneCheck".Translate(skillCheck.skill.LabelCap);
+                            return false;
+                        }
+                    }
+                }
+                if (!Props.targetStatLimiters.NullOrEmpty())
+                {
+                    Thing thing = null;
+                    if (target.HasThing) thing = target.Thing;
+                    foreach (StatCheck statCheck in Props.targetStatLimiters)
+                    {
+                        if (thing == null)
+                        {
+                            if (statCheck.minStatValue > 0)
+                            {
+                                explanation = "AbilityTargetNoneCheck".Translate(statCheck.stat.LabelCap);
+                                return false;
+                            }
+                        }
+                        else
+                        {
+                            float statValue = thing.GetStatValue(statCheck.stat);
+                            if (statValue < statCheck.minStatValue)
+                            {
+                                explanation = "AbilityTargetLowCheck".Translate(statCheck.stat.LabelCap);
+                                return false;
+                            }
+                            if (statValue > statCheck.maxStatValue)
+                            {
+                                explanation = "AbilityTargetHighCheck".Translate(statCheck.stat.LabelCap);
+                                return false;
+                            }
+                        }
                     }
                 }
             }

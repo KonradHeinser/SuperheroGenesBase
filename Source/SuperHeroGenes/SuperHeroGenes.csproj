@@ -210,6 +210,9 @@
     <Compile Include="Hediffs\Comps\HediffComp_GiveHediffsInRangeGeneRestricting.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_ExplodeWhenDamaged.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_ExplodeOnDamaged.cs" />
+    <Compile Include="Abilities\CapCheck.cs" />
+    <Compile Include="Abilities\SkillCheck.cs" />
+    <Compile Include="Abilities\StatCheck.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

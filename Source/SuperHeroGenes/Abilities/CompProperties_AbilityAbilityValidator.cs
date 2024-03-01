@@ -19,10 +19,20 @@ namespace SuperHeroGenesBase
         public List<HediffDef> targetHasAllOfHediffs;
         public List<HediffDef> targetHasNoneOfHediffs;
 
+        // Target Pawn Checks
+        public List<CapCheck> targetCapLimiters;
+        public List<SkillCheck> targetSkillLimiters;
+        public List<StatCheck> targetStatLimiters;
+
         // Caster Hediffs
         public List<HediffDef> casterHasAnyOfHediffs;
         public List<HediffDef> casterHasAllOfHediffs;
         public List<HediffDef> casterHasNoneOfHediffs;
+
+        // Target Pawn Checks
+        public List<CapCheck> casterCapLimiters;
+        public List<SkillCheck> casterSkillLimiters;
+        public List<StatCheck> casterStatLimiters;
 
         // % Light
         public float minTargetLightLevel = 0f;
