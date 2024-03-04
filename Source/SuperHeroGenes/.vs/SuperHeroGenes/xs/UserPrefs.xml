@@ -1,24 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Hediffs/CompProperties/HediffCompProperties_SeverityByOtherHediffSeverities.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HarmonyPatches.cs">
     <Files>
-      <File FileName="Hediffs/CompProperties/HediffCompProperties_SeverityByOtherHediffSeverities.cs" Line="17" Column="6" />
+      <File FileName="HarmonyPatches.cs" Line="64" Column="61" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SuperHeroGenes" expanded="True">
-            <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Hediffs" expanded="True">
-                <Node name="CompProperties" expanded="True">
-                  <Node name="HediffCompProperties_SeverityByOtherHediffSeverities.cs" selected="True" />
-                </Node>
-                <Node name="Comps" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
