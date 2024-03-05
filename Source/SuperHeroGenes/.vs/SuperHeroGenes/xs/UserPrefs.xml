@@ -3,8 +3,21 @@
     <Files>
       <File FileName="HarmonyPatches.cs" Line="64" Column="61" />
       <File FileName="DynamicResourceGenes/CompAbilityEffect_ResourceToBattery.cs" Line="27" Column="15" />
-      <File FileName="DynamicResourceGenes/GeneGizmo_ResourceGene.cs" Line="53" Column="21" />
+      <File FileName="DynamicResourceGenes/GeneGizmo_ResourceGene.cs" Line="60" Column="39" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SuperHeroGenes" expanded="True">
+            <Node name="SuperHeroGenes" expanded="True">
+              <Node name="DynamicResourceGenes" expanded="True">
+                <Node name="GeneGizmo_ResourceGene.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

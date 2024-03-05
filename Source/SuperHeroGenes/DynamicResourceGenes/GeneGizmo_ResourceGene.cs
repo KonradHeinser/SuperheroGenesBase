@@ -49,6 +49,14 @@ namespace SuperHeroGenesBase
                     {
                         cost = compAbilityEffect_Battery.MaxCost;
                     }
+                    else if (effectComp is CompAbilityEffect_EnergyBlast compAbilityEffect_Blast && compAbilityEffect_Blast.Props.mainResourceGene == gene.def && compAbilityEffect_Blast.CurrentCost > 0)
+                    {
+                        cost = compAbilityEffect_Blast.CurrentCost;
+                    }
+                    else if (effectComp is CompAbilityEffect_EnergyBurst compAbilityEffect_Burst && compAbilityEffect_Burst.Props.mainResourceGene == gene.def && compAbilityEffect_Burst.CurrentCost > 0)
+                    {
+                        cost = compAbilityEffect_Burst.CurrentCost;
+                    }
                     else flag = false;
 
                     if (flag)

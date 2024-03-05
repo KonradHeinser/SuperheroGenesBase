@@ -43,7 +43,7 @@ namespace SuperHeroGenesBase
             }
         }
 
-        private float CurrentCost
+        public float CurrentCost
         {
             get
             {
