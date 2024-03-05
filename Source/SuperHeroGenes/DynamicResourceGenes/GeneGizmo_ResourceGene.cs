@@ -38,13 +38,26 @@ namespace SuperHeroGenesBase
             {
                 foreach (CompAbilityEffect effectComp in command_Ability.Ability.EffectComps)
                 {
+                    bool flag = true;
+                    float cost = 0;
+
                     if (effectComp is CompAbilityEffect_ResourceCost compAbilityEffect_ResourceCost && compAbilityEffect_ResourceCost.Props.mainResourceGene == gene.def && compAbilityEffect_ResourceCost.Props.resourceCost > float.Epsilon)
+                    {
+                        cost = compAbilityEffect_ResourceCost.Props.resourceCost;
+                    }
+                    else if (effectComp is CompAbilityEffect_ResourceToBattery compAbilityEffect_Battery && compAbilityEffect_Battery.Props.mainResourceGene == gene.def && compAbilityEffect_Battery.MaxCost > 0)
+                    {
+                        cost = compAbilityEffect_Battery.MaxCost;
+                    }
+                    else flag = false;
+
+                    if (flag)
                     {
                         Rect rect = barRect.ContractedBy(3f);
                         float width = rect.width;
                         float num3 = gene.Value / gene.Max;
                         rect.xMax = rect.xMin + width * num3;
-                        float num4 = Mathf.Min(compAbilityEffect_ResourceCost.Props.resourceCost / gene.Max, 1f);
+                        float num4 = Mathf.Min(cost / gene.Max, 1f);
                         rect.xMin = Mathf.Max(rect.xMin, rect.xMax - width * num4);
                         GUI.color = new Color(1f, 1f, 1f, num2 * 0.7f);
                         GenUI.DrawTextureWithMaterial(rect, ResourceCostTex, null);
@@ -82,7 +95,7 @@ namespace SuperHeroGenesBase
                 {
                     Widgets.DrawHighlight(rect);
                     string onOff = (resourceGene.resourcePacksAllowed ? "On" : "Off").Translate().ToString().UncapitalizeFirst();
-                    TooltipHandler.TipRegion(rect, () => "AutoTakeResourceDesc".Translate(resourceGene.ResourceLabel.Named("RESOURCE"),  gene.pawn.Named("PAWN"), resourceGene.PostProcessValue(resourceGene.targetValue).Named("MIN"), onOff.Named("ONOFF")).Resolve(), 828267373);
+                    TooltipHandler.TipRegion(rect, () => "AutoTakeResourceDesc".Translate(resourceGene.ResourceLabel.Named("RESOURCE"), gene.pawn.Named("PAWN"), resourceGene.PostProcessValue(resourceGene.targetValue).Named("MIN"), onOff.Named("ONOFF")).Resolve(), 828267373);
                     mouseOverAnyHighlightableElement = true;
                 }
             }

@@ -24,7 +24,7 @@ namespace SuperHeroGenesBase
             }
         }
 
-        private float MaxCost
+        public float MaxCost
         {
             get
             {
