@@ -11,9 +11,9 @@
         Using that range will ensure your categories don't end up tangled up with the ones from this mod, though other mods may still use these ranges.
         There is an exception to this guidline if you're looking to add new paths to a set.
         If this is the case, please use these ranges:
-            Psionic Path: 980.0~987.9
-            Hemogenic Path: 970.0~977.9
-            Radioactive Path: 960.0~967.9
+            Psionic Path: 980.0~988.9
+            Hemogenic Path: 970.0~978.9
+            Radioactive Path: 960.0~968.9
 
         Important files for various things
         Fear: HediffDefs has the effects, SHG_Stats has the pawn stat, and SHGDamageDefs includes a special damage type if you plan on adding it as a secondary for a weapon
@@ -128,7 +128,7 @@
         <displayPriorityInXenotype>989.3</displayPriorityInXenotype>
     </GeneCategoryDef>
 
-    <!--980.0~987.9 are for outside paths. If base reaches this far, it's gone too far-->
+    <!--980.0~988.9 are for outside paths. If base reaches this far, it's gone too far-->
 
     <GeneCategoryDef>
         <defName>SuperPowersHemoThief</defName>
@@ -154,10 +154,33 @@
         <displayPriorityInXenotype>979.6</displayPriorityInXenotype>
     </GeneCategoryDef>
 
-    <!--970.0~977.9 are for outside paths. If base reaches this far, it's gone too far-->
+    <!--970.0~978.9 are for outside paths. If base reaches this far, it's gone too far-->
 
+    <GeneCategoryDef>
+        <defName>SuperPowersRadiomancyDecay</defName>
+        <label>radiomancy powers - decay</label>
+        <displayPriorityInXenotype>969.9</displayPriorityInXenotype>
+    </GeneCategoryDef>
 
-    <!--960.0~967.9 are for outside paths. If base reaches this far, it's gone too far-->
+    <GeneCategoryDef>
+        <defName>SuperPowersRadiomancyEmission</defName>
+        <label>radiomancy powers - emission</label>
+        <displayPriorityInXenotype>969.8</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
+        <defName>SuperPowersRadiomancyFission</defName>
+        <label>radiomancy powers - fission</label>
+        <displayPriorityInXenotype>969.7</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
+        <defName>SuperPowersRadiomancyFusion</defName>
+        <label>radiomancy powers - fusion</label>
+        <displayPriorityInXenotype>969.6</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <!--960.0~968.9 are for outside paths. If base reaches this far, it's gone too far-->
 
     <!--Note for author from past Alite: 900~930 reserved for outside expansions. If you happen to get this far, it's time to start squeezing
     Any category below 900 is miscellaneous stuff that doesn't fit the standard power stuff-->
@@ -173,8 +196,6 @@
         <label>SHG xenotype randomizer</label>
         <displayPriorityInXenotype>899.8</displayPriorityInXenotype>
     </GeneCategoryDef>
-
-    
 
         <!--Basic bases-->
     <GeneDef Name="SuperGeneBase" Abstract="True">
@@ -342,6 +363,37 @@
 
         <!--Radiomancer bases-->
 
+    <GeneDef Name="SuperPowersRadiomancyDecayBase" Abstract="True">
+        <displayCategory>SuperPowersRadiomancyDecay</displayCategory>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <prerequisite>SHG_Archetypes_Radiomancer</prerequisite>
+        <marketValueFactor>1.1</marketValueFactor>
+    </GeneDef>
+
+    <GeneDef Name="SuperPowersRadiomancyEmissionBase" Abstract="True">
+        <displayCategory>SuperPowersRadiomancyEmission</displayCategory>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <prerequisite>SHG_Archetypes_Radiomancer</prerequisite>
+        <marketValueFactor>1.1</marketValueFactor>
+    </GeneDef>
+
+    <GeneDef Name="SuperPowersRadiomancyFissionBase" Abstract="True">
+        <displayCategory>SuperPowersRadiomancyFission</displayCategory>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <prerequisite>SHG_Archetypes_Radiomancer</prerequisite>
+        <marketValueFactor>1.1</marketValueFactor>
+    </GeneDef>
+
+    <GeneDef Name="SuperPowersRadiomancyFusionBase" Abstract="True">
+        <displayCategory>SuperPowersRadiomancyFusion</displayCategory>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <prerequisite>SHG_Archetypes_Radiomancer</prerequisite>
+        <marketValueFactor>1.1</marketValueFactor>
+    </GeneDef>
 
         <!--Superhero Gene Base-->
     <HistoryEventDef>

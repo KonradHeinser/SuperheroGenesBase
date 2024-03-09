@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef>
+        <defName>SHG_Radiomancer_CellularDestabilization</defName>
+        <label>cellular destabilization</label>
+        <description>This pawn's cells are turning against them, reducing how effective their body heals injuries and resists infections. There is also a high chance that the pawn will develop carcinnoma due to the radioactive energy flowing through their body.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <makesSickThought>true</makesSickThought>
+        <stages>
+            <li>
+                <vomitMtbDays>0.1</vomitMtbDays>
+                <statFactors>
+                    <InjuryHealingFactor>0.75</InjuryHealingFactor>
+                    <ImmunityGainSpeed>0.75</ImmunityGainSpeed>
+                </statFactors>
+                <hediffGivers>
+                    <li Class="HediffGiver_Random">
+                        <hediff>Carcinoma</hediff>
+                        <mtbDays>0.15</mtbDays>
+                        <canAffectAnyLivePart>true</canAffectAnyLivePart>
+                    </li>
+                </hediffGivers>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef Name="SHG_Radiomancer_DecayLink" Abstract="True">
+        <everCurableByItem>false</everCurableByItem>
+        <initialSeverity>1</initialSeverity>
+        <hediffClass>HediffWithTarget</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>10000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_Radiomancer_DecayLink">
+        <defName>SHG_Radiomancer_DrainEnergy_Debuff</defName>
+        <label>drain energy</label>
+        <description>This pawn is constantly having their energy drained by a radiomancer. If the radiomancer dies, this will end.</description>
+        <stages>
+            <li>
+                <hungerRateFactorOffset>2</hungerRateFactorOffset>
+                <statFactors>
+                    <RestFallRateFactor>2</RestFallRateFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_Radiomancer_DecayLink">
+        <defName>SHG_Radiomancer_DrainEnergy</defName>
+        <label>drain energy</label>
+        <description>This pawn is constantly draining energy from another pawn. If the other pawn dies, this regeneration ends.</description>
+        <stages />
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_Radiomancer_DecayLink">
+        <defName>SHG_Radiomancer_WeakenSkin_Debuff</defName>
+        <label>weaken skin</label>
+        <description>This pawn's skin is being weakened by a Radiomancer, lessening any innate armor bonuses they may have had and increasing all forms of damage they receive. If the radiomancer dies, this will end.</description>
+        <stages>
+            <li>
+                <statFactors>
+                    <IncomingDamageFactor>1.50</IncomingDamageFactor>
+                    <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.5</ArmorRating_Heat>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+    
+    <HediffDef ParentName="SHG_Radiomancer_DecayLink">
+        <defName>SHG_Radiomancer_WeakenSkin</defName>
+        <label>weaken skin</label>
+        <description>This pawn is constantly converting some of the life energy of another pawn into radioactive energy. If the other pawn dies, this regeneration ends.</description>
+        <stages />
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_Radiomancer_DecayLink">
+        <defName>SHG_Radiomancer_SapStrength_Debuff</defName>
+        <label>sap strength</label>
+        <description>This pawn's body feels sluggish due to a radiomancer's influence. If the radiomancer dies, this will end.</description>
+        <stages>
+            <li>
+                <statFactors>
+                    <MoveSpeed>0.75</MoveSpeed>
+                    <MeleeDamageFactor>0.75</MeleeDamageFactor>
+                    <CarryingCapacity>0.75</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">0.75</CarryBulk>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_Radiomancer_DecayLink">
+        <defName>SHG_Radiomancer_SapStrength</defName>
+        <label>sap strength</label>
+        <description>This pawn is constantly converting some of the life energy of another pawn into radioactive energy. If the other pawn dies, this regeneration ends.</description>
+        <stages />
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_Radiomancer_DecayLink">
+        <defName>SHG_Radiomancer_DrainLife_Debuff</defName>
+        <label>drain life</label>
+        <description>This pawn's body isn't healing properly due to a radiomancer's influence. If the radiomancer dies, this will end.</description>
+        <stages>
+            <li>
+                <statFactors>
+                    <EBSG_BloodlossRecoveryBonus MayRequire="EBSG.Framework">0.5</EBSG_BloodlossRecoveryBonus>
+                    <InjuryHealingFactor>0.5</InjuryHealingFactor>
+                    <ImmunityGainSpeed>0.5</ImmunityGainSpeed>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_Radiomancer_DecayLink">
+        <defName>SHG_Radiomancer_DrainLife</defName>
+        <label>drain life</label>
+        <description>This pawn is constantly converting some of the life energy of another pawn into radioactive energy. If the other pawn dies, this regeneration ends.</description>
+        <stages />
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_Radiomancer_DecayLink">
+        <defName>SHG_Radiomancer_SlowSynapses_Debuff</defName>
+        <label>slow synapses</label>
+        <description>This pawn's mind feels sluggish due to a radiomancer's influence. If the radiomancer dies, this will end.</description>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <postFactor>0.8</postFactor>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_Radiomancer_DecayLink">
+        <defName>SHG_Radiomancer_SlowSynapses</defName>
+        <label>slow synapses</label>
+        <description>This pawn is constantly draining energy from another pawn. If the other pawn dies, this regeneration ends.</description>
+        <stages />
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Radiomancer_RapidAging</defName>
+        <label>rapidly aging</label>
+        <description>This pawn is rapidly aging.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <initialSeverity>1</initialSeverity>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <stages />
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_Aging">
+                <ageChangePerHour>10</ageChangePerHour>
+            </li>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>2500</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Radiomancer_DangerousAura</defName>
+		<label>dangerous aura</label>
+		<description>This pawn is releasing a field of radioactive energy around them that causes major issues for any non-radiomancers. Non-senescent pawns are immune to the risk of carcinoma, but the other penalties remain.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsInRangeGeneRestricting">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <forbiddenGenes>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </forbiddenGenes>
+                <hediff>SHG_Radiomancer_DangerousAura_Debuff</hediff>
+            </li>
+            <li Class="HediffCompProperties_GiveAbility">
+                <abilityDefs>
+                    <li>SHG_Radiomancer_DangerousAura_Deactivate</li>
+                </abilityDefs>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Radiomancer_DangerousAura_Debuff</defName>
+        <label>dangerous aura</label>
+        <description>This pawn's body is being bombarded with radioactive energy from a nearby radiomancer. This stacks with cellular destabilization.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <makesSickThought>true</makesSickThought>
+        <stages>
+            <li>
+                <vomitMtbDays>0.1</vomitMtbDays>
+                <statFactors>
+                    <InjuryHealingFactor>0.75</InjuryHealingFactor>
+                    <ImmunityGainSpeed>0.75</ImmunityGainSpeed>
+                </statFactors>
+                <hediffGivers>
+                    <li Class="HediffGiver_Random">
+                        <hediff>Carcinoma</hediff>
+                        <mtbDays>0.15</mtbDays>
+                        <canAffectAnyLivePart>true</canAffectAnyLivePart>
+                    </li>
+                </hediffGivers>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>false</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+</Defs>

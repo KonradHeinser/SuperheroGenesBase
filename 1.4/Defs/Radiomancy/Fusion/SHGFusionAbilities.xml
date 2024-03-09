@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef Name="SHG_Radiomancer_BioreactorBase" ParentName="SHGSelfCastBase" Abstract="True">
+        <iconPath>Radiomancer/Fusion/Gene_Radiomancer_Bioreactor</iconPath>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>-0.10</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_Radiomancer_BioreactorBase">
+        <defName>SHG_Radiomancer_NutritionConversion</defName>
+        <label>nutrition to energy</label>
+        <description>Convert stored nutrition directly into raw energy.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityOffsetNeed">
+                <needOffsets>
+                    <li>
+                        <need>Food</need>
+                        <offset>-0.05</offset>
+                    </li>
+                </needOffsets>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_Radiomancer_BioreactorBase">
+        <defName>SHG_Radiomancer_BloodConversion</defName>
+        <label>blood to energy</label>
+        <description>Convert blood directly into raw energy.</description>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>BloodLoss</hediffDef>
+                <replaceExisting>false</replaceExisting>
+                <severity>0.1</severity>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_Radiomancer_BioreactorBase">
+        <defName>SHG_Radiomancer_HemogenConversion</defName>
+        <label>hemogen to energy</label>
+        <description>Convert hemogen directly into raw energy.</description>
+        <comps>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>-0.1</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_Radiomancer_CondenseRadiation</defName>
+        <label>condense radiation</label>
+        <description>Condenses massive amounts of radioactive energy within the radiomancer's body and outputs it as a radiation orb. This orb can be absorbed by a radiomancer at a later point to regain most of the energy expended in its creation.\n\nNote that while the orb does not cause side effects to other pawns near it, it can create extremely dangerous explosions if damaged.</description>
+        <iconPath>Radiomancer/RadiationOrb/RadiationOrb_A</iconPath>
+        <cooldownTicksRange>100</cooldownTicksRange>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <descriptionHyperlinks>
+            <ThingDef>SHG_RadiationOrb</ThingDef>
+        </descriptionHyperlinks>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>0.50</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityCreateItems">
+                <thingPattern>
+                    <li>
+                        <thing>SHG_RadiationOrb</thing>
+                        <count>1</count>
+                    </li>
+                </thingPattern>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

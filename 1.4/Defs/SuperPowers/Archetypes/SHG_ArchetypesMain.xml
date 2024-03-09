@@ -95,6 +95,80 @@
         </stages>
     </HediffDef>
 
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Archetypes_Radiomancer</defName>
+        <label>radiomancer</label>
+        <description>Radiomancers manipulate the energies of their body and the air around them to create extraordinary effects. Unlike Psionists and Hemomancers, Radiomancers deal with energy in its purist form, allowing them to gain radioactive energy from various sources, though they technically cannot store much at any given time. The creation of this gene was achieved by splicing specific portions of a Superhero Gene, then recombining them into something that essentially makes the carrier a biological energy converter.</description>
+        <iconPath>Archetypes/Gene_Radiomancer</iconPath>
+        <prerequisite />
+        <geneClass>SuperHeroGenesBase.ResourceGene</geneClass>
+        <resourceGizmoThresholds>
+            <li>0.25</li>
+            <li>0.5</li>
+            <li>0.75</li>
+        </resourceGizmoThresholds>
+        <resourceGizmoType>SuperHeroGenesBase.GeneGizmo_ResourceGene</resourceGizmoType>
+        <showGizmoOnWorldView>false</showGizmoOnWorldView>
+        <showGizmoWhenDrafted>true</showGizmoWhenDrafted>
+        <resourceDescription>A special form of radiation that a specific type of superhero can generate and dissipate using energy reactions within their body.</resourceDescription>
+        <resourceLabel>radiation</resourceLabel>
+        <biostatArc>1</biostatArc>
+        <resourceLossPerDay>0</resourceLossPerDay>
+        <displayOrderInCategory>-0.8</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>Gives special radiation resource.</li>
+            <li>This resource is only gained and lost through the use of abilities.</li>
+            <li>Gives the Gather Energy ability to radiomancers that have neither the Bioreactor or Solar Recharging genes.</li>
+            <li>Gives the dissipate energy ability to radiomancers that have neither the Condense Radiation or Refocus Energy genes.</li>
+        </customEffectDescriptions>
+		<modExtensions>
+			<li Class="SuperHeroGenesBase.DRGExtension">
+				<isMainGene>True</isMainGene>
+                <maximum>1</maximum>
+                <barColor>(255, 215, 0)</barColor>
+                <barHighlightColor>(0, 155, 0)</barHighlightColor>
+                <iconThing>SHG_RadiationOrb</iconThing>
+                <resourcePacks>
+                    <li>SHG_RadiationOrb</li>
+                </resourcePacks>
+			</li>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <geneAbilities>
+                    <li>
+                        <forbiddenGenes>
+                            <li>SHG_Radiomancer_CondenseRadiation</li>
+                            <li>SHG_Radiomancer_RefocusEnergy</li>
+                        </forbiddenGenes>
+                        <abilities>
+                            <li>SHG_Radiomancer_DissipateEnergy</li>
+                        </abilities>
+                    </li>
+                    <li>
+                        <forbiddenGenes>
+                            <li>SHG_Radiomancer_Bioreactor</li>
+                            <li>SHG_Radiomancer_SolarRecharging</li>
+                        </forbiddenGenes>
+                        <abilities>
+                            <li>SHG_Radiomancer_GatherEnergy</li>
+                        </abilities>
+                    </li>
+                </geneAbilities>
+            </li>
+		</modExtensions>
+        <hediffGiversCannotGive>
+            <li>Carcinoma</li>
+        </hediffGiversCannotGive>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>radio</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>mancer</symbol></li>
+                <li><symbol>active</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
         <!--Mancers-->
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Electromancer</defName>

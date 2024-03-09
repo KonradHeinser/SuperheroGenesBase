@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef Name="SHG_Radiomancer_OverchargeHediffs" Abstract="True">
+        <isBad>False</isBad>
+        <everCurableByItem>False</everCurableByItem>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>False</scenarioCanAdd>
+        <minSeverity>0.001</minSeverity>
+        <initialSeverity>0.001</initialSeverity>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityFromResource">
+                <severityPerHourFull>0.05</severityPerHourFull>
+                <severityPerHourResource>-0.1</severityPerHourResource>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_DisplaySeverity">
+                <prependString>Charge : </prependString>
+                <appendString>%</appendString>
+                <postFactor>20</postFactor>
+                <roundDigits>1</roundDigits>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef Name="SHG_Radiomancer_OverchargeTooMuch" Abstract="True">
+        <description>This pawn had to much energy stored, and now must let their body cool off by remaining below their limit. This doesn't cause any direct debuffs to the radiomancer, just causes their body to gradually expel some of their stored energy into the air around them, which may result in nearby non-radiomancer's developing carcinoma. The expelled radiation is not dense enough to cause other effects.</description>
+        <isBad>False</isBad>
+        <everCurableByItem>False</everCurableByItem>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>False</scenarioCanAdd>
+        <minSeverity>0.001</minSeverity>
+        <initialSeverity>0.001</initialSeverity>
+        <stages />
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityFromResource">
+                <severityPerHourFull>0.01</severityPerHourFull>
+                <severityPerHourResource>-0.1</severityPerHourResource>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsInRangeGeneRestricting">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <forbiddenGenes>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                    <li>DiseaseFree</li>
+                </forbiddenGenes>
+                <hediff>SHG_Radiomancer_ExpelledRadiation</hediff>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_DisplaySeverity">
+                <prependString>Minimum hours remaining : </prependString>
+                <postFactor>10</postFactor>
+                <roundDigits>1</roundDigits>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Radiomancer_ExpelledRadiation</defName>
+        <label>expelled radiation</label>
+        <description>This pawn's body is being bombarded with radioactive energy from a nearby radiomancer because that radiomancer couldn't keep their internal radiation under control anymore.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <makesSickThought>true</makesSickThought>
+        <stages>
+            <li>
+                <hediffGivers>
+                    <li Class="HediffGiver_Random">
+                        <hediff>Carcinoma</hediff>
+                        <mtbDays>0.4</mtbDays>
+                        <canAffectAnyLivePart>true</canAffectAnyLivePart>
+                    </li>
+                </hediffGivers>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>false</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_Radiomancer_OverchargeHediffs">
+        <defName>SHG_Radiomancer_InfusedMuscles</defName>
+        <label>infused muscles</label>
+        <description>This radiomancer has excess energy stored within their muscles, allowing them to surpass normal humanoid limits without side effects.</description>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>0.5</minSeverity>
+				<statFactors>
+                    <MeleeDamageFactor>1.1</MeleeDamageFactor>
+                    <CarryingCapacity>1.1</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">1.1</CarryBulk>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>1</minSeverity>
+				<statFactors>
+                    <MeleeDamageFactor>1.2</MeleeDamageFactor>
+                    <CarryingCapacity>1.2</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">1.2</CarryBulk>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>1.5</minSeverity>
+				<statFactors>
+                    <MeleeDamageFactor>1.3</MeleeDamageFactor>
+                    <CarryingCapacity>1.3</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">1.3</CarryBulk>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>2</minSeverity>
+				<statFactors>
+                    <MeleeDamageFactor>1.4</MeleeDamageFactor>
+                    <CarryingCapacity>1.4</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">1.4</CarryBulk>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>2.5</minSeverity>
+				<statFactors>
+                    <MeleeDamageFactor>1.5</MeleeDamageFactor>
+                    <CarryingCapacity>1.5</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">1.5</CarryBulk>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>3</minSeverity>
+				<statFactors>
+                    <MeleeDamageFactor>1.6</MeleeDamageFactor>
+                    <CarryingCapacity>1.6</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">1.6</CarryBulk>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>3.5</minSeverity>
+				<statFactors>
+                    <MeleeDamageFactor>1.7</MeleeDamageFactor>
+                    <CarryingCapacity>1.7</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">1.7</CarryBulk>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>4</minSeverity>
+				<statFactors>
+                    <MeleeDamageFactor>1.8</MeleeDamageFactor>
+                    <CarryingCapacity>1.8</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">1.8</CarryBulk>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>4.5</minSeverity>
+				<statFactors>
+                    <MeleeDamageFactor>1.9</MeleeDamageFactor>
+                    <CarryingCapacity>1.9</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">1.9</CarryBulk>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>5</minSeverity>
+                <label>max</label>
+				<statFactors>
+                    <MeleeDamageFactor>2</MeleeDamageFactor>
+                    <CarryingCapacity>2</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">2</CarryBulk>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_CreateOtherHediffs">
+                <hediffSets>
+                    <li>
+                        <hediffDef>SHG_Radiomancer_InfusedMusclesOvercharge</hediffDef>
+                        <minSeverity>5.5</minSeverity>
+                        <severityPerDay>1</severityPerDay>
+                        <initialSeverity>0.1</initialSeverity>
+                    </li>
+                </hediffSets>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_Radiomancer_OverchargeTooMuch">
+        <defName>SHG_Radiomancer_InfusedMusclesOvercharge</defName>
+        <label>overcharge (muscles)</label>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_Radiomancer_OverchargeHediffs">
+        <defName>SHG_Radiomancer_EnergizedNeurons</defName>
+        <label>energized neurons</label>
+        <description>This radiomancer has is using excess energy to accelerate the rate their neurons can fire, allowing their mind to process new information faster.</description>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>0.5</minSeverity>
+				<statFactors>
+                    <ResearchSpeed>1.1</ResearchSpeed>
+                    <GlobalLearningFactor>1.1</GlobalLearningFactor>
+                    <LearningRateFactor>1.1</LearningRateFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>1</minSeverity>
+				<statFactors>
+                    <ResearchSpeed>1.2</ResearchSpeed>
+                    <GlobalLearningFactor>1.2</GlobalLearningFactor>
+                    <LearningRateFactor>1.2</LearningRateFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>1.5</minSeverity>
+				<statFactors>
+                    <ResearchSpeed>1.3</ResearchSpeed>
+                    <GlobalLearningFactor>1.3</GlobalLearningFactor>
+                    <LearningRateFactor>1.3</LearningRateFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>2</minSeverity>
+				<statFactors>
+                    <ResearchSpeed>1.4</ResearchSpeed>
+                    <GlobalLearningFactor>1.4</GlobalLearningFactor>
+                    <LearningRateFactor>1.4</LearningRateFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>2.5</minSeverity>
+				<statFactors>
+                    <ResearchSpeed>1.5</ResearchSpeed>
+                    <GlobalLearningFactor>1.5</GlobalLearningFactor>
+                    <LearningRateFactor>1.5</LearningRateFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>3</minSeverity>
+				<statFactors>
+                    <ResearchSpeed>1.6</ResearchSpeed>
+                    <GlobalLearningFactor>1.6</GlobalLearningFactor>
+                    <LearningRateFactor>1.6</LearningRateFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>3.5</minSeverity>
+				<statFactors>
+                    <ResearchSpeed>1.7</ResearchSpeed>
+                    <GlobalLearningFactor>1.7</GlobalLearningFactor>
+                    <LearningRateFactor>1.7</LearningRateFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>4</minSeverity>
+				<statFactors>
+                    <ResearchSpeed>1.8</ResearchSpeed>
+                    <GlobalLearningFactor>1.8</GlobalLearningFactor>
+                    <LearningRateFactor>1.8</LearningRateFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>4.5</minSeverity>
+				<statFactors>
+                    <ResearchSpeed>1.9</ResearchSpeed>
+                    <GlobalLearningFactor>1.9</GlobalLearningFactor>
+                    <LearningRateFactor>1.9</LearningRateFactor>
+                </statFactors>
+            </li>
+            <li>
+                <minSeverity>5</minSeverity>
+                <label>max</label>
+				<statFactors>
+                    <ResearchSpeed>2</ResearchSpeed>
+                    <GlobalLearningFactor>2</GlobalLearningFactor>
+                    <LearningRateFactor>2</LearningRateFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_CreateOtherHediffs">
+                <hediffSets>
+                    <li>
+                        <hediffDef>SHG_Radiomancer_EnergizedNeuronsOvercharge</hediffDef>
+                        <minSeverity>5.5</minSeverity>
+                        <severityPerDay>1</severityPerDay>
+                        <initialSeverity>0.1</initialSeverity>
+                    </li>
+                </hediffSets>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_Radiomancer_OverchargeTooMuch">
+        <defName>SHG_Radiomancer_EnergizedNeuronsOvercharge</defName>
+        <label>overcharge (neurons)</label>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_Radiomancer_OverchargeHediffs">
+        <defName>SHG_Radiomancer_EnergyArmor</defName>
+        <label>energy armor</label>
+        <description>This radiomancer has coated their body with energy to protect themselves from attacks and cause a bit of damage to all hostile pawns around them whenever they are hit.</description>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>0.5</minSeverity>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.05</ArmorRating_Heat>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>1</minSeverity>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.10</ArmorRating_Heat>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>1.5</minSeverity>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.15</ArmorRating_Heat>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>2</minSeverity>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.20</ArmorRating_Heat>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>2.5</minSeverity>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.25</ArmorRating_Heat>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>3</minSeverity>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.30</ArmorRating_Heat>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>3.5</minSeverity>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.35</ArmorRating_Heat>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>4</minSeverity>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.40</ArmorRating_Heat>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>4.5</minSeverity>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.45</ArmorRating_Heat>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>5</minSeverity>
+                <label>max</label>
+				<statOffsets>
+                    <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.50</ArmorRating_Heat>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_ExplodeWhenDamaged">
+                <radius>1.9</radius>
+                <damageDef>Burn</damageDef>
+                <injureSelf>false</injureSelf>
+                <injureAllies>false</injureAllies>
+                <injureNonHostiles>false</injureNonHostiles>   
+                <extraGasType>None</extraGasType>
+                <explosionSound>Explosion_Flame</explosionSound>
+                <damageAmount>5</damageAmount>
+                <minSeverity>0.5</minSeverity>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_CreateOtherHediffs">
+                <hediffSets>
+                    <li>
+                        <hediffDef>SHG_Radiomancer_EnergyArmorOvercharge</hediffDef>
+                        <minSeverity>5.5</minSeverity>
+                        <severityPerDay>1</severityPerDay>
+                        <initialSeverity>0.1</initialSeverity>
+                    </li>
+                </hediffSets>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_Radiomancer_OverchargeTooMuch">
+        <defName>SHG_Radiomancer_EnergyArmorOvercharge</defName>
+        <label>overcharge (armor)</label>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Radiomancer_SolarRegeneration</defName>
+        <label>solar regeneration</label>
+        <description>This pawn is quickly healing while in sunlight, natural or artificial, and if they remain in sunlight for an entire, unbroken hour they can even regrow parts.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <initialSeverity>1</initialSeverity>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>1</minSeverity>
+                <statFactors>
+                    <InjuryHealingFactor>3</InjuryHealingFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityByLightLevel">
+                <lightToSeverityCurve>
+                    <points>
+                        <li>(0, 0.9)</li>
+                        <li>(0.6, 1)</li>
+                    </points>
+                </lightToSeverityCurve>
+                <timeToSeverityCurve>
+                    <points>
+                        <li>(0, 0.9)</li>
+                        <li>(0.35, 1)</li>
+                        <li>(0.65, 1)</li>
+                        <li>(1, 0.9)</li>
+                    </points>
+                </timeToSeverityCurve>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
+                <healWhileRegrowing>True</healWhileRegrowing>
+                <regenSets>
+                    <li>
+                        <ticksToRegrowPart>2500</ticksToRegrowPart>
+                        <repeatHealCount>10</repeatHealCount>
+                        <minSeverity>1</minSeverity>
+                        <healAmount>0.3</healAmount>
+                    </li>
+                </regenSets>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Radiomancer_UndyingSun</defName>
+        <label>undying sun</label>
+        <description>This pawn is extremely difficult to kill while standing in sunlight, be it natural or artificial.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <initialSeverity>1</initialSeverity>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>1</minSeverity>
+                <totalBleedFactor>0.001</totalBleedFactor>
+                <statFactors>
+                    <ImmunityGainSpeed>3</ImmunityGainSpeed>
+                    <IncomingDamageFactor>0.50</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityByLightLevel">
+                <lightToSeverityCurve>
+                    <points>
+                        <li>(0, 0.9)</li>
+                        <li>(0.6, 1)</li>
+                    </points>
+                </lightToSeverityCurve>
+                <timeToSeverityCurve>
+                    <points>
+                        <li>(0, 0.9)</li>
+                        <li>(0.3, 1)</li>
+                        <li>(0.7, 1)</li>
+                        <li>(1, 0.9)</li>
+                    </points>
+                </timeToSeverityCurve>
+            </li>
+        </comps>
+    </HediffDef>
+</Defs>
