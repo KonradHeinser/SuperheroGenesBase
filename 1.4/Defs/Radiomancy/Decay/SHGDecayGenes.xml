@@ -2,7 +2,7 @@
 <Defs>
     <GeneDef ParentName="SuperPowersRadiomancyDecayBase">
         <defName>SHG_Radiomancer_CellularDestabilization</defName>
-        <label>rapid aging</label>
+        <label>cellular destabilization</label>
         <description>Radiomancers with this gene can bombard a pawn's body with radiation to induce vomiting, weaken their immune system, and potentially give them carcinoma.</description>
         <iconPath>Radiomancer/Decay/Gene_Radiomancer_CellularDestabilization</iconPath>
         <displayOrderInCategory>0</displayOrderInCategory>
