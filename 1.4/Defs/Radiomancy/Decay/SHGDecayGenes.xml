@@ -153,7 +153,7 @@
     <GeneDef ParentName="SuperPowersRadiomancyDecayBase">
         <defName>SHG_Radiomancer_DangerousAura</defName>
         <label>dangerous aura</label>
-        <description>Radiomancers with this gene can create a link between themselves and another pawn to sap the pawn's strength in exchange for increasing the radiomancer's radiation regeneration. If the target survives for the entire duration, this ability will produce a total of 40 radiocative energy through life force conversion.</description>
+        <description>Radiomancers with this gene can release radioactive energy in an aura around themselves to cause all non-radiomancer's to suffer penalties. This aura remains until dispelled, and drains radiation over time.</description>
         <iconPath>Radiomancer/Decay/Gene_Radiomancer_DangerousAura</iconPath>
         <geneClass>SuperHeroGenesBase.ResourceDrainGene</geneClass>
         <displayOrderInCategory>7</displayOrderInCategory>
