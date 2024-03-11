@@ -1,9 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="DynamicResourceGenes/GeneGizmo_ResourceGene.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DynamicResourceGenes/ResourceDrainGene.cs">
     <Files>
       <File FileName="HarmonyPatches.cs" Line="64" Column="61" />
       <File FileName="DynamicResourceGenes/CompAbilityEffect_ResourceToBattery.cs" Line="27" Column="15" />
       <File FileName="DynamicResourceGenes/GeneGizmo_ResourceGene.cs" Line="60" Column="39" />
+      <File FileName="DynamicResourceGenes/ResourceGene.cs" Line="52" Column="102" />
+      <File FileName="DynamicResourceGenes/ResourceDrainGene.cs" Line="49" Column="102" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,7 +13,7 @@
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
               <Node name="DynamicResourceGenes" expanded="True">
-                <Node name="GeneGizmo_ResourceGene.cs" selected="True" />
+                <Node name="ResourceDrainGene.cs" selected="True" />
               </Node>
             </Node>
           </Node>
