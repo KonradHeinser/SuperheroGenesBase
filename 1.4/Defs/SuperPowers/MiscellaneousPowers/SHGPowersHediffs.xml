@@ -147,4 +147,38 @@
             </li>
         </comps>	
 	</HediffDef>
+
+    <HediffDef>
+		<defName>SHG_SuperClaws</defName>
+		<label>retractable fist blade</label>
+        <labelNoun>a retractable fist blade</labelNoun>
+		<description>Blades around the length of the forearm that can pop out at will to the end of their fist for slicing and dicing.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>		
+		<comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>claw</label>
+                        <capacities>
+                            <li>Scratch</li>
+                        </capacities>
+                        <power>25</power>
+                        <cooldownTime>2</cooldownTime>
+                        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                        <soundMeleeHit>Pawn_Melee_PowerClaw_Hit</soundMeleeHit>
+                        <soundMeleeMiss>Pawn_Melee_PowerClaw_Miss</soundMeleeMiss>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <addedPartProps>
+            <isGoodWeapon>true</isGoodWeapon>
+            <partEfficiency>1.00</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+	</HediffDef>
 </Defs>

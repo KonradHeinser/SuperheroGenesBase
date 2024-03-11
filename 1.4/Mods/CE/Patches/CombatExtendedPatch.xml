@@ -339,6 +339,27 @@
     </Operation>
 
     <Operation Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="SHG_SuperClaws"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools</xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>claw</label>
+                    <capacities>
+                        <li>Scratch</li>
+                    </capacities>
+                    <power>36</power>
+                    <cooldownTime>1.9</cooldownTime>
+                    <armorPenetrationSharp>25</armorPenetrationSharp>
+                    <armorPenetrationBlunt>10</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+                    <soundMeleeHit>Pawn_Melee_PowerClaw_Hit</soundMeleeHit>
+                    <soundMeleeMiss>Pawn_Melee_PowerClaw_Miss</soundMeleeMiss>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
         <xpath>Defs/HediffDef[defName="SHG_Hemomancer_BloodClaws"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools</xpath>
         <value>
             <tools>
@@ -348,7 +369,7 @@
                         <li>Scratch</li>
                     </capacities>
                     <power>21</power>
-                    <cooldownTime>89</cooldownTime>
+                    <cooldownTime>1.0</cooldownTime>
                     <armorPenetrationSharp>8</armorPenetrationSharp>
                     <armorPenetrationBlunt>4</armorPenetrationBlunt>
                     <linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>

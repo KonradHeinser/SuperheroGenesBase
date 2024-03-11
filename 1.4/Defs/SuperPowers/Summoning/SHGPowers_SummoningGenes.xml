@@ -229,7 +229,7 @@
 
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_CreateGeyser</defName>
-        <label>summon glow pod</label>
+        <label>create geyser</label>
         <description>Carriers of this gene can create massive holes in the ground that become a steam geyser at a location once per quadrum.</description>
         <iconPath>Things/Building/Natural/SteamGeyser</iconPath>
         <displayOrderInCategory>19</displayOrderInCategory>

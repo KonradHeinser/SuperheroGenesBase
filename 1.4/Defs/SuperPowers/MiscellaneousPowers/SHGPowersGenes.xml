@@ -390,6 +390,28 @@
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersOffensiveBase">
+        <defName>SHG_RetractableFistBlades</defName>
+        <label>retractable fist blades</label>
+        <description>Supers with this gene have blades that shoot out from inside their forearm to be extended well beyond their fist, granting them a new way to slice and dice.\n\nThey were initially referred to as claws by general public, but the scientific community decided on the more dry name of "retractable fist blades" by arguing that A, they don't come out of the fingers, and B, they are almost as long as the individuals forearm. Normal people still call them claws though, because nobody wants to remember a name as long as "Fist Blade Retractor".\n\nThe exact nature of the claws tends to vary slightly between users, with some having multiple thinner ones protruding from the knuckles, and some just having it extend from their wrist. They don't have any actual difference in effects, so they all get to be in one gene.</description>
+        <iconPath>Powers/Gene_SuperClaws</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply>
+                    <li>
+                        <hediff>SHG_SuperClaws</hediff>
+                        <bodyParts>
+							<li>Hand</li>
+							<li>Hand</li>
+						</bodyParts>
+                    </li>
+                </hediffsToApply>
+			</li>
+		</modExtensions>
+        <biostatMet>-2</biostatMet>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersOffensiveBase">
         <defName>SHG_NewLaserEyes</defName>
         <label>superhero laser eyes</label>
         <description>A version of the laser eyes gene that has been enhanced by the superhero gene, creating an even stronger laser.\n\nPlease make sure you go give Biotech Gene: Laser-Eyes a thumbs up for making this gene possible. Now on with the lasering!</description>
@@ -404,5 +426,4 @@
         </descriptionHyperlinks>
         <biostatMet>-9</biostatMet>
     </GeneDef>
-
 </Defs>
