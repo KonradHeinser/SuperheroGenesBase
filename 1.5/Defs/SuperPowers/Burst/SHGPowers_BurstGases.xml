@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef Name="SHG_BaseGas" Abstract="True">
+		<thingClass>Gas</thingClass>
+		<label>gas</label>
+		<category>Gas</category>
+		<altitudeLayer>Gas</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<graphicClass>Graphic_Gas</graphicClass>
+			<shaderType>Transparent</shaderType>
+            <texPath>Things/Gas/Puff</texPath>
+            <drawSize>2.2</drawSize>
+		</graphicData>
+        <gas>
+            <rotationSpeed>10</rotationSpeed>
+        </gas>
+	</ThingDef>
+
+    <ThingDef ParentName="SHG_BaseGas">
+        <defName>SHG_AcidGas</defName>
+        <label>acid mist</label>
+        <graphicData>
+            <color>(0.2,0.8,0.2)</color>
+        </graphicData>
+        <gas>
+            <expireSeconds>
+                <min>2</min>
+                <max>3</max>
+            </expireSeconds>
+        </gas>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_BaseGas">
+        <defName>SHG_ToxicGas</defName>
+        <label>toxic mist</label>
+        <graphicData>
+            <color>(0.2,0.8,0.2,0.5)</color>
+        </graphicData>
+        <gas>
+            <expireSeconds>
+                <min>4</min>
+                <max>5</max>
+            </expireSeconds>
+        </gas>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_BaseGas">
+        <defName>SHG_ElectricrifiedCloud</defName>
+        <label>electrified cloud</label>
+        <graphicData>
+            <color>(0.4,0.6,0.7,0.5)</color>
+        </graphicData>
+        <gas>
+            <expireSeconds>
+                <min>1</min>
+                <max>1</max>
+            </expireSeconds>
+        </gas>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_BaseGas">
+        <defName>SHG_IceCloud</defName>
+        <label>freezing cloud</label>
+        <graphicData>
+            <color>(0.3,0.5,0.6,0.8)</color>
+        </graphicData>
+        <gas>
+            <expireSeconds>
+                <min>1</min>
+                <max>1</max>
+            </expireSeconds>
+        </gas>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_BaseGas">
+        <defName>SHG_PetrificationCloud</defName>
+        <label>stone dust cloud</label>
+        <graphicData>
+            <color>(0.8,0.8,0.8,0.8)</color>
+        </graphicData>
+        <gas>
+            <expireSeconds>
+                <min>6</min>
+                <max>10</max>
+            </expireSeconds>
+        </gas>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_BaseGas">
+        <defName>SHG_BloodMist</defName>
+        <label>blood mist</label>
+        <graphicData>
+            <color>(0.8,0.2,0.2)</color>
+        </graphicData>
+        <gas>
+            <expireSeconds>
+                <min>1</min>
+                <max>1</max>
+            </expireSeconds>
+        </gas>
+    </ThingDef>
+</Defs>

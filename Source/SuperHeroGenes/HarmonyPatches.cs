@@ -5,7 +5,7 @@ using HarmonyLib;
 using RimWorld;
 using Verse;
 using System.Text;
-using UnityEngine;
+using Verse.AI;
 
 namespace SuperHeroGenesBase
 {
@@ -13,6 +13,21 @@ namespace SuperHeroGenesBase
     public static class HarmonyPatches
     {
         private static readonly Type patchType = typeof(HarmonyPatches);
+
+        private static SHGCache_Component cache;
+
+        public static SHGCache_Component Cache
+        {
+            get
+            {
+                if (cache == null)
+                    cache = Current.Game.GetComponent<SHGCache_Component>();
+
+                if (cache != null && cache.loaded)
+                    return cache;
+                return null;
+            }
+        }
 
         static HarmonyPatches()
         {
@@ -29,6 +44,8 @@ namespace SuperHeroGenesBase
                           postfix: new HarmonyMethod(patchType, nameof(HemomancerHemogenMaxPostFix)));
             harmony.Patch(AccessTools.Method(typeof(Thing), nameof(Thing.TakeDamage)),
                 prefix: new HarmonyMethod(patchType, nameof(TakeDamagePrefix)));
+            harmony.Patch(AccessTools.Method(typeof(Pawn_PathFollower), "CostToMoveIntoCell", new[] { typeof(Pawn), typeof(IntVec3) }),
+                postfix: new HarmonyMethod(patchType, nameof(CostToMoveIntoCellPostfix)));
         }
 
 
@@ -190,6 +207,45 @@ namespace SuperHeroGenesBase
                 }
             }
             return true;
+        }
+
+        public static void CostToMoveIntoCellPostfix(Pawn pawn, IntVec3 c, ref int __result)
+        {
+            if (pawn.Map != null)
+            {
+                if (__result == 10000 && !pawn.Map.thingGrid.ThingsListAt(c).NullOrEmpty()) return; // If impassable due to a thing, it's probably a wall
+                if (pawn.Map != null && Cache != null && Cache.GetPawnTerrainComp(pawn, out HediffCompProperties_TerrainCostOverride terrainComp))
+                {
+                    if (c.Impassable(pawn.Map)) return; // If the tile is impassable, I don't want to touch that.
+
+                    // Universal Checks
+                    if (!SHGUtilities.CheckGeneTrio(pawn, terrainComp.pawnHasAnyOfGenes, terrainComp.pawnHasAllOfGenes, terrainComp.pawnHasNoneOfGenes) ||
+                        !SHGUtilities.CheckHediffTrio(pawn, terrainComp.pawnHasAnyOfHediffs, terrainComp.pawnHasAllOfHediffs, terrainComp.pawnHasNoneOfHediffs) ||
+                        !SHGUtilities.CheckPawnCapabilitiesTrio(pawn, terrainComp.pawnCapLimiters, terrainComp.pawnSkillLimiters, terrainComp.pawnStatLimiters) ||
+                        !SHGUtilities.AllNeedLevelsMet(pawn, terrainComp.pawnNeedLevels)) return;
+
+                    int num = ((c.x != pawn.Position.x && c.z != pawn.Position.z) ? pawn.TicksPerMoveDiagonal : pawn.TicksPerMoveCardinal);
+                    TerrainDef terrainDef = pawn.Map.terrainGrid.TerrainAt(c);
+
+                    if (!terrainComp.terrainSets.NullOrEmpty() && terrainDef != null)
+                        foreach (TerrainLinker terrain in terrainComp.terrainSets)
+                        {
+                            // These check all 10 lists
+                            if (!SHGUtilities.CheckGeneTrio(pawn, terrain.pawnHasAnyOfGenes, terrain.pawnHasAllOfGenes, terrain.pawnHasNoneOfGenes) ||
+                                !SHGUtilities.CheckHediffTrio(pawn, terrain.pawnHasAnyOfHediffs, terrain.pawnHasAllOfHediffs, terrain.pawnHasNoneOfHediffs) ||
+                                !SHGUtilities.CheckPawnCapabilitiesTrio(pawn, terrain.pawnCapLimiters, terrain.pawnSkillLimiters, terrain.pawnStatLimiters) ||
+                                !SHGUtilities.AllNeedLevelsMet(pawn, terrain.pawnNeedLevels)) continue;
+
+                            if (terrain.newCost >= 0 && ((terrain.terrain != null && terrain.terrain == terrainDef) ||
+                                (!terrain.terrains.NullOrEmpty() && terrain.terrains.Contains(terrainDef))))
+                            {
+                                __result = num + terrain.newCost;
+                                return;
+                            }
+                        }
+                    if (terrainComp.universalCostOverride >= 0) __result = num + terrainComp.universalCostOverride;
+                }
+            }
         }
     }
 }

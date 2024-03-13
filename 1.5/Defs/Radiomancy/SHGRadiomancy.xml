@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef>
+        <defName>SHG_RadiationOrb</defName>
+        <label>radiation orb</label>
+        <description>A ball of unstable energy packed into a ball with an unknown material encasing it. While many feel uncomfortable carrying it around, studies have found that there are no negative effects associated with being around the orbs. The same study did have a sudden discovery that piercing the outer shell has the sudden very unfortunate side effect of instant death by an explosion comparable to a small antigrain warhead.\n\nA radiomancer can absorb the orb to regain part of the energy used to create it.</description>
+        <category>Item</category>
+        <thingClass>ThingWithComps</thingClass>
+        <drawerType>MapMeshOnly</drawerType>
+        <useHitPoints>true</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <selectable>true</selectable>
+        <stackLimit>10</stackLimit>
+        <tickerType>Normal</tickerType>
+        <possessionCount>5</possessionCount>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <alwaysHaulable>true</alwaysHaulable>
+        <pathCost>14</pathCost>
+        <allowedArchonexusCount>-1</allowedArchonexusCount>
+        <resourceReadoutPriority>Last</resourceReadoutPriority>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <graphicData>
+            <texPath>Radiomancer/RadiationOrb</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <DeteriorationRate>0</DeteriorationRate>
+            <Mass>0.10</Mass>
+            <Flammability>0.7</Flammability>
+            <Nutrition>0.1</Nutrition>
+            <Beauty>1</Beauty>
+            <MarketValue>500</MarketValue>
+        </statBases>
+        <tradeTags>
+            <li>SHG_ResourceItem</li>
+        </tradeTags>
+        <thingCategories>
+            <li>Drugs</li>
+        </thingCategories>
+        <ingestible>
+            <foodType>Fluid</foodType>
+            <preferability>NeverForNutrition</preferability>
+            <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+            <specialThoughtDirect>SHG_AbsorbedRadiationOrb</specialThoughtDirect>
+            <ingestSound>HemogenPack_Consume</ingestSound>
+            <ingestCommandString>Absorb {0}</ingestCommandString>
+            <ingestReportString>Absorbing {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_OffsetResource">
+                    <offset>0.4</offset>
+                    <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.9</explosiveRadius>
+                <explosiveDamageType>BombSuper</explosiveDamageType>
+                <explosiveExpandPerStackcount>0.7</explosiveExpandPerStackcount>
+                <startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+                <chanceToStartFire>0</chanceToStartFire>
+                <damageFalloff>true</damageFalloff>
+                <explosionEffect>GiantExplosion</explosionEffect>
+                <explosionSound>Explosion_GiantBomb</explosionSound>
+                <wickTicks>60</wickTicks>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThoughtDef>
+        <defName>SHG_AbsorbedRadiationOrb</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>5</durationDays>
+        <stackLimit>5</stackLimit>
+        <nullifyingGenes>
+            <li>SHG_Archetypes_Radiomancer</li>
+        </nullifyingGenes>
+        <stages>
+            <li>
+                <label>absorbed radiation orb</label>
+                <description>I absorbed a radiation. It doesn't appear to have caused me any harm, but it still felt uncomfortable.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Radiomancer_DissipateEnergy</defName>
+        <label>dissipate energy</label>
+        <description>Safely releases some of the energy the radiomancer has stored into the environment. The long time it takes for the radiomancer to cast this and for it to be usable again make it a less than ideal purger of radiation.</description>
+        <iconPath>Radiomancer/Ability_Radiomancer_DissipateEnergy</iconPath>
+        <targetRequired>False</targetRequired>
+        <aiCanUse>False</aiCanUse>
+        <hostile>false</hostile>
+        <verbProperties>
+            <range>0.9</range>
+            <warmupTime>10</warmupTime>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>0.10</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Radiomancer_GatherEnergy</defName>
+        <label>gather energy</label>
+        <description>Absorb small amounts of energy within the air around the radiomancer. The long time it takes for the radiomancer to cast this and for it to be usable again make it a less than ideal source of radiation.</description>
+        <iconPath>Radiomancer/Ability_Radiomancer_GatherEnergy</iconPath>
+        <targetRequired>False</targetRequired>
+        <aiCanUse>False</aiCanUse>
+        <hostile>false</hostile>
+        <verbProperties>
+            <range>0.9</range>
+            <warmupTime>10</warmupTime>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>-0.10</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

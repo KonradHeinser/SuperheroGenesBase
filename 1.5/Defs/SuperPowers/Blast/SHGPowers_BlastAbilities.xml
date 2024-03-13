@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef Abstract="true" Name="SHGPowerBlastBase" ParentName="SHGPowerAbilitiesBase">
+        <verbProperties>
+            <range>25</range>
+            <warmupTime>2</warmupTime>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_FireBlast</defName>
+        <label>fire blast</label>
+        <description>Summon a blast of fuel and fire that will burn everything in the area.</description>
+        <iconPath>Powers/Gene_FireBall</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBlast">
+                <damageDef>Flame</damageDef>
+                <damageAmount>30</damageAmount>
+                <radius>3</radius>
+                <armorPenetration>0.8</armorPenetration>
+                <chanceToStartFire>0.5</chanceToStartFire>
+                <preExplosionThing>Filth_Fuel</preExplosionThing>
+                <preExplosionThingChance>0.5</preExplosionThingChance>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_AcidBlast</defName>
+        <label>acid blast</label>
+        <description>Summon a blast of acid that will leave corrosive substance in a wide area.</description>
+        <iconPath>Powers/Gene_AcidBall</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBlast">
+                <damageDef>AcidBurn</damageDef>
+                <damageAmount>30</damageAmount>
+                <radius>3</radius>
+                <armorPenetration>0.8</armorPenetration>
+                <preExplosionThing>Filth_SpentAcid</preExplosionThing>
+                <preExplosionThingChance>1</preExplosionThingChance>
+                <explosionSound>AcidSpray_Resolve</explosionSound>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_LightningBlast</defName>
+        <label>lightning blast</label>
+        <description>Summon a blast of lightning that will electrocute everything in an area. The damage is too destructive to cause an EMP effect.</description>
+        <iconPath>Powers/Gene_LightningBall</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBlast">
+                <damageDef>SHG_Lightning</damageDef>
+                <damageAmount>30</damageAmount>
+                <radius>3</radius>
+                <armorPenetration>0.8</armorPenetration>
+                <explosionSound>Explosion_EMP</explosionSound>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_IceBlast</defName>
+        <label>ice blast</label>
+        <description>Summon a blast of ice that inflicts debilitating frostbite.</description>
+        <iconPath>Powers/Gene_IceBall</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBlast">
+                <damageDef>SHG_Ice</damageDef>
+                <damageAmount>30</damageAmount>
+                <radius>3</radius>
+                <armorPenetration>0.8</armorPenetration>
+                <explosionSound>Foam_Impact</explosionSound>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_ToxBlast</defName>
+        <label>toxic blast</label>
+        <description>Summon a blast of poison that creates a cloud of poison that inflicts toxic buildup.</description>
+        <iconPath>Powers/Gene_ToxicBall</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBlast">
+                <damageDef>ToxGas</damageDef>
+                <damageAmount>30</damageAmount>
+                <radius>3</radius>
+                <armorPenetration>0.8</armorPenetration>
+                <extraGasType>Tox</extraGasType>
+                <explosionSound>SHG_GasReleasing</explosionSound>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_EMPBlast</defName>
+        <label>emp blast</label>
+        <description>Summon a blast of electricity that will disable electronics in an area for a while.</description>
+        <iconPath>Powers/Gene_LightningBall</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBlast">
+                <damageDef>EMP</damageDef>
+                <damageAmount>30</damageAmount>
+                <radius>3</radius>
+                <armorPenetration>0.8</armorPenetration>
+                <explosionSound>Explosion_EMP</explosionSound>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_FoamBlast</defName>
+        <label>foam blast</label>
+        <description>Summon a blast of foam that stops all fires from passing.</description>
+        <iconPath>Powers/Gene_FoamBall</iconPath>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBlast">
+                <damageDef>Extinguish</damageDef>
+                <damageAmount>9999</damageAmount>
+                <radius>5</radius>
+                <armorPenetration>0.8</armorPenetration>
+                <preExplosionThing>Filth_FireFoam</preExplosionThing>
+                <preExplosionThingChance>1</preExplosionThingChance>
+                <explosionSound>Foam_Impact</explosionSound>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_PetrificationBlast</defName>
+        <label>petrification blast</label>
+        <description>Summon a blast of infused stone that invades the bloodstreams of everyone at the explosion sight. People will not become completely petrified by a single blast, and any pawns with a larger body size or innate blunt armor will be somewhat resistant to petrification.</description>
+        <iconPath>Powers/Gene_PetrificationBall</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBlast">
+                <damageDef>SHG_Petrification</damageDef>
+                <damageAmount>2</damageAmount>
+                <radius>4</radius>
+                <armorPenetration>0.8</armorPenetration>
+                <preExplosionThing>Filth_RubbleRock</preExplosionThing>
+                <preExplosionThingChance>0.5</preExplosionThingChance>
+                <explosionSound>BuildingDestroyed_Stone_Big</explosionSound>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBlastBase">
+        <defName>SHG_WaterBlast</defName>
+        <label>water blast</label>
+        <description>Summon a blast of pressurized water that causes some damage on explosion and puts out fires. This also leaves a weird watery foam on the target that makes them feel uncomfortable, while also creating a firefoam-like layer over their body that prevents them from catching fire again for a time.</description>
+        <iconPath>Powers/Gene_WaterBall</iconPath>
+        <statBases>
+            <Ability_EffectRadius>1.5</Ability_EffectRadius>
+        </statBases>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBlast">
+                <damageDef>SHG_Water</damageDef>
+                <damageAmount>30</damageAmount>
+                <radius>3</radius>
+                <armorPenetration>0.8</armorPenetration>
+                <preExplosionThing>Filth_Water</preExplosionThing>
+                <preExplosionThingChance>1</preExplosionThingChance>
+                <explosionSound>Foam_Impact</explosionSound>
+            </li>
+            <li Class="CompProperties_AbilityWaterskip" />
+        </comps>
+    </AbilityDef>
+</Defs>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThoughtDef>
+        <defName>SHG_Psionist_Solace</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>SHG_Psionist_Solace_Buff</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>solace</label>
+                <description>I feel really calm right now.</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Psionist_Encourage</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>SHG_Psionist_Encourage</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>encourage</label>
+                <description>I received some encouragement, and now my problems seem much easier to solve.</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Psionist_Inspire</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>SHG_Psionist_Inspire</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>inspire</label>
+                <description>As long as we work together, we can make the colony prosper.</description>
+                <baseMoodEffect>20</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Psionist_Rally</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>SHG_Psionist_Rally</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>rally</label>
+                <description>As long as we work together, we can acomplish anything!</description>
+                <baseMoodEffect>30</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Psionist_Utopia</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>SHG_Psionist_Utopia</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>utopia</label>
+                <description>I feel really calm right now. Must have been something in the wind from that utopian planet.</description>
+                <baseMoodEffect>20</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Psionist_March</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>SHG_Psionist_March</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+        <nullifyingGenes>
+            <li>SHG_Psionist_Tyrant</li>
+            <li>SHG_Psionist_Soldier</li>
+        </nullifyingGenes>
+        <stages>
+            <li>
+                <label>MARCH</label>
+                <description>I'm being ordered around by some wannabe god-king.</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Psionist_EmpiresWillFall</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>SHG_Psionist_EmpiresWillFall</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+        <stages>
+            <li>
+                <label>Empires Will Fall</label>
+                <description>I can feel the masses tremble before my might! Soon, all will fall under my rule.</description>
+                <baseMoodEffect>30</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Psionist_YouWillSubmit</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>SHG_Psionist_YouWillSubmit</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+        <stages>
+            <li>
+                <label>You Will Submit</label>
+                <description>I feel extremely calm right now despite being a prisoner.</description>
+                <baseMoodEffect>50</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Psionist_DropTheirGuard</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>ThoughtWorker_HediffWithTarget</workerClass>
+        <hediff>SHG_Psionist_DropTheirGuard</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>guard dropped</label>
+                <baseOpinionOffset>50</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Psionist_BelovedLeader</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>ThoughtWorker_HediffWithTarget</workerClass>
+        <hediff>SHG_Psionist_BelovedLeader</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>beloved leader</label>
+                <baseOpinionOffset>100</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Psionist_UniversallyLiked</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Gene_GeneSocial</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>universally liked</label>
+                <baseOpinionOffset>20</baseOpinionOffset>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <checkedGenes>
+                    <li>SHG_Psionist_UniversallyLiked</li>
+                </checkedGenes>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+</Defs>

@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef Abstract="true" Name="SHG_DebufferBase">
+        <hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef Abstract="true" Name="SHG_DebufferDebuffBase">
+        <hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>false</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_Debuffer_Base</defName>
+		<label>psionic debuffer</label>
+		<description>This pawn is releasing a field of psychic energy around them that provides constant buffs to all allies around themselves. The other hediffs will not be visible to avoid flooding this page, but they should still impact the debuffer's nearby allies regardless.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
+                <range>15</range>
+                <rangeStat>SHG_Debuffer_Range</rangeStat>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                </targetingParameters>
+                <hediff>SHG_Psionist_Debuffer_Debuff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferDebuffBase">
+        <defName>SHG_Psionist_Debuffer_Debuff</defName>
+		<label>in a debuffer's grasp</label>
+		<description>This pawn is receiving various penalties from a nearby debuffer. To avoid flooding this page with all of the debuffs, the other ones have been hidden. If you can see this, then the pawn is gaining all banes that the debuffer inflicts.</description>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferBase">
+        <defName>SHG_Psionist_TunnelVisionAura</defName>
+		<label>tunnel vision aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that makes nearby enemies less accurate and evasive.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
+                <range>15</range>
+                <rangeStat>SHG_Debuffer_Range</rangeStat>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                </targetingParameters>
+                <hediff>SHG_Psionist_TunnelVision_Debuff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferDebuffBase">
+        <defName>SHG_Psionist_TunnelVision_Debuff</defName>
+		<label>tunnel vision aura</label>
+		<description>This pawn is less accurate and easier to hit due to a nearby Psionic Debuffer.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <MeleeDodgeChance>0.9</MeleeDodgeChance>
+                    <ShootingAccuracyPawn>0.9</ShootingAccuracyPawn>
+                    <MeleeHitChance>0.9</MeleeHitChance>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferBase">
+        <defName>SHG_Psionist_PsychicAura_Dull</defName>
+		<label>psychic aura (dull)</label>
+		<description>This pawn is releasing a field of psychic energy around them that makes nearby enemies become less impacted by psychic effects, both positive and negative.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
+                <range>15</range>
+                <rangeStat>SHG_Debuffer_Range</rangeStat>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                </targetingParameters>
+                <hediff>SHG_Psionist_PsychicAura_Dull_Debuff</hediff>
+            </li>
+            <li Class="HediffCompProperties_GiveAbility">
+                <abilityDefs>
+                    <li>SHG_Psionist_PsychicAura_Sensitive</li>
+                </abilityDefs>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferDebuffBase">
+        <defName>SHG_Psionist_PsychicAura_Dull_Debuff</defName>
+		<label>psychic aura</label>
+		<description>This pawn is less impacted by all positive and negative psychic effects due to a nearby Psionic Debuffer.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <PsychicSensitivity>0.5</PsychicSensitivity>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferBase">
+        <defName>SHG_Psionist_PsychicAura_Sensitive</defName>
+		<label>psychic aura (sensitive)</label>
+		<description>This pawn is releasing a field of psychic energy around them that makes nearby enemies more sensitive to psychic effects.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
+                <range>15</range>
+                <rangeStat>SHG_Debuffer_Range</rangeStat>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                </targetingParameters>
+                <hediff>SHG_Psionist_PsychicAura_Sensitive_Debuff</hediff>
+            </li>
+            <li Class="HediffCompProperties_GiveAbility">
+                <abilityDefs>
+                    <li>SHG_Psionist_PsychicAura_Dull</li>
+                </abilityDefs>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferDebuffBase">
+        <defName>SHG_Psionist_PsychicAura_Sensitive_Debuff</defName>
+		<label>psychic aura</label>
+		<description>This pawn is more vulnerable to psychic effects due to a nearby Psionic Debuffer.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <PsychicSensitivity>1.5</PsychicSensitivity>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferBase">
+        <defName>SHG_Psionist_MolassesAura</defName>
+		<label>molasses aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that makes nearby enemies slower and less evasive.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
+                <range>15</range>
+                <rangeStat>SHG_Debuffer_Range</rangeStat>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                </targetingParameters>
+                <hediff>SHG_Psionist_Molasses_Debuff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferDebuffBase">
+        <defName>SHG_Psionist_Molasses_Debuff</defName>
+		<label>molasses aura</label>
+		<description>This pawn is slower and and easier to hit due to a nearby Psionic Debuffer.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <MeleeDodgeChance>0.9</MeleeDodgeChance>
+                    <MoveSpeed>0.9</MoveSpeed>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_AuraBurst</defName>
+        <label>aura burst</label>
+        <description>This Debuffer is increasing their aura's range to 22.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+			<li>
+                <statFactors>
+                    <SHG_Debuffer_Range>1.50</SHG_Debuffer_Range>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>10000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferBase">
+        <defName>SHG_Psionist_GlassAura</defName>
+		<label>glass aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that makes nearby enemies have lower innate armor and healing rate.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
+                <range>15</range>
+                <rangeStat>SHG_Debuffer_Range</rangeStat>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                </targetingParameters>
+                <hediff>SHG_Psionist_Glass_Debuff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferDebuffBase">
+        <defName>SHG_Psionist_Glass_Debuff</defName>
+		<label>glass aura</label>
+		<description>This pawn has less innate armor and a lower healing rate due to a nearby Psionic Debilitator.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <InjuryHealingFactor>0.9</InjuryHealingFactor>
+                    <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.9</ArmorRating_Heat>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferBase">
+        <defName>SHG_Psionist_WoundErodingAura</defName>
+		<label>wound eroding aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that makes the wounds of nearby enemies constantly worsen. Pawns with multiple wounds will usually only have slowed healing rather than reverse healing.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
+                <range>15</range>
+                <rangeStat>SHG_Debuffer_Range</rangeStat>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                </targetingParameters>
+                <hediff>SHG_Psionist_WoundEroding_Debuff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferDebuffBase">
+        <defName>SHG_Psionist_WoundEroding_Debuff</defName>
+		<label>wound eroding aura</label>
+		<description>This pawn's wounds are constantly getting worse due to a nearby Psionic Debilitator. If there are multiple wounds, this effect is split amongst them.</description>
+        <stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
+                <regenSets>
+                    <li>
+                        <healAmount>-0.05</healAmount>
+                    </li>
+                </regenSets>
+            </li>
+        </comps>
+	</HediffDef>
+    
+    <HediffDef ParentName="SHG_DebufferBase">
+        <defName>SHG_Psionist_EnergyBurnerAura</defName>
+		<label>energy burning aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that makes nearby enemies constantly lose nutrition and have lower melee damage.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
+                <range>15</range>
+                <rangeStat>SHG_Debuffer_Range</rangeStat>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                </targetingParameters>
+                <hediff>SHG_Psionist_EnergyBurner_Debuff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferDebuffBase">
+        <defName>SHG_Psionist_EnergyBurner_Debuff</defName>
+		<label>energy burning aura</label>
+		<description>This pawn is constantly losing nutrition and has lowered melee damage due to a nearby Psionic Debilitator.</description>
+        <stages>
+			<li>
+                <hungerRateFactorOffset>1</hungerRateFactorOffset>
+                <statFactors>
+                    <MeleeDamageFactor>0.9</MeleeDamageFactor>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_ChannelAura</defName>
+        <label>channel aura</label>
+        <description>This Debilitator is increasing their aura's range to 37.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+			<li>
+                <statFactors>
+                    <SHG_Debuffer_Range>2.50</SHG_Debuffer_Range>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>10000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferBase">
+        <defName>SHG_Psionist_NauseousAura</defName>
+		<label>nauseous aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that makes nearby enemies vomit frequently.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
+                <range>15</range>
+                <rangeStat>SHG_Debuffer_Range</rangeStat>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                </targetingParameters>
+                <hediff>SHG_Psionist_Nauseous_Debuff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferDebuffBase">
+        <defName>SHG_Psionist_Nauseous_Debuff</defName>
+		<label>nauseous aura</label>
+		<description>This pawn is vomiting frequently due to a nearby Psionic Ruiner.</description>
+        <makesSickThought>true</makesSickThought>
+        <stages>
+			<li>
+                <vomitMtbDays>0.05</vomitMtbDays>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+        
+    <HediffDef ParentName="SHG_DebufferBase">
+        <defName>SHG_Psionist_SiphonAura</defName>
+		<label>siphon aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that makes nearby non-player pawns take more damage, heal slower, and gain immunity slower, while also granting the carrier regeneration, immunity gain, and damage reduction based on the number of nearby non-player pawns. Unlike most auras, this is constantly active and is not affected by aura increases.</description>
+        <stages Inherit="False">
+			<li>
+                <label>no targets</label>
+                <minSeverity>1</minSeverity>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>2</minSeverity>
+                <statFactors>
+                    <InjuryHealingFactor>1.1</InjuryHealingFactor>
+                    <ImmunityGainSpeed>1.1</ImmunityGainSpeed>
+                    <IncomingDamageFactor>0.95</IncomingDamageFactor>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>3</minSeverity>
+                <statFactors>
+                    <InjuryHealingFactor>1.25</InjuryHealingFactor>
+                    <ImmunityGainSpeed>1.25</ImmunityGainSpeed>
+                    <IncomingDamageFactor>0.90</IncomingDamageFactor>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>4</minSeverity>
+                <statFactors>
+                    <InjuryHealingFactor>1.5</InjuryHealingFactor>
+                    <ImmunityGainSpeed>1.5</ImmunityGainSpeed>
+                    <IncomingDamageFactor>0.80</IncomingDamageFactor>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>6</minSeverity>
+                <statFactors>
+                    <InjuryHealingFactor>1.75</InjuryHealingFactor>
+                    <ImmunityGainSpeed>1.75</ImmunityGainSpeed>
+                    <IncomingDamageFactor>0.75</IncomingDamageFactor>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>8</minSeverity>
+                <statFactors>
+                    <InjuryHealingFactor>2</InjuryHealingFactor>
+                    <ImmunityGainSpeed>2</ImmunityGainSpeed>
+                    <IncomingDamageFactor>0.70</IncomingDamageFactor>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>10</minSeverity>
+                <statFactors>
+                    <InjuryHealingFactor>2.5</InjuryHealingFactor>
+                    <ImmunityGainSpeed>2.5</ImmunityGainSpeed>
+                    <IncomingDamageFactor>0.65</IncomingDamageFactor>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>12</minSeverity>
+                <statFactors>
+                    <InjuryHealingFactor>3</InjuryHealingFactor>
+                    <ImmunityGainSpeed>3</ImmunityGainSpeed>
+                    <IncomingDamageFactor>0.60</IncomingDamageFactor>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>14</minSeverity>
+                <statFactors>
+                    <InjuryHealingFactor>3.5</InjuryHealingFactor>
+                    <ImmunityGainSpeed>3.5</ImmunityGainSpeed>
+                    <IncomingDamageFactor>0.55</IncomingDamageFactor>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>16</minSeverity>
+                <statFactors>
+                    <InjuryHealingFactor>4</InjuryHealingFactor>
+                    <ImmunityGainSpeed>4</ImmunityGainSpeed>
+                    <IncomingDamageFactor>0.50</IncomingDamageFactor>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>18</minSeverity>
+                <statFactors>
+                    <InjuryHealingFactor>4.5</InjuryHealingFactor>
+                    <ImmunityGainSpeed>4.5</ImmunityGainSpeed>
+                    <IncomingDamageFactor>0.45</IncomingDamageFactor>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>20</minSeverity>
+                <statFactors>
+                    <InjuryHealingFactor>5</InjuryHealingFactor>
+                    <ImmunityGainSpeed>5</ImmunityGainSpeed>
+                    <IncomingDamageFactor>0.40</IncomingDamageFactor>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>22</minSeverity>
+                <statFactors>
+                    <InjuryHealingFactor>5.5</InjuryHealingFactor>
+                    <ImmunityGainSpeed>5.5</ImmunityGainSpeed>
+                    <IncomingDamageFactor>0.35</IncomingDamageFactor>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <label>max tier</label>
+                <minSeverity>24</minSeverity>
+                <statFactors>
+                    <InjuryHealingFactor>6</InjuryHealingFactor>
+                    <ImmunityGainSpeed>6</ImmunityGainSpeed>
+                    <IncomingDamageFactor>0.30</IncomingDamageFactor>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
+                <range>15</range>
+                <onlyWhileDrafted>False</onlyWhileDrafted>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>False</canTargetBuildings>
+                    <canTargetAnimals>False</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                </targetingParameters>
+                <hediff>SHG_Psionist_Siphon_Debuff</hediff>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityByNearbyPawns">
+                <range>15</range>
+                <onlyEnemies>True</onlyEnemies>
+                <onlyHumanlikes>True</onlyHumanlikes>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
+<!--This prioritizes healing wounds, and is not a reliable way to regrow parts unless there are A LOT of nearby targets, or the conflict lasts for an extremely long time.-->
+                <prioritizeHeal>True</prioritizeHeal>
+                <regenSets>
+                    <li> <!--1~3 nearby pawns-->
+                        <ticksToRegrowPart>200000</ticksToRegrowPart> <!--3.333 days-->
+                        <repeatHealCount>1</repeatHealCount>
+                        <healAmount>0.1</healAmount>
+                        <minSeverity>2</minSeverity>
+                        <maxSeverity>4</maxSeverity>
+                    </li>
+                    <li> <!--4~7 nearby pawns-->
+                        <ticksToRegrowPart>100000</ticksToRegrowPart> <!--1.667 days-->
+                        <repeatHealCount>5</repeatHealCount>
+                        <healAmount>0.1</healAmount>
+                        <minSeverity>4.001</minSeverity>
+                        <maxSeverity>8</maxSeverity>
+                    </li>
+                    <li> <!--8~11 nearby pawns-->
+                        <ticksToRegrowPart>50000</ticksToRegrowPart> <!--20 hours-->
+                        <repeatHealCount>10</repeatHealCount>
+                        <healAmount>0.1</healAmount>
+                        <minSeverity>8.001</minSeverity>
+                        <maxSeverity>12</maxSeverity>
+                    </li>
+                    <li> <!--12~15 nearby pawns-->
+                        <ticksToRegrowPart>25000</ticksToRegrowPart> <!--10 hours-->
+                        <repeatHealCount>10</repeatHealCount>
+                        <healAmount>0.3</healAmount>
+                        <minSeverity>12.001</minSeverity>
+                        <maxSeverity>16</maxSeverity>
+                    </li>
+                    <li> <!--16~19 nearby pawns-->
+                        <ticksToRegrowPart>12500</ticksToRegrowPart> <!--5 hours-->
+                        <repeatHealCount>10</repeatHealCount>
+                        <healAmount>0.5</healAmount>
+                        <minSeverity>16.001</minSeverity>
+                        <maxSeverity>20</maxSeverity>
+                    </li>
+                    <li> <!--20~23 nearby pawns-->
+                        <ticksToRegrowPart>6250</ticksToRegrowPart> <!--2.5 hours-->
+                        <repeatHealCount>10</repeatHealCount>
+                        <healAmount>1</healAmount>
+                        <minSeverity>20.001</minSeverity>
+                        <maxSeverity>24</maxSeverity>
+                    </li>
+                    <li> <!--24~27 nearby pawns-->
+                        <ticksToRegrowPart>1250</ticksToRegrowPart> <!--0.5 hours-->
+                        <repeatHealCount>10</repeatHealCount>
+                        <healAmount>1</healAmount>
+                        <minSeverity>24.001</minSeverity>
+                    </li>
+                </regenSets>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_DebufferDebuffBase">
+        <defName>SHG_Psionist_Siphon_Debuff</defName>
+		<label>siphon aura</label>
+		<description>This pawn takes more damage and has slower healing and immunity gain due to a nearby Psionic Ruiner.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <InjuryHealingFactor>0.9</InjuryHealingFactor>
+                    <ImmunityGainSpeed>0.9</ImmunityGainSpeed>
+                    <IncomingDamageFactor>1.1</IncomingDamageFactor>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_RuinTheWorld</defName>
+        <label>ruin the world</label>
+        <description>This Ruiner is increasing their aura's range to 75.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+			<li>
+                <statFactors>
+                    <SHG_Debuffer_Range>5.00</SHG_Debuffer_Range>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>10000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+    </HediffDef>
+</Defs>

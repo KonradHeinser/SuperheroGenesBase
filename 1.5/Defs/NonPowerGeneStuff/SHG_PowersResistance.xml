@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SHG_ResistanceBase">
+        <defName>SHG_LaserImmune</defName>
+        <label>eye laser immune</label> 
+        <description>Carriers of this gene are immune to beam damage.</description>
+        <iconPath>Powers/Gene_LaserEyeImmunity</iconPath>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <prerequisite>SuperDurability</prerequisite>
+        <damageFactors>
+            <SHG_Beam>0</SHG_Beam>
+            <Beam>0</Beam>
+        </damageFactors>
+        <biostatMet>-1</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>insulated</symbol></li>
+                <li><symbol>rubber</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ResistanceBase">
+        <defName>SHG_LightningImmune</defName>
+        <label>lightning immune</label> 
+        <description>Carriers of this gene are immune to lightning.</description>
+        <iconPath>Powers/Gene_LightningImmunity</iconPath>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <damageFactors>
+            <SHG_Lightning>0</SHG_Lightning>
+            <AG_Electric MayRequire="sarg.alphagenes">0</AG_Electric>
+        </damageFactors>
+        <biostatMet>-2</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>insulated</symbol></li>
+                <li><symbol>rubber</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>LightningDamage</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ResistanceBase">
+        <defName>SHG_LightningResistant</defName>
+        <label>lightning resistant</label> 
+        <description>Carriers of this gene are resistant to lightning.</description>
+        <iconPath>Powers/Gene_LightningResistant</iconPath>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <damageFactors>
+            <SHG_Lightning>0.5</SHG_Lightning>
+            <AG_Electric MayRequire="sarg.alphagenes">0.5</AG_Electric>
+        </damageFactors>
+        <biostatMet>-1</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>insulated</symbol></li>
+                <li><symbol>rubber</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>LightningDamage</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ResistanceBase">
+        <defName>SHG_LightningVulnernable</defName>
+        <label>lightning vulnerable</label> 
+        <description>Carriers of this gene are vulnerable to lightning.</description>
+        <iconPath>Powers/Gene_LightningVulnerability</iconPath>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <damageFactors>
+            <SHG_Lightning>2</SHG_Lightning>
+            <AG_Electric MayRequire="sarg.alphagenes">2</AG_Electric>
+        </damageFactors>
+        <biostatMet>1</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>shocked</symbol></li>
+                <li><symbol>electrified</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>LightningDamage</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ResistanceBase">
+        <defName>SHG_LightningWeakness</defName>
+        <label>lightning weakness</label> 
+        <description>Carriers of this gene are very weak to lightning.</description>
+        <iconPath>Powers/Gene_LightningWeakness</iconPath>
+        <displayOrderInCategory>4</displayOrderInCategory>
+        <damageFactors>
+            <SHG_Lightning>4</SHG_Lightning>
+            <AG_Electric MayRequire="sarg.alphagenes">4</AG_Electric>
+        </damageFactors>
+        <biostatMet>2</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>shocked</symbol></li>
+                <li><symbol>electrified</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>LightningDamage</li>
+        </exclusionTags>
+    </GeneDef>
+
+    
+
+</Defs>

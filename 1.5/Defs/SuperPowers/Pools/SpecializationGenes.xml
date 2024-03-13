@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SHG_SpecializationBase">
+        <defName>SHG_Fortress</defName>
+        <label>fortress</label>
+        <description>Carriers of this gene are able to fortify themselves further for a while. During this time their movement is reduced greatly and they become almost completely immune to all attacks, though special damage sources like poison may still get through. This will wear off over the span of about four hours, gradually reducing the movement loss and defensive bonuses.\n\nSpecialization abilities can only be used once every 10 days due to physical limitations. Using this ability will drain the pawn's durability pool, reducing the benefits they receive from both the base Superhero Gene and the Super Durability gene until the pool completely recovers.\n\nEven when drained, the pawn can push their body to still pull energy from the pool to use an energy pool power. However, doing so often makes the effects of the pool loss much stronger while also making them last much longer.</description>
+        <iconPath>Powers/Specializations/Gene_Fortress</iconPath>
+        <prerequisite>SuperDurability</prerequisite>
+        <abilities>
+            <li>SHG_Fortress</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Fortress</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_SpecializationBase">
+        <defName>SHG_Beelzebub</defName>
+        <label>beelzebub</label>
+        <description>Carriers of this gene can drain nutrition from all living things around them, colonist and enemy alike. The nutrients gained from both the living things targeted and from the ground below sate this super's hunger for a time, while also granting bonuses to healing and immunity gain.\n\nSpecialization abilities can only be used once every 10 days due to physical limitations. Unlike other specialized powers, the super themselves suffer no loss, though the danger they pose to others makes this a dangerous ability regardless.\n\nThe ability lasts for 1 hour and effects everything in a range of 10. It is strongly recommended that you only use this when there are only enemies around.</description>
+        <iconPath>Powers/Specializations/Gene_Beezlebub</iconPath>
+        <prerequisite>SuperGluttony</prerequisite>
+        <abilities>
+            <li>SHG_Beelzebub</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Beelzebub</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_SpecializationBase">
+        <defName>SHG_Regenerator</defName>
+        <label>regenerator</label>
+        <description>Carriers of this gene can activate a regeneration effect that enhances their healing even further. This will gradually wear off over the span of two hours.\n\nSpecialization abilities can only be used once every 10 days due to physical limitations. Using this ability will drain the pawn's healing pool, reducing the benefits they receive from both the base Superhero Gene and the Super Healing gene until the pool completely recovers.\n\nEven when drained, the pawn can push their body to still pull energy from the pool to use an energy pool power. However, doing so often makes the effects of the pool loss much stronger while also making them last much longer.</description>
+        <iconPath>Powers/Specializations/Gene_Regenerator</iconPath>
+        <prerequisite>SuperHealing</prerequisite>
+        <abilities>
+            <li>SHG_Regenerator</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Regenerator</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_SpecializationBase">
+        <defName>SHG_HackMech</defName>
+        <label>hack mechanoid</label>
+        <description>Carriers of this gene can quickly hack any mechanoid that they can touch, forcing it to turn violent against everything in the area. This is accomplished by transferring a portion of their mental acuity to the mech for a few hours, a feat that makes the pawn fall unconscious for some time.\n\nSpecialization abilities can only be used once every 10 days due to physical limitations. After using this ability, the super will be unconscious several days. They will not be targeted by the hacked mech or any other hostiles around them.</description>
+        <iconPath>Powers/Specializations/Gene_HackMech</iconPath>
+        <prerequisite>SuperIntelligence</prerequisite>
+        <abilities>
+            <li>SHG_HackMech</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_HackMech</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_HackerHackMech</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_SpecializationBase">
+        <defName>SHG_Portent</defName>
+        <label>seer</label>
+        <description>Carriers of this gene can utilize their enhanced senses to predict what other beings around them will do with extreme accuracy. This allows them to deflect most attacks that come their way for a few hours, though this requires significant concentration on their part.\n\nSpecialization abilities can only be used once every 10 days due to physical limitations. Using this ability will drain the pawn's perception pool, reducing the benefits they receive from both the base Superhero Gene and the Super Perception gene until the pool completely recovers.\n\nEven when drained, the pawn can push their body to still pull energy from the pool to use an energy pool power. However, doing so often makes the effects of the pool loss much stronger while also making them last much longer.</description>
+        <iconPath>Powers/Specializations/Gene_Portent</iconPath>
+        <prerequisite>SuperPerception</prerequisite>
+        <abilities>
+            <li>SHG_Portent</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Portent</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_SpecializationBase">
+        <defName>SHG_Beguile</defName>
+        <label>beguiler</label>
+        <description>Carriers of this gene can use a burst of persuasiveness to beguile a hostile pawn, causing it to go berserk and attack everything around it.\n\nSpecialization abilities can only be used once every 10 days due to physical limitations. Using this ability will drain the pawn's persuasion pool, reducing the benefits they receive from both the base Superhero Gene and the Super Persuasion gene until the pool completely recovers.\n\nEven when drained, the pawn can push their body to still pull energy from the pool to use an energy pool power. However, doing so often makes the effects of the pool loss much stronger while also making them last much longer.</description>
+        <iconPath>Powers/Specializations/Gene_Beguile</iconPath>
+        <prerequisite>SuperPersuasion</prerequisite>
+        <abilities>
+            <li>SHG_Beguile</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Beguile</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_SpecializationBase">
+        <defName>SHG_Snapshot</defName>
+        <label>snapshot</label>
+        <description>Carriers of this gene can call on their subconscious to guide them on their next several shots. These shots have a negligable chance to miss, and the time between shots is greatly shortened.\n\nSpecialization abilities can only be used once every 10 days due to physical limitations. Using this ability will drain the pawn's precision pool, reducing the benefits they receive from both the base Superhero Gene and the Super Precision gene until the pool completely recovers.\n\nEven when drained, the pawn can push their body to still pull energy from the pool to use an energy pool power. However, doing so often makes the effects of the pool loss much stronger while also making them last much longer.</description>
+        <iconPath>Powers/Specializations/Gene_Snapshot</iconPath>
+        <prerequisite>SuperPrecision</prerequisite>
+        <abilities>
+            <li>SHG_Snapshot</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Snapshot</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_AnalyzerSnapshot</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_SpecializationBase">
+        <defName>SHG_Sprinter</defName>
+        <label>sprinter</label>
+        <description>Carriers of this gene can push their speed to physics-defying levels for a couple hours. During this time, they will be almost impossible to injure, will be completely unaffected by terrain, and their melee blows will travel so quickly they are nigh-impossible to dodge and deal devastating amounts of damage.\n\nSpecialization abilities can only be used once every 10 days due to physical limitations. Using this ability will place such a great burden on the super's body that they will fall comatose for around 10 days afterwards.</description>
+        <iconPath>Powers/Specializations/Gene_Sprinter</iconPath>
+        <prerequisite>SuperSpeed</prerequisite>
+        <abilities>
+            <li>SHG_Sprinter</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Sprinter</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_SpecializationBase">
+        <defName>SHG_TitanStrength</defName>
+        <label>titan strength</label>
+        <description>Carriers of this gene increase their strength considerably for an hour. During that hour, every melee blow they land will deal massive amounts of damage, most likely destroying anything in their path.\n\nSpecialization abilities can only be used once every 10 days due to physical limitations. Using this ability will drain the pawn's strength pool, reducing the benefits they receive from both the base Superhero Gene and the Super Strength gene until the pool completely recovers.\n\nEven when drained, the pawn can push their body to still pull energy from the pool to use an energy pool power. However, doing so often makes the effects of the pool loss much stronger while also making them last much longer.</description>
+        <iconPath>Powers/Specializations/Gene_TitanStrength</iconPath>
+        <prerequisite>SuperStrength</prerequisite>
+        <abilities>
+            <li>SHG_TitanStrength</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_TitanStrength</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+</Defs>

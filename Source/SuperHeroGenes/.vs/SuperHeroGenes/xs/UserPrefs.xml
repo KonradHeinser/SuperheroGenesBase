@@ -1,20 +1,26 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="DynamicResourceGenes/ResourceDrainGene.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HarmonyPatches.cs">
     <Files>
-      <File FileName="HarmonyPatches.cs" Line="64" Column="61" />
-      <File FileName="DynamicResourceGenes/CompAbilityEffect_ResourceToBattery.cs" Line="27" Column="15" />
-      <File FileName="DynamicResourceGenes/GeneGizmo_ResourceGene.cs" Line="60" Column="39" />
-      <File FileName="DynamicResourceGenes/ResourceGene.cs" Line="52" Column="102" />
-      <File FileName="DynamicResourceGenes/ResourceDrainGene.cs" Line="49" Column="102" />
+      <File FileName="HarmonyPatches.cs" Line="26" Column="28" />
+      <File FileName="SHGUtilities.cs" Line="387" Column="1" />
+      <File FileName="Hediffs/TerrainLinker.cs" Line="29" Column="6" />
+      <File FileName="Hediffs/Comps/HediffComp_TerrainCostOverride.cs" Line="16" Column="73" />
+      <File FileName="Hediffs/CompProperties/HediffCompProperties_TerrainCostOverride.cs" Line="32" Column="10" />
+      <File FileName="Hediffs/SHGCache_Component.cs" Line="32" Column="10" />
+      <File FileName="Hediffs/Comps/HediffComp_CreateOtherHediffs.cs" Line="1" Column="1" />
+      <File FileName="Hediffs/CompProperties/HediffCompProperties_CreateOtherHediffs.cs" Line="6" Column="57" />
+      <File FileName="Hediffs/HediffsAtSeverities.cs" Line="17" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="DynamicResourceGenes" expanded="True">
-                <Node name="ResourceDrainGene.cs" selected="True" />
+              <Node name="DynamicResourceGenes" expanded="True" />
+              <Node name="Hediffs" expanded="True">
+                <Node name="CompProperties" expanded="True" />
               </Node>
+              <Node name="HarmonyPatches.cs" selected="True" />
             </Node>
           </Node>
         </State>

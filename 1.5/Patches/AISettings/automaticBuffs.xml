@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>automaticBuffs</setting>
+        <active Class="PatchOperationAdd">
+            <xpath>Defs</xpath>
+            <value>
+                <ThinkTreeDef MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                    <defName>SHG_SuperAI_UndraftedBuffs_Free</defName>
+                    <insertTag>SHGAI_UndraftedAndFreePawn</insertTag>
+                    <insertPriority>400</insertPriority>
+                    <thinkRoot Class="ThinkNode_Priority">
+                        <subNodes>
+                            <li Class="ThinkNode_ConditionalHasAbility" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+                                <ability>SHG_Psionist_MassLevitation</ability>
+                                <subNodes>
+                                    <li Class="ThinkNode_ConditionalHasHediff" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+                                        <hediff>SHG_Psionist_MassLevitation</hediff>
+                                        <invert>true</invert>
+                                        <subNodes>
+                                            <li Class="JobGiver_AICastAbilityOnSelf" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+                                                <ability>SHG_Psionist_MassLevitation</ability>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </li>
+                            <li Class="ThinkNode_ConditionalHasAbility">
+                                <ability>SHG_Psionist_Inspire</ability>
+                                <subNodes>
+                                    <li Class="ThinkNode_ConditionalHasHediff">
+                                        <hediff>SHG_Psionist_Inspire</hediff>
+                                        <invert>true</invert>
+                                        <subNodes>
+                                            <li Class="JobGiver_AICastAbilityOnSelf">
+                                                <ability>SHG_Psionist_Inspire</ability>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </li>
+                            <li Class="ThinkNode_ConditionalHasAbility">
+                                <ability>SHG_Psionist_Rally</ability>
+                                <subNodes>
+                                    <li Class="ThinkNode_ConditionalHasHediff">
+                                        <hediff>SHG_Psionist_Rally</hediff>
+                                        <invert>true</invert>
+                                        <subNodes>
+                                            <li Class="JobGiver_AICastAbilityOnSelf">
+                                                <ability>SHG_Psionist_Rally</ability>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </li>
+                            <li Class="ThinkNode_ConditionalHasAbility">
+                                <ability>SHG_Psionist_Legion</ability>
+                                <subNodes>
+                                    <li Class="ThinkNode_ConditionalHasHediff">
+                                        <hediff>SHG_Psionist_Legion</hediff>
+                                        <invert>true</invert>
+                                        <subNodes>
+                                            <li Class="JobGiver_AICastAbilityOnSelf">
+                                                <ability>SHG_Psionist_Legion</ability>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </li>
+                            <li Class="ThinkNode_ConditionalHasAbility">
+                                <ability>SHG_Psionist_Utopia</ability>
+                                <subNodes>
+                                    <li Class="ThinkNode_ConditionalHasHediff">
+                                        <hediff>SHG_Psionist_Utopia</hediff>
+                                        <invert>true</invert>
+                                        <subNodes>
+                                            <li Class="JobGiver_AICastAbilityOnSelf">
+                                                <ability>SHG_Psionist_Utopia</ability>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </li>
+                        </subNodes>
+                    </thinkRoot>
+                </ThinkTreeDef>
+
+                <ThinkTreeDef>
+                    <defName>SHG_SuperAI_UndraftedBuffs_NoEnemyOnMap</defName>
+                    <insertTag>SHGAI_UndraftedPawn_NoEnemyOnMap</insertTag>
+                    <insertPriority>400</insertPriority>
+                    <thinkRoot Class="ThinkNode_Priority">
+                        <subNodes>
+                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                <gene>Hemogenic</gene>
+                                <subNodes>
+                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                        <ability>SHG_Hemomancer_BloodInfusement</ability>
+                                        <subNodes>
+                                            <li Class="ThinkNode_ConditionalHasHediff">
+                                                <hediff>SHG_Hemomancer_BloodInfusement</hediff>
+                                                <severityRange>3.5</severityRange>
+                                                <invert>true</invert>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Hemomancer_BloodInfusement</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                        <ability>SHG_Hemomancer_BloodArmor</ability>
+                                        <subNodes>
+                                            <li Class="ThinkNode_ConditionalHasHediff">
+                                                <hediff>SHG_Hemomancer_BloodArmor</hediff>
+                                                <severityRange>3.5</severityRange>
+                                                <invert>true</invert>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Hemomancer_BloodArmor</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                        <ability>SHG_Hemomancer_BloodClaws</ability>
+                                        <subNodes>
+                                            <li Class="ThinkNode_ConditionalHasHediff">
+                                                <hediff>SHG_Hemomancer_BloodClawsBuff</hediff>
+                                                <severityRange>3.5</severityRange>
+                                                <invert>true</invert>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Hemomancer_BloodClaws</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </li>
+                        </subNodes>
+                    </thinkRoot>
+                </ThinkTreeDef>
+            </value>
+        </active>
+    </Operation>
+</Patch>

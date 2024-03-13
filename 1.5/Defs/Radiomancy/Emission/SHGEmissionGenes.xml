@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersRadiomancyEmissionBase">
+        <defName>SHG_Radiomancer_ExplosiveBlows</defName>
+        <label>explosive blows</label>
+        <description>Radiomancers with this gene can create a charge that will be released the next time the pawn attacks something in melee combat. This release causes damage additional damage to both the target and all hostile pawns near the target, with any non-hostiles being unaffected.</description>
+        <iconPath>Radiomancer/Emission/Gene_Radiomancer_ExplosiveBlows</iconPath>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Radiomancer_ExplosiveBlows</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyEmissionBase">
+        <defName>SHG_Radiomancer_InstantRecharge</defName>
+        <label>instant recharge</label>
+        <description>Radiomancers with this gene can convert large amounts of radiation into electricity and store it in a battery. Every point of radiation consumed provides 100 electricity.</description>
+        <iconPath>Radiomancer/Emission/Gene_Radiomancer_InstantRecharge</iconPath>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>This ability will try to consume half of the pawn's stored radiation.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_InstantRecharge</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyEmissionBase">
+        <defName>SHG_Radiomancer_LimitlessPotential</defName>
+        <label>limitless potential</label>
+        <description>Radiomancers with this gene can inject a little bit of radiation into a pawn's brain to permanently enhance their mental capabilities. This can only be use on a person once per day as their mind needs time to finish processing the changes, regardless of how slight they are, and carries a rather notable risk of making them develop carcinoma, making this dangerous to use on anyone not immune to carcinoma.\n\nIt usually takes about 2 years of repeated casting for a pawn to gain full enlightenment, and if they are not immune to carcinoma they will get it a total of 10 times on average.</description>
+        <iconPath>Radiomancer/Emission/Gene_Radiomancer_LimitlessPotential</iconPath>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>Each use has about a 10% chance of causing the target to develop carcinoma some time during the next 24 hours. Radiomancer's and non-senescent pawns do not have this risk.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_LimitlessPotential</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyEmissionBase">
+        <defName>SHG_Radiomancer_NuclearWinter</defName>
+        <label>nuclear winter</label>
+        <description>Radiomancers with this gene can release large amounts of energy up into the atmosphere to cause the local area to fall into an exceptionally cold period for an entire quadrum. This ability won't work if there is a heat wave, cold snap, or other similar condition already active.</description>
+        <iconPath>Radiomancer/Emission/Gene_Radiomancer_NuclearWinter</iconPath>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>This ability can be used within an enemy map to attempt to cause things like hypothermia, or your own map to create a naturally cold environment for a time.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_NuclearWinter</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyEmissionBase">
+        <defName>SHG_Radiomancer_Detonation</defName>
+        <label>detonation</label>
+        <description>Radiomancers with this gene can create a blast of energy containing half of currently stored radiation. The more radiation stored, the larger and more damaging this blast is. Radius is equal to one quarter of the radiomancer's stored radiation, and damage is equal to half of the stored radiation amount at the center. This energy blast only damages buildings and hostile pawns.\n\nWith full radiation, this will kill many pawns that have no universal damage resistance (i.e. pawns with the superhero gene or the robust gene) or flame resistance. This can cause notable damage to walls and other buildings, though only fragile ones are likely to outright break.</description>
+        <iconPath>Radiomancer/Emission/Gene_Radiomancer_Detonation</iconPath>
+        <displayOrderInCategory>4</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>This ability consumes half of the pawn's stored radiation.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_Detonation</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyEmissionBase">
+        <defName>SHG_Radiomancer_AshesToAshes</defName>
+        <label>ashes to ashes</label>
+        <description>Radiomancers with this gene can use a bit of radioactive energy to trigger spontaneous combustion in an area. This will release a blast of energy in the area that instantly sets every flammable thing on fire. Walls will stop this blast of energy, though if said wall is flammable, it will also catch fire. If the wall itself is targeted, then the energy will attempt to go through both sides of the wall.</description>
+        <iconPath>Radiomancer/Emission/Gene_Radiomancer_AshesToAshes</iconPath>
+        <displayOrderInCategory>5</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>In the event that no flammable things are found, the energy is just wasted.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_AshesToAshes</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyEmissionBase">
+        <defName>SHG_Radiomancer_DustToDust</defName>
+        <label>dust to dust</label>
+        <description>Radiomancers with this gene can use a massive amount of radiation to instantly vaporize a biological being. You probably won't get much loot if you use this a lot, but with seemingly no way to resist this it is a good argument ender.</description>
+        <iconPath>Radiomancer/Emission/Gene_Radiomancer_DustToDust</iconPath>
+        <displayOrderInCategory>6</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>This ability won't leave much loot for you, but it'll kill things.</li>
+            <li>In some cases this will also destroy the item the target is standing on as well.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_DustToDust</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyEmissionBase">
+        <defName>SHG_Radiomancer_IAmBecomeDeath</defName>
+        <label>i am become death</label>
+        <description>Radiomancers with this gene can create a burst of energy containing every bit of radiation currently stored. The more radiation stored, the larger and more damaging this burst is. Radius is equal to half of the radiomancer's stored radiation, and damage is 10 times stored radiation at the center, with a gradual damage drop-off that may or may not stop distant things from being destroyed. The only safe pawn in this burst is the caster.\n\nThis ability usually leaves everything around the caster dead, and can outright destroy buildings at high radiation levels. At full radiation levels this can destroy almost everything on around 20-30% of the map. On the bright side, no radiation cleanup.</description>
+        <iconPath>Radiomancer/Emission/Gene_Radiomancer_IAmBecomeDeath</iconPath>
+        <displayOrderInCategory>7</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>This ability consumes all of the pawn's stored radiation.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_IAmBecomeDeath</li>
+        </abilities>
+    </GeneDef>
+</Defs>

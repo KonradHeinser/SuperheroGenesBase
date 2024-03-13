@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_FortifyPosition</defName>
+        <label>fortify position</label>
+        <description>Raise a series of temporary walls around the Commander to provide cover for their squad. \n\nAll terrain within the radius must be standable. This means that things like trees, buildings, and chunks will disrupt this ability, but things mud and shallow water will not.</description>
+        <iconPath>Psionist/Commander/Gene_Psionist_FortifyPosition</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <targetRequired>False</targetRequired>
+        <statBases>
+            <Ability_EntropyGain>60</Ability_EntropyGain>
+        </statBases>
+        <verbProperties>
+            <range>3.9</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+        <li Class="CompProperties_AbilityWallraise">
+            <compClass>CompAbilityEffect_Wallraise</compClass>
+            <pattern>
+                    <!--Small walls near caster-->
+                <li>(2, 0)</li>
+                <li>(-2, 0)</li>
+                <li>(0, 2)</li>
+                <li>(0, -2)</li>
+
+                    <!--Top right corner-->
+                <li>(2, 3)</li>
+                <li>(3, 2)</li>
+                <li>(3, 3)</li>
+
+                    <!--Top left corner-->
+                <li>(-2, 3)</li>
+                <li>(-3, 2)</li>
+                <li>(-3, 3)</li>
+
+                    <!--Bottom left corner-->
+                <li>(-2, -3)</li>
+                <li>(-3, -2)</li>
+                <li>(-3, -3)</li>
+
+                    <!--Bottom right corner-->
+                <li>(2, -3)</li>
+                <li>(3, -2)</li>
+                <li>(3, -3)</li>
+            </pattern>
+            <screenShakeIntensity>1.0</screenShakeIntensity>
+            <clamorType>Ability</clamorType>
+            <clamorRadius>25</clamorRadius>
+            <sound>PsycastWallraise</sound>
+        </li>
+        <li Class="CompProperties_AbilityEffecterOnTarget">
+            <effecterDef>Skip_Exit</effecterDef>
+            <maintainForTicks>60</maintainForTicks>
+            <scale>1.55</scale>
+        </li>
+        <li Class="CompProperties_AbilityFleckOnTarget">
+            <fleckDefs>
+                <li>PsycastSkipInnerExit</li>
+                <li>PsycastSkipOuterRingExit</li>
+            </fleckDefs>
+            <scale>1.55</scale>
+            <sound>Psycast_Skip_Exit</sound>
+            <preCastTicks>5</preCastTicks>
+        </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_SmokeScreen</defName>
+        <label>smoke screen</label>
+        <description>Create a large cloud of smoke around the Commander that is difficult to shoot through.</description>
+        <iconPath>Psionist/Commander/Gene_Psionist_SmokeScreen</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <targetRequired>False</targetRequired>
+        <statBases>
+            <Ability_EntropyGain>50</Ability_EntropyGain>
+        </statBases>
+        <verbProperties>
+            <range>7</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+        <li Class="CompProperties_AbilitySmokepop">
+            <smokeRadius>7</smokeRadius>
+            <clamorType>Ability</clamorType>
+            <clamorRadius>15</clamorRadius>
+        </li>
+        <li Class="CompProperties_AbilityEffecterOnTarget">
+            <effecterDef>Skip_Exit</effecterDef>
+            <maintainForTicks>60</maintainForTicks>
+        </li>
+        <li Class="CompProperties_AbilityFleckOnTarget">
+            <fleckDefs>
+                <li>PsycastSkipInnerExit</li>
+                <li>PsycastSkipOuterRingExit</li>
+            </fleckDefs>
+            <sound>Psycast_Skip_Exit</sound>
+            <preCastTicks>5</preCastTicks>
+        </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_SharedBurden</defName>
+        <label>shared burden</label>
+        <description>Form a psychic link between caster and target, so that gain and loss of neural heat is shared between both equally. The link lasts for some time, but will break if the two move far apart. A Commander can only maintain one link at a time.\n\nThis can be used on non-psychic colonists, but the non-psychic will have a very low heat limit and their focus bar will look strange due to them not being psychic. I don't recommend it due to the low heat limit, but the option is available.</description>
+        <iconPath>Psionist/Commander/Gene_Psionist_SharedBurden</iconPath>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EntropyGain>10</Ability_EntropyGain>
+            <Ability_Duration>120</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <warmupTime>1</warmupTime>
+            <range>14.9</range>
+            <targetParams>
+                <onlyTargetControlledPawns>True</onlyTargetControlledPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>EntropyLink</hediffDef>
+                <psychic>True</psychic>
+                <applyToSelf>True</applyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Encourage</defName>
+        <label>encourage</label>
+        <description>Use Psychic energy on a pawn to make them resistant to fear and stress while also increasing consciousness.</description>
+        <iconPath>Psionist/Commander/Gene_Psionist_Encourage</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EntropyGain>50</Ability_EntropyGain>
+            <Ability_Duration>168</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>30</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetPawns>True</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <psychic>True</psychic>
+                <hediffDef>SHG_Psionist_Encourage</hediffDef>
+                <onlyBrain>True</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_RaiseFort</defName>
+        <label>raise fort</label>
+        <description>Raise a series of temporary walls around the General to provide cover for their squad. This version is larger than Fortify Postion, which makes it harder to use, but provides cover for more allies.\n\nAll terrain within the radius must be standable. This means that things like trees, buildings, and chunks will disrupt this ability, but things mud and shallow water will not.</description>
+        <iconPath>Psionist/Commander/Gene_Psionist_RaiseFort</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <targetRequired>False</targetRequired>
+        <statBases>
+            <Ability_EntropyGain>110</Ability_EntropyGain>
+        </statBases>
+        <verbProperties>
+            <range>5.9</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+        <li Class="CompProperties_AbilityWallraise">
+            <compClass>CompAbilityEffect_Wallraise</compClass>
+            <pattern>
+                <!--  First Circle  -->
+                    <!--Upper Left-->
+                <li>(-2, 1)</li>
+                <li>(-2, 2)</li>
+                <li>(-1, 2)</li>
+                    <!--Bottom Left-->
+                <li>(-2, -1)</li>
+                <li>(-2, -2)</li>
+                <li>(-1, -2)</li>
+                    <!--Bottom Right-->
+                <li>(2, -1)</li>
+                <li>(2, -2)</li>
+                <li>(1, -2)</li>
+                    <!--Upper Right-->
+                <li>(2, 1)</li>
+                <li>(2, 2)</li>
+                <li>(1, 2)</li>
+
+                <!--  Second Circle  -->
+                    <!--Top-->
+                <li>(1, 4)</li>
+                <li>(0, 4)</li>
+                <li>(-1, 4)</li>
+                    <!--Upper Left-->
+                <li>(-4, 3)</li>
+                <li>(-4, 4)</li>
+                <li>(-3, 4)</li>
+                    <!--Left-->
+                <li>(-4, 1)</li>
+                <li>(-4, 0)</li>
+                <li>(-4, -1)</li>  
+                    <!--Bottom Left-->
+                <li>(-4, -3)</li>
+                <li>(-4, -4)</li>
+                <li>(-3, -4)</li>
+                    <!--Bottom-->
+                <li>(-1, -4)</li>
+                <li>(0, -4)</li>
+                <li>(1, -4)</li>
+                    <!--Bottom Right-->
+                <li>(3, -4)</li>
+                <li>(4, -4)</li>
+                <li>(4, -3)</li>
+                    <!--Right-->
+                <li>(4, 1)</li>
+                <li>(4, 0)</li>
+                <li>(4, -1)</li>  
+                    <!--Upper Right-->
+                <li>(4, 3)</li>
+                <li>(4, 4)</li>
+                <li>(3, 4)</li>
+            </pattern>
+            <screenShakeIntensity>2.0</screenShakeIntensity>
+            <clamorType>Ability</clamorType>
+            <clamorRadius>30</clamorRadius>
+            <sound>PsycastWallraise</sound>
+        </li>
+        <li Class="CompProperties_AbilityEffecterOnTarget">
+            <effecterDef>Skip_Exit</effecterDef>
+            <maintainForTicks>60</maintainForTicks>
+            <scale>1.55</scale>
+        </li>
+        <li Class="CompProperties_AbilityFleckOnTarget">
+            <fleckDefs>
+                <li>PsycastSkipInnerExit</li>
+                <li>PsycastSkipOuterRingExit</li>
+            </fleckDefs>
+            <scale>1.55</scale>
+            <sound>Psycast_Skip_Exit</sound>
+            <preCastTicks>5</preCastTicks>
+        </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_AssassinSquad</defName>
+        <label>assassin squad</label>
+        <description>Release a psychic field that makes both the General and nearby allies invisible for a couple hours. The allies must be near the General to gain the benefits.</description>
+        <iconPath>Psionist/Commander/Gene_Psionist_AssassinSquad</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <statBases>
+            <Ability_EntropyGain>150</Ability_EntropyGain>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>10</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <psychic>True</psychic>
+                <hediffDef>SHG_Psionist_AssassinSquad</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Psionist_MassLevitation</defName>
+        <label>mass levitation</label>
+        <description>Release a psychic field that makes both the General and nearby allies levitate for a couple hours. The allies must be near the General to gain the benefits.</description>
+        <iconPath>Psionist/Commander/Gene_Psionist_MassLevitation</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EntropyGain>100</Ability_EntropyGain>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>20</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <psychic>True</psychic>
+                <hediffDef>SHG_Psionist_MassLevitation</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Inspire</defName>
+        <label>inspire</label>
+        <description>Release a psychic burst that makes both the General and nearby allies resistant to fear and stress while also increasing consciousness.</description>
+        <iconPath>Psionist/Commander/Gene_Psionist_Inspire</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EntropyGain>100</Ability_EntropyGain>
+            <Ability_Duration>168</Ability_Duration>
+            <Ability_EffectRadius>10</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>10</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+                <onlyTargetColonists>True</onlyTargetColonists>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <psychic>True</psychic>
+                <hediffDef>SHG_Psionist_Inspire</hediffDef>
+                <onlyBrain>True</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_RaiseBastion</defName>
+        <label>raise bastion</label>
+        <description>Raise a series of temporary walls around the General to provide cover for their squad. This version is larger that Raise Fort, which makes it harder to use, but provides cover for more allies.\n\nAll terrain within the radius must be standable. This means that things like trees, buildings, and chunks will disrupt this ability, but things mud and shallow water will not.</description>
+        <iconPath>Psionist/Commander/Gene_Psionist_RaiseBastion</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <targetRequired>False</targetRequired>
+        <statBases>
+            <Ability_EntropyGain>150</Ability_EntropyGain>
+        </statBases>
+        <verbProperties>
+            <range>8.9</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+        <li Class="CompProperties_AbilityWallraise">
+            <compClass>CompAbilityEffect_Wallraise</compClass>
+            <pattern>
+                <!--  First Circle  -->
+                    <!--Upper Left-->
+                <li>(-2, 1)</li>
+                <li>(-2, 2)</li>
+                <li>(-1, 2)</li>
+                    <!--Bottom Left-->
+                <li>(-2, -1)</li>
+                <li>(-2, -2)</li>
+                <li>(-1, -2)</li>
+                    <!--Bottom Right-->
+                <li>(2, -1)</li>
+                <li>(2, -2)</li>
+                <li>(1, -2)</li>
+                    <!--Upper Right-->
+                <li>(2, 1)</li>
+                <li>(2, 2)</li>
+                <li>(1, 2)</li>
+
+                <!--  Second Circle  -->
+                    <!--Top-->
+                <li>(1, 4)</li>
+                <li>(0, 4)</li>
+                <li>(-1, 4)</li>
+                    <!--Upper Left-->
+                <li>(-4, 3)</li>
+                <li>(-4, 4)</li>
+                <li>(-3, 4)</li>
+                    <!--Left-->
+                <li>(-4, 1)</li>
+                <li>(-4, 0)</li>
+                <li>(-4, -1)</li>  
+                    <!--Bottom Left-->
+                <li>(-4, -3)</li>
+                <li>(-4, -4)</li>
+                <li>(-3, -4)</li>
+                    <!--Bottom-->
+                <li>(-1, -4)</li>
+                <li>(0, -4)</li>
+                <li>(1, -4)</li>
+                    <!--Bottom Right-->
+                <li>(3, -4)</li>
+                <li>(4, -4)</li>
+                <li>(4, -3)</li>
+                    <!--Right-->
+                <li>(4, 1)</li>
+                <li>(4, 0)</li>
+                <li>(4, -1)</li>  
+                    <!--Upper Right-->
+                <li>(4, 3)</li>
+                <li>(4, 4)</li>
+                <li>(3, 4)</li>
+
+                <!--  Third Circle  -->
+                    <!--Upper Left-->
+                <li>(-1, 6)</li>
+                <li>(-2, 6)</li>
+                <li>(-3, 6)</li>
+                <li>(-5, 6)</li>
+                <li>(-6, 6)</li>
+                <li>(-6, 5)</li>
+                <li>(-6, 3)</li>
+                <li>(-6, 2)</li>
+                <li>(-6, 1)</li>
+                    <!--Bottom Left-->
+                <li>(-1, -6)</li>
+                <li>(-2, -6)</li>
+                <li>(-3, -6)</li>
+                <li>(-5, -6)</li>
+                <li>(-6, -6)</li>
+                <li>(-6, -5)</li>
+                <li>(-6, -3)</li>
+                <li>(-6, -2)</li>
+                <li>(-6, -1)</li>
+                    <!--Upper Right-->
+                <li>(1, 6)</li>
+                <li>(2, 6)</li>
+                <li>(3, 6)</li>
+                <li>(5, 6)</li>
+                <li>(6, 6)</li>
+                <li>(6, 5)</li>
+                <li>(6, 3)</li>
+                <li>(6, 2)</li>
+                <li>(6, 1)</li>
+                    <!--Bottom Right-->
+                <li>(1, -6)</li>
+                <li>(2, -6)</li>
+                <li>(3, -6)</li>
+                <li>(5, -6)</li>
+                <li>(6, -6)</li>
+                <li>(6, -5)</li>
+                <li>(6, -3)</li>
+                <li>(6, -2)</li>
+                <li>(6, -1)</li>
+            </pattern>
+            <screenShakeIntensity>5.0</screenShakeIntensity>
+            <clamorType>Ability</clamorType>
+            <clamorRadius>50</clamorRadius>
+            <sound>PsycastWallraise</sound>
+        </li>
+        <li Class="CompProperties_AbilityEffecterOnTarget">
+            <effecterDef>Skip_Exit</effecterDef>
+            <maintainForTicks>60</maintainForTicks>
+            <scale>1.55</scale>
+        </li>
+        <li Class="CompProperties_AbilityFleckOnTarget">
+            <fleckDefs>
+                <li>PsycastSkipInnerExit</li>
+                <li>PsycastSkipOuterRingExit</li>
+            </fleckDefs>
+            <scale>1.55</scale>
+            <sound>Psycast_Skip_Exit</sound>
+            <preCastTicks>5</preCastTicks>
+        </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_MassProtection</defName>
+        <label>mass protection</label>
+        <description>Create a large shield that stops all projectiles from hostile targets from passing. This will not stop people, and will cause items to explode on impact with the shield. This will last for around 4 hours.</description>
+        <iconPath>Psionist/Commander/Gene_Psionist_MassProtection</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <targetRequired>False</targetRequired>
+        <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+        <statBases>
+            <Ability_EntropyGain>300</Ability_EntropyGain>
+            <Ability_EffectRadius>12</Ability_EffectRadius>
+            <Ability_Duration>168</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>12</range>
+            <targetParams>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+        <li Class="CompProperties_AbilitySpawn">
+            <thingDef>SHG_Psionist_MassProtection</thingDef>
+        </li>
+        <li Class="CompProperties_AbilityFleckOnTarget">
+            <fleckDef>BulletShieldAreaEffect</fleckDef>
+            <sound>Psycast_Skip_Exit</sound>
+        </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Rally</defName>
+        <label>rally</label>
+        <description>Release a psychic burst that makes both the General and nearby allies immune to fear and resistant to stress while also increasing consciousness.</description>
+        <iconPath>Psionist/Commander/Gene_Psionist_Rally</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EntropyGain>150</Ability_EntropyGain>
+            <Ability_Duration>168</Ability_Duration>
+            <Ability_EffectRadius>20</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>20</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+                <onlyTargetColonists>True</onlyTargetColonists>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <psychic>True</psychic>
+                <hediffDef>SHG_Psionist_Rally</hediffDef>
+                <onlyBrain>True</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

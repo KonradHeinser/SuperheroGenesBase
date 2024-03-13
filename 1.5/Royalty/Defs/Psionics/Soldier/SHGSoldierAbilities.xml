@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_EmergencyPatch</defName>
+        <label>emergency patch</label>
+        <description>Patches the Psionic Soldier's wounds to prevent further bleading.</description>
+        <iconPath>Psionist/Soldier/Gene_Psionist_EmergencyPatch</iconPath>
+        <targetRequired>False</targetRequired>
+        <hostile>False</hostile>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <warmupMote>Mote_CoagulateStencil</warmupMote>
+        <warmupEffecter>Coagulate</warmupEffecter>
+        <warmupStartSound>Coagulate_Cast</warmupStartSound>
+        <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+        <statBases>
+            <Ability_EntropyGain>10</Ability_EntropyGain>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <label>heal</label>
+            <violent>False</violent>
+            <range>0.5</range>
+            <warmupTime>0.1</warmupTime>
+            <requireLineOfSight>False</requireLineOfSight>
+            <drawAimPie>False</drawAimPie>
+            <targetParams>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetBloodfeeders>True</canTargetBloodfeeders>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityCoagulate">
+                <tendQualityRange>0.2~0.4</tendQualityRange>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Stasis</defName>
+        <label>stasis</label>
+        <description>Temporarily put a target into stasis for an hour by creating a bubble of dense psychic energy around them. This bubble will stop all non-explosive projectiles, protect against almost all physical attacks, and slowly heal the pawn inside. While in stasis, the pawn will be unable to do anything, but will also have their rest and food needs stopped.\n\nThis can be used on enemies to temporarily take them out of the fight.\n\nWhile the ability will allow you to attempt to put a psychically deaf pawn in stasis, the ability will fail. No shield will be made, the pawn will not be stunned, and they will not begin regenerating. Being able to target the pawn is a Rimworld bug that I can't fix.</description>
+        <iconPath>Psionist/Soldier/Gene_Psionist_Stasis</iconPath>
+        <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <writeCombatLog>True</writeCombatLog>
+        <statBases>
+            <Ability_EntropyGain>30</Ability_EntropyGain>
+            <Ability_EffectRadius>1</Ability_EffectRadius>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>20</range>
+            <targetParams>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetLocations>False</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Psionist_PsionicShield</thingDef>
+                <psychic>True</psychic>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Psionist_Stasis</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <psychic>True</psychic>
+            </li>
+            <li Class="CompProperties_AbilityEffectWithDuration">
+                <compClass>CompAbilityEffect_Stun</compClass>
+                <goodwillImpact>0</goodwillImpact>
+                <psychic>True</psychic>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_CompelledDuel</defName>
+        <label>compelled duel</label>
+        <description>Psionically force a distant target to attempt to fight you hand to hand. Enemies with a low enough psychic sensitivity are more likely to break free before reaching the Psionic Commando.</description>
+        <iconPath>Psionist/Soldier/Gene_Psionist_CompelledDuel</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <cooldownTicksRange>1000</cooldownTicksRange>
+        <statBases>
+            <Ability_EntropyGain>75</Ability_EntropyGain>
+            <Ability_Duration>15</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityForceJob">
+                <compClass>CompAbilityEffect_ForceJob</compClass>
+                <jobDef>SHG_Psionist_CompelledDuel</jobDef>
+                <destination>Caster</destination>
+                <durationMultiplier>PsychicSensitivity</durationMultiplier>
+                <psychic>True</psychic>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>PsycastPsychicEffect</fleckDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Entrench</defName>
+        <label>entrench</label>
+        <description>Infused your body with dense psionic energy that stops your movement, but stabilizes your body and provides some protection.\n\nDue to how the game handles movement, your pawn's movement will not be set to 0, but 0.15.</description>
+        <iconPath>Psionist/Soldier/Gene_Psionist_Entrench</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <statBases>
+            <Ability_EntropyGain>75</Ability_EntropyGain>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>1</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Psionist_Entrench</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <psychic>True</psychic>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_PsionicShield</defName>
+        <label>psionic shield</label>
+        <description>Create a small shield that stops all projectiles from entering. This will not stop people, and can cause items to explode on impact with the shield. This will last for about one hour.</description>
+        <iconPath>Psionist/Soldier/Gene_Psionist_PsionicShield</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <targetRequired>False</targetRequired>
+        <statBases>
+            <Ability_EntropyGain>100</Ability_EntropyGain>
+            <Ability_EffectRadius>1</Ability_EffectRadius>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>1</range>
+            <targetParams>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+        <li Class="CompProperties_AbilitySpawn">
+            <thingDef>SHG_Psionist_PsionicShield</thingDef>
+        </li>
+        <li Class="CompProperties_AbilityFleckOnTarget">
+            <fleckDef>BulletShieldAreaEffect</fleckDef>
+            <sound>Psycast_Skip_Exit</sound>
+        </li>
+        </comps>
+    </AbilityDef>
+</Defs>

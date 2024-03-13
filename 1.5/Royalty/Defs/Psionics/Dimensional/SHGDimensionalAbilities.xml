@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_GentleGas</defName>
+        <label>open rift to gentle gas planet</label>
+        <description>Create a massive cloud of smoke around a target destination. This will stop most turrets while also making it more difficult to shoot through the area.</description>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_GentleGas</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <statBases>
+            <Ability_EntropyGain>50</Ability_EntropyGain>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <targetParams>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+        <li Class="CompProperties_AbilitySmokepop">
+            <smokeRadius>20</smokeRadius>
+            <clamorType>Ability</clamorType>
+            <clamorRadius>15</clamorRadius>
+        </li>
+        <li Class="CompProperties_AbilityEffecterOnTarget">
+            <effecterDef>Skip_Exit</effecterDef>
+            <maintainForTicks>60</maintainForTicks>
+        </li>
+        <li Class="CompProperties_AbilityFleckOnTarget">
+            <fleckDefs>
+                <li>PsycastSkipInnerExit</li>
+                <li>PsycastSkipOuterRingExit</li>
+            </fleckDefs>
+            <sound>Psycast_Skip_Exit</sound>
+            <preCastTicks>5</preCastTicks>
+        </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Ocean</defName>
+        <label>open rift to ocean planet</label>
+        <description>Douse a target area in water, extinguishing fires. This will leave water puddles all over the place that will gradually dry over several hours.\n\nThis will put out people who are on fire, but will not cause the soaking wet thought.</description>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Ocean</iconPath>
+        <hostile>false</hostile>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+        <statBases>
+            <Ability_EntropyGain>50</Ability_EntropyGain>
+            <Ability_EffectRadius>20</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <targetParams>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityWaterskip">
+                <screenShakeIntensity>0.5</screenShakeIntensity>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>10</clamorRadius>
+            </li>
+            <li Class="CompProperties_AbilityEffecterOnTarget">
+                <effecterDef>Skip_Exit</effecterDef>
+                <maintainForTicks>60</maintainForTicks>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDefs>
+                    <li>PsycastSkipInnerExit</li>
+                    <li>PsycastSkipOuterRingExit</li>
+                </fleckDefs>
+                <sound>Psycast_Skip_Exit</sound>
+                <preCastTicks>5</preCastTicks>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Psychedelic</defName>
+        <label>open rift to psychedelic planet</label>
+        <description>Open a rift to the uninhabitable psychedelic planet to release a large number of exotic spores that will put people into a berserker like ranged.</description>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Psychedelic</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <statBases>
+            <Ability_EntropyGain>50</Ability_EntropyGain>
+            <Ability_Duration>168</Ability_Duration>
+            <Ability_EffectRadius>15</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Psionist_Psychedelic</hediffDef>
+                <onlyBrain>True</onlyBrain>
+            </li>
+            <li Class="CompProperties_AbilityGiveMentalState">
+                <compClass>CompAbilityEffect_GiveMentalState</compClass>
+                <stateDef>Berserk</stateDef>
+                <stateDefForMechs>BerserkMechanoid</stateDefForMechs>
+                <goodwillImpact>-30</goodwillImpact>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>PsycastPsychicEffect</fleckDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Asteroid</defName>
+        <label>open rift to asteroid belt</label>
+        <description>Create a rift to the asteroid belt that shoots a bunch of small asteroids at an area.</description>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Asteroid</iconPath>
+        <statBases>
+            <Ability_EntropyGain>70</Ability_EntropyGain>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <targetParams>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilitySprayLiquid">
+                <projectileDef>SHG_Psionist_Asteroid</projectileDef>
+                <numCellsToHit>9</numCellsToHit>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Psionist_Asteroid</defName>
+        <label>small asteroid</label>
+        <graphicData>
+            <texPath>Projectiles/Projectile_Asteroid</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>MoteGlow</shaderType>
+            <drawSize>0.5</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>Blunt</damageDef>
+            <preExplosionSpawnThingDef>Filth_RubbleRock</preExplosionSpawnThingDef>
+            <speed>80</speed>
+            <filthCount>3</filthCount>
+            <numExtraHitCells>26</numExtraHitCells>
+            <soundExplode>BuildingDestroyed_Stone_Big</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_ViolentGas_Minor</defName>
+        <label>open small rift to violent gas planet</label>
+        <description>Open a small rift to the violent gas planet to cause a localized flashstorm over an area that lasts for a brief time. The storm will strike the area with lightning for about an hour before dissipating.</description>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_ViolentGas</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+        <statBases>
+            <Ability_EntropyGain>35</Ability_EntropyGain>
+            <Ability_EffectRadius>10</Ability_EffectRadius>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <verbProperties>
+        <range>50</range>
+        <targetParams>
+            <canTargetPawns>False</canTargetPawns>
+            <canTargetLocations>True</canTargetLocations>
+        </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityFlashstorm">
+                <goodwillImpact>-30</goodwillImpact>
+            </li>
+            <li Class="CompProperties_AbilitySmokepop">
+                <smokeRadius>10</smokeRadius>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>15</clamorRadius>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>FlashstormAreaEffect</fleckDef>
+                <sound>Psycast_Skip_Exit</sound>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_ViolentGas_Moderate</defName>
+        <label>open rift to violent gas planet</label>
+        <description>Open a rift to the violent gas planet to cause a localized flashstorm over an area that lasts for some time. The storm will strike the area with lightning for about three hours before dissipating.</description>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_ViolentGas</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+        <statBases>
+            <Ability_EntropyGain>70</Ability_EntropyGain>
+            <Ability_EffectRadius>20</Ability_EffectRadius>
+            <Ability_Duration>126</Ability_Duration>
+        </statBases>
+        <verbProperties>
+        <range>50</range>
+        <targetParams>
+            <canTargetPawns>False</canTargetPawns>
+            <canTargetLocations>True</canTargetLocations>
+        </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityFlashstorm">
+                <goodwillImpact>-20</goodwillImpact>
+            </li>
+            <li Class="CompProperties_AbilitySmokepop">
+                <smokeRadius>20</smokeRadius>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>15</clamorRadius>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>FlashstormAreaEffect</fleckDef>
+                <sound>Psycast_Skip_Exit</sound>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_ViolentGas_Major</defName>
+        <label>open large rift to violent gas planet</label>
+        <description>Open a large rift to the violent gas planet to cause a localized flashstorm over an area that lasts for a long time. The storm will strike the area with lightning for about six hours before dissipating.</description>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_ViolentGas</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+        <statBases>
+            <Ability_EntropyGain>100</Ability_EntropyGain>
+            <Ability_EffectRadius>40</Ability_EffectRadius>
+            <Ability_Duration>252</Ability_Duration>
+        </statBases>
+        <verbProperties>
+        <range>50</range>
+        <targetParams>
+            <canTargetPawns>False</canTargetPawns>
+            <canTargetLocations>True</canTargetLocations>
+        </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityFlashstorm">
+                <goodwillImpact>-10</goodwillImpact>
+            </li>
+            <li Class="CompProperties_AbilitySmokepop">
+                <smokeRadius>40</smokeRadius>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>15</clamorRadius>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>FlashstormAreaEffect</fleckDef>
+                <sound>Psycast_Skip_Exit</sound>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_IcePlanet</defName>
+        <label>open rift to ice planet</label>
+        <description>Open a rift to the ice planet to cause everyone in the area to immediately gain 60% hypothermia. There is nothing that can be done to resist this effect.\n\nHypothermia become life threatening at 62%, and lethal at 100%. This mean that if the victim(s) are already in an area that is too cold for them, they will quickly pass out as their hypothermia gets worse. This will affect the psionist if they are in the radius.</description>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Ice</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <statBases>
+            <Ability_EntropyGain>100</Ability_EntropyGain>
+            <Ability_EffectRadius>30</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <targetParams>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>Hypothermia</hediffDef>
+                <severity>0.6</severity>
+                <onlyBrain>True</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Eldritch</defName>
+        <label>open rift to eldritch planet</label>
+        <description>Open a rift to the eldritch planet to cause everyone in the area to immediately become terrified. Whatever exists on the planet is so terrifying that even the Astral Psionist has never laid eyes upon it, for if it is let loose, then this world will probably be lost.</description>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Eldritch</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <statBases>
+            <Ability_EntropyGain>200</Ability_EntropyGain>
+            <Ability_EffectRadius>30</Ability_EffectRadius>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <targetParams>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Fear</hediffDef>
+                <durationMultiplier>SHG_FearSusceptibility</durationMultiplier>
+                <applicableToMechs>False</applicableToMechs>
+                <severity>0.6</severity>
+                <onlyBrain>True</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Chaotic</defName>
+        <label>open rift to chaotic planet</label>
+        <description>Open a rift to the chaotic planet to release a medley of exotic spores that have uncontrollable effects. Unlike the Psychedelic planet, these spores are not solely dedicated to engaging the anger portions of the brain, and the effects of them can vary wildly. There is a chance that they will have no effects at all, or they could have multiple effects on any given individual.</description>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Chaotic</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <statBases>
+            <Ability_EntropyGain>100</Ability_EntropyGain>
+            <Ability_Duration>168</Ability_Duration>
+            <Ability_EffectRadius>30</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Psionist_Chaotic</hediffDef>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>PsycastPsychicEffect</fleckDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_PsychicAnomaly</defName>
+        <label>open rift to psychic anomaly</label>
+        <description>Connect to a psychic anomaly to minimize all entropy gains for a day. A small amount of entropy is still gained to use the link to the anomaly, but the amount usually immediately dissipated.\n\nDue to how the game handles neural heat, you may need to remove the limiter for higher cost abilities. This is because the game calculates the neural heat multiplier as the abilty is being cast instead of before.</description>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_PsychicAnomaly</iconPath>
+        <targetRequired>False</targetRequired>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>420000</cooldownTicksRange>
+        <statBases>
+            <Ability_EntropyGain>300</Ability_EntropyGain>
+            <Ability_Duration>1000</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>0.5</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <psychic>True</psychic>
+                <hediffDef>SHG_Psionist_PsychicAnomaly</hediffDef>
+                <onlyBrain>True</onlyBrain>
+            </li>
+            <li Class="CompProperties_AbilityEffecterOnTarget">
+                <effecterDef>Skip_Exit</effecterDef>
+                <maintainForTicks>60</maintainForTicks>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDefs>
+                    <li>PsycastSkipInnerExit</li>
+                    <li>PsycastSkipOuterRingExit</li>
+                </fleckDefs>
+                <sound>Psycast_Skip_Exit</sound>
+                <preCastTicks>5</preCastTicks>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Star</defName>
+        <label>open rift to star</label>
+        <description>Open a rift to the star that lets out a massive amount of heat and light. This rift will take about a day to close.</description>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Star</iconPath>
+        <statBases>
+            <Ability_EntropyGain>400</Ability_EntropyGain>
+            <Ability_Duration>1000</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <targetParams>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Psionist_Star</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+            <li Class="CompProperties_AbilityEffecterOnTarget">
+                <effecterDef>Skip_Exit</effecterDef>
+                <maintainForTicks>60</maintainForTicks>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDefs>
+                    <li>PsycastSkipInnerExit</li>
+                    <li>PsycastSkipOuterRingExit</li>
+                </fleckDefs>
+                <sound>Psycast_Skip_Exit</sound>
+                <preCastTicks>5</preCastTicks>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Utopia</defName>
+        <label>open rift to utopian planet</label>
+        <description>Open a rift to the utopian planet to calm the minds of everyone around the Cosmic Psionist. This will make everyone more productive and resistant to the stresses of their less ideal world.</description>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Utopia</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <statBases>
+            <Ability_EntropyGain>200</Ability_EntropyGain>
+            <Ability_Duration>1000</Ability_Duration>
+            <Ability_EffectRadius>30</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>30</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Psionist_Utopia</hediffDef>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>PsycastPsychicEffect</fleckDef>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

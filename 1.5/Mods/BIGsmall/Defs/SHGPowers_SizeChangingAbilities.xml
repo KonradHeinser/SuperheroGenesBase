@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef Name="SHG_SizeAlterationBase" Abstract="True">
+        <jobDef>CastAbilityOnThing</jobDef>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>600</cooldownTicksRange>
+        <aiCanUse>false</aiCanUse>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0.1</warmupTime>
+            <range>0.9</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_SizeAlterationBase">
+        <defName>SHG_NormalSize</defName>
+        <label>return to normal</label>
+        <description>Return body to normal size.</description>
+        <iconPath>Powers/Size/Gene_NormalSize</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityRemoveHediff">
+                <compClass>CompAbilityEffect_RemoveHediff</compClass>
+                <hediffDef>SHG_SizeShift</hediffDef>
+                <applyToSelf>True</applyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_SizeAlterationBase">
+        <defName>SHG_MicroscopicSize</defName>
+        <label>become microscopic</label>
+        <description>Become 1% size, reducing melee damage, hunger rate, and any stat related to size. This will also increase melee dodge chance, and reduce the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this small may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <iconPath>Powers/Size/Gene_MicroscopicSize</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_SizeShift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>0.1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_SizeAlterationBase">
+        <defName>SHG_MinisculeSize</defName>
+        <label>become miniscule</label>
+        <description>Become 10% size, reducing melee damage, food hunger rate, and any stat related to size. This will also increase melee dodge chance, and reduce the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this small may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <iconPath>Powers/Size/Gene_MinisculeSize</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_SizeShift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_SizeAlterationBase">
+        <defName>SHG_MinuteSize</defName>
+        <label>become minute</label>
+        <description>Become 25% size, reducing melee damage, food hunger rate, and any stat related to size. This will also increase melee dodge chance, and reduce the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this small may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <iconPath>Powers/Size/Gene_MinuteSize</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_SizeShift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>2</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_SizeAlterationBase">
+        <defName>SHG_MiniSize</defName>
+        <label>become mini</label>
+        <description>Become 40% size, reducing melee damage, food hunger rate, and any stat related to size. This will also increase melee dodge chance, and reduce the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this small may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <iconPath>Powers/Size/Gene_MiniSize</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_SizeShift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>3</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_SizeAlterationBase">
+        <defName>SHG_TinySize</defName>
+        <label>become tiny</label>
+        <description>Become 55% size, reducing melee damage, food hunger rate, and any stat related to size. This will also increase melee dodge chance, and reduce the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this small may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <iconPath>Powers/Size/Gene_TinySize</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_SizeShift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>4</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_SizeAlterationBase">
+        <defName>SHG_DiminutiveSize</defName>
+        <label>become diminutive</label>
+        <description>Become 70% size, reducing melee damage, food hunger rate, and any stat related to size. This will also increase melee dodge chance, and reduce the perceived danger of this pawn when calculating raid size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <iconPath>Powers/Size/Gene_DiminutiveSize</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_SizeShift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>5</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_SizeAlterationBase">
+        <defName>SHG_SmallSize</defName>
+        <label>become small</label>
+        <description>Become 85% size, reducing melee damage, food hunger rate, and any stat related to size. This will also increase melee dodge chance, and reduce the perceived danger of this pawn when calculating raid size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <iconPath>Powers/Size/Gene_SmallSize</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_SizeShift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>6</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_SizeAlterationBase">
+        <defName>SHG_BigSize</defName>
+        <label>become big</label>
+        <description>Become 150% size, increasing melee damage, hunger rate, and any stat related to size. This will also reduce melee dodge chance, and increase the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this large may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <iconPath>Powers/Size/Gene_BigSize</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_SizeShift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>7</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_SizeAlterationBase">
+        <defName>SHG_LargeSize</defName>
+        <label>become large</label>
+        <description>Become 200% size, increasing melee damage, hunger rate, and any stat related to size. This will also reduce melee dodge chance, and increase the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this large may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <iconPath>Powers/Size/Gene_LargeSize</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_SizeShift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>8</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_SizeAlterationBase">
+        <defName>SHG_HugeSize</defName>
+        <label>become huge</label>
+        <description>Become 250% size, increasing melee damage, hunger rate, and any stat related to size. This will also reduce melee dodge chance, and increase the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this large may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <iconPath>Powers/Size/Gene_HugeSize</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_SizeShift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>9</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_SizeAlterationBase">
+        <defName>SHG_MassiveSize</defName>
+        <label>become massive</label>
+        <description>Become 300% size, increasing melee damage, hunger rate, and any stat related to size. This will also reduce melee dodge chance, and increase the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this large may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <iconPath>Powers/Size/Gene_MassiveSize</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_SizeShift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>10</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_SizeAlterationBase">
+        <defName>SHG_EnormousSize</defName>
+        <label>become enormous</label>
+        <description>Become 350% size, increasing melee damage, hunger rate, and any stat related to size. This will also reduce melee dodge chance, and increase the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this large may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <iconPath>Powers/Size/Gene_EnormousSize</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_SizeShift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>11</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_SizeAlterationBase">
+        <defName>SHG_GargantuanSize</defName>
+        <label>become gargantuan</label>
+        <description>Become 400% size, increasing melee damage, hunger rate, and any stat related to size. This will also reduce melee dodge chance, and increase the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this large may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <iconPath>Powers/Size/Gene_GargantuanSize</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_SizeShift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>12</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_SizeAlterationBase">
+        <defName>SHG_ColossalSize</defName>
+        <label>become colossal</label>
+        <description>Become 500% size, increasing melee damage, hunger rate, and any stat related to size. This will also reduce melee dodge chance, and increase the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this large may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <iconPath>Powers/Size/Gene_ColossalSize</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_SizeShift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>13</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersRadiomancyDecayBase">
+        <defName>SHG_Radiomancer_CellularDestabilization</defName>
+        <label>cellular destabilization</label>
+        <description>Radiomancers with this gene can bombard a pawn's body with radiation to induce vomiting, weaken their immune system, and potentially give them carcinoma.</description>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_CellularDestabilization</iconPath>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>Radiomancers cannot be targeted, and non-senescent pawns are immune to the carcinoma portion of the ability.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_CellularDestabilization</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyDecayBase">
+        <defName>SHG_Radiomancer_DrainEnergy</defName>
+        <label>drain energy</label>
+        <description>Radiomancers with this gene can create a link between themselves and another pawn to begin draining some of that pawn's energy in exchange for increasing the radiomancer's radiation regeneration. If the target survives for the entire duration, this ability will produce a total of 40 radiocative energy.</description>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_DrainEnergy</iconPath>
+        <geneClass>SuperHeroGenesBase.ResourceDrainGene</geneClass>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <resourceLossPerDay>-2.4</resourceLossPerDay>
+        <customEffectDescriptions>
+            <li>Gives regeneration until the target is dead or the hediff wears off.</li>
+            <li>Only works on non-mechanoid pawns.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_DrainEnergy</li>
+        </abilities>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.DRGExtension">
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+                <requiredHediffs>
+                    <li>SHG_Radiomancer_DrainEnergy</li>
+                </requiredHediffs>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyDecayBase">
+        <defName>SHG_Radiomancer_WeakenSkin</defName>
+        <label>weaken skin</label>
+        <description>Radiomancers with this gene can create a link between themselves and another pawn to weaken the bonds between their skin cells in exchange for increasing the radiomancer's radiation regeneration. If the target survives for the entire duration, this ability will only produce a total of 10 radiocative energy due to this ability being more focused on destruction than siphoning.</description>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_WeakenSkin</iconPath>
+        <geneClass>SuperHeroGenesBase.ResourceDrainGene</geneClass>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <resourceLossPerDay>-0.6</resourceLossPerDay>
+        <customEffectDescriptions>
+            <li>Gives regeneration until the target is dead or the hediff wears off.</li>
+            <li>Only works on non-mechanoid pawns.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_WeakenSkin</li>
+        </abilities>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.DRGExtension">
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+                <requiredHediffs>
+                    <li>SHG_Radiomancer_WeakenSkin</li>
+                </requiredHediffs>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyDecayBase">
+        <defName>SHG_Radiomancer_SapStrength</defName>
+        <label>sap strength</label>
+        <description>Radiomancers with this gene can create a link between themselves and another pawn to sap the pawn's strength in exchange for increasing the radiomancer's radiation regeneration. If the target survives for the entire duration, this ability will produce a total of 40 radiocative energy through life force conversion.</description>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_SapStrength</iconPath>
+        <geneClass>SuperHeroGenesBase.ResourceDrainGene</geneClass>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <resourceLossPerDay>-2.4</resourceLossPerDay>
+        <customEffectDescriptions>
+            <li>Gives regeneration until the target is dead or the hediff wears off.</li>
+            <li>Only works on non-mechanoid pawns.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_SapStrength</li>
+        </abilities>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.DRGExtension">
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+                <requiredHediffs>
+                    <li>SHG_Radiomancer_SapStrength</li>
+                </requiredHediffs>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyDecayBase">
+        <defName>SHG_Radiomancer_DrainLife</defName>
+        <label>drain life</label>
+        <description>Radiomancers with this gene can create a link between themselves and another pawn to slow the pawn's healing and immunity gain in exchange for increasing the radiomancer's radiation regeneration. If the target survives for the entire duration, this ability will produce a total of 40 radiocative energy through life force conversion.</description>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_DrainLife</iconPath>
+        <geneClass>SuperHeroGenesBase.ResourceDrainGene</geneClass>
+        <displayOrderInCategory>4</displayOrderInCategory>
+        <resourceLossPerDay>-2.4</resourceLossPerDay>
+        <customEffectDescriptions>
+            <li>Gives regeneration until the target is dead or the hediff wears off.</li>
+            <li>Only works on non-mechanoid pawns.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_DrainLife</li>
+        </abilities>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.DRGExtension">
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+                <requiredHediffs>
+                    <li>SHG_Radiomancer_DrainLife</li>
+                </requiredHediffs>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyDecayBase">
+        <defName>SHG_Radiomancer_SlowSynapses</defName>
+        <label>slow synapses</label>
+        <description>Radiomancers with this gene can create a link between themselves and another pawn to intercept some of the electric impulses flowing through the target's brain in exchange for increasing the radiomancer's radiation regeneration. If the target survives for the entire duration, this ability will only produce a total of 5 radiocative energy due to how difficult it is to intercept these pulses of energy.</description>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_SlowSynapses</iconPath>
+        <geneClass>SuperHeroGenesBase.ResourceDrainGene</geneClass>
+        <displayOrderInCategory>5</displayOrderInCategory>
+        <resourceLossPerDay>-0.3</resourceLossPerDay>
+        <customEffectDescriptions>
+            <li>Gives regeneration until the target is dead or the hediff wears off.</li>
+            <li>Only works on non-mechanoid pawns.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_SlowSynapses</li>
+        </abilities>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.DRGExtension">
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+                <requiredHediffs>
+                    <li>SHG_Radiomancer_SlowSynapses</li>
+                </requiredHediffs>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyDecayBase">
+        <defName>SHG_Radiomancer_RapidAging</defName>
+        <label>rapid aging</label>
+        <description>Radiomancers with this gene can shoot a small amount of radiation into another pawn's body to cause their cells to begin rapidly deteriorating, making them age an entire decade over the span of one hour.\n\nWhile this won't have a notable effect on younger pawns, pawns already near the end of their lifespan may end up developing various health issues as a result of this ability.</description>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_RapidAging</iconPath>
+        <displayOrderInCategory>6</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Radiomancer_RapidAging</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyDecayBase">
+        <defName>SHG_Radiomancer_DangerousAura</defName>
+        <label>dangerous aura</label>
+        <description>Radiomancers with this gene can release radioactive energy in an aura around themselves to cause all non-radiomancer's to suffer penalties. This aura remains until dispelled, and drains radiation over time.</description>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_DangerousAura</iconPath>
+        <geneClass>SuperHeroGenesBase.ResourceDrainGene</geneClass>
+        <displayOrderInCategory>7</displayOrderInCategory>
+        <resourceLossPerDay>1</resourceLossPerDay>
+        <customEffectDescriptions>
+            <li>Drains radiation while aura is active.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_DangerousAura</li>
+        </abilities>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.DRGExtension">
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+                <requiredHediffs>
+                    <li>SHG_Radiomancer_DangerousAura</li>
+                </requiredHediffs>
+            </li>
+        </modExtensions>
+    </GeneDef>
+</Defs>

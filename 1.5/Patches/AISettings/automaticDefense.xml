@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>automaticDefense</setting>
+        <active Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+                        <ThinkTreeDef>
+                            <defName>SHG_SuperAI_UndraftedDefense_ShotRecently</defName>
+                            <insertTag>SHGAI_UndraftedPawn_ShotRecently</insertTag>
+                            <insertPriority>300</insertPriority>
+                            <thinkRoot Class="ThinkNode_Priority">
+                                <subNodes>
+                                    <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                        <ability>SHG_Psionist_SmokeScreen</ability>
+                                        <subNodes>
+                                            <li Class="ThinkNode_ConditionalAbilityCastLastTick">
+                                                <ability>SHG_Psionist_SmokeScreen</ability>
+                                                <minTicksAgo>2500</minTicksAgo>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Psionist_SmokeScreen</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </thinkRoot>
+                        </ThinkTreeDef>
+
+                        <ThinkTreeDef>
+                            <defName>SHG_SuperAI_UndraftedDefense_ManyNearbyThreats</defName>
+                            <insertTag>SHGAI_UndraftedPawn_ManyNearbyThreats</insertTag>
+                            <insertPriority>300</insertPriority>
+                            <thinkRoot Class="ThinkNode_Priority">
+                                <subNodes>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
+                                        <hediffs>
+                                            <li>SHG_UntouchableBeauty</li>
+                                            <li>SHG_Pools_EndurePain</li>
+                                            <li>SHG_LesserPortent</li>
+                                            <li>SHG_Fortress</li>
+                                        </hediffs>
+                                        <invert>true</invert>
+                                        <subNodes>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon">
+                                                <subNodes>
+                                                    <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                        <ability>SHG_Psionist_PsionicShield</ability>
+                                                        <subNodes>
+                                                            <li Class="ThinkNode_ConditionalAbilityCastLastTick">
+                                                                <ability>SHG_Psionist_PsionicShield</ability>
+                                                                <minTicksAgo>2500</minTicksAgo>
+                                                                <subNodes>
+                                                                    <li Class="ThinkNode_ConditionalAbilityCastLastTick">
+                                                                        <ability>SHG_Hemomancer_HemogenBarrier</ability>
+                                                                        <minTicksAgo>2500</minTicksAgo>
+                                                                        <subNodes>
+                                                                            <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                                <ability>SHG_Psionist_PsionicShield</ability>
+                                                                            </li>
+                                                                        </subNodes>
+                                                                    </li>
+                                                                </subNodes>
+                                                            </li>
+                                                        </subNodes>
+                                                    </li>
+                                                    <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                        <ability>SHG_Hemomancer_HemogenBarrier</ability>
+                                                        <subNodes>
+                                                            <li Class="ThinkNode_ConditionalAbilityCastLastTick">
+                                                                <ability>SHG_Hemomancer_HemogenBarrier</ability>
+                                                                <minTicksAgo>2500</minTicksAgo>
+                                                                <subNodes>
+                                                                    <li Class="ThinkNode_ConditionalAbilityCastLastTick">
+                                                                        <ability>SHG_Psionist_PsionicShield</ability>
+                                                                        <minTicksAgo>2500</minTicksAgo>
+                                                                        <subNodes>
+                                                                            <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                                <ability>SHG_Hemomancer_HemogenBarrier</ability>
+                                                                            </li>
+                                                                        </subNodes>
+                                                                    </li>
+                                                                </subNodes>
+                                                            </li>
+                                                        </subNodes>
+                                                    </li>
+                                                    <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                        <ability>SHG_Psionist_Entrench</ability>
+                                                        <subNodes>
+                                                            <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                <ability>SHG_Psionist_Entrench</ability>
+                                                            </li>
+                                                        </subNodes>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_UntouchableBeauty</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_UntouchableBeauty</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                <ability>SHG_Psionist_OneOfAMillion</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Psionist_OneOfAMillion</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                <ability>SHG_Psionist_MassProtection</ability>
+                                                <subNodes>
+                                                    <li Class="ThinkNode_ConditionalAbilityCastLastTick">
+                                                        <ability>SHG_Psionist_MassProtection</ability>
+                                                        <minTicksAgo>10000</minTicksAgo>
+                                                        <subNodes>
+                                                            <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                <ability>SHG_Psionist_MassProtection</ability>
+                                                            </li>
+                                                        </subNodes>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </thinkRoot>
+                        </ThinkTreeDef>
+
+                        <ThinkTreeDef>
+                            <defName>SHG_SuperAI_UndraftedDefense_MeleeThreat</defName>
+                            <insertTag>SHGAI_UndraftedPawn_MeleeThreat</insertTag>
+                            <insertPriority>300</insertPriority>
+                            <thinkRoot Class="ThinkNode_Priority">
+                                <subNodes>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
+                                        <hediffs>
+                                            <li>SHG_UntouchableBeauty</li>
+                                            <li>SHG_Pools_EndurePain</li>
+                                            <li>SHG_LesserPortent</li>
+                                            <li>SHG_Fortress</li>
+                                        </hediffs>
+                                        <invert>true</invert>
+                                        <subNodes>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_UntouchableBeauty</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_UntouchableBeauty</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                <subNodes>
+                                                    <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                        <ability>SHG_Psionist_Entrench</ability>
+                                                        <subNodes>
+                                                            <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                <ability>SHG_Psionist_Entrench</ability>
+                                                            </li>
+                                                        </subNodes>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                <ability>SHG_Psionist_OneOfAMillion</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Psionist_OneOfAMillion</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </thinkRoot>
+                        </ThinkTreeDef>
+                    </value>
+                </li>
+
+                <li Class="SuperHeroGenesBase.PatchOperationSetting">
+                    <setting>poolUsage</setting>
+                    <active Class="PatchOperationAdd"> <!--If there are several hostiles nearby and pool using abilities are allowed, use them as needed-->
+                        <xpath>Defs</xpath>
+                        <value>
+                            <ThinkTreeDef>
+                                <defName>SHG_SuperAI_PoolUndraftedDefense</defName>
+                                <insertTag>SHGAI_UndraftedPawn_ManyNearbyThreats</insertTag>
+                                <insertPriority>250</insertPriority>
+                                <thinkRoot Class="ThinkNode_Priority">
+                                    <subNodes>
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
+                                            <hediffs>
+                                                <li>SHG_UntouchableBeauty</li>
+                                                <li>SHG_Pools_EndurePain</li>
+                                                <li>SHG_LesserPortent</li>
+                                                <li>SHG_Fortress</li>
+                                            </hediffs>
+                                            <invert>true</invert>
+                                            <subNodes>
+                                                <li Class="ThinkNode_ConditionalHasAbility">
+                                                    <ability>SHG_Pools_EndurePain</ability>
+                                                    <subNodes>
+                                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                                            <ability>SHG_Pools_EndurePain</ability>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon">
+                                                    <subNodes>
+                                                        <li Class="ThinkNode_ConditionalHasAbility">
+                                                            <ability>SHG_LesserPortent</ability>
+                                                            <subNodes>
+                                                                <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                    <ability>SHG_LesserPortent</ability>
+                                                                </li>
+                                                            </subNodes>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                                <li Class="ThinkNode_ConditionalHasAbility">
+                                                    <ability>SHG_Fortress</ability>
+                                                    <subNodes>
+                                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                                            <ability>SHG_Fortress</ability>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                                <li Class="ThinkNode_ConditionalHasAbility">
+                                                    <ability>SHG_Portent</ability>
+                                                    <subNodes>
+                                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                                            <ability>SHG_Portent</ability>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                            </subNodes>
+                                        </li>
+                                    </subNodes>
+                                </thinkRoot>
+                            </ThinkTreeDef>
+                        </value>
+                    </active>
+                </li>
+
+                <li Class="SuperHeroGenesBase.PatchOperationSetting">
+                    <setting>automaticDefenseDrafted</setting>
+                    <active Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationAdd">
+                                <xpath>Defs</xpath>
+                                <value>
+                                    <ThinkTreeDef>
+                                        <defName>SHG_SuperAI_DraftedDefense_ShotRecently</defName>
+                                        <insertTag>SHGAI_DraftedPawn_ShotRecently</insertTag>
+                                        <insertPriority>300</insertPriority>
+                                        <thinkRoot Class="ThinkNode_Priority">
+                                            <subNodes>
+                                                <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                    <ability>SHG_Psionist_SmokeScreen</ability>
+                                                    <subNodes>
+                                                        <li Class="ThinkNode_ConditionalAbilityCastLastTick">
+                                                            <ability>SHG_Psionist_SmokeScreen</ability>
+                                                            <minTicksAgo>2500</minTicksAgo>
+                                                            <subNodes>
+                                                                <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                    <ability>SHG_Psionist_SmokeScreen</ability>
+                                                                </li>
+                                                            </subNodes>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                            </subNodes>
+                                        </thinkRoot>
+                                    </ThinkTreeDef>
+
+                                    <ThinkTreeDef>
+                                        <defName>SHG_SuperAI_DraftedDefense_ManyNearbyThreats</defName>
+                                        <insertTag>SHGAI_DraftedPawn_ManyNearbyThreats</insertTag>
+                                        <insertPriority>300</insertPriority>
+                                        <thinkRoot Class="ThinkNode_Priority">
+                                            <subNodes>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
+                                                    <hediffs>
+                                                        <li>SHG_UntouchableBeauty</li>
+                                                        <li>SHG_Pools_EndurePain</li>
+                                                        <li>SHG_LesserPortent</li>
+                                                        <li>SHG_Fortress</li>
+                                                    </hediffs>
+                                                    <invert>true</invert>
+                                                    <subNodes>
+                                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon">
+                                                            <subNodes>
+                                                                <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                                    <ability>SHG_Psionist_PsionicShield</ability>
+                                                                    <subNodes>
+                                                                        <li Class="ThinkNode_ConditionalAbilityCastLastTick">
+                                                                            <ability>SHG_Psionist_PsionicShield</ability>
+                                                                            <minTicksAgo>2500</minTicksAgo>
+                                                                            <subNodes>
+                                                                                <li Class="ThinkNode_ConditionalAbilityCastLastTick">
+                                                                                    <ability>SHG_Hemomancer_HemogenBarrier</ability>
+                                                                                    <minTicksAgo>2500</minTicksAgo>
+                                                                                    <subNodes>
+                                                                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                                            <ability>SHG_Psionist_PsionicShield</ability>
+                                                                                        </li>
+                                                                                    </subNodes>
+                                                                                </li>
+                                                                            </subNodes>
+                                                                        </li>
+                                                                    </subNodes>
+                                                                </li>
+                                                                <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                                    <ability>SHG_Hemomancer_HemogenBarrier</ability>
+                                                                    <subNodes>
+                                                                        <li Class="ThinkNode_ConditionalAbilityCastLastTick">
+                                                                            <ability>SHG_Hemomancer_HemogenBarrier</ability>
+                                                                            <minTicksAgo>2500</minTicksAgo>
+                                                                            <subNodes>
+                                                                                <li Class="ThinkNode_ConditionalAbilityCastLastTick">
+                                                                                    <ability>SHG_Psionist_PsionicShield</ability>
+                                                                                    <minTicksAgo>2500</minTicksAgo>
+                                                                                    <subNodes>
+                                                                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                                            <ability>SHG_Hemomancer_HemogenBarrier</ability>
+                                                                                        </li>
+                                                                                    </subNodes>
+                                                                                </li>
+                                                                            </subNodes>
+                                                                        </li>
+                                                                    </subNodes>
+                                                                </li>
+                                                                <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                                    <ability>SHG_Psionist_Entrench</ability>
+                                                                    <subNodes>
+                                                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                            <ability>SHG_Psionist_Entrench</ability>
+                                                                        </li>
+                                                                    </subNodes>
+                                                                </li>
+                                                            </subNodes>
+                                                        </li>
+                                                        <li Class="ThinkNode_ConditionalHasAbility">
+                                                            <ability>SHG_UntouchableBeauty</ability>
+                                                            <subNodes>
+                                                                <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                    <ability>SHG_UntouchableBeauty</ability>
+                                                                </li>
+                                                            </subNodes>
+                                                        </li>
+                                                        <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                            <ability>SHG_Psionist_OneOfAMillion</ability>
+                                                            <subNodes>
+                                                                <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                    <ability>SHG_Psionist_OneOfAMillion</ability>
+                                                                </li>
+                                                            </subNodes>
+                                                        </li>
+                                                        <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                            <ability>SHG_Psionist_MassProtection</ability>
+                                                            <subNodes>
+                                                                <li Class="ThinkNode_ConditionalAbilityCastLastTick">
+                                                                    <ability>SHG_Psionist_MassProtection</ability>
+                                                                    <minTicksAgo>10000</minTicksAgo>
+                                                                    <subNodes>
+                                                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                            <ability>SHG_Psionist_MassProtection</ability>
+                                                                        </li>
+                                                                    </subNodes>
+                                                                </li>
+                                                            </subNodes>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                            </subNodes>
+                                        </thinkRoot>
+                                    </ThinkTreeDef>
+
+                                    <ThinkTreeDef>
+                                        <defName>SHG_SuperAI_DraftedDefense_MeleeThreat</defName>
+                                        <insertTag>SHGAI_DraftedPawn_MeleeThreat</insertTag>
+                                        <insertPriority>300</insertPriority>
+                                        <thinkRoot Class="ThinkNode_Priority">
+                                            <subNodes>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
+                                                    <hediffs>
+                                                        <li>SHG_UntouchableBeauty</li>
+                                                        <li>SHG_Pools_EndurePain</li>
+                                                        <li>SHG_LesserPortent</li>
+                                                        <li>SHG_Fortress</li>
+                                                    </hediffs>
+                                                    <invert>true</invert>
+                                                    <subNodes>
+                                                        <li Class="ThinkNode_ConditionalHasAbility">
+                                                            <ability>SHG_UntouchableBeauty</ability>
+                                                            <subNodes>
+                                                                <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                    <ability>SHG_UntouchableBeauty</ability>
+                                                                </li>
+                                                            </subNodes>
+                                                        </li>
+                                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                            <subNodes>
+                                                                <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                                    <ability>SHG_Psionist_Entrench</ability>
+                                                                    <subNodes>
+                                                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                            <ability>SHG_Psionist_Entrench</ability>
+                                                                        </li>
+                                                                    </subNodes>
+                                                                </li>
+                                                            </subNodes>
+                                                        </li>
+                                                        <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                            <ability>SHG_Psionist_OneOfAMillion</ability>
+                                                            <subNodes>
+                                                                <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                    <ability>SHG_Psionist_OneOfAMillion</ability>
+                                                                </li>
+                                                            </subNodes>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                            </subNodes>
+                                        </thinkRoot>
+                                    </ThinkTreeDef>
+                                </value>
+                            </li>
+                            
+                            <li Class="SuperHeroGenesBase.PatchOperationSetting">
+                                <setting>poolUsage</setting>
+                                <active Class="PatchOperationAdd"> <!--If there are severaly hostiles nearby and pool using abilities are allowed, use them as needed-->
+                                    <xpath>Defs</xpath>
+                                    <value>
+                                        <ThinkTreeDef>
+                                            <defName>SHG_SuperAI_PoolDraftedDefense</defName>
+                                            <insertTag>SHGAI_DraftedPawn_ManyNearbyThreats</insertTag>
+                                            <insertPriority>250</insertPriority>
+                                            <thinkRoot Class="ThinkNode_Priority">
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAnyOfHediff">
+                                                        <hediffs>
+                                                            <li>SHG_UntouchableBeauty</li>
+                                                            <li>SHG_Pools_EndurePain</li>
+                                                            <li>SHG_LesserPortent</li>
+                                                            <li>SHG_Fortress</li>
+                                                        </hediffs>
+                                                        <invert>true</invert>
+                                                        <subNodes>
+                                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                                <ability>SHG_Pools_EndurePain</ability>
+                                                                <subNodes>
+                                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                        <ability>SHG_Pools_EndurePain</ability>
+                                                                    </li>
+                                                                </subNodes>
+                                                            </li>
+                                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon">
+                                                                <subNodes>
+                                                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                                                        <ability>SHG_LesserPortent</ability>
+                                                                        <subNodes>
+                                                                            <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                                <ability>SHG_LesserPortent</ability>
+                                                                            </li>
+                                                                        </subNodes>
+                                                                    </li>
+                                                                </subNodes>
+                                                            </li>
+                                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                                <ability>SHG_Fortress</ability>
+                                                                <subNodes>
+                                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                        <ability>SHG_Fortress</ability>
+                                                                    </li>
+                                                                </subNodes>
+                                                            </li>
+                                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                                <ability>SHG_Portent</ability>
+                                                                <subNodes>
+                                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                        <ability>SHG_Portent</ability>
+                                                                    </li>
+                                                                </subNodes>
+                                                            </li>
+                                                        </subNodes>
+                                                    </li>
+                                                </subNodes>
+                                            </thinkRoot>
+                                        </ThinkTreeDef>
+                                    </value>
+                                </active>
+                            </li>
+                        </operations>
+                    </active>
+                </li>
+            </operations>
+        </active>
+    </Operation>
+</Patch>

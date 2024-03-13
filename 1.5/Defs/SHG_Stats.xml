@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <StatDef>
+        <defName>SHG_FearSusceptibility</defName>
+        <label>fear susceptibility</label>
+        <description>How well this creature resists fear caused by the Superhero Genes mod. The lower this is, the less susceptibile the pawn is to fear.\n\nThis will have a different effect depending on what the source is. If the fear source is an ability, then this impacts how long the ability lasts for that particular pawn. If the source is a damaging attack, then this will influence how much fear increases per attack.</description>
+        <category>BasicsPawn</category>
+        <defaultBaseValue>1</defaultBaseValue>
+        <hideAtValue>1</hideAtValue>
+        <minValue>0</minValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <displayPriorityInCategory>3452</displayPriorityInCategory>
+    </StatDef>
+
+    <StatDef>
+        <defName>SHG_StunSusceptibility</defName>
+        <label>super stun susceptibility</label>
+        <description>How well this creature resists stun attacks caused by the Superhero Genes mod. The lower this is, the less susceptibile the pawn is to a super's stun attacks, thus reducing how long they last.\n\nThis only impacts stuns from standard super abilities. Stuns from something like psionics often use a different stat to determine resistance.</description>
+        <category>BasicsPawn</category>
+        <defaultBaseValue>1</defaultBaseValue>
+        <hideAtValue>1</hideAtValue>
+        <minValue>0</minValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <displayPriorityInCategory>3451</displayPriorityInCategory>
+    </StatDef>
+
+        <!--Psionist Stats-->
+
+    <StatDef>
+        <defName>SHG_Debuffer_Range</defName>
+        <category>BasicsPawn</category>
+        <showIfUndefined>false</showIfUndefined>
+        <displayPriorityInCategory>3451</displayPriorityInCategory>
+        <alwaysHide>true</alwaysHide>
+        <label>debuffer aura range</label>
+        <description>The range stat for all debuffer auras, with the exception of Siphon which uses a static 15.</description>
+        <defaultBaseValue>15</defaultBaseValue>
+    </StatDef>
+
+        <!--Hemomancer Stats-->
+    <StatDef>
+        <defName>SHG_HemomancyProficiency</defName>
+        <label>hemomancy proficiency</label>
+        <description>How well this pawn utilizes hemomantic super powers. This can impact things like self-buffing effects and their durations along with the range of many powers.\n\nThis will attempt to increase the maximum hemogen available by 100 for every 100% in this, but due to weird Rimworld coding, this sometimes doesn't work properly. Unfortunately, I don't know how to fix it outside of using xenogerms create a new xenotype.\n\nBy default, this is only boosted through superhero genes, though due to how it is set up, it can also be boosted through hediffs, traits, and implants if another mod includes it.</description>
+        <category>BasicsPawn</category>
+        <defaultBaseValue>0</defaultBaseValue>
+        <hideAtValue>0</hideAtValue>
+        <minValue>0</minValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <displayPriorityInCategory>3450</displayPriorityInCategory>
+    </StatDef>
+
+    <StatDef Name="SHG_HemomancerRangeStats" Abstract="true">
+        <category>BasicsPawn</category>
+        <showIfUndefined>false</showIfUndefined>
+        <displayPriorityInCategory>3450</displayPriorityInCategory>
+        <statFactors>
+            <li>SHG_HemomancyProficiency</li>
+        </statFactors>
+        <alwaysHide>true</alwaysHide>
+    </StatDef>
+
+    <!--While the difference in ranges appears to be small, these can grow very quickly. If only taking one path, long range is limited to 23 tiles, but with 2 paths it grows to 46, and by 3 paths it goes to 69, which is more than any vanilla weapons, excluding mortars-->
+
+    <StatDef ParentName="SHG_HemomancerRangeStats">
+        <defName>SHG_HemomancerRange_Touch</defName>
+        <label>hemomancer touch range</label>
+        <description>The range stat for all extremely close range hemomancer abilities.</description>
+        <defaultBaseValue>2</defaultBaseValue>
+    </StatDef>
+
+    <StatDef ParentName="SHG_HemomancerRangeStats">
+        <defName>SHG_HemomancerRange_Short</defName>
+        <label>hemomancer short range</label>
+        <description>The range stat for all short range hemomancer abilities.</description>
+        <defaultBaseValue>5</defaultBaseValue>
+    </StatDef>
+
+    <StatDef ParentName="SHG_HemomancerRangeStats">
+        <defName>SHG_HemomancerRange_Medium</defName>
+        <label>hemomancer medium range</label>
+        <description>The range stat for all medium range hemomancer abilities.</description>
+        <defaultBaseValue>12</defaultBaseValue>
+    </StatDef>
+
+    <StatDef ParentName="SHG_HemomancerRangeStats">
+        <defName>SHG_HemomancerRange_Long</defName>
+        <label>hemomancer long range</label>
+        <description>The range stat for all long range hemomancer abilities.</description>
+        <defaultBaseValue>23</defaultBaseValue>
+    </StatDef>
+
+    <StatDef ParentName="SHG_HemomancerRangeStats"> <!--Only here to provide more options for people who want to make their own hemomantic powers-->
+        <defName>SHG_HemomancerRange_Extreme</defName>
+        <label>hemomancer extreme range</label>
+        <description>The range stat for all extreme range hemomancer abilities.</description>
+        <defaultBaseValue>38</defaultBaseValue>
+    </StatDef>
+</Defs>

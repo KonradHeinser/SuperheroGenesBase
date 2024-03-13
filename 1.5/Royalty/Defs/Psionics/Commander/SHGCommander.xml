@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersPsychicCommanderBase">
+        <defName>SHG_Psionist_Commander</defName>
+        <label>psionic commander</label>
+        <description>Psionic Commanders make it easier for all their nearby allies to fight. Sometimes it's intangible, like providing a little inspirational boost. Other times it's very tangible, like creating temporary cover for their allies to hide behind.\n\nAny number of Superhero Psionic paths can be taken at the same time. The only limiting factor is metabolic efficiency.</description>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
+        <iconPath>Psionist/Commander/Gene_Psionist_Commander</iconPath>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyRecoveryRate>2.0</PsychicEntropyRecoveryRate>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicCommanderBase">
+        <defName>SHG_Psionist_FortifyPosition</defName>
+        <label>fortify position</label>
+        <description>This gene gives access to an ability that raises some temporary walls around themselves for a few hours. These walls give several spots where the Commander's allies can shoot from a concealed position. In addition to being good for cover, it can help stop melee swarming.\n\nUsing this ability will require the area around the Commander to be clear of obstacles. If a pawn is not able to stand on a certain spot, it will probably be an obstacle. Things like shallow water are not obstacles.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_Commander</prerequisite>
+        <iconPath>Psionist/Commander/Gene_Psionist_FortifyPosition</iconPath>
+        <displayOrderInCategory>0.1</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyRecoveryRate>0.9</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_FortifyPosition</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_FortifyPosition</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicCommanderBase">
+        <defName>SHG_Psionist_SmokeScreen</defName>
+        <label>smoke screen</label>
+        <description>This gene gives access to an ability that creates a temporary cloud of smoke around the Psionic Commander that makes it impossible for turrets to lock on, and makes it much harder to be accurate when shooting through the cloud.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_Commander</prerequisite>
+        <iconPath>Psionist/Commander/Gene_Psionist_SmokeScreen</iconPath>
+        <displayOrderInCategory>0.2</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyRecoveryRate>0.9</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_SmokeScreen</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_SmokeScreen</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicCommanderBase">
+        <defName>SHG_Psionist_SharedBurden</defName>
+        <label>shared burden</label>
+        <description>This gene gives access to an ability that creates a psychic link with another colonist that splits entropy loss and gain between them equally.\n\nYou can use this on a non-psychic pawn, but the pawn will have a very low heat limit, and their focus bar will look off due to them not being psychic. The non-psychic pawn should lose their nerual heat box once the heat dissipates. It's not recommended to create a link with a non-psychic, but the option is available.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_Commander</prerequisite>
+        <iconPath>Psionist/Commander/Gene_Psionist_SharedBurden</iconPath>
+        <displayOrderInCategory>0.3</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyRecoveryRate>0.9</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_SharedBurden</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_SharedBurden</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicCommanderBase">
+        <defName>SHG_Psionist_Encourage</defName>
+        <label>encourage</label>
+        <description>This gene gives access to an ability that makes a pawn resistant to fear and stress while also increasing their consciousness.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_Commander</prerequisite>
+        <iconPath>Psionist/Commander/Gene_Psionist_Encourage</iconPath>
+        <displayOrderInCategory>0.4</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyRecoveryRate>0.9</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_Encourage</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_Encourage</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicCommanderBase">
+        <defName>SHG_Psionist_CommanderGeneral</defName>
+        <label>psionic general</label>
+        <description>Generals are powerful psycics who can turn the tides battle with some well placed powers. They have an easier time assisting more allies at the same time.</description>
+        <prerequisite>SHG_Psionist_Commander</prerequisite>
+        <iconPath>Psionist/Commander/Gene_Psionist_CommanderGeneral</iconPath>
+        <displayOrderInCategory>5</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyRecoveryRate>2.0</PsychicEntropyRecoveryRate>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicCommanderBase">
+        <defName>SHG_Psionist_RaiseFort</defName>
+        <label>raise fort</label>
+        <description>This gene gives access to an ability that raises some temporary walls around themselves for a few hours. These walls give several spots where the Commander's allies can shoot from a concealed position. In addition to being good for cover, it can help stop melee swarming.\n\nThis ability will create more walls than the Fortify Position ability, which can provide more spots to shoot from, but makes it more difficult to use.\n\nUsing this ability will require the area around the Commander to be clear of obstacles. If a pawn is not able to stand on a certain spot, it will probably be an obstacle. Things like shallow water are not obstacles.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_CommanderGeneral</prerequisite>
+        <iconPath>Psionist/Commander/Gene_Psionist_RaiseFort</iconPath>
+        <displayOrderInCategory>5.1</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyRecoveryRate>0.9</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_RaiseFort</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_RaiseFort</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicCommanderBase">
+        <defName>SHG_Psionist_AssassinSquad</defName>
+        <label>assassin squad</label>
+        <description>This gene gives access to an ability that makes themselves and everyone around them invisible for a few hours.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_CommanderGeneral</prerequisite>
+        <iconPath>Psionist/Commander/Gene_Psionist_AssassinSquad</iconPath>
+        <displayOrderInCategory>5.2</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyRecoveryRate>0.9</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_AssassinSquad</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_AssassinSquad</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicCommanderBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Psionist_MassLevitation</defName>
+        <label>mass levitation</label>
+        <description>This gene gives access to an ability that makes themselves and everyone around them levitate for a few hours. This allows them to help people go over difficult terrain and enemy fortifications more easily.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_CommanderGeneral</prerequisite>
+        <iconPath>Psionist/Commander/Gene_Psionist_MassLevitation</iconPath>
+        <displayOrderInCategory>5.3</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyRecoveryRate>0.9</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_MassLevitation</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_MassLevitation</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicCommanderBase">
+        <defName>SHG_Psionist_Inspire</defName>
+        <label>inspire</label>
+        <description>This gene gives access to an ability that makes themselves and pawns around them resistant to fear and stress while also increasing their consciousness.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_CommanderGeneral</prerequisite>
+        <iconPath>Psionist/Commander/Gene_Psionist_Inspire</iconPath>
+        <displayOrderInCategory>5.4</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyRecoveryRate>0.9</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_Inspire</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_Inspire</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicCommanderBase">
+        <defName>SHG_Psionist_CommanderParagon</defName>
+        <label>psionic paragon</label>
+        <description>Paragons are often considered the best psionic commanders to ever exist. Their ability to rally troops and support them is often thought to be unmatched by even the best leaders in the Empire.</description>
+        <prerequisite>SHG_Psionist_CommanderGeneral</prerequisite>
+        <iconPath>Psionist/Commander/Gene_Psionist_CommanderParagon</iconPath>
+        <displayOrderInCategory>10</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyRecoveryRate>2</PsychicEntropyRecoveryRate>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicCommanderBase">
+        <defName>SHG_Psionist_RaiseBastion</defName>
+        <label>raise bastion</label>
+        <description>This gene gives access to an ability that raises a lot of temporary walls around themselves for a few hours. These walls give several spots where the Commander's allies can shoot from a concealed position. In addition to being good for cover, it can help stop melee swarming.\n\nThis ability will create more walls than the Raise Fort ability, which can provide more spots to shoot from, but makes it more difficult to use.\n\nUsing this ability will require the area around the Commander to be clear of obstacles. If a pawn is not able to stand on a certain spot, it will probably be an obstacle. Things like shallow water are not obstacles.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_CommanderParagon</prerequisite>
+        <iconPath>Psionist/Commander/Gene_Psionist_RaiseBastion</iconPath>
+        <displayOrderInCategory>10.1</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyRecoveryRate>0.9</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_RaiseBastion</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_RaiseBastion</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicCommanderBase">
+        <defName>SHG_Psionist_MassProtection</defName>
+        <label>mass protection</label>
+        <description>This gene gives access to an ability that creates a massive forcefield that lasts for a few hours. This forcefield will stop all ranged attacks from hostiles from passing through.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_CommanderParagon</prerequisite>
+        <iconPath>Psionist/Commander/Gene_Psionist_MassProtection</iconPath>
+        <displayOrderInCategory>10.2</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyRecoveryRate>0.9</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_MassProtection</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_MassProtection</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicCommanderBase">
+        <defName>SHG_Psionist_Rally</defName>
+        <label>rally</label>
+        <description>This gene gives access to an ability that makes themselves and pawns around them resistant to fear and stress while also increasing their consciousness.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_CommanderParagon</prerequisite>
+        <iconPath>Psionist/Commander/Gene_Psionist_Rally</iconPath>
+        <displayOrderInCategory>10.3</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyRecoveryRate>0.9</PsychicEntropyRecoveryRate>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_Rally</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_Rally</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+</Defs>
+
+<!--
+The commander has various abilities available that provide support to those under their care
+These can be physical, like create walls, or mental, like boosting morale
+For constant support, see Guardian
+-->

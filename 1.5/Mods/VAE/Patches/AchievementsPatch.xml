@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>multipleArchetypes</setting>
+        <active Class="PatchOperationAdd">
+            <xpath>Defs</xpath>
+            <value>
+                <AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                    <defName>SHG_IndestructibleMasterOfWar</defName> <!--That's a Distrubed song reference for all 0 people who read my code-->
+                    <label>Indestructible Master of War</label>
+                    <description>Have a pawn with both Psionic and Blood Armor. This is why they are normally mutually exclusive.</description>
+                    <tracker Class="AchievementsExpanded.MultiHediffTracker">
+                        <defs>
+                            <li>
+                                <key>SHG_Psionist_PsionicArmor</key>
+                                <value>1</value>
+                            </li>
+                            <li>
+                                <key>SHG_Hemomancer_BloodArmor</key>
+                                <value>1</value>
+                            </li>
+                        </defs>
+                    </tracker>
+                    <texPath>OtherSHG/IndestructibleMasterOfWar</texPath>
+                    <points>50</points>
+                </AchievementsExpanded.AchievementDef>
+            </value>
+        </active>
+    </Operation>
+</Patch>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>automaticOffense</setting>
+        <active Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+                        <ThinkTreeDef>
+                            <defName>SHG_SuperAI_UndraftedOffense_NearbyEnemy</defName>
+                            <insertTag>SHGAI_UndraftedPawn_NearbyEnemy</insertTag>
+                            <insertPriority>100</insertPriority>
+                            <thinkRoot Class="ThinkNode_Priority">
+                                <subNodes>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon">
+                                        <invert>true</invert>
+                                        <subNodes>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_HeroicLeap</ability>
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAbilityGoToTarget">
+                                                        <ability>SHG_HeroicLeap</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_Teleport</ability>
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAbilityGoToTarget">
+                                                        <ability>SHG_Teleport</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>Longjump</ability>
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAbilityGoToTarget">
+                                                        <ability>Longjump</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                        <ability>SHG_NewLaserEyes</ability>
+                                        <subNodes>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire"> <!--Laser eyes-->
+                                                <minRadius>2</minRadius>
+                                                <avoidSelfHit>false</avoidSelfHit>
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                        <hashInterval>1</hashInterval> <!--Replaces normal attacks-->
+                                                        <abilities>
+                                                            <li>SHG_NewLaserEyes</li>
+                                                        </abilities>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire"> <!--Blast genes-->
+                                        <minRadius>5</minRadius>
+                                        <minEnemies>3</minEnemies>
+                                        <subNodes>
+                                            <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                <hashInterval>2</hashInterval> <!--Avoid AoE spam-->
+                                                <abilities>
+                                                    <li>SHG_AcidBlast</li>
+                                                    <li>SHG_LightningBlast</li>
+                                                    <li>SHG_IceBlast</li>
+                                                    <li>SHG_PetrificationBlast</li>
+                                                </abilities>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene"> <!--Blast type size AoEs-->
+                                        <minRadius>5</minRadius>
+                                        <minEnemies>3</minEnemies>
+                                        <subNodes>
+                                            <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                <hashInterval>2</hashInterval> <!--Avoid AoE spam-->
+                                                <abilities>
+                                                    <li>SHG_Psionist_Asteroid</li>
+                                                </abilities>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget"> <!--Single Target-->
+                                        <hashInterval>1</hashInterval> <!--Replaces normal attacks-->
+                                        <abilities>
+                                            <li>SHG_ThrowSpike</li>
+                                            <li>SHG_AcidBolt</li>
+                                            <li>SHG_LightningBolt</li>
+                                            <li>SHG_IceBolt</li>
+                                            <li>SHG_PetrificationBolt</li>
+                                            <li>SHG_Hemomancer_Drain</li>
+                                            <li>SHG_Hemomancer_Reap</li>
+                                            <li>SHG_Hemomancer_BloodSpear</li>
+                                        </abilities>
+                                    </li>
+                                </subNodes>
+                            </thinkRoot>
+                        </ThinkTreeDef>
+                    </value>
+                </li>
+                <li Class="SuperHeroGenesBase.PatchOperationSetting">
+                    <setting>automaticOffenseDrafted</setting>
+                    <active Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationAdd">
+                                <xpath>Defs</xpath>
+                                <value>
+                                    <ThinkTreeDef>
+                                        <defName>SHG_SuperAI_DraftedOffense_NearbyEnemy</defName>
+                                        <insertTag>SHGAI_DraftedPawn_NearbyEnemy</insertTag>
+                                        <insertPriority>100</insertPriority>
+                                        <thinkRoot Class="ThinkNode_Priority">
+                                            <subNodes>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon">
+                                                    <invert>true</invert>
+                                                    <subNodes>
+                                                        <li Class="ThinkNode_ConditionalHasAbility">
+                                                            <ability>SHG_HeroicLeap</ability>
+                                                            <subNodes>
+                                                                <li Class="SuperHeroGenesBase.JobGiver_AICastAbilityGoToTarget">
+                                                                    <ability>SHG_HeroicLeap</ability>
+                                                                </li>
+                                                            </subNodes>
+                                                        </li>
+                                                        <li Class="ThinkNode_ConditionalHasAbility">
+                                                            <ability>SHG_Teleport</ability>
+                                                            <subNodes>
+                                                                <li Class="SuperHeroGenesBase.JobGiver_AICastAbilityGoToTarget">
+                                                                    <ability>SHG_Teleport</ability>
+                                                                </li>
+                                                            </subNodes>
+                                                        </li>
+                                                        <li Class="ThinkNode_ConditionalHasAbility">
+                                                            <ability>Longjump</ability>
+                                                            <subNodes>
+                                                                <li Class="SuperHeroGenesBase.JobGiver_AICastAbilityGoToTarget">
+                                                                    <ability>Longjump</ability>
+                                                                </li>
+                                                            </subNodes>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire"> <!--Blast genes-->
+                                                    <minRadius>5</minRadius>
+                                                    <minEnemies>3</minEnemies>
+                                                    <subNodes>
+                                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                            <hashInterval>2</hashInterval> <!--Avoid AoE spam-->
+                                                            <abilities>
+                                                                <li>SHG_AcidBlast</li>
+                                                                <li>SHG_LightningBlast</li>
+                                                                <li>SHG_IceBlast</li>
+                                                                <li>SHG_PetrificationBlast</li>
+                                                            </abilities>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene"> <!--Blast type size AoEs-->
+                                                    <minRadius>5</minRadius>
+                                                    <minEnemies>3</minEnemies>
+                                                    <subNodes>
+                                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                            <hashInterval>2</hashInterval> <!--Avoid AoE spam-->
+                                                            <abilities>
+                                                                <li>SHG_Psionist_Asteroid</li>
+                                                            </abilities>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                                <li Class="ThinkNode_ConditionalHasAbility">
+                                                    <ability>SHG_NewLaserEyes</ability>
+                                                    <subNodes>
+                                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire"> <!--Laser eyes-->
+                                                            <minRadius>2</minRadius>
+                                                            <avoidSelfHit>false</avoidSelfHit>
+                                                            <subNodes>
+                                                                <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                                    <hashInterval>1</hashInterval> <!--Replaces normal attacks-->
+                                                                    <abilities>
+                                                                        <li>SHG_NewLaserEyes</li>
+                                                                    </abilities>
+                                                                </li>
+                                                            </subNodes>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                                <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget"> <!--Single Target-->
+                                                    <hashInterval>1</hashInterval> <!--Replaces normal attacks-->
+                                                    <abilities>
+                                                        <li>SHG_ThrowSpike</li>
+                                                        <li>SHG_AcidBolt</li>
+                                                        <li>SHG_LightningBolt</li>
+                                                        <li>SHG_IceBolt</li>
+                                                        <li>SHG_PetrificationBolt</li>
+                                                        <li>SHG_Hemomancer_Drain</li>
+                                                        <li>SHG_Hemomancer_Reap</li>
+                                                    </abilities>
+                                                </li>
+                                                <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget"> <!--Single Target-->
+                                                    <hashInterval>1</hashInterval> <!--Replaces normal attacks. These cost hemogen-->
+                                                    <abilities>
+                                                        <li>SHG_Hemomancer_BloodSpear</li>
+                                                    </abilities>
+                                                </li>
+                                            </subNodes>
+                                        </thinkRoot>
+                                    </ThinkTreeDef>
+                                </value>
+                            </li>
+                        </operations>
+                    </active>
+                </li>
+            </operations>
+        </active>
+    </Operation>
+</Patch>

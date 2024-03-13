@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef Name="SHG_HemoShifter_ShiftAbilityBase" ParentName="SHGHemomancyBase" Abstract="True">
+        <jobDef>CastAbilityOnThing</jobDef>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>600</cooldownTicksRange>
+        <aiCanUse>false</aiCanUse>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0.1</warmupTime>
+            <range>0.9</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>0.1</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_HemoShifter_ShiftAbilityBase">
+        <defName>SHG_Hemomancer_ShiftNormal</defName>
+        <label>hemoshift(normal)</label>
+        <description>Returns body to a neutral state.</description>
+        <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Shifter</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityRemoveHediff">
+                <compClass>CompAbilityEffect_RemoveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_Hemoshift</hediffDef>
+                <applyToSelf>True</applyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_HemoShifter_ShiftAbilityBase">
+        <defName>SHG_Hemomancer_Turtle</defName>
+        <label>hemoshift(turtle)</label>
+        <description>Increase blunt and sharp armor in exchange for lowering Moving.</description>
+        <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Turtle</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_Hemoshift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>0.1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_HemoShifter_ShiftAbilityBase">
+        <defName>SHG_Hemomancer_Rabbit</defName>
+        <label>hemoshift(rabbit)</label>
+        <description>Increase move speed in exchange for lowering Metabolism.</description>
+        <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Rabbit</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_Hemoshift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>1.1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_HemoShifter_ShiftAbilityBase">
+        <defName>SHG_Hemomancer_Dog</defName>
+        <label>hemoshift(dog)</label>
+        <description>Decrease mental break threshold in exchange for lowering Blood Filtration.</description>
+        <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Dog</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_Hemoshift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>2.1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_HemoShifter_ShiftAbilityBase">
+        <defName>SHG_Hemomancer_Cat</defName>
+        <label>hemoshift(cat)</label>
+        <description>Increase melee dodge chance in exchange for lowering Talking.</description>
+        <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Cat</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_Hemoshift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>3.1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_HemoShifter_ShiftAbilityBase">
+        <defName>SHG_Hemomancer_Snake</defName>
+        <label>hemoshift(snake)</label>
+        <description>Become immune to toxins and gain a short range tox bolt ability that shoots nigh-instantaneously.</description>
+        <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Snake</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_Hemoshift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>4.1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_HemoShifter_ShiftAbilityBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Hemomancer_Starfish</defName>
+        <label>hemoshift(starfish)</label>
+        <description>Gain an ability that causes the hemomorph to reproduce asexually after one day.\n\nUsing another hemoshift while the splitting is in progress will not stop the splitting.</description>
+        <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Starfish</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_Hemoshift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>5.1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_HemoShifter_ShiftAbilityBase">
+        <defName>SHG_Hemomancer_Bear</defName>
+        <label>hemoshift(bear)</label>
+        <description>Increase melee damage while decreasing shooting accuracy, and gain a hibernation ability.</description>
+        <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Bear</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_Hemoshift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>6.1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_HemoShifter_ShiftAbilityBase">
+        <defName>SHG_Hemomancer_Chameleon</defName>
+        <label>hemoshift(chameleon)</label>
+        <description>Gain an ability to turn invisible.</description>
+        <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Chameleon</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_Hemoshift</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>7.1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGHemomancyBase">
+        <defName>SHG_Hemomancer_ShiftSnakeBolt</defName>
+        <label>snake tox bolt</label>
+        <description>Shoot a toxbolt at a nearby enemy. The damage of this ability is the same as the toxbolt power, but it has a much shorter range. Unlike the normal toxbolt, this fires nigh-instantaneously, making impossible to interrupt.</description>
+        <iconPath>Hemomancer/Shifter/Ability_Hemomancer_SnakeBolt</iconPath>
+        <verbProperties>
+            <range>5</range>
+            <warmupTime>0.1</warmupTime>
+            <rangeStat>SHG_HemomancerRange_Short</rangeStat>
+            <soundCast>PiercingSpine_Launch</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Toxic</projectileDef>
+            </li>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>0.1</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGHemomancyBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Hemomancer_ShiftStarfishStartSplitting</defName>
+        <label>start splitting</label>
+        <description>Condense a large amount of hemogen into a clump that will begin developing into a human. This process will take 1 day, and will only be interrupted by death. The only penalty for changing forms is needing to spend hemogen to shift back into the starfish form to use this again.\n\nThe child created through this ability will not inherit xenogenes.</description>
+        <iconPath>Hemomancer/Shifter/Ability_Hemomancer_Splitting</iconPath>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <aiCanUse>false</aiCanUse>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0.1</warmupTime>
+            <range>0.9</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_StarfishSplitting</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>0.8</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGHemomancyBase">
+        <defName>SHG_Hemomancer_ShiftBearHibernation</defName>
+        <label>hybernation</label>
+        <description>Use some hemogen to enter a hibernating sleep for 1 day. The need for food is almost completely halted while hibernating.</description>
+        <iconPath>Hemomancer/Shifter/Ability_Hemomancer_Hibernation</iconPath>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <aiCanUse>false</aiCanUse>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0.1</warmupTime>
+            <range>0.9</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_BearHibernating</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>0.2</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGHemomancyBase">
+        <defName>SHG_Hemomancer_ShiftChameleonInvisibility</defName>
+        <label>chameleon</label>
+        <description>Use a large amount of hemogen to become invisible for an hour. Successive uses will extend the duration by another hour.</description>
+        <iconPath>Hemomancer/Shifter/Ability_Hemomancer_Chameleon</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0.1</warmupTime>
+            <range>0.9</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_ChameleonInvisibility</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>False</replaceExisting>
+            </li>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>0.5</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

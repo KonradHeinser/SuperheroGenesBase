@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersPsychicEmpathBase">
+        <defName>SHG_Psionist_Empath</defName>
+        <label>psionic empath</label>
+        <description>Psionic Empaths have an innate ability to use their powers to enhance their social ability. They use their psychic connection to make specific parts of their brains process information faster, helping them find the perfect thing to say.</description>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
+        <iconPath>Psionist/Empath/Gene_Psionist_Empath</iconPath>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <statFactors>
+            <PsychicSensitivity>1.25</PsychicSensitivity>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicEmpathBase">
+        <defName>SHG_Psionist_PsionicManipulator</defName>
+        <label>psionic manipulator</label>
+        <description>Carriers of this gene have increased social impact based on their psychic sensitivity.</description>
+        <prerequisite>SHG_Psionist_Empath</prerequisite>
+        <iconPath>Psionist/Empath/Gene_Psionist_PsionicManipulator</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <displayOrderInCategory>0.1</displayOrderInCategory>
+        <statFactors>
+            <PsychicSensitivity>0.95</PsychicSensitivity>
+        </statFactors>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Psionist_PsionicManipulator</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicEmpathBase">
+        <defName>SHG_Psionist_PsionicTerrorizer</defName>
+        <label>psionic terrorizer</label>
+        <description>Carriers of this gene have increased arrest success chance and suppression power (if Ideology is enabled) based on their psychic sensitivity.</description>
+        <prerequisite>SHG_Psionist_Empath</prerequisite>
+        <iconPath>Psionist/Empath/Gene_Psionist_PsionicTerrorizer</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <displayOrderInCategory>0.2</displayOrderInCategory>
+        <statFactors>
+            <PsychicSensitivity>0.95</PsychicSensitivity>
+        </statFactors>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Psionist_PsionicTerrorizer</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicEmpathBase">
+        <defName>SHG_Psionist_PsionicInfluencer</defName>
+        <label>psionic influencer</label>
+        <description>Carriers of this gene have increased negotiation ability based on their psychic sensitivity.</description>
+        <prerequisite>SHG_Psionist_Empath</prerequisite>
+        <iconPath>Psionist/Empath/Gene_Psionist_PsionicInfluencer</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <displayOrderInCategory>0.3</displayOrderInCategory>
+        <statFactors>
+            <PsychicSensitivity>0.95</PsychicSensitivity>
+        </statFactors>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Psionist_PsionicInfluencer</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicEmpathBase" MayRequire="Ludeon.Rimworld.Ideology">
+        <defName>SHG_Psionist_PsionicMissionary</defName>
+        <label>psionic missionary</label>
+        <description>Carriers of this gene have increased religion spread frequency and conversion power based on their psychic sensitivity.</description>
+        <prerequisite>SHG_Psionist_Empath</prerequisite>
+        <iconPath>Psionist/Empath/Gene_Psionist_PsionicMissionary</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <displayOrderInCategory>0.4</displayOrderInCategory>
+        <statFactors>
+            <PsychicSensitivity>0.95</PsychicSensitivity>
+        </statFactors>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Psionist_PsionicMissionary</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicEmpathBase">
+        <defName>SHG_Psionist_EmpathPlacater</defName>
+        <label>psionic placater</label>
+        <description>Psionic Placaters can utilize their psionic power to influence people around them. They specialize in making individuals feel more relaxed around them, allowing the Placater to become friends with more people.</description>
+        <prerequisite>SHG_Psionist_Empath</prerequisite>
+        <iconPath>Psionist/Empath/Gene_Psionist_EmpathPlacater</iconPath>
+        <displayOrderInCategory>5</displayOrderInCategory>
+        <statFactors>
+            <PsychicSensitivity>1.25</PsychicSensitivity>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicEmpathBase">
+        <defName>SHG_Psionist_DropTheirGuard</defName>
+        <label>drop their guard</label>
+        <description>Carriers of this gene can use a burst of psychic energy on individuals to make them feel more comfortable around the Placater.</description>
+        <prerequisite>SHG_Psionist_EmpathPlacater</prerequisite>
+        <iconPath>Psionist/Empath/Gene_Psionist_DropTheirGuard</iconPath>
+        <displayOrderInCategory>5.1</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Psionist_DropTheirGuard</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_DropTheirGuard</AbilityDef>
+        </descriptionHyperlinks>
+        <statFactors>
+            <PsychicSensitivity>0.95</PsychicSensitivity>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicEmpathBase">
+        <defName>SHG_Psionist_UniversallyLiked</defName>
+        <label>universally liked</label>
+        <description>Carriers of this gene are viewed more positively by all. Psychic sensitivity of both pawns will impact this.</description>
+        <prerequisite>SHG_Psionist_EmpathPlacater</prerequisite>
+        <iconPath>Psionist/Empath/Gene_Psionist_UniversallyLiked</iconPath>
+        <displayOrderInCategory>5.2</displayOrderInCategory>
+        <statFactors>
+            <PsychicSensitivity>0.95</PsychicSensitivity>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicEmpathBase">
+        <defName>SHG_Psionist_PsionicSeducer</defName>
+        <label>psionic seducer</label>
+        <description>Carriers of this gene have the weird ability to make others more likely to accept romance through a constant psychic aura. The chance is altered by the carriers psychic influence, and the romancee's if they have lowered psychic sensitivity. If the romancee is psychically deaf, they will feel a strange revulsion to the Placater that makes romancing impossible.</description>
+        <prerequisite>SHG_Psionist_EmpathPlacater</prerequisite>
+        <iconPath>Psionist/Empath/Gene_Psionist_PsionicSeducer</iconPath>
+        <displayOrderInCategory>5.3</displayOrderInCategory>
+        <statFactors>
+            <PsychicSensitivity>0.95</PsychicSensitivity>
+        </statFactors>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.GRCExtension">
+                <carrierStat>PsychicSensitivity</carrierStat>
+                <otherStat>PsychicSensitivity</otherStat>
+                <onlyWhileLoweredOther>True</onlyWhileLoweredOther>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicEmpathBase">
+        <defName>SHG_Psionist_PsionicBond</defName>
+        <label>psionic bond</label>
+        <description>Carriers of this gene can create a temporary psionic bond with another colonist. This bond lasts for one quadrum, and boosts the global work speed and accuracies of both pawns while they are on the same map.\n\nIf you have more than one Placater with this ability, all pairs will be on the same network, increasing the tier the more people there are on the map while also allowing some of the bonus to remain if some of the people with Psionic Bond leave the map.\n\nThis is completely separate from Psychic Bond, as it's link does not do anything with romance or opinions.</description>
+        <prerequisite>SHG_Psionist_EmpathPlacater</prerequisite>
+        <iconPath>Psionist/Empath/Gene_Psionist_PsionicBond</iconPath>
+        <displayOrderInCategory>5.4</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Psionist_PsionicBond</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_PsionicBond</AbilityDef>
+        </descriptionHyperlinks>
+        <statFactors>
+            <PsychicSensitivity>0.95</PsychicSensitivity>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicEmpathBase">
+        <defName>SHG_Psionist_EmpathUnifier</defName>
+        <label>psionic unifier</label>
+        <description>Psionic Unifiers excel at bringing the colony together. The more people in the colony, the more influence the unifier's powers can have.</description>
+        <prerequisite>SHG_Psionist_EmpathPlacater</prerequisite>
+        <iconPath>Psionist/Empath/Gene_Psionist_EmpathUnifier</iconPath>
+        <displayOrderInCategory>10</displayOrderInCategory>
+        <statFactors>
+            <PsychicSensitivity>1.25</PsychicSensitivity>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicEmpathBase">
+        <defName>SHG_Psionist_BelovedLeader</defName>
+        <label>beloved leader</label>
+        <description>Carriers of this gene can use a burst of psychic energy on individuals to make them feel more comfortable around the placater.</description>
+        <prerequisite>SHG_Psionist_EmpathUnifier</prerequisite>
+        <iconPath>Psionist/Empath/Gene_Psionist_BelovedLeader</iconPath>
+        <displayOrderInCategory>10.1</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Psionist_BelovedLeader</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_BelovedLeader</AbilityDef>
+        </descriptionHyperlinks>
+        <statFactors>
+            <PsychicSensitivity>0.95</PsychicSensitivity>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicEmpathBase">
+        <defName>SHG_Psionist_UnshakableTeam</defName>
+        <label>unshakable team</label>
+        <description>Carriers of this gene can create a psionic network that changes work speed and accuracy based on the number of people in the network. The carrier adds more people to the network using an ability that adds a permanent Unshakable Team hediff to the pawn.</description>
+        <prerequisite>SHG_Psionist_EmpathUnifier</prerequisite>
+        <iconPath>Psionist/Empath/Gene_Psionist_UnshakableTeam</iconPath>
+        <displayOrderInCategory>10.2</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Psionist_UnshakableTeam</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_UnshakableTeam</AbilityDef>
+        </descriptionHyperlinks>
+        <statFactors>
+            <PsychicSensitivity>0.95</PsychicSensitivity>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicEmpathBase">
+        <defName>SHG_Psionist_OneOfAMillion</defName>
+        <label>one of a million</label>
+        <description>Carriers of this gene can gain a buff that reduces damage taken based on the number of nearby allies for one day. The limit is reached when 20 allies are within a range of 30, but is removed if there are no allies in that range.</description>
+        <prerequisite>SHG_Psionist_EmpathUnifier</prerequisite>
+        <iconPath>Psionist/Empath/Gene_Psionist_OneOfAMillion</iconPath>
+        <displayOrderInCategory>10.3</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Psionist_OneOfAMillion</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_OneOfAMillion</AbilityDef>
+        </descriptionHyperlinks>
+        <statFactors>
+            <PsychicSensitivity>0.95</PsychicSensitivity>
+        </statFactors>
+    </GeneDef>
+</Defs>

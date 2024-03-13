@@ -213,6 +213,10 @@
     <Compile Include="Abilities\CapCheck.cs" />
     <Compile Include="Abilities\SkillCheck.cs" />
     <Compile Include="Abilities\StatCheck.cs" />
+    <Compile Include="Hediffs\TerrainLinker.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_TerrainCostOverride.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_TerrainCostOverride.cs" />
+    <Compile Include="Hediffs\SHGCache_Component.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

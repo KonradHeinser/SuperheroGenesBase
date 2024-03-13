@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <DamageDef>
+        <defName>SHG_Lightning</defName>
+        <label>Lightning</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolenceForMechanoids>true</externalViolenceForMechanoids>
+        <deathMessage>{0} has been electrocuted to death.</deathMessage>
+        <makesBlood>false</makesBlood>
+        <impactSoundType>Electric</impactSoundType>
+        <hediff>Burn</hediff>
+        <defaultDamage>50</defaultDamage>
+        <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+        <explosionCellFleck>BlastEMP</explosionCellFleck>
+        <explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
+        <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+        <soundExplosion>Explosion_EMP</soundExplosion>
+        <combatLogRules>SHG_Damage_Lightning</combatLogRules>
+    </DamageDef>
+
+    <DamageDef>
+        <defName>SHG_Ice</defName>
+        <label>freezing</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>false</externalViolence>
+        <deathMessage>{0} has been frozen to death.</deathMessage>
+        <hediff>Frostbite</hediff>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+        <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+        <explosionCellFleck>BlastEMP</explosionCellFleck>
+        <explosionColorEdge>(0.0, 0.0, 0.8, 0.2)</explosionColorEdge>
+        <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+        <soundExplosion>Explosion_EMP</soundExplosion>
+        <combatLogRules>SHG_Damage_Ice</combatLogRules>
+    </DamageDef>
+
+    <DamageDef ParentName="Bullet">
+        <defName>SHG_ToxicBolt</defName>
+        <label>toxic bolt</label>
+        <additionalHediffs>
+            <li>
+                <hediff>ToxicBuildup</hediff>
+                <severityPerDamageDealt>0.015</severityPerDamageDealt>
+                <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+                <inverseStatScaling>true</inverseStatScaling>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+    </DamageDef>
+
+    <DamageDef>
+        <defName>SHG_ToxicCloud</defName>
+        <label>toxic burn</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>false</externalViolence>
+        <deathMessage>{0} has been poisoned to death.</deathMessage>
+        <hediff>AcidBurn</hediff>
+        <defaultDamage>1</defaultDamage>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+        <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+        <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+        <explosionColorEdge>(0.6, 0.8, 0.0, 0.2)</explosionColorEdge>
+        <soundExplosion>SHG_GasReleasing</soundExplosion>
+        <combatLogRules>Damage_Smoke</combatLogRules>
+        <additionalHediffs>
+            <li>
+                <hediff>ToxicBuildup</hediff>
+                <severityPerDamageDealt>0.1</severityPerDamageDealt>
+                <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+                <inverseStatScaling>true</inverseStatScaling>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+    </DamageDef>
+
+    <DamageDef>
+	    <defName>SHG_Beam</defName>
+        <label>superhero laser eyes beam</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has been beamed to death.</deathMessage>
+        <hediff>BeamWound</hediff>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <impactSoundType>Bullet</impactSoundType>
+        <armorCategory>Sharp</armorCategory>
+        <overkillPctToDestroyPart>0~0.1</overkillPctToDestroyPart>
+        <isRanged>true</isRanged>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+        <defaultDamage>70</defaultDamage>
+        <defaultArmorPenetration>0.1</defaultArmorPenetration>
+    </DamageDef>
+
+    <DamageDef>
+        <defName>SHG_Petrification</defName>
+        <label>petrifying attack</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>false</externalViolence>
+        <deathMessage>{0} has been petrified.</deathMessage>
+        <hediff>Bruise</hediff>
+        <defaultDamage>2</defaultDamage>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+        <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+        <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+        <explosionColorEdge>(1, 1, 1, 0.2)</explosionColorEdge>
+        <soundExplosion>BuildingDestroyed_Stone_Big</soundExplosion>
+        <combatLogRules>SHG_Damage_Petrification</combatLogRules>
+        <additionalHediffs>
+            <li>
+                <hediff>SHG_Petrification</hediff> <!--See HediffDefs for more information-->
+                <severityPerDamageDealt>0.15</severityPerDamageDealt>
+                <victimSeverityScaling>ArmorRating_Blunt</victimSeverityScaling>
+                <inverseStatScaling>true</inverseStatScaling>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+    </DamageDef>
+
+        <!--This damage def is for anyone who wants to add this to an attack. Every point of damage will cause 10% fear.
+        This is intended as a secondary attack as it may cause weird combat logs when used as a primary-->
+    <DamageDef>
+        <defName>SHG_Fear</defName>
+        <label>fear</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>false</externalViolence>
+        <deathMessage>{0}'s heart gave out.</deathMessage>
+        <hediff>Bruise</hediff>
+        <defaultDamage>1</defaultDamage>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+        <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+        <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+        <harmsHealth>false</harmsHealth>
+        <explosionColorEdge>(1, 1, 1, 0.2)</explosionColorEdge>
+        <soundExplosion>BuildingDestroyed_Stone_Big</soundExplosion>
+        <combatLogRules>SHG_Damage_Fear</combatLogRules>
+        <additionalHediffs>
+            <li>
+                <hediff>SHG_Fear</hediff>
+                <severityPerDamageDealt>0.1</severityPerDamageDealt>
+                <victimSeverityScaling>SHG_FearSusceptibility</victimSeverityScaling>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+    </DamageDef>
+
+    <DamageDef>
+        <defName>SHG_Water</defName>
+        <label>pressurized water</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <canInterruptJobs>false</canInterruptJobs>
+        <deathMessage>{0} has died from a pressurized water attack.</deathMessage>
+        <makesBlood>true</makesBlood>
+        <defaultDamage>20</defaultDamage>
+        <hediff>Cut</hediff>
+        <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+        <explosionColorEdge>(50, 50, 255, 0.05)</explosionColorEdge>
+        <soundExplosion>Foam_Impact</soundExplosion>
+        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+        <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+        <harmsHealth>true</harmsHealth>
+        <combatLogRules>SHG_Damage_Water</combatLogRules>
+        <consideredHelpful>false</consideredHelpful>
+        <additionalHediffs>
+            <li>
+                <hediff>SHG_WateryFoam</hediff>
+                <severityPerDamageDealt>0.1</severityPerDamageDealt>
+            </li>
+        </additionalHediffs>
+    </DamageDef>
+</Defs>

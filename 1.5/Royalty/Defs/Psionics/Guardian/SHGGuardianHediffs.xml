@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef Abstract="true" Name="SHG_GuardianBase">
+        <hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef Abstract="true" Name="SHG_GuardianBuffBase">
+        <hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>false</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_Guardian_Base</defName>
+		<label>psionic guardian</label>
+		<description>This pawn is releasing a field of psychic energy around them that provides constant buffs to all allies around themselves. The other hediffs will not be visible to avoid flooding this page, but they should still impact the guardian's nearby allies regardless.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>True</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Psionist_Guardian_Buff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBuffBase">
+        <defName>SHG_Psionist_Guardian_Buff</defName>
+		<label>under a guardian's wing</label>
+		<description>This pawn is receiving various boons from a nearby guardian. To avoid flooding this page with all of the bonuses, the other ones have been hidden. If you can see this, then the pawn is gaining all bonuses that the guardian provides.</description>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBase">
+        <defName>SHG_Psionist_Nimble</defName>
+		<label>nimble aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that makes nearby allies more nimble.</description>
+        <comps>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Psionist_Nimble_Buff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBuffBase">
+        <defName>SHG_Psionist_Nimble_Buff</defName>
+		<label>nimble aura</label>
+		<description>This pawn is more nimble thanks to a nearby Psionic Guardian.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <MeleeDodgeChance>1.1</MeleeDodgeChance>
+                    <AimingDelayFactor>0.9</AimingDelayFactor>
+                    <MoveSpeed>1.1</MoveSpeed>
+                    <HuntingStealth>1.25</HuntingStealth>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBase">
+        <defName>SHG_Psionist_Destructive</defName>
+		<label>destructive aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that makes nearby allies more precise when manually destroying something.</description>
+        <comps>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Psionist_Destructive_Buff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBuffBase">
+        <defName>SHG_Psionist_Destructive_Buff</defName>
+		<label>destructive aura</label>
+		<description>This pawn is more destructive thanks to a nearby Psionic Guardian.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <MiningYield>1.25</MiningYield>
+                    <ButcheryFleshEfficiency>1.25</ButcheryFleshEfficiency>
+                    <ButcheryMechanoidEfficiency>1.25</ButcheryMechanoidEfficiency>
+                    <MeleeDamageFactor>1.1</MeleeDamageFactor>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBase">
+        <defName>SHG_Psionist_Precision</defName>
+		<label>nimble aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that makes nearby allies more nimble.</description>
+        <comps>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Psionist_Precision_Buff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBuffBase">
+        <defName>SHG_Psionist_Precision_Buff</defName>
+		<label>nimble aura</label>
+		<description>This pawn is more nimble thanks to a nearby Psionic Guardian.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <FoodPoisonChance>0.75</FoodPoisonChance>
+                    <MedicalSurgerySuccessChance>1.25</MedicalSurgerySuccessChance>
+                    <MedicalTendQuality>1.1</MedicalTendQuality>
+                    <FixBrokenDownBuildingSuccessChance>1.25</FixBrokenDownBuildingSuccessChance>
+                    <ConstructSuccessChance>1.25</ConstructSuccessChance>
+                    <ShootingAccuracyPawn>1.1</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.1</MeleeHitChance>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBase">
+        <defName>SHG_Psionist_Industrious</defName>
+		<label>industrious aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that makes nearby allies more industrious.</description>
+        <comps>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Psionist_Industrious_Buff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBuffBase">
+        <defName>SHG_Psionist_Industrious_Buff</defName>
+		<label>industrious aura</label>
+		<description>This pawn is more industrious thanks to a nearby Psionic Guardian.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBase">
+        <defName>SHG_Psionist_TemperatureResistance</defName>
+		<label>temperature resistance aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that protects nearby allies from extreme temperatures.</description>
+        <comps>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Psionist_TemperatureResistance_Buff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBuffBase">
+        <defName>SHG_Psionist_TemperatureResistance_Buff</defName>
+		<label>temperature resistance aura</label>
+		<description>This pawn is being protected from extreme temperatures by a nearby Psionic Warden.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <Flammability>0.5</Flammability>
+                </statFactors>
+                <statOffsets>
+                    <ArmorRating_Heat>.1</ArmorRating_Heat>
+                    <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+                    <ComfyTemperatureMax>20</ComfyTemperatureMax>
+                </statOffsets>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBase">
+        <defName>SHG_Psionist_ToxicResistance</defName>
+		<label>toxic resistance aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that protects nearby allies from toxic buildup.</description>
+        <comps>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Psionist_ToxicResistance_Buff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBuffBase">
+        <defName>SHG_Psionist_ToxicResistance_Buff</defName>
+		<label>toxic resistance aura</label>
+		<description>This pawn is being protected from all toxic buildup by a nearby Psionic Warden.</description>
+        <stages>
+			<li>
+                <statOffsets>
+                    <ToxicResistance>0.5</ToxicResistance>
+                </statOffsets>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBase">
+        <defName>SHG_Psionist_Solace</defName>
+		<label>solace aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that calms nearby allies, and makes them a little more social.</description>
+        <comps>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Psionist_Solace_Buff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBuffBase">
+        <defName>SHG_Psionist_Solace_Buff</defName>
+		<label>solace aura</label>
+		<description>This pawn is being calmed by a nearby Psionic Warden.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <BondAnimalChanceFactor>1.1</BondAnimalChanceFactor>
+                    <SocialImpact>1.1</SocialImpact>
+                    <NegotiationAbility>1.25</NegotiationAbility>
+                    <MeditationFocusGain>1.25</MeditationFocusGain>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBase">
+        <defName>SHG_Psionist_Enlightenment</defName>
+		<label>enlightenment aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that enlightens nearby allies.</description>
+        <comps>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Psionist_Enlightenment_Buff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBuffBase">
+        <defName>SHG_Psionist_Enlightenment_Buff</defName>
+		<label>enlightenment aura</label>
+		<description>This pawn is being enlightened by a nearby Psionic Warden.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <GlobalLearningFactor>1.1</GlobalLearningFactor>
+                    <LearningRateFactor>1.25</LearningRateFactor>
+                    <ResearchSpeed>1.25</ResearchSpeed>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBase">
+        <defName>SHG_Psionist_Armor</defName>
+		<label>armor aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that protects nearby allies from sharp and blunt attacks.</description>
+        <comps>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Psionist_Armor_Buff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBuffBase">
+        <defName>SHG_Psionist_Armor_Buff</defName>
+		<label>armor aura</label>
+		<description>This pawn is being protected from sharp and blunt attacks by a nearby Psionic Warden.</description>
+        <stages>
+			<li>
+                <statOffsets>
+                    <ArmorRating_Blunt>.1</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>.1</ArmorRating_Sharp>
+                </statOffsets>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBase">
+        <defName>SHG_Psionist_PsionicEfficiency</defName>
+		<label>psionic efficiency aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that makes psychic abilities generate less entropy.</description>
+        <comps>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>False</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Psionist_PsionicEfficiency_Buff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBuffBase">
+        <defName>SHG_Psionist_PsionicEfficiency_Buff</defName>
+		<label>psionic efficiency aura</label>
+		<description>This pawn generates less entropy from psychic abilities due to a nearby Psionic Warden.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <PsychicEntropyGain>0.75</PsychicEntropyGain>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBase">
+        <defName>SHG_Psionist_Life</defName>
+		<label>life aura</label>
+		<description>This pawn is releasing a field of psychic energy around them that heals allies and helps with immunity development.</description>
+        <comps>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>False</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Psionist_Life_Buff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_GuardianBuffBase">
+        <defName>SHG_Psionist_Life_Buff</defName>
+		<label>life aura</label>
+		<description>This pawn is being healed due to a nearby Psionic Warden.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <ImmunityGainSpeed>1.5</ImmunityGainSpeed>
+                </statFactors>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
+                <regenSets>
+                    <li>
+                        <healAmount>0.01</healAmount>
+                    </li>
+                </regenSets>
+            </li>
+		</comps>
+	</HediffDef>
+</Defs>

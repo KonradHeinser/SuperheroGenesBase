@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <IssueDef>
+        <defName>SHG_Supers</defName>
+        <label>supers</label>
+        <iconPath>Base/SuperheroGeneBase</iconPath>
+    </IssueDef>
+
+        <!--Supers Supremacy-->
+    <PreceptDef ParentName="RaidingBase">
+        <defName>SHG_SupersSupremacy</defName>
+        <issue>SHG_Supers</issue>
+        <label>supremacy</label>
+        <description>We must rid this world of non-supers. They are insects that waste the world's resources.\n\nThis is kind of useless if you have Supers Everywhere. Now that I think about it, none of these precepts behave well with Supers Everywhere.</description>
+        <impact>High</impact>
+        <comps>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_Supers_Supremacy_Opinion_Super</thought>
+                <description>Super supremacy</description>
+            </li>
+            <li Class="PreceptComp_KnowsMemoryThought">
+                <eventDef>SHG_SuperDied</eventDef>
+                <thought>SHG_SuperDied_Supremacy</thought>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_Supers_SupremacySuper</thought>
+                <description>Non-super self hatred</description>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_SuperColonist_Supremacy</thought>
+                <description>non-super among us</description>
+                <thoughtStageDescriptions>
+                    <li>No non-supers</li>
+                    <li>Non-supers</li>
+                    <li>A non-super leader</li>
+                </thoughtStageDescriptions>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_RecentConquest_Supremacy</thought>
+                <thoughtStageDescriptions>
+                    <li>Less than {DAYSSINCELASTRAIDTHRESHOLD} days since our last raid</li>
+                    <li>More than {DAYSSINCELASTRAIDTHRESHOLD} days since our last raid</li>
+                </thoughtStageDescriptions>
+            </li>
+            <li Class="PreceptComp_SelfTookMemoryThought">
+                <thought>SHG_ParticipatedInRaid_Supremacy</thought>
+                <eventDef>Raided</eventDef>
+            </li>
+        </comps>
+    </PreceptDef>
+
+    <ThoughtDef>
+        <defName>SHG_ParticipatedInRaid_Supremacy</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>10</durationDays>
+        <stackedEffectMultiplier>1</stackedEffectMultiplier>
+        <stackLimit>300</stackLimit>
+        <stages>
+            <li>
+                <label>participated in raid</label>
+                <description>I participated in a raid! I am unstoppable!</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_RecentConquest_Supremacy</defName>
+        <workerClass>ThoughtWorker_Precept_RecentConquest</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+        <stages>
+            <li>
+                <label>recent conquest</label> <!--Iratus reference for everyone-->
+                <description>We recently raided another faction. Being born was their first mistake. Opposing us will be their last.</description>
+                <baseMoodEffect>20</baseMoodEffect>
+            </li>
+            <li>
+                <label>no recent conquest</label>
+                <description>Our preparations may be going on too long. Let us hope they will be worth it.</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Supers_Supremacy_Opinion_Super</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Precept_GeneExtension_Social</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>super supremacy</label>
+                <baseOpinionOffset>-40</baseOpinionOffset>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <relatedGene>SuperHeroBase</relatedGene>
+                <checkNotPresent>True</checkNotPresent>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Supers_SupremacySuper</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Precept_HasRelatedGene</workerClass>
+        <stages>
+            <li>
+                <label>non-super self hatred</label>
+                <description>I am what I hate. I must find a way to discover my true potential.</description>
+                <baseMoodEffect>-15</baseMoodEffect>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <relatedGene>SuperHeroBase</relatedGene>
+                <checkNotPresent>True</checkNotPresent>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_SuperDied_Supremacy</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <durationDays>10</durationDays>
+        <stackLimit>5</stackLimit>
+        <stackedEffectMultiplier>1</stackedEffectMultiplier>
+        <stages>
+            <li>
+                <label>super died</label>
+                <description>A super has died. This shouldn't be possible!</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_SuperColonist_Supremacy</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Precept_RelatedGeneColonist</workerClass>
+        <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+        <stages>
+            <li>
+                <label>no non-supers</label>
+                <description>We don't have any non-supers tainting our colony.</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+            <li>
+                <label>Non-supers</label>
+                <description>We have a non-super colonist in our midst. Maybe we should send them to the front lines.</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+            <li>
+                <label>non-super leader</label>
+                <description>A non-super leader!? This must be rectified by any means.</description>
+                <baseMoodEffect>-20</baseMoodEffect>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <relatedGene>SuperHeroBase</relatedGene>
+                <checkNotPresent>True</checkNotPresent> <!--Only checks colonists. Slaves and Prisoners are ignored-->
+            </li>                                       <!--Iguanas are ignored too-->
+        </modExtensions>
+    </ThoughtDef>
+
+        <!--Supers Revered-->
+    <PreceptDef>
+        <defName>SHG_SupersRevered</defName>
+        <issue>SHG_Supers</issue>
+        <label>revered</label>
+        <description>The only way we can move forward successfully is by having a super leading us.\n\nIf you have Supers Everywhere, this will trivialize the game as this creates a large mood and opinion buff.</description>
+        <impact>Medium</impact>
+        <comps>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_Supers_Revered_Opinion_Super</thought>
+                <description>Super</description>
+            </li>
+            <li Class="PreceptComp_KnowsMemoryThought">
+                <eventDef>SHG_SuperDied</eventDef>
+                <thought>SHG_SuperDied_Revered</thought>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_Supers_ReveredSuper</thought>
+                <description>Super self dislike</description>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_SuperColonist_Revered</thought>
+                <description>Super among us</description>
+                <thoughtStageDescriptions>
+                    <li>No supers</li>
+                    <li>No super leader</li>
+                    <li>Super leader</li>
+                </thoughtStageDescriptions>
+            </li>
+        </comps>
+    </PreceptDef>
+
+    <ThoughtDef>
+        <defName>SHG_Supers_Revered_Opinion_Super</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Precept_GeneExtension_Social</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>revered super</label>
+                <baseOpinionOffset>40</baseOpinionOffset>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <relatedGene>SuperHeroBase</relatedGene>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Supers_ReveredSuper</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Precept_HasRelatedGene</workerClass>
+        <stages>
+            <li>
+                <label>revered super</label>
+                <description>I am an unstoppable force that will lead this colony to greatness.</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <relatedGene>SuperHeroBase</relatedGene>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_SuperDied_Revered</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <durationDays>10</durationDays>
+        <stackLimit>5</stackLimit>
+        <stackedEffectMultiplier>1</stackedEffectMultiplier>
+        <stages>
+            <li>
+                <label>super died</label>
+                <description>A super has died. This is a terrible day.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_SuperColonist_Revered</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Precept_RelatedGeneColonist</workerClass>
+        <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+        <stages>
+            <li>
+                <label>no supers</label>
+                <description>We don't have any supers here that can help us.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+            <li>
+                <label>no super leader</label>
+                <description>Without a super leader, our colony feels incomplete and pointless. We should make a super our leader.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+            <li>
+                <label>super leader</label>
+                <description>The super's presence is a great honor. May they live forever.</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <relatedGene>SuperHeroBase</relatedGene>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+        <!--Supers Loved-->
+    <PreceptDef>
+        <defName>SHG_SupersLoved</defName>
+        <issue>SHG_Supers</issue>
+        <label>loved</label>
+        <description>Supers are amazing beings who will lead our colony to a glorious future.</description>
+        <impact>Low</impact>
+        <comps>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_Supers_Loved_Opinion_Super</thought>
+                <description>Super</description>
+            </li>
+            <li Class="PreceptComp_KnowsMemoryThought">
+                <eventDef>SHG_SuperDied</eventDef>
+                <thought>SHG_SuperDied_Loved</thought>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_Supers_LovedSuper</thought>
+                <description>Super self appreciation</description>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_SuperColonist_Loved</thought>
+                <description>Super among us</description>
+            </li>
+        </comps>
+    </PreceptDef>
+
+    <ThoughtDef>
+        <defName>SHG_Supers_Loved_Opinion_Super</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Precept_GeneExtension_Social</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>loved super</label>
+                <baseOpinionOffset>10</baseOpinionOffset>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <relatedGene>SuperHeroBase</relatedGene>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Supers_LovedSuper</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Precept_HasRelatedGene</workerClass>
+        <stages>
+            <li>
+                <label>super self appreciation</label>
+                <description>I am a super. I can make a difference.</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <relatedGene>SuperHeroBase</relatedGene>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_SuperDied_Loved</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <durationDays>10</durationDays>
+        <stackLimit>10</stackLimit>
+        <stackedEffectMultiplier>1</stackedEffectMultiplier>
+        <stages>
+            <li>
+                <label>super died</label>
+                <description>A super died. This is a great loss for the world.</description>
+                <baseMoodEffect>-2</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_SuperColonist_Loved</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Precept_RelatedGenePresent</workerClass>
+        <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+        <stages>
+            <li>
+                <label>super among us</label>
+                <description>There is a super in our group. Things are looking up for us!</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <relatedGene>SuperHeroBase</relatedGene>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+        <!--Supers Disliked-->
+    <PreceptDef>
+        <defName>SHG_SupersDisliked</defName>
+        <issue>SHG_Supers</issue>
+        <label>disliked</label>
+        <description>Supers are a potential danger, and we must always keep an eye out for them.\n\nUsing this with Supers Everywhere increases the difficulty of the game as all moods and opinions are lowered.</description>
+        <impact>Low</impact>
+        <comps>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_Supers_Disliked_Opinion_Super</thought>
+                <description>Super</description>
+            </li>
+            <li Class="PreceptComp_KnowsMemoryThought">
+                <eventDef>SHG_SuperDied</eventDef>
+                <thought>SHG_SuperDied_Disliked</thought>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_Supers_DislikedSuper</thought>
+                <description>Super self dislike</description>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_SuperColonist_Disliked</thought>
+                <description>Super among us</description>
+            </li>
+            <li Class="PreceptComp_DevelopmentPoints">
+                <eventDef>SHG_SuperDied</eventDef>
+                <points>2</points>
+            </li>
+        </comps>
+  </PreceptDef>
+
+    <ThoughtDef>
+        <defName>SHG_Supers_Disliked_Opinion_Super</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Precept_GeneExtension_Social</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>disliked super</label>
+                <baseOpinionOffset>-10</baseOpinionOffset>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <relatedGene>SuperHeroBase</relatedGene>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Supers_DislikedSuper</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Precept_HasRelatedGene</workerClass>
+        <stages>
+            <li>
+                <label>super self dislike</label>
+                <description>I am a potential danger to all my fellow colonists.</description>
+                <baseMoodEffect>-7</baseMoodEffect>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <relatedGene>SuperHeroBase</relatedGene>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_SuperDied_Disliked</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <durationDays>10</durationDays>
+        <stackLimit>10</stackLimit>
+        <stackedEffectMultiplier>1</stackedEffectMultiplier>
+        <stages>
+            <li>
+                <label>super died</label>
+                <description>A super let their power get to their head, but that shouldn't be a problem anymore.</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_SuperColonist_Disliked</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Precept_RelatedGenePresent</workerClass>
+        <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+        <stages>
+            <li>
+                <label>super among us</label>
+                <description>One of them walks among us. We should expel the danger from our home.</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <relatedGene>SuperHeroBase</relatedGene>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+
+        <!--Supers Reviled-->
+    <PreceptDef>
+        <defName>SHG_SupersReviled</defName>
+        <issue>SHG_Supers</issue>
+        <label>reviled</label>
+        <description>We must rid this world of supers. They just abuse their power to do whatever they want.\n\nThis is not recommended if you use supers everywhere as this creates a constant -20 mood along with lowering opinions a lot.</description>
+        <impact>Medium</impact>
+        <comps>
+            <li Class="PreceptComp_UnwillingToDo">  <!--This is not required for those who want to skip the related coding. For an example, see SupersDisliked-->
+                <eventDef>SHG_PropagateSuperGene</eventDef>
+                <description>Propagate super gene</description>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_Supers_Reviled_Opinion_Super</thought>
+                <description>Super</description>
+            </li>
+            <li Class="PreceptComp_KnowsMemoryThought">
+                <eventDef>SHG_SuperDied</eventDef>
+                <thought>SHG_SuperDied_Reviled</thought>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_Supers_ReviledSuper</thought>
+                <description>Super self hatred</description>
+            </li>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>SHG_SuperColonist_Reviled</thought>
+                <description>Super among us</description>
+            </li>
+            <li Class="PreceptComp_DevelopmentPoints">
+                <eventDef>SHG_SuperDied</eventDef>
+                <points>5</points>
+            </li>
+        </comps>
+    </PreceptDef>
+
+    <ThoughtDef>
+        <defName>SHG_Supers_Reviled_Opinion_Super</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Precept_GeneExtension_Social</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <stages>
+            <li>
+                <label>reviled super</label>
+                <baseOpinionOffset>-40</baseOpinionOffset>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <relatedGene>SuperHeroBase</relatedGene>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Supers_ReviledSuper</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Precept_HasRelatedGene</workerClass>
+        <stages>
+            <li>
+                <label>super self hatred</label>
+                <description>I am what I hate. I must rid myself of this curse.</description>
+                <baseMoodEffect>-15</baseMoodEffect>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <relatedGene>SuperHeroBase</relatedGene>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_SuperDied_Reviled</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <durationDays>10</durationDays>
+        <stackLimit>10</stackLimit>
+        <stackedEffectMultiplier>1</stackedEffectMultiplier>
+        <stages>
+            <li>
+                <label>super died</label>
+                <description>The only good supe is a dead supe.</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_SuperColonist_Reviled</defName>
+        <thoughtClass>Thought_Situational</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Precept_RelatedGenePresent</workerClass>
+        <nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+        <stages>
+            <li>
+                <label>super among us</label>
+                <description>One of them walks among us. We should expel the super from our home.</description>
+                <baseMoodEffect>-15</baseMoodEffect>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <relatedGene>SuperHeroBase</relatedGene>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+</Defs>

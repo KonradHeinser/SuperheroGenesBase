@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef Name="SHG_HemoShifter_WarriorBuffAbilityBase" ParentName="SHGHemomancyBase" Abstract="True">
+        <jobDef>CastAbilityOnThing</jobDef>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>600</cooldownTicksRange>
+        <aiCanUse>false</aiCanUse>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0.1</warmupTime>
+            <range>0.9</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>0.3</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_HemoShifter_WarriorBuffAbilityBase">
+        <defName>SHG_Hemomancer_BloodClaws</defName>
+        <label>blood claws</label>
+        <description>Gives the pawn a boost to the damage of all melee attacks based on hediff tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost.\n\nIf used after reaching maximum tier, the pawn will remain at max tier for an additional day.</description>
+        <iconPath>Hemomancer/Warrior/Gene_Hemomancer_BloodClaws</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_BloodClawsBuff</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>False</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_HemoShifter_WarriorBuffAbilityBase">
+        <defName>SHG_Hemomancer_BloodArmor</defName>
+        <label>blood armor</label>
+        <description>Gives the pawn blunt and sharp armor based on hediff tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost.\n\nIf used after reaching maximum tier, the pawn will remain at max tier for an additional day.</description>
+        <iconPath>Hemomancer/Warrior/Gene_Hemomancer_BloodArmor</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_BloodArmor</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>False</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_HemoShifter_WarriorBuffAbilityBase">
+        <defName>SHG_Hemomancer_BloodInfusement</defName>
+        <label>blood infusement</label>
+        <description>Gives the pawn enhanced global work speed and reduced rest fall rate based on hediff tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost.\n\nIf used after reaching maximum tier, the pawn will remain at max tier for an additional day.</description>
+        <iconPath>Hemomancer/Warrior/Gene_Hemomancer_BloodInfusement</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_BloodInfusement</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>False</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGHemomancyBase">
+        <defName>SHG_Hemomancer_BloodSpear</defName>
+        <label>blood spear</label>
+        <description>Toss a blood spear at a target. This spear can deal a large amount of damage against fleshy targets, but has issues piercing through armor.</description>
+        <iconPath>Hemomancer/Warrior/Gene_Hemomancer_BloodSpear</iconPath>
+        <verbProperties>
+            <range>23</range>
+            <rangeStat>SHG_HemomancerRange_Long</rangeStat>
+            <soundCast>PiercingSpine_Launch</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Hemomancer_BloodSpear</projectileDef>
+            </li>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>0.1</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGHemomancyBase">
+        <defName>SHG_Hemomancer_HemogenBarrier</defName>
+        <label>hemogen barrier</label>
+        <description>Create a small shield made of hemogen that stops all projectiles from entering. This will not stop people, and will cause items to explode on impact with the shield. This will last for about one hour.</description>
+        <iconPath>Hemomancer/Warrior/Gene_Hemomancer_HemogenBarrier</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <targetRequired>False</targetRequired>
+        <statBases>
+            <Ability_EffectRadius>1</Ability_EffectRadius>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>1</range>
+            <targetParams>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Hemomancer_HemogenBarrier</thingDef>
+            </li>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>0.3</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGHemomancyBase">
+        <defName>SHG_Hemomancer_EverlastingWar</defName>
+        <label>everlasting war</label>
+        <description>Revive everyone in an area, both enemies and allies. The Hemochampion does not need line of sight to resurrect pawns, but resurrected pawns will be unable to move for a couple days. This costs more based on the number of corpses in the area.</description>
+        <iconPath>Hemomancer/Warrior/Gene_Hemomancer_EverlastingWar</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <aiCanUse>false</aiCanUse>
+        <statBases>
+            <Ability_EffectRadius>5</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>12</range>
+            <rangeStat>SHG_HemomancerRange_Medium</rangeStat>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetLocations>False</canTargetLocations>
+                <canTargetCorpses>True</canTargetCorpses>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_Resurrect" />
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>0.1</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGHemomancyBase">
+        <defName>SHG_Hemomancer_BloodAndDarkness</defName>
+        <label>blood and darkness</label>
+        <description>Use a blast of hemogen to blind all pawns in an area for an hour, and make them bleed twice as fast. The more people around the location, the more this ability costs. If the hemochampion is too close to the target pawn, they will also be affected.</description>
+        <iconPath>Hemomancer/Warrior/Gene_Hemomancer_BloodAndDarkness</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <aiCanUse>false</aiCanUse>
+        <statBases>
+            <Ability_EffectRadius>10</Ability_EffectRadius>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>12</range>
+            <rangeStat>SHG_HemomancerRange_Medium</rangeStat>
+            <targetParams>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetLocations>False</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_BloodAndDarkness</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <replaceExisting>False</replaceExisting>
+            </li>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>0.1</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

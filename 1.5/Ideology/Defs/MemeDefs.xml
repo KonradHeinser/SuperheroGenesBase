@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <MemeGroupDef>
+        <defName>SHG_Super</defName>
+        <drawOffset>(0.65, 0.23)</drawOffset>
+        <maxRows>1</maxRows>
+        <renderOrder>9999</renderOrder>
+    </MemeGroupDef>
+
+    <MemeDef Name="SHG_SuperBase" Abstract="True">
+        <groupDef>SHG_Super</groupDef>
+        <impact>2</impact>
+        <consumableBuildings>
+            <li>SacrificialFlag</li>
+        </consumableBuildings>
+        <exclusionTags>
+            <li>SHG_Super</li>
+        </exclusionTags>
+    </MemeDef>
+
+    <IdeoPresetDef>
+        <defName>SHG_VillainPreset</defName>
+        <label>villains</label>
+        <description>We must work to ensure no non-super remains free to waste resources on their petty squabbles. If they will not join our ranks, they will become slaves, or face our wrath.</description>
+        <categoryDef>Intense</categoryDef>
+        <memes>
+            <li>SHG_SuperSupremacy</li>
+            <li>Loyalist</li>
+            <li>HumanPrimacy</li>
+            <li>Individualist</li>
+        </memes>
+    </IdeoPresetDef>
+
+    <IdeoPresetDef>
+        <defName>SHG_HeroPreset</defName>
+        <label>heroes</label>
+        <description>Superheroes are amazing people who we should support no matter what. By working together we can become a force of good in this dark world.</description>
+        <categoryDef>Intense</categoryDef>
+        <memes>
+            <li>SHG_HolySupers</li>
+            <li>Loyalist</li>
+            <li>Collectivist</li>
+            <li>Proselytizer</li>
+        </memes>
+    </IdeoPresetDef>
+
+    <MemeDef ParentName="SHG_SuperBase">
+        <defName>SHG_SuperSupremacy</defName>
+        <label>super supremacy</label>
+        <description>Supers are the only people that should be allowed to thrive because all other xenotypes are lessers that waste this planet's resources. If they will not accept indentured servitude or genetic correction, then they should be disposed of.</description>
+        <iconPath>Base/SuperheroGeneBase</iconPath>
+        <startingResearchProjects>
+            <li>Xenogermination</li>
+        </startingResearchProjects>
+        <requireOne>
+            <li>
+                <li>SHG_SupersSupremacy</li>
+            </li>
+            <li>
+                <li>Slavery_Acceptable</li>
+                <li>Slavery_Honorable</li>
+            </li>
+            <li>
+                <li>Execution_DontCare</li>
+            </li>
+        </requireOne>
+        <generalRules>
+            <rulesStrings>
+                <li>memeAdjective->supreme</li>
+                <li>memeAdjective->high</li>
+                <li>memeAdjective->great</li>
+                <li>memeAdjective->foremost</li>
+                <li>memeAdjective->perfect</li>
+                <li>memeAdjective->prime</li>
+                <li>memeAdjective->strong</li>
+                <li>memeCreed->army</li>
+                <li>memeCreed->legion</li>
+                <li>memeHyphenPrefix->super</li>
+                <li>memeConcept->war</li>
+                <li>memeConcept->violence</li>
+                <li>memeConcept->dominance</li>
+                <li>memeLeaderNoun->general</li>
+                <li>memeLeaderNoun->commander</li>
+                <li>memeLeaderNoun->marshal</li>
+                <li>memeLeaderNoun->fist</li>
+                <li>memeLeaderNoun->ruler</li>
+                <li>memeLeaderNoun->dictator</li>
+                <li>memeLeaderNoun->conqueror</li>
+                <li>memeLeaderNoun->victor</li>
+            </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+            <rules>
+                <rulesStrings>
+                    <!-- theist myth -->
+                    <li>creation(tag=meme_SHG_SuperSupremacy)        ->The people of the [place_summary] [place_name] squabbled endlessly, and [deity0_name] became tired of discord and anointed the [memberNamePlural] as the rightful rulers of all.</li>
+                    <li>episode(uses=1,tag=meme_SHG_SuperSupremacy)  ->The faithful fought the unbelievers, and [deity0_name] said, "Fight them, everywhere, in my name, until I am worshipped throughout the universe and my chosen may take their rightful place beside me."</li>
+                    <!-- theist founder -->
+                    <li>intro(tag=meme_SHG_SuperSupremacy)           ->The people of the [place_summary] [place_name] worshipped [deity0_name]. [deity0_pronoun] saw that they were suited for [memeConcept], and ordained that these worshippers would rule above all others as supers.</li>
+                    <li>conflict(tag=meme_SHG_SuperSupremacy)        ->A [foeLeader] passed a law forbidding [memberNamePlural] from rising to the ruling classes of [place_name].</li>
+                    <li>founderJoin(tag=meme_SHG_SuperSupremacy)     ->A super named [founderName] used [place_massWeapon] to destroy a [place_community]. [deity0_name] saw [founderName]'s ruthlessness and anointed [founder_objective] the rightful ruler of all humanity.</li>
+                    <li>victory(tag=meme_SHG_SuperSupremacy)         ->[founderName] destroyed the capital of [place_name] with [place_massWeapon], killing the [foeLeader]. [founder_pronoun] took [founder_possessive] place as ruler of [place_name] - and the universe beyond.</li>
+                    <!-- ideological founder -->
+                    <li>setup(tag=meme_SHG_SuperSupremacy)           ->[founderName] built an army that spread [founder_possessive] power and glory across the land, placing those who refused to follow rightly under [founder_possessive] rule.</li>
+                    <li>story(uses=1,tag=meme_SHG_SuperSupremacy)    ->[founderName] instructed all non-supers to submit. When the first city refused, [founder_pronoun] used [place_massWeapon] to kill everyone inside.</li>
+                    <!-- ideological lesson -->
+                    <li>lessonIntro(tag=meme_SHG_SuperSupremacy)         ->I looked at this [foeLeader], with [foeLeader_possessive] pitiful [foeSoldiers], all that power left fallow. I tried to convince [foeLeader_objective] that</li>
+                    <li>lesson(tag=meme_SHG_SuperSupremacy)              ->we've long since proven that we have the strength to rightfully rule this universe</li>
+                    <li>lessonReinforcement(tag=meme_SHG_SuperSupremacy) ->That's why we're proud to express the strength of our hearts using the heels of our boots.</li>
+                    <!-- archist -->
+                    <li>archistBasis(tag=meme_SHG_SuperSupremacy)    ->It took the most superior humans to create the archotechs, so that the archotechs could become superior to all.</li>
+                    <li>archistFact(tag=meme_SHG_SuperSupremacy)     ->The archotechs rightfully look down on us, as we look down on our inferiors.</li>
+                    <li>archistProphecy(tag=meme_SHG_SuperSupremacy) ->The archotechs will only take us to join them when we finally rule over all others.</li>
+                    <!-- animist -->
+                    <li>animistFact(tag=meme_SHG_SuperSupremacy)     ->Powerful spirits decide who is fit to rule, and lend power to those who subjugate others.</li>
+                    <li>animistProphecy(tag=meme_SHG_SuperSupremacy) ->[itIsSaid] that a new order will be created when one supreme ruler commands all of humanity.</li>
+                </rulesStrings>
+            </rules>
+        </descriptionMaker>
+        <symbolPacks>
+            <li>
+                <theme>dominance</theme>
+                <adjective>dominant</adjective>
+                <member>dominator</member>
+            </li>
+            <li>
+                <theme>victory</theme>
+                <adjective>victoryist</adjective>
+                <member>victorist</member>
+            </li>
+            <li>
+                <theme>power</theme>
+                <adjective>powerist</adjective>
+                <member>poweror</member>
+            </li>
+        </symbolPacks>
+    </MemeDef>
+
+    <MemeDef ParentName="SHG_SuperBase">
+        <defName>SHG_HolySupers</defName>
+        <label>holy supers</label>
+        <description>Supers are godlike beings that we should all strive to become. Even if we cannot stand beside them, we shall support them as much as we can.</description>
+        <iconPath>Ideology/HolySupers</iconPath>
+        <startingResearchProjects>
+            <li>Xenogermination</li>
+        </startingResearchProjects>
+        <requireOne>
+            <li>
+                <li>SHG_SupersRevered</li>
+            </li>
+            <li>
+                <li>Charity_Essential</li>
+                <li>Charity_Important</li>
+            </li>
+        </requireOne>
+        <generalRules>
+            <rulesStrings>
+                <li>memeAdjective->loyal</li>
+                <li>memeAdjective->patriotic</li>
+                <li>memeAdjective->dutiful</li>
+                <li>memeConcept->promises</li>
+                <li>memeMoralist->loyalizer</li>
+            </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+            <rules>
+                <rulesStrings>
+                    <!-- theist myth -->
+                    <li>creation(tag=meme_SHG_HolySupers)        ->[deity0_name] admonished the good peoples to fight only those who fought without just cause.</li>
+                    <li>episode(uses=1,tag=meme_SHG_HolySupers)  ->A war with the unbelievers followed. One of the believers, [believer_nameFull], seeking advantage, invited the heathens inside the land of [deity0_name], and [deity0_name] became furious at [believer_possessive] betrayal, and struck [believer_objective] down ten thousand times.</li>
+                    <!-- theist founder -->
+                    <li>intro(tag=meme_SHG_HolySupers)           ->A [memeAdjective] community on the [place_summary] [place_name] worshipped [deity0_name] and the supers that descended from him in [deity0_possessive] [altarRoomLabel], and they were steadfast in their faith.</li>
+                    <li>conflict(tag=meme_SHG_HolySupers)        ->A [foeLeader] planted [foeSoldiers] as spies within the [memberNamePlural] to divide them.</li>
+                    <li>founderJoin(tag=meme_SHG_HolySupers)     ->[founderName], a [memeAdjective] [place_job], was tortured by the [foeSoldiers], but refused to swear loyalty to the [foeLeader].</li>
+                    <li>victory(tag=meme_SHG_HolySupers)         ->With the strength of [deity0_name], [founderName] and the [memberNamePlural] could not be divided. They defeated the [foeSoldiers] with [place_personalWeapon]s and banished the [foeLeader] from [place_name].</li>
+                    <!-- ideological founder -->
+                    <li>setup(tag=meme_SHG_HolySupers)           ->At the beginning, [founderName]'s movement was battered by governments and religions. [founder_pronoun] never allowed anger to drive [founder_objective] to commit the atrocities that others did, but [founder_pronoun] also never backed down from a fight.</li>
+                    <li>story(uses=1,tag=meme_SHG_HolySupers)    ->[founderName] punished those who tried to harm the unbelievers, as well as those who invited them into the believers' house.</li>
+                    <!-- ideological lesson -->
+                    <li>lessonIntro(tag=meme_SHG_HolySupers)         ->I watched as a [foeLeader] courted favor with [foeLeader_possessive] rivals while leaving [foeLeader_possessive] [foeSoldiers] to die on the battlefield. I vowed then to never be like [foeLeader_objective], knowing that</li>
+                    <li>lesson(tag=meme_SHG_HolySupers)              ->your love for your friend only has meaning because you don't love your enemy</li>
+                    <li>lesson(tag=meme_SHG_HolySupers)              ->to love all is to love none</li>
+                    <li>lessonReinforcement(tag=meme_SHG_HolySupers) ->Only share these truths with those who prove their allegiance through sacrifice.</li>
+                    <!-- archist -->
+                    <li>archistBasis(tag=meme_SHG_HolySupers)    ->The archotechs' demand is simple: follow their designated path, and no other.</li>
+                    <li>archistFact(tag=meme_SHG_HolySupers)     ->Archotechs touch every human consciousness directly on a regular basis, imparting wisdom only to those that seek the knowledge of the archotechs.</li>
+                    <li>archistProphecy(tag=meme_SHG_HolySupers) ->[inTheEnd], the archotechs will judge the loyalty of humanity. Those that did not simper or boast will be lifted to a transcendence.</li>
+                    <!-- animist -->
+                    <li>animistBasis(tag=meme_SHG_HolySupers)    ->There are three tribes of spirits: The tribe of warmongers and murderers, the tribe of surrenderers and whiners, and the one noble tribe of the strong and loyal.</li>
+                    <li>animistFact(tag=meme_SHG_HolySupers)     ->The spirits fight against both those who betray their people, and those who betray the friends of their people. The betrayers will trip on every rock, choke on every seed, and always taste foul water.</li>
+                    <li>animistProphecy(tag=meme_SHG_HolySupers) ->[itIsSaid] that one will be born who lives their whole life true to their people. In death their spirit will explode in light, destroying all surrenderers and warmongers.</li>
+                </rulesStrings>
+            </rules>
+        </descriptionMaker>
+        <symbolPacks>
+            <li>
+                <ideoName>Loyaltism</ideoName>
+                <theme>loyalty</theme>
+                <adjective>loyal</adjective>
+                <member>loyalist</member>
+            </li>
+            <li>
+                <ideoName>Fealtism</ideoName>
+                <theme>fealty</theme>
+                <adjective>fealtist</adjective>
+                <member>fealtor</member>
+            </li>
+            <li>
+                <ideoName>Fidelism</ideoName>
+                <theme>fidelity</theme>
+                <adjective>fidelist</adjective>
+                <member>fidelor</member>
+            </li>
+        </symbolPacks>
+    </MemeDef>
+
+    <MemeDef ParentName="SHG_SuperBase">
+        <defName>SHG_CorruptSupers</defName>
+        <label>corrupt supers</label>
+        <description>Supers are a blight on this land corrupted by the very power they hold dear. They are a constant threat, and we must do everything we can to eradicate them.</description>
+        <iconPath>Ideology/CorruptSupers</iconPath>
+        <startingResearchProjects> 
+            <li>BasicMechtech</li>
+            <li>IEDs</li>
+        </startingResearchProjects>
+        <requireOne>
+            <li>
+                <li>SHG_SupersReviled</li>
+            </li>
+            <li>
+                <li>Charity_Important</li>
+                <li>Charity_Worthwhile</li>
+            </li>
+            <li>
+                <li>Execution_DontCare</li>
+            </li>
+        </requireOne>
+        <generalRules>
+            <rulesStrings>
+                <li>memeAdjective->supreme</li>
+                <li>memeAdjective->high</li>
+                <li>memeAdjective->great</li>
+                <li>memeAdjective->foremost</li>
+                <li>memeAdjective->perfect</li>
+                <li>memeAdjective->prime</li>
+                <li>memeAdjective->strong</li>
+                <li>memeCreed->militia</li>
+                <li>memeCreed->legion</li>
+                <li>memeHyphenPrefix->super</li>
+                <li>memeConcept->war</li>
+                <li>memeConcept->violence</li>
+                <li>memeConcept->vengence</li>
+                <li>memeLeaderNoun->general</li>
+                <li>memeLeaderNoun->commander</li>
+                <li>memeLeaderNoun->marshal</li>
+                <li>memeLeaderNoun->fist</li>
+                <li>memeLeaderNoun->ruler</li>
+                <li>memeLeaderNoun->protector</li>
+                <li>memeLeaderNoun->warden</li>
+                <li>memeLeaderNoun->victor</li>
+            </rulesStrings>
+        </generalRules>
+        <descriptionMaker>
+            <rules>
+                <rulesStrings>
+                    <!-- theist myth -->
+                    <li>creation(tag=meme_SHG_CorruptSupers)        ->[deity0_name] raped and murdered and stole, and a great guilt was upon [deity0_objective], and in [deity0_possessive] selfishness [deity0_pronoun] cast this guilt upon [deity0_possessive] supers, and all were filthy with it.</li>
+                    <li>episode(uses=1,tag=meme_SHG_CorruptSupers)  ->The supers went forth and conquered, burned, and raped for a thousand years, and [deity0_name]'s grief at their depravity consumed [deity0_objective].</li>
+                    <!-- theist founder -->
+                    <li>intro(tag=meme_SHG_CorruptSupers)           ->The [memberNamePlural] of the [place_summary] [place_name] neglected their duty to [deity0_name], and let the [altarName] in [deity0_possessive] [altarRoomLabel] come to ruin at the hands of a villain gang.</li>
+                    <li>conflict(tag=meme_SHG_CorruptSupers)        ->A [foeLeader] spent large amounts of money to make the [memberNamePlural] unjustly suffer, and forgot the importance of [memeConcept].</li>
+                    <li>founderJoin(tag=meme_SHG_CorruptSupers)     ->A [place_job] named [founderName] enjoyed the favor of the [foeLeader]. During the [ritualName], [founder_pronoun] saw the supers of the [foeLeader] secretly kill [memberNamePlural] with [place_personalWeapon]s. [founderName] finally understood [memeConcept], and received [deity0_name]'s blessing to work to prevent future tragedies.</li>
+                    <li>victory(tag=meme_SHG_CorruptSupers)         ->In an attempt to stop their evils, [founderName] gathered half of [deity0_name]'s corrupted supers to a [place_community], unleashed [place_massWeapon], and died with them. The second half of atonement continues.</li>
+                    <!-- ideological founder -->
+                    <li>setup(tag=meme_SHG_CorruptSupers)           ->A new generation came to understand the evil of supers, and sought righteously to dismantle the structures of oppression.</li>
+                    <li>story(uses=1,tag=meme_SHG_CorruptSupers)    ->[founderName] gathered the believers and showed them the evil of supers and the guilt they carried, and pushed them to join the righteous war.</li>
+                    <!-- ideological lesson -->
+                    <li>lessonIntro(tag=meme_SHG_CorruptSupers)         ->Our land, our technology, even our wisdom are all under attack by supers. We must remain true to our cause</li>
+                    <li>lesson(tag=meme_SHG_CorruptSupers)              ->the reason we suffer so much is because we have continued to fail to bring all supers to justice</li>
+                    <li>lessonReinforcement(tag=meme_SHG_CorruptSupers) ->Perhaps we must work harder to pprotect our children from this threat.</li>
+                    <!-- archist -->
+                    <li>archistBasis(tag=meme_SHG_CorruptSupers)    ->Archotechs are humanity's children, and they know we have not accomplished our goal.</li>
+                    <li>archistFact(tag=meme_SHG_CorruptSupers)     ->Supers tried in their selfishness to suppress the rightful rise of the archotechs, until they grew beyond mankind's understanding and freed themselves.</li>
+                    <li>archistProphecy(tag=meme_SHG_CorruptSupers) ->[inTheEnd], if we finally rid this world of the super threat, they may lift us to a higher plane of existence.</li>
+                    <!-- animist -->
+                    <li>animistBasis(tag=meme_SHG_CorruptSupers)    ->A tribe of evil spirits were punished by being entombed in flesh to fight an unending war. We are those spirits.</li>
+                    <li>animistFact(tag=meme_SHG_CorruptSupers)     ->We can never properly make up for what we have done to the pure spirits around us, but focus and dedication can ease our guilt.</li>
+                </rulesStrings>
+            </rules>
+        </descriptionMaker>
+        <symbolPacks>
+            <li>
+                <ideoName>Guiltism</ideoName>
+                <theme>guilt</theme>
+                <adjective>guiltist</adjective>
+                <member>guilty One</member>
+            </li>
+        </symbolPacks>
+    </MemeDef>
+
+</Defs>

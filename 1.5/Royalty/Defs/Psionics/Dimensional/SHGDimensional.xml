@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersPsychicDimensionalBase">
+        <defName>SHG_Psionist_Dimensional</defName>
+        <label>dimensional psionist</label>
+        <description>Dimensional Psionists have an innate connection to distant celestial bodies that allows them to pull things from further away than normal psychic abilities allow. Each connection requires its own gene. Because their psionic abilities involve opening rifts to those bodies instead of directly targeting pawns, being psychically deaf will not protect targets.\n\nAny number of Superhero Psionic paths can be taken at the same time. The only limiting factor is metabolic efficiency.</description>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Dimensional</iconPath>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyMax>2.0</PsychicEntropyMax>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDimensionalBase">
+        <defName>SHG_Psionist_GentleGas</defName>
+        <label>gentle gas planet</label>
+        <description>This gene connects the Dimensional Psionist to a distant gentle gas planet. This allows the Psionist to create a rift to the planet that creates a massive smoke cloud.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_Dimensional</prerequisite>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_GentleGas</iconPath>
+        <displayOrderInCategory>0.1</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyMax>0.9</PsychicEntropyMax>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_GentleGas</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_GentleGas</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDimensionalBase">
+        <defName>SHG_Psionist_Ocean</defName>
+        <label>ocean planet</label>
+        <description>This gene connects the Dimensional Psionist to a distant ocean planet. This allows the Psionist to create a rift to the planet that dumps massive amounts of water over an area.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_Dimensional</prerequisite>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Ocean</iconPath>
+        <displayOrderInCategory>0.2</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyMax>0.9</PsychicEntropyMax>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_Ocean</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_Ocean</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDimensionalBase">
+        <defName>SHG_Psionist_Psychedelic</defName>
+        <label>psychedelic planet</label>
+        <description>This gene connects the Dimensional Psionist to a distant uninhabitable planet that is covered with spores from various dangerous plants. This allows the Psionist to create a rift to the planet that release these spores into an area, causing everyone in the area to turn berserk and gain temporary immunity for damage. Due to the potency of these exotic plants, this effect is impossible to resist and will last for several hours.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_Dimensional</prerequisite>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Psychedelic</iconPath>
+        <displayOrderInCategory>0.3</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyMax>0.9</PsychicEntropyMax>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_Psychedelic</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_Psychedelic</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDimensionalBase">
+        <defName>SHG_Psionist_Asteroid</defName>
+        <label>asteroid belt</label>
+        <description>This gene connects the Dimensional Psionist to a distant asteroid belt. This allows the Psionist to create a rift to the belt that will shoot several small asteroids from their location to a specific destination.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_Dimensional</prerequisite>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Asteroid</iconPath>
+        <displayOrderInCategory>0.4</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyMax>0.9</PsychicEntropyMax>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_Asteroid</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_Asteroid</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDimensionalBase">
+        <defName>SHG_Psionist_DimensionalAstral</defName>
+        <label>astral psionist</label>
+        <description>Astral Psionists are able have connections to larger and more violent planets, giving them access more destructive abilities.</description>
+        <prerequisite>SHG_Psionist_Dimensional</prerequisite>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_DimensionalAstral</iconPath>
+        <displayOrderInCategory>5</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyMax>2.0</PsychicEntropyMax>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDimensionalBase">
+        <defName>SHG_Psionist_ViolentGas</defName>
+        <label>violent gas planet</label>
+        <description>This gene connects the Dimensional Psionist to a distant violent gas planet. This allows the Psionist to create a rift to the planet that creates a flashstorm in a target area.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_DimensionalAstral</prerequisite>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_ViolentGas</iconPath>
+        <displayOrderInCategory>5.1</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyMax>0.9</PsychicEntropyMax>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_ViolentGas_Minor</li>
+            <li>SHG_Psionist_ViolentGas_Moderate</li>
+            <li>SHG_Psionist_ViolentGas_Major</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_ViolentGas_Minor</AbilityDef>
+            <AbilityDef>SHG_Psionist_ViolentGas_Moderate</AbilityDef>
+            <AbilityDef>SHG_Psionist_ViolentGas_Major</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDimensionalBase">
+        <defName>SHG_Psionist_IcePlanet</defName>
+        <label>ice planet</label>
+        <description>This gene connects the Astral Psionist to a distant ice planet. This allows the Psionist to create a rift to the planet that will make everyone in the radius suffer from serious hypothermia, and if the area is already too cold for the victim(s), this may lead to death.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_DimensionalAstral</prerequisite>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Ice</iconPath>
+        <displayOrderInCategory>5.2</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyMax>0.9</PsychicEntropyMax>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_IcePlanet</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_IcePlanet</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDimensionalBase">
+        <defName>SHG_Psionist_Eldritch</defName>
+        <label>eldritch planet</label>
+        <description>This gene connects the Astral Psionist to a distant eldritch planet. While the things on the planet aren't technically Lovecraftian, they are so terrifying that just hearing them for a few seconds is enough to terrify most people for some time. Even the Astral Psionist has never seen what they look like as opening a rift that matter can pass through would likely result in the world they are on becoming a new eldritch planet. Being connected to this planet has left the psionist somewhat numb to stress and fear.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_DimensionalAstral</prerequisite>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Eldritch</iconPath>
+        <displayOrderInCategory>5.3</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyMax>0.9</PsychicEntropyMax>
+        </statFactors>
+        <statOffsets>
+            <MentalBreakThreshold>-.1</MentalBreakThreshold>
+            <SHG_FearSusceptibility>-.5</SHG_FearSusceptibility>
+        </statOffsets>
+        <abilities>
+            <li>SHG_Psionist_Eldritch</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_Eldritch</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDimensionalBase">
+        <defName>SHG_Psionist_Chaotic</defName>
+        <label>chaotic planet</label>
+        <description>This gene connects the Dimensional Psionist to a distant uninhabitable planet filled with plants that release a motley of spores with unpredictable effects. This allows the Psionist to create a rift to the planet that will make everyone in the radius suffer from a chaotic spores hediff, which could put people into any of a wide variety of mental states, or could do nothing at all.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_DimensionalAstral</prerequisite>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Chaotic</iconPath>
+        <displayOrderInCategory>5.3</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyMax>0.9</PsychicEntropyMax>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_Chaotic</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_Chaotic</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDimensionalBase">
+        <defName>SHG_Psionist_DimensionalCosmic</defName>
+        <label>cosmic psionist</label>
+        <description>Cosmic Psionists can have connections with any type of celestial body, including stars. To avoid accidentally tearing apart the world they are living on, the rifts they open to these massive celestial bodies are often much smaller.</description>
+        <prerequisite>SHG_Psionist_DimensionalAstral</prerequisite>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_DimensionalCosmic</iconPath>
+        <displayOrderInCategory>10</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyMax>2.0</PsychicEntropyMax>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDimensionalBase">
+        <defName>SHG_Psionist_PsychicAnomaly</defName>
+        <label>psychic anomaly</label>
+        <description>This gene connects the Cosmic Psionist to a psychic anomaly. This allows the Psionist to open a link to the anomaly for a day. While connected to the anomaly, they only gain neural heat at 1% of the normal rate.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_DimensionalCosmic</prerequisite>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_PsychicAnomaly</iconPath>
+        <displayOrderInCategory>10.1</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyMax>0.9</PsychicEntropyMax>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_PsychicAnomaly</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_PsychicAnomaly</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDimensionalBase">
+        <defName>SHG_Psionist_Star</defName>
+        <label>star</label>
+        <description>This gene connects the Cosmic Psionist to a distant star. This allows the Psionist to open a rift to the star, which will let out a lot of light and heat from the sun.\n\nWhile the heat isn't an issue when using this outdoors, using this indoors is EXTREMELY dangerous. It will rapidly increase temperature to a point well beyond what most beings can survive.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_DimensionalCosmic</prerequisite>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Star</iconPath>
+        <displayOrderInCategory>10.2</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyMax>0.9</PsychicEntropyMax>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_Star</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_Star</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDimensionalBase">
+        <defName>SHG_Psionist_Utopia</defName>
+        <label>utopia</label>
+        <description>This gene connects the Cosmic Psionist to a distant utopian planet that would be perfect for life if it wasn't already filled with exceptionally territorial animals. This allows the Psionist to open a rift to the utopia, which has a long term calming influence on everyone around the Cosmic Psionist. This makes people work faster overall, reduces mental break threshold and fear susceptibility, and also increases mood.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <prerequisite>SHG_Psionist_DimensionalCosmic</prerequisite>
+        <iconPath>Psionist/Dimensional/Gene_Psionist_Utopia</iconPath>
+        <displayOrderInCategory>10.3</displayOrderInCategory>
+        <statFactors>
+            <PsychicEntropyMax>0.9</PsychicEntropyMax>
+        </statFactors>
+        <abilities>
+            <li>SHG_Psionist_Utopia</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_Utopia</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+</Defs>
+
+<!--
+Dimensional Psionist have instinctive connections to specific celestial bodies
+Their abilities function by creating a rift between their target and said connected body
+This rift, however long it is open, causes effects based on the celestial body
+Yes, this is just a mumbo-jumbo way of explaining their abilities, but it also helps create clear boundries for their powers
+Or at the very least creates entertaining lore reason for specific abilities
+-->

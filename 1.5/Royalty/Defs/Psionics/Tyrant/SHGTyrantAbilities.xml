@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_March</defName>
+        <label>MARCH</label>
+        <description>With a shout infused with large amounts of psychic energy, the tyrant orders all colonists in the area to move faster. This will affect all colonists in a short radius around the tyrant, and scales with psychic sensitivity.</description>
+        <iconPath>Psionist/Tyrant/Gene_Psionist_Tyrant</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EntropyGain>50</Ability_EntropyGain>
+            <Ability_Duration>42</Ability_Duration>
+            <Ability_EffectRadius>14.9</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>15</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+                <onlyTargetColonists>true</onlyTargetColonists>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <durationMultiplier>PsychicSensitivity</durationMultiplier>
+                <psychic>True</psychic>
+                <hediffDef>SHG_Psionist_March</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+            <li Class="CompProperties_AbilityRequiresCapacity">
+                <capacity>Talking</capacity>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Dread</defName>
+        <label>dread</label>
+        <description>Psychically trigger the fear portions of a target's brain to make them feel terrified. This requires the target to not be psychically deaf, and the duration will be impacted by fear susceptibility.</description>
+        <iconPath>Psionist/Tyrant/Gene_Psionist_Dread</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <descriptionHyperlinks>
+            <HediffDef>SHG_Fear</HediffDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <Ability_EntropyGain>50</Ability_EntropyGain>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>20</range>
+            <targetParams>
+                <canTargetPawns>True</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Fear</hediffDef>
+                <durationMultiplier>SHG_FearSusceptibility</durationMultiplier>
+                <psychic>True</psychic>
+                <applicableToMechs>False</applicableToMechs>
+                <severity>0.6</severity>
+                <onlyBrain>True</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_GraspHeart</defName>
+        <label>grasp heart</label>
+        <description>Cause a pawn to start having heart issues for an hour. This causes reduced blood pumping and has a small chance to cause a heart attack. The duration of this effect is influenced by psychic sensitivity.</description>
+        <iconPath>Psionist/Tyrant/Gene_Psionist_GraspHeart</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <statBases>
+            <Ability_EntropyGain>50</Ability_EntropyGain>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <descriptionHyperlinks>
+            <HediffDef>HeartAttack</HediffDef>
+        </descriptionHyperlinks>
+        <verbProperties>
+            <range>25</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <durationMultiplier>PsychicSensitivity</durationMultiplier>
+                <psychic>True</psychic>
+                <hediffDef>SHG_Psionist_GraspHeart</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_DestroyResistance</defName>
+        <label>destroy resistance</label>
+        <description>Attempt to psychically break a prisoner's resistance. Psychically deaf pawns are immune to this ability.</description>
+        <iconPath>Psionist/Tyrant/Gene_Psionist_DestroyResistance</iconPath>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EntropyGain>100</Ability_EntropyGain>
+        </statBases>
+        <verbProperties>
+            <range>10</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <onlyTargetPrisonersOfColony>True</onlyTargetPrisonersOfColony>
+                <neverTargetIncapacitated>True</neverTargetIncapacitated>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityOffsetPrisonerResistance">
+                <offset>-100</offset>
+                <psychic>True</psychic>
+            </li>
+            <li Class="CompProperties_AbilitySocialInteraction">
+                <interactionDef>SHG_Psionist_Tyrant_BreakWills</interactionDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Legion</defName>
+        <label>legion</label>
+        <description>Release an aura of psychic energy that makes nearby pawns become much harder to break mentally, slightly more resistant to fear, and immune to pain.</description>
+        <iconPath>Psionist/Tyrant/Gene_Psionist_Legion</iconPath>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EntropyGain>100</Ability_EntropyGain>
+            <Ability_Duration>84</Ability_Duration>
+            <Ability_EffectRadius>20</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>20</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <neverTargetIncapacitated>True</neverTargetIncapacitated>
+                <onlyTargetColonists>True</onlyTargetColonists>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <durationMultiplier>PsychicSensitivity</durationMultiplier>
+                <psychic>True</psychic>
+                <hediffDef>SHG_Psionist_Legion</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Enough</defName>
+        <label>ENOUGH</label>
+        <description>With a shout infused with large amounts of psychic energy, the Corruptor stops everyone in an area from moving for some time. The exact amount of time that this stuns targets for depends on psychic sensitivity.\n\nUsing this too close to the Corruptor will cause the ability to backfire, impacting everything around the target, including the Corruptor, without actually hitting the intended target.</description>
+        <iconPath>Psionist/Tyrant/Gene_Psionist_TyrantCorruptor</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EntropyGain>100</Ability_EntropyGain>
+            <Ability_Duration>10</Ability_Duration>
+            <Ability_EffectRadius>5</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>True</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityEffectWithDuration">
+                <compClass>CompAbilityEffect_Stun</compClass>
+                <durationMultiplier>PsychicSensitivity</durationMultiplier>
+                <psychic>True</psychic>
+                <goodwillImpact>-15</goodwillImpact>
+            </li>
+            <li Class="CompProperties_AbilityRequiresCapacity">
+                <capacity>Talking</capacity>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_InstigateConflict</defName>
+        <label>instigate conflict</label>
+        <description>Induce an angry psychosis into a group of people, causing them to begin fighting everything around them for at least an hour.</description>
+        <iconPath>Psionist/Tyrant/Gene_Psionist_InstigateConflict</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <statBases>
+            <Ability_EntropyGain>100</Ability_EntropyGain>
+            <Ability_Duration>42</Ability_Duration>
+            <Ability_EffectRadius>10</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetAnimals>True</canTargetAnimals>
+                <neverTargetIncapacitated>True</neverTargetIncapacitated>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveMentalState">
+                <compClass>CompAbilityEffect_GiveMentalState</compClass>
+                <stateDef>Berserk</stateDef>
+                <stateDefForMechs>BerserkMechanoid</stateDefForMechs>
+                <psychic>True</psychic>
+                <durationMultiplier>PsychicSensitivity</durationMultiplier>
+                <goodwillImpact>-30</goodwillImpact>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>PsycastPsychicEffect</fleckDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_RendMinds</defName>
+        <label>rend minds</label>
+        <description>Attempt to psychically break the resistance of multiple prisoners in an area. Psychically deaf pawns are immune to this ability.</description>
+        <iconPath>Psionist/Tyrant/Gene_Psionist_RendMinds</iconPath>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EntropyGain>200</Ability_EntropyGain>
+            <Ability_EffectRadius>10</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>20</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <onlyTargetPrisonersOfColony>True</onlyTargetPrisonersOfColony>
+                <neverTargetIncapacitated>True</neverTargetIncapacitated>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityOffsetPrisonerResistance">
+                <offset>-100</offset>
+                <psychic>True</psychic>
+            </li>
+            <li Class="CompProperties_AbilitySocialInteraction">
+                <interactionDef>SHG_Psionist_Tyrant_BreakWills</interactionDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+     <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_InternalDebate</defName>
+        <label>internal debate</label>
+        <description>Create a little voice in another pawn's head that forcefully starts an argument with the pawn.</description>
+        <iconPath>Psionist/Tyrant/Gene_Psionist_InternalDebate</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <statBases>
+            <Ability_EntropyGain>80</Ability_EntropyGain>
+            <Ability_Duration>21</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetAnimals>False</canTargetAnimals>
+                <neverTargetIncapacitated>True</neverTargetIncapacitated>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityEffectWithDuration">
+                <compClass>CompAbilityEffect_Stun</compClass>
+                <psychic>True</psychic>
+                <goodwillImpact>-15</goodwillImpact>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Despair</defName>
+        <label>despair</label>
+        <description>Psychically trigger the fear portions of several people's brains to make them feel terrified. This requires the target to not be psychically deaf, and the duration will be impacted by fear susceptibility.</description>
+        <iconPath>Psionist/Tyrant/Gene_Psionist_Despair</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <descriptionHyperlinks>
+            <HediffDef>SHG_Fear</HediffDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <Ability_EntropyGain>100</Ability_EntropyGain>
+            <Ability_Duration>42</Ability_Duration>
+            <Ability_EffectRadius>10</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>40</range>
+            <targetParams>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetSelf>False</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Fear</hediffDef>
+                <durationMultiplier>SHG_FearSusceptibility</durationMultiplier>
+                <psychic>True</psychic>
+                <severity>0.6</severity>
+                <applicableToMechs>False</applicableToMechs>
+                <onlyBrain>True</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_Forfeit</defName>
+        <label>FORFEIT</label>
+        <description>With a shout infused with large amounts of psychic energy, the tyrant overwhelms a target's brain to make their body give up, making it almost impossible to remain conscious.\n\nWith a high enough consciousness it is possible for this to the target to remain awake. This requires at least a Consciousness of 120%, though due to potential outside effects, like blood loss and pain, resting consciousness usually needs to be much higher to resist this. The more psychically sensitive the target is, the longer this will last.</description>
+        <iconPath>Psionist/Tyrant/Gene_Psionist_TyrantConqueror</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <statBases>
+            <Ability_EntropyGain>150</Ability_EntropyGain>
+            <Ability_Duration>100</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>25</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <durationMultiplier>PsychicSensitivity</durationMultiplier>
+                <psychic>True</psychic>
+                <hediffDef>SHG_Psionist_Forfeit</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+            <li Class="CompProperties_AbilityRequiresCapacity">
+                <capacity>Talking</capacity>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_EmpiresWillFall</defName>
+        <label>empires will fall</label>
+        <description>Release massive amounts of psycic energy to cause almost everything in a massive area around the Conqueror to go into a murderous rampage. The effects of this ability will be felt by every nearby faction, and nobody likes a potentially dangeous tyrant.\n\nThis will leave the Conquerer extra vulnerable to effects that remove psychic sensitivity for several days.</description>
+        <iconPath>Psionist/Tyrant/Gene_Psionist_EmpiresWillFall</iconPath>
+        <jobDef>CastAbilityOnThingUninterruptible</jobDef>
+        <targetRequired>False</targetRequired>
+        <showPsycastEffects>False</showPsycastEffects>
+        <showCastingProgressBar>True</showCastingProgressBar>
+        <warmupMote>Mote_WarmupNeuroquake</warmupMote>
+        <warmupStartSound>Psycast_Neuroquake_CastStart</warmupStartSound>
+        <warmupSound>Psycast_Neuroquake_CastLoop</warmupSound>
+        <warmupPreEndSound>Psycast_Neuroquake_CastEnd</warmupPreEndSound>
+        <warmupPreEndSoundSeconds>5</warmupPreEndSoundSeconds>
+        <cooldownTicksRange>900000</cooldownTicksRange>
+        <statBases>
+            <Ability_EntropyGain>300</Ability_EntropyGain>
+            <Ability_EffectRadius>15</Ability_EffectRadius>
+            <Ability_Duration>7000</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <warmupTime>5</warmupTime>
+            <range>15</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityNeuroquake">
+                <goodwillImpactForBerserk>-75</goodwillImpactForBerserk>
+                <goodwillImpactForNeuroquake>-200</goodwillImpactForNeuroquake>
+                <worldRangeTiles>30</worldRangeTiles>
+                <screenShakeIntensity>5</screenShakeIntensity>
+                <mentalStateRadius>200</mentalStateRadius>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Psionist_EmpiresWillFall</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>PsychicApplyNeuroquake</fleckDef>
+                <sound>Psycast_Neuroquake_Effect</sound>
+            </li>
+        </comps>
+        <confirmationDialogText>This is an extremely powerful version of Neuroquake, and its effects will be felt by everyone within 30 map tiles. This also has an extremely large radius, and all people in that area who aren't near the conqueror will likely be driven into a murderous rage for some time.\n\nNobody likes learning there is a tyrant in the area, and using this will likely cause a war with everyone in the world.\n\nAre you sure you want to use Empires Will Fall?</confirmationDialogText>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_YouWillSubmit</defName>
+        <label>you will submit</label>
+        <description>Attempt to psychically break the resistance of multiple prisoners in an area, while also clouding their minds with happiness to make the recruiting itself easier. Psychic sensitivity only impacts the mood portion of this ability. Their resistance will be reduced regardless of sensitivity.</description>
+        <iconPath>Psionist/Tyrant/Gene_Psionist_YouWillSubmit</iconPath>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EntropyGain>300</Ability_EntropyGain>
+            <Ability_EffectRadius>20</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <onlyTargetPrisonersOfColony>True</onlyTargetPrisonersOfColony>
+                <neverTargetIncapacitated>True</neverTargetIncapacitated>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityOffsetPrisonerResistance">
+                <offset>-100</offset>
+            </li>
+            <li Class="CompProperties_AbilitySocialInteraction">
+                <interactionDef>SHG_Psionist_Tyrant_BreakWills</interactionDef>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Psionist_YouWillSubmit</hediffDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_GazeIntoTheAbyss</defName>
+        <label>gaze into the abyss</label>
+        <description>Psychically trigger the fear portions of several people's brains to make them question their very existence as they lie paralyzed with fear. This requires the target to not be psychically deaf, and the duration will be impacted by fear susceptibility.</description>
+        <iconPath>Psionist/Tyrant/Gene_Psionist_GazeIntoTheAbyss</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <descriptionHyperlinks>
+            <HediffDef>SHG_Fear</HediffDef>
+        </descriptionHyperlinks>
+        <statBases>
+            <Ability_EntropyGain>100</Ability_EntropyGain>
+            <Ability_Duration>42</Ability_Duration>
+            <Ability_EffectRadius>5</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>200</range>
+            <targetParams>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetSelf>False</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Fear</hediffDef>
+                <durationMultiplier>SHG_FearSusceptibility</durationMultiplier>
+                <psychic>True</psychic>
+                <severity>0.999</severity>
+                <applicableToMechs>False</applicableToMechs>
+                <onlyBrain>True</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

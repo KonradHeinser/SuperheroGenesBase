@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>expensiveBase</setting>
+        <active Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/biostatMet</xpath>
+                    <value><biostatMet>8</biostatMet></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="SuperHeroBase"]/biostatMet</xpath>
+                    <value><biostatMet>-8</biostatMet></value>
+                </li>
+                <li Class="PatchOperationFindMod">
+                    <mods><li>Combat Extended</li></mods>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statOffsets/ArmorRating_Blunt</xpath>
+                                <value>
+                                    <ArmorRating_Blunt>-10</ArmorRating_Blunt>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statOffsets/ArmorRating_Sharp</xpath>
+                                <value>
+                                    <ArmorRating_Sharp>-10</ArmorRating_Sharp>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statOffsets/MeleeDodgeChance</xpath>
+                                <value>
+                                    <MeleeDodgeChance>-0.1</MeleeDodgeChance>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statOffsets/MeleeHitChance</xpath>
+                                <value>
+                                    <MeleeHitChance>-0.2</MeleeHitChance>
+                                    <MeleeParryChance>-0.2</MeleeParryChance>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statOffsets/AimingDelayFactor</xpath>
+                                <value>
+                                    <AimingDelayFactor>0.05</AimingDelayFactor>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statOffsets/ShootingAccuracyPawn</xpath>
+                                <value>
+                                    <ShootingAccuracyPawn>-1</ShootingAccuracyPawn>
+                                    <AimingAccuracy>-0.7</AimingAccuracy>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statFactors/IncomingDamageFactor</xpath>
+                                <value>
+                                    <IncomingDamageFactor>1.11</IncomingDamageFactor>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statFactors/PawnTrapSpringChance</xpath>
+                                <value>
+                                    <PawnTrapSpringChance>10</PawnTrapSpringChance>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statFactors/StaggerDurationFactor</xpath>
+                                <value>
+                                    <StaggerDurationFactor>1.11</StaggerDurationFactor>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statOffsets</xpath>
+                                <value>
+                                    <CarryBulk>-50</CarryBulk>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
+                </li>
+            </operations>
+        </active>
+    </Operation>
+</Patch>

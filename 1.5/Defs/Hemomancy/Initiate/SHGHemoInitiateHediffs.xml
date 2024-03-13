@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef MayRequire="Ludeon.Rimworld.Ideology">
+        <defName>SHG_Hemomancer_Praise</defName>
+		<label>praise</label>
+		<description>This pawn will attempt to spread their religion more often. Higher Hemomancy Proficiency increases spread frequency more.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <SocialIdeoSpreadFrequencyFactor>1.5</SocialIdeoSpreadFrequencyFactor>
+                </statFactors>
+                <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Hemomancer_Hemoclotting</defName>
+		<label>hemoclotting</label>
+		<description>This pawn's bleeding rate is reduced to essentially zero.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <totalBleedFactor>0.0001</totalBleedFactor>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>60000</disappearsAfterTicks>   <!--1 day-->
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Hemomancer_Bloodlust</defName>
+		<label>bloodlust</label>
+		<description>This pawn is immune to pain and is more deadly in melee combat.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <MeleeHitChance>2</MeleeHitChance>
+                    <MeleeDodgeChance>2</MeleeDodgeChance>
+                </statFactors>
+                <painFactor>0</painFactor>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>5000</disappearsAfterTicks>   <!--2 hours-->
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Hemomancer_Priest</defName>
+		<label>hemopriest aura</label>
+		<description>This pawn is releasing a holy aura that makes everyone around them more accepting of bloodfeeders.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                    <onlyTargetColonists>false</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Hemomancer_Priest_Buff</hediff>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Hemomancer_Priest_Buff</defName>
+		<label>hemopriest aura</label>
+		<description>This pawn is more accepting of bloodfeeders due to a nearby hemopriest.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>false</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+	</HediffDef>
+
+    <HediffDef MayRequire="Ludeon.Rimworld.Ideology">
+        <defName>SHG_Hemomancer_Worship</defName>
+		<label>worship</label>
+		<description>This pawn will attempt to spread their religion more often. Higher Hemomancy Proficiency increases spread frequency more.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <SocialIdeoSpreadFrequencyFactor>1.5</SocialIdeoSpreadFrequencyFactor>
+                </statFactors>
+                <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>SHG_Hemomancer_TheGiftOfBlood</defName>
+		<label>the gift of blood</label>
+		<description>This hemopriest is constantly turning hemogen into blood pills. They produce one every day.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_Spawner">
+				<thingToSpawn>SHG_BloodPill</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>60000~60000</spawnIntervalRange>
+				<spawnMaxAdjacent>30</spawnMaxAdjacent>
+				<spawnForbidden>false</spawnForbidden>
+				<showMessageIfOwned>false</showMessageIfOwned>
+			</li>
+		</comps>
+	</HediffDef>
+</Defs>
