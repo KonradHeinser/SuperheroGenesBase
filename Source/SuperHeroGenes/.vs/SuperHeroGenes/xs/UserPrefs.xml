@@ -1,26 +1,28 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="HarmonyPatches.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hediffs/Comps/HediffComp_SeverityByLightLevel.cs">
     <Files>
-      <File FileName="HarmonyPatches.cs" Line="26" Column="28" />
-      <File FileName="SHGUtilities.cs" Line="387" Column="1" />
-      <File FileName="Hediffs/TerrainLinker.cs" Line="29" Column="6" />
-      <File FileName="Hediffs/Comps/HediffComp_TerrainCostOverride.cs" Line="16" Column="73" />
-      <File FileName="Hediffs/CompProperties/HediffCompProperties_TerrainCostOverride.cs" Line="32" Column="10" />
-      <File FileName="Hediffs/SHGCache_Component.cs" Line="32" Column="10" />
-      <File FileName="Hediffs/Comps/HediffComp_CreateOtherHediffs.cs" Line="1" Column="1" />
-      <File FileName="Hediffs/CompProperties/HediffCompProperties_CreateOtherHediffs.cs" Line="6" Column="57" />
-      <File FileName="Hediffs/HediffsAtSeverities.cs" Line="17" Column="1" />
+      <File FileName="SuperAI/JobGiver_AICastHealingAbility.cs" Line="60" Column="30" />
+      <File FileName="Abilities/CompAbilityEffect_AbilityValidator.cs" Line="399" Column="18" />
+      <File FileName="DynamicResourceGenes/JobGiver_GetResourcePack.cs" Line="148" Column="86" />
+      <File FileName="SuperAI/ThinkNode_ConditionalColonistShouldFlee.cs" Line="25" Column="25" />
+      <File FileName="SuperAI/ThinkNode_ConditionalHasTargetNoFriendlyFire.cs" Line="40" Column="43" />
+      <File FileName="SuperAI/ThinkNode_ConditionalTooManyNearbyThreats.cs" Line="17" Column="77" />
+      <File FileName="Hediffs/Comps/HediffComp_SeverityByLightLevel.cs" Line="17" Column="89" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
+              <Node name="Abilities" expanded="True" />
               <Node name="DynamicResourceGenes" expanded="True" />
+              <Node name="Genes" expanded="True" />
               <Node name="Hediffs" expanded="True">
-                <Node name="CompProperties" expanded="True" />
+                <Node name="Comps" expanded="True">
+                  <Node name="HediffComp_SeverityByLightLevel.cs" selected="True" />
+                </Node>
               </Node>
-              <Node name="HarmonyPatches.cs" selected="True" />
+              <Node name="SuperAI" expanded="True" />
             </Node>
           </Node>
         </State>

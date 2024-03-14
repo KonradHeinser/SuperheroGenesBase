@@ -15,7 +15,7 @@ namespace SuperHeroGenesBase
                 for (int i = 0; i < hediffs.Count; i++)
                 {
                     Hediff_SecondHeart hediff_SecondHeart;
-                    if ((hediff_SecondHeart = (hediffs [i] as Hediff_SecondHeart)) != null)
+                    if ((hediff_SecondHeart = (hediffs[i] as Hediff_SecondHeart)) != null)
                     {
                         return hediff_SecondHeart;
                     }
@@ -27,7 +27,7 @@ namespace SuperHeroGenesBase
         public override void PostAdd()
         {
             base.PostAdd();
-            Hediff_SecondHeart hediff_SecondHeart = (Hediff_SecondHeart)HediffMaker.MakeHediff (SHGDefOf.SecondHeart, pawn, null);
+            Hediff_SecondHeart hediff_SecondHeart = (Hediff_SecondHeart)HediffMaker.MakeHediff(SHGDefOf.SecondHeart, pawn, null);
             pawn.health.AddHediff(hediff_SecondHeart, null, null, null);
             lastDeathTicks = Find.TickManager.TicksGame;
         }
@@ -52,12 +52,12 @@ namespace SuperHeroGenesBase
             lastDeathTicks = Find.TickManager.TicksGame;
         }
 
-        public override void Notify_PawnDied()
+        public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
         {
             Hediff_SecondHeart linkedHediff = LinkedHediff;
             if (linkedHediff.Severity < 0.1f)
             {
-                ResurrectionUtility.Resurrect(pawn);
+                ResurrectionUtility.TryResurrect(pawn);
                 Reset();
             }
         }

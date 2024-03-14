@@ -10,7 +10,7 @@ namespace SuperHeroGenesBase
         protected override bool Satisfied(Pawn pawn)
         {
             if (!pawn.Spawned || pawn.Downed) return false; // If you're not even able to flee, then don't try
-            if (pawn.IsInvisible()) return false; // If you're invisible, then you should be safe
+            if (pawn.GetInvisibilityComp() != null) return false; // If you're invisible, then you should be safe
             if (PawnUtility.PlayerForcedJobNowOrSoon(pawn) || pawn.Drafted) return false; // If there's a forced job, return false
             if (pawn.CurJob != null && (pawn.CurJob.def == JobDefOf.Flee || pawn.CurJob.def == JobDefOf.FleeAndCower)) return true;
             if (pawn.playerSettings != null && pawn.playerSettings.UsesConfigurableHostilityResponse && pawn.playerSettings.hostilityResponse == HostilityResponseMode.Flee)
@@ -22,7 +22,7 @@ namespace SuperHeroGenesBase
                 Pawn meleeThreat = pawn.mindState.meleeThreat;
                 if (meleeThreat != null && pawn.mindState.MeleeThreatStillThreat)
                 {
-                    if (!meleeThreat.IsInvisible() && !IsHunting(pawn, meleeThreat) && !IsDueling(pawn, meleeThreat)) return true;
+                    if (meleeThreat.GetInvisibilityComp() != null && !IsHunting(pawn, meleeThreat) && !IsDueling(pawn, meleeThreat)) return true;
                 }
                 // If any enemies are nearby, get out of there
                 if (PawnUtility.EnemiesAreNearby(pawn, 9, true, 20, 1)) return true;

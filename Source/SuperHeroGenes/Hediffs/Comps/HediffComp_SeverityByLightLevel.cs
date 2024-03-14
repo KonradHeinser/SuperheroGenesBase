@@ -10,16 +10,11 @@ namespace SuperHeroGenesBase
         public override void CompPostTick(ref float severityAdjustment)
         {
             if (!parent.pawn.IsHashIntervalTick(200)) return;
-            Pawn pawn = parent.pawn;
 
-            if (pawn.Map != null)
-            {
-                parent.Severity = Props.lightToSeverityCurve.Evaluate(pawn.Map.glowGrid.GameGlowAt(pawn.Position, false));
-            }
+            if (Pawn.Map != null)
+                parent.Severity = Props.lightToSeverityCurve.Evaluate(Pawn.Map.glowGrid.GroundGlowAt(Pawn.Position));
             else if (Props.timeToSeverityCurve != null)
-            {
                 parent.Severity = Props.timeToSeverityCurve.Evaluate(GenLocalDate.DayPercent(Pawn));
-            }
         }
     }
 }

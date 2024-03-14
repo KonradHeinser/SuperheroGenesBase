@@ -139,7 +139,7 @@ namespace SuperHeroGenesBase
             }
             else
             {
-                float light = parent.pawn.Map.glowGrid.GameGlowAt(parent.pawn.Position, false);
+                float light = parent.pawn.Map.glowGrid.GroundGlowAt(parent.pawn.Position);
                 if (light < Props.minCasterLightLevel || light > Props.maxCasterLightLevel)
                 {
                     explanation = "AbilityCasterLightLevel".Translate(Props.minCasterLightLevel.ToStringPercent(), Props.maxCasterLightLevel.ToStringPercent());
@@ -391,7 +391,7 @@ namespace SuperHeroGenesBase
             }
             else
             {
-                float light = map.glowGrid.GameGlowAt(target.Cell, false);
+                float light = map.glowGrid.GroundGlowAt(target.Cell);
                 if (light < Props.minTargetLightLevel || light > Props.maxTargetLightLevel)
                 {
                     explanation = "AbilityTargetLightLevel".Translate(Props.minTargetLightLevel.ToStringPercent(), Props.maxTargetLightLevel.ToStringPercent());

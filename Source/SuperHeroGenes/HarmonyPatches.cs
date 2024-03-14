@@ -33,19 +33,19 @@ namespace SuperHeroGenesBase
         {
             Harmony harmony = new Harmony("Rimworld.Alite.SHG.main");
             harmony.Patch(AccessTools.Method(typeof(CompAbilityEffect_ReimplantXenogerm), nameof(CompAbilityEffect_ReimplantXenogerm.PawnIdeoCanAcceptReimplant)),
-                          postfix: new HarmonyMethod(patchType, nameof(PawnIdeoCanAcceptReimplantPostfix)));
+                 postfix: new HarmonyMethod(patchType, nameof(PawnIdeoCanAcceptReimplantPostfix)));
             harmony.Patch(AccessTools.Method(typeof(Xenogerm), nameof(Xenogerm.PawnIdeoDisallowsImplanting)),
-                          postfix: new HarmonyMethod(patchType, nameof(PawnIdeoDisallowsImplantingPostFix)));
+                 postfix: new HarmonyMethod(patchType, nameof(PawnIdeoDisallowsImplantingPostFix)));
             harmony.Patch(AccessTools.Method(typeof(Pawn_RelationsTracker), nameof(Pawn_RelationsTracker.SecondaryLovinChanceFactor)),
-                          postfix: new HarmonyMethod(patchType, nameof(SecondaryLovinChanceFactorPostFix)));
+                  postfix: new HarmonyMethod(patchType, nameof(SecondaryLovinChanceFactorPostFix)));
             harmony.Patch(AccessTools.Method(typeof(InteractionWorker_RomanceAttempt), nameof(InteractionWorker_RomanceAttempt.RomanceFactors)),
-                          postfix: new HarmonyMethod(patchType, nameof(RomanceFactorsPostFix)));
+                  postfix: new HarmonyMethod(patchType, nameof(RomanceFactorsPostFix)));
             harmony.Patch(AccessTools.PropertyGetter(typeof(Gene_Hemogen), nameof(Gene_Hemogen.InitialResourceMax)),
-                          postfix: new HarmonyMethod(patchType, nameof(HemomancerHemogenMaxPostFix)));
+                  postfix: new HarmonyMethod(patchType, nameof(HemomancerHemogenMaxPostFix)));
             harmony.Patch(AccessTools.Method(typeof(Thing), nameof(Thing.TakeDamage)),
-                prefix: new HarmonyMethod(patchType, nameof(TakeDamagePrefix)));
+                  prefix: new HarmonyMethod(patchType, nameof(TakeDamagePrefix)));
             harmony.Patch(AccessTools.Method(typeof(Pawn_PathFollower), "CostToMoveIntoCell", new[] { typeof(Pawn), typeof(IntVec3) }),
-                postfix: new HarmonyMethod(patchType, nameof(CostToMoveIntoCellPostfix)));
+                  postfix: new HarmonyMethod(patchType, nameof(CostToMoveIntoCellPostfix)));
         }
 
 
@@ -209,7 +209,7 @@ namespace SuperHeroGenesBase
             return true;
         }
 
-        public static void CostToMoveIntoCellPostfix(Pawn pawn, IntVec3 c, ref int __result)
+        public static void CostToMoveIntoCellPostfix(Pawn pawn, IntVec3 c, ref float __result)
         {
             if (pawn.Map != null)
             {
@@ -224,7 +224,7 @@ namespace SuperHeroGenesBase
                         !SHGUtilities.CheckPawnCapabilitiesTrio(pawn, terrainComp.pawnCapLimiters, terrainComp.pawnSkillLimiters, terrainComp.pawnStatLimiters) ||
                         !SHGUtilities.AllNeedLevelsMet(pawn, terrainComp.pawnNeedLevels)) return;
 
-                    int num = ((c.x != pawn.Position.x && c.z != pawn.Position.z) ? pawn.TicksPerMoveDiagonal : pawn.TicksPerMoveCardinal);
+                    float num = (c.x != pawn.Position.x && c.z != pawn.Position.z) ? pawn.TicksPerMoveDiagonal : pawn.TicksPerMoveCardinal;
                     TerrainDef terrainDef = pawn.Map.terrainGrid.TerrainAt(c);
 
                     if (!terrainComp.terrainSets.NullOrEmpty() && terrainDef != null)

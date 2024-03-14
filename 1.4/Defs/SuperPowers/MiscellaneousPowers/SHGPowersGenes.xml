@@ -432,6 +432,7 @@
         <label>flight</label>
         <description>Carriers of this gene are able to fly through the air, which can aid them greatly when travelling both short and long distances.\n\nWhile an infant, supers with this gene are still unable to fly around. However, as they age they quickly learn how to move themselve around by simply willing themselves to move in a direction.</description>
         <iconPath>Powers/Gene_Flight</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <abilities>
             <li>SHG_Flight</li>
         </abilities>
@@ -455,8 +456,8 @@
             <li>Psionist_SoldierFlight</li>
         </exclusionTags>
 		<modExtensions>
-			<li Class="VanillaGenesExpanded.GeneExtension">
-				<hediffToWholeBody>SHG_Powers_Flight</hediffToWholeBody>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Powers_Flight</hediff></li></hediffsToApply>
 			</li>
 		</modExtensions>
     </GeneDef>

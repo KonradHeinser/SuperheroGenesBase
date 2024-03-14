@@ -878,6 +878,7 @@
 			<li>Colonist will always be floating at least a little bit over the ground.</li>
 		</customEffectDescriptions>
         <biostatMet>-3</biostatMet>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <statFactors>
             <HuntingStealth>4.0</HuntingStealth>
         </statFactors>
@@ -894,8 +895,8 @@
             <li>Archetype_PhantomInvisibility</li>
         </exclusionTags>
 		<modExtensions>
-			<li Class="VanillaGenesExpanded.GeneExtension">
-				<hediffToWholeBody>SHG_Powers_Flight</hediffToWholeBody>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Powers_Flight</hediff></li></hediffsToApply>
 			</li>
 		</modExtensions>
     </GeneDef>

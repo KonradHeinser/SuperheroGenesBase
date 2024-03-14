@@ -102,7 +102,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <HediffDef>
         <defName>SHG_Psionist_MassLevitation</defName>
 		<label>mass levitation</label>
 		<description>This Commander is temporarily floating in the air, and allies around them will do the same.</description>
@@ -111,7 +111,9 @@
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
-			<li Class="AnimalBehaviours.HediffCompProperties_Floating" />
+			<li Class="SuperHeroGenesBase.HediffCompProperties_TerrainCostOverride">
+                <universalCostOverride>0</universalCostOverride>
+            </li>
             <li Class="HediffCompProperties_Disappears">
                 <showRemainingTime>True</showRemainingTime>
             </li>
@@ -129,7 +131,7 @@
 		</comps>
 	</HediffDef>
 
-    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <HediffDef>
         <defName>SHG_Psionist_MassLevitation_Buff</defName>
 		<label>mass levitation</label>
 		<description>This pawn is floating in the air due to a nearby Psionic General. They can now move around more freely, but being too far from the General will result in them no longer floating.</description>
@@ -138,7 +140,9 @@
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
-			<li Class="AnimalBehaviours.HediffCompProperties_Floating" />
+			<li Class="SuperHeroGenesBase.HediffCompProperties_TerrainCostOverride">
+                <universalCostOverride>0</universalCostOverride>
+            </li>
             <li Class="HediffCompProperties_Disappears">
                 <showRemainingTime>False</showRemainingTime>
             </li>

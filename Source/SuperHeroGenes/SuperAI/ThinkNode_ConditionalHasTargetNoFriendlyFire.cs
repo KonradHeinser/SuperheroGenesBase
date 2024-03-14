@@ -37,7 +37,7 @@ namespace SuperHeroGenesBase
                 safetyRange = minRadius;
                 if (!noTarget && avoidSelfHit && target.Position.DistanceTo(pawn.Position) <= minRadius) return false; // If the caster is too close, don't need to check anything else
             }
-            List<Pawn> list = pawn.Map.mapPawns.AllPawnsSpawned;
+            List<Pawn> list = (List<Pawn>)pawn.Map.mapPawns.AllPawnsSpawned;
             list.SortBy((Pawn c) => c.Position.DistanceToSquared(target.Position));
             int targets = 0;
             foreach (Pawn p in list)

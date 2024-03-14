@@ -2,7 +2,7 @@
 using Verse.AI;
 using System.Collections.Generic;
 using RimWorld;
-using System;
+using System.Linq;
 
 namespace SuperHeroGenesBase
 {
@@ -37,7 +37,7 @@ namespace SuperHeroGenesBase
             return ability.GetJob(targetPawn, target); // Abilities not intended for only the caster
         }
 
-        protected override LocalTargetInfo GetTarget(Pawn caster, Ability ability) 
+        protected override LocalTargetInfo GetTarget(Pawn caster, Ability ability)
         {
             List<Pawn> allies = caster.Map.mapPawns.SpawnedPawnsInFaction(caster.Faction);
 
@@ -54,9 +54,10 @@ namespace SuperHeroGenesBase
                 }
                 if (allTendable) // If there's no notable bleeding but allowed to heal all wounds, look for any tendable pawn
                 {
-                    foreach(Pawn ally in allies) // Start with injuries as those are most likely to cause immediate issues
+                    foreach (Pawn ally in allies) // Start with injuries as those are most likely to cause immediate issues
                     {
-                        if (ally.health.hediffSet.HasTendableInjury())
+
+                        if (!ally.health.hediffSet.GetHediffsTendable().Where((Hediff h) => h.BleedRate > 0).ToList().NullOrEmpty())
                         {
                             targetPawn = ally;
                             return new LocalTargetInfo(ally.Position);

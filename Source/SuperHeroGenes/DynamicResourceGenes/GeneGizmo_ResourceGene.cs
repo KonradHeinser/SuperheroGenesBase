@@ -18,7 +18,6 @@ namespace SuperHeroGenesBase
         public GeneGizmo_ResourceGene(Gene_Resource gene, List<IGeneResourceDrain> drainGenes, Color barColor, Color barhighlightColor)
             : base(gene, drainGenes, barColor, barhighlightColor)
         {
-            draggableBar = true;
         }
 
         public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
@@ -77,13 +76,13 @@ namespace SuperHeroGenesBase
             return result;
         }
 
-        protected override void DrawLabel(Rect labelRect, ref bool mouseOverAnyHighlightableElement)
+        protected override void DrawHeader(Rect headerRect, ref bool mouseOverElement)
         {
             ResourceGene resourceGene;
             if ((gene.pawn.IsColonistPlayerControlled || gene.pawn.IsPrisonerOfColony) && (resourceGene = gene as ResourceGene) != null)
             {
-                labelRect.xMax -= 24f;
-                Rect rect = new Rect(labelRect.xMax, labelRect.y, 24f, 24f);
+                headerRect.xMax -= 24f;
+                Rect rect = new Rect(headerRect.xMax, headerRect.y, 24f, 24f);
                 if (resourceGene.def.HasModExtension<DRGExtension>() && resourceGene.def.GetModExtension<DRGExtension>().iconThing != null) Widgets.DefIcon(rect, resourceGene.def.GetModExtension<DRGExtension>().iconThing);
                 else Widgets.DefIcon(rect, ThingDefOf.HemogenPack);
                 GUI.DrawTexture(new Rect(rect.center.x, rect.y, rect.width / 2f, rect.height / 2f), resourceGene.resourcePacksAllowed ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex);
@@ -104,10 +103,10 @@ namespace SuperHeroGenesBase
                     Widgets.DrawHighlight(rect);
                     string onOff = (resourceGene.resourcePacksAllowed ? "On" : "Off").Translate().ToString().UncapitalizeFirst();
                     TooltipHandler.TipRegion(rect, () => "AutoTakeResourceDesc".Translate(resourceGene.ResourceLabel.Named("RESOURCE"), gene.pawn.Named("PAWN"), resourceGene.PostProcessValue(resourceGene.targetValue).Named("MIN"), onOff.Named("ONOFF")).Resolve(), 828267373);
-                    mouseOverAnyHighlightableElement = true;
+                    mouseOverElement = true;
                 }
             }
-            base.DrawLabel(labelRect, ref mouseOverAnyHighlightableElement);
+            base.DrawHeader(headerRect, ref mouseOverElement);
         }
 
         protected override string GetTooltip()

@@ -226,7 +226,7 @@
         </projectile>
     </ThingDef>
 
-    <HediffDef>
+    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
         <defName>SHG_Flight</defName>
 		<label>old flight</label>
 		<description>This super is always floating just a little bit off the ground, and their ability to move omnidirectionally makes it easier for them to move around quickly.</description>
@@ -256,7 +256,7 @@
 		</comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
         <defName>SHG_Pools_WindStep</defName>
 		<label>wind step</label>
 		<description>This super is clumsily floating just a little bit off the ground, allowing them to move over all obstacles without issue with some minor mobility issues.</description>

@@ -13,7 +13,7 @@
                             <insertPriority>200</insertPriority>
                             <thinkRoot Class="ThinkNode_Priority">
                                 <subNodes>
-                                    <li Class="ThinkNodeConditional_HashIntervalTick">
+                                    <li Class="ThinkNode_ConditionalHashIntervalTick">
                                         <interval>3</interval>
                                         <subNodes>
                                             <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
@@ -139,7 +139,7 @@
                                 <insertPriority>200</insertPriority>
                                 <thinkRoot Class="ThinkNode_Priority">
                                     <subNodes>
-                                        <li Class="ThinkNodeConditional_HashIntervalTick">
+                                        <li Class="ThinkNode_ConditionalHashIntervalTick">
                                             <interval>3</interval>
                                             <subNodes>
                                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">

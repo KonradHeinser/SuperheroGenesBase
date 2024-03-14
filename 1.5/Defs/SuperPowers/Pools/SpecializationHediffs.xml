@@ -1180,7 +1180,7 @@
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-0.1</severityPerDay>
             </li>
-            <li Class="AnimalBehaviours.HediffCompProperties_Floating" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" />
+            
         </comps>
     </HediffDef>
 

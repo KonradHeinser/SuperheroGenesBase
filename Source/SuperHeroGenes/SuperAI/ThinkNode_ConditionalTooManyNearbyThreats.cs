@@ -14,7 +14,7 @@ namespace SuperHeroGenesBase
             if (!pawn.Spawned) return false;
             Map map = pawn.Map;
             if (!GenHostility.AnyHostileActiveThreatTo(map, pawn.Faction, false, false)) return false;
-            List<Pawn> list = pawn.Map.mapPawns.AllPawnsSpawned;
+            List<Pawn> list = (List<Pawn>)pawn.Map.mapPawns.AllPawnsSpawned;
             list.SortBy((Pawn c) => c.Position.DistanceToSquared(pawn.Position));
             int count = 0;
             foreach (Pawn p in list)
