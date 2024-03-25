@@ -200,7 +200,6 @@
         <label>blink</label>
         <description>Teleport yourself randomly between 20 and 30 tiles away. This can be used to get yourself out of sticky situations quickly.</description>
         <iconPath>Powers/Gene_Blink</iconPath>
-        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <writeCombatLog>True</writeCombatLog>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
@@ -232,7 +231,6 @@
         <label>teleport</label>
         <description>Teleport a living thing to a desired position near where you currently stand.</description>
         <iconPath>Powers/Gene_Teleport</iconPath>
-        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <writeCombatLog>True</writeCombatLog>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
