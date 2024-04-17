@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <!--Delete this file when 1.6 roles around-->
+    <!--Delete this file when 1.6 rolls around-->
     <GeneDef ParentName="SuperPowersOffensiveBase" MayRequire="Sov.Homelander">
         <defName>SHG_LaserEyes</defName>
         <label>superhero laser eyes</label>
