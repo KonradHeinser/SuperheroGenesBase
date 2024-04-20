@@ -11,7 +11,7 @@
         <defName>SHG_SupersSupremacy</defName>
         <issue>SHG_Supers</issue>
         <label>supremacy</label>
-        <description>We must rid this world of non-supers. They are insects that waste the world's resources.\n\nThis is kind of useless if you have Supers Everywhere. Now that I think about it, none of these precepts behave well with Supers Everywhere.</description>
+        <description>We must rid this world of non-supers. They are insects that waste the world's resources.\n\nThis is kind of useless if you have Supers Everywhere active. Now that I think about it, none of these precepts behave well with Supers Everywhere.</description>
         <impact>High</impact>
         <comps>
             <li Class="PreceptComp_SituationalThought">
@@ -172,7 +172,7 @@
         <defName>SHG_SupersRevered</defName>
         <issue>SHG_Supers</issue>
         <label>revered</label>
-        <description>The only way we can move forward successfully is by having a super leading us.\n\nIf you have Supers Everywhere, this will trivialize the game as this creates a large mood and opinion buff.</description>
+        <description>The only way we can move forward successfully is by having a super leading us.\n\nIf you have Supers Everywhere active, this will trivialize the game as this creates a large mood and opinion buff.</description>
         <impact>Medium</impact>
         <comps>
             <li Class="PreceptComp_SituationalThought">
@@ -185,7 +185,7 @@
             </li>
             <li Class="PreceptComp_SituationalThought">
                 <thought>SHG_Supers_ReveredSuper</thought>
-                <description>Super self dislike</description>
+                <description>Super self reverence</description>
             </li>
             <li Class="PreceptComp_SituationalThought">
                 <thought>SHG_SuperColonist_Revered</thought>
