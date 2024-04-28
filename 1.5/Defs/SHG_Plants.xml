@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!--Plant Summons-->
+    <ThingDef Name="SuperPlantBase" ParentName="PlantBase" Abstract="True">
+        <statBases>
+            <Flammability>0</Flammability>
+        </statBases>
+        <selectable>true</selectable>
+        <pathCost>14</pathCost>
+        <plant>
+            <harvestTag>Standard</harvestTag>
+            <sowMinSkill>0</sowMinSkill>
+            <sowTags Inherit="False"/>
+            <sowResearchPrerequisites Inherit="False" />
+            <neverBlightable>true</neverBlightable>
+            <fertilityMin>0.02</fertilityMin>
+            <fertilitySensitivity>0</fertilitySensitivity>
+        </plant>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPlantBase">
+        <defName>SHG_Plant_Corn</defName>
+        <label>super enhanced corn plant</label>
+        <description>A tall grain plant which produces ears of soft, edible seeds. While corn takes a long time to grow, it yields lots of food compared to other crops. Harvested corn takes a long time to spoil.\n\nThis plant was summoned by a super, and as a result it is immune to the effects of ground fertility. It will produce 10 times more than its mundane counterpart.</description>
+        <statBases>
+            <MaxHitPoints>500</MaxHitPoints>
+            <Nutrition>0.4</Nutrition>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Plant/CornPlant</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+        </graphicData>
+        <plant>
+            <dieIfLeafless>true</dieIfLeafless>
+            <harvestedThingDef>RawCorn</harvestedThingDef>
+            <harvestYield>220</harvestYield>
+            <topWindExposure>0.35</topWindExposure>
+            <growDays>11.3</growDays>
+            <immatureGraphicPath>Things/Plant/CornPlant_Immature</immatureGraphicPath>
+            <visualSizeRange>0.3~1.4</visualSizeRange>
+            <wildOrder>2</wildOrder>
+            <purpose>Food</purpose>
+            <humanFoodPlant>true</humanFoodPlant>
+        </plant>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPlantBase">
+        <defName>SHG_Plant_Devilstrand</defName>
+        <label>super enhanced devilstrand</label>
+        <description>This fragile mushroom was genetically engineered to produce a silk net that is both difficult to tear and soft to the touch. While the mushroom takes a very long time to grow, only exotic ultra-tech fabrics outperform its devilstrand fibers.\n\nSome say it's called devilstrand because of its red color. Others think it owes its name to the greed it inspires in people.\n\nThis plant was summoned by a super, and as a result it is immune to the effects of ground fertility. It will produce 10 times more than its mundane counterpart.</description>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <Nutrition>0.2</Nutrition>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Plant/Devilstrand</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+        </graphicData>
+        <plant>
+            <growDays>22.5</growDays>
+            <sowWork>400</sowWork>
+            <dieIfLeafless>true</dieIfLeafless>
+            <harvestedThingDef>DevilstrandCloth</harvestedThingDef>
+            <harvestYield>60</harvestYield>
+            <topWindExposure>0.1</topWindExposure>
+            <visualSizeRange>0.3~1.0</visualSizeRange>
+            <wildOrder>2</wildOrder>
+            <pollution>Any</pollution>
+        </plant>
+    </ThingDef>
+
+    <ThingDef ParentName="HealrootBase">
+        <defName>SHG_Plant_Healroot</defName>
+        <label>super enhanced healroot</label>
+        <description>A slow-growing plant which yields herbal medicine when harvested. Sowing and harvesting healroot are both very labor-intensive tasks because of its delicate shoots.\n\nHealroot was selectively bred for centuries by settlers. It is sometimes also called &quot;healer's hand&quot; by tribespeople - a nickname it owes to its five major medicinal virtues.\n\nThis plant was summoned by a super, and as a result it is immune to the effects of ground fertility. It will produce 10 times more than its mundane counterpart.</description>
+        <plant>
+            <harvestYield>10</harvestYield>
+            <growDays>7</growDays>
+            <sowWork>800</sowWork>
+            <fertilitySensitivity>0</fertilitySensitivity>
+            <fertilityMin>0.02</fertilityMin>
+            <neverBlightable>true</neverBlightable>
+            <sowMinSkill>0</sowMinSkill>
+            <sowTags Inherit="False"/>
+            <sowResearchPrerequisites Inherit="False" />
+            <purpose>Health</purpose>
+        </plant>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPlantBase">
+        <defName>SHG_Plant_Hops</defName>
+        <label>super enhanced hop plant</label>
+        <description>A flowering crop that yields hops, an essential ingredient in beer.\n\nThis plant was summoned by a super, and as a result it is immune to the effects of ground fertility. It will produce 10 times more than its mundane counterpart.</description>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <Nutrition>0.2</Nutrition>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Plant/HopsPlant</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+        </graphicData>
+        <plant>
+            <growDays>5</growDays>
+            <dieIfLeafless>true</dieIfLeafless>
+            <harvestedThingDef>RawHops</harvestedThingDef>
+            <drugForHarvestPurposes>True</drugForHarvestPurposes>
+            <harvestYield>80</harvestYield>
+            <topWindExposure>0.1</topWindExposure>
+            <visualSizeRange>0.3~1.05</visualSizeRange>
+            <wildOrder>2</wildOrder>
+        </plant>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPlantBase">
+        <defName>SHG_Plant_Smokeleaf</defName>
+        <label>super enhanced smokeleaf plant</label>
+        <description>A leafy crop grown for the psychological effects of chemicals in its leaves. Smokeleaf leaves can be prepared into joints at the crafting spot. Smokeleaf makes a user feel relaxed, but reduces motivation, and can be addictive.\n\nThis plant was summoned by a super, and as a result it is immune to the effects of ground fertility. It will produce 10 times more than its mundane counterpart.</description>
+        <statBases>
+            <MaxHitPoints>85</MaxHitPoints>
+            <Nutrition>0.2</Nutrition>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Plant/SmokeleafPlant</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+        </graphicData>
+        <plant>
+            <growDays>7.50</growDays>
+            <dieIfLeafless>true</dieIfLeafless>
+            <drugForHarvestPurposes>True</drugForHarvestPurposes>
+            <harvestedThingDef>SmokeleafLeaves</harvestedThingDef>
+            <harvestYield>90</harvestYield>
+            <topWindExposure>0.1</topWindExposure>
+            <visualSizeRange>0.3~1.0</visualSizeRange>
+            <wildOrder>2</wildOrder>
+        </plant>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPlantBase">
+        <defName>SHG_Plant_Psychoid</defName>
+        <label>super enhanced psychoid plant</label>
+        <description>A leafy plant which generates the chemical compound psychite. Originally evolved as a defense mechanism to ward off plant-eating animals by overstimulating and sickening them, the psychite drug can be extracted and refined into various forms for recreational use. It is addictive.\n\nThis plant was summoned by a super, and as a result it is immune to the effects of ground fertility. It will produce 10 times more than its mundane counterpart.</description>
+        <statBases>
+            <MaxHitPoints>85</MaxHitPoints>
+            <Nutrition>0.2</Nutrition>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Plant/PsychoidPlant</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+        </graphicData>
+        <plant>
+            <growDays>9.00</growDays>
+            <dieIfLeafless>true</dieIfLeafless>
+            <harvestedThingDef>PsychoidLeaves</harvestedThingDef>
+            <drugForHarvestPurposes>True</drugForHarvestPurposes>
+            <harvestYield>80</harvestYield>
+            <topWindExposure>0.1</topWindExposure>
+            <visualSizeRange>0.3~1.0</visualSizeRange>
+            <wildOrder>2</wildOrder>
+            <pollution>Any</pollution>
+        </plant>
+    </ThingDef>
+
+    <ThingDef ParentName="CavePlantBase" MayRequire="Ludeon.Rimworld.Ideology">
+        <defName>SHG_Plant_Nutrifungus</defName>
+        <label>super enhanced nutrifungus</label>
+        <description>A meaty bioengineered mushroom grown for its nutritious value. It can grow on fungal gravel, but only in darkness - exposing it to any kind of light, including darklights, will kill it.\n\nThis plant was summoned by a super, and as a result it is immune to the effects of ground fertility. It will produce 10 times more than its mundane counterpart.\n\nWARNING: This plant still dies in light like a normal mushroom.</description>
+        <statBases>
+            <MaxHitPoints>85</MaxHitPoints>
+            <Nutrition>0.25</Nutrition>
+        </statBases>
+        <selectable>true</selectable>
+        <pathCost>14</pathCost>
+        <graphicData>
+            <texPath MayRequire="Ludeon.Rimworld.Ideology">Things/Plant/Nutrifungus</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+            <shadowData>
+                <volume>(0.2, 0.3, 0.13)</volume>
+                <offset>(-0.03,0,-0.44)</offset>
+            </shadowData>
+        </graphicData>
+        <plant>
+            <harvestedThingDef>RawFungus</harvestedThingDef>
+            <harvestYield>110</harvestYield>
+            <topWindExposure>0</topWindExposure>
+            <growDays>6</growDays>
+            <cavePlantWeight>0</cavePlantWeight>
+            <visualSizeRange>0.3~0.65</visualSizeRange>
+            <purpose>Food</purpose>
+            <fertilityMin>0.02</fertilityMin>
+            <fertilitySensitivity>0</fertilitySensitivity>
+            <neverBlightable>true</neverBlightable>
+            <sowMinSkill>0</sowMinSkill>
+            <sowTags Inherit="False"/>
+            <sowResearchPrerequisites Inherit="False" />
+            <humanFoodPlant>true</humanFoodPlant>
+            <maxMeshCount>9</maxMeshCount>
+        </plant>
+    </ThingDef>
+
+    <ThingDef ParentName="PotatoPlant">
+        <defName>SHG_Plant_Toxipotato</defName>
+        <label>super enhanced toxipotato plant</label>
+        <description>A genetically-engineered variant of potato adapted for growing in polluted areas. Compared to regular potatoes, toxipotatoes take less time to grow but yield a meager harvest of food. When eaten raw, they have a high chance of causing food poisoning. In spite of this, they have saved many settlers from starvation after toxic events.\n\nThis plant was summoned by a super, and as a result it is immune to the effects of ground fertility. It will produce 10 times more than its mundane counterpart.</description>
+        <graphicData>
+            <texPath>Things/Plant/Toxipotato</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+        </graphicData>
+        <selectable>true</selectable>
+        <plant>
+            <harvestedThingDef>RawToxipotato</harvestedThingDef>
+            <harvestYield>70</harvestYield>
+            <growDays>4.9</growDays>
+            <immatureGraphicPath>Things/Plant/Toxipotato_Immature</immatureGraphicPath>
+            <pollution>PollutedOnly</pollution>
+            <fertilityMin>0.02</fertilityMin>
+            <fertilitySensitivity>0</fertilitySensitivity>
+            <neverBlightable>true</neverBlightable>
+            <sowMinSkill>0</sowMinSkill>
+            <sowTags Inherit="False"/>
+            <sowResearchPrerequisites Inherit="False" />
+        </plant>
+    </ThingDef>
+
+    <ThingDef ParentName="BuildingNaturalBase">
+        <defName>SHG_SummonedGlowPod</defName>
+        <label>summoned glow pod</label>
+        <description>A bioluminescent pod similar to those produced by giant insects. Glows under its own light until it takes any amount of damage. This was summoned by a super.</description>
+        <thingClass>Building</thingClass>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <selectable>true</selectable>
+        <fillPercent>0.20</fillPercent>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <rotatable>false</rotatable>
+        <tickerType>Rare</tickerType>
+        <thingCategories>
+            <li>BuildingsSpecial</li>
+        </thingCategories>
+        <statBases>
+            <MaxHitPoints>1</MaxHitPoints>
+            <Mass>4</Mass>
+            <Flammability>1.0</Flammability>
+            <MarketValue>50</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>6</glowRadius>
+                <glowColor>(113,141,117,0)</glowColor>
+            </li>
+        </comps>
+        <graphicData>
+            <texPath>Things/Building/Natural/GlowPod</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shadowData>
+                <volume>(0.3, 0.6, 0.3)</volume>
+                <offset>(0,0,-0.1)</offset>
+            </shadowData>
+            <damageData>
+                <rect>(0.2,0.2,0.6,0.6)</rect>
+            </damageData>
+        </graphicData>
+    </ThingDef>
+</Defs>
