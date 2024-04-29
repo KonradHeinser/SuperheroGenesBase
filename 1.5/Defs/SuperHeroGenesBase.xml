@@ -41,20 +41,26 @@
     </GeneCategoryDef>
 
     <GeneCategoryDef>
-        <defName>SuperPowersSpecialization</defName>
-        <label>super powers - specialization</label>
+        <defName>SuperFlaws</defName>
+        <label>super flaws</label>
         <displayPriorityInXenotype>999.7</displayPriorityInXenotype>
-    </GeneCategoryDef>
-
-    <GeneCategoryDef>
-        <defName>SuperPowersPools</defName>
-        <label>super powers - pool manipulation</label>
-        <displayPriorityInXenotype>999.6</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersArchetypes</defName>
         <label>super powers - archetypes</label>
+        <displayPriorityInXenotype>999.6</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
+        <defName>SuperPowersSpecialization</defName>
+        <label>super powers - specialization</label>
+        <displayPriorityInXenotype>999.4</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
+        <defName>SuperPowersPools</defName>
+        <label>super powers - pool manipulation</label>
         <displayPriorityInXenotype>999.3</displayPriorityInXenotype>
     </GeneCategoryDef>
 
@@ -225,6 +231,11 @@
         <exclusionTags>
             <li>SHG_SuperMutations</li>
         </exclusionTags>
+    </GeneDef>
+
+    <GeneDef Name="SHG_FlawBase" Abstract="True">
+        <displayCategory>SuperFlaws</displayCategory>
+        <biostatCpx>0</biostatCpx>
     </GeneDef>
 
     <GeneDef Name="SHG_ResistanceBase" Abstract="True">
