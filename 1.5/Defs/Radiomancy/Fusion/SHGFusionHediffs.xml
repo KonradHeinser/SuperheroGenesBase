@@ -7,10 +7,11 @@
         <scenarioCanAdd>False</scenarioCanAdd>
         <minSeverity>0.001</minSeverity>
         <initialSeverity>0.001</initialSeverity>
+        <maxSeverity>6</maxSeverity>
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityFromResource">
                 <severityPerHourFull>0.05</severityPerHourFull>
-                <severityPerHourResource>-0.1</severityPerHourResource>
+                <severityPerHourResource>-0.25</severityPerHourResource>
                 <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
             </li>
             <li Class="SuperHeroGenesBase.HediffCompProperties_DisplaySeverity">
