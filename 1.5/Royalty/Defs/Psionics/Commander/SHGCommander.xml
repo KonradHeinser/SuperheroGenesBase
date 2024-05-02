@@ -132,7 +132,7 @@
         </descriptionHyperlinks>
     </GeneDef>
 
-    <GeneDef ParentName="SuperPowersPsychicCommanderBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <GeneDef ParentName="SuperPowersPsychicCommanderBase">
         <defName>SHG_Psionist_MassLevitation</defName>
         <label>mass levitation</label>
         <description>This gene gives access to an ability that makes themselves and everyone around them levitate for a few hours. This allows them to help people go over difficult terrain and enemy fortifications more easily.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>

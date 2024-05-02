@@ -30,7 +30,7 @@
         </descriptionHyperlinks>
     </GeneDef>
 
-    <GeneDef ParentName="SuperPowersPsychicSoldierBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_PsionicFlight</defName>
         <label>psionic flight</label>
         <description>This gene makes it so the Psionic Soldier is always floating above the ground, and grants bonus speed based on psychic sensitivity.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>

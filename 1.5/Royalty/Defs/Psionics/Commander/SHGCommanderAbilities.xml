@@ -296,7 +296,7 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHGPsionicBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_MassLevitation</defName>
         <label>mass levitation</label>
         <description>Release a psychic field that makes both the General and nearby allies levitate for a couple hours. The allies must be near the General to gain the benefits.</description>
