@@ -9,6 +9,7 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <warmupTime>0.1</warmupTime>
@@ -42,6 +43,7 @@
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_Hemoclotting</iconPath>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
             <Ability_Duration>1000</Ability_Duration>
         </statBases>
@@ -73,6 +75,7 @@
         <label>bloodlust</label>
         <description>Drive target pawn into a murderous rage, while also giving them immunity to pain along with increased melee damage and melee accuracy.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_Bloodlust</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
             <Ability_Duration>84</Ability_Duration>
         </statBases>
@@ -105,6 +108,7 @@
         <label>blood cloud</label>
         <description>Release a burst of hemogen that gives the hemopriest and all allies around them the benefits of bloodlust without removing their ability to think rationally. This does not stack with bloodlust, and will not stop a pawn under the effects of bloodlust from berserking.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_BloodCloud</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
         <statBases>
             <Ability_Duration>84</Ability_Duration>
@@ -135,6 +139,7 @@
         <label>replenish blood</label>
         <description>Release a burst of hemogen that seals the wounds of the hemopriest and all allies around them, and removes and blood loss they may have suffered.\n\nThe hemogen cost listed is per pawn, so using this in a large group can drain all available hemogen. The cost will not differentiate between wounded and non-wounded targets.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_ReplenishBlood</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>

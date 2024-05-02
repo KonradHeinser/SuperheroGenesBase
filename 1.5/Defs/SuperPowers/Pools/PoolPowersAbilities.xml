@@ -116,6 +116,7 @@
         <iconPath>Powers/Pools/Gene_CalmingAura</iconPath>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
         <statBases>
             <Ability_Duration>1000</Ability_Duration>
@@ -205,6 +206,7 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
             <Ability_Duration>1000</Ability_Duration>
         </statBases>
@@ -239,6 +241,7 @@
         <description>Take flight for a day. During this day, you will be unaffected by ground obstacles, but will lose both your innate speed bonuses from the Superhero base gene along with an additional penalty on general moving abilities.</description>
         <iconPath>Powers/Pools/Gene_WindStep</iconPath>
         <targetRequired>False</targetRequired>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
             <Ability_Duration>1000</Ability_Duration>
         </statBases>

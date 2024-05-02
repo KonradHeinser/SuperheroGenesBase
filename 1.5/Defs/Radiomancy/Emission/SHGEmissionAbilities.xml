@@ -7,6 +7,7 @@
         <iconPath>Radiomancer/Emission/Gene_Radiomancer_ExplosiveBlows</iconPath>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
         <comps>
             <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
@@ -27,6 +28,7 @@
         <iconPath>Radiomancer/Emission/Gene_Radiomancer_InstantRecharge</iconPath>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <verbProperties>
             <range>10</range>
             <targetParams>
@@ -54,6 +56,7 @@
         <iconPath>Radiomancer/Emission/Gene_Radiomancer_LimitlessPotential</iconPath>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <verbProperties>
             <range>10</range>
             <targetParams>
@@ -89,6 +92,7 @@
         <iconPath>Radiomancer/Emission/Gene_Radiomancer_NuclearWinter</iconPath>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <cooldownTicksRange>60000</cooldownTicksRange>
         <verbProperties>
             <warmupTime>10</warmupTime>
@@ -190,6 +194,7 @@
         <label>i am become death</label>
         <description>Create a burst of energy containing every bit of radiation currently stored. The more radiation stored, the larger and more damaging this burst is. Radius is equal to half of the radiomancer's stored radiation, and damage is 10 times stored radiation at the center. The only safe pawn in this burst is the caster.\n\nThis ability usually leaves everything around the caster dead, and can outright destroy buildings at high radiation levels. At full radiation levels this can destroy almost everything on around 20-30% of the map. On the bright side, no radiation cleanup.</description>
         <iconPath>Radiomancer/Emission/Gene_Radiomancer_IAmBecomeDeath</iconPath>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
         <verbProperties>
             <warmupTime>3</warmupTime>
         </verbProperties>

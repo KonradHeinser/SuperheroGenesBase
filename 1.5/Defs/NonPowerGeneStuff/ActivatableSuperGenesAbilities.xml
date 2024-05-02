@@ -6,6 +6,7 @@
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
         <cooldownTicksRange>6000</cooldownTicksRange>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <aiCanUse>true</aiCanUse>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>

@@ -2,6 +2,7 @@
 <Defs>
     <AbilityDef Abstract="true" Name="SHGPowerBurstBase" ParentName="SHGSelfCastBase">
         <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
     </AbilityDef>
 
     <AbilityDef ParentName="SHGPowerBurstBase">

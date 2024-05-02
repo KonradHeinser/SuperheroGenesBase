@@ -1,14 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Abilities/CompAbilityEffect_CreateItems.cs">
+    <Files>
+      <File FileName="SHGUtilities.cs" Line="448" Column="33" />
+      <File FileName="Abilities/CompProperties_AbilityCreateItems.cs" Line="1" Column="1" />
+      <File FileName="Abilities/CompAbilityEffect_CreateItems.cs" Line="41" Column="83" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Hediffs" expanded="True" />
-              <Node name="ModSettings" expanded="True">
-                <Node name="SuperheroGenes_Settings.cs" selected="True" />
+              <Node name="Abilities" expanded="True">
+                <Node name="CompAbilityEffect_CreateItems.cs" selected="True" />
               </Node>
+              <Node name="ModSettings" expanded="True" />
             </Node>
           </Node>
         </State>

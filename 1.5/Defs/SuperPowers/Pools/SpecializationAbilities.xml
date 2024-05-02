@@ -62,6 +62,7 @@
         <description>Activate your regeneration capabilities to allow for extremely fast healing. The bonuses gradually wear off after a couple hours, and once its gone, the pawn will temporarily lose the benefits provided by Super Healing, along with healing related bonuses from the base Superhero gene.</description>
         <iconPath>Powers/Specializations/Gene_Regenerator</iconPath>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
         <cooldownTicksRange>600000</cooldownTicksRange>
         <verbProperties>
@@ -228,6 +229,7 @@
         <description>Push your body to move at physics defying levels. Over the span of 4 hours, the super will have extremely powerful bonuses that gradually diminish over time. Once they run out, the body will fall comatose for around 10 days to recover from the extreme strain this ability puts on the body.</description>
         <iconPath>Powers/Specializations/Gene_Sprinter</iconPath>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
         <cooldownTicksRange>600000</cooldownTicksRange>
         <verbProperties>

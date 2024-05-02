@@ -5,6 +5,7 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <cooldownTicksRange>600</cooldownTicksRange>
         <aiCanUse>false</aiCanUse>
         <verbProperties>
@@ -206,6 +207,7 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <warmupTime>0.1</warmupTime>
@@ -242,6 +244,7 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <warmupTime>0.1</warmupTime>
@@ -277,6 +280,7 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <warmupTime>0.1</warmupTime>

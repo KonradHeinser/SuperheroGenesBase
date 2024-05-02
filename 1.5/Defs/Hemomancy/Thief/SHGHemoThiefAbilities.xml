@@ -123,6 +123,7 @@
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_Sow</iconPath>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <verbProperties>
             <range>2</range>
             <rangeStat>SHG_HemomancerRange_Touch</rangeStat>
@@ -203,6 +204,7 @@
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_MarkForDeath</iconPath>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>false</targetRequired>
         <verbProperties>
             <range>0.5</range>

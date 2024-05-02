@@ -48,6 +48,7 @@
         <hostile>false</hostile>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <verbProperties>
             <verbClass>Verb_CastAbilityJump</verbClass>
             <label>leap</label>
@@ -74,6 +75,7 @@
         <hostile>False</hostile>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <warmupMote>Mote_CoagulateStencil</warmupMote>
         <warmupEffecter>Coagulate</warmupEffecter>
         <warmupStartSound>Coagulate_Cast</warmupStartSound>
@@ -142,6 +144,7 @@
         <warmupStartSound>Resurrect_Cast</warmupStartSound>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <hostile>False</hostile>
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
@@ -169,6 +172,7 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <showCastingProgressBar>True</showCastingProgressBar>
         <cooldownTicksRange>10000</cooldownTicksRange>
         <statBases>
@@ -203,6 +207,7 @@
         <writeCombatLog>True</writeCombatLog>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
         <verbProperties>
             <range>30</range>
@@ -234,6 +239,7 @@
         <writeCombatLog>True</writeCombatLog>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <verbProperties>
             <range>1</range>
             <verbClass>Verb_CastAbility</verbClass>
@@ -269,6 +275,7 @@
         <showGizmoOnWorldView>True</showGizmoOnWorldView>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <hostile>false</hostile>
         <jobDef Inherit="False" />
         <statBases>
@@ -299,6 +306,7 @@
         <showGizmoOnWorldView>True</showGizmoOnWorldView>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <hostile>false</hostile>
         <jobDef Inherit="False" />
         <statBases>
@@ -358,6 +366,7 @@
         <hostile>false</hostile>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <verbProperties>
             <range>29.9</range>
             <targetParams>
@@ -494,6 +503,7 @@
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <verbProperties>
             <range>-1</range>
             <requireLineOfSight>False</requireLineOfSight>
@@ -521,6 +531,7 @@
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <verbProperties>
             <range>-1</range>
             <requireLineOfSight>False</requireLineOfSight>
@@ -601,6 +612,7 @@
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <cooldownTicksRange>10000</cooldownTicksRange>
         <statBases>
             <Ability_Duration>42</Ability_Duration>

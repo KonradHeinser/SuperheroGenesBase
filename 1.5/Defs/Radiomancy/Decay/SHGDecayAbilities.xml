@@ -154,6 +154,7 @@
         <label>dangerous aura</label>
         <description>Release radioactive energy in an aura around the radiomancer to cause all non-radiomancer's to suffer penalties. This aura remains until dispelled, and drains radiation over time.</description>
         <iconPath>Radiomancer/Decay/Gene_Radiomancer_DangerousAura</iconPath>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
         <comps>
             <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>

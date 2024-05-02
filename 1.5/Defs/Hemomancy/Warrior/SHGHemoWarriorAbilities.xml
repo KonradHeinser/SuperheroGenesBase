@@ -62,6 +62,7 @@
         <label>blood infusement</label>
         <description>Gives the pawn enhanced global work speed and reduced rest fall rate based on hediff tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost.\n\nIf used after reaching maximum tier, the pawn will remain at max tier for an additional day.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_BloodInfusement</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <comps>
             <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
@@ -127,6 +128,7 @@
         <label>everlasting war</label>
         <description>Revive everyone in an area, both enemies and allies. The Hemochampion does not need line of sight to resurrect pawns, but resurrected pawns will be unable to move for a couple days. This costs more based on the number of corpses in the area.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_EverlastingWar</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <writeCombatLog>True</writeCombatLog>
         <aiCanUse>false</aiCanUse>
         <statBases>

@@ -165,6 +165,7 @@
     <AbilityDef Abstract="True" ParentName="SHGPowerAbilitiesBase" Name="SHGSelfCastBase">
         <targetRequired>false</targetRequired>
         <showCastingProgressBar>true</showCastingProgressBar>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <verbProperties>
             <requireLineOfSight>false</requireLineOfSight>
             <range>0.9</range>
@@ -199,6 +200,7 @@
         <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <hostile>false</hostile>
         <verbProperties>
             <range>24.9</range>

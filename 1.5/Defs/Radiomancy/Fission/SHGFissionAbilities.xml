@@ -5,6 +5,7 @@
         <label>rampant regeneration</label>
         <description>Inject some radioactive energy into a pawn's blood to cause them to start recovering from wounds at an unbelievable pace. Even lost parts can start regrowing while in this state. Unfortunately, this comes with an extreme risk that some of their cells will be negatively affected by the radioactive energy, resulting in carcinoma.\n\nDue to the nature of this ability, it will not work on other radiomancers as their body will just attempt to absorb the radiation, and fail due to its characteristics.</description>
         <iconPath>Radiomancer/Fission/Gene_Radiomancer_RampantRegeneration</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
             <Ability_Duration>84</Ability_Duration>
         </statBases>
@@ -34,6 +35,7 @@
         <label>miniature sun</label>
         <description>Create an exceptionally small star that lets out a massive amount of heat and light. This star will be stable for about a day before the safety measures within it force the energy to dissipate.</description>
         <iconPath>Radiomancer/Fission/Gene_Radiomancer_MiniatureSun</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
             <Ability_Duration>1000</Ability_Duration>
         </statBases>
@@ -61,6 +63,7 @@
         <label>excitable cells</label>
         <description>Inject some radioactive energy into a pawn's blood to cause them to start recovering from infections at an unbelievable pace due to the energy that was injected into their body. Unfortunately, this comes with an notable risk that some of their cells will be negatively affected by the radioactive energy.\n\nDue to the nature of this ability, it will not work on other radiomancers as their body will just attempt to absorb the radiation, and fail due to its characteristics.</description>
         <iconPath>Radiomancer/Fission/Gene_Radiomancer_ExcitableCells</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
             <Ability_Duration>168</Ability_Duration>
         </statBases>
