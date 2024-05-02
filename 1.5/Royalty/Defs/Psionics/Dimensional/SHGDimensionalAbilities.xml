@@ -45,6 +45,7 @@
         <hostile>false</hostile>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
         <statBases>
             <Ability_EntropyGain>50</Ability_EntropyGain>
@@ -355,6 +356,7 @@
         <label>open rift to psychic anomaly</label>
         <description>Connect to a psychic anomaly to minimize all entropy gains for a day. A small amount of entropy is still gained to use the link to the anomaly, but the amount usually immediately dissipated.\n\nDue to how the game handles neural heat, you may need to remove the limiter for higher cost abilities. This is because the game calculates the neural heat multiplier as the abilty is being cast instead of before.</description>
         <iconPath>Psionist/Dimensional/Gene_Psionist_PsychicAnomaly</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -400,6 +402,7 @@
         <label>open rift to star</label>
         <description>Open a rift to the star that lets out a massive amount of heat and light. This rift will take about a day to close.</description>
         <iconPath>Psionist/Dimensional/Gene_Psionist_Star</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
             <Ability_EntropyGain>400</Ability_EntropyGain>
             <Ability_Duration>1000</Ability_Duration>
@@ -436,6 +439,7 @@
         <label>open rift to utopian planet</label>
         <description>Open a rift to the utopian planet to calm the minds of everyone around the Cosmic Psionist. This will make everyone more productive and resistant to the stresses of their less ideal world.</description>
         <iconPath>Psionist/Dimensional/Gene_Psionist_Utopia</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <writeCombatLog>True</writeCombatLog>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>

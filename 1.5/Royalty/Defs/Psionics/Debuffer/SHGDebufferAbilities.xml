@@ -5,6 +5,7 @@
         <label>switch to psychically dull aura</label>
         <description>Makes nearby enemies receive lessened effects from many psychic abilities. If you don't have a mod that creates enemies that give psychic buffs, this is probably not going to help since it will lessen the penalties of most of auras.</description>
         <iconPath>Psionist/Debuffer/Gene_Psionist_PsychicAlterationAura</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
@@ -44,6 +45,7 @@
         <label>switch to psychically sensitive aura</label>
         <description>Makes nearby enemies receive increased effects from many psychic abilities.</description>
         <iconPath>Psionist/Debuffer/Gene_Psionist_PsychicAlterationAura</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
@@ -83,6 +85,7 @@
         <label>aura burst</label>
         <description>Increases the debuffer's aura range to 22.</description>
         <iconPath>Psionist/Debuffer/Gene_Psionist_AuraBurst</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
         <statBases>
             <Ability_EntropyGain>50</Ability_EntropyGain>
@@ -115,6 +118,7 @@
         <label>channel aura</label>
         <description>Increases the debuffer's aura range to 37, stuns the caster, and gives them a psychic shield. This only protects against mundane ranged attacks, so it is recommended to have at least one wall between the Debilitator and their enemies.</description>
         <iconPath>Psionist/Debuffer/Gene_Psionist_ChannelAura</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
         <statBases>
             <Ability_EntropyGain>100</Ability_EntropyGain>
@@ -154,6 +158,7 @@
         <label>ruin the world</label>
         <description>Increases the debuffer's aura range to 75, stuns the caster, and gives them a psychic shield. This only protects against mundane ranged attacks, so it is recommended to have at least one wall between the Debilitator and their enemies.</description>
         <iconPath>Psionist/Debuffer/Gene_Psionist_RuinTheWorld</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
         <statBases>
             <Ability_EntropyGain>200</Ability_EntropyGain>

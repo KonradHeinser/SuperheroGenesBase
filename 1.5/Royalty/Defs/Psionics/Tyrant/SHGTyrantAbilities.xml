@@ -9,6 +9,7 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
             <Ability_EntropyGain>50</Ability_EntropyGain>
             <Ability_Duration>42</Ability_Duration>
@@ -108,6 +109,7 @@
         <label>destroy resistance</label>
         <description>Attempt to psychically break a prisoner's resistance. Psychically deaf pawns are immune to this ability.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_DestroyResistance</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <statBases>
@@ -137,6 +139,7 @@
         <label>legion</label>
         <description>Release an aura of psychic energy that makes nearby pawns become much harder to break mentally, slightly more resistant to fear, and immune to pain.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_Legion</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
@@ -170,6 +173,7 @@
         <label>ENOUGH</label>
         <description>With a shout infused with large amounts of psychic energy, the Corruptor stops everyone in an area from moving for some time. The exact amount of time that this stuns targets for depends on psychic sensitivity.\n\nUsing this too close to the Corruptor will cause the ability to backfire, impacting everything around the target, including the Corruptor, without actually hitting the intended target.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_TyrantCorruptor</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
@@ -239,6 +243,7 @@
         <label>rend minds</label>
         <description>Attempt to psychically break the resistance of multiple prisoners in an area. Psychically deaf pawns are immune to this ability.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_RendMinds</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <statBases>
@@ -331,6 +336,7 @@
         <label>FORFEIT</label>
         <description>With a shout infused with large amounts of psychic energy, the tyrant overwhelms a target's brain to make their body give up, making it almost impossible to remain conscious.\n\nWith a high enough consciousness it is possible for this to the target to remain awake. This requires at least a Consciousness of 120%, though due to potential outside effects, like blood loss and pain, resting consciousness usually needs to be much higher to resist this. The more psychically sensitive the target is, the longer this will last.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_TyrantConqueror</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <statBases>
             <Ability_EntropyGain>150</Ability_EntropyGain>
@@ -414,6 +420,7 @@
         <label>you will submit</label>
         <description>Attempt to psychically break the resistance of multiple prisoners in an area, while also clouding their minds with happiness to make the recruiting itself easier. Psychic sensitivity only impacts the mood portion of this ability. Their resistance will be reduced regardless of sensitivity.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_YouWillSubmit</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <statBases>

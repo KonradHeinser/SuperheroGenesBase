@@ -116,6 +116,7 @@
         <iconPath>Psionist/Commander/Gene_Psionist_SharedBurden</iconPath>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
             <Ability_EntropyGain>10</Ability_EntropyGain>
             <Ability_Duration>120</Ability_Duration>
@@ -146,6 +147,7 @@
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
             <Ability_EntropyGain>50</Ability_EntropyGain>
             <Ability_Duration>168</Ability_Duration>
@@ -299,6 +301,7 @@
         <label>mass levitation</label>
         <description>Release a psychic field that makes both the General and nearby allies levitate for a couple hours. The allies must be near the General to gain the benefits.</description>
         <iconPath>Psionist/Commander/Gene_Psionist_MassLevitation</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -331,6 +334,7 @@
         <label>inspire</label>
         <description>Release a psychic burst that makes both the General and nearby allies resistant to fear and stress while also increasing consciousness.</description>
         <iconPath>Psionist/Commander/Gene_Psionist_Inspire</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -535,6 +539,7 @@
         <label>rally</label>
         <description>Release a psychic burst that makes both the General and nearby allies immune to fear and resistant to stress while also increasing consciousness.</description>
         <iconPath>Psionist/Commander/Gene_Psionist_Rally</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>

@@ -12,6 +12,7 @@
         <warmupMote>Mote_CoagulateStencil</warmupMote>
         <warmupEffecter>Coagulate</warmupEffecter>
         <warmupStartSound>Coagulate_Cast</warmupStartSound>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
         <statBases>
             <Ability_EntropyGain>10</Ability_EntropyGain>
