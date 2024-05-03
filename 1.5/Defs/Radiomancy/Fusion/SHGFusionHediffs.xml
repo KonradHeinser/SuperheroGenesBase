@@ -49,6 +49,19 @@
                 </targetingParameters>
                 <forbiddenGenes>
                     <li>SHG_Archetypes_Radiomancer</li>
+                    <li>SHG_Archetypes_Antihero</li>
+                    <li>SHG_Archetypes_LifeBringer</li>
+                    <li>SHG_SummonMineableUranium</li>
+                    <li>SHG_Archetypes_Ferromancer</li>
+                    <li>SHG_Hemomancer_Priest</li>
+                    <li>SHG_Hemomancer_Morph</li>
+                    <li>SHG_Hemomancer_Reaper</li>
+                    <li>SHG_Hemomancer_Champion</li>
+                    <li>SuperHealing</li>
+                    <li>SHG_HALK</li>
+                    <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_DimensionalCosmic</li>
+                    <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Guardian</li>
+                    <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_SoldierCommando</li>
                     <li>DiseaseFree</li>
                 </forbiddenGenes>
                 <hediff>SHG_Radiomancer_ExpelledRadiation</hediff>
