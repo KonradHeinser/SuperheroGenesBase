@@ -42,8 +42,8 @@
                 <range>20</range>
                 <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
                 <targetingParameters>
-                    <canTargetBuildings>false</canTargetBuildings>
-                    <canTargetAnimals>True</canTargetAnimals>
+                    <canTargetBuildings>False</canTargetBuildings>
+                    <canTargetAnimals>False</canTargetAnimals>
                     <canTargetMechs>False</canTargetMechs>
                     <onlyTargetColonists>True</onlyTargetColonists>
                 </targetingParameters>
@@ -59,9 +59,6 @@
                     <li>SHG_Hemomancer_Champion</li>
                     <li>SuperHealing</li>
                     <li>SHG_HALK</li>
-                    <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_DimensionalCosmic</li>
-                    <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Guardian</li>
-                    <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_SoldierCommando</li>
                     <li>DiseaseFree</li>
                 </forbiddenGenes>
                 <hediff>SHG_Radiomancer_ExpelledRadiation</hediff>
