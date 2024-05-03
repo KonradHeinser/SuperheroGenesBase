@@ -38,7 +38,7 @@
             <li>Reaching 120% charge will start causing radiation loss as the body starts to expel radiation before it becomes harmful to the radiomancer.</li>
             <li>While dispelling energy this way, nearby non-radiomancer pawns have a risk of developing carcinoma.</li>
             <li>Using Solar Recharging makes this a lot easier to automatically manage due to the passive regen.</li>
-            <li>Individuals with the following genes are immune to the expelled radiation: Radiomancer, Non-senescent, Anti-Hero, Life Bringer, Summon Uranium, Ferromancer, Hemopriest, Hemomorph, Reaper, Hemochampion, Super Healing, HALK, Cosmic Psionist, Psionic Guardian, and Psionic Commando</li>
+            <li>Individuals with the following genes are immune to the expelled radiation: Radiomancer, Non-senescent, Anti-Hero, Life Bringer, Summon Uranium, Ferromancer, Hemopriest, Hemomorph, Reaper, Hemochampion, Super Healing, HALK, Cosmic Psionist, Psionic Guardian, or Psionic Commando</li>
         </customEffectDescriptions>
     </GeneDef>
 
