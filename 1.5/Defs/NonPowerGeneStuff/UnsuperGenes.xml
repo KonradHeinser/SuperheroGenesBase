@@ -84,8 +84,8 @@
         <biostatMet>1</biostatMet>
         <statOffsets>
             <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
-            <MeleeDodgeChance>-2.5</MeleeDodgeChance>
-            <MeleeHitChance>-2.5</MeleeHitChance>
+            <MeleeDodgeChance>-1.5</MeleeDodgeChance>
+            <MeleeHitChance>-1.5</MeleeHitChance>
             <TameAnimalChance>-0.1</TameAnimalChance>
             <TrainAnimalChance>-0.1</TrainAnimalChance>
         </statOffsets>
@@ -130,8 +130,8 @@
         </statFactors>
         <statOffsets>
             <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
-            <MeleeDodgeChance>-2.5</MeleeDodgeChance>
-            <MeleeHitChance>-2.5</MeleeHitChance>
+            <MeleeDodgeChance>-1.5</MeleeDodgeChance>
+            <MeleeHitChance>-1.5</MeleeHitChance>
         </statOffsets>
         <exclusionTags>
             <li>SuperPrecisions</li>
