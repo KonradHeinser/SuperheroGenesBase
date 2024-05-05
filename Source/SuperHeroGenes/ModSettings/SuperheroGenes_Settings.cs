@@ -74,7 +74,7 @@ namespace SuperHeroGenesBase
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.Look(ref condensedMeteors, "condensedMeteors");
+            Scribe_Values.Look(ref condensedMeteors, "condensedMeteors", true);
             Scribe_Values.Look(ref multipleMutations, "multipleMutations");
             Scribe_Values.Look(ref multipleArchetypes, "multipleArchetypes");
             Scribe_Values.Look(ref expensiveBase, "expensiveBase");
@@ -83,7 +83,7 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref interruptibleActivatables, "interruptibleActivatables");
             Scribe_Values.Look(ref middleGrounds, "middleGrounds");
             Scribe_Values.Look(ref allGrounds, "allGrounds");
-            Scribe_Values.Look(ref radiomancerOvercharge, "radiomancerOvercharge");
+            Scribe_Values.Look(ref radiomancerOvercharge, "radiomancerOvercharge", true);
 
             // AI stuff
             Scribe_Values.Look(ref poolUsage, "poolUsage");
@@ -99,7 +99,7 @@ namespace SuperHeroGenesBase
 
             // Villains and Stereotypes stuff
             Scribe_Values.Look(ref medievalVillains, "medievalVillains");
-            Scribe_Values.Look(ref vengefulOne, "vengefulOne");
+            Scribe_Values.Look(ref vengefulOne, "vengefulOne", true);
         }
 
         public void DoWindowContents(Rect inRect)

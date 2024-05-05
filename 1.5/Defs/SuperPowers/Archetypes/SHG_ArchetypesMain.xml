@@ -1131,11 +1131,11 @@
         <iconPath>Archetypes/Gene_DormantSuper</iconPath>
         <biostatMet>0</biostatMet>
         <statFactors>
-            <LifespanFactor>0.333</LifespanFactor>
-            <ImmunityGainSpeed>0.333</ImmunityGainSpeed>
+            <LifespanFactor>0.5</LifespanFactor>
+            <ImmunityGainSpeed>0.5</ImmunityGainSpeed>
             <IncomingDamageFactor>1.333</IncomingDamageFactor>
-            <InjuryHealingFactor>0.333</InjuryHealingFactor>
-            <MeleeDamageFactor>0.333</MeleeDamageFactor>
+            <InjuryHealingFactor>0.5</InjuryHealingFactor>
+            <MeleeDamageFactor>0.5</MeleeDamageFactor>
             <PawnTrapSpringChance>100</PawnTrapSpringChance>
             <StaggerDurationFactor>1.333</StaggerDurationFactor>
             <GlobalLearningFactor>0.5</GlobalLearningFactor>
@@ -1148,17 +1148,17 @@
             <ComfyTemperatureMax>-20</ComfyTemperatureMax>
             <AimingDelayFactor>.1</AimingDelayFactor>
             <ShootingAccuracyPawn>-3</ShootingAccuracyPawn>
-            <CarryingCapacity>-100</CarryingCapacity>
-            <MoveSpeed>-5</MoveSpeed>
+            <CarryingCapacity>-50</CarryingCapacity>
+            <CarryBulk MayRequire="ceteam.combatextended">-25</CarryBulk>
+            <MoveSpeed>-3</MoveSpeed>
             <MeleeDodgeChance>-3</MeleeDodgeChance>
             <MeleeHitChance>-3</MeleeHitChance>
             <MentalBreakThreshold>.15</MentalBreakThreshold>
             <PainShockThreshold>-0.50</PainShockThreshold>
-            <PawnBeauty>-5.0</PawnBeauty>
+            <PawnBeauty>-3</PawnBeauty>
             <SocialImpact>-.5</SocialImpact>
             <NegotiationAbility>-.5</NegotiationAbility>
             <ConversionPower MayRequire="Ludeon.Rimworld.Ideology">-.5</ConversionPower>
-            <ToxicEnvironmentResistance>-.1</ToxicEnvironmentResistance>
             <ToxicResistance>-.1</ToxicResistance>
             <TameAnimalChance>-.1</TameAnimalChance>
             <TrainAnimalChance>-.1</TrainAnimalChance>

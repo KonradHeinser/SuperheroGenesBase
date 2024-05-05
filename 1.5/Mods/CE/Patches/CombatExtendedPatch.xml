@@ -346,13 +346,6 @@
         </value>
     </Operation>
 
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statOffsets</xpath>
-        <value>
-            <CarryBulk>-50</CarryBulk>
-        </value>
-    </Operation>
-
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/AbilityDef[defName="SHG_FireBlast" or defName="SHG_AcidBlast" or defName="SHG_LightningBlast" or defName="SHG_IceBlast"
             or defName="SHG_ToxBlast" or defName="SHG_EMPBlast" or defName="SHG_FoamBlast" or defName="SHG_PetrificationBlast"

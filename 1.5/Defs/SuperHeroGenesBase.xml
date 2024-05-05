@@ -462,7 +462,6 @@
             <SocialImpact>.5</SocialImpact>
             <NegotiationAbility>.5</NegotiationAbility>
             <ConversionPower MayRequire="ludeon.rimworld.ideology">.5</ConversionPower>
-            <ToxicEnvironmentResistance>.1</ToxicEnvironmentResistance>
             <ToxicResistance>.1</ToxicResistance>
             <TameAnimalChance>.1</TameAnimalChance>
             <TrainAnimalChance>.1</TrainAnimalChance>

@@ -101,6 +101,9 @@
     <SHG_AllGrounds>        All Ground Basic Super Genes (Restart Required)</SHG_AllGrounds>
     <SHG_AllGroundsDescription>Extends the options for all of the basic super and antisuper genes to the maximum extent. This adds 27 new genes in addition to the 16 added by middle ground, for a total of 43 new genes.</SHG_AllGroundsDescription>
 
+    <SHG_RadiomancerOvercharge>    Radiomancer Overcharge</SHG_RadiomancerOvercharge>
+    <SHG_RadiomancerOverchargeDescription>While enabled, Energy Armor, Energized Neurons, and Infused Muscles will cause Radiomancers to become overcharged if they reach 120%. While overcharged, the Radiomancer is a danger to most non-super individuals along with many supers for at least 24 hours. This danger applies to both allies and enemies.</SHG_RadiomancerOverchargeDescription>
+
         <!--AI Settings-->
     <SHG_SuperAI>Autocast Abilities (Restart Required for any changes)</SHG_SuperAI>
     <SHG_SuperAIDescription>This causes colonists to automatically try to use some of their super abilities when appropriate. This is disabled by default for a few reasons.
