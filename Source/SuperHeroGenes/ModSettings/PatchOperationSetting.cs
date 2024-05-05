@@ -50,6 +50,10 @@ namespace SuperHeroGenesBase
             {
                 if (SuperheroGenes_Settings.middleGrounds && SuperheroGenes_Settings.allGrounds && active != null) return active.Apply(xml);
             }
+            else if (setting == "radiomancerOvercharge")
+            {
+                if (!SuperheroGenes_Settings.radiomancerOvercharge && inactive != null) return inactive.Apply(xml);
+            }
 
             // AI stuff
 

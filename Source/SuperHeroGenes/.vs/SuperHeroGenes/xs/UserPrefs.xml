@@ -1,15 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="HarmonyPatches.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ModSettings/SuperheroGenes_Settings.cs">
     <Files>
-      <File FileName="HarmonyPatches.cs" Line="1" Column="1" />
+      <File FileName="ModSettings/PatchOperationSetting.cs" Line="53" Column="55" />
+      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="52" Column="50" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="ModSettings" expanded="True" />
-              <Node name="HarmonyPatches.cs" selected="True" />
+              <Node name="ModSettings" expanded="True">
+                <Node name="SuperheroGenes_Settings.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

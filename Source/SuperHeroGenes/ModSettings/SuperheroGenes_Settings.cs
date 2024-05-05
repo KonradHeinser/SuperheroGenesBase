@@ -51,18 +51,19 @@ namespace SuperHeroGenesBase
         public static bool interruptibleActivatables = false;
         public static bool middleGrounds = false;
         public static bool allGrounds = false;
+        public static bool radiomancerOvercharge = true;
 
         // AI stuff
         public static bool poolUsage = false;
         public static bool automaticHealer = false;
         public static bool automaticDefense = false;
         public static bool automaticDefenseDrafted = false;
-        public static bool automaticBuffs= false;
+        public static bool automaticBuffs = false;
         public static bool automaticDebuffs = false;
         public static bool automaticDebuffsDrafted = false;
         public static bool automaticOffense = false;
         public static bool automaticOffenseDrafted = false;
-        public static bool automaticFleeing= false;
+        public static bool automaticFleeing = false;
 
         // Villains and Stereotypes stuff
         public static bool medievalVillains = false;
@@ -82,6 +83,7 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref interruptibleActivatables, "interruptibleActivatables");
             Scribe_Values.Look(ref middleGrounds, "middleGrounds");
             Scribe_Values.Look(ref allGrounds, "allGrounds");
+            Scribe_Values.Look(ref radiomancerOvercharge, "radiomancerOvercharge");
 
             // AI stuff
             Scribe_Values.Look(ref poolUsage, "poolUsage");
@@ -119,7 +121,7 @@ namespace SuperHeroGenesBase
             contentRect.width -= 20;
 
             int numberOfOptions = 3; // One for each section
-            if (showMainOptions) numberOfOptions += 9;
+            if (showMainOptions) numberOfOptions += 10;
             if (ModsConfig.IsActive("SuperheroGenes.Villains") && showVillainOptions) numberOfOptions += 2;
             if (showAutocastOptions) numberOfOptions += 10;
             contentRect.height = numberOfOptions * 35; // To avoid weird white space, height is based off of option count of present mods
@@ -128,7 +130,7 @@ namespace SuperHeroGenesBase
 
             optionsMenu.Begin(contentRect.AtZero());
 
-            optionsMenu.CheckboxLabeled("SHG_ModName".Translate(), ref showMainOptions , "SHG_ModDescription".Translate());
+            optionsMenu.CheckboxLabeled("SHG_ModName".Translate(), ref showMainOptions, "SHG_ModDescription".Translate());
             optionsMenu.Gap(7f);
             if (showMainOptions)
             {
@@ -156,6 +158,8 @@ namespace SuperHeroGenesBase
                     optionsMenu.CheckboxLabeled("SHG_AllGrounds".Translate(), ref allGrounds, "SHG_AllGroundsDescription".Translate());
                     optionsMenu.Gap(10f);
                 }
+                optionsMenu.CheckboxLabeled("SHG_RadiomancerOvercharge".Translate(), ref radiomancerOvercharge, "SHG_RadiomancerOverchargeDescription".Translate());
+                optionsMenu.Gap(10f);
             }
 
             if (ModsConfig.IsActive("SuperheroGenes.Villains"))

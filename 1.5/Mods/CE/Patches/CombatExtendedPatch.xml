@@ -282,6 +282,78 @@
     </Operation>
 
     <Operation Class="PatchOperationReplace">
+        <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statOffsets/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>-10</ArmorRating_Blunt>
+        </value>
+    </Operation>
+    
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statOffsets/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>-10</ArmorRating_Sharp>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statOffsets/MeleeDodgeChance</xpath>
+        <value>
+            <MeleeDodgeChance>-0.1</MeleeDodgeChance>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statOffsets/MeleeHitChance</xpath>
+        <value>
+            <MeleeHitChance>-0.2</MeleeHitChance>
+            <MeleeParryChance>-0.2</MeleeParryChance>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statOffsets/AimingDelayFactor</xpath>
+        <value>
+            <AimingDelayFactor>0.05</AimingDelayFactor>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statOffsets/ShootingAccuracyPawn</xpath>
+        <value>
+            <ShootingAccuracyPawn>-1</ShootingAccuracyPawn>
+            <AimingAccuracy>-0.7</AimingAccuracy>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statFactors/IncomingDamageFactor</xpath>
+        <value>
+            <IncomingDamageFactor>1.11</IncomingDamageFactor>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statFactors/PawnTrapSpringChance</xpath>
+        <value>
+            <PawnTrapSpringChance>10</PawnTrapSpringChance>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statFactors/StaggerDurationFactor</xpath>
+        <value>
+            <StaggerDurationFactor>1.11</StaggerDurationFactor>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/statOffsets</xpath>
+        <value>
+            <CarryBulk>-50</CarryBulk>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
         <xpath>Defs/AbilityDef[defName="SHG_FireBlast" or defName="SHG_AcidBlast" or defName="SHG_LightningBlast" or defName="SHG_IceBlast"
             or defName="SHG_ToxBlast" or defName="SHG_EMPBlast" or defName="SHG_FoamBlast" or defName="SHG_PetrificationBlast"
             or defName="SHG_WaterBlast"]/comps/li[@Class="SuperHeroGenesBase.CompProperties_SHGBlast"]/armorPenetration</xpath>
