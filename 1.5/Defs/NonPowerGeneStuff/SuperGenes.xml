@@ -187,8 +187,6 @@
         <biostatMet>-4</biostatMet>
         <statFactors>
             <ResearchSpeed>3</ResearchSpeed>
-            <DrugSynthesisSpeed>3</DrugSynthesisSpeed>
-            <GeneralLaborSpeed>3</GeneralLaborSpeed>
             <GlobalLearningFactor>3</GlobalLearningFactor>
             <LearningRateFactor>3</LearningRateFactor>
             <HackingSpeed MayRequire="ludeon.rimworld.ideology">3</HackingSpeed>
@@ -213,9 +211,8 @@
         <displayOrderInCategory>47</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
         <statFactors>
-            <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
-            <MeleeDodgeChance>3</MeleeDodgeChance>
-            <MeleeHitChance>3</MeleeHitChance>
+            <MeleeDodgeChance>2.5</MeleeDodgeChance>
+            <MeleeHitChance>2</MeleeHitChance>
         </statFactors>
         <capMods>
             <li>
@@ -262,7 +259,7 @@
         <statFactors>
             <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
             <MeleeDodgeChance>5</MeleeDodgeChance>
-            <MeleeHitChance>5</MeleeHitChance>
+            <MeleeHitChance>3</MeleeHitChance>
             <PawnTrapSpringChance>0.01</PawnTrapSpringChance>
             <IncomingDamageFactor>0.9</IncomingDamageFactor>
         </statFactors>
@@ -286,7 +283,6 @@
         <biostatMet>-5</biostatMet>
         <statFactors>
             <StaggerDurationFactor>0.01</StaggerDurationFactor>
-            <MeleeDodgeChance>5</MeleeDodgeChance>
             <MeleeDamageFactor>2</MeleeDamageFactor>
         </statFactors>
         <statOffsets>

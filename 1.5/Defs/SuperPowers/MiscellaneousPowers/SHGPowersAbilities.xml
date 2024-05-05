@@ -501,6 +501,7 @@
         <description>Put a colonist into a regenerating coma.</description>
         <iconPath>Powers/Gene_Regenesis</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>
+        <aiCanUse>false</aiCanUse>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
@@ -529,6 +530,7 @@
         <description>Removes a regenesis state.</description>
         <iconPath>Powers/Ability_RegenesisWake</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>
+        <aiCanUse>false</aiCanUse>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>

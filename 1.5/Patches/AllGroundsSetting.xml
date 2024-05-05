@@ -202,8 +202,6 @@
                             <biostatMet>-1</biostatMet>
                             <statFactors>
                                 <ResearchSpeed>1.5</ResearchSpeed>
-                                <DrugSynthesisSpeed>1.5</DrugSynthesisSpeed>
-                                <GeneralLaborSpeed>1.5</GeneralLaborSpeed>
                                 <GlobalLearningFactor>1.5</GlobalLearningFactor>
                                 <LearningRateFactor>1.5</LearningRateFactor>
                                 <HackingSpeed MayRequire="ludeon.rimworld.ideology">1.5</HackingSpeed>
@@ -229,8 +227,6 @@
                             <biostatMet>-3</biostatMet>
                             <statFactors>
                                 <ResearchSpeed>2.5</ResearchSpeed>
-                                <DrugSynthesisSpeed>2.5</DrugSynthesisSpeed>
-                                <GeneralLaborSpeed>2.5</GeneralLaborSpeed>
                                 <GlobalLearningFactor>2.5</GlobalLearningFactor>
                                 <LearningRateFactor>2.5</LearningRateFactor>
                                 <HackingSpeed MayRequire="ludeon.rimworld.ideology">2.5</HackingSpeed>
@@ -305,7 +301,7 @@
                             <statFactors>
                                 <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
                                 <MeleeDodgeChance>2</MeleeDodgeChance>
-                                <MeleeHitChance>2</MeleeHitChance>
+                                <MeleeHitChance>1.5</MeleeHitChance>
                                 <PawnTrapSpringChance>0.75</PawnTrapSpringChance>
                                 <IncomingDamageFactor>0.975</IncomingDamageFactor>
                             </statFactors>
@@ -330,7 +326,7 @@
                             <statFactors>
                                 <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
                                 <MeleeDodgeChance>4</MeleeDodgeChance>
-                                <MeleeHitChance>4</MeleeHitChance>
+                                <MeleeHitChance>2.5</MeleeHitChance>
                                 <PawnTrapSpringChance>0.25</PawnTrapSpringChance>
                                 <IncomingDamageFactor>0.925</IncomingDamageFactor>
                             </statFactors>
@@ -354,7 +350,6 @@
                             <biostatMet>-1</biostatMet>
                             <statFactors>
                                 <StaggerDurationFactor>0.80</StaggerDurationFactor>
-                                <MeleeDodgeChance>1.8</MeleeDodgeChance>
                                 <MeleeDamageFactor>1.2</MeleeDamageFactor>
                             </statFactors>
                             <statOffsets>
@@ -388,7 +383,6 @@
                             <biostatMet>-2</biostatMet>
                             <statFactors>
                                 <StaggerDurationFactor>0.40</StaggerDurationFactor>
-                                <MeleeDodgeChance>2.6</MeleeDodgeChance>
                                 <MeleeDamageFactor>1.4</MeleeDamageFactor>
                             </statFactors>
                             <statOffsets>
@@ -422,7 +416,6 @@
                             <biostatMet>-4</biostatMet>
                             <statFactors>
                                 <StaggerDurationFactor>0.20</StaggerDurationFactor>
-                                <MeleeDodgeChance>4.2</MeleeDodgeChance>
                                 <MeleeDamageFactor>1.8</MeleeDamageFactor>
                             </statFactors>
                             <statOffsets>
@@ -798,8 +791,6 @@
                                 <value>
                                     <statFactors>
                                         <StaggerDurationFactor>0.82</StaggerDurationFactor>
-                                        <MeleeDodgeChance>1.03</MeleeDodgeChance>
-                                        <MeleeHitChance>1.05</MeleeHitChance>
                                         <MeleeParryChance>1.05</MeleeParryChance>
                                     </statFactors>
                                 </value>
@@ -817,8 +808,6 @@
                                 <value>
                                     <statFactors>
                                         <StaggerDurationFactor>0.64</StaggerDurationFactor>
-                                        <MeleeDodgeChance>1.06</MeleeDodgeChance>
-                                        <MeleeHitChance>1.10</MeleeHitChance>
                                         <MeleeParryChance>1.10</MeleeParryChance>
                                     </statFactors>
                                 </value>
@@ -836,8 +825,6 @@
                                 <value>
                                     <statFactors>
                                         <StaggerDurationFactor>0.28</StaggerDurationFactor>
-                                        <MeleeDodgeChance>1.12</MeleeDodgeChance>
-                                        <MeleeHitChance>1.20</MeleeHitChance>
                                         <MeleeParryChance>1.20</MeleeParryChance>
                                     </statFactors>
                                 </value>

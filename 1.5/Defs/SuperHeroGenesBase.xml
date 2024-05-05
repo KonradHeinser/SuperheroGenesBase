@@ -454,8 +454,8 @@
             <CarryingCapacity>50</CarryingCapacity>
             <CarryBulk MayRequire="ceteam.combatextended">25</CarryBulk>
             <MoveSpeed>3</MoveSpeed>
-            <MeleeDodgeChance>5</MeleeDodgeChance>
-            <MeleeHitChance>5</MeleeHitChance>
+            <MeleeDodgeChance>3</MeleeDodgeChance>
+            <MeleeHitChance>3</MeleeHitChance>
             <MentalBreakThreshold>-.15</MentalBreakThreshold>
             <PainShockThreshold>0.50</PainShockThreshold>
             <PawnBeauty>3</PawnBeauty>

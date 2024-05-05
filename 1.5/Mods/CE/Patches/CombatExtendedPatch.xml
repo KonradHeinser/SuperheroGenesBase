@@ -220,7 +220,6 @@
         <xpath>Defs/GeneDef[defName="SuperPerception"]/statFactors</xpath>
         <value>
             <statFactors>
-                <ShootingAccuracyPawn>1.66</ShootingAccuracyPawn>
                 <AimingAccuracy>1.5</AimingAccuracy>
                 <MeleeDodgeChance>1.1</MeleeDodgeChance>
                 <MeleeHitChance>1.2</MeleeHitChance>
@@ -277,8 +276,6 @@
         <value>
             <statFactors>
                 <StaggerDurationFactor>0.1</StaggerDurationFactor>
-                <MeleeDodgeChance>1.15</MeleeDodgeChance>
-                <MeleeHitChance>1.25</MeleeHitChance>
                 <MeleeParryChance>1.25</MeleeParryChance>
             </statFactors>
         </value>

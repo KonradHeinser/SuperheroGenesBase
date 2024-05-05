@@ -91,8 +91,6 @@
                             <biostatMet>-2</biostatMet>
                             <statFactors>
                                 <ResearchSpeed>2</ResearchSpeed>
-                                <DrugSynthesisSpeed>2</DrugSynthesisSpeed>
-                                <GeneralLaborSpeed>2</GeneralLaborSpeed>
                                 <GlobalLearningFactor>2</GlobalLearningFactor>
                                 <LearningRateFactor>2</LearningRateFactor>
                                 <HackingSpeed MayRequire="ludeon.rimworld.ideology">2</HackingSpeed>
@@ -117,9 +115,8 @@
                             <displayOrderInCategory>46</displayOrderInCategory>
                             <biostatMet>-1</biostatMet>
                             <statFactors>
-                                <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
-                                <MeleeDodgeChance>2</MeleeDodgeChance>
-                                <MeleeHitChance>2</MeleeHitChance>
+                                <MeleeDodgeChance>1.75</MeleeDodgeChance>
+                                <MeleeHitChance>1.5</MeleeHitChance>
                             </statFactors>
                             <capMods>
                                 <li>
@@ -166,7 +163,7 @@
                             <statFactors>
                                 <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
                                 <MeleeDodgeChance>3</MeleeDodgeChance>
-                                <MeleeHitChance>3</MeleeHitChance>
+                                <MeleeHitChance>2</MeleeHitChance>
                                 <PawnTrapSpringChance>0.50</PawnTrapSpringChance>
                                 <IncomingDamageFactor>0.95</IncomingDamageFactor>
                             </statFactors>
@@ -190,7 +187,6 @@
                             <biostatMet>-3</biostatMet>
                             <statFactors>
                                 <StaggerDurationFactor>0.40</StaggerDurationFactor>
-                                <MeleeDodgeChance>3.4</MeleeDodgeChance>
                                 <MeleeDamageFactor>1.6</MeleeDamageFactor>
                             </statFactors>
                             <statOffsets>
@@ -493,7 +489,6 @@
                                 <xpath>Defs/GeneDef[defName="SHG_SuperPerception1"]/statFactors</xpath>
                                 <value>
                                     <statFactors>
-                                        <ShootingAccuracyPawn>1.33</ShootingAccuracyPawn>
                                         <AimingAccuracy>1.25</AimingAccuracy>
                                         <MeleeDodgeChance>1.05</MeleeDodgeChance>
                                         <MeleeHitChance>1.1</MeleeHitChance>
@@ -520,8 +515,6 @@
                                 <value>
                                     <statFactors>
                                         <StaggerDurationFactor>0.55</StaggerDurationFactor>
-                                        <MeleeDodgeChance>1.09</MeleeDodgeChance>
-                                        <MeleeHitChance>1.15</MeleeHitChance>
                                         <MeleeParryChance>1.15</MeleeParryChance>
                                     </statFactors>
                                 </value>
