@@ -14,9 +14,10 @@ namespace SuperHeroGenesBase
         public float maxTendQuality = 0.7f; // Never over 1
         public List<HediffsToParts> hediffsToApply;
         public bool vanishingGene = false;
-
+        public SimpleCurve peopleToMoodCurve;
 
         public List<AbilityAndGeneLink> geneAbilities;
+        public NeedDef need;
 
         // Used in ThoughtWorker_Gene_GeneSocial
         public bool compoundingHatred = false; // When true, each gene that is found in checked genes increases the stage
@@ -29,8 +30,8 @@ namespace SuperHeroGenesBase
 
         public FactionDef faction; // For the tribute class, or anything else that needs a single faction
         public string category; // For the tribute class, or anything else that needs a category listing
-        public string descriptionOverrideA; //  // For the tribute acceptance, or anything else that needs a partial description override
-        public string descriptionOverrideB; //  // For the tribute acceptance, or anything else that needs a partial description override
-        public string descriptionOverrideC; //  // For the tribute acceptance, or anything else that needs a partial description override
+        public string descriptionOverrideA; // For the tribute acceptance, or anything else that needs a partial description override
+        public string descriptionOverrideB; // For the tribute acceptance, or anything else that needs a partial description override
+        public string descriptionOverrideC; // For the tribute acceptance, or anything else that needs a partial description override
     }
 }

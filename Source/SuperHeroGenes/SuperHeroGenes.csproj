@@ -217,6 +217,15 @@
     <Compile Include="Hediffs\Comps\HediffComp_TerrainCostOverride.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_TerrainCostOverride.cs" />
     <Compile Include="Hediffs\SHGCache_Component.cs" />
+    <Compile Include="Thoughts\Thought_Situational_PeopleInColony.cs" />
+    <Compile Include="Thoughts\ThoughtWorker_PeopleInColony.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_HediffsOnRemoval.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_HediffsOnRemoval.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_HemogenOnKill.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_HemogenOnKill.cs" />
+    <Compile Include="Need_BloodThirst.cs" />
+    <Compile Include="Thoughts\Thought_Situational_BasicCurveNeedMood.cs" />
+    <Compile Include="Thoughts\ThoughtWorker_BasicCurveNeedMood.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

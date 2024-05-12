@@ -627,4 +627,38 @@
             </li>
         </comps>
     </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase" MayRequire="Ludeon.Rimworld.Anomaly">
+        <defName>SHG_DetectMetalHorror</defName>
+        <label>detect metal horror</label>
+        <description>Place marks on the caster and everyone around them that will search through the targets' blood and nervous system for oddities. If a metal horror style oddity is found, the mark releases a pheromone that causes others to know that the individual is infected (it's just a hediff with nothing special).</description>
+        <iconPath>Things/Pawn/Metalhorror/Metalhorror_Mature_east</iconPath>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <aiCanUse>False</aiCanUse>
+        <hostile>False</hostile>
+        <statBases>
+            <Ability_EffectRadius>10</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>10</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <onlyTargetColonists>True</onlyTargetColonists>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityGiveMultipleHediffs">
+                <hediffsToGive>
+                    <li> <!--This one is just to notify the player for 15 in-game minutes-->
+                        <hediffDef>SHG_DetectMetalHorror</hediffDef>
+                        <severity>0.25</severity>
+                    </li>
+                    <li> <!--This one will either dissappear or suddenly become visible, depending on results-->
+                        <hediffDef>SHG_MetalHorrorDetected</hediffDef>
+                        <severity>0.1</severity>
+                    </li>
+                </hediffsToGive>
+            </li>
+        </comps>
+    </AbilityDef>
 </Defs>

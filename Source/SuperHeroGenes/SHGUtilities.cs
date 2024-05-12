@@ -4,10 +4,11 @@ using RimWorld;
 using System.Linq;
 using Verse.AI;
 using System;
+using UnityEngine;
 
 namespace SuperHeroGenesBase
 {
-    public class SHGUtilities
+    public static class SHGUtilities
     {
         public static bool TargetIsPawn(LocalTargetInfo target, out Pawn pawn)
         {
@@ -18,6 +19,17 @@ namespace SuperHeroGenesBase
             }
 
             pawn = null;
+            return false;
+        }
+
+        public static bool HasAnyOfRelatedGene(Pawn pawn, List<GeneDef> relatedGenes)
+        {
+            if (!ModsConfig.BiotechActive || pawn.genes == null) return false;
+
+            foreach (GeneDef gene in relatedGenes)
+            {
+                if (pawn.genes.HasGene(gene)) return true;
+            }
             return false;
         }
 
@@ -143,7 +155,7 @@ namespace SuperHeroGenesBase
             }
         }
 
-        public static void AddHediffToPart(Pawn pawn, BodyPartRecord bodyPart, HediffDef hediffDef, float initialSeverity = 1, float severityAdded = 0)
+        public static Hediff AddHediffToPart(Pawn pawn, BodyPartRecord bodyPart, HediffDef hediffDef, float initialSeverity = 1, float severityAdded = 0, bool onlyNew = false)
         {
             Hediff firstHediffOfDef = null;
             if (HasHediff(pawn, hediffDef))
@@ -160,19 +172,21 @@ namespace SuperHeroGenesBase
                 }
             }
 
-            if (firstHediffOfDef != null)
+            if (firstHediffOfDef != null && onlyNew) pawn.health.RemoveHediff(firstHediffOfDef);
+
+            if (firstHediffOfDef != null && !onlyNew)
             {
                 try
                 {
                     try // Try to make it a psylink
                     {
                         Hediff_Psylink hediff_Level = (Hediff_Psylink)firstHediffOfDef;
-                        hediff_Level.ChangeLevel((int)Math.Ceiling(severityAdded), false);
+                        hediff_Level.ChangeLevel(Mathf.CeilToInt(severityAdded), false);
                     }
                     catch // Try to make it a leveling hediff
                     {
                         Hediff_Level hediff_Level = (Hediff_Level)firstHediffOfDef;
-                        hediff_Level.ChangeLevel((int)Math.Ceiling(severityAdded));
+                        hediff_Level.ChangeLevel(Mathf.CeilToInt(severityAdded));
                     }
                 }
                 catch // Just increase the severity
@@ -185,6 +199,8 @@ namespace SuperHeroGenesBase
                 firstHediffOfDef = pawn.health.AddHediff(hediffDef, bodyPart);
                 firstHediffOfDef.Severity = initialSeverity;
             }
+
+            return firstHediffOfDef;
         }
 
         public static void RemoveHediffsFromParts(Pawn pawn, List<HediffsToParts> hediffs = null, HediffsToParts hediffToParts = null)
@@ -595,7 +611,7 @@ namespace SuperHeroGenesBase
                     totalWeight += xenoGeneSet.weightOfGeneSet;
                 }
 
-                double randomNumber = new Random().NextDouble() * totalWeight;
+                double randomNumber = new System.Random().NextDouble() * totalWeight;
                 foreach (RandomXenoGenes xenoGeneSet in geneSets)
                 {
                     if (randomNumber <= xenoGeneSet.weightOfGeneSet)

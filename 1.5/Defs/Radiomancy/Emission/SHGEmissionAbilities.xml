@@ -192,7 +192,7 @@
     <AbilityDef ParentName="SHGSelfCastBase">
         <defName>SHG_Radiomancer_IAmBecomeDeath</defName>
         <label>i am become death</label>
-        <description>Create a burst of energy containing every bit of radiation currently stored. The more radiation stored, the larger and more damaging this burst is. Radius is equal to half of the radiomancer's stored radiation, and damage is 10 times stored radiation at the center. The only safe pawn in this burst is the caster.\n\nThis ability usually leaves everything around the caster dead, and can outright destroy buildings at high radiation levels. At full radiation levels this can destroy almost everything on around 20-30% of the map. On the bright side, no radiation cleanup.</description>
+        <description>Create a burst of energy containing every bit of radiation currently stored. The more radiation stored, the larger and more damaging this burst is. Radius is equal to half of the radiomancer's stored radiation, and damage is 10 times stored radiation at the center. The only safe pawn in this burst is the caster.\n\nThis ability usually leaves everything around the caster dead, and can outright destroy buildings at high radiation levels. At full radiation levels, this can destroy almost everything on around 20-30% of the map. On the bright side, no radiation cleanup.</description>
         <iconPath>Radiomancer/Emission/Gene_Radiomancer_IAmBecomeDeath</iconPath>
         <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
         <verbProperties>

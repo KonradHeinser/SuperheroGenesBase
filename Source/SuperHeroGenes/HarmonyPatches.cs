@@ -46,6 +46,8 @@ namespace SuperHeroGenesBase
                   prefix: new HarmonyMethod(patchType, nameof(TakeDamagePrefix)));
             harmony.Patch(AccessTools.Method(typeof(Pawn_PathFollower), "CostToMoveIntoCell", new[] { typeof(Pawn), typeof(IntVec3) }),
                   postfix: new HarmonyMethod(patchType, nameof(CostToMoveIntoCellPostfix)));
+            harmony.Patch(AccessTools.Method(typeof(Pawn), "DoKillSideEffects"),
+                postfix: new HarmonyMethod(patchType, nameof(DoKillSideEffectsPostfix)));
         }
 
 
@@ -229,6 +231,14 @@ namespace SuperHeroGenesBase
                     if (terrainComp.universalCostOverride >= 0) __result = num + terrainComp.universalCostOverride;
                 }
             }
+        }
+
+        public static void DoKillSideEffectsPostfix(DamageInfo? dinfo, Hediff exactCulprit, bool spawned, Pawn __instance)
+        {
+            if (dinfo?.Instigator != null && dinfo.Value.Instigator is Pawn pawn && pawn.needs != null && !pawn.needs.AllNeeds.NullOrEmpty())
+                foreach (Need need in pawn.needs.AllNeeds)
+                    if (need is Need_BloodThirst bloodThirst)
+                        bloodThirst.Notify_KilledPawn(dinfo, __instance);
         }
     }
 }

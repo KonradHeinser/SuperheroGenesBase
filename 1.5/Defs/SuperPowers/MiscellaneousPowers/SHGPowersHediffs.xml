@@ -223,4 +223,57 @@
             </li>
         </stages>
 	</HediffDef>
+
+    <HediffDef MayRequire="Ludeon.Rimworld.Anomaly">
+        <defName>SHG_DetectMetalHorror</defName>
+        <label>detect metal horror</label>
+        <description>A super put a special invisible mark on this pawn that searches their body for hidden metal horrors. It will not be able to tell where the exact location of the target is within the pawn as it uses oddities in the marked pawn's blood and nervous system as an indicator. If this goes away without metal horror detected appearing, the pawn is safe. For now.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-24</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef MayRequire="Ludeon.Rimworld.Anomaly">
+        <defName>SHG_MetalHorrorDetected</defName>
+        <label>metal horror detected</label>
+        <description>This pawn has a metal horror somewhere within them. You still need to do surgery stuff to find the exact location, but at least you know to be ready now. Note: If something removes the horror, then this should go away on its own. This usually occurs due to the surgery or it popping out, but any other means should also be covered. This hediff will remain even after the intial detection hediff is gone.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.9, 0.35, 0.35)</defaultLabelColor>
+        <stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>0.2</minSeverity>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityByOtherHediffSeverities">
+                <hediffSets>
+                    <li>
+                        <hediff>MetalhorrorImplant</hediff>
+                    </li>
+                </hediffSets>
+                <baseSeverity>0</baseSeverity>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef MayRequireAnyOf="Ludeon.RimWorld.Royalty, SHG.PsionicResourceGene">
+        <defName>SHG_Flaw_Moonbound</defName>
+        <label>moonbound</label>
+        <description>If standing in an area with over 40% brightness, this psionist will lose all psychic sensitivity.</description>
+        <stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>1</minSeverity>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>

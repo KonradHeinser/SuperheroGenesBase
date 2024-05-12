@@ -1,4 +1,5 @@
 ﻿using Verse;
+using System.Collections.Generic;
 
 namespace SuperHeroGenesBase
 {
@@ -6,7 +7,11 @@ namespace SuperHeroGenesBase
     {
         public HediffDef hediffDef;
 
+        public List<HediffDef> hediffDefs;
+
         public bool onlyBrain;
+
+        public List<BodyPartDef> bodyParts;
 
         public bool applyToSelf;
 

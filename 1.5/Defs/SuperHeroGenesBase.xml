@@ -235,6 +235,7 @@
 
     <GeneDef Name="SHG_FlawBase" Abstract="True">
         <displayCategory>SuperFlaws</displayCategory>
+        <prerequisite>SuperHeroBase</prerequisite>
         <biostatCpx>0</biostatCpx>
     </GeneDef>
 

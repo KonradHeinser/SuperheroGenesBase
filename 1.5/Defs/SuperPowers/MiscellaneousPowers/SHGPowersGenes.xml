@@ -462,4 +462,18 @@
 		</modExtensions>
     </GeneDef>
 
+    <GeneDef ParentName="SuperPowersSupportBase" MayRequire="Ludeon.Rimworld.Anomaly">
+        <defName>SHG_DetectMetalHorror</defName>
+        <label>detect metal horror</label>
+        <description>Carriers of this gene can place marks on themselves and everyone around them that will search through the targets' blood and nervous system for oddities. If a metal horror style oddity is found, the mark releases a pheromone that causes others to know that the individual is infected.</description>
+        <iconPath>Things/Pawn/Metalhorror/Metalhorror_Mature_east</iconPath>
+        <biostatMet>-3</biostatMet>
+        <customEffectDescriptions>
+            <li>The exact location of a metal horror detected this way is still unknown, meaning they still need to undergo surgeries, but also won't have a metal horror popping out immediately due to this detection.</li>
+            <li>The ability will apply two hediffs, one that lasts very briefly to let you know the pawn is being searched, and another that only appears if the search finds something. The second one will remain until the hidden horror is gone for any reason.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_DetectMetalHorror</li>
+        </abilities>
+    </GeneDef>
 </Defs>

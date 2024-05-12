@@ -1,17 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="ModSettings/SuperheroGenes_Settings.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Hediffs/CompProperties/HediffCompProperties_HemogenOnKill.cs">
     <Files>
-      <File FileName="ModSettings/PatchOperationSetting.cs" Line="53" Column="55" />
-      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="52" Column="50" />
+      <File FileName="Hediffs/CompProperties/HediffCompProperties_HemogenOnKill.cs" Line="20" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="ModSettings" expanded="True">
-                <Node name="SuperheroGenes_Settings.cs" selected="True" />
+              <Node name="Hediffs" expanded="True">
+                <Node name="CompProperties" expanded="True">
+                  <Node name="HediffCompProperties_HemogenOnKill.cs" selected="True" />
+                </Node>
+                <Node name="Comps" expanded="True" />
               </Node>
+              <Node name="Thoughts" expanded="True" />
             </Node>
           </Node>
         </State>

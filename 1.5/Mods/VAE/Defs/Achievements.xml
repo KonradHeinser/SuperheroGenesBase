@@ -134,7 +134,7 @@
 		<points>25</points>
 	</AchievementsExpanded.AchievementDef>
 
-	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
 		<defName>SHG_ItsLikeRemovingAndRegrowingALimb</defName>
 		<label>It's Like Removing and Regrowing a Limb</label>
 		<description>Use the Hemomorph's Starfish split ability. Please don't try this at home.</description>
