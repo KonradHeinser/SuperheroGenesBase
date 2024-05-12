@@ -262,18 +262,4 @@
             </li>
         </comps>
     </HediffDef>
-
-    <HediffDef MayRequireAnyOf="Ludeon.RimWorld.Royalty, SHG.PsionicResourceGene">
-        <defName>SHG_Flaw_Moonbound</defName>
-        <label>moonbound</label>
-        <description>If standing in an area with over 40% brightness, this psionist will lose all psychic sensitivity.</description>
-        <stages>
-			<li>
-				<becomeVisible>false</becomeVisible>
-            </li>
-            <li>
-                <minSeverity>1</minSeverity>
-            </li>
-        </stages>
-    </HediffDef>
 </Defs>
