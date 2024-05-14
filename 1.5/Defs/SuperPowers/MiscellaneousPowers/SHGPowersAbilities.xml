@@ -620,7 +620,7 @@
             <Ability_Duration>42</Ability_Duration>
         </statBases>
         <comps>
-            <li Class = "CompProperties_AbilityGiveHediff">
+            <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>SHG_Soaring</hediffDef>
                 <onlyBrain>True</onlyBrain>
