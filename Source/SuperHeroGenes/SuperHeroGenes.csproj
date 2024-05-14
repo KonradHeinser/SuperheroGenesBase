@@ -226,6 +226,8 @@
     <Compile Include="Need_BloodThirst.cs" />
     <Compile Include="Thoughts\Thought_Situational_BasicCurveNeedMood.cs" />
     <Compile Include="Thoughts\ThoughtWorker_BasicCurveNeedMood.cs" />
+    <Compile Include="Abilities\CompAbilityEffect_TeleMoveIt.cs" />
+    <Compile Include="Abilities\CompProperties_AbilityTeleMoveIt.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

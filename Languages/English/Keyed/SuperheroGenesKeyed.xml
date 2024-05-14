@@ -9,6 +9,7 @@
     <AbilityTooFarToTeleport>This tile is too far for this teleportation ability</AbilityTooFarToTeleport>
     <SHG_NeedOffsets>Base need offsets:</SHG_NeedOffsets>
     <SHG_Random>Random option</SHG_Random>
+    <SHG_DestinationBlocked>Something is blocking the destination.</SHG_DestinationBlocked>
 
         <!--Item Creator-->
     <AbilityWater>Must target an area without water.</AbilityWater>

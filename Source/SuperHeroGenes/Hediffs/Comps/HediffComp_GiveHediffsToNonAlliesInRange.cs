@@ -12,39 +12,33 @@ namespace SuperHeroGenesBase
 
         public override void CompPostTick(ref float severityAdjustment)
         {
-            if (!parent.pawn.Awake() || parent.pawn.health == null || parent.pawn.health.InPainShock || !parent.pawn.Spawned || (Props.onlyWhileDrafted && !Pawn.Drafted))
-            {
+            if (!Pawn.Awake() || Pawn.health == null || Pawn.health.InPainShock || !Pawn.Spawned || (Props.onlyWhileDrafted && !Pawn.Drafted && Pawn.IsPlayerControlled))
                 return;
-            }
 
-            // Get all a list of all pawns, and a list of all player pawns
+            // Get all a list of all pawns, and a list of all allied pawns
             List<Pawn> list = parent.pawn.Map.mapPawns.AllPawns;
-            list.SortBy((Pawn c) => c.Position.DistanceToSquared(parent.pawn.Position));
-            List<Pawn> allies = parent.pawn.Map.mapPawns.SpawnedPawnsInFaction(parent.pawn.Faction);
-            if (!Props.hideMoteWhenNotDrafted || parent.pawn.Drafted)
+            list.SortBy((Pawn c) => c.Position.DistanceToSquared(Pawn.Position));
+            List<Pawn> allies = Pawn.Map.mapPawns.SpawnedPawnsInFaction(Pawn.Faction);
+
+            if (!Props.hideMoteWhenNotDrafted || Pawn.Drafted)
             {
                 if (Props.mote != null && (mote == null || mote.Destroyed))
-                {
                     mote = MoteMaker.MakeAttachedOverlay(parent.pawn, Props.mote, Vector3.zero);
-                }
                 if (mote != null)
-                {
                     mote.Maintain();
-                }
             }
 
             if (!list.NullOrEmpty())
             {
+                float range = Props.rangeStat != null ? Pawn.GetStatValue(Props.rangeStat) : Props.range;
                 foreach (Pawn item in list)
                 {
                     if (allies.Contains(item) || (item.Faction != null && item.Faction.AllyOrNeutralTo(Pawn.Faction))) continue; // If it's an ally/non-enemy
                     if (item.Dead || item.health == null || (Props.targetingParameters != null && !Props.targetingParameters.CanTarget(item))) continue;
-                    if (Props.rangeStat != null)
-                    {
-                        if (!(item.Position.DistanceTo(parent.pawn.Position) <= parent.pawn.GetStatValue(Props.rangeStat))) break;
-                    }
-                    else if (!(item.Position.DistanceTo(parent.pawn.Position) <= Props.range)) break;
+
+                    if (item.Position.DistanceTo(Pawn.Position) > range) break;
                     if (Props.psychic && item.GetStatValue(StatDefOf.PsychicSensitivity) == 0) continue;
+
                     Hediff hediff = item.health.hediffSet.GetFirstHediffOfDef(Props.hediff);
                     if (hediff == null)
                     {
@@ -59,13 +53,9 @@ namespace SuperHeroGenesBase
                     }
                     HediffComp_Disappears hediffComp_Disappears = hediff.TryGetComp<HediffComp_Disappears>();
                     if (hediffComp_Disappears == null)
-                    {
                         Log.Error("HediffComp_GiveHediffsToNonAlliesInRange has a hediff in props which does not have a HediffComp_Disappears");
-                    }
                     else
-                    {
-                        hediffComp_Disappears.ticksToDisappear = 5;
-                    }
+                        hediffComp_Disappears.ticksToDisappear = 20;
                 }
             }
         }
