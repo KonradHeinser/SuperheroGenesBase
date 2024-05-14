@@ -30,6 +30,23 @@
         </comps>
     </AbilityDef>
 
+    <AbilityDef ParentName="SHGSummoningBase" MayRequire="Ludeon.Rimworld.Anomaly">
+        <defName>SHG_SummonShard</defName>
+        <label>summon shard</label>
+        <description>Pull a shard of some dark archotechnology from some unknown pit of hell to a location of your choosing. Maybe you'll deal with that pit later when they reveal themselves.</description>
+        <iconPath>Things/Item/Resource/Shard/Shard_a</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityCreateItems">
+                <thingPattern>
+                    <li>
+                        <thing>Shard</thing>
+                        <count>1</count>
+                    </li>
+                </thingPattern>
+            </li>
+        </comps>
+    </AbilityDef>
+
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonEnhancedCorn</defName>
         <label>summon enhanced corn</label>

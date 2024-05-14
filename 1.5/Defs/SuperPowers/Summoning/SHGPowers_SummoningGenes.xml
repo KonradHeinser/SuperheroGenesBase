@@ -40,6 +40,20 @@
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersSummoningBase">
+        <defName>SHG_SummonShard</defName>
+        <label>summon shard</label>
+        <description>Carriers of this gene can pull a shard of some dark archotechnology from an unknown pit of hell to a location of their choosing once per quadrum.</description>
+        <iconPath>Things/Item/Resource/Shard/Shard_a</iconPath>
+        <displayOrderInCategory>1.5</displayOrderInCategory>
+        <abilities>
+            <li>SHG_SummonShard</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SummonShard</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonEnhancedCorn</defName>
         <label>summon enhanced corn</label>
         <description>Carriers of this gene can summon a super enhanced corn plant at a location once per quadrum. The plant will be able to grow even if placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. The issue shouldn't cause any gameplay issues, it will just look strange.</description>
