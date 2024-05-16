@@ -20,7 +20,7 @@
     <HediffDef>
         <defName>SHG_Psionist_PsionicTerrorizer</defName>
         <label>psionic terrorizer</label>
-        <description>This Empath is multiplying their arrest success chance and supression (if ideology is enabled) by 1.5 * psychic sensitivity.</description>
+        <description>This Empath is multiplying their arrest success chance and suppression (if ideology is enabled) by 1.5 * psychic sensitivity.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
         <stages>

@@ -180,8 +180,10 @@
             <li />
         </stages>
         <comps>
-            <li Class="HediffCompProperties">
-                <compClass>HediffComp_Invisibility</compClass>
+            <li Class="HediffCompProperties_Invisibility">
+                <visibleToPlayer>false</visibleToPlayer>
+                <fadeDurationTicks>60</fadeDurationTicks>
+                <recoverFromDisruptedTicks>90</recoverFromDisruptedTicks>
             </li>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-24</severityPerDay>

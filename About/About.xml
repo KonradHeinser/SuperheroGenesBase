@@ -3,7 +3,6 @@
   <name>Superhero Genes - Base</name>
   <author>alite</author>
   <packageId>SuperheroGenesBase.Mod</packageId>
-  <modIconPath IgnoreIfNoMatchingField="True">Base/SuperheroGeneBase</modIconPath>
   <supportedVersions>
     <li>1.4</li>
     <li>1.5</li>
