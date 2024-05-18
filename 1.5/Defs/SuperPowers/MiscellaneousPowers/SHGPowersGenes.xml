@@ -414,7 +414,7 @@
     <GeneDef ParentName="SuperPowersOffensiveBase">
         <defName>SHG_NewLaserEyes</defName>
         <label>superhero laser eyes</label>
-        <description>A version of the laser eyes gene that has been enhanced by the superhero gene, creating an even stronger laser.\n\nPlease make sure you go give Biotech Gene: Laser-Eyes a thumbs up for making this gene possible. Now on with the lasering!</description>
+        <description>Superheroes with this gene can shoot powerful lasers from their eyes.\n\nPlease make sure you go give Biotech Gene: Laser-Eyes a thumbs up for making this gene possible. Now on with the lasering!</description>
         <iconPath>Powers/LaserEyes</iconPath>
         <displayOrderInCategory>999</displayOrderInCategory>
         <marketValueFactor>5</marketValueFactor>

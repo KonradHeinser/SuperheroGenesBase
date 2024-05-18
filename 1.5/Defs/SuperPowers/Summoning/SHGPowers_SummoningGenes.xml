@@ -39,7 +39,7 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperPowersSummoningBase">
+    <GeneDef ParentName="SuperPowersSummoningBase" MayRequire="Ludeon.Rimworld.Anomaly">
         <defName>SHG_SummonShard</defName>
         <label>summon shard</label>
         <description>Carriers of this gene can pull a shard of some dark archotechnology from an unknown pit of hell to a location of their choosing once per quadrum.</description>

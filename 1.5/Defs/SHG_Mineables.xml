@@ -103,7 +103,9 @@
             <shaderType>CutoutComplex</shaderType>
         </graphicData>
         <building>
-            <isResourceRock>true</isResourceRock>
+            <claimable>false</claimable>
+            <isResourceRock>false</isResourceRock>
+            <isNaturalRock>false</isNaturalRock>
             <mineableScatterCommonality>0</mineableScatterCommonality>
             <mineableScatterLumpSizeRange>0</mineableScatterLumpSizeRange>
         </building>
