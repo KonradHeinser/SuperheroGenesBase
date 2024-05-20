@@ -1124,6 +1124,33 @@
         </exclusionTags>
     </GeneDef>
 
+    <GeneDef ParentName="SHG_ArchetypeBase" MayRequire="EBSG.Framework">
+        <defName>SHG_Archetypes_MonsterSlayer</defName>
+        <label>monster slayer</label>
+        <description>All across the land there are beasts and machines and unimaginable horrors that seek to wipe out all human life, and monster slayers seek to return the favor. Their supernatural precision allows them to take down many of these foes with ease, and their telepush and telepull abilities allow them to make sure those foes will be right where the slayer needs them to be.</description>
+        <iconPath>Archetypes/Gene_MonsterSlayer</iconPath>
+        <biostatMet>-4</biostatMet>
+        <statFactors>
+            <EBSG_OutgoingDamageFactor_Entity MayRequire="Ludeon.Rimworld.Anomaly">5</EBSG_OutgoingDamageFactor_Entity>
+            <EBSG_OutgoingDamageFactor_Mechanoid>3</EBSG_OutgoingDamageFactor_Mechanoid>
+            <EBSG_OutgoingDamageFactor_Animal>1.5</EBSG_OutgoingDamageFactor_Animal>
+        </statFactors>
+        <abilities>
+            <li MayRequire="Ludeon.Rimworld.Anomaly">SHG_DetectMetalHorror</li>
+            <li>SHG_Telepush</li>
+            <li>SHG_Telepull</li>
+        </abilities>
+        <modExtensions>
+            <li Class="EBSGFramework.EBSGExtension">
+                <conflictingGenes>
+                    <li MayRequire="Ludeon.Rimworld.Anomaly">SHG_DetectMetalHorror</li>
+                    <li>SHG_Telepush</li>
+                    <li>SHG_Telepull</li>
+                </conflictingGenes>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_DormantSuper</defName>
         <label>dormant super</label>

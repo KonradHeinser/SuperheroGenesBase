@@ -661,4 +661,50 @@
             </li>
         </comps>
     </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Telepush</defName>
+        <label>telepush</label>
+        <description>Attempt to teleport a target backwards a bit and stun it for 10 seconds. In the event that the would-be destination is off the map or into an impassable location, this ability will not be usable on the target until it has moved into a valid location. This makes it much harder to use in caves and mountainous regions.</description>
+        <iconPath>Powers/Gene_Telepush</iconPath>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <verbProperties>
+            <range>30</range>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetLocations>False</canTargetLocations>
+                <canTargetPlants>False</canTargetPlants>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityTeleMoveIt">
+                <stunTicks>600</stunTicks>
+                <distanceToMoveIt>20</distanceToMoveIt>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Telepull</defName>
+        <label>telepull</label>
+        <description>Attempt to teleport a target towards the caster a bit and stun it for 10 seconds. In the event that the would-be destination is an impassable location, this ability will not be usable on the target until it has moved into a valid location. This makes it much harder to use in caves and mountainous regions. If the target is close enough to the caster, it will be teleported to the caster.</description>
+        <iconPath>Powers/Gene_Telepull</iconPath>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <verbProperties>
+            <range>100</range>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetLocations>False</canTargetLocations>
+                <canTargetPlants>False</canTargetPlants>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityTeleMoveIt">
+                <stunTicks>600</stunTicks>
+                <distanceToMoveIt>-20</distanceToMoveIt>
+            </li>
+        </comps>
+    </AbilityDef>
 </Defs>

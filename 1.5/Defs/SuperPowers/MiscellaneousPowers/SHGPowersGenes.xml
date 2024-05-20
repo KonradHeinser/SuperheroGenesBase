@@ -476,4 +476,26 @@
             <li>SHG_DetectMetalHorror</li>
         </abilities>
     </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Telepush</defName>
+        <label>telepush</label>
+        <description>Carriers of this gene can attempt to teleport a target backwards a bit, assuming the area behind the target is clear.</description>
+        <iconPath>Powers/Gene_Telepush</iconPath>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>SHG_Telepush</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Telepull</defName>
+        <label>telepull</label>
+        <description>Carriers of this gene can attempt to teleport a target backwards a bit, assuming the area behind the target is clear.</description>
+        <iconPath>Powers/Gene_Telepull</iconPath>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>SHG_Telepull</li>
+        </abilities>
+    </GeneDef>
 </Defs>
