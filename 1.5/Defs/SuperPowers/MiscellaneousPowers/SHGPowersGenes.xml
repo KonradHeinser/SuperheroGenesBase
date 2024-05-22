@@ -491,7 +491,7 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Telepull</defName>
         <label>telepull</label>
-        <description>Carriers of this gene can attempt to teleport a target backwards a bit, assuming the area behind the target is clear.</description>
+        <description>Carriers of this gene can attempt to teleport a target towards the caster a bit, or to the caster if the target is close enough.</description>
         <iconPath>Powers/Gene_Telepull</iconPath>
         <biostatMet>-2</biostatMet>
         <abilities>
