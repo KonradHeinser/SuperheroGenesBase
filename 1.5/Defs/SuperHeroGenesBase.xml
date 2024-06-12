@@ -31,61 +31,61 @@
     <GeneCategoryDef>
         <defName>SuperGenes</defName>
         <label>super genes</label>
-        <displayPriorityInXenotype>999.9</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.899</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperMutations</defName>
         <label>super mutations</label>
-        <displayPriorityInXenotype>999.8</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.898</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperFlaws</defName>
         <label>super flaws</label>
-        <displayPriorityInXenotype>999.7</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.897</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersArchetypes</defName>
         <label>super powers - archetypes</label>
-        <displayPriorityInXenotype>999.6</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.896</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersSpecialization</defName>
         <label>super powers - specialization</label>
-        <displayPriorityInXenotype>999.4</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.895</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersPools</defName>
         <label>super powers - pool manipulation</label>
-        <displayPriorityInXenotype>999.3</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.894</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersOffensive</defName>
         <label>super powers - attacks</label>
-        <displayPriorityInXenotype>999.2</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.893</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersSupport</defName>
         <label>super powers - supports</label>
-        <displayPriorityInXenotype>999.1</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.892</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersSummoning</defName>
         <label>super powers - summoning</label>
-        <displayPriorityInXenotype>999.0</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.891</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersResize</defName>
         <label>super powers - resize - WARNING: Abilities have a chance to make Rimworld go into the fetal position. Use at own risk.</label>
-        <displayPriorityInXenotype>998.9</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.879</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <!--This section(990~999.9) is intended for "Official" Superhero Genes categories. 
@@ -95,43 +95,43 @@
     <GeneCategoryDef>
         <defName>SuperPowersPsychicDimensional</defName>
         <label>psionist powers - dimensional</label>
-        <displayPriorityInXenotype>989.9</displayPriorityInXenotype>
+        <displayPriorityInXenotype>989.999</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersPsychicCommander</defName>
         <label>psionist powers - commander</label>
-        <displayPriorityInXenotype>989.8</displayPriorityInXenotype>
+        <displayPriorityInXenotype>989.998</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersPsychicGuardian</defName>
         <label>psionist powers - guardian</label>
-        <displayPriorityInXenotype>989.7</displayPriorityInXenotype>
+        <displayPriorityInXenotype>989.997</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersPsychicTyrant</defName>
         <label>psionist powers - tyrant</label>
-        <displayPriorityInXenotype>989.6</displayPriorityInXenotype>
+        <displayPriorityInXenotype>989.996</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersPsychicSoldier</defName>
         <label>psionist powers - soldier</label>
-        <displayPriorityInXenotype>989.5</displayPriorityInXenotype>
+        <displayPriorityInXenotype>989.995</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersPsychicEmpath</defName>
         <label>psionist powers - empath</label>
-        <displayPriorityInXenotype>989.4</displayPriorityInXenotype>
+        <displayPriorityInXenotype>989.994</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersPsychicDebuffer</defName>
         <label>psionist powers - debuffer</label>
-        <displayPriorityInXenotype>989.3</displayPriorityInXenotype>
+        <displayPriorityInXenotype>989.993</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <!--980.0~988.9 are for outside paths. If base reaches this far, it's gone too far-->
@@ -139,25 +139,25 @@
     <GeneCategoryDef>
         <defName>SuperPowersHemoThief</defName>
         <label>hemogen powers - hemothief</label>
-        <displayPriorityInXenotype>979.9</displayPriorityInXenotype>
+        <displayPriorityInXenotype>979.999</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersHemoIntiate</defName>
         <label>hemogen powers - hemoinitiate</label>
-        <displayPriorityInXenotype>979.8</displayPriorityInXenotype>
+        <displayPriorityInXenotype>979.998</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersHemoWarrior</defName>
         <label>hemogen powers - hemowarrior</label>
-        <displayPriorityInXenotype>979.7</displayPriorityInXenotype>
+        <displayPriorityInXenotype>979.997</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersHemoShifter</defName>
         <label>hemogen powers - hemoshifter</label>
-        <displayPriorityInXenotype>979.6</displayPriorityInXenotype>
+        <displayPriorityInXenotype>979.996</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <!--970.0~978.9 are for outside paths. If base reaches this far, it's gone too far-->
@@ -165,25 +165,25 @@
     <GeneCategoryDef>
         <defName>SuperPowersRadiomancyDecay</defName>
         <label>radiomancy powers - decay</label>
-        <displayPriorityInXenotype>969.9</displayPriorityInXenotype>
+        <displayPriorityInXenotype>969.999</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersRadiomancyEmission</defName>
         <label>radiomancy powers - emission</label>
-        <displayPriorityInXenotype>969.8</displayPriorityInXenotype>
+        <displayPriorityInXenotype>969.998</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersRadiomancyFission</defName>
         <label>radiomancy powers - fission</label>
-        <displayPriorityInXenotype>969.7</displayPriorityInXenotype>
+        <displayPriorityInXenotype>969.997</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>SuperPowersRadiomancyFusion</defName>
         <label>radiomancy powers - fusion</label>
-        <displayPriorityInXenotype>969.6</displayPriorityInXenotype>
+        <displayPriorityInXenotype>969.996</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <!--960.0~968.9 are for outside paths. If base reaches this far, it's gone too far-->
@@ -194,13 +194,13 @@
     <GeneCategoryDef> 
         <defName>SHG_Resistances</defName>
         <label>SHG Resistances</label>
-        <displayPriorityInXenotype>899.9</displayPriorityInXenotype>
+        <displayPriorityInXenotype>899.999</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef> 
         <defName>SHG_XenotypeRandomizer</defName>
         <label>SHG xenotype randomizer</label>
-        <displayPriorityInXenotype>899.8</displayPriorityInXenotype>
+        <displayPriorityInXenotype>899.998</displayPriorityInXenotype>
     </GeneCategoryDef>
 
         <!--Basic bases-->
