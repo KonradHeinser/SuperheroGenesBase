@@ -327,6 +327,7 @@
                 <severity>0.6</severity>
                 <applicableToMechs>False</applicableToMechs>
                 <onlyBrain>True</onlyBrain>
+                <ignoreSelf>True</ignoreSelf>
             </li>
         </comps>
     </AbilityDef>
@@ -445,6 +446,7 @@
             <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
                 <hediffDef>SHG_Psionist_YouWillSubmit</hediffDef>
+                <ignoreSelf>True</ignoreSelf>
             </li>
         </comps>
     </AbilityDef>
@@ -479,6 +481,7 @@
                 <severity>0.999</severity>
                 <applicableToMechs>False</applicableToMechs>
                 <onlyBrain>True</onlyBrain>
+                <ignoreSelf>True</ignoreSelf>
             </li>
         </comps>
     </AbilityDef>
