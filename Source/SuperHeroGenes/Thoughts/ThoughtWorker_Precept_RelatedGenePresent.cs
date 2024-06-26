@@ -43,7 +43,7 @@ namespace SuperHeroGenesBase
             {
                 return false;
             }
-            return pawn.genes.HasGene(relatedGene);
+            return SHGUtilities.HasRelatedGene(pawn, relatedGene);
         }
     }
 }

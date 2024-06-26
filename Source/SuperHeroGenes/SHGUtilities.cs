@@ -22,13 +22,19 @@ namespace SuperHeroGenesBase
             return false;
         }
 
+        public static bool HasRelatedGene(Pawn pawn, GeneDef relatedGene)
+        {
+            if (!ModsConfig.BiotechActive || pawn.genes == null || relatedGene == null) return false;
+            return pawn.genes.HasActiveGene(relatedGene);
+        }
+
         public static bool HasAnyOfRelatedGene(Pawn pawn, List<GeneDef> relatedGenes)
         {
             if (!ModsConfig.BiotechActive || pawn.genes == null) return false;
 
             foreach (GeneDef gene in relatedGenes)
             {
-                if (pawn.genes.HasGene(gene)) return true;
+                if (HasRelatedGene(pawn, gene)) return true;
             }
             return false;
         }
@@ -528,14 +534,14 @@ namespace SuperHeroGenesBase
             {
                 foreach (GeneDef gene in geneDefs)
                 {
-                    if (!pawn.genes.HasGene(gene)) return false;
+                    if (!HasRelatedGene(pawn, gene)) return false;
                 }
             }
             if (!genes.NullOrEmpty())
             {
                 foreach (Gene gene in genes)
                 {
-                    if (!pawn.genes.HasGene(gene.def)) return false;
+                    if (!HasRelatedGene(pawn, gene.def)) return false;
                 }
             }
 
@@ -567,7 +573,7 @@ namespace SuperHeroGenesBase
 
             if (gene != null)
             {
-                if (!pawn.genes.HasGene(gene))
+                if (!HasRelatedGene(pawn, gene))
                 {
                     pawn.genes.AddGene(gene, xenogene);
                     addedGenes.Add(gene);
@@ -578,7 +584,7 @@ namespace SuperHeroGenesBase
             {
                 foreach (GeneDef geneDef in genes)
                 {
-                    if (!pawn.genes.HasGene(geneDef))
+                    if (!HasRelatedGene(pawn, geneDef))
                     {
                         pawn.genes.AddGene(geneDef, xenogene);
                         addedGenes.Add(geneDef);

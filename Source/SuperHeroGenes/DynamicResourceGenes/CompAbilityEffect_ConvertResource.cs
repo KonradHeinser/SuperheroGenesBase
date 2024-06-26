@@ -47,12 +47,12 @@ namespace SuperHeroGenesBase
 
         public override bool GizmoDisabled(out string reason)
         {
-            if (!parent.pawn.genes.HasGene(Props.giver))
+            if (!SHGUtilities.HasRelatedGene(parent.pawn, Props.giver))
             {
                 reason = "AbilityDisabledNoResourceGene".Translate(parent.pawn, Props.giver.LabelCap);
                 return true;
             }
-            if (!parent.pawn.genes.HasGene(Props.receiver))
+            if (!SHGUtilities.HasRelatedGene(parent.pawn, Props.receiver))
             {
                 reason = "AbilityDisabledNoResourceGene".Translate(parent.pawn, Props.receiver.LabelCap);
                 return true;
