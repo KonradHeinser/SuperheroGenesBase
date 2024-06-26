@@ -1,7 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/ThinkNode_ConditionalHasTargetNoFriendlyFire.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/JobGiver_AICastHealingAbility.cs">
     <Files>
       <File FileName="SuperAI/ThinkNode_ConditionalHasTargetNoFriendlyFire.cs" Line="34" Column="61" />
+      <File FileName="SuperAI/JobGiver_AICastAnyOfAbilityOnEnemyTarget.cs" Line="26" Column="13" />
+      <File FileName="SuperAI/JobGiver_AICastBerserkAbility.cs" Line="62" Column="78" />
+      <File FileName="SuperAI/JobGiver_AICastHealingAbility.cs" Line="29" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -9,7 +12,7 @@
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
               <Node name="SuperAI" expanded="True">
-                <Node name="ThinkNode_ConditionalHasTargetNoFriendlyFire.cs" selected="True" />
+                <Node name="JobGiver_AICastHealingAbility.cs" selected="True" />
               </Node>
             </Node>
           </Node>

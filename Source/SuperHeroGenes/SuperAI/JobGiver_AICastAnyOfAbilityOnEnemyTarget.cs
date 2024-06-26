@@ -17,11 +17,13 @@ namespace SuperHeroGenesBase
 
         protected override Job TryGiveJob(Pawn pawn) // Change this to select its own target instead of using the pawn's current one
         {
-            presentAbilities.Clear();
-            chosenAbility = null;
             if (!pawn.IsHashIntervalTick(hashInterval)) return null;
             currentEnemy = SHGUtilities.GetCurrentTarget(pawn);
-            if (currentEnemy == null) return null;
+            if (currentEnemy == null || !currentEnemy.HostileTo(pawn)) return null;
+
+            presentAbilities.Clear();
+            chosenAbility = null;
+
             IntVec3 enemyPosition = currentEnemy.Position;
             bool los = GenSight.LineOfSight(pawn.Position, enemyPosition, pawn.Map);
             foreach (AbilityDef abilityDef in abilities)
