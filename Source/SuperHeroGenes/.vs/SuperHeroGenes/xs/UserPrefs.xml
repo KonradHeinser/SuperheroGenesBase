@@ -1,19 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/JobGiver_AICastHealingAbility.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/ThinkNode_ConditionalHighResourceLevels.cs">
     <Files>
-      <File FileName="SuperAI/ThinkNode_ConditionalHasTargetNoFriendlyFire.cs" Line="34" Column="61" />
-      <File FileName="SuperAI/JobGiver_AICastAnyOfAbilityOnEnemyTarget.cs" Line="26" Column="13" />
-      <File FileName="SuperAI/JobGiver_AICastBerserkAbility.cs" Line="62" Column="78" />
-      <File FileName="SuperAI/JobGiver_AICastHealingAbility.cs" Line="29" Column="13" />
+      <File FileName="Abilities/Verb_CastAbilityLaserEyes.cs" Line="140" Column="10" />
+      <File FileName="SuperAI/ThinkNode_ConditionalHighResourceLevels.cs" Line="29" Column="1" />
+      <File FileName="DynamicResourceGenes/CompAbilityEffect_ConvertResource.cs" Line="50" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
+              <Node name="Abilities" expanded="True" />
+              <Node name="DynamicResourceGenes" expanded="True" />
               <Node name="SuperAI" expanded="True">
-                <Node name="JobGiver_AICastHealingAbility.cs" selected="True" />
+                <Node name="ThinkNode_ConditionalHighResourceLevels.cs" selected="True" />
               </Node>
+              <Node name="Thoughts" expanded="True" />
             </Node>
           </Node>
         </State>

@@ -11,7 +11,7 @@ namespace SuperHeroGenesBase
         private GeneDef gene = null;
         protected override bool Satisfied(Pawn pawn)
         {
-            if (gene == null || SHGUtilities.HasRelatedGene(pawn, gene)) return false;
+            if (gene == null || !SHGUtilities.HasRelatedGene(pawn, gene)) return false;
             try
             {
                 Gene_Resource resourceGene = (Gene_Resource)pawn.genes.GetGene(gene);

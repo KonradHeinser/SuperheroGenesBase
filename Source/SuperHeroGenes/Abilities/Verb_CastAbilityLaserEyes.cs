@@ -152,8 +152,12 @@ namespace SuperHeroGenesBase
             if (thing == null || verbProps.beamDamageDef == null) return;
             float angleFlat = (currentTarget.Cell - caster.Position).AngleFlat;
             BattleLogEntry_RangedImpact log = new BattleLogEntry_RangedImpact(caster, thing, currentTarget.Thing, caster.def, null, null);
-            DamageInfo dinfo = new DamageInfo(verbProps.beamDamageDef, verbProps.beamDamageDef.defaultDamage,
-                verbProps.beamDamageDef.defaultArmorPenetration, angleFlat, caster, weapon: caster.def, intendedTarget: currentTarget.Thing);
+
+            float damageAmount = verbProps.beamTotalDamage;
+            if (damageAmount == 0) damageAmount = verbProps.beamDamageDef.defaultDamage;
+
+            DamageInfo dinfo = new DamageInfo(verbProps.beamDamageDef, damageAmount, verbProps.beamDamageDef.defaultArmorPenetration, angleFlat, caster,
+                weapon: caster.def, intendedTarget: currentTarget.Thing);
             thing.TakeDamage(dinfo).AssociateWithLog(log);
         }
 

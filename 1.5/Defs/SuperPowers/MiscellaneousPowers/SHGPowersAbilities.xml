@@ -553,6 +553,40 @@
     </AbilityDef>
 
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_BasicLaserEyes</defName>
+        <label>laser eyes</label>
+        <description>Shoot a focused laser at a target. Will deal significantly less damage than the superhero version.</description>
+        <iconPath>Powers/BasicLaserEyes</iconPath>
+        <cooldownTicksRange>300</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <showCastingProgressBar>false</showCastingProgressBar>
+        <verbProperties>
+            <verbClass>SuperHeroGenesBase.Verb_CastAbilityLaserEyes</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <hasStandardCommand>true</hasStandardCommand>
+            <warmupTime>0.1</warmupTime>
+            <range>40</range>
+            <beamFullWidthRange>7</beamFullWidthRange>
+            <burstShotCount>7</burstShotCount>
+            <beamWidth>5</beamWidth>
+            <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+            <beamDamageDef>SHG_Beam</beamDamageDef>
+            <soundCastBeam>SHG_Laser_Shooting</soundCastBeam>
+            <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+            <beamCurvature>0.3</beamCurvature>
+            <beamMoteDef>SHG_Mote_LaserEyeBeam</beamMoteDef>
+            <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
+            <beamTotalDamage>25</beamTotalDamage>
+            <beamStartOffset>0.8</beamStartOffset>
+            <targetParams>
+                <canTargetLocations>True</canTargetLocations>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetBuildings>True</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_NewLaserEyes</defName>
         <label>superhero laser eyes</label>
         <description>Shoot a highly focused laser that even other supers have difficulties defending themselves from.\n\nWARNING: Try to avoid using this ability on high value things unless you want to parody that Homelander "saves" a plane scene. The laser deals a large amount of damage in a really short time, so the chances of corpses and items surviving the situation are less than ideal.</description>

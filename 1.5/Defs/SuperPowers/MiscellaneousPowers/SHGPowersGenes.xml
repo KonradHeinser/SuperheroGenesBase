@@ -412,19 +412,42 @@
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersOffensiveBase">
+        <defName>SHG_BasicLaserEyes</defName>
+        <label>laser eyes</label>
+        <description>Carriers of this gene can shoot lasers from their eyes. This weaker version was designed after the superhero version was made, and its much lower energy output makes it possible for even non-superheroes to use it.\n\nPlease make sure you go give Biotech Gene: Laser-Eyes a thumbs up for making this gene possible. Now on with the lasering!</description>
+        <iconPath>Powers/BasicLaserEyes</iconPath>
+        <displayOrderInCategory>997</displayOrderInCategory>
+        <marketValueFactor>2</marketValueFactor>
+        <biostatMet>-3</biostatMet>
+        <prerequisite />
+        <exclusionTags>
+            <li>SHG_LaserEyes</li>
+        </exclusionTags>
+        <abilities>
+            <li>SHG_BasicLaserEyes</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_BasicLaserEyes</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersOffensiveBase">
         <defName>SHG_NewLaserEyes</defName>
         <label>superhero laser eyes</label>
         <description>Superheroes with this gene can shoot powerful lasers from their eyes.\n\nPlease make sure you go give Biotech Gene: Laser-Eyes a thumbs up for making this gene possible. Now on with the lasering!</description>
         <iconPath>Powers/LaserEyes</iconPath>
         <displayOrderInCategory>999</displayOrderInCategory>
         <marketValueFactor>5</marketValueFactor>
+        <biostatMet>-9</biostatMet>
+        <exclusionTags>
+            <li>SHG_LaserEyes</li>
+        </exclusionTags>
         <abilities>
             <li>SHG_NewLaserEyes</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_NewLaserEyes</AbilityDef>
         </descriptionHyperlinks>
-        <biostatMet>-9</biostatMet>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersSupportBase">
