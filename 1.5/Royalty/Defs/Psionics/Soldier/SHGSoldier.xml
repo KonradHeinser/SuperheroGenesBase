@@ -41,9 +41,15 @@
         <statFactors>
             <PsychicSensitivity>0.95</PsychicSensitivity>
         </statFactors>
+        <abilities>
+            <li>SHG_Psionist_PsionicFlight</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_PsionicFlight</AbilityDef>
+        </descriptionHyperlinks>
         <modExtensions>
 			<li Class="SuperHeroGenesBase.SHGExtension">
-                <hediffsToApply><li><hediff>SHG_Psionist_PsionicFlight</hediff></li></hediffsToApply>
+                <hediffsToApply><li><hediff>SHG_Psionist_New_PsionicFlight</hediff></li></hediffsToApply>
 			</li>
 		</modExtensions>
         <exclusionTags>

@@ -458,9 +458,11 @@
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <abilities>
             <li>SHG_Flight</li>
+            <li>SHG_Flight_WorldTravel</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_Flight</AbilityDef>
+            <AbilityDef>SHG_Flight_WorldTravel</AbilityDef>
         </descriptionHyperlinks>
         <biostatMet>-3</biostatMet>
         <symbolPack>

@@ -1,20 +1,25 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/ThinkNode_ConditionalHighResourceLevels.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Abilities/CompProperties/CompProperties_Launch.cs">
     <Files>
       <File FileName="Abilities/Verb_CastAbilityLaserEyes.cs" Line="140" Column="10" />
       <File FileName="SuperAI/ThinkNode_ConditionalHighResourceLevels.cs" Line="29" Column="1" />
       <File FileName="DynamicResourceGenes/CompAbilityEffect_ConvertResource.cs" Line="50" Column="31" />
+      <File FileName="Abilities/CompProperties/CompProperties_Launch.cs" Line="31" Column="1" />
+      <File FileName="Abilities/CompAbilityEffects/CompAbilityEffect_Launch.cs" Line="80" Column="22" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Abilities" expanded="True" />
-              <Node name="DynamicResourceGenes" expanded="True" />
-              <Node name="SuperAI" expanded="True">
-                <Node name="ThinkNode_ConditionalHighResourceLevels.cs" selected="True" />
+              <Node name="Abilities" expanded="True">
+                <Node name="CompAbilityEffects" expanded="True" />
+                <Node name="CompProperties" expanded="True">
+                  <Node name="CompProperties_Launch.cs" selected="True" />
+                </Node>
               </Node>
+              <Node name="DynamicResourceGenes" expanded="True" />
+              <Node name="SuperAI" expanded="True" />
               <Node name="Thoughts" expanded="True" />
             </Node>
           </Node>

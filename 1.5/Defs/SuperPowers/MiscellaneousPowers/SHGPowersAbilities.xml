@@ -662,6 +662,36 @@
         </comps>
     </AbilityDef>
 
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Flight_WorldTravel</defName>
+        <label>world travel</label>
+        <description>Allows the pawn to launch themselves to a distant location. When they arrive at their destination they'll need to take a brief break to reorient themselves and determine where they need to go. The super will be unable to fly if their caravan's mass exceeds their maximum carry weight, and may need to seperate from a caravan if they want to move quickly.\n\nThe more movement speed the super has, the further they can travel in one burst. Temporary move speed changes from things like go-juice will also extend this range.</description>
+        <iconPath>Powers/Gene_Flight</iconPath>
+        <targetWorldCell>True</targetWorldCell>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>1250</cooldownTicksRange>
+        <hostile>false</hostile>
+        <jobDef />
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>0.9</range>
+            <warmupTime>0.5</warmupTime>
+            <requireLineOfSight>False</requireLineOfSight>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_Launch">
+                <maxDistance>2</maxDistance>
+                <distanceFactorStat>MoveSpeed</distanceFactorStat>
+                <skyfallerLeaving>SuperLeaving</skyfallerLeaving>
+                <worldObject>SuperFlying</worldObject>
+                <disablingBiomes>
+                    <li MayRequire="kentington.saveourship2">OuterSpaceBiome</li>
+                </disablingBiomes>
+            </li>
+        </comps>
+    </AbilityDef>
+
     <AbilityDef ParentName="SHGSelfCastBase" MayRequire="Ludeon.Rimworld.Anomaly">
         <defName>SHG_DetectMetalHorror</defName>
         <label>detect metal horror</label>

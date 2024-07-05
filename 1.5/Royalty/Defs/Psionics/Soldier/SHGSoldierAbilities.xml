@@ -41,6 +41,47 @@
     </AbilityDef>
 
     <AbilityDef ParentName="SHGPsionicBase">
+        <defName>SHG_Psionist_PsionicFlight</defName>
+        <label>world travel</label>
+        <description>Allows the pawn to launch themselves to a distant location using a burst of psionic energy. When they arrive at their destination they'll need to take a brief break to reorient themselves and determine where they need to go next. The super will be unable to fly if their caravan's mass exceeds their maximum carry weight, and may need to seperate from a caravan if they want to move quickly.\n\nThe more psychic sensitivity the psionist has, the further they can travel in one burst. Anything that temporarily alters psychic sensitivity will impact the maximum range by the same amount.</description>
+        <iconPath>Psionist/Soldier/Gene_Psionist_PsionicFlight</iconPath>
+        <targetWorldCell>True</targetWorldCell>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>1250</cooldownTicksRange>
+        <hostile>false</hostile>
+        <jobDef />
+        <statBases>
+            <Ability_EntropyGain>50</Ability_EntropyGain>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>0.9</range>
+            <warmupTime>0.5</warmupTime>
+            <requireLineOfSight>False</requireLineOfSight>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_Launch">
+                <maxDistance>7</maxDistance>
+                <distanceFactorStat>PsychicSensitivity</distanceFactorStat>
+                <skyfallerLeaving>SuperLeaving</skyfallerLeaving>
+                <worldObject>PsionistFlying</worldObject>
+                <disablingBiomes>
+                    <li MayRequire="kentington.saveourship2">OuterSpaceBiome</li>
+                </disablingBiomes>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <WorldObjectDef ParentName="SuperFlying">
+        <defName>PsionistFlying</defName>
+        <label>psionist flying</label>
+        <description>Psionist in flight.</description>
+        <texture>Psionist/Soldier/Gene_Psionist_PsionicFlight</texture>
+        <expandingIconTexture>Psionist/Soldier/Gene_Psionist_PsionicFlight</expandingIconTexture>
+    </WorldObjectDef>
+
+    <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_Stasis</defName>
         <label>stasis</label>
         <description>Temporarily put a target into stasis for an hour by creating a bubble of dense psychic energy around them. This bubble will stop all non-explosive projectiles, protect against almost all physical attacks, and slowly heal the pawn inside. While in stasis, the pawn will be unable to do anything, but will also have their rest and food needs stopped.\n\nThis can be used on enemies to temporarily take them out of the fight.\n\nWhile the ability will allow you to attempt to put a psychically deaf pawn in stasis, the ability will fail. No shield will be made, the pawn will not be stunned, and they will not begin regenerating. Being able to target the pawn is a Rimworld bug that I can't fix.</description>

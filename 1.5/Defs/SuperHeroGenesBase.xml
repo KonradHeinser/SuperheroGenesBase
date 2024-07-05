@@ -500,4 +500,41 @@
             <li>EBSG_FertilityByAge</li>
         </exclusionTags>
     </GeneDef>
+
+    <!--Used by flight abilities when the pawn is leaving the map-->
+    <ThingDef ParentName="SkyfallerBase">
+        <defName>SuperLeaving</defName>
+        <label>super (leaving)</label>
+        <thingClass>FlyShipLeaving</thingClass>
+        <graphicData>
+            <texPath>Things/Mote/SparkFlash</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>CutoutFlying</shaderType>
+          <drawSize>10</drawSize>
+        </graphicData>
+        <skyfaller>
+          <movementType>Decelerate</movementType>
+          <reversed>true</reversed>
+          <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+          <shadowSize>(1, 1)</shadowSize>
+          <anticipationSound>DropPod_Leaving</anticipationSound>
+          <anticipationSoundTicks>-10</anticipationSoundTicks>
+          <ticksToImpactRange><min>-30</min><max>-15</max></ticksToImpactRange>
+        </skyfaller>
+    </ThingDef>
+
+    <WorldObjectDef Name="SuperFlying">
+        <defName>SuperFlying</defName>
+        <label>super flying</label>
+        <description>Super in flight.</description>
+        <worldObjectClass>TravelingTransportPods</worldObjectClass>
+        <texture>Base/SuperheroGeneBase</texture>
+        <useDynamicDrawer>true</useDynamicDrawer>
+        <expandingIcon>true</expandingIcon>
+        <expandingIconTexture>Base/SuperheroGeneBase</expandingIconTexture>
+        <expandingIconPriority>60</expandingIconPriority>
+        <expandMore>true</expandMore>
+        <allowCaravanIncidentsWhichGenerateMap>false</allowCaravanIncidentsWhichGenerateMap>
+    </WorldObjectDef>
+
 </Defs>

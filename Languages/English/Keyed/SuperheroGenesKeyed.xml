@@ -10,6 +10,8 @@
     <SHG_NeedOffsets>Base need offsets:</SHG_NeedOffsets>
     <SHG_Random>Random option</SHG_Random>
     <SHG_DestinationBlocked>Something is blocking the destination.</SHG_DestinationBlocked>
+    <SHG_Biome>{0} is not a viable biome to start from.</SHG_Biome>
+    <MessagePawnArrived>A pawn has arrived at their destination and needs new orders.</MessagePawnArrived>
 
         <!--Item Creator-->
     <AbilityWater>Must target an area without water.</AbilityWater>
