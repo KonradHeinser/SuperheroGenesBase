@@ -222,6 +222,12 @@
                 </statFactors>
             </li>
         </stages>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-12</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
 	</HediffDef>
 
     <HediffDef MayRequire="Ludeon.Rimworld.Anomaly">

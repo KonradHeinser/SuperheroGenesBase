@@ -43,12 +43,13 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_PsionicFlight</defName>
         <label>world travel</label>
-        <description>Allows the pawn to launch themselves to a distant location using a burst of psionic energy. When they arrive at their destination they'll need to take a brief break to reorient themselves and determine where they need to go next. The super will be unable to fly if their caravan's mass exceeds their maximum carry weight, and may need to seperate from a caravan if they want to move quickly.\n\nThe more psychic sensitivity the psionist has, the further they can travel in one burst. Anything that temporarily alters psychic sensitivity will impact the maximum range by the same amount.</description>
+        <description>Allows the pawn to launch themselves to a distant location using a burst of psionic energy. When they arrive at their destination they'll need to take a brief break to reorient themselves and determine where they need to go next. The super will be unable to fly if their caravan's mass exceeds their maximum carry weight, and may need to seperate from a caravan if they want to move quickly.\n\nThe more psychic sensitivity the psionist has, the further they can travel in one burst. Anything that temporarily alters psychic sensitivity will impact the maximum range by the same amount.\n\nDue to potential bugs and performance issues, this ability won't allow pawns to fly together, and their speed is statically set to be the same as transport pods. I'm not sure if I'll be able to fix either of the issues, but I'm hopeful on the second one eventually being solved.</description>
         <iconPath>Psionist/Soldier/Gene_Psionist_PsionicFlight</iconPath>
         <targetWorldCell>True</targetWorldCell>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <cooldownTicksRange>1250</cooldownTicksRange>
+        <showGizmoOnWorldView>true</showGizmoOnWorldView>
         <hostile>false</hostile>
         <jobDef />
         <statBases>

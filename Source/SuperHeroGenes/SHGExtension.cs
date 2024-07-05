@@ -16,6 +16,9 @@ namespace SuperHeroGenesBase
         public bool vanishingGene = false;
         public SimpleCurve peopleToMoodCurve;
 
+        public float speed = 0.00025f;
+        public StatDef relatedStat;
+
         public List<AbilityAndGeneLink> geneAbilities;
         public NeedDef need;
 
