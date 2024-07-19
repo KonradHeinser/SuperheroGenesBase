@@ -29,7 +29,6 @@
         <everCurableByItem>False</everCurableByItem>
         <hediffClass>HediffWithComps</hediffClass>
         <scenarioCanAdd>False</scenarioCanAdd>
-        <minSeverity>0.001</minSeverity>
         <initialSeverity>0.001</initialSeverity>
         <stages />
         <comps>
