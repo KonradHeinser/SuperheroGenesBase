@@ -1,58 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-        <!--Mundane Things-->
-    <ThingDef ParentName="DrugBase">
-        <defName>SHG_SuperCreatingPill</defName>
-        <label>super creating pill</label>
-        <description>A pill that gives the pawn the superhero base gene without side effects. The gene will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
-        <possessionCount>10</possessionCount>
-        <descriptionHyperlinks><HediffDef>SHG_SuperCreatingPill</HediffDef></descriptionHyperlinks>
-        <graphicData>
-            <texPath>Drug/SHG_BloodPill</texPath>
-            <graphicClass>Graphic_StackCount</graphicClass>
-        </graphicData>
-        <socialPropernessMatters>false</socialPropernessMatters>
-        <rotatable>false</rotatable>
-        <statBases>
-            <WorkToMake>600</WorkToMake>
-            <MarketValue>1000</MarketValue>
-            <Mass>0.01</Mass>
-            <Flammability>0.1</Flammability>
-        </statBases>
-        <techLevel>Spacer</techLevel>
-        <tradeTags Inherit="False">
-            <li>ExoticMisc</li>
-            <li>SuperCreatingDrug</li>
-        </tradeTags>
-        <ingestible>
-            <foodType>Processed</foodType>
-            <baseIngestTicks>100</baseIngestTicks>
-            <chairSearchRadius>0</chairSearchRadius>
-            <ingestSound>Ingest_Pill</ingestSound>
-            <ingestHoldUsesTable>false</ingestHoldUsesTable>
-            <ingestCommandString>Take {0}</ingestCommandString>
-            <ingestReportString>Taking {0}.</ingestReportString>
-            <drugCategory>Medical</drugCategory>
-            <outcomeDoers>
-                <li Class="IngestionOutcomeDoer_GiveHediff">
-                    <hediffDef>SHG_SuperCreatingPill</hediffDef>
-                    <severity>1.0</severity>
-                </li>
-            </outcomeDoers>
-        </ingestible>
-        <thingSetMakerTags>
-            <li>SuperCreatingPill</li>
-            <li>SHGDrug</li>
-            <li>RewardStandardLowFreq</li>
-        </thingSetMakerTags>
-        <comps>
-            <li Class="CompProperties_Drug">
-                <listOrder>1000</listOrder>
-                <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
-            </li>
-        </comps>
-    </ThingDef>
-
     <ThingDef ParentName="MoteBase" Name="SHG_GenericMoteBase">
         <defName>SHG_Mote_Generic</defName>
         <thingClass>MoteDualAttached</thingClass>

@@ -379,25 +379,6 @@
     </HediffDef>
 
     <HediffDef>
-        <defName>SHG_SuperCreatingPill</defName>      
-        <hediffClass>Hediff_High</hediffClass>
-        <label>super creating pill</label> 
-        <description>This will give the pawn the superhero base gene if they do not already have it. If used on a super, this has no effect. The gene will be inheritable, even if the pawn's other genes are not inheritable.</description>
-        <stages>
-			<li>
-                <becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
-        <comps>
-            <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
-                <alwaysAddedGenes>
-                    <li>SuperHeroBase</li>
-                </alwaysAddedGenes>
-            </li>
-        </comps>
-    </HediffDef>
-
-    <HediffDef>
         <defName>SHG_BloodPillHigh</defName>
         <hediffClass>Hediff_High</hediffClass>
         <label>blood pill</label>
