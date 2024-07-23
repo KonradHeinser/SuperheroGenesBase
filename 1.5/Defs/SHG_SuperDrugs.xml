@@ -6,6 +6,7 @@
         <rotatable>false</rotatable>
         <techLevel>Spacer</techLevel>
         <statBases>
+            <WorkToMake>600</WorkToMake>
             <Mass>0.01</Mass>
             <Flammability>0.1</Flammability>
         </statBases>
@@ -48,7 +49,6 @@
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <statBases>
-            <WorkToMake>600</WorkToMake>
             <MarketValue>1000</MarketValue>
         </statBases>
         <ingestible>
