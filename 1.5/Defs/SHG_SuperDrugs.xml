@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <ThingDef ParentName="DrugBase" Name="SHG_SuperDrugBase" Abstract="True">
+    <ThingDef ParentName="DrugBase" Name="SHG_SuperCreatingDrugBase" Abstract="True">
         <possessionCount>10</possessionCount>
         <socialPropernessMatters>false</socialPropernessMatters>
         <rotatable>false</rotatable>
@@ -37,7 +37,7 @@
         </comps>
     </ThingDef>
 
-    <ThingDef ParentName="SHG_SuperDrugBase">
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
         <defName>SHG_SuperCreatingPill</defName>
         <label>super creating pill</label>
         <description>A pill that gives the pawn the superhero base gene without side effects. The gene will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
@@ -45,7 +45,7 @@
             <HediffDef>SHG_SuperCreatingPill</HediffDef>
         </descriptionHyperlinks>
         <graphicData>
-            <texPath>Drug/SHG_BloodPill</texPath>
+            <texPath>Drug/SHG_SuperPill</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <statBases>

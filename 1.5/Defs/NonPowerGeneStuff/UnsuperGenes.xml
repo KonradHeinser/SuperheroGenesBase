@@ -150,6 +150,7 @@
         <biostatMet>1</biostatMet>
         <statFactors>
             <StaggerDurationFactor>1.333</StaggerDurationFactor>
+            <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
         </statFactors>
         <statOffsets>
             <MoveSpeed>-3</MoveSpeed>

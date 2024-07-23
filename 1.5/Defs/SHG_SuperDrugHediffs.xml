@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef Name="SHG_SuperDrugHediffBase" Abstract="True">
+    <HediffDef Name="SHG_SuperCreatingDrugHediffBase" Abstract="True">
         <hediffClass>Hediff_High</hediffClass>
-        <description>This will give the pawn superhero genes if they do not already have it. The gene will be inheritable, even if the pawn's other genes are not inheritable.</description>
+        <description>This will give the pawn superhero genes if they do not already have them. These genes will be inheritable, even if the pawn's other genes are not.</description>
         <stages>
 			<li>
                 <becomeVisible>false</becomeVisible>
@@ -10,9 +10,10 @@
         </stages>
     </HediffDef>
 
-    <HediffDef ParentName="SHG_SuperDrugHediffBase">
+    <HediffDef ParentName="SHG_SuperCreatingDrugHediffBase">
         <defName>SHG_SuperCreatingPill</defName>
         <label>super creating pill</label> 
+        <description>This will give the pawn the superhero base gene if they do not already have it. The gene will be inheritable, even if the pawn's other genes are not.</description>
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
                 <alwaysAddedGenes>
