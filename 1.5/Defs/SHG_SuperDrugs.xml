@@ -61,5 +61,171 @@
         </ingestible>
     </ThingDef>
 
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_MundaneSuperPill</defName>
+        <label>mundane super creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene without side effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <descriptionHyperlinks>
+            <HediffDef>SHG_MundaneSuperPill</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Drug/SHG_SuperPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>1500</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>SHG_MundaneSuperPill</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
 
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_SoldierSuperPill</defName>
+        <label>super soldier creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene without side effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <descriptionHyperlinks>
+            <HediffDef>SHG_SoldierSuperPill</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Drug/SHG_SuperPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>1500</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>SHG_SoldierSuperPill</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_MundaneMancerPill</defName>
+        <label>mundane mancer creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene without side effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <descriptionHyperlinks>
+            <HediffDef>SHG_MundaneMancerPill</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Drug/SHG_SuperPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>3000</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>SHG_MundaneMancerPill</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_WarSuperPill</defName>
+        <label>war super creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene without side effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <descriptionHyperlinks>
+            <HediffDef>SHG_WarSuperPill</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Drug/SHG_SuperPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>3000</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>SHG_WarSuperPill</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_SupportSuperPill</defName>
+        <label>support super creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene without side effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <descriptionHyperlinks>
+            <HediffDef>SHG_SupportSuperPill</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Drug/SHG_SuperPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>3000</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>SHG_SupportSuperPill</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_SummonerPill</defName>
+        <label>summoner creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene without side effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <descriptionHyperlinks>
+            <HediffDef>SHG_SummonerPill</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Drug/SHG_SuperPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>SHG_SummonerPill</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_SuperMutationPill</defName>
+        <label>mutated super creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene along with a random super mutation. Any existing mutation will be removed. Unlike most advanced super creating pills, this has no risk of side effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <descriptionHyperlinks>
+            <HediffDef>SHG_SuperMutationPill</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Drug/SHG_SuperPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>1500</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>SHG_SuperMutationPill</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
 </Defs>

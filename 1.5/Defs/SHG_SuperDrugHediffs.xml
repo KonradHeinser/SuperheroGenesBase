@@ -2,7 +2,7 @@
 <Defs>
     <HediffDef Name="SHG_SuperCreatingDrugHediffBase" Abstract="True">
         <hediffClass>Hediff_High</hediffClass>
-        <description>This will give the pawn superhero genes if they do not already have them. These genes will be inheritable, even if the pawn's other genes are not. This will always give the superhero base gene in addition to trying to give other genes related to the pill. Subjects that ingested a variety of these pills were found to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome.</description>
+        <description>This will give the pawn superhero genes if they do not already have them. These genes will be inheritable, even if the pawn's other genes are not. This will always give the superhero base gene in addition to trying to give other genes related to the pill. Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome.</description>
         <stages>
 			<li>
                 <becomeVisible>false</becomeVisible>
@@ -407,6 +407,7 @@
     <HediffDef ParentName="SHG_SuperCreatingDrugHediffBase">
         <defName>SHG_SuperMutationPill</defName>
         <label>super mutation pill</label> 
+        <description>This will give the pawn the superhero base gene if they do not already have it, along with a random mutation. Any other super mutation that the pawn has will be removed. The genes will be inheritable, even if the pawn's other genes are not.</description>
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
                 <alwaysAddedGenes>
