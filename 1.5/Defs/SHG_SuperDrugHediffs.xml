@@ -367,6 +367,7 @@
             <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
                 <alwaysAddedGenes>
                     <li>SuperHeroBase</li>
+                    <li>SHG_Flaw_SuperRecluse</li>
                 </alwaysAddedGenes>
                 <geneSets>
                     <li>
@@ -407,14 +408,17 @@
     <HediffDef ParentName="SHG_SuperCreatingDrugHediffBase">
         <defName>SHG_SuperMutationPill</defName>
         <label>super mutation pill</label> 
-        <description>This will give the pawn the superhero base gene if they do not already have it, along with a random mutation. Any other super mutation that the pawn has will be removed. The genes will be inheritable, even if the pawn's other genes are not.</description>
+        <description>This will give the pawn the superhero base gene if they do not already have it, along with a random mutation. Any other super mutation that the pawn has will be removed. The genes will be inheritable, even if the pawn's other genes are not.\n\nHALK and Double-Hearted are not obtainable through this pill, though they are removed by the pill. Some of the mutations received may be suppressed by another gene.</description>
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
                 <alwaysAddedGenes>
                     <li>SuperHeroBase</li>
                 </alwaysAddedGenes>
+                <alwaysRemovedGenes>
+                    <li>SHG_DoubleHearted</li>
+                    <li>SHG_HALK</li>
+                </alwaysRemovedGenes>
                 <geneSets>
-                    <li><geneSet><li>SHG_DoubleHearted</li></geneSet></li>
                     <li><geneSet><li>SHG_SuperPsychicPotential</li></geneSet></li>
                     <li><geneSet><li>SHG_SuperDenseBones</li></geneSet></li>
                     <li><geneSet><li>SHG_Blindsight</li></geneSet></li>
@@ -426,7 +430,6 @@
                     <li><geneSet><li>SHG_MadGenius</li></geneSet></li>
                     <li><geneSet><li>SHG_Technophile</li></geneSet></li>
                     <li><geneSet><li>SHG_Naturalist</li></geneSet></li>
-                    <li><geneSet><li>SHG_HALK</li></geneSet></li>
                 </geneSets>
             </li>
         </comps>
