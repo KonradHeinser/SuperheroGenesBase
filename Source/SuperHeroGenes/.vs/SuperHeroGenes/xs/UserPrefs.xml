@@ -1,7 +1,7 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="HarmonyPatches.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Thoughts/ThoughtWorker_NearFire.cs">
     <Files>
-      <File FileName="Thoughts/ThoughtWorker_NearFire.cs" Line="3" Column="1" />
+      <File FileName="Thoughts/ThoughtWorker_NearFire.cs" Line="24" Column="10" />
       <File FileName="SHGExtension.cs" Line="19" Column="107" />
       <File FileName="HarmonyPatches.cs" Line="59" Column="10" />
     </Files>
@@ -10,11 +10,9 @@
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="DynamicResourceGenes" expanded="True" />
               <Node name="Genes" expanded="True" />
               <Node name="ModSettings" expanded="True" />
               <Node name="Thoughts" expanded="True" />
-              <Node name="HarmonyPatches.cs" selected="True" />
             </Node>
           </Node>
         </State>

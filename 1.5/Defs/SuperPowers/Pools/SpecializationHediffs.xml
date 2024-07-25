@@ -400,8 +400,8 @@
                 <minSeverity>0.975</minSeverity>
 		        <label>healing pool drained</label>
                 <statFactors>
-                    <ImmunityGainSpeed>0.0333</ImmunityGainSpeed>
-                    <InjuryHealingFactor>0.0333</InjuryHealingFactor>
+                    <ImmunityGainSpeed>0.333</ImmunityGainSpeed>
+                    <InjuryHealingFactor>0.333</InjuryHealingFactor>
                     <LifespanFactor>0.111</LifespanFactor>
                 </statFactors>
                 <statOffsets>
