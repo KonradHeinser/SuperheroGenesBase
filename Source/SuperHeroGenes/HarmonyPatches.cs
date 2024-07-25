@@ -33,23 +33,24 @@ namespace SuperHeroGenesBase
         {
             Harmony harmony = new Harmony("Rimworld.Alite.SHG.main");
             harmony.Patch(AccessTools.Method(typeof(CompAbilityEffect_ReimplantXenogerm), nameof(CompAbilityEffect_ReimplantXenogerm.PawnIdeoCanAcceptReimplant)),
-                 postfix: new HarmonyMethod(patchType, nameof(PawnIdeoCanAcceptReimplantPostfix)));
+                postfix: new HarmonyMethod(patchType, nameof(PawnIdeoCanAcceptReimplantPostfix)));
             harmony.Patch(AccessTools.Method(typeof(Xenogerm), nameof(Xenogerm.PawnIdeoDisallowsImplanting)),
-                 postfix: new HarmonyMethod(patchType, nameof(PawnIdeoDisallowsImplantingPostFix)));
+                postfix: new HarmonyMethod(patchType, nameof(PawnIdeoDisallowsImplantingPostFix)));
             harmony.Patch(AccessTools.Method(typeof(Pawn_RelationsTracker), nameof(Pawn_RelationsTracker.SecondaryLovinChanceFactor)),
-                  postfix: new HarmonyMethod(patchType, nameof(SecondaryLovinChanceFactorPostFix)));
+                postfix: new HarmonyMethod(patchType, nameof(SecondaryLovinChanceFactorPostFix)));
             harmony.Patch(AccessTools.Method(typeof(InteractionWorker_RomanceAttempt), nameof(InteractionWorker_RomanceAttempt.RomanceFactors)),
-                  postfix: new HarmonyMethod(patchType, nameof(RomanceFactorsPostFix)));
+                postfix: new HarmonyMethod(patchType, nameof(RomanceFactorsPostFix)));
             harmony.Patch(AccessTools.PropertyGetter(typeof(Gene_Hemogen), nameof(Gene_Hemogen.InitialResourceMax)),
-                  postfix: new HarmonyMethod(patchType, nameof(HemomancerHemogenMaxPostFix)));
+                postfix: new HarmonyMethod(patchType, nameof(HemomancerHemogenMaxPostFix)));
             harmony.Patch(AccessTools.Method(typeof(Thing), nameof(Thing.TakeDamage)),
-                  prefix: new HarmonyMethod(patchType, nameof(TakeDamagePrefix)));
+                prefix: new HarmonyMethod(patchType, nameof(TakeDamagePrefix)));
             harmony.Patch(AccessTools.Method(typeof(Pawn_PathFollower), "CostToMoveIntoCell", new[] { typeof(Pawn), typeof(IntVec3) }),
-                  postfix: new HarmonyMethod(patchType, nameof(CostToMoveIntoCellPostfix)));
+                postfix: new HarmonyMethod(patchType, nameof(CostToMoveIntoCellPostfix)));
             harmony.Patch(AccessTools.Method(typeof(Pawn), "DoKillSideEffects"),
                 postfix: new HarmonyMethod(patchType, nameof(DoKillSideEffectsPostfix)));
+            harmony.Patch(AccessTools.Method(typeof(GeneDef), nameof(GeneDef.ConflictsWith)),
+                postfix: new HarmonyMethod(patchType, nameof(GeneConflictsWithPostfix)));
         }
-
 
         public static void PawnIdeoCanAcceptReimplantPostfix(ref bool __result, Pawn implanter, Pawn implantee)
         {
@@ -239,6 +240,28 @@ namespace SuperHeroGenesBase
                 foreach (Need need in pawn.needs.AllNeeds)
                     if (need is Need_BloodThirst bloodThirst)
                         bloodThirst.Notify_KilledPawn(dinfo, __instance);
+        }
+
+        public static void GeneConflictsWithPostfix(GeneDef other, GeneDef __instance, ref bool __result)
+        {
+            if (!__result)
+            {
+                if (__instance.HasModExtension<SHGExtension>())
+                {
+                    SHGExtension extension = __instance.GetModExtension<SHGExtension>();
+                    if (!extension.conflictingGenes.NullOrEmpty() && extension.conflictingGenes.Contains(other))
+                    {
+                        __result = true;
+                        return;
+                    }
+                }
+                if (other.HasModExtension<SHGExtension>())
+                {
+                    SHGExtension extension = other.GetModExtension<SHGExtension>();
+                    if (!extension.conflictingGenes.NullOrEmpty() && extension.conflictingGenes.Contains(__instance))
+                        __result = true;
+                }
+            }
         }
     }
 }

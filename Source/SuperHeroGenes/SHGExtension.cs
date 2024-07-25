@@ -15,6 +15,8 @@ namespace SuperHeroGenesBase
         public List<HediffsToParts> hediffsToApply;
         public bool vanishingGene = false;
         public SimpleCurve peopleToMoodCurve;
+        public float radius = 19.9f;
+        public List<GeneDef> conflictingGenes; // List of very specific genes to make it incompatible with
 
         public float speed = 0.00025f;
         public StatDef relatedStat;

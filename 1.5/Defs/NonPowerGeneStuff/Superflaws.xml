@@ -204,6 +204,7 @@
         <label>super recluse</label>
         <description>Supers with tis gene hate being around groups of people to an unbelievable extent. There's been plenty of theories about why they feel this way, from overactive senses to innate aggressive competitiveness. Nobody knows for sure why they are this way.</description>
         <iconPath>Flaws/Gene_SuperRecluse</iconPath>
+        <displayOrderInCategory>10</displayOrderInCategory>
         <biostatMet>3</biostatMet>
         <customEffectDescriptions>
             <li>This acts as a very potent variation of the vanilla recluse trait, with a notable mood bonus while alone, and a sizeable mood penalty when in large groups.</li>
@@ -273,6 +274,7 @@
         <label>the lonely knight</label>
         <description>Supers with this gene innately believe they can do just about anything alone or with just a single companion. More people quickly become burdens, nuisances, or just needless attachments that distract from the fight.</description>
         <iconPath>Flaws/Gene_TheLonelyKnight</iconPath>
+        <displayOrderInCategory>11</displayOrderInCategory>
         <biostatMet>5</biostatMet>
         <customEffectDescriptions>
             <li>This pawn has an extremely high mood bonus while alone or with only one companion, but that mood bonus quickly becomes a massive penalty the more people there are.</li>
@@ -330,5 +332,49 @@
                 </peopleToMoodCurve>
             </li>
         </modExtensions>
+    </ThoughtDef>
+
+    <GeneDef ParentName="SHG_FlawBase">
+        <defName>SHG_SuperFireVulnerability</defName>
+        <label>super fire vulnerability</label>
+        <description>Supers with this gene are terrified of fire, and have a good reason for it. Even in the best case scenario, being touched by fire will cause them to suffer extreme damage, and in most cases it will quickly kill them.</description>
+        <damageFactors>
+            <Flame>10</Flame>
+        </damageFactors>
+        <customEffectDescriptions>
+            <li>May have a mental breakdown when near fires.</li>
+        </customEffectDescriptions>
+        <suppressedTraits>
+            <li>
+                <def>Pyromaniac</def>
+            </li>
+        </suppressedTraits>
+        <iconPath>UI/Icons/Genes/Gene_FireTerror</iconPath>
+        <mentalBreakMtbDays>0.1</mentalBreakMtbDays>
+        <mentalBreakDef>FireTerror</mentalBreakDef>
+        <biostatMet>9</biostatMet>
+        <exclusionTags>
+            <li>FireDamage</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <conflictingGenes>
+                    <li>FireTerror</li>
+                </conflictingGenes>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <ThoughtDef>
+        <defName>Pyrophobia</defName>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_NearFire</workerClass>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>afraid of fire</label>
+                <description>The flames make me so nervous. Such searing heat - I feel like it will leap at me at any moment!</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+        </stages>
     </ThoughtDef>
 </Defs>

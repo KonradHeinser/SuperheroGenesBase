@@ -1,22 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Genes/HediffAdder.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HarmonyPatches.cs">
     <Files>
-      <File FileName="Abilities/Verb_CastAbilityLaserEyes.cs" Line="140" Column="10" />
-      <File FileName="SuperAI/ThinkNode_ConditionalHighResourceLevels.cs" Line="29" Column="1" />
-      <File FileName="DynamicResourceGenes/CompAbilityEffect_ConvertResource.cs" Line="50" Column="31" />
-      <File FileName="Abilities/CompProperties/CompProperties_Launch.cs" Line="31" Column="1" />
-      <File FileName="Abilities/CompAbilityEffects/CompAbilityEffect_Launch.cs" Line="61" Column="14" />
-      <File FileName="SHGExtension.cs" Line="20" Column="36" />
-      <File FileName="Genes/HediffAdder.cs" Line="18" Column="1" />
+      <File FileName="Thoughts/ThoughtWorker_NearFire.cs" Line="3" Column="1" />
+      <File FileName="SHGExtension.cs" Line="19" Column="107" />
+      <File FileName="HarmonyPatches.cs" Line="59" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Genes" expanded="True">
-                <Node name="HediffAdder.cs" selected="True" />
-              </Node>
+              <Node name="DynamicResourceGenes" expanded="True" />
+              <Node name="Genes" expanded="True" />
+              <Node name="ModSettings" expanded="True" />
+              <Node name="Thoughts" expanded="True" />
+              <Node name="HarmonyPatches.cs" selected="True" />
             </Node>
           </Node>
         </State>
