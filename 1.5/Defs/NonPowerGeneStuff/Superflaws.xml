@@ -385,7 +385,7 @@
         <defName>SHG_NoNaturalHealing</defName>
         <label>no natural healing</label>
         <description>Supers with this gene are completely incapable of healing naturally. Super genes that provide natual regeneration are usually not available. Abilities that provide direct healing or regeneration, even when cast by the carrier, will still function, and non-super genes that provide advanced regeneration will also still take effect</description>
-        <iconPath>UI/Icons/Genes/Gene_WoundHealingRateSlow</iconPath>
+        <iconPath>Flaws/Gene_NoNaturalHealing</iconPath>
         <statFactors>
             <InjuryHealingFactor>0</InjuryHealingFactor>
         </statFactors>
@@ -444,7 +444,7 @@
         <customEffectDescriptions>
             <li>May have a mental breakdown when near water.</li>
         </customEffectDescriptions>
-        <iconPath>UI/Icons/Genes/Gene_FireTerror</iconPath>
+        <iconPath>Flaws/Gene_Hydrophobia</iconPath>
         <mentalBreakMtbDays>0.1</mentalBreakMtbDays>
         <mentalBreakDef>SHG_Hydrophobia</mentalBreakDef>
         <biostatMet>6</biostatMet>
