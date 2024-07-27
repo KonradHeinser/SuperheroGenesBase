@@ -497,7 +497,7 @@
         <category>Misc</category>
         <nameColor>(0.65, 0.9, 0.93)</nameColor>
         <beginLetterLabel>fleeing water</beginLetterLabel>
-        <beginLetter>{0} is fleeing water. It is recommended to manually move them out of the area once they stop panicking so they don't move towards the water over and over.</beginLetter>    
+        <beginLetter>{0} is fleeing water.</beginLetter>    
         <recoveryMessage>{0} is no longer fleeing water.</recoveryMessage>
         <baseInspectLine>Mental state: Fleeing water</baseInspectLine>
         <blockNormalThoughts>true</blockNormalThoughts>
