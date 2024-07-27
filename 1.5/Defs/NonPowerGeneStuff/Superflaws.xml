@@ -445,9 +445,9 @@
             <li>May have a mental breakdown when near water.</li>
         </customEffectDescriptions>
         <iconPath>Flaws/Gene_Hydrophobia</iconPath>
-        <mentalBreakMtbDays>0.1</mentalBreakMtbDays>
+        <mentalBreakMtbDays>0.3</mentalBreakMtbDays>
         <mentalBreakDef>SHG_Hydrophobia</mentalBreakDef>
-        <biostatMet>6</biostatMet>
+        <biostatMet>5</biostatMet>
     </GeneDef>
 
     <ThoughtDef MayRequire="EBSG.Framework">
