@@ -335,56 +335,6 @@
     </ThoughtDef>
 
     <GeneDef ParentName="SHG_FlawBase">
-        <defName>SHG_SuperPyrophobia</defName>
-        <label>super pyrophobia</label>
-        <description>Supers with this gene are terrified of fire, and have a good reason for it. Even in the best case scenario, being touched by fire will cause them to suffer extreme damage, and in most cases it will quickly kill them.\n\nThe fear of fire works the same as pyrophobia.</description>
-        <damageFactors>
-            <Flame>10</Flame>
-        </damageFactors>
-        <customEffectDescriptions>
-            <li>May have a mental breakdown when near fires.</li>
-        </customEffectDescriptions>
-        <suppressedTraits>
-            <li>
-                <def>Pyromaniac</def>
-            </li>
-        </suppressedTraits>
-        <iconPath>UI/Icons/Genes/Gene_FireTerror</iconPath>
-        <mentalBreakMtbDays>0.1</mentalBreakMtbDays>
-        <mentalBreakDef>FireTerror</mentalBreakDef>
-        <biostatMet>9</biostatMet>
-        <exclusionTags>
-            <li>FireDamage</li>
-            <li>Archetypes_PyromancerFireBlast</li>
-            <li>Archetypes_PyromancerFireBolt</li>
-            <li>Archetypes_PyromancerFireBurst</li>
-        </exclusionTags>
-        <modExtensions>
-            <li Class="SuperHeroGenesBase.SHGExtension">
-                <conflictingGenes>
-                    <li>FireTerror</li>
-                </conflictingGenes>
-            </li>
-        </modExtensions>
-    </GeneDef>
-
-    <ThoughtDef>
-        <defName>Pyrophobia</defName>
-        <workerClass>SuperHeroGenesBase.ThoughtWorker_NearFire</workerClass>
-        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
-        <requiredGenes>
-            <li>SHG_SuperPyrophobia</li>
-        </requiredGenes>
-        <stages>
-            <li>
-                <label>afraid of fire</label>
-                <description>The flames make me so nervous. Such searing heat - I feel like it will leap at me at any moment!</description>
-                <baseMoodEffect>-10</baseMoodEffect>
-            </li>
-        </stages>
-    </ThoughtDef>
-
-    <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_NoNaturalHealing</defName>
         <label>no natural healing</label>
         <description>Supers with this gene are completely incapable of healing naturally. Super genes that provide natual regeneration are usually not available. Abilities that provide direct healing or regeneration, even when cast by the carrier, will still function, and non-super genes that provide advanced regeneration will also still take effect</description>
@@ -441,9 +391,61 @@
     </GeneDef>
 
     <GeneDef ParentName="SHG_FlawBase">
+        <defName>SHG_SuperPyrophobia</defName>
+        <label>super pyrophobia</label>
+        <description>Supers with this gene are terrified of fire, and have a good reason for it. Even in the best case scenario, being touched by fire will cause them to suffer extreme damage, and in most cases it will quickly kill them.\n\nThe fear of fire works the same as pyrophobia.</description>
+        <displayOrderInCategory>21</displayOrderInCategory>
+        <damageFactors>
+            <Flame>10</Flame>
+        </damageFactors>
+        <customEffectDescriptions>
+            <li>May have a mental breakdown when near fires.</li>
+        </customEffectDescriptions>
+        <suppressedTraits>
+            <li>
+                <def>Pyromaniac</def>
+            </li>
+        </suppressedTraits>
+        <iconPath>UI/Icons/Genes/Gene_FireTerror</iconPath>
+        <mentalBreakMtbDays>0.1</mentalBreakMtbDays>
+        <mentalBreakDef>FireTerror</mentalBreakDef>
+        <biostatMet>9</biostatMet>
+        <exclusionTags>
+            <li>FireDamage</li>
+            <li>Archetypes_PyromancerFireBlast</li>
+            <li>Archetypes_PyromancerFireBolt</li>
+            <li>Archetypes_PyromancerFireBurst</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <conflictingGenes>
+                    <li>FireTerror</li>
+                </conflictingGenes>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <ThoughtDef>
+        <defName>Pyrophobia</defName>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_NearFire</workerClass>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <requiredGenes>
+            <li>SHG_SuperPyrophobia</li>
+        </requiredGenes>
+        <stages>
+            <li>
+                <label>afraid of fire</label>
+                <description>The flames make me so nervous. Such searing heat - I feel like it will leap at me at any moment!</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_Hydrophobia</defName>
         <label>hydrophobia</label>
         <description>Supers with this gene have an irrational fear of water, and may end up running away any time they are near any notable body of water. It is recommended that you adjust their allowed area to prevent them from around rivers, ponds, lakes, oceans, etc.\n\nOn a desert this tends to not be an issue, but for places with rivers or marshes, this is can be a major debuff. The radius and frequency are lower than pyrophobia's.</description>
+        <displayOrderInCategory>22</displayOrderInCategory>
         <customEffectDescriptions>
             <li>May have a mental breakdown when near bodies of water.</li>
         </customEffectDescriptions>

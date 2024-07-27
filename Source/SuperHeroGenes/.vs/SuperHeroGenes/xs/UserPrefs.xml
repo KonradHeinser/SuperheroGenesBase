@@ -3,7 +3,7 @@
     <Files>
       <File FileName="Abilities/CompAbilityEffects/CompAbilityEffect_OrbitalStrike.cs" Line="102" Column="6" />
       <File FileName="Abilities/CompProperties/CompProperties_OrbitalStrike.cs" Line="48" Column="6" />
-      <File FileName="Abilities/CustomizeableOrbitalStrike.cs" Line="4" Column="33" />
+      <File FileName="Abilities/CustomizeableOrbitalStrike.cs" Line="8" Column="29" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
