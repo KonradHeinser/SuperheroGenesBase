@@ -17,7 +17,7 @@ namespace SuperHeroGenesBase
                 return GetThoughtState(0);
             }
             if (!SHGUtilities.CheckNearbyWater(p, 1, out int count, extension.maxWaterDistance)) return GetThoughtState(0);
-            return GetThoughtState(0);
+            return GetThoughtState(1);
         }
 
         public ThoughtState GetThoughtState(int stage)

@@ -373,7 +373,7 @@
         <workerClass>SuperHeroGenesBase.ThoughtWorker_NearFire</workerClass>
         <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
         <requiredGenes>
-            <li>SHG_SuperFireVulnerability</li>
+            <li>SHG_SuperPyrophobia</li>
         </requiredGenes>
         <stages>
             <li>
@@ -415,7 +415,7 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_SameTrickPony</defName>
         <label>same trick pony</label>
-        <description>Supers with this gene are completely incapable of learning new skills. They will still gain bonuses from anything that directly puts new knowledge in their head, like a gene, implant, or ability, but practice will never make them perfect.</description>
+        <description>Supers with this gene are completely incapable of learning new skills. They may sometimes still gain bonuses from anything that directly increases their skill level like a gene, implant, item, or ability, but practice will never make them perfect.</description>
         <iconPath>Flaws/Gene_SameTrickPony</iconPath>
         <statFactors>
             <GlobalLearningFactor>0</GlobalLearningFactor>
