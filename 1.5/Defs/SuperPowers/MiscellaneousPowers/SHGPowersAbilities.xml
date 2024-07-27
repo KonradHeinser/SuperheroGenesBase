@@ -772,4 +772,33 @@
             </li>
         </comps>
     </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_DeathFromAbove</defName>
+        <label>death from above</label>
+        <description>Create a small interdimensional rift above the target point to launch a bombardment of small asteroid pieces.</description>
+        <iconPath>Powers/Gene_DeathFromAbove</iconPath>
+        <charges>3</charges>
+        <cooldownPerCharge>true</cooldownPerCharge>
+        <cooldownTicksRange>300000</cooldownTicksRange>
+        <hostile>true</hostile>
+        <verbProperties>
+            <range>30</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>true</canTargetBuildings>
+                <canTargetPlants>true</canTargetPlants>
+              </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_OrbitalStrike">
+                <centerMarker>SHG_OrbitalCenter_Colorless</centerMarker>
+                <fireChance>0</fireChance>
+                <explosionSound>Explosion_Thump</explosionSound>
+            </li>
+        </comps>
+    </AbilityDef>
 </Defs>

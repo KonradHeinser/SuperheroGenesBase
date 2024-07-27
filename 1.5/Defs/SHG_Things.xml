@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <ThingDef ParentName="OrbitalStrikeBase">
+        <defName>SHG_OrbitalCenter_Colorless</defName>
+        <label>orital strike ability center</label>
+        <thingClass>SuperHeroGenesBase.CustomizeableOrbitalStrike</thingClass>
+        <comps>
+            <li Class="CompProperties_OrbitalBeam">
+                <width>0.2</width>
+                <color>(1, 1, 1, 0)</color>
+            </li>
+        </comps>
+    </ThingDef>
+
     <ThingDef ParentName="MoteBase" Name="SHG_GenericMoteBase">
         <defName>SHG_Mote_Generic</defName>
         <thingClass>MoteDualAttached</thingClass>

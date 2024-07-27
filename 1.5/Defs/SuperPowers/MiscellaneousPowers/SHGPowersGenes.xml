@@ -523,4 +523,21 @@
             <li>SHG_Telepull</li>
         </abilities>
     </GeneDef>
+
+    <GeneDef ParentName="SuperPowersOffensiveBase">
+        <defName>SHG_DeathFromAbove</defName>
+        <label>death from above</label>
+        <description>Superheroes with this gene have access to a subdimension that regularly steals nearby asteroids and starts accelerating them. Once enough of them are accelerated the super can create a rift in the air that releases some of them towards the ground similar to a bombardment.\n\nDue to the nature of this ability, the super needs to wait some time to gain another charge (5 days per charge), and a very finite number of charges can be held at any given time (3 charges).\n\nThe super can be hit if they happen to be in the blast radius.</description>
+        <iconPath>Powers/Gene_DeathFromAbove</iconPath>
+        <displayOrderInCategory>996</displayOrderInCategory>
+        <marketValueFactor>4</marketValueFactor>
+        <biostatMet>-5</biostatMet>
+        <abilities>
+            <li>SHG_DeathFromAbove</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_DeathFromAbove</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
 </Defs>

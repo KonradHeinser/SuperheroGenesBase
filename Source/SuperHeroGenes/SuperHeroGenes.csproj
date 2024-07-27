@@ -231,6 +231,9 @@
     <Compile Include="Thoughts\MentalState_PanicFleeWater.cs" />
     <Compile Include="Thoughts\MentalBreakWorker_Hydrophobia.cs" />
     <Compile Include="Thoughts\ThoughtWorker_NearWater.cs" />
+    <Compile Include="Abilities\CompAbilityEffects\CompAbilityEffect_OrbitalStrike.cs" />
+    <Compile Include="Abilities\CompProperties\CompProperties_OrbitalStrike.cs" />
+    <Compile Include="Abilities\CustomizeableOrbitalStrike.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

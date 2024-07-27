@@ -1,11 +1,25 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Thoughts/ThoughtWorker_NearWater.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Abilities/CustomizeableOrbitalStrike.cs">
     <Files>
-      <File FileName="Thoughts/MentalState_PanicFleeWater.cs" Line="27" Column="10" />
-      <File FileName="SHGUtilities.cs" Line="51" Column="10" />
-      <File FileName="Thoughts/MentalBreakWorker_Hydrophobia.cs" Line="21" Column="1" />
-      <File FileName="Thoughts/ThoughtWorker_NearWater.cs" Line="29" Column="2" />
+      <File FileName="Abilities/CompAbilityEffects/CompAbilityEffect_OrbitalStrike.cs" Line="102" Column="6" />
+      <File FileName="Abilities/CompProperties/CompProperties_OrbitalStrike.cs" Line="48" Column="6" />
+      <File FileName="Abilities/CustomizeableOrbitalStrike.cs" Line="4" Column="33" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SuperHeroGenes" expanded="True">
+            <Node name="SuperHeroGenes" expanded="True">
+              <Node name="Abilities" expanded="True">
+                <Node name="CompAbilityEffects" expanded="True" />
+                <Node name="CompProperties" expanded="True" />
+                <Node name="CustomizeableOrbitalStrike.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
