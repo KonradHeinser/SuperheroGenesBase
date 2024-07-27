@@ -1,18 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Thoughts/ThoughtWorker_NearFire.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Thoughts/MentalState_PanicFleeWater.cs">
     <Files>
-      <File FileName="Thoughts/ThoughtWorker_NearFire.cs" Line="24" Column="10" />
-      <File FileName="SHGExtension.cs" Line="19" Column="107" />
-      <File FileName="HarmonyPatches.cs" Line="59" Column="10" />
+      <File FileName="Thoughts/MentalState_PanicFleeWater.cs" Line="32" Column="80" />
+      <File FileName="SHGUtilities.cs" Line="51" Column="10" />
+      <File FileName="Thoughts/MentalBreakWorker_Hydrophobia.cs" Line="21" Column="1" />
+      <File FileName="Thoughts/ThoughtWorker_NearWater.cs" Line="4" Column="29" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Genes" expanded="True" />
-              <Node name="ModSettings" expanded="True" />
-              <Node name="Thoughts" expanded="True" />
+              <Node name="Thoughts" expanded="True">
+                <Node name="MentalState_PanicFleeWater.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

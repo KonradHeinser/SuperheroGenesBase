@@ -81,7 +81,7 @@
         <stages>
             <li>
                 <label>absorbed radiation orb</label>
-                <description>I absorbed a radiation. It doesn't appear to have caused me any harm, but it still felt uncomfortable.</description>
+                <description>I absorbed a radiation orb. It doesn't appear to have caused me any harm, but it still felt uncomfortable.</description>
                 <baseMoodEffect>-5</baseMoodEffect>
             </li>
         </stages>

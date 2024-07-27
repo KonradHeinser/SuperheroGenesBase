@@ -17,6 +17,7 @@ namespace SuperHeroGenesBase
         public SimpleCurve peopleToMoodCurve;
         public float radius = 19.9f;
         public List<GeneDef> conflictingGenes; // List of very specific genes to make it incompatible with
+        public float maxWaterDistance = 14.9f;
 
         public float speed = 0.00025f;
         public StatDef relatedStat;

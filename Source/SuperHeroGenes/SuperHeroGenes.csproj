@@ -228,6 +228,9 @@
     <Compile Include="Abilities\CompAbilityEffects\CompAbilityEffect_TeleMoveIt.cs" />
     <Compile Include="Abilities\CompAbilityEffects\CompAbilityEffect_TriggerGameCondition.cs" />
     <Compile Include="Thoughts\ThoughtWorker_NearFire.cs" />
+    <Compile Include="Thoughts\MentalState_PanicFleeWater.cs" />
+    <Compile Include="Thoughts\MentalBreakWorker_Hydrophobia.cs" />
+    <Compile Include="Thoughts\ThoughtWorker_NearWater.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

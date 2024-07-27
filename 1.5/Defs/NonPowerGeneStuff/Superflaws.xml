@@ -335,9 +335,9 @@
     </ThoughtDef>
 
     <GeneDef ParentName="SHG_FlawBase">
-        <defName>SHG_SuperFireVulnerability</defName>
-        <label>super fire vulnerability</label>
-        <description>Supers with this gene are terrified of fire, and have a good reason for it. Even in the best case scenario, being touched by fire will cause them to suffer extreme damage, and in most cases it will quickly kill them.</description>
+        <defName>SHG_SuperPyrophobia</defName>
+        <label>super pyrophobia</label>
+        <description>Supers with this gene are terrified of fire, and have a good reason for it. Even in the best case scenario, being touched by fire will cause them to suffer extreme damage, and in most cases it will quickly kill them.\n\nThe fear of fire works the same as pyrophobia.</description>
         <damageFactors>
             <Flame>10</Flame>
         </damageFactors>
@@ -355,6 +355,9 @@
         <biostatMet>9</biostatMet>
         <exclusionTags>
             <li>FireDamage</li>
+            <li>Archetypes_PyromancerFireBlast</li>
+            <li>Archetypes_PyromancerFireBolt</li>
+            <li>Archetypes_PyromancerFireBurst</li>
         </exclusionTags>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
@@ -437,22 +440,37 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SHG_FlawBase" MayRequire="EBSG.Framework">
+    <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_Hydrophobia</defName>
         <label>hydrophobia</label>
-        <description>Supers with this gene have an irrational fear of water, and may end up running away any time they are near any notable body of water. It is recommended that you adjust their allowed area to prevent them from around rivers, ponds, lakes, oceans, etc.\n\nOn a desert this tends to not be an issue, but for places with rivers or marshes, this is a major debuff.</description>
+        <description>Supers with this gene have an irrational fear of water, and may end up running away any time they are near any notable body of water. It is recommended that you adjust their allowed area to prevent them from around rivers, ponds, lakes, oceans, etc.\n\nOn a desert this tends to not be an issue, but for places with rivers or marshes, this is can be a major debuff. The radius and frequency are lower than pyrophobia's.</description>
         <customEffectDescriptions>
-            <li>May have a mental breakdown when near water.</li>
+            <li>May have a mental breakdown when near bodies of water.</li>
         </customEffectDescriptions>
         <iconPath>Flaws/Gene_Hydrophobia</iconPath>
         <mentalBreakMtbDays>0.3</mentalBreakMtbDays>
         <mentalBreakDef>SHG_Hydrophobia</mentalBreakDef>
-        <biostatMet>5</biostatMet>
+        <biostatMet>4</biostatMet>
+        <exclusionTags>
+            <li>Archetypes_HydromancerWaterBlast</li>
+            <li>Archetypes_FirefighterWaterBlast</li>
+            <li>Archetypes_HydromancerWaterBolt</li>
+            <li>Archetypes_FirefighterWaterBolt</li>
+            <li>Archetypes_HydromancerWaterBurst</li>
+            <li>Archetypes_FirefighterWaterBurst</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <conflictingGenes>
+                    <li MayRequireAnyOf="Ludeon.RimWorld.Royalty, SHG.PsionicResourceGene">SHG_Psionist_Ocean</li>
+                </conflictingGenes>
+            </li>
+        </modExtensions>
     </GeneDef>
 
-    <ThoughtDef MayRequire="EBSG.Framework">
+    <ThoughtDef>
         <defName>SHG_Hydrophobia</defName>
-        <workerClass>EBSGFramework.ThoughtWorker_NearWater</workerClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_NearWater</workerClass>
         <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
         <requiredGenes>
             <li>SHG_Hydrophobia</li>
@@ -470,43 +488,42 @@
             </li>
         </stages>
         <modExtensions>
-            <li Class="EBSGFramework.EBSGExtension">
-                <maxWaterDistance>14.9</maxWaterDistance>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <maxWaterDistance>9.9</maxWaterDistance>
             </li>
         </modExtensions>
     </ThoughtDef>
 
-    <MentalBreakDef MayRequire="EBSG.Framework">
+    <MentalBreakDef>
         <defName>SHG_Hydrophobia</defName>
         <label>hydrophobia</label>
         <intensity>Minor</intensity>
-        <workerClass>EBSGFramework.MentalBreakWorker_Hydrophobia</workerClass>
+        <workerClass>SuperHeroGenesBase.MentalBreakWorker_Hydrophobia</workerClass>
         <mentalState>SHG_Hydrophobia</mentalState>
         <requiredGene>SHG_Hydrophobia</requiredGene>
         <modExtensions>
-            <li Class="EBSGFramework.EBSGExtension">
-                <maxWaterDistance>14.9</maxWaterDistance>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <maxWaterDistance>9.9</maxWaterDistance>
             </li>
         </modExtensions>
     </MentalBreakDef>
     
-    <MentalStateDef ParentName="BaseMentalState" MayRequire="EBSG.Framework">
+    <MentalStateDef ParentName="BaseMentalState">
         <defName>SHG_Hydrophobia</defName>
         <label>panic-fleeing water</label>
-        <stateClass>EBSGFramework.MentalState_PanicFleeWater</stateClass>
+        <stateClass>SuperHeroGenesBase.MentalState_PanicFleeWater</stateClass>
         <category>Misc</category>
         <nameColor>(0.65, 0.9, 0.93)</nameColor>
         <beginLetterLabel>fleeing water</beginLetterLabel>
-        <beginLetter>{0} is fleeing water.</beginLetter>    
-        <recoveryMessage>{0} is no longer fleeing water.</recoveryMessage>
-        <baseInspectLine>Mental state: Fleeing water</baseInspectLine>
+        <beginLetter>{0} is fleeing from a body of water.</beginLetter>    
+        <recoveryMessage>{0} is no longer fleeing from water.</recoveryMessage>
+        <baseInspectLine>Mental state: Fleeing from water</baseInspectLine>
         <blockNormalThoughts>true</blockNormalThoughts>
         <minTicksBeforeRecovery>60</minTicksBeforeRecovery>
         <modExtensions>
-            <li Class="EBSGFramework.EBSGExtension">
-                <maxWaterDistance>19.9</maxWaterDistance>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <maxWaterDistance>14.9</maxWaterDistance>
             </li>
         </modExtensions>
     </MentalStateDef>
-    
 </Defs>
