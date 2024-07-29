@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
     <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
-        <setting>expensiveBase</setting>
-        <active Class="PatchOperationSequence">
-            <operations>
-                <li Class="PatchOperationReplace">
-                    <xpath>Defs/GeneDef[defName="SHG_DormantSuper"]/biostatMet</xpath>
-                    <value><biostatMet>8</biostatMet></value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <xpath>Defs/GeneDef[defName="SuperHeroBase"]/biostatMet</xpath>
-                    <value><biostatMet>-8</biostatMet></value>
-                </li>
-            </operations>
-        </active>
-    </Operation>
-
-    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
         <setting>radiomancerOvercharge</setting>
         <inactive Class="PatchOperationRemove">
             <xpath>Defs/HediffDef[defName="SHG_Radiomancer_InfusedMuscles" or defName="SHG_Radiomancer_EnergizedNeurons" or defName="SHG_Radiomancer_EnergyArmor"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_CreateOtherHediffs"]</xpath>
