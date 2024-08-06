@@ -1,20 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Abilities/CustomizeableOrbitalStrike.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RoyalTitleAwardWorker_InstantHediffGiver.cs">
     <Files>
-      <File FileName="Abilities/CompAbilityEffects/CompAbilityEffect_OrbitalStrike.cs" Line="102" Column="6" />
-      <File FileName="Abilities/CompProperties/CompProperties_OrbitalStrike.cs" Line="48" Column="6" />
-      <File FileName="Abilities/CustomizeableOrbitalStrike.cs" Line="8" Column="29" />
+      <File FileName="RoyalTitleAwardWorker_InstantHediffGiver.cs" Line="24" Column="1" />
+      <File FileName="SHGExtension.cs" Line="14" Column="33" />
+      <File FileName="SHGUtilities.cs" Line="279" Column="62" />
+      <File FileName="Genes/Gene_HemoHediffAdder.cs" Line="31" Column="97" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="SuperHeroGenes" expanded="True">
+          <Node name="SuperHeroGenes" expanded="True" selected="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Abilities" expanded="True">
-                <Node name="CompAbilityEffects" expanded="True" />
-                <Node name="CompProperties" expanded="True" />
-                <Node name="CustomizeableOrbitalStrike.cs" selected="True" />
-              </Node>
+              <Node name="Hediffs" expanded="True" />
             </Node>
           </Node>
         </State>

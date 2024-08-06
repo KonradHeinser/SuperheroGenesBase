@@ -234,6 +234,7 @@
     <Compile Include="Abilities\CompAbilityEffects\CompAbilityEffect_OrbitalStrike.cs" />
     <Compile Include="Abilities\CompProperties\CompProperties_OrbitalStrike.cs" />
     <Compile Include="Abilities\CustomizeableOrbitalStrike.cs" />
+    <Compile Include="RoyalTitleAwardWorker_InstantHediffGiver.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />
