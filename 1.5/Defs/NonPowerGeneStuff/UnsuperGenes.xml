@@ -39,7 +39,7 @@
         <foodPoisoningChanceFactor>100</foodPoisoningChanceFactor>
         <biostatMet>1</biostatMet>
         <statFactors>
-            <ImmunityGainSpeed>0.5</ImmunityGainSpeed>
+            <ImmunityGainSpeed>0.667</ImmunityGainSpeed>
             <InjuryHealingFactor>0.5</InjuryHealingFactor>
             <LifespanFactor>0.5</LifespanFactor>
         </statFactors>
@@ -63,9 +63,9 @@
         <displayOrderInCategory>35</displayOrderInCategory>
         <biostatMet>1</biostatMet>
         <statFactors>
-            <ResearchSpeed>0.5</ResearchSpeed>
-            <GlobalLearningFactor>0.5</GlobalLearningFactor>
-            <LearningRateFactor>0.5</LearningRateFactor>
+            <ResearchSpeed>0.83</ResearchSpeed>
+            <GlobalLearningFactor>0.667</GlobalLearningFactor>
+            <LearningRateFactor>0.667</LearningRateFactor>
         </statFactors>
         <exclusionTags>
             <li>SuperIntelligences</li>
@@ -150,7 +150,7 @@
         <biostatMet>1</biostatMet>
         <statFactors>
             <StaggerDurationFactor>1.333</StaggerDurationFactor>
-            <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+            <WorkSpeedGlobal>0.833</WorkSpeedGlobal>
         </statFactors>
         <statOffsets>
             <MoveSpeed>-3</MoveSpeed>
@@ -172,11 +172,11 @@
         <displayOrderInCategory>85</displayOrderInCategory>
         <biostatMet>1</biostatMet>
         <statFactors>
-            <MeleeDamageFactor>0.5</MeleeDamageFactor>
+            <MeleeDamageFactor>0.667</MeleeDamageFactor>
         </statFactors>
         <statOffsets>
-            <CarryingCapacity>-50</CarryingCapacity>
-            <CarryBulk MayRequire="ceteam.combatextended">-25</CarryBulk>
+            <CarryingCapacity>-25</CarryingCapacity>
+            <CarryBulk MayRequire="ceteam.combatextended">-10</CarryBulk>
             <MentalBreakThreshold>.15</MentalBreakThreshold>
         </statOffsets>
         <exclusionTags>

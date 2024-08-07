@@ -435,24 +435,24 @@
         </damageFactors>
         <statFactors>
             <LifespanFactor>2</LifespanFactor>
-            <ImmunityGainSpeed>2</ImmunityGainSpeed>
+            <ImmunityGainSpeed>1.5</ImmunityGainSpeed>
             <IncomingDamageFactor>0.75</IncomingDamageFactor>
             <InjuryHealingFactor>2</InjuryHealingFactor>
-            <MeleeDamageFactor>2</MeleeDamageFactor>
+            <MeleeDamageFactor>1.5</MeleeDamageFactor>
             <PawnTrapSpringChance>0.01</PawnTrapSpringChance>
             <StaggerDurationFactor>0.75</StaggerDurationFactor>
-            <GlobalLearningFactor>2</GlobalLearningFactor>
-            <LearningRateFactor>2</LearningRateFactor>
-            <ResearchSpeed>2</ResearchSpeed>
-            <WorkSpeedGlobal>2</WorkSpeedGlobal>
+            <GlobalLearningFactor>1.5</GlobalLearningFactor>
+            <LearningRateFactor>1.5</LearningRateFactor>
+            <ResearchSpeed>1.2</ResearchSpeed>
+            <WorkSpeedGlobal>1.2</WorkSpeedGlobal>
         </statFactors>
         <statOffsets>
             <ComfyTemperatureMin>-20</ComfyTemperatureMin>
             <ComfyTemperatureMax>20</ComfyTemperatureMax>
             <AimingDelayFactor>-0.1</AimingDelayFactor>
             <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
-            <CarryingCapacity>50</CarryingCapacity>
-            <CarryBulk MayRequire="ceteam.combatextended">25</CarryBulk>
+            <CarryingCapacity>25</CarryingCapacity>
+            <CarryBulk MayRequire="ceteam.combatextended">10</CarryBulk>
             <MoveSpeed>3</MoveSpeed>
             <MeleeDodgeChance>3</MeleeDodgeChance>
             <MeleeHitChance>3</MeleeHitChance>
