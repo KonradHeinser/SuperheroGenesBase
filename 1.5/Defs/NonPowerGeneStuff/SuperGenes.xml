@@ -315,8 +315,8 @@
         <displayOrderInCategory>87</displayOrderInCategory>
         <biostatMet>-6</biostatMet>
         <statFactors>
-            <CarryingCapacity>100</CarryingCapacity>
-            <CarryBulk MayRequire="ceteam.combatextended">100</CarryBulk>
+            <CarryingCapacity>20</CarryingCapacity>
+            <CarryBulk MayRequire="ceteam.combatextended">20</CarryBulk>
             <MeleeDamageFactor>7</MeleeDamageFactor>
         </statFactors>
         <capMods>

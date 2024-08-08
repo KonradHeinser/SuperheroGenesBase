@@ -448,8 +448,8 @@
                             <displayOrderInCategory>86.3</displayOrderInCategory>
                             <biostatMet>-1</biostatMet>
                             <statFactors>
-                                <CarryingCapacity>17</CarryingCapacity>
-                                <CarryBulk MayRequire="ceteam.combatextended">17</CarryBulk>
+                                <CarryingCapacity>3.33</CarryingCapacity>
+                                <CarryBulk MayRequire="ceteam.combatextended">3.33</CarryBulk>
                                 <MeleeDamageFactor>2</MeleeDamageFactor>
                             </statFactors>
                             <capMods>
@@ -467,8 +467,8 @@
                             <displayOrderInCategory>86.4</displayOrderInCategory>
                             <biostatMet>-2</biostatMet>
                             <statFactors>
-                                <CarryingCapacity>33</CarryingCapacity>
-                                <CarryBulk MayRequire="ceteam.combatextended">33</CarryBulk>
+                                <CarryingCapacity>6.67</CarryingCapacity>
+                                <CarryBulk MayRequire="ceteam.combatextended">6.67</CarryBulk>
                                 <MeleeDamageFactor>3</MeleeDamageFactor>
                             </statFactors>
                             <capMods>
@@ -486,8 +486,8 @@
                             <displayOrderInCategory>86.6</displayOrderInCategory>
                             <biostatMet>-4</biostatMet>
                             <statFactors>
-                                <CarryingCapacity>67</CarryingCapacity>
-                                <CarryBulk MayRequire="ceteam.combatextended">67</CarryBulk>
+                                <CarryingCapacity>13.33</CarryingCapacity>
+                                <CarryBulk MayRequire="ceteam.combatextended">13.33</CarryBulk>
                                 <MeleeDamageFactor>5</MeleeDamageFactor>
                             </statFactors>
                             <capMods>
@@ -505,8 +505,8 @@
                             <displayOrderInCategory>86.7</displayOrderInCategory>
                             <biostatMet>-5</biostatMet>
                             <statFactors>
-                                <CarryingCapacity>83</CarryingCapacity>
-                                <CarryBulk MayRequire="ceteam.combatextended">83</CarryBulk>
+                                <CarryingCapacity>16.67</CarryingCapacity>
+                                <CarryBulk MayRequire="ceteam.combatextended">16.67</CarryBulk>
                                 <MeleeDamageFactor>6</MeleeDamageFactor>
                             </statFactors>
                             <capMods>

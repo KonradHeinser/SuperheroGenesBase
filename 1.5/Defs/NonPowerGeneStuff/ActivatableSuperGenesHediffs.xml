@@ -977,7 +977,8 @@
                 <label>safe</label>
                 <minSeverity>0.01</minSeverity>
                 <statFactors>
-                    <CarryingCapacity>100</CarryingCapacity>
+                    <CarryingCapacity>20</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">20</CarryBulk>
                     <MeleeDamageFactor>7</MeleeDamageFactor>
                 </statFactors>
             </li>
@@ -1000,7 +1001,8 @@
                     </li>
                 </capMods>
                 <statFactors>
-                    <CarryingCapacity>100</CarryingCapacity>
+                    <CarryingCapacity>20</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">20</CarryBulk>
                     <MeleeDamageFactor>7</MeleeDamageFactor>
                 </statFactors>
             </li>
@@ -1023,7 +1025,8 @@
                     </li>
                 </capMods>
                 <statFactors>
-                    <CarryingCapacity>100</CarryingCapacity>
+                    <CarryingCapacity>20</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">20</CarryBulk>
                     <MeleeDamageFactor>7</MeleeDamageFactor>
                 </statFactors>
             </li>
@@ -1047,7 +1050,8 @@
                     </li>
                 </capMods>
                 <statFactors>
-                    <CarryingCapacity>100</CarryingCapacity>
+                    <CarryingCapacity>20</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">20</CarryBulk>
                     <MeleeDamageFactor>7</MeleeDamageFactor>
                 </statFactors>
             </li>
@@ -1071,7 +1075,8 @@
                     </li>
                 </capMods>
                 <statFactors>
-                    <CarryingCapacity>100</CarryingCapacity>
+                    <CarryingCapacity>20</CarryingCapacity>
+                    <CarryBulk MayRequire="ceteam.combatextended">20</CarryBulk>
                     <MeleeDamageFactor>7</MeleeDamageFactor>
                 </statFactors>
             </li>
