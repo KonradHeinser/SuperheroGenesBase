@@ -19,7 +19,7 @@ namespace SuperHeroGenesBase
 
         public override string SettingsCategory()
         {
-            return "SHG_ModName".Translate();
+            return "SHG_ModMenu".Translate();
         }
 
         public override void DoSettingsWindowContents(Rect inRect)
