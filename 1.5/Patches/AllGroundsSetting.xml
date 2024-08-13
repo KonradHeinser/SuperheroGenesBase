@@ -350,7 +350,7 @@
                             <biostatMet>-1</biostatMet>
                             <statFactors>
                                 <StaggerDurationFactor>0.80</StaggerDurationFactor>
-                                <MeleeDamageFactor>1.2</MeleeDamageFactor>
+                                <MeleeCooldownFactor>0.833</MeleeCooldownFactor>
                             </statFactors>
                             <statOffsets>
                                 <AimingDelayFactor>-1</AimingDelayFactor>
@@ -383,7 +383,7 @@
                             <biostatMet>-2</biostatMet>
                             <statFactors>
                                 <StaggerDurationFactor>0.40</StaggerDurationFactor>
-                                <MeleeDamageFactor>1.4</MeleeDamageFactor>
+                                <MeleeCooldownFactor>0.714</MeleeCooldownFactor>
                             </statFactors>
                             <statOffsets>
                                 <AimingDelayFactor>-2</AimingDelayFactor>
@@ -416,7 +416,7 @@
                             <biostatMet>-4</biostatMet>
                             <statFactors>
                                 <StaggerDurationFactor>0.20</StaggerDurationFactor>
-                                <MeleeDamageFactor>1.8</MeleeDamageFactor>
+                                <MeleeCooldownFactor>0.555</MeleeCooldownFactor>
                             </statFactors>
                             <statOffsets>
                                 <AimingDelayFactor>-4</AimingDelayFactor>

@@ -820,7 +820,7 @@
                 <statFactors>
                     <StaggerDurationFactor>0.01</StaggerDurationFactor>
                     <MeleeDodgeChance>5</MeleeDodgeChance>
-                    <MeleeDamageFactor>2</MeleeDamageFactor>
+                    <MeleeCooldownFactor>0.5</MeleeCooldownFactor>
                 </statFactors>
                 <statOffsets>
                     <AimingDelayFactor>-5</AimingDelayFactor>
@@ -847,7 +847,7 @@
                 <statFactors>
                     <StaggerDurationFactor>0.01</StaggerDurationFactor>
                     <MeleeDodgeChance>5</MeleeDodgeChance>
-                    <MeleeDamageFactor>2</MeleeDamageFactor>
+                    <MeleeCooldownFactor>0.5</MeleeCooldownFactor>
                 </statFactors>
                 <statOffsets>
                     <AimingDelayFactor>-5</AimingDelayFactor>
@@ -878,7 +878,7 @@
                 <statFactors>
                     <StaggerDurationFactor>0.01</StaggerDurationFactor>
                     <MeleeDodgeChance>5</MeleeDodgeChance>
-                    <MeleeDamageFactor>2</MeleeDamageFactor>
+                    <MeleeCooldownFactor>0.5</MeleeCooldownFactor>
                 </statFactors>
                 <statOffsets>
                     <AimingDelayFactor>-5</AimingDelayFactor>
@@ -910,7 +910,7 @@
                 <statFactors>
                     <StaggerDurationFactor>0.01</StaggerDurationFactor>
                     <MeleeDodgeChance>5</MeleeDodgeChance>
-                    <MeleeDamageFactor>2</MeleeDamageFactor>
+                    <MeleeCooldownFactor>0.5</MeleeCooldownFactor>
                 </statFactors>
                 <statOffsets>
                     <AimingDelayFactor>-5</AimingDelayFactor>
@@ -942,7 +942,7 @@
                 <statFactors>
                     <StaggerDurationFactor>0.01</StaggerDurationFactor>
                     <MeleeDodgeChance>5</MeleeDodgeChance>
-                    <MeleeDamageFactor>2</MeleeDamageFactor>
+                    <MeleeCooldownFactor>0.5</MeleeCooldownFactor>
                 </statFactors>
                 <statOffsets>
                     <AimingDelayFactor>-5</AimingDelayFactor>

@@ -198,7 +198,7 @@
         <statFactors>
             <StaggerDurationFactor>10</StaggerDurationFactor>
             <MeleeDodgeChance>0.2</MeleeDodgeChance>
-            <MeleeDamageFactor>0.2</MeleeDamageFactor>
+            <MeleeCooldownFactor>2.5</MeleeCooldownFactor>
         </statFactors>
         <statOffsets>
             <AimingDelayFactor>5</AimingDelayFactor>
