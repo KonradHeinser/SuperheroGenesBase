@@ -1,17 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="RoyalTitleAwardWorker_InstantHediffGiver.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ModSettings/PatchOperationSetting.cs">
     <Files>
-      <File FileName="RoyalTitleAwardWorker_InstantHediffGiver.cs" Line="24" Column="1" />
-      <File FileName="SHGExtension.cs" Line="14" Column="33" />
-      <File FileName="SHGUtilities.cs" Line="279" Column="62" />
-      <File FileName="Genes/Gene_HemoHediffAdder.cs" Line="31" Column="97" />
+      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="177" Column="105" />
+      <File FileName="ModSettings/PatchOperationSetting.cs" Line="57" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="SuperHeroGenes" expanded="True" selected="True">
+          <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
               <Node name="Hediffs" expanded="True" />
+              <Node name="ModSettings" expanded="True">
+                <Node name="PatchOperationSetting.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

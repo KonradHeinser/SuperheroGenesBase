@@ -76,36 +76,41 @@
     <LetterTributeCaravanArrival>A {0} from {FACTION_name} is approaching.\n\nThey will accept {1} you offer as tribute. The one who gives over the tribute will receive {FACTION_royalFavorLabel} for {2}.\n\nYou can expect a {0} to arrive {3} as long as you are not enemies with {FACTION_name}.</LetterTributeCaravanArrival>
 
         <!--Settings stuff-->
-    <SHG_ModName>Superhero Genes - Base</SHG_ModName>
+    <SHG_ModName>Superhero Genes - Base (Restart Required for all of these)</SHG_ModName>
     <SHG_ModDescription>Much like the people in superhero stories, pawns with these genes can accomplish incomprehensible feats and slay countless foes with ease. Killing a super often requires extraordinary weapons, or a bigger monster.\n\nThe core module of the Superhero Genes series.\n\nThe checkboxes of each section only hide the options, they do not set anything.</SHG_ModDescription>
 
-    <SHG_CondensedMeteors>    Allow Condensed Meteors (Restart Required)</SHG_CondensedMeteors>
+    <SHG_CondensedMeteors>    Allow Condensed Meteors</SHG_CondensedMeteors>
     <SHG_CondensedMeteorsDescription>Allows the condensed summons(i.e condensed steel, condensed jade, and condensed components) to appear as rare meteors. If enabled and a meteor lands, it's recommended that you DON'T mine it all immediately for obvious reasons (colony wealth increases).</SHG_CondensedMeteorsDescription>
 
-    <SHG_MultipleMutations>    Multi-Mutation Supers (Restart Required)</SHG_MultipleMutations>
+    <SHG_MultipleMutations>    Multi-Mutation Supers</SHG_MultipleMutations>
     <SHG_MultipleMutationsDescription>Removes the normal limitation of one mutation per superpowered pawn.</SHG_MultipleMutationsDescription>
 
-    <SHG_MultipleArchetypes>    Multi-Archetype Supers (Restart Required)</SHG_MultipleArchetypes>
+    <SHG_MultipleArchetypes>    Multi-Archetype Supers</SHG_MultipleArchetypes>
     <SHG_MultipleArchetypesDescription>Removes the normal limitation of one archetype per superpowered pawn. Individual archetypes may have certain things that make them incompatible with other archetypes, but there is no longer a global tag excluding all archetypes.</SHG_MultipleArchetypesDescription>
 
-    <SHG_ExpensiveBase>    Expensive Base (Restart Required)</SHG_ExpensiveBase>
+    <SHG_ExpensiveBase>    Expensive Base</SHG_ExpensiveBase>
     <SHG_ExpensiveBaseDescription>Sets the superhero base gene to have a metabolic efficiency of -8(equal to the bonus gained through taking all of the unsuper genes), and adds a dormant super archetype that is the equivalent of taking all the unsuper genes at once.\n\nWARNING: This will cause all the super creating pills (and stereotypes for those with the Villains mod) to give anti-super genes, which cause massive penalties. It will also cause most of them to give the Super Recluse flaw, which provides strong mood bonuses in small colonies, but causes really high mood penalties in large colonies.</SHG_ExpensiveBaseDescription>
 
-    <SHG_SupersEverywhere>    Supers Everywhere (Restart Required)</SHG_SupersEverywhere>
+    <SHG_SupersEverywhere>    Supers Everywhere</SHG_SupersEverywhere>
     <SHG_SupersEverywhereDescription>Makes all non-custom xenotypes gain the superhero base gene, and exchange some of their negative genes for their more severe antisuper counterparts. This will also catch xenotypes added by other mods, but because it always errs on the higher metabolic efficiency side, you may end up with some xenotypes with more than +5 metabolic efficiency. I have made some patches to correct some mods, but let me know if there's a particularly aggregious one you'd like taken care of.</SHG_SupersEverywhereDescription>
 
-    <SHG_ActivatableSuperGenes>    Activatable Super Genes (Restart Required)</SHG_ActivatableSuperGenes>
+    <SHG_ActivatableSuperGenes>    Activatable Super Genes</SHG_ActivatableSuperGenes>
     <SHG_ActivatableSuperGenesDescription>Instead of having all the genes give a bunch of constant bonuses, the bonuses are locked behind an ability that must be activated to receive those boons. If active long enough, the pawn will begin gaining increasing boosts to their consciousness, and ever increasing risk of heart attack. It takes half a day for the side effects to begin appearing.</SHG_ActivatableSuperGenesDescription>
-    <SHG_InterruptibleActivatables>        Interruptible Activatables (Restart Required)</SHG_InterruptibleActivatables>
+    <SHG_InterruptibleActivatables>        Interruptible Activatables</SHG_InterruptibleActivatables>
     <SHG_InterruptibleActivatablesDescription>Instead of activating almost instantly, the abilities take 10 seconds to activate, making it much harder to use them mid battle.</SHG_InterruptibleActivatablesDescription>
 
-    <SHG_MiddleGrounds>    Middle Ground Basic Super Genes (Restart Required)</SHG_MiddleGrounds>
+    <SHG_MiddleGrounds>    Middle Ground Basic Super Genes</SHG_MiddleGrounds>
     <SHG_MiddleGroundsDescription>Adds a second option for all of the basic super and antisuper genes. This adds 16 new genes.</SHG_MiddleGroundsDescription>
-    <SHG_AllGrounds>        All Ground Basic Super Genes (Restart Required)</SHG_AllGrounds>
+    <SHG_AllGrounds>        All Ground Basic Super Genes</SHG_AllGrounds>
     <SHG_AllGroundsDescription>Extends the options for all of the basic super and antisuper genes to the maximum extent. This adds 27 new genes in addition to the 16 added by middle ground, for a total of 43 new genes.</SHG_AllGroundsDescription>
 
     <SHG_RadiomancerOvercharge>    Radiomancer Overcharge</SHG_RadiomancerOvercharge>
     <SHG_RadiomancerOverchargeDescription>While enabled, Energy Armor, Energized Neurons, and Infused Muscles will cause Radiomancers to become overcharged if they reach 120%. While overcharged, the Radiomancer is a danger to most non-super individuals along with many supers for at least 24 hours. This danger applies to both allies and enemies.</SHG_RadiomancerOverchargeDescription>
+
+    <SHG_SuperDrugs_NoTrader>    No Super Drugs in Generic Traders</SHG_SuperDrugs_NoTrader>
+    <SHG_SuperDrugs_NoTraderDescription>This option makes it so most traders are incapable of having any super creating drug types in their lists. This won't impact certain super faction traders, nor will it remove any permits that grant them.\n\nWhen combined with the no reward setting, it is usually impossible to get without certain super factions.</SHG_SuperDrugs_NoTraderDescription>
+    <SHG_SuperDrugs_NoReward>    No Super Drugs in Generic Rewards</SHG_SuperDrugs_NoReward>
+    <SHG_SuperDrugs_NoRewardDescription>This option makes it so none of the super creating drug variants will appear in normal reward sets. This won't impact any reward sets that specifically look for super creating pill types if anything creates a group like that.\n\nWhen combined with the no trader setting, it is usually impossible to get without certain super factions.</SHG_SuperDrugs_NoRewardDescription>
 
         <!--AI Settings-->
     <SHG_SuperAI>Autocast Abilities (Restart Required for any changes)</SHG_SuperAI>

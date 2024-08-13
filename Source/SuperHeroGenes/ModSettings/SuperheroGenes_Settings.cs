@@ -40,6 +40,7 @@ namespace SuperHeroGenesBase
 
         private static bool showMainOptions = true;
         private static bool showVillainOptions = true;
+        private static bool showHeroOptions = true;
         private static bool showAutocastOptions = true;
 
         public static bool condensedMeteors = true;
@@ -52,6 +53,8 @@ namespace SuperHeroGenesBase
         public static bool middleGrounds = false;
         public static bool allGrounds = false;
         public static bool radiomancerOvercharge = true;
+        public static bool superDrugNoTrader = false;
+        public static bool superDrugNoReward = false;
 
         // AI stuff
         public static bool poolUsage = false;
@@ -69,6 +72,9 @@ namespace SuperHeroGenesBase
         public static bool medievalVillains = false;
         public static bool vengefulOne = true;
 
+        // Hero Organization stuff
+        public static bool medievalHeroes = false;
+
         public SuperheroGenes_Settings() { }
 
         public override void ExposeData()
@@ -84,6 +90,8 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref middleGrounds, "middleGrounds");
             Scribe_Values.Look(ref allGrounds, "allGrounds");
             Scribe_Values.Look(ref radiomancerOvercharge, "radiomancerOvercharge", true);
+            Scribe_Values.Look(ref superDrugNoTrader, "superDrugNoTrader");
+            Scribe_Values.Look(ref superDrugNoReward, "superDrugNoReward");
 
             // AI stuff
             Scribe_Values.Look(ref poolUsage, "poolUsage");
@@ -100,6 +108,9 @@ namespace SuperHeroGenesBase
             // Villains and Stereotypes stuff
             Scribe_Values.Look(ref medievalVillains, "medievalVillains");
             Scribe_Values.Look(ref vengefulOne, "vengefulOne", true);
+
+            // Villains and Stereotypes stuff
+            Scribe_Values.Look(ref medievalHeroes, "medievalHeroes");
         }
 
         public void DoWindowContents(Rect inRect)
@@ -120,9 +131,10 @@ namespace SuperHeroGenesBase
             contentRect.y = 0;
             contentRect.width -= 20;
 
-            int numberOfOptions = 3; // One for each section
-            if (showMainOptions) numberOfOptions += 10;
+            int numberOfOptions = 4; // One for each section
+            if (showMainOptions) numberOfOptions += 12;
             if (ModsConfig.IsActive("SuperheroGenes.Villains") && showVillainOptions) numberOfOptions += 2;
+            if (ModsConfig.IsActive("SuperheroGenes.Heroes") && showHeroOptions) numberOfOptions += 1;
             if (showAutocastOptions) numberOfOptions += 10;
             contentRect.height = numberOfOptions * 35; // To avoid weird white space, height is based off of option count of present mods
 
@@ -160,6 +172,10 @@ namespace SuperHeroGenesBase
                 }
                 optionsMenu.CheckboxLabeled("SHG_RadiomancerOvercharge".Translate(), ref radiomancerOvercharge, "SHG_RadiomancerOverchargeDescription".Translate());
                 optionsMenu.Gap(10f);
+                optionsMenu.CheckboxLabeled("SHG_SuperDrugs_NoTrader".Translate(), ref superDrugNoTrader, "SHG_SuperDrugs_NoTraderDescription".Translate());
+                optionsMenu.Gap(10f);
+                optionsMenu.CheckboxLabeled("SHG_SuperDrugs_NoReward".Translate(), ref superDrugNoReward, "SHG_SuperDrugs_NoRewardDescription".Translate());
+                optionsMenu.Gap(10f);
             }
 
             if (ModsConfig.IsActive("SuperheroGenes.Villains"))
@@ -172,6 +188,18 @@ namespace SuperHeroGenesBase
                     optionsMenu.CheckboxLabeled("SHG_MedievalVillains".Translate(), ref medievalVillains, "SHG_MedievalVillainsDescription".Translate());
                     optionsMenu.Gap(10f);
                     optionsMenu.CheckboxLabeled("SHG_VengefulOne".Translate(), ref vengefulOne, "SHG_VengefulOneDescription".Translate());
+                    optionsMenu.Gap(10f);
+                }
+            }
+
+            if (ModsConfig.IsActive("SuperheroGenes.Heroes"))
+            {
+                optionsMenu.Gap(10f);
+                optionsMenu.CheckboxLabeled("SHG_Heroes_ModName".Translate(), ref showHeroOptions, "SHG_Heroes_ModDescription".Translate());
+                optionsMenu.Gap(7f);
+                if (showHeroOptions)
+                {
+                    optionsMenu.CheckboxLabeled("SHG_MedievalHeroes".Translate(), ref medievalHeroes, "SHG_MedievalHeroesDescription".Translate());
                     optionsMenu.Gap(10f);
                 }
             }

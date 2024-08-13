@@ -53,6 +53,14 @@ namespace SuperHeroGenesBase
             {
                 if (!SuperheroGenes_Settings.radiomancerOvercharge && inactive != null) return inactive.Apply(xml);
             }
+            else if (setting == "superDrugNoTrader")
+            {
+                if (SuperheroGenes_Settings.superDrugNoTrader && active != null) return active.Apply(xml);
+            }
+            else if (setting == "superDrugNoReward")
+            {
+                if (SuperheroGenes_Settings.superDrugNoReward && active != null) return active.Apply(xml);
+            }
 
             // AI stuff
 
@@ -116,6 +124,12 @@ namespace SuperHeroGenesBase
                 if (!SuperheroGenes_Settings.vengefulOne && inactive != null) return inactive.Apply(xml);
             }
 
+            // Hero Organization Stuff
+
+            else if (setting == "medievalHeroes")
+            {
+                if (SuperheroGenes_Settings.medievalHeroes && active != null) return active.Apply(xml);
+            }
 
             else if (setting != null) Log.Error("A patch is using a setting that is either mispelled or unhandled");
             else Log.Error("A patch is using this mod's settings, but doesn't specify which one.");

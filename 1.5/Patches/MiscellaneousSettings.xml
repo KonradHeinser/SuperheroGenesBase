@@ -6,4 +6,19 @@
             <xpath>Defs/HediffDef[defName="SHG_Radiomancer_InfusedMuscles" or defName="SHG_Radiomancer_EnergizedNeurons" or defName="SHG_Radiomancer_EnergyArmor"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_CreateOtherHediffs"]</xpath>
         </inactive>
     </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>superDrugNoTrader</setting>
+        <active Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[@Name="SHG_SuperCreatingDrugBase"]/tradeTags/li[text()="ExoticMisc"]</xpath>
+        </active>
+    </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>superDrugNoReward</setting>
+        <active Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[@Name="SHG_SuperCreatingDrugBase"]/thingSetMakerTags/li[text()="RewardStandardLowFreq"]</xpath>
+        </active>
+    </Operation>
+
 </Patch>
