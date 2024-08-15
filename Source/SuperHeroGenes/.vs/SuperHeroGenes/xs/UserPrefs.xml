@@ -1,16 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SHGUtilities.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/JobGiver_AICastAnyOfAbilityOnEnemyTarget.cs">
     <Files>
-      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="22" Column="32" />
-      <File FileName="ModSettings/PatchOperationSetting.cs" Line="62" Column="72" />
+      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="229" Column="118" />
       <File FileName="SHGUtilities.cs" Line="563" Column="73" />
+      <File FileName="SuperAI/JobGiver_AICastAnyOfAbilityOnEnemyTarget.cs" Line="50" Column="112" />
+      <File FileName="SuperAI/ThinkNode_RecordPassage.cs" Line="6" Column="41" />
+      <File FileName="SuperAI/ThinkNode_ConditionalPawnDraftedAndFree.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="SHGUtilities.cs" selected="True" />
+              <Node name="ModSettings" expanded="True" />
+              <Node name="SuperAI" expanded="True">
+                <Node name="JobGiver_AICastAnyOfAbilityOnEnemyTarget.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

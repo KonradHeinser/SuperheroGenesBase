@@ -1,8 +1,8 @@
-﻿using Verse;
-using Verse.AI;
-using RimWorld;
+﻿using System;
 using System.Collections.Generic;
-using System;
+using RimWorld;
+using Verse;
+using Verse.AI;
 
 namespace SuperHeroGenesBase
 {
@@ -36,86 +36,53 @@ namespace SuperHeroGenesBase
                     if (tempAbility.verb.verbProps.requireLineOfSight && !los) continue;
                     bool flag = false;
                     if (currentEnemy is Pawn otherPawn && !tempAbility.comps.NullOrEmpty())
-                    {
                         foreach (AbilityComp compAbility in tempAbility.comps)
                         {
                             if (compAbility is CompAbilityEffect_GiveHediff comp)
                             {
-                                if (comp.Props.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0) flag = true;
-                                else if (comp.Props.durationMultiplier != null && otherPawn.GetStatValue(comp.Props.durationMultiplier) <= 0) flag = true;
-                                else if (SHGUtilities.HasHediff(otherPawn, comp.Props.hediffDef))
-                                {
-                                    flag = true;
-                                    break;
-                                }
+                                if ((comp.Props.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0) ||
+                                    (comp.Props.durationMultiplier != null && otherPawn.GetStatValue(comp.Props.durationMultiplier) <= 0) ||
+                                    SHGUtilities.HasHediff(otherPawn, comp.Props.hediffDef)) flag = true;
                             }
                             else if (compAbility is CompAbilityEffect_GiveMultipleHediffs multiComp)
                             {
-                                if (multiComp.Props.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0) flag = true;
-                                else if (multiComp.Props.durationMultiplier != null && otherPawn.GetStatValue(multiComp.Props.durationMultiplier) <= 0) flag = true;
+                                if ((multiComp.Props.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0) ||
+                                    (multiComp.Props.durationMultiplier != null && otherPawn.GetStatValue(multiComp.Props.durationMultiplier) <= 0)) flag = true;
                                 else
-                                {
                                     foreach (HediffToGive hediff in multiComp.Props.hediffsToGive)
-                                    {
-                                        if (hediff.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0)
-                                        {
-                                            flag = true;
-                                            break;
-                                        }
-                                        if (SHGUtilities.HasHediff(otherPawn, hediff.hediffDef))
-                                        {
-                                            flag = true;
-                                            break;
-                                        }
-                                    }
-                                }
-                                if (flag) break;
+                                        if ((hediff.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0) ||
+                                            SHGUtilities.HasHediff(otherPawn, hediff.hediffDef)) flag = true;
                             }
                             else if (compAbility is CompAbilityEffect_BloodDrain bloodComp)
                             {
-                                if (bloodComp.Props.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0) flag = true;
-                                else if (bloodComp.Props.replacementHediff != null && SHGUtilities.HasHediff(otherPawn, bloodComp.Props.replacementHediff))
-                                {
-                                    flag = true;
-                                    break;
-                                }
+                                if ((bloodComp.Props.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0) ||
+                                    (bloodComp.Props.replacementHediff != null && SHGUtilities.HasHediff(otherPawn, bloodComp.Props.replacementHediff))) flag = true;
                             }
                             else if (compAbility is CompAbilityEffect_Stun stunComp)
                             {
-                                if (stunComp.Props.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0) flag = true;
-                                else if (stunComp.Props.durationMultiplier != null && otherPawn.GetStatValue(stunComp.Props.durationMultiplier) <= 0) flag = true;
-                                else if (tempAbility.lastCastTick >= 0 && tempAbility.def.EffectDuration() > 0)
-                                {
-                                    if (Find.TickManager.TicksGame - tempAbility.lastCastTick < tempAbility.def.EffectDuration())
-                                    {
-                                        flag = true;
-                                        break;
-                                    }
-                                }
+                                if ((stunComp.Props.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0) ||
+                                    (stunComp.Props.durationMultiplier != null && otherPawn.GetStatValue(stunComp.Props.durationMultiplier) <= 0) ||
+                                    (tempAbility.lastCastTick >= 0 && tempAbility.def.EffectDuration() > 0 &&
+                                    Find.TickManager.TicksGame - tempAbility.lastCastTick < tempAbility.def.EffectDuration())) flag = true;
                             }
+                            if (flag) break;
                         }
-                    }
+
                     if (flag) continue;
                     if (tempAbility.verb.verbProps.rangeStat != null)
                     {
                         if (enemyPosition.DistanceTo(pawn.Position) < pawn.GetStatValue(tempAbility.verb.verbProps.rangeStat))
-                        {
                             presentAbilities.Add(tempAbility);
-                        }
                     }
                     else if (!tempAbility.def.targetRequired && tempAbility.def.EffectRadius > 0)
                     {
                         if (enemyPosition.DistanceTo(pawn.Position) < tempAbility.def.EffectRadius)
-                        {
                             presentAbilities.Add(tempAbility);
-                        }
                     }
                     else
                     {
                         if (enemyPosition.DistanceTo(pawn.Position) < tempAbility.verb.verbProps.range)
-                        {
                             presentAbilities.Add(tempAbility);
-                        }
                     }
                 }
             }
@@ -132,9 +99,8 @@ namespace SuperHeroGenesBase
             if (!ability.def.targetRequired) return new LocalTargetInfo(caster);
             // If targetting a pawn, but can't cast pawns, just target the ground
             if (currentEnemy is Pawn pawnTarget && !ability.verb.verbProps.targetParams.canTargetPawns)
-            {
                 return new LocalTargetInfo(currentEnemy);
-            }
+
             if (!ability.CanApplyOn(new LocalTargetInfo(currentEnemy))) return LocalTargetInfo.Invalid;
             return new LocalTargetInfo(currentEnemy);
         }
