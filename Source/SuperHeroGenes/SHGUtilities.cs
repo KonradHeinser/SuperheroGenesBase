@@ -556,6 +556,7 @@ namespace SuperHeroGenesBase
 
         public static Thing GetCurrentTarget(Pawn pawn, bool onlyHostiles = true, bool onlyInFaction = false, bool autoSearch = true, float searchRadius = 50, bool LoSRequired = false)
         {
+            if (!pawn.Spawned) return null;
             if (pawn.stances.curStance is Stance_Busy stance_Busy && stance_Busy.verb?.CurrentTarget.Thing != null)
             {
                 Thing thing = stance_Busy.verb.CurrentTarget.Thing;
