@@ -235,6 +235,7 @@
     <Compile Include="Abilities\CompProperties\CompProperties_OrbitalStrike.cs" />
     <Compile Include="Abilities\CustomizeableOrbitalStrike.cs" />
     <Compile Include="RoyalTitleAwardWorker_InstantHediffGiver.cs" />
+    <Compile Include="QuestNode_Ceiling.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

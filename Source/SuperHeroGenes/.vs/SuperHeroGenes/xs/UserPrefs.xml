@@ -1,20 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SHGUtilities.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="QuestNode_Ceiling.cs">
     <Files>
-      <File FileName="Hediffs/Comps/HediffComp_TemporaryGenes.cs" Line="41" Column="52" />
-      <File FileName="Hediffs/Comps/HediffComp_SeverityByMentalState.cs" Line="1" Column="1" />
-      <File FileName="SHGUtilities.cs" Line="569" Column="18" />
+      <File FileName="SHGUtilities.cs" Line="570" Column="30" />
+      <File FileName="QuestNode_Ceiling.cs" Line="26" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Hediffs" expanded="True">
-                <Node name="Comps" expanded="True" />
-              </Node>
-              <Node name="ModSettings" expanded="True" />
-              <Node name="SHGUtilities.cs" selected="True" />
+              <Node name="QuestNode_Ceiling.cs" selected="True" />
             </Node>
           </Node>
         </State>
