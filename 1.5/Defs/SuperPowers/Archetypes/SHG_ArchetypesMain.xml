@@ -380,6 +380,7 @@
         <label>toximancer</label>
         <description>Toximancers tend to play more of a supporting roll on the battlefield. While their blasts may not kill anyone directly, they are excellent for forcing people to flee to new cover.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
         <iconPath>Archetypes/Gene_Toximancer</iconPath>
+        <immuneToToxGasExposure>true</immuneToToxGasExposure>
         <biostatMet>-1</biostatMet>
         <statOffsets>
             <ToxicResistance>1</ToxicResistance>

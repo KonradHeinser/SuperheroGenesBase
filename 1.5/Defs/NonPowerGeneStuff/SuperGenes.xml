@@ -117,6 +117,7 @@
         <iconPath>Base/SuperGluttony</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>-3</displayOrderInCategory>
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
         <biostatMet>-1</biostatMet>
         <statFactors>
             <MaxNutrition>3</MaxNutrition>

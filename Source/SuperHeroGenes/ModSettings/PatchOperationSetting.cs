@@ -17,13 +17,14 @@ namespace SuperHeroGenesBase
             {
                 if (!SuperheroGenes_Settings.condensedMeteors && inactive != null) return inactive.Apply(xml);
             }
-            else if (setting == "multipleArchetypes")
+            else if (setting == "multipleMutations")
             {
                 if (SuperheroGenes_Settings.multipleMutations && active != null) return active.Apply(xml);
             }
-            else if (setting == "multipleMutations")
+            else if (setting == "multipleArchetypes")
             {
                 if (SuperheroGenes_Settings.multipleArchetypes && active != null) return active.Apply(xml);
+                if (!SuperheroGenes_Settings.multipleArchetypes && inactive != null) return inactive.Apply(xml);
             }
             else if (setting == "expensiveBase")
             {
@@ -32,6 +33,10 @@ namespace SuperHeroGenesBase
             else if (setting == "supersEverywhere")
             {
                 if (SuperheroGenes_Settings.supersEverywhere && active != null) return active.Apply(xml);
+            }
+            else if (setting == "archetypesEverywhere")
+            {
+                if (SuperheroGenes_Settings.supersEverywhere && SuperheroGenes_Settings.archetypesEverywhere && active != null) return active.Apply(xml);
             }
             else if (setting == "activatableSuperGenes")
             {
@@ -122,6 +127,10 @@ namespace SuperHeroGenesBase
             else if (setting == "vengefulOne")
             {
                 if (!SuperheroGenes_Settings.vengefulOne && inactive != null) return inactive.Apply(xml);
+            }
+            else if (setting == "mutationsAnywhere")
+            {
+                if (SuperheroGenes_Settings.supersEverywhere && SuperheroGenes_Settings.mutationsAnywhere && active != null) return active.Apply(xml);
             }
 
             // Hero Organization Stuff

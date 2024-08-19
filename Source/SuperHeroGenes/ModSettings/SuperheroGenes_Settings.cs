@@ -48,6 +48,7 @@ namespace SuperHeroGenesBase
         public static bool multipleMutations = false;
         public static bool expensiveBase = false;
         public static bool supersEverywhere = false;
+        public static bool archetypesEverywhere = false;
         public static bool activatableSuperGenes = false;
         public static bool interruptibleActivatables = false;
         public static bool middleGrounds = false;
@@ -71,6 +72,7 @@ namespace SuperHeroGenesBase
         // Villains and Stereotypes stuff
         public static bool medievalVillains = false;
         public static bool vengefulOne = true;
+        public static bool mutationsAnywhere = false;
 
         // Hero Organization stuff
         public static bool medievalHeroes = false;
@@ -85,6 +87,7 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref multipleArchetypes, "multipleArchetypes");
             Scribe_Values.Look(ref expensiveBase, "expensiveBase");
             Scribe_Values.Look(ref supersEverywhere, "supersEverywhere");
+            Scribe_Values.Look(ref archetypesEverywhere, "archetypesEverywhere");
             Scribe_Values.Look(ref activatableSuperGenes, "activatableSuperGenes");
             Scribe_Values.Look(ref interruptibleActivatables, "interruptibleActivatables");
             Scribe_Values.Look(ref middleGrounds, "middleGrounds");
@@ -108,6 +111,7 @@ namespace SuperHeroGenesBase
             // Villains and Stereotypes stuff
             Scribe_Values.Look(ref medievalVillains, "medievalVillains");
             Scribe_Values.Look(ref vengefulOne, "vengefulOne", true);
+            Scribe_Values.Look(ref mutationsAnywhere, "mutationsAnywhere");
 
             // Villains and Stereotypes stuff
             Scribe_Values.Look(ref medievalHeroes, "medievalHeroes");
@@ -132,8 +136,8 @@ namespace SuperHeroGenesBase
             contentRect.width -= 20;
 
             int numberOfOptions = 4; // One for each section
-            if (showMainOptions) numberOfOptions += 12;
-            if (ModsConfig.IsActive("SuperheroGenes.Villains") && showVillainOptions) numberOfOptions += 2;
+            if (showMainOptions) numberOfOptions += 13;
+            if (ModsConfig.IsActive("SuperheroGenes.Villains") && showVillainOptions) numberOfOptions += 3;
             if (ModsConfig.IsActive("SuperheroGenes.Heroes") && showHeroOptions) numberOfOptions += 1;
             if (showAutocastOptions) numberOfOptions += 10;
             contentRect.height = numberOfOptions * 35; // To avoid weird white space, height is based off of option count of present mods
@@ -156,6 +160,11 @@ namespace SuperHeroGenesBase
                 optionsMenu.Gap(10f);
                 optionsMenu.CheckboxLabeled("SHG_SupersEverywhere".Translate(), ref supersEverywhere, "SHG_SupersEverywhereDescription".Translate());
                 optionsMenu.Gap(10f);
+                if (supersEverywhere)
+                {
+                    optionsMenu.CheckboxLabeled("SHG_ArchetypesEverywhere".Translate(), ref archetypesEverywhere, "SHG_ArchetypesEverywhereDescription".Translate());
+                    optionsMenu.Gap(10f);
+                }
                 optionsMenu.CheckboxLabeled("SHG_ActivatableSuperGenes".Translate(), ref activatableSuperGenes, "SHG_ActivatableSuperGenesDescription".Translate());
                 optionsMenu.Gap(10f);
                 if (activatableSuperGenes)
@@ -189,6 +198,11 @@ namespace SuperHeroGenesBase
                     optionsMenu.Gap(10f);
                     optionsMenu.CheckboxLabeled("SHG_VengefulOne".Translate(), ref vengefulOne, "SHG_VengefulOneDescription".Translate());
                     optionsMenu.Gap(10f);
+                    if (supersEverywhere)
+                    {
+                        optionsMenu.CheckboxLabeled("SHG_MutationsAnywhere".Translate(), ref mutationsAnywhere, "SHG_MutationsAnywhereDescription".Translate());
+                        optionsMenu.Gap(10f);
+                    }
                 }
             }
 

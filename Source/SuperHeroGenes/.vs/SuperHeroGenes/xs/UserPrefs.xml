@@ -1,15 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="QuestNode_Ceiling.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ModSettings/SuperheroGenes_Settings.cs">
     <Files>
       <File FileName="SHGUtilities.cs" Line="570" Column="30" />
-      <File FileName="QuestNode_Ceiling.cs" Line="26" Column="1" />
+      <File FileName="ModSettings/PatchOperationSetting.cs" Line="131" Column="51" />
+      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="169" Column="38" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="QuestNode_Ceiling.cs" selected="True" />
+              <Node name="ModSettings" expanded="True">
+                <Node name="SuperheroGenes_Settings.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
