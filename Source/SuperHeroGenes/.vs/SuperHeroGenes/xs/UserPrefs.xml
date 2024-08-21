@@ -1,23 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="ModSettings/SuperheroGenes_Settings.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Genes/Gene_HemoHediffAdder.cs">
     <Files>
       <File FileName="SHGUtilities.cs" Line="570" Column="30" />
       <File FileName="ModSettings/PatchOperationSetting.cs" Line="131" Column="51" />
       <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="169" Column="38" />
+      <File FileName="Genes/Gene_HemoHediffAdder.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SuperHeroGenes" expanded="True">
-            <Node name="SuperHeroGenes" expanded="True">
-              <Node name="ModSettings" expanded="True">
-                <Node name="SuperheroGenes_Settings.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

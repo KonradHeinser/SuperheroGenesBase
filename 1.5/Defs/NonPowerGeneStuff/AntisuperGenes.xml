@@ -90,7 +90,7 @@
         <biostatMet>5</biostatMet>
         <statFactors>
             <ImmunityGainSpeed>0.8</ImmunityGainSpeed>
-            <InjuryHealingFactor>0.1</InjuryHealingFactor>
+            <InjuryHealingFactor>0.5</InjuryHealingFactor>
         </statFactors>
         <statOffsets>
             <ImmunityGainSpeed>-0.1</ImmunityGainSpeed>
@@ -116,8 +116,8 @@
         <biostatMet>3</biostatMet>
         <statFactors>
             <ResearchSpeed>0.4</ResearchSpeed>
-            <GlobalLearningFactor>0.1</GlobalLearningFactor>
-            <LearningRateFactor>0.1</LearningRateFactor>
+            <GlobalLearningFactor>0.4</GlobalLearningFactor>
+            <LearningRateFactor>0.4</LearningRateFactor>
             <HackingSpeed MayRequire="ludeon.rimworld.ideology">0.4</HackingSpeed>
         </statFactors>
     </GeneDef>
@@ -175,9 +175,9 @@
         <displayOrderInCategory>63</displayOrderInCategory>
         <biostatMet>4</biostatMet>
         <statFactors>
-            <ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
-            <MeleeDodgeChance>0.2</MeleeDodgeChance>
-            <MeleeHitChance>0.2</MeleeHitChance>
+            <ShootingAccuracyPawn>0.6</ShootingAccuracyPawn>
+            <MeleeDodgeChance>0.6</MeleeDodgeChance>
+            <MeleeHitChance>0.6</MeleeHitChance>
             <PawnTrapSpringChance>10</PawnTrapSpringChance>
             <IncomingDamageFactor>1.1</IncomingDamageFactor>
         </statFactors>
@@ -196,8 +196,8 @@
         <displayOrderInCategory>73</displayOrderInCategory>
         <biostatMet>2</biostatMet>
         <statFactors>
-            <StaggerDurationFactor>10</StaggerDurationFactor>
-            <MeleeDodgeChance>0.2</MeleeDodgeChance>
+            <StaggerDurationFactor>2.5</StaggerDurationFactor>
+            <MeleeDodgeChance>0.4</MeleeDodgeChance>
             <MeleeCooldownFactor>2.5</MeleeCooldownFactor>
         </statFactors>
         <statOffsets>
@@ -222,10 +222,10 @@
         <displayOrderInCategory>83</displayOrderInCategory>
         <biostatMet>3</biostatMet>
         <statFactors>
-            <CarryingCapacity>0.1</CarryingCapacity>
-            <CarryBulk MayRequire="ceteam.combatextended">0.1</CarryBulk>
-            <MeleeDamageFactor>0.1</MeleeDamageFactor>
-            <MeleeArmorPenetration>0.1</MeleeArmorPenetration>
+            <CarryingCapacity>0.4</CarryingCapacity>
+            <CarryBulk MayRequire="ceteam.combatextended">0.4</CarryBulk>
+            <MeleeDamageFactor>0.4</MeleeDamageFactor>
+            <MeleeArmorPenetration>0.4</MeleeArmorPenetration>
         </statFactors>
         <capMods>
             <li>
