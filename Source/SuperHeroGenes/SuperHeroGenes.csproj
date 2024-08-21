@@ -56,6 +56,10 @@
       <HintPath>..\..\..\..\..\..\workshop\content\294100\2023507013\1.4\Assemblies\VFECore.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\RimWorldLinux_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -236,6 +240,8 @@
     <Compile Include="Abilities\CustomizeableOrbitalStrike.cs" />
     <Compile Include="RoyalTitleAwardWorker_InstantHediffGiver.cs" />
     <Compile Include="QuestNode_Ceiling.cs" />
+    <Compile Include="QuestNode_Root_StopTheLeague.cs" />
+    <Compile Include="QuestPart_SubquestGenerator_StopTheLeague.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />
