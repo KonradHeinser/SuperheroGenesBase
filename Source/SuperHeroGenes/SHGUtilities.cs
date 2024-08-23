@@ -554,19 +554,43 @@ namespace SuperHeroGenesBase
             return false;
         }
 
-        public static Thing GetCurrentTarget(Pawn pawn, bool onlyHostiles = true, bool onlyInFaction = false, bool autoSearch = true, float searchRadius = 50, bool LoSRequired = false)
+        public static Thing GetCurrentTarget(Pawn pawn, bool onlyHostiles = true, bool onlyInFaction = false, bool autoSearch = true, float searchRadius = 50, bool LoSRequired = false, bool allowDowned = false)
         {
             if (!pawn.Spawned) return null;
+            if (onlyHostiles && onlyInFaction) return null;
             if (pawn.stances.curStance is Stance_Busy stance_Busy && stance_Busy.verb?.CurrentTarget.Thing != null)
             {
                 Thing thing = stance_Busy.verb.CurrentTarget.Thing;
-                if (LoSRequired && !GenSight.LineOfSight(pawn.Position, thing.Position, pawn.Map)) return null;
-                if (onlyHostiles && !thing.HostileTo(pawn)) return null;
-                if (onlyInFaction)
+                if (thing.Position.DistanceTo(pawn.Position) > searchRadius)
                 {
-                    if (thing is Pawn otherPawn && otherPawn.Faction == pawn.Faction) return thing;
+                    if (autoSearch) return AutoSearchTarget(pawn, onlyHostiles, onlyInFaction, searchRadius, LoSRequired);
                     return null;
                 }
+                if ((LoSRequired && !GenSight.LineOfSight(pawn.Position, thing.Position, pawn.Map)) || (onlyHostiles && !thing.HostileTo(pawn)))
+                {
+                    if (autoSearch) return AutoSearchTarget(pawn, onlyHostiles, onlyInFaction, searchRadius, LoSRequired);
+                    return null;
+                }
+                if (thing is Pawn otherPawn)
+                {
+                    if (otherPawn == pawn) return null;
+                    if (!allowDowned && (otherPawn.Downed || otherPawn.Dead))
+                    {
+                        if (autoSearch) return AutoSearchTarget(pawn, onlyHostiles, onlyInFaction, searchRadius, LoSRequired);
+                        return null;
+                    }
+                    if (onlyInFaction)
+                    {
+                        if (otherPawn.Faction == pawn.Faction) return thing;
+                        return null;
+                    }
+                    if (onlyHostiles && !otherPawn.HostileTo(pawn))
+                    {
+                        if (autoSearch) return AutoSearchTarget(pawn, onlyHostiles, onlyInFaction, searchRadius, LoSRequired);
+                        return null;
+                    }
+                }
+
                 return thing;
             }
             if (pawn.IsAttacking() && pawn.CurJob != null)
@@ -584,19 +608,27 @@ namespace SuperHeroGenesBase
                     return thing;
                 }
             }
-            if (autoSearch)
+            if (autoSearch) return AutoSearchTarget(pawn, onlyHostiles, onlyInFaction, searchRadius, LoSRequired);
+
+            return null;
+        }
+
+        public static Pawn AutoSearchTarget(Pawn pawn, bool onlyHostiles = true, bool onlyInFaction = false, float searchRadius = 50, bool LoSRequired = false)
+        {
+
+            List<Pawn> pawns = pawn.Map.mapPawns.AllPawns;
+            pawns.SortBy((Pawn c) => c.Position.DistanceToSquared(pawn.Position));
+            foreach (Pawn otherPawn in pawns)
             {
-                List<Pawn> pawns = pawn.Map.mapPawns.AllPawnsSpawned.Where((Pawn p) => p.Position.DistanceTo(pawn.Position) <= searchRadius && p != pawn).ToList();
-                pawns.SortBy((Pawn c) => c.Position.DistanceToSquared(pawn.Position));
-                foreach (Pawn otherPawn in pawns)
-                {
-                    if (LoSRequired && !GenSight.LineOfSight(pawn.Position, otherPawn.Position, pawn.Map)) continue;
-                    if (otherPawn.Dead || otherPawn.Downed) continue;
-                    if (onlyHostiles && (otherPawn.HostileTo(pawn) || otherPawn.Faction != null && pawn.Faction != null && otherPawn.Faction.HostileTo(pawn.Faction))) return otherPawn;
-                    if (onlyInFaction && otherPawn.Faction == pawn.Faction) return otherPawn;
-                    if (!onlyHostiles && !onlyInFaction) return otherPawn;
-                }
+                if (otherPawn == pawn) continue;
+                if (LoSRequired && !GenSight.LineOfSight(pawn.Position, otherPawn.Position, pawn.Map)) continue;
+                if (otherPawn.Dead || otherPawn.Downed) continue;
+                if (otherPawn.Position.DistanceTo(pawn.Position) > searchRadius) break;
+                if (onlyHostiles && otherPawn.HostileTo(pawn)) return otherPawn;
+                if (onlyInFaction && otherPawn.Faction == pawn.Faction) return otherPawn;
+                if (!onlyHostiles && !onlyInFaction) return otherPawn;
             }
+
             return null;
         }
 

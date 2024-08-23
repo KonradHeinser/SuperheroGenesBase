@@ -1,9 +1,24 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="QuestNode_Root_StopTheLeague.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/ThinkNode_ConditionalNearbyEnemyTarget.cs">
     <Files>
       <File FileName="QuestNode_Root_StopTheLeague.cs" Line="38" Column="42" />
       <File FileName="QuestPart_SubquestGenerator_StopTheLeague.cs" Line="87" Column="10" />
+      <File FileName="SHGUtilities.cs" Line="611" Column="73" />
+      <File FileName="SuperAI/ThinkNode_ConditionalNearbyEnemyTarget.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SuperHeroGenes" expanded="True">
+            <Node name="SuperHeroGenes" expanded="True">
+              <Node name="SuperAI" expanded="True">
+                <Node name="ThinkNode_ConditionalNearbyEnemyTarget.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
