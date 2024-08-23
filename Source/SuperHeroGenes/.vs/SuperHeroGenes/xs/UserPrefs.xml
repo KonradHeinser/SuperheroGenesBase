@@ -1,24 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="QuestPart_SubquestGenerator_StopTheLeague.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="QuestNode_Root_StopTheLeague.cs">
     <Files>
-      <File FileName="QuestNode_Root_StopTheLeague.cs" Line="122" Column="30" />
+      <File FileName="QuestNode_Root_StopTheLeague.cs" Line="38" Column="42" />
       <File FileName="QuestPart_SubquestGenerator_StopTheLeague.cs" Line="87" Column="10" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SuperHeroGenes" expanded="True">
-            <Node name="SuperHeroGenes" expanded="True">
-              <Node name="References" expanded="True">
-                <Node name="UnityEngine.IMGUIModule" selected="True" />
-              </Node>
-              <Node name="Genes" expanded="True" />
-              <Node name="ModSettings" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

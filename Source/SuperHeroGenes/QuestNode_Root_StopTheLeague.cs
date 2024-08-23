@@ -15,6 +15,10 @@ namespace SuperHeroGenesBase
 
         public SitePartDef sitePartDef;
 
+        public IntRange ticksBetweenSubquests;
+
+        public int totalSubquests;
+
         private static readonly SimpleCurve ExteriorThreatPointsOverPoints = new SimpleCurve
         {
             new CurvePoint(0f, 500f),
@@ -44,11 +48,11 @@ namespace SuperHeroGenesBase
             QuestPart_SubquestGenerator_StopTheLeague generator = new QuestPart_SubquestGenerator_StopTheLeague
             {
                 inSignalEnable = QuestGen.slate.Get<string>("inSignal"),
-                interval = new IntRange(300000, 600000),
+                interval = ticksBetweenSubquests,
                 useMapParentThreatPoints = map?.Parent,
                 expiryInfoPartKey = "SHGHero_DestroyedDevices",
                 maxActiveSubquests = 1,
-                maxSuccessfulSubquests = 3
+                maxSuccessfulSubquests = totalSubquests
             };
             generator.subquestDefs.AddRange(GetAllSubquests(QuestGen.Root));
             generator.outSignalsCompleted.Add(text);
@@ -78,7 +82,7 @@ namespace SuperHeroGenesBase
             Site site = QuestGen_Sites.GenerateSite(Gen.YieldSingle(new SitePartDefWithParams(sitePartDef, sitePartParams)), tile, hostileFaction);
             quest.SpawnWorldObject(site, null, text);
 
-            TaggedString taggedString = "SHGHero_DeviceFoundLocation".Translate() + "\n\n" + "SHGHero_DeviceFoundLocationFoundSecurityThreats".Translate(hostileFaction);
+            TaggedString taggedString = "SHGHero_DeviceFoundLocation".Translate() + "\n\n" + "SHGHero_DeviceFoundLocationFoundSecurityThreats".Translate(hostileFaction.Name);
             quest.Letter(LetterDefOf.PositiveEvent, text, null, null, null, false, QuestPart.SignalListenMode.OngoingOnly, Gen.YieldSingle(site), false,
                 taggedString.Resolve(), null, "SHGHero_DeviceFoundLocation".Translate());
             quest.DescriptionPart("[questDescriptionPartBeforeDiscovery]", quest.AddedSignal, text, QuestPart.SignalListenMode.OngoingOrNotYetAccepted);
@@ -111,11 +115,11 @@ namespace SuperHeroGenesBase
             quest.SignalPass(delegate
             {
                 quest.SignalPass(null, null, awakenSecurityThreatsSignal);
-                quest.Message("SHGHero_ThreatsAlerted".Translate(hostileFaction), MessageTypeDefOf.NegativeEvent);
+                quest.Message("SHGHero_ThreatsAlerted".Translate(hostileFaction.def.pawnsPlural), MessageTypeDefOf.NegativeEvent);
             }, text4);
             quest.AnyHostileThreatToPlayer(site, true, delegate
             {
-                quest.Message("SHGHero_ThreatsDistrubed".Translate(), MessageTypeDefOf.NegativeEvent);
+                quest.Message("SHGHero_ThreatsDistrubed".Translate(hostileFaction.def.pawnsPlural), MessageTypeDefOf.NegativeEvent);
             }, null, awakenSecurityThreatsSignal);
 
             quest.End(QuestEndOutcome.Success, 0, null, QuestGenUtility.HardcodedSignalWithQuestID("thing.Destroyed"), QuestPart.SignalListenMode.OngoingOnly, true);
