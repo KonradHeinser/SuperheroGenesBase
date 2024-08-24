@@ -242,6 +242,8 @@
     <Compile Include="QuestNode_Ceiling.cs" />
     <Compile Include="QuestNode_Root_StopTheLeague.cs" />
     <Compile Include="QuestPart_SubquestGenerator_StopTheLeague.cs" />
+    <Compile Include="LayoutWorkerComplex_FixedFaction.cs" />
+    <Compile Include="SitePartWorker_VillainComplex.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

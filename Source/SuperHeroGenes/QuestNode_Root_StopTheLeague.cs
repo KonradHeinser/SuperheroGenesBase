@@ -59,7 +59,7 @@ namespace SuperHeroGenesBase
             quest.AddPart(generator);
             num = slate.Get("points", 0f);
             Thing thing = ThingMaker.MakeThing(villainousDevices.RandomElement());
-            QuestGen_Signal.SignalPass(quest, null, QuestGenUtility.HardcodedSignalWithQuestID("device.TookDamage"), awakenSecurityThreatsSignal);
+            QuestGen_Signal.SignalPass(quest, null, QuestGenUtility.HardcodedSignalWithQuestID("thing.TookDamage"), awakenSecurityThreatsSignal);
 
             QuestPart_Choice questPart_Choice = quest.RewardChoice();
             QuestPart_Choice.Choice choice = new QuestPart_Choice.Choice
@@ -78,7 +78,7 @@ namespace SuperHeroGenesBase
                 sitePartParams.exteriorThreatPoints = ExteriorThreatPointsOverPoints.Evaluate(num);
                 sitePartParams.interiorThreatPoints = InteriorThreatPointsOverPoints.Evaluate(num);
             }
-            Faction hostileFaction = FactionUtility.DefaultFactionFrom(faction);
+            Faction hostileFaction = Find.FactionManager.FirstFactionOfDef(faction);
             Site site = QuestGen_Sites.GenerateSite(Gen.YieldSingle(new SitePartDefWithParams(sitePartDef, sitePartParams)), tile, hostileFaction);
             quest.SpawnWorldObject(site, null, text);
 
@@ -91,8 +91,8 @@ namespace SuperHeroGenesBase
             QuestPart_Delay part = new QuestPart_Delay
             {
                 delayTicks = 180000,
-                alertLabel = "AncientAltarThreatsWaking".Translate(),
-                alertExplanation = "AncientAltarThreatsWakingDesc".Translate(),
+                alertLabel = "SHGHero_ThreatsWaking".Translate(),
+                alertExplanation = "SHGHero_ThreatsWakingDesc".Translate(),
                 ticksLeftAlertCritical = 2500,
                 inSignalEnable = text,
                 alertCulprits =
@@ -123,7 +123,7 @@ namespace SuperHeroGenesBase
             }, null, awakenSecurityThreatsSignal);
 
             quest.End(QuestEndOutcome.Success, 0, null, QuestGenUtility.HardcodedSignalWithQuestID("thing.Destroyed"), QuestPart.SignalListenMode.OngoingOnly, true);
-            slate.Set("device", thing);
+            slate.Set("thing", thing);
             slate.Set("site", site);
         }
 
