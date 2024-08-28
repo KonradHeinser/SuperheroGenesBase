@@ -57,8 +57,6 @@ namespace SuperHeroGenesBase
             generator.subquestDefs.AddRange(GetAllSubquests(QuestGen.Root));
             generator.outSignalsCompleted.Add(text);
             quest.AddPart(generator);
-            num = slate.Get("points", 0f);
-            Thing thing = ThingMaker.MakeThing(villainousDevices.RandomElement());
             QuestGen_Signal.SignalPass(quest, null, QuestGenUtility.HardcodedSignalWithQuestID("thing.TookDamage"), awakenSecurityThreatsSignal);
 
             QuestPart_Choice questPart_Choice = quest.RewardChoice();
@@ -90,14 +88,13 @@ namespace SuperHeroGenesBase
 
             QuestPart_Delay part = new QuestPart_Delay
             {
-                delayTicks = 180000,
+                delayTicks = 30000,
                 alertLabel = "SHGHero_ThreatsWaking".Translate(),
                 alertExplanation = "SHGHero_ThreatsWakingDesc".Translate(),
                 ticksLeftAlertCritical = 2500,
                 inSignalEnable = text,
                 alertCulprits =
                 {
-                    (GlobalTargetInfo)thing,
                     (GlobalTargetInfo)site
                 },
                 isBad = true,
@@ -122,8 +119,6 @@ namespace SuperHeroGenesBase
                 quest.Message("SHGHero_ThreatsDistrubed".Translate(hostileFaction.def.pawnsPlural), MessageTypeDefOf.NegativeEvent);
             }, null, awakenSecurityThreatsSignal);
 
-            quest.End(QuestEndOutcome.Success, 0, null, QuestGenUtility.HardcodedSignalWithQuestID("thing.Destroyed"), QuestPart.SignalListenMode.OngoingOnly, true);
-            slate.Set("thing", thing);
             slate.Set("site", site);
         }
 

@@ -62,30 +62,6 @@ namespace SuperHeroGenesBase
             }
         }
 
-        public override void DoDebugWindowContents(Rect innerRect, ref float curY)
-        {
-            base.DoDebugWindowContents(innerRect, ref curY);
-            if (Widgets.ButtonText(new Rect(innerRect.x, curY, 500f, 25f), "Shuffle subquest queue"))
-            {
-                ShuffleQueue();
-            }
-            curY += 29f;
-            if (Widgets.ButtonText(new Rect(innerRect.x, curY, 500f, 25f), "Log subquest queue"))
-            {
-                if (questQueue.Count == 0)
-                {
-                    ShuffleQueue();
-                }
-                StringBuilder stringBuilder = new StringBuilder();
-                for (int i = 0; i < questQueue.Count; i++)
-                {
-                    stringBuilder.AppendLine($"{i} ->" + questQueue[i].defName);
-                }
-                Log.Message(stringBuilder.ToString());
-            }
-            curY += 29f;
-        }
-
         public override void ExposeData()
         {
             base.ExposeData();

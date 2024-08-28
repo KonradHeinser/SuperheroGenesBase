@@ -1,19 +1,22 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SitePartWorker_VillainComplex.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DynamicComplex/SketchResolver_FlexibleRoom.cs">
     <Files>
-      <File FileName="QuestNode_Root_StopTheLeague.cs" Line="101" Column="43" />
-      <File FileName="QuestPart_SubquestGenerator_StopTheLeague.cs" Line="101" Column="1" />
-      <File FileName="SHGUtilities.cs" Line="559" Column="44" />
-      <File FileName="SuperAI/ThinkNode_ConditionalNearbyEnemyTarget.cs" Line="1" Column="1" />
-      <File FileName="LayoutWorkerComplex_FixedFaction.cs" Line="22" Column="1" />
-      <File FileName="SitePartWorker_VillainComplex.cs" Line="43" Column="42" />
+      <File FileName="DynamicComplex/LayoutWorkerComplex_FixedFaction.cs" Line="21" Column="10" />
+      <File FileName="DynamicComplex/SitePartWorker_FactionComplex.cs" Line="53" Column="53" />
+      <File FileName="DynamicComplex/SketchResolver_FlexibleRoom.cs" Line="64" Column="21" />
+      <File FileName="DynamicComplex/GenStep_ComplexLayout.cs" Line="105" Column="13" />
+      <File FileName="DynamicComplex/SymbolResolver_NewComplex.cs" Line="94" Column="117" />
+      <File FileName="QuestPart_SubquestGenerator_StopTheLeague.cs" Line="64" Column="1" />
+      <File FileName="QuestNode_Root_StopTheLeague.cs" Line="93" Column="51" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="SitePartWorker_VillainComplex.cs" selected="True" />
+              <Node name="DynamicComplex" expanded="True">
+                <Node name="SketchResolver_FlexibleRoom.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

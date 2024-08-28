@@ -242,8 +242,12 @@
     <Compile Include="QuestNode_Ceiling.cs" />
     <Compile Include="QuestNode_Root_StopTheLeague.cs" />
     <Compile Include="QuestPart_SubquestGenerator_StopTheLeague.cs" />
-    <Compile Include="LayoutWorkerComplex_FixedFaction.cs" />
-    <Compile Include="SitePartWorker_VillainComplex.cs" />
+    <Compile Include="DynamicComplex\GenStep_ComplexLayout.cs" />
+    <Compile Include="DynamicComplex\SitePartWorker_FactionComplex.cs" />
+    <Compile Include="DynamicComplex\SymbolResolver_NewComplex.cs" />
+    <Compile Include="DynamicComplex\SketchResolver_FlexibleRoom.cs" />
+    <Compile Include="DynamicComplex\LayoutWorkerComplex_FixedFaction.cs" />
+    <Compile Include="DynamicComplex\ComplexSet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />
@@ -257,6 +261,7 @@
     <Folder Include="Hediffs\CompProperties\" />
     <Folder Include="Abilities\CompProperties\" />
     <Folder Include="Abilities\CompAbilityEffects\" />
+    <Folder Include="DynamicComplex\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

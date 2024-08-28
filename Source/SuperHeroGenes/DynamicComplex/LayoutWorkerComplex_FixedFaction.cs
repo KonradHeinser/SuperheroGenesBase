@@ -13,7 +13,9 @@ namespace SuperHeroGenesBase
         public override Faction GetFixedHostileFactionForThreats()
         {
             if (!Def.threats.NullOrEmpty() && Def.threats[0].def.faction != null)
+            {
                 return Find.FactionManager.FirstFactionOfDef(Def.threats[0].def.faction);
+            }
 
             return null;
         }
