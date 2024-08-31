@@ -1,27 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="DynamicComplex/SketchResolver_FlexibleRoom.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ModSettings/SuperheroGenes_Settings.cs">
     <Files>
-      <File FileName="DynamicComplex/LayoutWorkerComplex_FixedFaction.cs" Line="21" Column="10" />
-      <File FileName="DynamicComplex/SitePartWorker_FactionComplex.cs" Line="53" Column="53" />
-      <File FileName="DynamicComplex/SketchResolver_FlexibleRoom.cs" Line="64" Column="21" />
-      <File FileName="DynamicComplex/GenStep_ComplexLayout.cs" Line="105" Column="13" />
-      <File FileName="DynamicComplex/SymbolResolver_NewComplex.cs" Line="94" Column="117" />
-      <File FileName="QuestPart_SubquestGenerator_StopTheLeague.cs" Line="64" Column="1" />
-      <File FileName="QuestNode_Root_StopTheLeague.cs" Line="93" Column="51" />
+      <File FileName="ModSettings/PatchOperationSetting.cs" Line="132" Column="14" />
+      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="141" Column="55" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SuperHeroGenes" expanded="True">
-            <Node name="SuperHeroGenes" expanded="True">
-              <Node name="DynamicComplex" expanded="True">
-                <Node name="SketchResolver_FlexibleRoom.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -139,6 +139,10 @@ namespace SuperHeroGenesBase
             {
                 if (SuperheroGenes_Settings.medievalHeroes && active != null) return active.Apply(xml);
             }
+            else if (setting == "leagueGathering")
+            {
+                if (SuperheroGenes_Settings.leagueGathering && active != null) return active.Apply(xml);
+            }
 
             else if (setting != null) Log.Error("A patch is using a setting that is either mispelled or unhandled");
             else Log.Error("A patch is using this mod's settings, but doesn't specify which one.");

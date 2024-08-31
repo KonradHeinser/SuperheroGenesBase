@@ -1,15 +1,17 @@
-﻿using Verse;
-using Verse.AI;
-using RimWorld.BaseGen;
-using RimWorld;
+﻿using System;
+using System.Linq;
 using System.Collections.Generic;
+using RimWorld;
+using RimWorld.BaseGen;
+using UnityEngine;
+using Verse;
+using Verse.AI;
+using Verse.AI.Group;
 
 namespace SuperHeroGenesBase
 {
     public class SymbolResolver_NewComplex : SymbolResolver
     {
-        private static List<IntVec3> doorCells = new List<IntVec3>();
-
         public List<ComplexSet> filthSet;
 
         public LayoutDef defaultLayout;
@@ -55,7 +57,8 @@ namespace SuperHeroGenesBase
         public ThingDef fourthLayerFilth;
 
         public float fourthLayerFilthChance;
-        // 
+
+        public float defendRadius = 50;
 
         public override void Resolve(ResolveParams rp)
         {
@@ -85,10 +88,20 @@ namespace SuperHeroGenesBase
                 BaseGen.symbolStack.Push("outdoorsPath", resolveParams3);
             }
 
-            if (!firstLayerThingOptions.NullOrEmpty() || !secondLayerThingOptions.NullOrEmpty() || !thirdLayerThingOptions.NullOrEmpty() || !fourthLayerThingOptions.NullOrEmpty())
-                CreateDefenses(rp);
-
             BaseGen.symbolStack.Push("ensureCanReachMapEdge", rp);
+            if (rp.faction == null && defaultLayout is ComplexLayoutDef cLayout && cLayout.Worker is LayoutWorkerComplex cWorker && cWorker.GetFixedHostileFactionForThreats() != null)
+            {
+                rp.faction = cWorker.GetFixedHostileFactionForThreats();
+                if (cLayout.rewardThingSetMakerDef != null && cLayout.roomRewardCrateFactor <= 0)
+                {
+                    ResolveParams resolveParams5 = rp;
+                    resolveParams5.thingSetMakerDef = resolveParams5.thingSetMakerDef ?? ThingSetMakerDefOf.MapGen_DefaultStockpile;
+                    resolveParams5.lootMarketValue = resolveParams5.lootMarketValue ?? 1800f;
+                    BaseGen.symbolStack.Push("lootScatter", resolveParams5);
+                }
+            }
+
+
             ResolveComplex(rp);
 
             // Not sure what this is, but it's from the ancient complex stuff and removing it might break some stuff
@@ -107,20 +120,94 @@ namespace SuperHeroGenesBase
                     edifice.Destroy();
                 }
             }
+
+            if (defaultLayout is ComplexLayoutDef complexLayout && complexLayout.Worker is LayoutWorkerComplex complexWorker && complexWorker.GetFixedHostileFactionForThreats() != null)
+            {
+                Faction faction = complexWorker.GetFixedHostileFactionForThreats();
+
+                if (faction == Faction.OfMechanoids)
+                {
+                    Lord lord = LordMaker.MakeNewLord(Faction.OfMechanoids, new LordJob_SleepThenMechanoidsDefend(), BaseGen.globalSettings.map);
+
+                    if (rp.exteriorThreatPoints.HasValue)
+                    {
+                        ResolveParams resolveParams2 = rp;
+                        resolveParams2.sleepingMechanoidsWakeupSignalTag = rp.triggerSecuritySignal;
+                        resolveParams2.sendWokenUpMessage = false;
+                        resolveParams2.rect = rp.rect.ExpandedBy(10);
+                        resolveParams2.threatPoints = rp.exteriorThreatPoints.Value;
+                        BaseGen.symbolStack.Push("sleepingMechanoids", resolveParams2);
+                    }
+
+                    if (rp.interiorThreatPoints.HasValue)
+                    {
+                        Mathf.Min(rp.rect.Width, rp.rect.Height);
+
+                        foreach (PawnKindDef combatPawnKindsForPoint in PawnUtility.GetCombatPawnKindsForPoints(MechClusterGenerator.MechKindSuitableForCluster, rp.interiorThreatPoints.Value, (PawnKindDef pk) => 1f / pk.combatPower))
+                        {
+                            ResolveParams resolveParams3 = rp;
+                            resolveParams3.singlePawnKindDef = combatPawnKindsForPoint;
+                            resolveParams3.singlePawnLord = lord;
+                            BaseGen.symbolStack.Push("pawn", resolveParams3);
+                        }
+                    }
+                }
+                else
+                {
+                    Map map = BaseGen.globalSettings.map;
+
+                    // These ones will always be defenders
+                    if (rp.exteriorThreatPoints.HasValue)
+                    {
+                        Lord lord = (rp.settlementLord = rp.singlePawnLord ?? LordMaker.MakeNewLord(faction, new LordJob_DefendPoint(rp.rect.CenterCell, defendRadius), map));
+                        ResolveParams resolveParams2 = rp;
+                        TraverseParms traverseParms = TraverseParms.For(TraverseMode.PassDoors);
+                        resolveParams2.pawnGroupKindDef = rp.pawnGroupKindDef ?? PawnGroupKindDefOf.Combat;
+                        resolveParams2.singlePawnLord = lord;
+                        resolveParams2.singlePawnSpawnCellExtraPredicate = rp.singlePawnSpawnCellExtraPredicate ?? ((IntVec3 x) => map.reachability.CanReachMapEdge(x, traverseParms));
+                        resolveParams2.rect = rp.rect.ExpandedBy(10);
+
+                        resolveParams2.pawnGroupMakerParams = new PawnGroupMakerParms
+                        {
+                            tile = map.Tile,
+                            faction = faction,
+                            points = (float)rp.exteriorThreatPoints,
+                            inhabitants = true,
+                        };
+
+                        BaseGen.symbolStack.Push("pawnGroup", resolveParams2);
+                    }
+
+                    // These ones will attack the player after a while. Will usually spawn outside the complex then run to the center to prepare. The spawning outside is a bug I haven't figured out yet
+                    if (rp.interiorThreatPoints.HasValue)
+                    {
+                        Lord lord = (rp.settlementLord = rp.singlePawnLord ?? LordMaker.MakeNewLord(faction, new LordJob_DefendBase(faction, rp.rect.CenterCell, rp.attackWhenPlayerBecameEnemy ?? false), map));
+                        List<PawnKindDef> validPawnKinds = new List<PawnKindDef>();
+                        foreach (PawnGroupMaker item in faction.def.pawnGroupMakers.Where((PawnGroupMaker x) => x.kindDef == PawnGroupKindDefOf.Combat))
+                            foreach (PawnGenOption option in item.options)
+                                if (!validPawnKinds.Contains(option.kind))
+                                    validPawnKinds.Add(option.kind);
+
+                        foreach (PawnKindDef combatPawnKindsForPoint in PawnUtility.GetCombatPawnKindsForPoints(validPawnKinds.Contains, rp.interiorThreatPoints.Value, (PawnKindDef pk) => 1f / pk.combatPower))
+                        {
+                            ResolveParams resolveParams3 = rp;
+                            resolveParams3.rect = rp.rect.ContractedBy(3);
+                            resolveParams3.singlePawnKindDef = combatPawnKindsForPoint;
+                            resolveParams3.singlePawnLord = lord;
+                            BaseGen.symbolStack.Push("pawn", resolveParams3);
+                        }
+                    }
+                }
+            }
+
+            // Done last because it is the most flexible about things being in the way
+            if (!firstLayerThingOptions.NullOrEmpty() || !secondLayerThingOptions.NullOrEmpty() || !thirdLayerThingOptions.NullOrEmpty() || !fourthLayerThingOptions.NullOrEmpty())
+                CreateDefenses(rp);
         }
 
         private void CreateDefenses(ResolveParams rp)
         {
-            doorCells.Clear();
             Map map = BaseGen.globalSettings.map;
-            foreach (IntVec3 item in rp.rect)
-            {
-                Building_Door door = item.GetDoor(BaseGen.globalSettings.map);
-                if (door != null && map.reachability.CanReachMapEdge(item, TraverseParms.For(TraverseMode.NoPassClosedDoors)))
-                {
-                    doorCells.Add(door.Position);
-                }
-            }
             Thing placedThing;
 
             if (!firstLayerThingOptions.NullOrEmpty())
@@ -162,8 +249,6 @@ namespace SuperHeroGenesBase
                         if (fourthLayerFilth != null)
                             ScatterDebrisUtility.ScatterFilthAroundThing(placedThing, map, fourthLayerFilth, fourthLayerFilthChance, 0);
                     }
-
-            doorCells.Clear();
         }
 
         private bool CanReachEntrance(IntVec3 cell, List<IntVec3> entrancePositions)
@@ -227,9 +312,7 @@ namespace SuperHeroGenesBase
                 else
                     rp.ancientLayoutStructureSketch = LayoutDefOf.AncientComplex.Worker.GenerateStructureSketch(parms);
             }
-            ResolveParams resolveParams = rp;
-            resolveParams.ancientLayoutStructureSketch = rp.ancientLayoutStructureSketch;
-            BaseGen.symbolStack.Push("ancientComplexSketch", resolveParams);
+            BaseGen.symbolStack.Push("ancientComplexSketch", rp);
             ResolveParams resolveParams2 = rp;
             if (defaultFlooring != null)
                 resolveParams2.floorDef = defaultFlooring;
@@ -237,6 +320,7 @@ namespace SuperHeroGenesBase
                 resolveParams2.floorDef = TerrainDefOf.Concrete;
             resolveParams2.allowBridgeOnAnyImpassableTerrain = true;
             resolveParams2.floorOnlyIfTerrainSupports = false;
+
             foreach (LayoutRoom room in rp.ancientLayoutStructureSketch.structureLayout.Rooms)
             {
                 foreach (CellRect rect in room.rects)

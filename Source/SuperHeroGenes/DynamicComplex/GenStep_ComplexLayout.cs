@@ -21,6 +21,10 @@ namespace SuperHeroGenesBase
 
         private GenStepParams currentParams;
 
+        public float externalPointsMultiplier = 1;
+
+        public float internalPointsMultiplier = 1;
+
         public override bool CollisionAt(IntVec3 cell, Map map)
         {
             List<Thing> thingList = cell.GetThingList(map);
@@ -79,14 +83,23 @@ namespace SuperHeroGenesBase
         {
             ResolveParams resolveParams = default(ResolveParams);
             resolveParams.ancientLayoutStructureSketch = structureSketch;
-            resolveParams.threatPoints = parms.sitePart.parms.threatPoints;
+
+            SitePartParams parms2 = parms.sitePart.parms;
+            resolveParams.threatPoints = parms2.threatPoints;
+            resolveParams.interiorThreatPoints = ((parms2.interiorThreatPoints > 0f) ? new float?(parms2.interiorThreatPoints) : null) * internalPointsMultiplier;
+            resolveParams.exteriorThreatPoints = ((parms2.exteriorThreatPoints > 0f) ? new float?(parms2.exteriorThreatPoints) : null) * externalPointsMultiplier;
             resolveParams.rect = CellRect.CenteredOn(c, structureSketch.structureLayout.container.Width, structureSketch.structureLayout.container.Height);
-            resolveParams.thingSetMakerDef = parms.sitePart.parms.ancientComplexRewardMaker;
-            ResolveParams parms2 = resolveParams;
+
+            if (structureSketch.layoutDef is ComplexLayoutDef complex)
+                resolveParams.thingSetMakerDef = complex.rewardThingSetMakerDef;
+            else
+                resolveParams.thingSetMakerDef = parms.sitePart.parms.ancientComplexRewardMaker;
+
+            ResolveParams parms3 = resolveParams;
             FormCaravanComp component = parms.sitePart.site.GetComponent<FormCaravanComp>();
             if (component != null)
             {
-                component.foggedRoomsCheckRect = parms2.rect;
+                component.foggedRoomsCheckRect = parms3.rect;
             }
 
             BaseGen.globalSettings.map = map;
@@ -103,7 +116,7 @@ namespace SuperHeroGenesBase
                 BaseGen.symbolStack.Push("conditionCauserRoom", ccResolveParams);
             }
 
-            BaseGen.symbolStack.Push(ruleDef.symbol, parms2);
+            BaseGen.symbolStack.Push(ruleDef.symbol, parms3);
             BaseGen.Generate();
         }
     }

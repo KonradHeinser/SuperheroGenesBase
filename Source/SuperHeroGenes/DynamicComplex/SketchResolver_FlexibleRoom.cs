@@ -18,6 +18,10 @@ namespace SuperHeroGenesBase
 
         public ThingDef centerThing;
 
+        public float threatChance = 0;
+
+        public FactionDef roomFaction;
+
         protected override bool CanResolveInt(ResolveParams parms)
         {
             if (parms.rect.HasValue)

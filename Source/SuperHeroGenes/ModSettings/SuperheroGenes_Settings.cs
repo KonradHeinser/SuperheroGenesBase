@@ -76,6 +76,7 @@ namespace SuperHeroGenesBase
 
         // Hero Organization stuff
         public static bool medievalHeroes = false;
+        public static bool leagueGathering = false;
 
         public SuperheroGenes_Settings() { }
 
@@ -115,6 +116,7 @@ namespace SuperHeroGenesBase
 
             // Villains and Stereotypes stuff
             Scribe_Values.Look(ref medievalHeroes, "medievalHeroes");
+            Scribe_Values.Look(ref leagueGathering, "leagueGathering");
         }
 
         public void DoWindowContents(Rect inRect)
@@ -136,9 +138,9 @@ namespace SuperHeroGenesBase
             contentRect.width -= 20;
 
             int numberOfOptions = 4; // One for each section
-            if (showMainOptions) numberOfOptions += 13;
+            if (showMainOptions) numberOfOptions += 14;
             if (ModsConfig.IsActive("SuperheroGenes.Villains") && showVillainOptions) numberOfOptions += 3;
-            if (ModsConfig.IsActive("SuperheroGenes.Heroes") && showHeroOptions) numberOfOptions += 1;
+            if (ModsConfig.IsActive("SuperheroGenes.Heroes") && showHeroOptions) numberOfOptions += 2;
             if (showAutocastOptions) numberOfOptions += 10;
             contentRect.height = numberOfOptions * 35; // To avoid weird white space, height is based off of option count of present mods
 
@@ -214,6 +216,8 @@ namespace SuperHeroGenesBase
                 if (showHeroOptions)
                 {
                     optionsMenu.CheckboxLabeled("SHG_MedievalHeroes".Translate(), ref medievalHeroes, "SHG_MedievalHeroesDescription".Translate());
+                    optionsMenu.Gap(10f);
+                    optionsMenu.CheckboxLabeled("SHG_LeagueGathering".Translate(), ref leagueGathering, "SHG_LeagueGatheringDescription".Translate());
                     optionsMenu.Gap(10f);
                 }
             }

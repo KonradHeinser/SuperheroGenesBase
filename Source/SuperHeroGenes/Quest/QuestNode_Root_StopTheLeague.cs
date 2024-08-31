@@ -9,9 +9,9 @@ namespace SuperHeroGenesBase
 {
     public class QuestNode_Root_StopTheLeague : QuestNode
     {
-        public List<ThingDef> villainousDevices;
-
         public FactionDef faction;
+
+        public FactionDef enemyFaction;
 
         public SitePartDef sitePartDef;
 
@@ -57,7 +57,7 @@ namespace SuperHeroGenesBase
             generator.subquestDefs.AddRange(GetAllSubquests(QuestGen.Root));
             generator.outSignalsCompleted.Add(text);
             quest.AddPart(generator);
-            QuestGen_Signal.SignalPass(quest, null, QuestGenUtility.HardcodedSignalWithQuestID("thing.TookDamage"), awakenSecurityThreatsSignal);
+            quest.SignalPass(null, QuestGenUtility.HardcodedSignalWithQuestID("thing.TookDamage"), awakenSecurityThreatsSignal);
 
             QuestPart_Choice questPart_Choice = quest.RewardChoice();
             QuestPart_Choice.Choice choice = new QuestPart_Choice.Choice
@@ -76,7 +76,8 @@ namespace SuperHeroGenesBase
                 sitePartParams.exteriorThreatPoints = ExteriorThreatPointsOverPoints.Evaluate(num);
                 sitePartParams.interiorThreatPoints = InteriorThreatPointsOverPoints.Evaluate(num);
             }
-            Faction hostileFaction = Find.FactionManager.FirstFactionOfDef(faction);
+
+            Faction hostileFaction = Find.FactionManager.FirstFactionOfDef(enemyFaction);
             Site site = QuestGen_Sites.GenerateSite(Gen.YieldSingle(new SitePartDefWithParams(sitePartDef, sitePartParams)), tile, hostileFaction);
             quest.SpawnWorldObject(site, null, text);
 
@@ -84,23 +85,9 @@ namespace SuperHeroGenesBase
             quest.Letter(LetterDefOf.PositiveEvent, text, null, null, null, false, QuestPart.SignalListenMode.OngoingOnly, Gen.YieldSingle(site), false,
                 taggedString.Resolve(), null, "SHGHero_DeviceFoundLocation".Translate());
             quest.DescriptionPart("[questDescriptionPartBeforeDiscovery]", quest.AddedSignal, text, QuestPart.SignalListenMode.OngoingOrNotYetAccepted);
+            quest.DescriptionPart("[questDescriptionPartAfterDiscovery]", text, "thing.Destroyed", QuestPart.SignalListenMode.OngoingOnly);
             quest.DescriptionPart("SHGHero_DeviceFoundLocation".Translate(), text);
 
-            QuestPart_Delay part = new QuestPart_Delay
-            {
-                delayTicks = 30000,
-                alertLabel = "SHGHero_ThreatsWaking".Translate(),
-                alertExplanation = "SHGHero_ThreatsWakingDesc".Translate(),
-                ticksLeftAlertCritical = 2500,
-                inSignalEnable = text,
-                alertCulprits =
-                {
-                    (GlobalTargetInfo)site
-                },
-                isBad = true,
-                outSignalsCompleted = { awakenSecurityThreatsSignal }
-            };
-            quest.AddPart(part);
             string text4 = QuestGen.GenerateNewSignal("ReTriggerSecurityThreats");
             QuestPart_PassWhileActive part2 = new QuestPart_PassWhileActive
             {
@@ -120,12 +107,15 @@ namespace SuperHeroGenesBase
             }, null, awakenSecurityThreatsSignal);
 
             slate.Set("site", site);
+
         }
 
         protected override bool TestRunInt(Slate slate)
         {
-            return TryFindSiteTile(out var _, true) && GetAllSubquests(QuestGen.Root).Any() && villainousDevices.Any() &&
-                FactionUtility.DefaultFactionFrom(faction) != null && Find.Storyteller.difficulty.allowViolentQuests;
+            Faction heroes = FactionUtility.DefaultFactionFrom(faction);
+            Faction villains = FactionUtility.DefaultFactionFrom(enemyFaction);
+            return heroes != null && !heroes.HostileTo(Faction.OfPlayer) && villains != null && TryFindSiteTile(out var _, true)
+                && GetAllSubquests(QuestGen.Root).Any() && Find.Storyteller.difficulty.allowViolentQuests;
         }
 
         private bool TryFindSiteTile(out int tile, bool exitOnFirstTileFound = false)

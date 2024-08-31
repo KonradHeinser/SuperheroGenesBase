@@ -239,15 +239,22 @@
     <Compile Include="Abilities\CompProperties\CompProperties_OrbitalStrike.cs" />
     <Compile Include="Abilities\CustomizeableOrbitalStrike.cs" />
     <Compile Include="RoyalTitleAwardWorker_InstantHediffGiver.cs" />
-    <Compile Include="QuestNode_Ceiling.cs" />
-    <Compile Include="QuestNode_Root_StopTheLeague.cs" />
-    <Compile Include="QuestPart_SubquestGenerator_StopTheLeague.cs" />
     <Compile Include="DynamicComplex\GenStep_ComplexLayout.cs" />
     <Compile Include="DynamicComplex\SitePartWorker_FactionComplex.cs" />
     <Compile Include="DynamicComplex\SymbolResolver_NewComplex.cs" />
     <Compile Include="DynamicComplex\SketchResolver_FlexibleRoom.cs" />
     <Compile Include="DynamicComplex\LayoutWorkerComplex_FixedFaction.cs" />
     <Compile Include="DynamicComplex\ComplexSet.cs" />
+    <Compile Include="Quest\QuestNode_Ceiling.cs" />
+    <Compile Include="Quest\QuestNode_GetSameQuestsSuccessOnly.cs" />
+    <Compile Include="Quest\QuestNode_Root_StopTheLeague.cs" />
+    <Compile Include="Quest\QuestPart_SubquestGenerator_StopTheLeague.cs" />
+    <Compile Include="CompProperties_GiveHediffsToColonistsOnDestroy.cs" />
+    <Compile Include="CompGiveHediffsToColonistsOnDestroy.cs" />
+    <Compile Include="GameCondition_ArmageddonClockFailure.cs" />
+    <Compile Include="Quest\QuestNode_FailOtherQuests.cs" />
+    <Compile Include="Quest\QuestPart_FailOtherQuests.cs" />
+    <Compile Include="Quest\QuestNode_NotAllowedIfOthersPassed.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />
@@ -262,6 +269,7 @@
     <Folder Include="Abilities\CompProperties\" />
     <Folder Include="Abilities\CompAbilityEffects\" />
     <Folder Include="DynamicComplex\" />
+    <Folder Include="Quest\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

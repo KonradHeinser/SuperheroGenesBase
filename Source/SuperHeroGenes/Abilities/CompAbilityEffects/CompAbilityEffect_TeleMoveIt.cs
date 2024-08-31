@@ -92,10 +92,6 @@ namespace SuperHeroGenesBase
             if (!destination.IsValid) return;
             base.Apply(target, dest);
 
-            Log.Message(parent.pawn.Label + " : " + parent.pawn.Position.x + " : " + parent.pawn.Position.z);
-            Log.Message(target.Thing.Label + " : " + target.Thing.Position.x + " : " + target.Thing.Position.z);
-            Log.Message("New position : " + destination.x + " : " + destination.z);
-
             Pawn pawn = parent.pawn;
             if (!parent.def.HasAreaOfEffect)
                 parent.AddEffecterToMaintain(EffecterDefOf.Skip_Entry.Spawn(target.Thing, pawn.Map), target.Thing.Position, 60);
