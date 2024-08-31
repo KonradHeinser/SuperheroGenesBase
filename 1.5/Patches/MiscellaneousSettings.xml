@@ -20,5 +20,4 @@
             <xpath>Defs/ThingDef[@Name="SHG_SuperCreatingDrugBase"]/thingSetMakerTags/li[text()="RewardStandardLowFreq"]</xpath>
         </active>
     </Operation>
-
 </Patch>

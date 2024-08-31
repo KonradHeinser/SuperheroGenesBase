@@ -1,9 +1,22 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="ModSettings/SuperheroGenes_Settings.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ModSettings/PatchOperationSetting.cs">
     <Files>
-      <File FileName="ModSettings/PatchOperationSetting.cs" Line="132" Column="14" />
-      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="141" Column="55" />
+      <File FileName="ModSettings/PatchOperationSetting.cs" Line="14" Column="39" />
+      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="202" Column="158" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SuperHeroGenes" expanded="True">
+            <Node name="SuperHeroGenes" expanded="True">
+              <Node name="ModSettings" expanded="True">
+                <Node name="PatchOperationSetting.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

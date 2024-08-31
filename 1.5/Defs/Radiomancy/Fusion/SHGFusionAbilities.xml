@@ -58,7 +58,7 @@
         <label>condense radiation</label>
         <description>Condenses massive amounts of radioactive energy within the radiomancer's body and outputs it as a radiation orb. This orb can be absorbed by a radiomancer at a later point to regain most of the energy expended in its creation.\n\nNote that while the orb does not cause side effects to other pawns near it, it can create extremely dangerous explosions if damaged.</description>
         <iconPath>Radiomancer/RadiationOrb/RadiationOrb_A</iconPath>
-        <cooldownTicksRange>100</cooldownTicksRange>
+        <cooldownTicksRange>600</cooldownTicksRange>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
         <descriptionHyperlinks>

@@ -13,7 +13,7 @@
     <SHG_Biome>{0} is not a viable biome to start from.</SHG_Biome>
     <MessagePawnArrived>A pawn has arrived at their destination and needs new orders.</MessagePawnArrived>
 
-        <!--Item Creator-->
+    <!--Item Creator-->
     <AbilityWater>Must target an area without water.</AbilityWater>
     <AbilityNoWater>Must target an area filled with water.</AbilityNoWater>
     <AbilityPollution>Must target an area without pollution.</AbilityPollution>
@@ -23,7 +23,7 @@
     <AbilityThing>Must target an area that has nothing in it.</AbilityThing>
     <AbilityGameCondition>An existing map condition is obstructing the ability from working.</AbilityGameCondition>
 
-        <!--Ability Validator Stuff-->
+    <!--Ability Validator Stuff-->
     <AbilityNoTargetGeneOne>Target must have the {0} gene for this ability to work.</AbilityNoTargetGeneOne>
     <AbilityNoTargetGene>Target is missing a required gene for this ability to work.</AbilityNoTargetGene>
     <AbilityTargetGeneOne>Target has the {0} gene, preventing this ability from working.</AbilityTargetGeneOne>
@@ -59,7 +59,7 @@
     <AbilityCasterLowCheck>Caster's {0} is too low.</AbilityCasterLowCheck>
     <AbilityCasterHighCheck>Caster's {0} is too high.</AbilityCasterHighCheck>
         
-        <!--DRG Stuff-->
+    <!--DRG Stuff-->
     <ResourceCost>{0} cost</ResourceCost>
     <ResourceGain>{0} gain</ResourceGain>
     <AlertLowResource>Low resource</AlertLowResource>
@@ -75,7 +75,7 @@
     <LetterLabelTributeCaravanArrival>{0}</LetterLabelTributeCaravanArrival>
     <LetterTributeCaravanArrival>A {0} from {FACTION_name} is approaching.\n\nThey will accept {1} you offer as tribute. The one who gives over the tribute will receive {FACTION_royalFavorLabel} for {2}.\n\nYou can expect a {0} to arrive {3} as long as you are not enemies with {FACTION_name}.</LetterTributeCaravanArrival>
 
-        <!--Settings stuff-->
+    <!--Settings stuff-->
     <SHG_ModMenu>Superhero Genes</SHG_ModMenu>
 
     <SHG_ModName>Superhero Genes - Base (Restart Required for all of these)</SHG_ModName>
@@ -116,7 +116,17 @@
     <SHG_SuperDrugs_NoReward>    No Super Drugs in Generic Rewards</SHG_SuperDrugs_NoReward>
     <SHG_SuperDrugs_NoRewardDescription>This option makes it so none of the super creating drug variants will appear in normal reward sets. This won't impact any reward sets that specifically look for super creating pill types if anything creates a group like that.\n\nWhen combined with the no trader setting, it is usually impossible to get without certain super factions.</SHG_SuperDrugs_NoRewardDescription>
 
-        <!--AI Settings-->
+    <!--Cooldown Settings-->
+    <SHG_BaseAbilityCooldown>    Base Ability Cooldown</SHG_BaseAbilityCooldown>
+    <SHG_BaseAbilityCooldownDesc>Sets the base cooldown of most super powers. Most abilities have a cooldown of 1-2 seconds, and this setting will increase a lot of those to a higher value. This won't always impact all abilities since some of them are more akin to toggles, meaning a low cooldown generally doesn't have an actual effect for them.</SHG_BaseAbilityCooldownDesc>
+    <SHG_Disabled>Disabled</SHG_Disabled>
+    <SHG_OneHour>One hour</SHG_OneHour>
+    <SHG_ThreeHours>Three hours</SHG_ThreeHours>
+    <SHG_SixHours>Six hours</SHG_SixHours>
+    <SHG_TwelveHours>Twelve hours</SHG_TwelveHours>
+    <SHG_OneDay>One day</SHG_OneDay>
+
+    <!--AI Settings-->
     <SHG_SuperAI>Autocast Abilities (Restart Required for any changes)</SHG_SuperAI>
     <SHG_SuperAIDescription>This causes colonists to automatically try to use some of their super abilities when appropriate. This is disabled by default for a few reasons.
 \n\nFirst, some may not like the idea of having the pawns they are supposed to be controlling doing things on their own.

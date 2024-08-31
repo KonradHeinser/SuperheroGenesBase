@@ -44,39 +44,50 @@ namespace SuperHeroGenesBase
         private static bool showAutocastOptions = true;
 
         public static bool condensedMeteors = true;
-        public static bool multipleArchetypes = false;
-        public static bool multipleMutations = false;
-        public static bool expensiveBase = false;
-        public static bool supersEverywhere = false;
-        public static bool archetypesEverywhere = false;
-        public static bool activatableSuperGenes = false;
-        public static bool interruptibleActivatables = false;
-        public static bool middleGrounds = false;
-        public static bool allGrounds = false;
+        public static bool multipleArchetypes;
+        public static bool multipleMutations;
+        public static bool expensiveBase;
+        public static bool supersEverywhere;
+        public static bool archetypesEverywhere;
+        public static bool activatableSuperGenes;
+        public static bool interruptibleActivatables;
+        public static bool middleGrounds;
+        public static bool allGrounds;
         public static bool radiomancerOvercharge = true;
-        public static bool superDrugNoTrader = false;
-        public static bool superDrugNoReward = false;
+        public static bool superDrugNoTrader;
+        public static bool superDrugNoReward;
+        public static int baseAbilityCooldown;
 
         // AI stuff
-        public static bool poolUsage = false;
-        public static bool automaticHealer = false;
-        public static bool automaticDefense = false;
-        public static bool automaticDefenseDrafted = false;
-        public static bool automaticBuffs = false;
-        public static bool automaticDebuffs = false;
-        public static bool automaticDebuffsDrafted = false;
-        public static bool automaticOffense = false;
-        public static bool automaticOffenseDrafted = false;
-        public static bool automaticFleeing = false;
+        public static bool poolUsage;
+        public static bool automaticHealer;
+        public static bool automaticDefense;
+        public static bool automaticDefenseDrafted;
+        public static bool automaticBuffs;
+        public static bool automaticDebuffs;
+        public static bool automaticDebuffsDrafted;
+        public static bool automaticOffense;
+        public static bool automaticOffenseDrafted;
+        public static bool automaticFleeing;
 
         // Villains and Stereotypes stuff
-        public static bool medievalVillains = false;
+        public static bool medievalVillains;
         public static bool vengefulOne = true;
-        public static bool mutationsAnywhere = false;
+        public static bool mutationsAnywhere;
 
         // Hero Organization stuff
-        public static bool medievalHeroes = false;
-        public static bool leagueGathering = false;
+        public static bool medievalHeroes;
+        public static bool leagueGathering;
+
+        public static Dictionary<int, string> baseAbilityCooldownOptions = new Dictionary<int, string>()
+        {
+            { 0, "SHG_Disabled" },
+            { 1, "SHG_OneHour" },
+            { 2, "SHG_ThreeHours" },
+            { 3, "SHG_SixHours" },
+            { 4, "SHG_TwelveHours" },
+            { 5, "SHG_OneDay" }
+        };
 
         public SuperheroGenes_Settings() { }
 
@@ -96,6 +107,7 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref radiomancerOvercharge, "radiomancerOvercharge", true);
             Scribe_Values.Look(ref superDrugNoTrader, "superDrugNoTrader");
             Scribe_Values.Look(ref superDrugNoReward, "superDrugNoReward");
+            Scribe_Values.Look(ref baseAbilityCooldown, "baseAbilityCooldown", 0);
 
             // AI stuff
             Scribe_Values.Look(ref poolUsage, "poolUsage");
@@ -187,6 +199,19 @@ namespace SuperHeroGenesBase
                 optionsMenu.Gap(10f);
                 optionsMenu.CheckboxLabeled("SHG_SuperDrugs_NoReward".Translate(), ref superDrugNoReward, "SHG_SuperDrugs_NoRewardDescription".Translate());
                 optionsMenu.Gap(10f);
+                if (optionsMenu.ButtonTextLabeledPct("SHG_BaseAbilityCooldown".Translate(), baseAbilityCooldownOptions[baseAbilityCooldown].Translate(), 0.75f,
+                    tooltip: "SHG_BaseAbilityCooldownDesc".Translate()))
+                {
+                    List<FloatMenuOption> options = new List<FloatMenuOption>();
+                    foreach (var option in baseAbilityCooldownOptions)
+                    {
+                        options.Add(new FloatMenuOption(option.Value.Translate(), delegate
+                        {
+                            baseAbilityCooldown = option.Key;
+                        }));
+                    }
+                    Find.WindowStack.Add(new FloatMenu(options));
+                }
             }
 
             if (ModsConfig.IsActive("SuperheroGenes.Villains"))

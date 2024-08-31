@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>baseAbilityCooldown</setting>
+        <option1 Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHGPowerAbilitiesBase"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>2500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHG_HemoShifter_WarriorBuffAbilityBase"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>2500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_BasicLaserEyes"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>2500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_NewLaserEyes"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>2500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Flight_WorldTravel"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>2500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHG_SizeAlterationBase"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>2500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_PsionicFlight"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>2500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_CompelledDuel"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>2500</cooldownTicksRange></value>
+                </li>
+            </operations>
+            
+        </option1>
+    </Operation>
+</Patch>

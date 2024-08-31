@@ -9,6 +9,18 @@ namespace SuperHeroGenesBase
 
         private PatchOperation inactive = null;
 
+        private PatchOperation option0 = null;
+
+        private PatchOperation option1 = null;
+
+        private PatchOperation option2 = null;
+
+        private PatchOperation option3 = null;
+
+        private PatchOperation option4 = null;
+
+        private PatchOperation option5 = null;
+
         public string setting;
 
         protected override bool ApplyWorker(XmlDocument xml)
@@ -65,6 +77,16 @@ namespace SuperHeroGenesBase
             else if (setting == "superDrugNoReward")
             {
                 if (SuperheroGenes_Settings.superDrugNoReward && active != null) return active.Apply(xml);
+            }
+            else if (setting == "baseAbilityCooldown")
+            {
+                int cooldownSetting = SuperheroGenes_Settings.baseAbilityCooldown;
+                if (cooldownSetting == 0 && option0 != null) return option0.Apply(xml);
+                if (cooldownSetting == 1 && option1 != null) return option1.Apply(xml);
+                if (cooldownSetting == 2 && option2 != null) return option2.Apply(xml);
+                if (cooldownSetting == 3 && option3 != null) return option3.Apply(xml);
+                if (cooldownSetting == 4 && option4 != null) return option4.Apply(xml);
+                if (cooldownSetting == 5 && option5 != null) return option5.Apply(xml);
             }
 
             // AI stuff
