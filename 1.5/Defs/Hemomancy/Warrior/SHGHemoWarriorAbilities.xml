@@ -28,7 +28,7 @@
     <AbilityDef ParentName="SHG_HemoShifter_WarriorBuffAbilityBase">
         <defName>SHG_Hemomancer_BloodClaws</defName>
         <label>blood claws</label>
-        <description>Gives the pawn a boost to the damage of all melee attacks based on hediff tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost.\n\nIf used after reaching maximum tier, the pawn will remain at max tier for an additional day.</description>
+        <description>Gives the pawn a boost to the damage of all melee attacks based on hediff tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost.\n\nIf used after reaching maximum tier, the decrease in tier is delayed by one day.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_BloodClaws</iconPath>
         <comps>
             <li Class="CompProperties_AbilityGiveHediff">
@@ -44,7 +44,7 @@
     <AbilityDef ParentName="SHG_HemoShifter_WarriorBuffAbilityBase">
         <defName>SHG_Hemomancer_BloodArmor</defName>
         <label>blood armor</label>
-        <description>Gives the pawn blunt and sharp armor based on hediff tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost.\n\nIf used after reaching maximum tier, the pawn will remain at max tier for an additional day.</description>
+        <description>Gives the pawn blunt and sharp armor based on hediff tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost.\n\nIf used after reaching maximum tier, the decrease in tier is delayed by one day.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_BloodArmor</iconPath>
         <comps>
             <li Class="CompProperties_AbilityGiveHediff">
@@ -60,7 +60,7 @@
     <AbilityDef ParentName="SHG_HemoShifter_WarriorBuffAbilityBase">
         <defName>SHG_Hemomancer_BloodInfusement</defName>
         <label>blood infusement</label>
-        <description>Gives the pawn enhanced global work speed and reduced rest fall rate based on hediff tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost.\n\nIf used after reaching maximum tier, the pawn will remain at max tier for an additional day.</description>
+        <description>Gives the pawn enhanced global work speed and reduced rest fall rate based on hediff tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost.\n\nIf used after reaching maximum tier, the decrease in tier is delayed by one day.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_BloodInfusement</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <comps>
