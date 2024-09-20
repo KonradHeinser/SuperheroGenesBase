@@ -1,15 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="DynamicComplex/GenStep_ComplexLayout.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Abilities/CompAbilityEffects/CompAbilityEffect_TeleMoveIt.cs">
     <Files>
-      <File FileName="DynamicComplex/GenStep_ComplexLayout.cs" Line="18" Column="49" />
+      <File FileName="Abilities/CompProperties/CompProperties_AbilityTeleMoveIt.cs" Line="16" Column="62" />
+      <File FileName="Abilities/CompAbilityEffects/CompAbilityEffect_TeleMoveIt.cs" Line="11" Column="102" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="DynamicComplex" expanded="True">
-                <Node name="GenStep_ComplexLayout.cs" selected="True" />
+              <Node name="Abilities" expanded="True">
+                <Node name="CompAbilityEffects" expanded="True">
+                  <Node name="CompAbilityEffect_TeleMoveIt.cs" selected="True" />
+                </Node>
+                <Node name="CompProperties" expanded="True" />
               </Node>
             </Node>
           </Node>

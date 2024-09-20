@@ -197,7 +197,7 @@
             <Ability_Duration>42</Ability_Duration>
         </statBases>
         <verbProperties>
-            <range>1</range>
+            <range>0.9</range>
             <targetParams>
                 <canTargetPawns>True</canTargetPawns>
                 <canTargetSelf>True</canTargetSelf>
@@ -205,13 +205,13 @@
             </targetParams>
         </verbProperties>
         <comps>
-        <li Class="CompProperties_AbilitySpawn">
-            <thingDef>SHG_Psionist_PsionicShield</thingDef>
-        </li>
-        <li Class="CompProperties_AbilityFleckOnTarget">
-            <fleckDef>BulletShieldAreaEffect</fleckDef>
-            <sound>Psycast_Skip_Exit</sound>
-        </li>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Psionist_PsionicShield</thingDef>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>BulletShieldAreaEffect</fleckDef>
+                <sound>Psycast_Skip_Exit</sound>
+            </li>
         </comps>
     </AbilityDef>
 </Defs>
