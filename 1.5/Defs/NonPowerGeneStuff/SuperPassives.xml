@@ -175,15 +175,17 @@
                     <li>
                         <abilityDef>SHG_Unrestrained</abilityDef>
                         <minSeverity>1.01</minSeverity>
+                        <maxSeverity>99</maxSeverity>
                     </li>
                     <li>
                         <abilityDef>SHG_VeryRestrained</abilityDef>
                         <minSeverity>1.01</minSeverity>
                         <maxSeverity>2</maxSeverity>
                     </li>
-                    <li>
+                    <li> 
                         <abilityDef>SHG_Restrained</abilityDef>
                         <minSeverity>2.01</minSeverity>
+                        <maxSeverity>99</maxSeverity>
                     </li>
                 </abilitiesAtSeverities>
             </li>
