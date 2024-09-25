@@ -89,7 +89,7 @@
     <HediffDef>
         <defName>SHG_Petrification</defName>
         <label>petrification</label>
-        <description>Stone dust infused by a super flows through this pawn's veins, gradually lining the pawn's veins and muscles. This lining will act like a subdermal armor that constrains movement while protecting the pawn against blunt attacks.It will take at least 3/4 of a day for a pawn to go from fully petrified to completely healed. The amount of time spent fully petrified usually does not exceed a few hours.</description>
+        <description>Stone dust infused by a super flows through this pawn's veins, gradually lining the pawn's veins and muscles. This lining will act like a subdermal armor that constrains movement while protecting the pawn against blunt attacks. It will take at least 3/4 of a day for a pawn to go from fully petrified to completely healed. The amount of time spent fully petrified usually does not exceed a few hours.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
@@ -177,7 +177,7 @@
         </stages>
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-0.1</severityPerDay>
+                <severityPerDay>-1</severityPerDay>
             </li>
         </comps>
     </HediffDef>
