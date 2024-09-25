@@ -77,9 +77,15 @@
     </GeneCategoryDef>
 
     <GeneCategoryDef>
+        <defName>SuperPowersPassive</defName>
+        <label>super powers - passive</label>
+        <displayPriorityInXenotype>999.891</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
         <defName>SuperPowersSummoning</defName>
         <label>super powers - summoning</label>
-        <displayPriorityInXenotype>999.891</displayPriorityInXenotype>
+        <displayPriorityInXenotype>999.889</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
@@ -262,6 +268,14 @@
 
     <GeneDef Name="SuperPowersSupportBase" Abstract="True">
         <displayCategory>SuperPowersSupport</displayCategory>
+        <biostatCpx>0</biostatCpx>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <marketValueFactor>1.1</marketValueFactor>
+    </GeneDef>
+
+    <GeneDef Name="SuperPowersPassiveBase" Abstract="True">
+        <displayCategory>SuperPowersPassive</displayCategory>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <biostatCpx>0</biostatCpx>
         <prerequisite>SuperHeroBase</prerequisite>
         <marketValueFactor>1.1</marketValueFactor>

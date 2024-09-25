@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef Name="SuperPowersPassiveHediffBase" Abstract="True">
+        <hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+    </HediffDef>
+    
+    <GeneDef ParentName="SuperPowersPassiveBase">
+        <defName>SHG_LesserSuperRegeneration</defName>
+        <label>lesser super regeneration</label>
+        <description>Carriers of this gene will regrow one part every 24 hours. Appendages tend to take longer as fingers and toes will require an extra day each due to the complexity of the nerve rewiring.</description>
+        <biostatMet>-2</biostatMet>
+        <iconPath>Powers/Gene_SuperRegeneration</iconPath>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_LesserSuperRegeneration</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <HediffDef ParentName="SuperPowersPassiveHediffBase">
+		<defName>SHG_LesserSuperRegeneration</defName>
+		<label>lesser super regeneration</label>
+		<description>Once per day, a new part will regrow. Appendages tend to take longer as fingers and toes will require an extra day each.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
+                <regenSets>
+                    <li>
+                        <ticksToRegrowPart>60000</ticksToRegrowPart>
+                        <ticksToHealInterval>0</ticksToHealInterval>
+                    </li>
+                </regenSets>
+            </li>
+        </comps>	
+	</HediffDef>
+
+    <GeneDef ParentName="SuperPowersPassiveBase">
+        <defName>SHG_SuperRegeneration</defName>
+        <label>super regeneration</label>
+        <description>Carriers of this gene gain a constant regeneration that is capable of restoring lost parts after a bit of time, in addition to being able to heal normal wounds.</description>
+        <biostatMet>-5</biostatMet>
+        <iconPath>Powers/Gene_SuperRegeneration</iconPath>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_SuperRegeneration</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <HediffDef ParentName="SuperPowersPassiveHediffBase">
+		<defName>SHG_SuperRegeneration</defName>
+		<label>super regeneration</label>
+		<description>This super is constantly regenerating. Even lost parts will return with a little bit of time. Parts with more things attached, like arms, require extra time to properly regrow functioning appendages. Even regrowing fingers can take some time.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
+                <healWhileRegrowing>True</healWhileRegrowing>
+                <regenSets>
+                    <li>
+                        <ticksToRegrowPart>10000</ticksToRegrowPart>
+                        <repeatHealCount>10</repeatHealCount>
+                        <healAmount>0.3</healAmount>
+                    </li>
+                </regenSets>
+            </li>
+        </comps>	
+	</HediffDef>
+
+    <GeneDef ParentName="SuperPowersPassiveBase">
+        <defName>SHG_Restraint</defName>
+        <label>restraint</label>
+        <description>Carriers of this gene can freely change the upper limits on how much damage they can do in melee combat.</description>
+        <biostatMet>0</biostatMet>
+        <iconPath>Powers/Gene_Restraint</iconPath>
+        <displayOrderInCategory>10</displayOrderInCategory>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_Restraint</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <AbilityDef Name="SHG_RestraintBase" ParentName="SHGSelfCastBase" Abstract="True">
+        <iconPath>Powers/Gene_Restraint</iconPath>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>600</cooldownTicksRange>
+        <aiCanUse>false</aiCanUse>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_RestraintBase">
+        <defName>SHG_Unrestrained</defName>
+        <label>unrestrained</label>
+        <description>No holding back.</description>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Restraint</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_RestraintBase">
+        <defName>SHG_Restrained</defName>
+        <label>restrained</label>
+        <description>Multiplies melee damage factor by 0.1.</description>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Restraint</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>1.1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_RestraintBase">
+        <defName>SHG_VeryRestrained</defName>
+        <label>very restrained</label>
+        <description>Multiplies melee damage factor by 0.01.</description>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Restraint</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>2.1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <HediffDef ParentName="SuperPowersPassiveHediffBase">
+		<defName>SHG_Restraint</defName>
+		<label>restraint</label>
+		<description>How much this pawn is holding back.</description>
+        <stages Inherit="False">
+            <li />
+            <li>
+                <label>restrained</label>
+                <minSeverity>1.01</minSeverity>
+                <statFactors>
+                    <MeleeDamageFactor>0.1</MeleeDamageFactor>
+                </statFactors>
+            </li>
+            <li>
+                <label>very restrained</label>
+                <minSeverity>2.01</minSeverity>
+                <statFactors>
+                    <MeleeDamageFactor>0.01</MeleeDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperheroGenesBase.HediffCompProperties_GiveAbilityAtSeverity">
+                <abilitiesAtSeverities>
+                    <li>
+                        <abilityDef>SHG_Restrained</abilityDef>
+                        <maxSeverity>1</maxSeverity>
+                    </li>
+                    <li>
+                        <abilityDef>SHG_Unrestrained</abilityDef>
+                        <minSeverity>1.01</minSeverity>
+                    </li>
+                    <li>
+                        <abilityDef>SHG_VeryRestrained</abilityDef>
+                        <minSeverity>1.01</minSeverity>
+                        <maxSeverity>2</maxSeverity>
+                    </li>
+                    <li>
+                        <abilityDef>SHG_Restrained</abilityDef>
+                        <minSeverity>2.01</minSeverity>
+                    </li>
+                </abilitiesAtSeverities>
+            </li>
+        </comps>	
+	</HediffDef>
+
+</Defs>

@@ -1,20 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Abilities/CompAbilityEffects/CompAbilityEffect_TeleMoveIt.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SHGExtension.cs">
     <Files>
-      <File FileName="Abilities/CompProperties/CompProperties_AbilityTeleMoveIt.cs" Line="16" Column="62" />
-      <File FileName="Abilities/CompAbilityEffects/CompAbilityEffect_TeleMoveIt.cs" Line="11" Column="102" />
+      <File FileName="Hediffs/Comps/HediffComp_TieredRegeneration.cs" Line="193" Column="39" />
+      <File FileName="Hediffs/CompProperties/HediffCompProperties_TieredRegeneration.cs" Line="14" Column="10" />
+      <File FileName="Hediffs/RegenSet.cs" Line="7" Column="39" />
+      <File FileName="SHGExtension.cs" Line="20" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Abilities" expanded="True">
-                <Node name="CompAbilityEffects" expanded="True">
-                  <Node name="CompAbilityEffect_TeleMoveIt.cs" selected="True" />
-                </Node>
+              <Node name="Hediffs" expanded="True">
                 <Node name="CompProperties" expanded="True" />
+                <Node name="Comps" expanded="True" />
               </Node>
+              <Node name="SHGExtension.cs" selected="True" />
             </Node>
           </Node>
         </State>
