@@ -64,7 +64,7 @@
     <ThingDef ParentName="SHG_SuperCreatingDrugBase">
         <defName>SHG_MundaneSuperPill</defName>
         <label>mundane super creating pill</label>
-        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into super geniuses or super persuasive individuals.  Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome. Consuming the same pill mutiple times has weaker but more consistent side effects as the pill only allows for one of its super types to take effect.\n\nThe genes will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into super geniuses or super persuasive individuals.  Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome. Consuming the same pill mutiple times has weaker but more consistent side effects as the pill only allows for one of its super types to take effect.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
         <descriptionHyperlinks>
             <HediffDef>SHG_MundaneSuperPill</HediffDef>
         </descriptionHyperlinks>
@@ -88,7 +88,7 @@
     <ThingDef ParentName="SHG_SuperCreatingDrugBase">
         <defName>SHG_SoldierSuperPill</defName>
         <label>super soldier creating pill</label>
-        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into a type of super soldier, ranging from deadeyes to speedsters.  Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome. Consuming the same pill mutiple times has weaker but more consistent side effects as the pill only allows for one of its super types to take effect.\n\nThe genes will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into a type of super soldier, ranging from deadeyes to speedsters.  Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome. Consuming the same pill mutiple times has weaker but more consistent side effects as the pill only allows for one of its super types to take effect.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
         <descriptionHyperlinks>
             <HediffDef>SHG_SoldierSuperPill</HediffDef>
         </descriptionHyperlinks>
@@ -112,7 +112,7 @@
     <ThingDef ParentName="SHG_SuperCreatingDrugBase">
         <defName>SHG_MundaneMancerPill</defName>
         <label>mundane mancer creating pill</label>
-        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into one of the archetypes that rely on elemental attacks along with some additional genes that provide related bonuses and penalties that balance the metabolic cost. Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome. Consuming the same pill mutiple times has weaker but more consistent side effects as the pill only allows for one of its super types to take effect.\n\nThe genes will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into one of the archetypes that rely on elemental attacks along with some additional genes that provide related bonuses and penalties that balance the metabolic cost. Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome. Consuming the same pill mutiple times has weaker but more consistent side effects as the pill only allows for one of its super types to take effect.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
         <descriptionHyperlinks>
             <HediffDef>SHG_MundaneMancerPill</HediffDef>
         </descriptionHyperlinks>
@@ -136,7 +136,7 @@
     <ThingDef ParentName="SHG_SuperCreatingDrugBase">
         <defName>SHG_WarSuperPill</defName>
         <label>war super creating pill</label>
-        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into one of the combative archetypes with some additional genes that provide related bonuses and penalties that balance the metabolic cost. Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome. Consuming the same pill mutiple times has weaker but more consistent side effects as the pill only allows for one of its super types to take effect.\n\nThe genes will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into one of the combative archetypes with some additional genes that provide related bonuses and penalties that balance the metabolic cost. Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome. Consuming the same pill mutiple times has weaker but more consistent side effects as the pill only allows for one of its super types to take effect.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
         <descriptionHyperlinks>
             <HediffDef>SHG_WarSuperPill</HediffDef>
         </descriptionHyperlinks>
@@ -160,7 +160,7 @@
     <ThingDef ParentName="SHG_SuperCreatingDrugBase">
         <defName>SHG_SupportSuperPill</defName>
         <label>support super creating pill</label>
-        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into one of the supporter archetypes with some additional genes that provide related bonuses and penalties that balance the metabolic cost. Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome. Consuming the same pill mutiple times has weaker but more consistent side effects as the pill only allows for one of its super types to take effect.\n\nThe genes will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into one of the supporter archetypes with some additional genes that provide related bonuses and penalties that balance the metabolic cost. Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome. Consuming the same pill mutiple times has weaker but more consistent side effects as the pill only allows for one of its super types to take effect.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
         <descriptionHyperlinks>
             <HediffDef>SHG_SupportSuperPill</HediffDef>
         </descriptionHyperlinks>
@@ -184,7 +184,7 @@
     <ThingDef ParentName="SHG_SuperCreatingDrugBase">
         <defName>SHG_SummonerPill</defName>
         <label>summoner creating pill</label>
-        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into a summoner. Unlike the other advanced super creating pills, this has a consistent side effect that turns the pawn into a super reclusive individual. This side effect is beneficial in small colonies, but can lower mood considerably at high population. Consuming the same pill mutiple times will attempt to switch what type of summoner they are.\n\nThe genes will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into a summoner. Unlike the other advanced super creating pills, this has a consistent side effect that turns the pawn into a super reclusive individual. This side effect is beneficial in small colonies, but can lower mood considerably at high population. Consuming the same pill mutiple times will attempt to switch what type of summoner they are.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
         <descriptionHyperlinks>
             <HediffDef>SHG_SummonerPill</HediffDef>
         </descriptionHyperlinks>
@@ -208,7 +208,7 @@
     <ThingDef ParentName="SHG_SuperCreatingDrugBase">
         <defName>SHG_SuperMutationPill</defName>
         <label>mutating super creating pill</label>
-        <description>A pill that gives the pawn the superhero base gene along with a random super mutation. Any existing mutation will be removed. Unlike most advanced super creating pills, this has no risk of side effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <description>A pill that gives the pawn the superhero base gene along with a random super mutation. Any existing mutation will be removed. Unlike most advanced super creating pills, this has no risk of side effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
         <descriptionHyperlinks>
             <HediffDef>SHG_SuperMutationPill</HediffDef>
         </descriptionHyperlinks>
