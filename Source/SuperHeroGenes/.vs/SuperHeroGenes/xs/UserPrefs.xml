@@ -1,18 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Hediffs/Comps/HediffComp_GiveAbilityAtSeverity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/JobGiver_AICastHealingAbility.cs">
     <Files>
       <File FileName="Hediffs/AbilitiesAtSeverities.cs" Line="14" Column="1" />
       <File FileName="Hediffs/Comps/HediffComp_GiveAbilityAtSeverity.cs" Line="16" Column="10" />
       <File FileName="Hediffs/CompProperties/HediffCompProperties_GiveAbilityAtSeverity.cs" Line="2" Column="1" />
+      <File FileName="SuperAI/JobGiver_AICastHealingAbility.cs" Line="42" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Hediffs" expanded="True">
-                <Node name="CompProperties" expanded="True" />
-                <Node name="Comps" expanded="True" />
+              <Node name="SuperAI" expanded="True">
+                <Node name="JobGiver_AICastHealingAbility.cs" selected="True" />
               </Node>
             </Node>
           </Node>
