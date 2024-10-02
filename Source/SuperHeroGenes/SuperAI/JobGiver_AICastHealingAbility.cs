@@ -43,7 +43,7 @@ namespace SuperHeroGenesBase
                 allies.SortBy((Pawn p) => p.Position.DistanceToSquared(caster.Position));
                 foreach (Pawn ally in allies) // Prioritizes bleeding pawns
                 {
-                    if (!ability.CanApplyOn(new LocalTargetInfo(ally))) continue;
+                    if (ally == caster || !ability.CanApplyOn(new LocalTargetInfo(ally))) continue;
                     if (ally.health.hediffSet.BleedRateTotal > bleedThreshold && ability.CanApplyOn(new LocalTargetInfo(ally)))
                     {
                         targetPawn = ally;
@@ -54,7 +54,7 @@ namespace SuperHeroGenesBase
                 {
                     foreach (Pawn ally in allies) // Start with injuries as those are most likely to cause immediate issues
                     {
-                        if (!ability.CanApplyOn(new LocalTargetInfo(ally))) continue;
+                        if (ally == caster || !ability.CanApplyOn(new LocalTargetInfo(ally))) continue;
                         if (!ally.health.hediffSet.GetHediffsTendable().Where((Hediff h) => h.BleedRate > 0).ToList().NullOrEmpty())
                         {
                             targetPawn = ally;
