@@ -1,11 +1,23 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/JobGiver_AICastHealingAbility.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HarmonyPatches.cs">
     <Files>
       <File FileName="Hediffs/AbilitiesAtSeverities.cs" Line="14" Column="1" />
       <File FileName="Hediffs/Comps/HediffComp_GiveAbilityAtSeverity.cs" Line="16" Column="10" />
       <File FileName="Hediffs/CompProperties/HediffCompProperties_GiveAbilityAtSeverity.cs" Line="2" Column="1" />
       <File FileName="SuperAI/JobGiver_AICastHealingAbility.cs" Line="46" Column="43" />
+      <File FileName="HarmonyPatches.cs" Line="55" Column="10" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SuperHeroGenes" expanded="True">
+            <Node name="SuperHeroGenes" expanded="True">
+              <Node name="HarmonyPatches.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

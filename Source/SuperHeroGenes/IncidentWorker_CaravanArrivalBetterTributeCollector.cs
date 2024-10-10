@@ -33,7 +33,7 @@ namespace SuperHeroGenesBase
 
                 Map map = (Map)parms.target;
                 parms.faction = faction;
-                parms.traderKind = DefDatabase<TraderKindDef>.AllDefsListForReading.Where((TraderKindDef t) => t.category == TraderKindCategory).RandomElementByWeight((TraderKindDef t) => TraderKindCommonality(t, map, parms.faction));
+                parms.traderKind = DefDatabase<TraderKindDef>.AllDefsListForReading.Where((TraderKindDef t) => t.category == TraderKindCategory && t.faction == extension.faction).RandomElementByWeight((TraderKindDef t) => TraderKindCommonality(t, map, parms.faction));
                 if (parms.traderKind.label != null) label = parms.traderKind.label;
                 if (extension.descriptionOverrideA != null) acceptance = extension.descriptionOverrideA;
                 if (extension.descriptionOverrideB != null) reason = extension.descriptionOverrideB;
@@ -59,11 +59,6 @@ namespace SuperHeroGenesBase
             Faction faction = Find.FactionManager.FirstFactionOfDef(extension.faction);
             if (faction == null) return false;
             return FactionCanBeGroupSource(faction, (Map)parms.target);
-        }
-
-        protected override float TraderKindCommonality(TraderKindDef traderKind, Map map, Faction faction)
-        {
-            return base.TraderKindCommonality(traderKind, map, faction);
         }
 
         protected override void SendLetter(IncidentParms parms, List<Pawn> pawns, TraderKindDef traderKind)

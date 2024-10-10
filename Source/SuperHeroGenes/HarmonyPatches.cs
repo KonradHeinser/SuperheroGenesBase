@@ -50,6 +50,13 @@ namespace SuperHeroGenesBase
                 postfix: new HarmonyMethod(patchType, nameof(DoKillSideEffectsPostfix)));
             harmony.Patch(AccessTools.Method(typeof(GeneDef), nameof(GeneDef.ConflictsWith)),
                 postfix: new HarmonyMethod(patchType, nameof(GeneConflictsWithPostfix)));
+            harmony.Patch(AccessTools.Method(typeof(IncidentWorker_CaravanArrivalTributeCollector), "TraderKindCommonality"),
+                postfix: new HarmonyMethod(patchType, nameof(TributeFactionPostfix)));
+        }
+
+        public static void TributeFactionPostfix(ref float __result, TraderKindDef traderKind, Faction faction)
+        {
+            if (traderKind.faction != faction.def) __result = 0f;
         }
 
         public static void PawnIdeoCanAcceptReimplantPostfix(ref bool __result, Pawn implanter, Pawn implantee)
