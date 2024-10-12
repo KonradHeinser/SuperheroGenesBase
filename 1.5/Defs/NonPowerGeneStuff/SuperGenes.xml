@@ -30,7 +30,6 @@
         </hediffGiversCannotGive>
         <exclusionTags>
             <li>SuperHealings</li>
-            <li>WoundHealingRate</li>
             <li>Immunity</li>
             <li>RandomHealing</li>
         </exclusionTags>
