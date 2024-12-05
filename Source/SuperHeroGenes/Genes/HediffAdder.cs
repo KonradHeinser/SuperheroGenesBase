@@ -35,12 +35,12 @@ namespace SuperHeroGenesBase
         public override void PostRemove()
         {
             base.PostRemove();
-            HediffRemoving(pawn, this);
+            SHGExtension SHGextension = def.GetModExtension<SHGExtension>();
+            if (SHGextension?.noHediffRemoval == true)
+                HediffRemoving(pawn, this);
 
             if (!addedAbilities.NullOrEmpty())
-            {
                 SHGUtilities.RemovePawnAbilities(pawn, addedAbilities);
-            }
         }
 
         public static void HediffAdding(Pawn pawn, Gene gene)

@@ -11,6 +11,9 @@
         <statFactors>
             <MeditationFocusGain>2.0</MeditationFocusGain>
         </statFactors>
+        <exclusionTags>
+            <li>SHG_PsionicDebuffer</li>
+        </exclusionTags>
         <modExtensions>
 			<li Class="SuperHeroGenesBase.SHGExtension">
                 <hediffsToApply><li><hediff>SHG_Psionist_Debuffer_Base</hediff></li></hediffsToApply>

@@ -10,6 +10,9 @@
         <statFactors>
             <PsychicSensitivity>1.25</PsychicSensitivity>
         </statFactors>
+        <exclusionTags>
+            <li>SHG_PsionicSoldier</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">

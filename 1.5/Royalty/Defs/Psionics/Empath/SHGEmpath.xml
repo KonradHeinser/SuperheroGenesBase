@@ -10,6 +10,9 @@
         <statFactors>
             <PsychicSensitivity>1.25</PsychicSensitivity>
         </statFactors>
+        <exclusionTags>
+            <li>SHG_PsionicEmpath</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersPsychicEmpathBase">

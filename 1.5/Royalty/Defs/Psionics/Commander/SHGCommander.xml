@@ -10,6 +10,9 @@
         <statFactors>
             <PsychicEntropyRecoveryRate>2.0</PsychicEntropyRecoveryRate>
         </statFactors>
+        <exclusionTags>
+            <li>SHG_PsionicCommander</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersPsychicCommanderBase">

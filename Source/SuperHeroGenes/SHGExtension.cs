@@ -13,6 +13,7 @@ namespace SuperHeroGenesBase
         public float maxTendQuality = 0.7f; // Never over 1
         public List<HediffsToParts> hediffsToApply;
         public bool vanishingGene = false;
+        public bool noHediffRemoval = false;
         public SimpleCurve peopleToMoodCurve;
         public float radius = 19.9f;
         public List<GeneDef> conflictingGenes; // List of very specific genes to make it incompatible with

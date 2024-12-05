@@ -10,6 +10,9 @@
         <statFactors>
             <PsychicEntropyMax>2.0</PsychicEntropyMax>
         </statFactors>
+        <exclusionTags>
+            <li>SHG_DimensionalPsionist</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersPsychicDimensionalBase">

@@ -58,7 +58,7 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_Flaw_Bloodthirsty</defName>
         <label>bloodthirsty</label>
-        <description>This hemomancer's body burns through hemogen at an unsustainable rate, and their mind recognizes this fact, causing them to constantly seek to kill other beings to convert their blood into hemogen.</description>
+        <description>Hemomancer's with this gene burn through hemogen at an unsustainable rate, and their mind recognizes this fact, causing them to constantly seek to kill other beings to convert their blood into hemogen.</description>
         <prerequisite>SHG_Archetypes_Hemomancer</prerequisite>
         <geneClass>SuperHeroGenesBase.Gene_HemoHediffAdder</geneClass>
         <displayOrderInCategory>200</displayOrderInCategory>
@@ -161,7 +161,7 @@
 		</modExtensions>
     </GeneDef>
 
-    <GeneDef ParentName="SHG_FlawBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty, SHG.PsionicResourceGene">
+    <GeneDef ParentName="SHG_FlawBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
         <defName>SHG_Flaw_Moonbound</defName>
         <label>moonbound</label>
         <description>This psionist only has psychic sensitivity when standing in an area with 40% light or lower.</description>
@@ -180,7 +180,7 @@
 		</modExtensions>
     </GeneDef>
 
-    <GeneDef ParentName="SHG_FlawBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty, SHG.PsionicResourceGene">
+    <GeneDef ParentName="SHG_FlawBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
         <defName>SHG_Flaw_Sunbound</defName>
         <label>sunbound</label>
         <description>This psionist only has psychic sensitivity when standing in an area with 60% light or higher.</description>
@@ -198,6 +198,34 @@
 			</li>
 		</modExtensions>
     </GeneDef>
+
+    <HediffDef MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+        <defName>SHG_RandomPsionicFlaw</defName>
+        <label>generating new genes</label>
+        <description>This psionist will soon have either the sunbound or moonbound gene.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <stages>
+			<li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
+                <geneSets>
+                    <li>
+                        <geneSet>
+                            <li>SHG_Flaw_Moonbound</li>
+                        </geneSet>
+                    </li>
+                    <li>
+                        <geneSet>
+                            <li>SHG_Flaw_Sunbound</li>
+                        </geneSet>
+                    </li>
+                </geneSets>
+            </li>
+        </comps>
+    </HediffDef>
 
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_Flaw_SuperRecluse</defName>

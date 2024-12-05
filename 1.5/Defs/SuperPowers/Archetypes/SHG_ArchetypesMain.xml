@@ -29,6 +29,7 @@
         </statOffsets>
         <exclusionTags>
             <li>PsychicAbility</li>
+            <li>SHG_RandomPsionist</li>
         </exclusionTags>
 		<modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">

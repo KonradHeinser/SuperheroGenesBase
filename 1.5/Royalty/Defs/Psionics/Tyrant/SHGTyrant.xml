@@ -18,6 +18,9 @@
         <descriptionHyperlinks>
             <AbilityDef>SHG_Psionist_March</AbilityDef>
         </descriptionHyperlinks>
+        <exclusionTags>
+            <li>SHG_PsionicTyrant</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersPsychicTyrantBase">
