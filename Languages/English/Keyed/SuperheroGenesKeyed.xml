@@ -116,6 +116,9 @@
     <SHG_SuperDrugs_NoReward>    No Super Drugs in Generic Rewards</SHG_SuperDrugs_NoReward>
     <SHG_SuperDrugs_NoRewardDescription>This option makes it so none of the super creating drug variants will appear in normal reward sets. This won't impact any reward sets that specifically look for super creating pill types if anything creates a group like that.\n\nWhen combined with the no trader setting, it is usually impossible to get without certain super factions.</SHG_SuperDrugs_NoRewardDescription>
 
+    <SHG_NoPsionicNeurotrainers>    No Psionic Neurotrainers</SHG_NoPsionicNeurotrainers>
+    <SHG_NoPsionicNeurotrainersDescription>Normally psionic powers that can be obtained through genes are also findable through neurotrainers to provide another way to obtain them mid-game. If this setting is enabled, they will no longer appear.\n\nThere is a decent chance this will cause an issue if changed mid-save, so use with caution.</SHG_NoPsionicNeurotrainersDescription>
+
     <!--Cooldown Settings-->
     <SHG_BaseAbilityCooldown>    Longer Ability Cooldowns</SHG_BaseAbilityCooldown>
     <SHG_BaseAbilityCooldownDesc>Increases the base cooldown of most super powers to be whatever is listed here. Most abilities have a cooldown of 1-2 seconds, and this setting will increase a lot of those to a higher value. This won't always impact all abilities since some of them are more akin to toggles, meaning a low cooldown generally doesn't have an actual effect for them. This will never make abilities have a shorter cooldown, and the hemowarrior buffs cap at 12 hour cooldowns, limiting you to 2 tiers of buffs each day.\n\nThis will progressively make supers weaker as their abilities gain longer cooldowns due to them increasingly needing to rely whatever stats their powers provide. This won't increase the power of any of the abilities, nor will it cause any changes to any genes.</SHG_BaseAbilityCooldownDesc>

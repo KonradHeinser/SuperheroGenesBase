@@ -52,6 +52,11 @@ namespace SuperHeroGenesBase
                 postfix: new HarmonyMethod(patchType, nameof(GeneConflictsWithPostfix)));
             harmony.Patch(AccessTools.Method(typeof(IncidentWorker_CaravanArrivalTributeCollector), "TraderKindCommonality"),
                 postfix: new HarmonyMethod(patchType, nameof(TributeFactionPostfix)));
+
+            /*
+            harmony.Patch(AccessTools.Method(typeof(ThingDefGenerator_Neurotrainer), "ImpliedThingDefs"),
+                postfix: new HarmonyMethod(patchType, nameof(ImpliedThingDefsPostfix)));
+            */
         }
 
         public static void TributeFactionPostfix(ref float __result, TraderKindDef traderKind, Faction faction)
@@ -269,6 +274,26 @@ namespace SuperHeroGenesBase
                         __result = true;
                 }
             }
+        }
+
+        // Not implemented due to it never actually running for some reason
+        public static void ImpliedThingDefsPostfix(ref IEnumerable<ThingDef> __result)
+        {
+            List<ThingDef> originals = __result.ToList();
+            List<ThingDef> removal = new List<ThingDef>();
+
+            foreach (ThingDef thing in originals)
+            {
+                CompProperties_UseEffect_GainAbility abilityComp = thing.GetCompProperties<CompProperties_UseEffect_GainAbility>();
+                if (abilityComp != null && abilityComp.ability.HasModExtension<NoNeurotrainer>())
+                    removal.Add(thing);
+            }
+
+            if (!removal.NullOrEmpty())
+                foreach (ThingDef thing in removal)
+                    originals.Remove(thing);
+
+            __result = originals.AsEnumerable();
         }
     }
 }

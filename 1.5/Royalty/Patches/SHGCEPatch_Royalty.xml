@@ -86,4 +86,17 @@
             </value>
         </match>
     </Operation>
+
+<!-- Harmony patch continued to fail, so idea has been shelved
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>noPsionicNeurotrainers</setting>
+        <active Class="PatchOperationAdd">
+            <xpath>Defs/AbilityDef[@Name="SHGPsionicBase"]</xpath>
+            <value>
+                <modExtensions>
+                    <li Class="SuperHeroGenesBase.NoNeurotrainer" />
+                </modExtensions>
+            </value>
+        </active>
+    </Operation>-->
 </Patch>

@@ -254,6 +254,7 @@
     <Compile Include="Quest\QuestNode_FailOtherQuests.cs" />
     <Compile Include="Quest\QuestPart_FailOtherQuests.cs" />
     <Compile Include="Quest\QuestNode_NotAllowedIfOthersPassed.cs" />
+    <Compile Include="NoNeurotrainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

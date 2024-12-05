@@ -57,6 +57,7 @@ namespace SuperHeroGenesBase
         public static bool superDrugNoTrader;
         public static bool superDrugNoReward;
         public static int baseAbilityCooldown;
+        public static bool noPsionicNeurotrainers;
 
         // AI stuff
         public static bool poolUsage;
@@ -78,6 +79,7 @@ namespace SuperHeroGenesBase
         // Hero Organization stuff
         public static bool medievalHeroes;
         public static bool leagueGathering;
+        public static bool radiantQuests = true;
 
         public static Dictionary<int, string> baseAbilityCooldownOptions = new Dictionary<int, string>()
         {
@@ -108,6 +110,7 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref superDrugNoTrader, "superDrugNoTrader");
             Scribe_Values.Look(ref superDrugNoReward, "superDrugNoReward");
             Scribe_Values.Look(ref baseAbilityCooldown, "baseAbilityCooldown", 0);
+            Scribe_Values.Look(ref noPsionicNeurotrainers, "noPsionicNeurotrainers", false);
 
             // AI stuff
             Scribe_Values.Look(ref poolUsage, "poolUsage");
@@ -129,6 +132,7 @@ namespace SuperHeroGenesBase
             // Villains and Stereotypes stuff
             Scribe_Values.Look(ref medievalHeroes, "medievalHeroes");
             Scribe_Values.Look(ref leagueGathering, "leagueGathering");
+            Scribe_Values.Look(ref radiantQuests, "radiantQuests", true);
         }
 
         public void DoWindowContents(Rect inRect)
@@ -152,7 +156,7 @@ namespace SuperHeroGenesBase
             int numberOfOptions = 4; // One for each section
             if (showMainOptions) numberOfOptions += 14;
             if (ModsConfig.IsActive("SuperheroGenes.Villains") && showVillainOptions) numberOfOptions += 3;
-            if (ModsConfig.IsActive("SuperheroGenes.Heroes") && showHeroOptions) numberOfOptions += 2;
+            if (ModsConfig.IsActive("SuperheroGenes.Heroes") && showHeroOptions) numberOfOptions += 3;
             if (showAutocastOptions) numberOfOptions += 10;
             contentRect.height = numberOfOptions * 35; // To avoid weird white space, height is based off of option count of present mods
 
@@ -212,6 +216,13 @@ namespace SuperHeroGenesBase
                     }
                     Find.WindowStack.Add(new FloatMenu(options));
                 }
+                /* Patch never ran for some reason
+                if (ModsConfig.RoyaltyActive)
+                {
+                    optionsMenu.CheckboxLabeled("SHG_NoPsionicNeurotrainers".Translate(), ref noPsionicNeurotrainers, "SHG_NoPsionicNeurotrainersDescription".Translate());
+                    optionsMenu.Gap(10f);
+                }
+                */
             }
 
             if (ModsConfig.IsActive("SuperheroGenes.Villains"))
@@ -243,6 +254,8 @@ namespace SuperHeroGenesBase
                     optionsMenu.CheckboxLabeled("SHG_MedievalHeroes".Translate(), ref medievalHeroes, "SHG_MedievalHeroesDescription".Translate());
                     optionsMenu.Gap(10f);
                     optionsMenu.CheckboxLabeled("SHG_LeagueGathering".Translate(), ref leagueGathering, "SHG_LeagueGatheringDescription".Translate());
+                    optionsMenu.Gap(10f);
+                    optionsMenu.CheckboxLabeled("SHG_RadiantQuests".Translate(), ref radiantQuests, "SHG_RadiantQuestsDescription".Translate());
                     optionsMenu.Gap(10f);
                 }
             }

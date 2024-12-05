@@ -88,6 +88,10 @@ namespace SuperHeroGenesBase
                 if (cooldownSetting == 4 && option4 != null) return option4.Apply(xml);
                 if (cooldownSetting == 5 && option5 != null) return option5.Apply(xml);
             }
+            else if (setting == "noPsionicNeurotrainers")
+            {
+                if (SuperheroGenes_Settings.noPsionicNeurotrainers && active != null) return active.Apply(xml);
+            }
 
             // AI stuff
 
@@ -164,6 +168,10 @@ namespace SuperHeroGenesBase
             else if (setting == "leagueGathering")
             {
                 if (SuperheroGenes_Settings.leagueGathering && active != null) return active.Apply(xml);
+            }
+            else if (setting == "radiantQuests")
+            {
+                if (SuperheroGenes_Settings.radiantQuests && active != null) return active.Apply(xml);
             }
 
             else if (setting != null) Log.Error("A patch is using a setting that is either mispelled or unhandled");
