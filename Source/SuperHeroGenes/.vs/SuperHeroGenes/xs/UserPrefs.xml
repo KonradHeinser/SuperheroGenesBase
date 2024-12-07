@@ -1,22 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/JobGiver_AICastAbilityOnOwnLocation.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SHGExtension.cs">
     <Files>
-      <File FileName="SuperAI/ThinkNode_ConditionalHighResourceLevels.cs" Line="9" Column="31" />
-      <File FileName="SuperAI/ThinkNode_ConditionalHasAnyOfHediff.cs" Line="18" Column="1" />
-      <File FileName="ModSettings/PatchOperationSetting.cs" Line="143" Column="52" />
-      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="299" Column="134" />
-      <File FileName="SuperAI/JobGiver_AICastAbilityOnOwnLocation.cs" Line="16" Column="1" />
-      <File FileName="SuperAI/JobGiver_AICastAnyOfAbilityOnEnemyTarget.cs" Line="96" Column="15" />
+      <File FileName="Hediffs/Comps/HediffComp_GainRandomGeneSet.cs" Line="1" Column="1" />
+      <File FileName="SHGUtilities.cs" Line="765" Column="42" />
+      <File FileName="SHGExtension.cs" Line="14" Column="52" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="ModSettings" expanded="True" />
-              <Node name="SuperAI" expanded="True">
-                <Node name="JobGiver_AICastAbilityOnOwnLocation.cs" selected="True" />
-              </Node>
+              <Node name="SHGExtension.cs" selected="True" />
             </Node>
           </Node>
         </State>

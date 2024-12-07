@@ -36,7 +36,7 @@ namespace SuperHeroGenesBase
         public override void NeedInterval()
         {
             if (!IsFrozen)
-                CurLevel -= 0.0333f / 400f; // 30 Days
+                CurLevel -= 0.2f / 400f; // 30 Days
         }
 
         public void Notify_KilledPawn(DamageInfo? dinfo, Pawn victim)
