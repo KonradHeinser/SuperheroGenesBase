@@ -9,7 +9,7 @@
                     <value>
                         <ThinkTreeDef>
                             <defName>SHG_SuperAI_Healer_Pawn</defName>
-                            <insertTag>SHGAI_Pawn</insertTag>
+                            <insertTag>SHGAI_Colonist</insertTag>
                             <insertPriority>500</insertPriority>
                             <thinkRoot Class="ThinkNode_Priority">
                                 <subNodes>
@@ -165,6 +165,37 @@
                             <thinkRoot Class="ThinkNode_Priority">
                                 <subNodes>
                                     <li Class="ThinkNode_ConditionalHasAbility">
+                                        <ability>SHG_Radiomancer_ReverseAging</ability>
+                                        <subNodes>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalOver25YearsOld">
+                                                <subNodes>
+                                                    <li Class="ThinkNode_ConditionalHasHediff">
+                                                        <hediff>SHG_Radiomancer_ReverseAging</hediff>
+                                                        <invert>True</invert>
+                                                        <subNodes>
+                                                            <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                                <ability>SHG_Radiomancer_ReverseAging</ability>
+                                                            </li>
+                                                        </subNodes>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                        <ability>SHG_Radiomancer_ReformPart</ability>
+                                        <subNodes>
+                                            <li Class="ThinkNode_ConditionalHasHediff">
+                                                <hediff>MissingBodyPart</hediff>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                        <ability>SHG_Radiomancer_ReformPart</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                    <li Class="ThinkNode_ConditionalHasAbility">
                                         <ability>SHG_Revive</ability>
                                         <subNodes>
                                             <li Class="SuperHeroGenesBase.JobGiver_AIResurrectHumanoid">
@@ -186,7 +217,7 @@
                         <value>
                             <ThinkTreeDef>
                                 <defName>SHG_SuperAI_PoolHealer_Pawn</defName>
-                                <insertTag>SHGAI_Pawn</insertTag>
+                                <insertTag>SHGAI_Colonist</insertTag>
                                 <insertPriority>450</insertPriority>
                                 <thinkRoot Class="ThinkNode_Priority">
                                     <subNodes>

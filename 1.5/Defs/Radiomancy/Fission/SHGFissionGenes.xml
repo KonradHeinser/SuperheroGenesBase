@@ -38,7 +38,7 @@
 
     <GeneDef ParentName="SuperPowersRadiomancyFissionBase">
         <defName>SHG_Radiomancer_EverEvolving</defName>
-        <label>ever evolving</label>
+        <label>ever-evolving</label>
         <description>Radiomancers with this gene can use a large amount of radiation to permanently alter their somatic cells. This has two effects on the pawn.\n\nFirst, it gives them progress on the ever evolving (foodless) hediff, which reduces the pawn's food need up a 99% reduction if 100% progress is reached. This bonus remains even if the pawn has their genes completely changed, but it takes an extremely long time to reach even if you use this ability every six days.\n\nThe second, and more immediate, change is that the pawn attempts to gain any of the other Radiomancer genes. The chance of this succeeding goes down as they gain more Radiomancer genes, and genes gained through this ability can't be inherited, though they can be extracted.</description>
         <iconPath>Radiomancer/Fission/Gene_Radiomancer_EverEvolving</iconPath>
         <displayOrderInCategory>3</displayOrderInCategory>

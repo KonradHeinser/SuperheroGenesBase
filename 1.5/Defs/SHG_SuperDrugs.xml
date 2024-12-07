@@ -206,6 +206,54 @@
     </ThingDef>
 
     <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_HemomancerCreatingPill</defName>
+        <label>hemomancer creating pill</label>
+        <description>A pill that gives the pawn the Hemomancer gene, the Bloodthirsty gene, and most of the genes of a random hemomantic path. If the pawn has any genes from a different hemomancer path from the selected one, those genes will be removed. Consuming the same pill mutiple times will attempt to switch what type of hemomancer they are.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
+        <descriptionHyperlinks>
+            <HediffDef>SHG_HemomancerCreatingPill</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Drug/SHG_HemomancerPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>SHG_HemomancerCreatingPill</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_RadiomancerCreatingPill</defName>
+        <label>summoner creating pill</label>
+        <description>A pill that gives the pawn the pawn the Radiomancer, Ever-evolving, Solar Recharging, and Overcharged Pocket genes. If the ingester has all of the listed genes already, then the pill will be wasted. Consuming the same pill mutiple times will not grant any additional effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
+        <descriptionHyperlinks>
+            <HediffDef>SHG_RadiomancerCreatingPill</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Drug/SHG_RadiomancerPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>SHG_RadiomancerCreatingPill</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
         <defName>SHG_SuperMutationPill</defName>
         <label>mutating super creating pill</label>
         <description>A pill that gives the pawn the superhero base gene along with a random super mutation. Any existing mutation will be removed. Unlike most advanced super creating pills, this has no risk of side effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>

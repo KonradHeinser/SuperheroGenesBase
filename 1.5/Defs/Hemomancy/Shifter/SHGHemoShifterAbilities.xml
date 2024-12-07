@@ -182,7 +182,7 @@
         <description>Shoot a toxbolt at a nearby enemy. The damage of this ability is the same as the toxbolt power, but it has a much shorter range. Unlike the normal toxbolt, this fires nigh-instantaneously, making impossible to interrupt.</description>
         <iconPath>Hemomancer/Shifter/Ability_Hemomancer_SnakeBolt</iconPath>
         <verbProperties>
-            <range>5</range>
+            <range>5.9</range>
             <warmupTime>0.1</warmupTime>
             <rangeStat>SHG_HemomancerRange_Short</rangeStat>
             <soundCast>PiercingSpine_Launch</soundCast>
@@ -236,7 +236,7 @@
 
     <AbilityDef ParentName="SHGHemomancyBase">
         <defName>SHG_Hemomancer_ShiftBearHibernation</defName>
-        <label>hybernation</label>
+        <label>hibernation</label>
         <description>Use some hemogen to enter a hibernating sleep for 1 day. The need for food is almost completely halted while hibernating.</description>
         <iconPath>Hemomancer/Shifter/Ability_Hemomancer_Hibernation</iconPath>
         <cooldownTicksRange>60000</cooldownTicksRange>

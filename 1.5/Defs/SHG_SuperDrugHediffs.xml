@@ -434,4 +434,80 @@
             </li>
         </comps>
     </HediffDef>
+
+    <HediffDef ParentName="SHG_SuperCreatingDrugHediffBase">
+        <defName>SHG_HemomancerCreatingPill</defName>
+        <label>hemomancer creating pill</label> 
+        <description>This will give the pawn the Hemomancer gene, the Bloodthirsty gene, and most of the genes of a random hemomantic path. If the pawn has any genes from a different hemomancer path from the selected one, those genes will be removed.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
+                <alwaysAddedGenes>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Flaw_Bloodthirsty</li>
+                </alwaysAddedGenes>
+                <geneSets>
+                    <li> <!--Initiate-->
+                        <geneSet>
+                            <li>SHG_Hemomancer_Initiate</li>
+                            <li>SHG_Hemomancer_Priest</li>
+                            <li>SHG_Hemomancer_Praise</li>
+                            <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Hemomancer_TheGiftOfBlood</li>
+                            <li>SHG_Hemomancer_ReplenishBlood</li>
+                            <li>SHG_Hemomancer_BloodCloud</li>
+                            <li>SHG_Hemomancer_Hemoclotting</li>
+                        </geneSet>
+                    </li>
+                    <li> <!--Shifter-->
+                        <geneSet>
+                            <li>SHG_Hemomancer_Shifter</li>
+                            <li>SHG_Hemomancer_Morph</li>
+                            <li>SHG_Hemomancer_Chameleon</li>
+                            <li>SHG_Hemomancer_Bear</li>
+                            <li>SHG_Hemomancer_Snake</li>
+                            <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Hemomancer_Starfish</li>
+                            <li>SHG_Hemomancer_Turtle</li>
+                        </geneSet>
+                    </li>
+                    <li> <!--Thief-->
+                        <geneSet>
+                            <li>SHG_Hemomancer_Thief</li>
+                            <li>SHG_Hemomancer_Reaper</li>
+                            <li>SHG_Hemomancer_Drain</li>
+                            <li>SHG_Hemomancer_Reap</li>
+                            <li>SHG_Hemomancer_Sow</li>
+                            <li>SHG_Hemomancer_BloodBoil</li>
+                            <li>SHG_Hemomancer_MarkForDeath</li>
+                        </geneSet>
+                    </li>
+                    <li> <!--Warrior-->
+                        <geneSet>
+                            <li>SHG_Hemomancer_Warrior</li>
+                            <li>SHG_Hemomancer_Champion</li>
+                            <li>SHG_Hemomancer_BloodClaws</li>
+                            <li>SHG_Hemomancer_BloodArmor</li>
+                            <li>SHG_Hemomancer_BloodInfusement</li>
+                            <li>SHG_Hemomancer_BloodSpear</li>
+                            <li>SHG_Hemomancer_TrueRegeneration</li>
+                        </geneSet>
+                    </li>
+                </geneSets>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_SuperCreatingDrugHediffBase">
+        <defName>SHG_RadiomancerCreatingPill</defName>
+        <label>radiomancer creating pill</label> 
+        <description>This will give the pawn the Radiomancer, Ever-evolving, Solar Recharging, and Overcharged Pocket genes. If the ingester has all of the listed genes already, then the pill will be wasted.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
+                <alwaysAddedGenes>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                    <li>SHG_Radiomancer_EverEvolving</li>
+                    <li>SHG_Radiomancer_SolarRecharging</li>
+                    <li>SHG_Flaw_OverchargedPocket</li>
+                </alwaysAddedGenes>
+            </li>
+        </comps>
+    </HediffDef>
 </Defs>

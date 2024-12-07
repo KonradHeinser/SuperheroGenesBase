@@ -12,6 +12,20 @@
                     <thinkRoot Class="ThinkNode_Priority">
                         <subNodes>
                             <li Class="ThinkNode_ConditionalHasAbility">
+                                <ability>SHG_Radiomancer_ExplosiveBlows</ability>
+                                <subNodes>
+                                    <li Class="ThinkNode_ConditionalHasHediff">
+                                        <hediff>SHG_Radiomancer_ExplosiveBlows</hediff>
+                                        <invert>True</invert>
+                                        <subNodes>
+                                            <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                <ability>SHG_Radiomancer_ExplosiveBlows</ability>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </li>
+                            <li Class="ThinkNode_ConditionalHasAbility">
                                 <ability>SHG_Psionist_MassLevitation</ability>
                                 <subNodes>
                                     <li Class="ThinkNode_ConditionalHasHediff">
@@ -91,6 +105,53 @@
                     <insertPriority>400</insertPriority>
                     <thinkRoot Class="ThinkNode_Priority">
                         <subNodes>
+                            <li Class="ThinkNode_ConditionalHasAbility">
+                                <ability>SHG_Radiomancer_ExplosiveBlows</ability>
+                                <subNodes>
+                                    <li Class="ThinkNode_ConditionalHasHediff">
+                                        <hediff>SHG_Radiomancer_ExplosiveBlows</hediff>
+                                        <invert>True</invert>
+                                        <subNodes>
+                                            <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                <ability>SHG_Radiomancer_ExplosiveBlows</ability>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </li>
+
+                            <li Class="ThinkNode_ConditionalHasAbility">
+                                <ability>SHG_Radiomancer_LimitlessPotential</ability>
+                                <subNodes>
+                                    <li Class="ThinkNode_ConditionalHasHediff">
+                                        <hediff>SHG_EverEvolving_Enlightenment</hediff>
+                                        <severityRange>100</severityRange>
+                                        <invert>True</invert>
+                                        <subNodes>
+                                            <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                <ability>SHG_Radiomancer_LimitlessPotential</ability>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </li>
+                            
+                            <li Class="ThinkNode_ConditionalHasAbility">
+                                <ability>SHG_Radiomancer_EverEvolving</ability>
+                                <subNodes>
+                                    <li Class="ThinkNode_ConditionalHasHediff">
+                                        <hediff>SHG_EverEvolving_Foodless</hediff>
+                                        <severityRange>100</severityRange>
+                                        <invert>True</invert>
+                                        <subNodes>
+                                            <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                <ability>SHG_Radiomancer_EverEvolving</ability>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </li>
+
                             <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
                                 <gene>Hemogenic</gene>
                                 <subNodes>

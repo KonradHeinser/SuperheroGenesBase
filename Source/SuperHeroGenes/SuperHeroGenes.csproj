@@ -256,6 +256,7 @@
     <Compile Include="Quest\QuestNode_NotAllowedIfOthersPassed.cs" />
     <Compile Include="NoNeurotrainer.cs" />
     <Compile Include="SuperAI\JobGiver_AICastAbilityOnOwnLocation.cs" />
+    <Compile Include="SuperAI\ThinkNode_ConditionalOver25YearsOld.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

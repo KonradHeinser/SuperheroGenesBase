@@ -317,9 +317,40 @@
 
                         <!--Basic Buff Stuff-->
 
+                        <li Class="ThinkNode_ConditionalHasAbility">
+                            <ability>SHG_Radiomancer_ExplosiveBlows</ability>
+                            <subNodes>
+                                <li Class="ThinkNode_ConditionalHasHediff">
+                                    <hediff>SHG_Radiomancer_ExplosiveBlows</hediff>
+                                    <invert>True</invert>
+                                    <subNodes>
+                                        <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                            <ability>SHG_Radiomancer_ExplosiveBlows</ability>
+                                        </li>
+                                    </subNodes>
+                                </li>
+                            </subNodes>
+                        </li>
+
                         <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
                             <gene>Hemogenic</gene>
                             <subNodes>
+                                <li Class="ThinkNode_ConditionalHasAbility">
+                                    <ability>SHG_Hemomancer_Snake</ability>
+                                    <subNodes>
+                                        <li Class="ThinkNode_ConditionalHasHediff">
+                                            <hediff>SHG_Hemomancer_Hemoshift</hediff>
+                                            <severityRange>2</severityRange>
+                                            <invert>True</invert>
+                                            <subNodes>
+                                                <li Class="JobGiver_AICastAbilityOnSelf">
+                                                    <ability>SHG_Hemomancer_Snake</ability>
+                                                </li>
+                                            </subNodes>
+                                        </li>
+                                    </subNodes>
+                                </li>
+
                                 <li Class="ThinkNode_ConditionalHasAbility">
                                     <ability>SHG_Hemomancer_BloodInfusement</ability>
                                     <subNodes>
@@ -508,6 +539,31 @@
                                     <abilities>
                                         <li>SHG_Psionist_CompelledDuel</li>
                                     </abilities>
+                                </li>
+                            </subNodes>
+                        </li>
+
+                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels"> <!--Checks to make sure they are a radiomancer-->
+                            <gene>SHG_Archetypes_Radiomancer</gene>
+                            <useTargetValue>False</useTargetValue>
+                            <minLevel>0</minLevel>
+                            <subNodes>
+                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalNearbyEnemyTarget">
+                                    <subNodes>
+                                        <!--Has a 10% chance to attempt to use any of the non-standard attack abilities radiomancers have. Chance is lowered intentionally to avoid having the non-colonists overuse abilities against already affected targets-->
+                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget"> 
+                                            <hashInterval>10</hashInterval>
+                                            <abilities>
+                                                <li>SHG_Radiomancer_CellularDestabilization</li>
+                                                <li>SHG_Radiomancer_DrainEnergy</li>
+                                                <li>SHG_Radiomancer_WeakenSkin</li>
+                                                <li>SHG_Radiomancer_SapStrength</li>
+                                                <li>SHG_Radiomancer_DrainLife</li>
+                                                <li>SHG_Radiomancer_SlowSynapses</li>
+                                                <li>SHG_Radiomancer_RapidAging</li>
+                                            </abilities>
+                                        </li>
+                                    </subNodes>
                                 </li>
                             </subNodes>
                         </li>

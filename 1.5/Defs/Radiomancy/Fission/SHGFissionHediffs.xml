@@ -70,7 +70,7 @@
 
     <HediffDef>
         <defName>SHG_Radiomancer_EverEvolving</defName>       
-        <label>ever evolving</label>
+        <label>ever-evolving</label>
         <description>This pawn will generate new genes once you STOP LOOKING AT DEVMODE STUFF AND UNPAUSE YOU CHEATER. Unless you're a fellow modder, in which case welcome! You won't get much use from this tooltip, but the SHGFissionHediffs.xml file contains the randomization data for the ever evolving hediff itself.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <stages>

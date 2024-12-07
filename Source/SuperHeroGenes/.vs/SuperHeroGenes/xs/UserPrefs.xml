@@ -1,16 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SHGExtension.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/ThinkNode_ConditionalOver25YearsOld.cs">
     <Files>
-      <File FileName="Hediffs/Comps/HediffComp_GainRandomGeneSet.cs" Line="1" Column="1" />
-      <File FileName="SHGUtilities.cs" Line="765" Column="42" />
-      <File FileName="SHGExtension.cs" Line="14" Column="52" />
+      <File FileName="SuperAI/JobGiver_AICastAnyOfAbilityOnEnemyTarget.cs" Line="12" Column="33" />
+      <File FileName="SuperAI/ThinkNode_ConditionalHighResourceLevels.cs" Line="1" Column="1" />
+      <File FileName="SuperAI/ThinkNode_ConditionalNearbyEnemyTarget.cs" Line="12" Column="10" />
+      <File FileName="SuperAI/ThinkNode_ConditionalOver25YearsOld.cs" Line="14" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="SHGExtension.cs" selected="True" />
+              <Node name="SuperAI" expanded="True">
+                <Node name="ThinkNode_ConditionalOver25YearsOld.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

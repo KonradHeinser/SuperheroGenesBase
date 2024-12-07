@@ -90,7 +90,7 @@
 
     <AbilityDef ParentName="SHGSelfCastBase">
         <defName>SHG_Radiomancer_EverEvolving</defName>
-        <label>ever evolving</label>
+        <label>ever-evolving</label>
         <description>Use a large amount of radiation to permanently alter this pawn's somatic cells. This has two effects on the pawn.\n\nFirst, it gives them progress on the ever evolving (foodless) hediff, which reduces the pawn's food need up a 99% reduction if 100% progress is reached. This bonus remains even if the pawn has their genes completely changed, but it takes an extremely long time to reach even if you use this ability every six days.\n\nThe second, and more immediate, change is that the pawn attempts to gain any of the other Radiomancer genes. The chance of this succeeding goes down as they gain more Radiomancer genes, and genes gained through this ability can't be inherited, though they can be extracted.</description>
         <iconPath>Radiomancer/Fission/Gene_Radiomancer_EverEvolving</iconPath>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
@@ -158,7 +158,7 @@
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_Radiomancer_ReverseAging</defName>
         <label>reverse aging</label>
-        <description>Apply a small amount of radiation on another pawn to rejuvenate internal parts, reducing the pawn's biological age by a year. Due to the nature of this ability, it can't reduce the age of a pawn below 18 years old, and can't help much to get rid of chronic ailments.</description>
+        <description>Apply a small amount of radiation on a pawn to rejuvenate internal parts, reducing the pawn's biological age by a year. Due to the nature of this ability, it can't reduce the age of a pawn below 18 years old, and can't help much to get rid of chronic ailments.</description>
         <iconPath>Radiomancer/Fission/Gene_Radiomancer_ReverseAging</iconPath>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
