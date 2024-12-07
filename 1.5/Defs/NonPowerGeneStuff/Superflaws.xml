@@ -63,7 +63,7 @@
         <geneClass>SuperHeroGenesBase.Gene_HemoHediffAdder</geneClass>
         <displayOrderInCategory>200</displayOrderInCategory>
         <iconPath>Flaws/Gene_Bloodthirsty</iconPath>
-        <resourceLossPerDay>1.5</resourceLossPerDay>
+        <resourceLossPerDay>1.2</resourceLossPerDay>
         <resourceLabel>hemogen</resourceLabel>
         <causesNeed>SHG_Flaw_Bloodthirsty</causesNeed>
         <biostatMet>7</biostatMet>
@@ -71,7 +71,7 @@
         <customEffectDescriptions>
             <li>The hemogen loss can be countered using any other source, including genes.</li>
             <li>Everytime this pawn kills a pawn that can bleed, some (and sometimes all) of the victim's remaining blood is converted into hemogen. It doesn't matter if the kill is with a ranged weapon, only that this pawn is the direct instigator.</li>
-            <li>The bloodthirst need can also be satisfied by any kill, though melee kills with provide more reprieve.</li>
+            <li>The bloodthirst need can also be satisfied by any kill, though melee kills will provide more reprieve.</li>
         </customEffectDescriptions>
         <exclusionTags>
             <li>KillThirst</li>

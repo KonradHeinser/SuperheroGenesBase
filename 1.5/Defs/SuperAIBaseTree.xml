@@ -511,6 +511,60 @@
                                 </li>
                             </subNodes>
                         </li>
+
+                        <!--Purge radiation as needed-->
+                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                            <gene>SHG_Archetypes_Radiomancer</gene>
+                            <useTargetValue>False</useTargetValue>
+                            <minLevel>0.95</minLevel>
+                            <subNodes>
+                                <li Class="ThinkNode_ConditionalHasHediff">
+                                    <hediff>SHG_Radiomancer_InfusedMuscles</hediff>
+                                    <severityRange>5.2</severityRange>
+                                    <subNodes>
+                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                            <ability>SHG_Radiomancer_RefocusEnergy_Wakefulness</ability>
+                                        </li>
+                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAbilityOnOwnLocation">
+                                            <ability>SHG_Radiomancer_CondenseRadiation</ability>
+                                        </li>
+                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                            <ability>SHG_Radiomancer_DissipateEnergy</ability>
+                                        </li>
+                                    </subNodes>
+                                </li>
+                                <li Class="ThinkNode_ConditionalHasHediff">
+                                    <hediff>SHG_Radiomancer_EnergizedNeurons</hediff>
+                                    <severityRange>5.2</severityRange>
+                                    <subNodes>
+                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                            <ability>SHG_Radiomancer_RefocusEnergy_Wakefulness</ability>
+                                        </li>
+                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAbilityOnOwnLocation">
+                                            <ability>SHG_Radiomancer_CondenseRadiation</ability>
+                                        </li>
+                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                            <ability>SHG_Radiomancer_DissipateEnergy</ability>
+                                        </li>
+                                    </subNodes>
+                                </li>
+                                <li Class="ThinkNode_ConditionalHasHediff">
+                                    <hediff>SHG_Radiomancer_EnergyArmor</hediff>
+                                    <severityRange>5.2</severityRange>
+                                    <subNodes>
+                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                            <ability>SHG_Radiomancer_RefocusEnergy_Wakefulness</ability>
+                                        </li>
+                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAbilityOnOwnLocation">
+                                            <ability>SHG_Radiomancer_CondenseRadiation</ability>
+                                        </li>
+                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                            <ability>SHG_Radiomancer_DissipateEnergy</ability>
+                                        </li>
+                                    </subNodes>
+                                </li>
+                            </subNodes>
+                        </li>
                     </subNodes>
                 </li>
             </subNodes>

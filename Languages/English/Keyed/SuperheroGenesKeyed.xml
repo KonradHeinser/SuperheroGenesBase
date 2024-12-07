@@ -166,4 +166,7 @@
 
     <SHG_AutomaticFleeing>    Autocast Fleeing Abilities</SHG_AutomaticFleeing>
     <SHG_AutomaticFleeingDescription>While the pawn is undrafted, they will automatically try to use their abilities while fleeing when the situation warrants it. If they are set to flee when enemies are nearby, they will often try to use whatever escape abilities they have at their disposal, from blink to invisibility to heroically leaping away. This includes the vanilla invisibility and longjump legs as methods of last resort.\n\nWarning: While it usually is not an issue, a pawn fleeing from a melee opponent may be so distracted trying to flee that they forget they can teleport. They will try to flee if an enemy is within a range of 20, but there are situations where this may not apply. In conclusion, treat this setting as an assisting autocast rather than an something that always saves pawns.</SHG_AutomaticFleeingDescription>
+
+    <SHG_AutoRadioPurge>    Auto-dissipate Radiation</SHG_AutoRadioPurge>
+    <SHG_AutoRadioPurgeDescription>Causes radiomancers to automatically dissipate radiation when they have infused muscles, energized neurons, or energy armor, and the related effect is close to being in overcharge. To ensure it won't use radiation you're trying to keep stored, it will only attempt to dissipate radiation when the pawn is undrafted and there are no enemies on the map. This will only attempt to use the Dissipate Radiation, Refocus Energy (Wakefullnes), or the Condense Energy abilities.</SHG_AutoRadioPurgeDescription>
 </LanguageData>

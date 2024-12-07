@@ -145,6 +145,11 @@ namespace SuperHeroGenesBase
                 if (SuperheroGenes_Settings.automaticFleeing && active != null) return active.Apply(xml);
             }
 
+            else if (setting == "automaticRadioPurge")
+            {
+                if (SuperheroGenes_Settings.automaticRadioPurge && active != null) return active.Apply(xml);
+            }
+
             // Villains and Stereotypes stuff
             else if (setting == "medievalVillains")
             {

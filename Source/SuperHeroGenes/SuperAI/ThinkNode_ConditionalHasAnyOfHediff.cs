@@ -10,9 +10,7 @@ namespace SuperHeroGenesBase
         protected override bool Satisfied(Pawn pawn)
         {
             foreach (HediffDef hediff in hediffs)
-            {
                 if (SHGUtilities.HasHediff(pawn, hediff)) return true;
-            }
             return false;
         }
     }

@@ -29,7 +29,6 @@
         </statOffsets>
         <exclusionTags>
             <li>PsychicAbility</li>
-            <li>SHG_RandomPsionist</li>
         </exclusionTags>
 		<modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
@@ -120,7 +119,7 @@
             <li>Gives special radiation resource.</li>
             <li>This resource is only gained and lost through the use of abilities.</li>
             <li>Gives the Gather Energy ability to radiomancers that have neither the Bioreactor or Solar Recharging genes.</li>
-            <li>Gives the dissipate energy ability to radiomancers that have neither the Condense Radiation or Refocus Energy genes.</li>
+            <li>Gives the Dissipate Energy ability to radiomancers that have neither the Condense Radiation or Refocus Energy genes.</li>
         </customEffectDescriptions>
 		<modExtensions>
 			<li Class="SuperHeroGenesBase.DRGExtension">

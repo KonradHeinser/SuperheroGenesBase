@@ -70,6 +70,7 @@ namespace SuperHeroGenesBase
         public static bool automaticOffense;
         public static bool automaticOffenseDrafted;
         public static bool automaticFleeing;
+        public static bool automaticRadioPurge;
 
         // Villains and Stereotypes stuff
         public static bool medievalVillains;
@@ -123,6 +124,7 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref automaticOffense, "automaticOffense");
             Scribe_Values.Look(ref automaticOffenseDrafted, "automaticOffenseDrafted");
             Scribe_Values.Look(ref automaticFleeing, "automaticFleeing");
+            Scribe_Values.Look(ref automaticRadioPurge, "automaticRadioPurge");
 
             // Villains and Stereotypes stuff
             Scribe_Values.Look(ref medievalVillains, "medievalVillains");
@@ -157,7 +159,7 @@ namespace SuperHeroGenesBase
             if (showMainOptions) numberOfOptions += 14;
             if (ModsConfig.IsActive("SuperheroGenes.Villains") && showVillainOptions) numberOfOptions += 3;
             if (ModsConfig.IsActive("SuperheroGenes.Heroes") && showHeroOptions) numberOfOptions += 3;
-            if (showAutocastOptions) numberOfOptions += 10;
+            if (showAutocastOptions) numberOfOptions += 11;
             contentRect.height = numberOfOptions * 35; // To avoid weird white space, height is based off of option count of present mods
 
             Widgets.BeginScrollView(frameRect, ref scrollPosition, contentRect, true);
@@ -216,7 +218,7 @@ namespace SuperHeroGenesBase
                     }
                     Find.WindowStack.Add(new FloatMenu(options));
                 }
-                /* Patch never ran for some reason
+                /* Harmony patch can't run, so this is shelved for now
                 if (ModsConfig.RoyaltyActive)
                 {
                     optionsMenu.CheckboxLabeled("SHG_NoPsionicNeurotrainers".Translate(), ref noPsionicNeurotrainers, "SHG_NoPsionicNeurotrainersDescription".Translate());
@@ -293,6 +295,8 @@ namespace SuperHeroGenesBase
                     optionsMenu.Gap(10f);
                 }
                 optionsMenu.CheckboxLabeled("SHG_AutomaticFleeing".Translate(), ref automaticFleeing, "SHG_AutomaticFleeingDescription".Translate());
+                optionsMenu.Gap(10f);
+                optionsMenu.CheckboxLabeled("SHG_AutoRadioPurge".Translate(), ref automaticRadioPurge, "SHG_AutoRadioPurgeDescription".Translate());
                 optionsMenu.Gap(10f);
             }
 

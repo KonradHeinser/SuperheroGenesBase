@@ -9,6 +9,9 @@
         <statOffsets>
             <SHG_HemomancyProficiency>0.5</SHG_HemomancyProficiency>
         </statOffsets>
+        <exclusionTags>
+            <li>SHG_HemomancerThief</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersHemoThiefBase">
@@ -116,7 +119,7 @@
     <GeneDef ParentName="SuperPowersHemoThiefBase">
         <defName>SHG_Hemomancer_MarkForDeath</defName>
         <label>mark for death</label>
-        <description>Carriers of this gene can place a mark a pawn that removes all of their innate armor, assuming they have any, and make the target bleed three times faster than normal.\n\nIf the target survive's the Reaper's mark for 5 hours, they gain a one-use ability for 19 hours. This ability allows them to instantly heal most wounds.\n\nThe range of this ability is influenced by Hemomancy Proficiency.</description>
+        <description>Carriers of this gene can place a mark a pawn that removes all of their innate armor, assuming they have any, and makes the target bleed three times faster than normal.\n\nIf the target survives the Reaper's mark for 5 hours, they gain a one-use ability for 19 hours. This ability allows them to instantly heal most wounds.\n\nThe range of this ability is influenced by Hemomancy Proficiency.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_MarkForDeath</iconPath>
         <displayOrderInCategory>13</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Reaper</prerequisite>

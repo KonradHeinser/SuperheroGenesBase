@@ -6,7 +6,7 @@ using Verse.AI;
 
 namespace SuperHeroGenesBase
 {
-    public class JobGiver_AICastAnyOfAbilityOnEnemyTarget : JobGiver_AICastAbility
+    public class JobGiver_AICastAnyOfAbilityOnEnemyTarget : ThinkNode_JobGiver
     {
         private List<AbilityDef> abilities = null;
         private int hashInterval = 3; // Alters the chances of the pawn actually trying to cast the ability. If this is set to 1, then the pawn will always attempt to use this, thus making it more difficult to use other abilties. Only recommended for abilities that should be constantly used, like attacks
@@ -93,7 +93,7 @@ namespace SuperHeroGenesBase
             return chosenAbility.GetJob(target, target);
         }
 
-        protected override LocalTargetInfo GetTarget(Pawn caster, Ability ability)
+        public LocalTargetInfo GetTarget(Pawn caster, Ability ability)
         {
             // If it's supposed to be cast on the caster (i.e. a burst) return the caster
             if (!ability.def.targetRequired) return new LocalTargetInfo(caster);
@@ -104,5 +104,14 @@ namespace SuperHeroGenesBase
             if (!ability.CanApplyOn(new LocalTargetInfo(currentEnemy))) return LocalTargetInfo.Invalid;
             return new LocalTargetInfo(currentEnemy);
         }
+
+        public override ThinkNode DeepCopy(bool resolve = true)
+        {
+            JobGiver_AICastAnyOfAbilityOnEnemyTarget obj = (JobGiver_AICastAnyOfAbilityOnEnemyTarget)base.DeepCopy(resolve);
+            obj.abilities = abilities;
+            obj.hashInterval = hashInterval;
+            return obj;
+        }
+
     }
 }

@@ -9,6 +9,9 @@
         <statOffsets>
             <SHG_HemomancyProficiency>0.5</SHG_HemomancyProficiency>
         </statOffsets>
+        <exclusionTags>
+            <li>SHG_HemomancerWarrior</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersHemoWarriorBase">

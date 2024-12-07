@@ -9,6 +9,9 @@
         <statOffsets>
             <SHG_HemomancyProficiency>0.5</SHG_HemomancyProficiency>
         </statOffsets>
+        <exclusionTags>
+            <li>SHG_HemomancerInitiate</li>
+        </exclusionTags>
     </GeneDef>
 
     <GeneDef ParentName="SuperPowersHemoInitiateBase">
@@ -64,7 +67,7 @@
     <GeneDef ParentName="SuperPowersHemoInitiateBase">
         <defName>SHG_Hemomancer_Hemoclotting</defName>
         <label>hemoclotting</label>
-        <description>Carriers of this gene can seal a pawn's wounds, and stops them from bleeding from any other wounds they may receive over the next day.\n\nThe range of this ability is influenced by Hemomancy Proficiency.</description>
+        <description>Carriers of this gene can seal a pawn's wounds, and also stop them from bleeding from any other wounds they may receive over the next day.\n\nThe range of this ability is influenced by Hemomancy Proficiency.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_Hemoclotting</iconPath>
         <displayOrderInCategory>4</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Initiate</prerequisite>
@@ -134,7 +137,7 @@
     <GeneDef ParentName="SuperPowersHemoInitiateBase">
         <defName>SHG_Hemomancer_BloodCloud</defName>
         <label>blood cloud</label>
-        <description>Carriers of this gene can drive a pawn into a murderous rage for two hours. While in the murderous rage, the pawn will be immune to pain, and have increased melee damage and accuracy. The range of this ability is influenced by Hemomancy Proficiency.</description>
+        <description>Carriers of this gene can release a burst of hemogen that gives the hemopriest and all allies around them the benefits of bloodlust without removing their ability to think rationally. This does not stack with bloodlust, and will not stop a pawn under the effects of bloodlust from berserking.\n\nThis is not impacted by Hemomancy Proficiency.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_BloodCloud</iconPath>
         <displayOrderInCategory>13</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Priest</prerequisite>

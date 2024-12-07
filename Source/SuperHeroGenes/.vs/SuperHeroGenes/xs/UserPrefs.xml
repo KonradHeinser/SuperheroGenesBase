@@ -1,21 +1,22 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Genes/HediffAdder.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/JobGiver_AICastAbilityOnOwnLocation.cs">
     <Files>
-      <File FileName="ModSettings/PatchOperationSetting.cs" Line="94" Column="14" />
-      <File FileName="HarmonyPatches.cs" Line="286" Column="14" />
-      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="219" Column="51" />
-      <File FileName="Genes/HediffAdder.cs" Line="38" Column="61" />
-      <File FileName="SHGExtension.cs" Line="16" Column="45" />
+      <File FileName="SuperAI/ThinkNode_ConditionalHighResourceLevels.cs" Line="9" Column="31" />
+      <File FileName="SuperAI/ThinkNode_ConditionalHasAnyOfHediff.cs" Line="18" Column="1" />
+      <File FileName="ModSettings/PatchOperationSetting.cs" Line="143" Column="52" />
+      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="299" Column="134" />
+      <File FileName="SuperAI/JobGiver_AICastAbilityOnOwnLocation.cs" Line="16" Column="1" />
+      <File FileName="SuperAI/JobGiver_AICastAnyOfAbilityOnEnemyTarget.cs" Line="96" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Genes" expanded="True">
-                <Node name="HediffAdder.cs" selected="True" />
-              </Node>
               <Node name="ModSettings" expanded="True" />
+              <Node name="SuperAI" expanded="True">
+                <Node name="JobGiver_AICastAbilityOnOwnLocation.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
