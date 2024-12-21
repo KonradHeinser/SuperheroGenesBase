@@ -192,4 +192,56 @@
         </comps>	
 	</HediffDef>
 
+    <GeneDef ParentName="SuperPowersPassiveBase" MayRequire="EBSG.Framework">
+        <defName>SHG_EverGrowingPower</defName>
+        <label>ever-growing power</label>
+        <description>Carriers of this gene constantly grow stronger as they fight more. Every time they are hit they become more durable, and every time they kill another humanlike foe they gain an increase in the damage they deal against all foes.\n\nThe rate that these bonuses increase is pretty slow, but as they go up it will become a bit easier to increase them even more. They do have upper limits, but when the pawn reaches those limits they will be almost impossible to kill with normal damage effects, and can kill most things with a single blow, even without equipment or access to other super genes.</description>
+        <biostatArc>1</biostatArc>
+        <iconPath>Powers/Gene_EverGrowingPower</iconPath>
+        <displayOrderInCategory>10</displayOrderInCategory>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_EverGrowingPower</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <HediffDef MayRequire="EBSG.Framework">
+        <defName>SHG_EverGrowingPower</defName>
+        <label>ever-growing power</label>
+        <description>Each time this pawn is hit they become more resilient, and every time they kill a humanlike foe they become more lethal overall.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <initialSeverity>1</initialSeverity>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>100</maxSeverity>
+        <stages>
+            <li>
+                <multiplyStatChangesBySeverity>true</multiplyStatChangesBySeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.99</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_DisplaySeverity">
+                <prependString>Durability : </prependString>
+                <appendString>%</appendString>
+                <roundDigits>0</roundDigits>
+            </li>
+            <li Class="EBSGFramework.HediffCompProperties_SeverityChangeWhenDamaged">
+                <cooldownTicks>30</cooldownTicks>
+                <severityChangeFactor>0.001</severityChangeFactor>
+            </li>
+            <li Class="EBSGFramework.HediffCompProperties_HediffOnKill">
+                <hediff>SHG_EverEvolving_Lethality</hediff>
+                <severityForFirstKill>0.1</severityForFirstKill>
+                <severityPerExtraKill>0.1</severityPerExtraKill>
+                <allowMechanoids>False</allowMechanoids>
+                <allowAnimals>False</allowAnimals>
+                <allowDryads>False</allowDryads>
+                <allowInsects>False</allowInsects>
+            </li>
+        </comps>
+    </HediffDef>
 </Defs>

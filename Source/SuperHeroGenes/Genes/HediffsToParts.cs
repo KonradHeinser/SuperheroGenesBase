@@ -9,5 +9,6 @@ namespace SuperHeroGenesBase
         public HediffDef hediff;
         public bool onlyIfNew = false;
         public float severity = 0.5f;
+        public List<ThingDef> validThings;
     }
 }

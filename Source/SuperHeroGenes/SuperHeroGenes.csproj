@@ -257,6 +257,7 @@
     <Compile Include="NoNeurotrainer.cs" />
     <Compile Include="SuperAI\JobGiver_AICastAbilityOnOwnLocation.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalOver25YearsOld.cs" />
+    <Compile Include="IncidentWorker_DiseaseGene.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

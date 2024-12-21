@@ -193,4 +193,18 @@
             </li>
         </stages>
     </HediffDef>
+
+    <HediffDef ParentName="SHG_EverEvolvingBase" MayRequire="EBSG.Framework">
+        <defName>SHG_EverEvolving_Lethality</defName>
+        <label>ever evolving (lethality)</label>
+        <description>This pawn consumed or had something used on them that allows them to surpass the limits of their genetic code. This particular evolution makes them far more deadly than they normally would be.</description>
+        <stages>
+            <li>
+                <multiplyStatChangesBySeverity>true</multiplyStatChangesBySeverity>
+                <statOffsets>
+                    <EBSG_OutgoingDamageFactor>0.1</EBSG_OutgoingDamageFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>

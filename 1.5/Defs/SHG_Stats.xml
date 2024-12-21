@@ -24,7 +24,7 @@
         <displayPriorityInCategory>3451</displayPriorityInCategory>
     </StatDef>
 
-        <!--Psionist Stats-->
+    <!--Psionist Stats-->
 
     <StatDef>
         <defName>SHG_Debuffer_Range</defName>
@@ -37,7 +37,7 @@
         <defaultBaseValue>15</defaultBaseValue>
     </StatDef>
 
-        <!--Hemomancer Stats-->
+    <!--Hemomancer Stats-->
     <StatDef>
         <defName>SHG_HemomancyProficiency</defName>
         <label>hemomancy proficiency</label>

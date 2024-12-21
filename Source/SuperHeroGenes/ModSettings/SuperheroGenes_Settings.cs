@@ -1,10 +1,7 @@
 ﻿using RimWorld;
 using UnityEngine;
 using Verse;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-
 
 namespace SuperHeroGenesBase
 {
@@ -58,6 +55,8 @@ namespace SuperHeroGenesBase
         public static bool superDrugNoReward;
         public static int baseAbilityCooldown;
         public static bool noPsionicNeurotrainers;
+        public static bool antiSupeDisease;
+        public static bool disableEvolvingHemomancers;
 
         // AI stuff
         public static bool poolUsage;
@@ -112,6 +111,8 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref superDrugNoReward, "superDrugNoReward");
             Scribe_Values.Look(ref baseAbilityCooldown, "baseAbilityCooldown", 0);
             Scribe_Values.Look(ref noPsionicNeurotrainers, "noPsionicNeurotrainers", false);
+            Scribe_Values.Look(ref antiSupeDisease, "antiSupeDisease", false);
+            Scribe_Values.Look(ref disableEvolvingHemomancers, "disableEvolvingHemomancers", false);
 
             // AI stuff
             Scribe_Values.Look(ref poolUsage, "poolUsage");
@@ -156,7 +157,7 @@ namespace SuperHeroGenesBase
             contentRect.width -= 20;
 
             int numberOfOptions = 4; // One for each section
-            if (showMainOptions) numberOfOptions += 14;
+            if (showMainOptions) numberOfOptions += 16;
             if (ModsConfig.IsActive("SuperheroGenes.Villains") && showVillainOptions) numberOfOptions += 3;
             if (ModsConfig.IsActive("SuperheroGenes.Heroes") && showHeroOptions) numberOfOptions += 3;
             if (showAutocastOptions) numberOfOptions += 11;
@@ -204,6 +205,10 @@ namespace SuperHeroGenesBase
                 optionsMenu.CheckboxLabeled("SHG_SuperDrugs_NoTrader".Translate(), ref superDrugNoTrader, "SHG_SuperDrugs_NoTraderDescription".Translate());
                 optionsMenu.Gap(10f);
                 optionsMenu.CheckboxLabeled("SHG_SuperDrugs_NoReward".Translate(), ref superDrugNoReward, "SHG_SuperDrugs_NoRewardDescription".Translate());
+                optionsMenu.Gap(10f);
+                optionsMenu.CheckboxLabeled("SHG_AntiSupeDisease".Translate(), ref antiSupeDisease, "SHG_AntiSupeDiseaseDescription".Translate());
+                optionsMenu.Gap(10f);
+                optionsMenu.CheckboxLabeled("SHG_DisableEvolvingHemomancers".Translate(), ref disableEvolvingHemomancers, "SHG_DisableEvolvingHemomancersDescription".Translate());
                 optionsMenu.Gap(10f);
                 if (optionsMenu.ButtonTextLabeledPct("SHG_BaseAbilityCooldown".Translate(), baseAbilityCooldownOptions[baseAbilityCooldown].Translate(), 0.75f,
                     tooltip: "SHG_BaseAbilityCooldownDesc".Translate()))

@@ -1,19 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SuperAI/ThinkNode_ConditionalOver25YearsOld.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Genes/HediffsToParts.cs">
     <Files>
-      <File FileName="SuperAI/JobGiver_AICastAnyOfAbilityOnEnemyTarget.cs" Line="12" Column="33" />
-      <File FileName="SuperAI/ThinkNode_ConditionalHighResourceLevels.cs" Line="1" Column="1" />
-      <File FileName="SuperAI/ThinkNode_ConditionalNearbyEnemyTarget.cs" Line="12" Column="10" />
-      <File FileName="SuperAI/ThinkNode_ConditionalOver25YearsOld.cs" Line="14" Column="1" />
+      <File FileName="ModSettings/PatchOperationSetting.cs" Line="99" Column="13" />
+      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="207" Column="99" />
+      <File FileName="Genes/Gene_HemoHediffAdder.cs" Line="20" Column="10" />
+      <File FileName="Genes/HediffsToParts.cs" Line="12" Column="1" />
+      <File FileName="SHGExtension.cs" Line="21" Column="51" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="SuperAI" expanded="True">
-                <Node name="ThinkNode_ConditionalOver25YearsOld.cs" selected="True" />
+              <Node name="Genes" expanded="True">
+                <Node name="HediffsToParts.cs" selected="True" />
               </Node>
+              <Node name="ModSettings" expanded="True" />
             </Node>
           </Node>
         </State>

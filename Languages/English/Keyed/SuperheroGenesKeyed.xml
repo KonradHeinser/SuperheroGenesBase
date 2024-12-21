@@ -116,6 +116,12 @@
     <SHG_SuperDrugs_NoReward>    No Super Drugs in Generic Rewards</SHG_SuperDrugs_NoReward>
     <SHG_SuperDrugs_NoRewardDescription>This option makes it so none of the super creating drug variants will appear in normal reward sets. This won't impact any reward sets that specifically look for super creating pill types if anything creates a group like that.\n\nWhen combined with the no trader setting, it is usually impossible to get without certain super factions.</SHG_SuperDrugs_NoRewardDescription>
 
+    <SHG_AntiSupeDisease>    Anti-Super Disease</SHG_AntiSupeDisease>
+    <SHG_AntiSupeDiseaseDescription>This setting makes it so all biomes which may have a disease have a small chance to give the anti-super disease to any pawns with the base superhero gene. This disease has a notably higher chance of killing supers than most ailments, though it seldom affects those without the gene.</SHG_AntiSupeDiseaseDescription>
+    <SHG_DisableEvolvingHemomancers>    Disable Evolving Hemomancers</SHG_DisableEvolvingHemomancers>
+    <SHG_DisableEvolvingHemomancersDescription>This setting makes it so hemomancers do not have a chance to gain a hemomancer gene when the consume a hemogen pack. The evolution was added as a way to give players a consistent way to gain hemomancy abilities and effects throughout the game similar to the Radiomancer Ever-Evolving ability and Psionist Neurotrainers. Enabling this setting will make it much harder to get hemomancy genes consistently mid-game.</SHG_DisableEvolvingHemomancersDescription>
+
+    <!--Removed at the moment due to how neutrotrainers are generated normally-->
     <SHG_NoPsionicNeurotrainers>    No Psionic Neurotrainers</SHG_NoPsionicNeurotrainers>
     <SHG_NoPsionicNeurotrainersDescription>Normally psionic powers that can be obtained through genes are also findable through neurotrainers to provide another way to obtain them mid-game. If this setting is enabled, they will no longer appear.\n\nThere is a decent chance this will cause an issue if changed mid-save, so use with caution.</SHG_NoPsionicNeurotrainersDescription>
 

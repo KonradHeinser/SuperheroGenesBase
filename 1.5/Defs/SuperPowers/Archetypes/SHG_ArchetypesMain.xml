@@ -64,9 +64,19 @@
         <biostatArc>1</biostatArc>
         <resourceLossPerDay>-1</resourceLossPerDay>
         <displayOrderInCategory>-0.9</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>When the carrier consumes a hemogen pack they have a chance to gain a new hemomancy gene. The success rate declines as they gain more genes.</li>
+            <li>If the carrier gains an ability/effect through the above effect that relies on hemomancy proficiency and they don't have a gene that provides that, it will not be immediately useable.</li>
+        </customEffectDescriptions>
 		<modExtensions>
 			<li Class="SuperHeroGenesBase.SHGExtension">
 				<hediffsToApply><li><hediff>SHG_Hemomancer</hediff></li></hediffsToApply>
+                <hediffOnConsumption>
+                    <validThings>
+                        <li>HemogenPack</li>
+                    </validThings>
+                    <hediff>SHG_GainRandomHemomancy</hediff>
+                </hediffOnConsumption>
 			</li>
 		</modExtensions>
         <symbolPack>
@@ -93,6 +103,74 @@
                 <totalBleedFactor>0.25</totalBleedFactor>
             </li>
         </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_GainRandomHemomancy</defName>
+        <label>picking hemomancy gene</label>
+        <description>This pawn will generate new genes once you STOP LOOKING AT DEVMODE STUFF AND UNPAUSE YOU CHEATER. Unless you're a fellow modder, in which case welcome! You won't get much use from this tooltip, but the SHG_ArchetypesMain.xml file contains the randomization data for this hediff.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <stages>
+			<li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+                <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
+                <removeGenesFromOtherLists>False</removeGenesFromOtherLists>
+                <showMessage>False</showMessage>
+                <inheritable>True</inheritable>
+                <geneSets>
+                    <!--Initiate-->
+                    <li><geneSet><li>SHG_Hemomancer_Initiate</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Praise</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_ConvertBlood</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Bloodlust</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Hemoclotting</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Priest</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Worship</li></geneSet></li>
+                    <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core"><geneSet><li>SHG_Hemomancer_TheGiftOfBlood</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_BloodCloud</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_ReplenishBlood</li></geneSet></li>
+
+                    <!--Shifter-->
+                    <li><geneSet><li>SHG_Hemomancer_Shifter</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Turtle</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Rabbit</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Dog</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Cat</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Morph</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Snake</li></geneSet></li>
+                    <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core"><geneSet><li>SHG_Hemomancer_Starfish</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Bear</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Chameleon</li></geneSet></li>
+
+                    <!--Thief-->
+                    <li><geneSet><li>SHG_Hemomancer_Thief</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Drain</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_StealPerceptiveness</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_StealDefense</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_StealStrength</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Reaper</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Reap</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Sow</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_MarkForDeath</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_BloodBoil</li></geneSet></li>
+
+                    <!--Warrior-->
+                    <li><geneSet><li>SHG_Hemomancer_Warrior</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_BloodClaws</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_BloodArmor</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_BloodInfusement</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_BloodSpear</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Champion</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_HemogenBarrier</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_EverlastingWar</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_BloodAndDarkness</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_TrueRegeneration</li></geneSet></li>
+                </geneSets>
+            </li>
+        </comps>
     </HediffDef>
 
     <GeneDef ParentName="SHG_ArchetypeBase">

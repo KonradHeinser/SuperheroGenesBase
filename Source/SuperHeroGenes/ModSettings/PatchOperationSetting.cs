@@ -78,6 +78,10 @@ namespace SuperHeroGenesBase
             {
                 if (SuperheroGenes_Settings.superDrugNoReward && active != null) return active.Apply(xml);
             }
+            else if (setting == "antiSupeDisease")
+            {
+                if (SuperheroGenes_Settings.antiSupeDisease && active != null) return active.Apply(xml);
+            }
             else if (setting == "baseAbilityCooldown")
             {
                 int cooldownSetting = SuperheroGenes_Settings.baseAbilityCooldown;
@@ -91,6 +95,10 @@ namespace SuperHeroGenesBase
             else if (setting == "noPsionicNeurotrainers")
             {
                 if (SuperheroGenes_Settings.noPsionicNeurotrainers && active != null) return active.Apply(xml);
+            }
+            else if (setting == "disableEvolvingHemomancers")
+            {
+                if (SuperheroGenes_Settings.disableEvolvingHemomancers && active != null) return active.Apply(xml);
             }
 
             // AI stuff

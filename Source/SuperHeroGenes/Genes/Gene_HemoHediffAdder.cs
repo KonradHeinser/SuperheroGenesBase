@@ -1,13 +1,20 @@
 ﻿using Verse;
 using RimWorld;
 using System.Collections.Generic;
-using System;
 
 namespace SuperHeroGenesBase
 {
     public class Gene_HemoHediffAdder : Gene_HemogenDrain
     {
         public Dictionary<BodyPartDef, int> foundParts = new Dictionary<BodyPartDef, int>();
+
+        public override void Notify_IngestedThing(Thing thing, int numTaken)
+        {
+            base.Notify_IngestedThing(thing, numTaken);
+            SHGExtension extension = def.GetModExtension<SHGExtension>();
+            if (extension?.hediffOnConsumption != null && extension.hediffOnConsumption.validThings.Contains(thing.def))
+                SHGUtilities.AddHediffsToParts(pawn, null, extension.hediffOnConsumption);
+        }
 
         public override void PostAdd()
         {
