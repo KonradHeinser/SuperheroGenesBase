@@ -34,4 +34,17 @@
         </active>
     </Operation>
 
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>disableEvolvingHemomancers</setting>
+        <active Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName="SHG_Archetypes_Hemomancer"]/customEffectDescriptions</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName="SHG_Archetypes_Hemomancer"]/modExtensions/li/hediffOnConsumption</xpath>
+                </li>
+            </operations>
+        </active>
+    </Operation>
 </Patch>
