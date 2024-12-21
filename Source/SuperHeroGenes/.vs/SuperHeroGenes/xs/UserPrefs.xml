@@ -1,8 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Genes/HediffsToParts.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ModSettings/SuperheroGenes_Settings.cs">
     <Files>
-      <File FileName="ModSettings/PatchOperationSetting.cs" Line="99" Column="13" />
-      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="207" Column="99" />
+      <File FileName="ModSettings/PatchOperationSetting.cs" Line="101" Column="71" />
+      <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="166" Column="87" />
       <File FileName="Genes/Gene_HemoHediffAdder.cs" Line="20" Column="10" />
       <File FileName="Genes/HediffsToParts.cs" Line="12" Column="1" />
       <File FileName="SHGExtension.cs" Line="21" Column="51" />
@@ -12,10 +12,10 @@
         <State name="__root__">
           <Node name="SuperHeroGenes" expanded="True">
             <Node name="SuperHeroGenes" expanded="True">
-              <Node name="Genes" expanded="True">
-                <Node name="HediffsToParts.cs" selected="True" />
+              <Node name="Genes" expanded="True" />
+              <Node name="ModSettings" expanded="True">
+                <Node name="SuperheroGenes_Settings.cs" selected="True" />
               </Node>
-              <Node name="ModSettings" expanded="True" />
             </Node>
           </Node>
         </State>
