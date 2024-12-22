@@ -11,6 +11,7 @@ namespace SuperHeroGenesBase
 
         public override void CompPostTick(ref float severityAdjustment)
         {
+            if (!Pawn.Spawned) return;
             if (Props.onlyDifferentFaction && Props.onlySameFaction)
             {
                 Log.Error(parent.def + ": has both onlySameFaction and onlyDifferentFaction, which makes no sense for obvious reasons");

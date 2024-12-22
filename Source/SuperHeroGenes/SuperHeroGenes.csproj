@@ -258,6 +258,7 @@
     <Compile Include="SuperAI\JobGiver_AICastAbilityOnOwnLocation.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalOver25YearsOld.cs" />
     <Compile Include="IncidentWorker_DiseaseGene.cs" />
+    <Compile Include="Quest\QuestNode_LogMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abilities\" />

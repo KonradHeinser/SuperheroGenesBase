@@ -1,12 +1,28 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="ModSettings/PatchOperationSetting.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Quest/QuestNode_LogMessage.cs">
     <Files>
       <File FileName="ModSettings/PatchOperationSetting.cs" Line="101" Column="71" />
       <File FileName="ModSettings/SuperheroGenes_Settings.cs" Line="166" Column="87" />
       <File FileName="Genes/Gene_HemoHediffAdder.cs" Line="20" Column="10" />
       <File FileName="Genes/HediffsToParts.cs" Line="12" Column="1" />
       <File FileName="SHGExtension.cs" Line="21" Column="51" />
+      <File FileName="Hediffs/Comps/HediffComp_SeverityByNearbyPawns.cs" Line="33" Column="14" />
+      <File FileName="Quest/QuestNode_NotAllowedIfOthersPassed.cs" Line="9" Column="53" />
+      <File FileName="Quest/QuestNode_LogMessage.cs" Line="22" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SuperHeroGenes" expanded="True">
+            <Node name="SuperHeroGenes" expanded="True">
+              <Node name="Quest" expanded="True">
+                <Node name="QuestNode_LogMessage.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
