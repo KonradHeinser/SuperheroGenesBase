@@ -41,10 +41,6 @@ namespace SuperHeroGenesBase
                         {
                             bloodType = Props.filthReplacement;
                         }
-                        else if (ModsConfig.IsActive("OskarPotocki.VanillaFactionsExpanded.Core"))
-                        {
-                            VFECompatabilityUtilities.BloodType(victim);
-                        }
 
                         FilthMaker.TryMakeFilth(c, victim.MapHeld, bloodType, victim.LabelShort);
                     }

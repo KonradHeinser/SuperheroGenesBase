@@ -11,7 +11,7 @@ namespace SuperHeroGenesBase
         private int minCount = 1;
         protected override bool Satisfied(Pawn pawn)
         {
-            if (!pawn.Spawned) return false;
+            if (!pawn.Spawned || pawn.Faction == null) return false;
             Map map = pawn.Map;
             if (!GenHostility.AnyHostileActiveThreatTo(map, pawn.Faction, false, false)) return false;
             List<Pawn> list = pawn.Map.mapPawns.AllPawns;

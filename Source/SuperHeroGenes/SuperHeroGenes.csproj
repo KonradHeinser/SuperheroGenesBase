@@ -27,37 +27,29 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\RimWorldLinux_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\RimWorldLinux_Data\Managed\UnityEngine.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
+    <Reference Include="System" />
     <Reference Include="0Harmony">
       <HintPath>..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\RimWorldLinux_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Xml">
       <HintPath>..\..\..\..\RimWorldLinux_Data\Managed\System.Xml.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\..\..\..\RimWorldLinux_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="VFECore">
-      <HintPath>..\..\..\..\..\..\workshop\content\294100\2023507013\1.4\Assemblies\VFECore.dll</HintPath>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>..\..\..\..\RimWorldLinux_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -135,7 +127,6 @@
     <Compile Include="Abilities\Verb_CastAbilityLaserEyes.cs" />
     <Compile Include="AbilityAndGeneLink.cs" />
     <Compile Include="Abilities\ThingPatternPart.cs" />
-    <Compile Include="VFECompatabilityUtilities.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_CreateOtherHediffs.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_ExplodeOnDeath.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_FactionBond.cs" />
@@ -260,20 +251,6 @@
     <Compile Include="IncidentWorker_DiseaseGene.cs" />
     <Compile Include="Quest\QuestNode_LogMessage.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Abilities\" />
-    <Folder Include="Hediffs\" />
-    <Folder Include="Genes\" />
-    <Folder Include="Thoughts\" />
-    <Folder Include="DynamicResourceGenes\" />
-    <Folder Include="ModSettings\" />
-    <Folder Include="SuperAI\" />
-    <Folder Include="Hediffs\Comps\" />
-    <Folder Include="Hediffs\CompProperties\" />
-    <Folder Include="Abilities\CompProperties\" />
-    <Folder Include="Abilities\CompAbilityEffects\" />
-    <Folder Include="DynamicComplex\" />
-    <Folder Include="Quest\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
