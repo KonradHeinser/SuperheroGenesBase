@@ -48,7 +48,7 @@
         <description>Convert hemogen directly into raw energy.</description>
         <comps>
             <li Class="CompProperties_AbilityHemogenCost">
-                <hemogenCost>-0.1</hemogenCost>
+                <hemogenCost>0.1</hemogenCost>
             </li>
         </comps>
     </AbilityDef>
