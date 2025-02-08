@@ -69,7 +69,7 @@ namespace SuperHeroGenesBase
         public static bool automaticOffense;
         public static bool automaticOffenseDrafted;
         public static bool automaticFleeing;
-        public static bool automaticRadioPurge;
+        public static bool automaticRadioPurge = true;
 
         // Villains and Stereotypes stuff
         public static bool medievalVillains;
@@ -125,7 +125,7 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref automaticOffense, "automaticOffense");
             Scribe_Values.Look(ref automaticOffenseDrafted, "automaticOffenseDrafted");
             Scribe_Values.Look(ref automaticFleeing, "automaticFleeing");
-            Scribe_Values.Look(ref automaticRadioPurge, "automaticRadioPurge");
+            Scribe_Values.Look(ref automaticRadioPurge, "automaticRadioPurge", true);
 
             // Villains and Stereotypes stuff
             Scribe_Values.Look(ref medievalVillains, "medievalVillains");

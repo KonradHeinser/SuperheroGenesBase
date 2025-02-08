@@ -15,7 +15,7 @@ namespace SuperHeroGenesBase
             try
             {
                 Gene_Resource resourceGene = (Gene_Resource)pawn.genes.GetGene(gene);
-                if (useTargetValue) return resourceGene.Value >= resourceGene.targetValue;
+                if (useTargetValue) return resourceGene.Value >= resourceGene.targetValue + 0.1f;
                 return resourceGene.Value >= minLevel;
             }
             catch

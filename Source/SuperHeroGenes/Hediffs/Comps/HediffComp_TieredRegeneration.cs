@@ -196,6 +196,8 @@ namespace SuperHeroGenesBase
 
                     tempMinSeverity = regenSet.minSeverity;
                     tempMaxSeverity = regenSet.maxSeverity;
+
+                    healInProgress = healAllowed || regrowthAllowed;
                     break;
                 }
             }

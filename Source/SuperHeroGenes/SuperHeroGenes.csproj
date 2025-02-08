@@ -54,6 +54,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_InvisibleAtStage.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_InvisibleAtStage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SHGDefOf.cs" />
     <Compile Include="SHGExtension.cs" />
