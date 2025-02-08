@@ -132,7 +132,7 @@
         <iconPath>Radiomancer/Fusion/Gene_Radiomancer_SolarRecharging</iconPath>
         <geneClass>SuperHeroGenesBase.ResourceDrainGene</geneClass>
         <displayOrderInCategory>5</displayOrderInCategory>
-        <resourceLossPerDay>-1</resourceLossPerDay>
+        <resourceLossPerDay>-1.5</resourceLossPerDay>
         <customEffectDescriptions>
             <li>Removes the gather energy ability.</li>
             <li>Radiation recharge only active while standing in sunlight, or with the aid of artificial sources of 60%+ light.</li>

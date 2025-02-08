@@ -202,12 +202,6 @@
                                                         <li>SHG_Hemomancer_Reap</li>
                                                     </abilities>
                                                 </li>
-                                                <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget"> <!--Single Target-->
-                                                    <hashInterval>1</hashInterval> <!--Replaces normal attacks. These cost hemogen-->
-                                                    <abilities>
-                                                        <li>SHG_Hemomancer_BloodSpear</li>
-                                                    </abilities>
-                                                </li>
                                             </subNodes>
                                         </thinkRoot>
                                     </ThinkTreeDef>

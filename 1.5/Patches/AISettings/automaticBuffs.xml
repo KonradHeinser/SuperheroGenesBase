@@ -17,9 +17,17 @@
                                     <li Class="ThinkNode_ConditionalHasHediff">
                                         <hediff>SHG_Radiomancer_ExplosiveBlows</hediff>
                                         <invert>True</invert>
+                                        <severityRange>5</severityRange>
                                         <subNodes>
-                                            <li Class="JobGiver_AICastAbilityOnSelf"> 
-                                                <ability>SHG_Radiomancer_ExplosiveBlows</ability>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                                <gene>SHG_Archetypes_Radiomancer</gene>
+                                                <useTargetValue>False</useTargetValue>
+                                                <minLevel>1</minLevel>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                        <ability>SHG_Radiomancer_ExplosiveBlows</ability>
+                                                    </li>
+                                                </subNodes>
                                             </li>
                                         </subNodes>
                                     </li>
@@ -111,9 +119,17 @@
                                     <li Class="ThinkNode_ConditionalHasHediff">
                                         <hediff>SHG_Radiomancer_ExplosiveBlows</hediff>
                                         <invert>True</invert>
+                                        <severityRange>5</severityRange>
                                         <subNodes>
-                                            <li Class="JobGiver_AICastAbilityOnSelf"> 
-                                                <ability>SHG_Radiomancer_ExplosiveBlows</ability>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                                <gene>SHG_Archetypes_Radiomancer</gene>
+                                                <useTargetValue>False</useTargetValue>
+                                                <minLevel>1</minLevel>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                        <ability>SHG_Radiomancer_ExplosiveBlows</ability>
+                                                    </li>
+                                                </subNodes>
                                             </li>
                                         </subNodes>
                                     </li>
@@ -128,8 +144,15 @@
                                         <severityRange>100</severityRange>
                                         <invert>True</invert>
                                         <subNodes>
-                                            <li Class="JobGiver_AICastAbilityOnSelf"> 
-                                                <ability>SHG_Radiomancer_LimitlessPotential</ability>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                                <gene>SHG_Archetypes_Radiomancer</gene>
+                                                <useTargetValue>False</useTargetValue>
+                                                <minLevel>0.1</minLevel>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                        <ability>SHG_Radiomancer_LimitlessPotential</ability>
+                                                    </li>
+                                                </subNodes>
                                             </li>
                                         </subNodes>
                                     </li>
@@ -144,8 +167,15 @@
                                         <severityRange>100</severityRange>
                                         <invert>True</invert>
                                         <subNodes>
-                                            <li Class="JobGiver_AICastAbilityOnSelf"> 
-                                                <ability>SHG_Radiomancer_EverEvolving</ability>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                                <gene>SHG_Archetypes_Radiomancer</gene>
+                                                <useTargetValue>False</useTargetValue>
+                                                <minLevel>1</minLevel>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                        <ability>SHG_Radiomancer_EverEvolving</ability>
+                                                    </li>
+                                                </subNodes>
                                             </li>
                                         </subNodes>
                                     </li>
