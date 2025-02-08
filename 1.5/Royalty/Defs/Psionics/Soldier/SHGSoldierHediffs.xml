@@ -57,37 +57,6 @@
 		</comps>
 	</HediffDef>
 
-    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
-        <defName>SHG_Psionist_PsionicFlight</defName>
-		<label>old psionic flight</label>
-		<description>This super is always floating just a little bit off the ground, and their ability to move omnidirectionally makes it easier for them to move around quickly. The more psychic sensitivity the soldier has, the more they can propel themselves.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
-        <stages>
-            <li>
-                <statFactors>
-                    <MoveSpeed>1.25</MoveSpeed>
-                </statFactors>
-                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
-            </li>
-        </stages>
-		<comps>
-            <li Class="AnimalBehaviours.HediffCompProperties_Floating" />
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-240</severityPerDay>
-            </li>
-            <li Class="SuperHeroGenesBase.HediffCompProperties_CreateOtherHediffs">
-                <hediffSets>
-                    <li>
-                        <hediffDef>SHG_Psionist_New_PsionicFlight</hediffDef>
-                    </li>
-                </hediffSets>
-            </li>
-		</comps>
-	</HediffDef>
-
     <HediffDef>
         <defName>SHG_Psionist_PsionicInfusement</defName>
         <label>psionic infusement</label>

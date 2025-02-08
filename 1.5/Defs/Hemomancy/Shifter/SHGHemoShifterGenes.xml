@@ -101,7 +101,7 @@
         </descriptionHyperlinks>
     </GeneDef>
 
-    <GeneDef ParentName="SuperPowersHemoShifterBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <GeneDef ParentName="SuperPowersHemoShifterBase">
         <defName>SHG_Hemomancer_Starfish</defName>
         <label>hemoshift(starfish)</label>
         <description>Carriers of this gene can alter their body to gain an ability that causes the hemomorph to reproduce asexually after one day.\n\nUsing another hemoshift while the splitting is in progress will not stop the splitting.</description>

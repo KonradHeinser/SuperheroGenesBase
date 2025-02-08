@@ -39,7 +39,7 @@
     <AbilityDef ParentName="SHGHemomancyBase">
         <defName>SHG_Hemomancer_Hemoclotting</defName>
         <label>hemoclotting</label>
-        <description>Seal a pawn's wounds and stop them from bleeding from any other wounds they may suffer from over the next day.\n\nUsing this on a pawn that doesn't have tendable wounds will result in the hemogen being wasted.</description>
+        <description>Seal a pawn's wounds and stop them from bleeding from any other wounds they may suffer from over the next day.\n\nTrying to use this on a pawn that doesn't have tendable wounds will result in the hemogen being wasted.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_Hemoclotting</iconPath>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
@@ -73,7 +73,7 @@
     <AbilityDef ParentName="SHGHemomancyBase">
         <defName>SHG_Hemomancer_Bloodlust</defName>
         <label>bloodlust</label>
-        <description>Drive target pawn into a murderous rage, while also giving them immunity to pain along with increased melee damage and melee accuracy.</description>
+        <description>Drive target pawn into a murderous rage, while also giving them immunity to pain, increased melee damage, and melee accuracy.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_Bloodlust</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <statBases>
@@ -106,7 +106,7 @@
     <AbilityDef ParentName="SHGHemomancyBase">
         <defName>SHG_Hemomancer_BloodCloud</defName>
         <label>blood cloud</label>
-        <description>Release a burst of hemogen that gives the hemopriest and all allies around them the benefits of bloodlust without removing their ability to think rationally. This does not stack with bloodlust, and will not stop a pawn under the effects of bloodlust from berserking.</description>
+        <description>Release a burst of hemogen that gives the hemopriest and all allies around them the benefits of bloodlust without removing their ability to think rationally.\n\nThis does not stack with bloodlust, and will not stop a pawn under the effects of bloodlust from berserking.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_BloodCloud</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>

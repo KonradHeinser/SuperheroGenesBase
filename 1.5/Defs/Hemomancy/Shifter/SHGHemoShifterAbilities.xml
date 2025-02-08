@@ -125,7 +125,7 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHG_HemoShifter_ShiftAbilityBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <AbilityDef ParentName="SHG_HemoShifter_ShiftAbilityBase">
         <defName>SHG_Hemomancer_Starfish</defName>
         <label>hemoshift(starfish)</label>
         <description>Gain an ability that causes the hemomorph to reproduce asexually after one day.\n\nUsing another hemoshift while the splitting is in progress will not stop the splitting.</description>
@@ -197,7 +197,7 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHGHemomancyBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <AbilityDef ParentName="SHGHemomancyBase">
         <defName>SHG_Hemomancer_ShiftStarfishStartSplitting</defName>
         <label>start splitting</label>
         <description>Condense a large amount of hemogen into a clump that will begin developing into a human. This process will take 1 day, and will only be interrupted by death. The only penalty for changing forms is needing to spend hemogen to shift back into the starfish form to use this again.\n\nThe child created through this ability will not inherit xenogenes.</description>
@@ -222,7 +222,7 @@
         <comps>
             <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
-                <hediffDef>SHG_Hemomancer_StarfishSplitting</hediffDef>
+                <hediffDef>SHG_Hemomancer_StarfishSplit</hediffDef>
                 <onlyBrain>False</onlyBrain>
                 <severity>1</severity>
                 <onlyApplyToSelf>True</onlyApplyToSelf>

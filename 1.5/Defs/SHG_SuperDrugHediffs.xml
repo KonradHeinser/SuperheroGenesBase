@@ -451,7 +451,7 @@
                             <li>SHG_Hemomancer_Initiate</li>
                             <li>SHG_Hemomancer_Priest</li>
                             <li>SHG_Hemomancer_Praise</li>
-                            <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Hemomancer_TheGiftOfBlood</li>
+                            <li>SHG_Hemomancer_TheGiftOfBlood</li>
                             <li>SHG_Hemomancer_ReplenishBlood</li>
                             <li>SHG_Hemomancer_BloodCloud</li>
                             <li>SHG_Hemomancer_Hemoclotting</li>
@@ -464,7 +464,7 @@
                             <li>SHG_Hemomancer_Chameleon</li>
                             <li>SHG_Hemomancer_Bear</li>
                             <li>SHG_Hemomancer_Snake</li>
-                            <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Hemomancer_Starfish</li>
+                            <li>SHG_Hemomancer_Starfish</li>
                             <li>SHG_Hemomancer_Turtle</li>
                         </geneSet>
                     </li>

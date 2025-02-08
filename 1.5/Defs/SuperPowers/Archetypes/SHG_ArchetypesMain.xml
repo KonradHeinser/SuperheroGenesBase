@@ -129,7 +129,7 @@
                     <li><geneSet><li>SHG_Hemomancer_Hemoclotting</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_Priest</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_Worship</li></geneSet></li>
-                    <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core"><geneSet><li>SHG_Hemomancer_TheGiftOfBlood</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_TheGiftOfBlood</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_BloodCloud</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_ReplenishBlood</li></geneSet></li>
 
@@ -141,7 +141,7 @@
                     <li><geneSet><li>SHG_Hemomancer_Cat</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_Morph</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_Snake</li></geneSet></li>
-                    <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core"><geneSet><li>SHG_Hemomancer_Starfish</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Starfish</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_Bear</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_Chameleon</li></geneSet></li>
 

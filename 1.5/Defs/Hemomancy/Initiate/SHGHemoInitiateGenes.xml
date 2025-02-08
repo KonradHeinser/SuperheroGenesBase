@@ -17,7 +17,7 @@
     <GeneDef ParentName="SuperPowersHemoInitiateBase">
         <defName>SHG_Hemomancer_Praise</defName>
         <label>praise</label>
-        <description>This hemoinitiate regenerates hemomgen faster than normal hemomancers. If Ideology is enabled, ideology spread frequency is increased based on Hemomancy Proficiency.</description>
+        <description>This hemoinitiate regenerates hemomgen faster than normal hemomancers.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_Praise</iconPath>
         <prerequisite>SHG_Hemomancer_Initiate</prerequisite>
         <geneClass>Gene_HemogenDrain</geneClass>
@@ -52,10 +52,13 @@
     <GeneDef ParentName="SuperPowersHemoInitiateBase">
         <defName>SHG_Hemomancer_Bloodlust</defName>
         <label>bloodlust</label>
-        <description>Carriers of this gene can drive a pawn into a murderous rage for two hours. While in the murderous rage, the pawn will be immune to pain, and have increased melee damage and accuracy. The range of this ability is influenced by Hemomancy Proficiency.</description>
+        <description>Hemoinitiates with this gene can drive a pawn into a murderous rage for two hours. While in the murderous rage, the pawn will be immune to pain, and have increased melee damage and accuracy.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_Bloodlust</iconPath>
         <displayOrderInCategory>3</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Initiate</prerequisite>
+        <customEffectDescriptions>
+            <li>Range affected by proficiency.</li>
+        </customEffectDescriptions>
         <abilities>
             <li>SHG_Hemomancer_Bloodlust</li>
         </abilities>
@@ -67,10 +70,13 @@
     <GeneDef ParentName="SuperPowersHemoInitiateBase">
         <defName>SHG_Hemomancer_Hemoclotting</defName>
         <label>hemoclotting</label>
-        <description>Carriers of this gene can seal a pawn's wounds, and also stop them from bleeding from any other wounds they may receive over the next day.\n\nThe range of this ability is influenced by Hemomancy Proficiency.</description>
+        <description>Carriers of this gene can seal a pawn's wounds, and also stop them from bleeding from any other wounds they may receive over the next day.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_Hemoclotting</iconPath>
         <displayOrderInCategory>4</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Initiate</prerequisite>
+        <customEffectDescriptions>
+            <li>Range affected by proficiency.</li>
+        </customEffectDescriptions>
         <abilities>
             <li>SHG_Hemomancer_Hemoclotting</li>
         </abilities>
@@ -82,7 +88,7 @@
     <GeneDef ParentName="SuperPowersHemoInitiateBase">
         <defName>SHG_Hemomancer_Priest</defName>
         <label>hemopriest</label>
-        <description>Hemopriests release a constant "holy" aura that makes everyone around them willing to listen to them about the gifts blood can bring. Many of them also have the ability to release a rejuvenating mist and create small pills that greatly enhance combative abilities.</description>
+        <description>Hemopriests release a constant "holy" aura that makes everyone around them willing to listen to them about the gifts blood can bring.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_Priest</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <displayOrderInCategory>10</displayOrderInCategory>
@@ -100,7 +106,7 @@
     <GeneDef ParentName="SuperPowersHemoInitiateBase">
         <defName>SHG_Hemomancer_Worship</defName>
         <label>worship</label>
-        <description>This hemopriest regenerates hemomgen faster than normal hemomancers. If Ideology is enabled, ideology spread frequency is increased based on Hemomancy Proficiency. If the carrier also has praise, the regen is additive, and the ideology spread frequency is multiplicative.</description>
+        <description>This hemopriest regenerates hemomgen faster than normal hemomancers.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_Worship</iconPath>
         <prerequisite>SHG_Hemomancer_Priest</prerequisite>
         <geneClass>Gene_HemogenDrain</geneClass>
@@ -108,6 +114,7 @@
         <displayOrderInCategory>11</displayOrderInCategory>
         <resourceLossPerDay>-0.5</resourceLossPerDay>
         <customEffectDescriptions>
+            <li>If the homepriest also has Praise, the regen is additive and the spread frequency bonus is multiplicative.</li>
             <li MayRequire="Ludeon.Rimworld.Ideology">Increases ideology spread frequency based on Hemomancy Proficiency.</li>
         </customEffectDescriptions>
         <modExtensions>
@@ -117,19 +124,22 @@
 		</modExtensions>
     </GeneDef>
 
-    <GeneDef ParentName="SuperPowersHemoInitiateBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <GeneDef ParentName="SuperPowersHemoInitiateBase">
         <defName>SHG_Hemomancer_TheGiftOfBlood</defName>
         <label>the gift of blood</label>
-        <description>Carriers of this gene constantly condense large amounts of hemogen into pills that prevent a pawn from getting infected wounds, and enhances their ability to heal wounds and gain immunity on existing infections. If the consumer's ideology makes them hate bloodfeeders, this pill will also suppress that feeling for the duration. This will create 1 pill every day, and each pill has a duration of 10 days.\n\nThis pill will NOT give hemogen to hemogenic pawns.\n\nThis is not impacted by Hemomancy Proficiency.</description>
+        <description>Carriers of this gene constantly condense large amounts of hemogen into a single pill every day that grants the consumer the effects listed below for 10 days.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_TheGiftOfBlood</iconPath>
         <displayOrderInCategory>12</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Priest</prerequisite>
         <geneClass>SuperHeroGenesBase.Gene_HemoHediffAdder</geneClass>
         <resourceLabel>hemogen</resourceLabel>
         <resourceLossPerDay>1</resourceLossPerDay>
+        <customEffectDescriptions>
+            <li>Pill effects:\n    - Enhances healing and immunity gain\n    - Supresses ideological hatred of bloodfeeders\n    - Does NOT give hemogen to the consumer</li>
+        </customEffectDescriptions>
         <modExtensions>
 			<li Class="SuperHeroGenesBase.SHGExtension">
-				<hediffsToApply><li><hediff>SHG_Hemomancer_TheGiftOfBlood</hediff></li></hediffsToApply>
+				<hediffsToApply><li><hediff>SHG_Hemomancer_GiftOfBlood</hediff></li></hediffsToApply>
 			</li>
 		</modExtensions>
     </GeneDef>

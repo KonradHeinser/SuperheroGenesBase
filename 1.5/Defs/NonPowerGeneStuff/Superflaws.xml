@@ -230,7 +230,7 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_Flaw_SuperRecluse</defName>
         <label>super recluse</label>
-        <description>Supers with tis gene hate being around groups of people to an unbelievable extent. There's been plenty of theories about why they feel this way, from overactive senses to innate aggressive competitiveness. Nobody knows for sure why they are this way.</description>
+        <description>Supers with this gene hate being around groups of people to an unbelievable extent. There's been plenty of theories about why they feel this way, from overactive senses to innate aggressive competitiveness. Nobody knows for sure why they are this way.</description>
         <iconPath>Flaws/Gene_SuperRecluse</iconPath>
         <displayOrderInCategory>10</displayOrderInCategory>
         <biostatMet>3</biostatMet>
@@ -365,7 +365,7 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_NoNaturalHealing</defName>
         <label>no natural healing</label>
-        <description>Supers with this gene are completely incapable of healing naturally. Super genes that provide natual regeneration are usually not available. Abilities that provide direct healing or regeneration, even when cast by the carrier, will still function, and non-super genes that provide advanced regeneration will also still take effect</description>
+        <description>Supers with this gene are completely incapable of healing naturally. Super genes that provide natual regeneration are usually not available. Abilities that provide direct healing or regeneration, even when cast by the carrier, will still function, and non-super genes that provide advanced regeneration will also still take effect.</description>
         <iconPath>Flaws/Gene_NoNaturalHealing</iconPath>
         <statFactors>
             <InjuryHealingFactor>0</InjuryHealingFactor>
