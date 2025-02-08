@@ -125,7 +125,7 @@
     <HediffDef>
 		<defName>SHG_Hemomancer_StarfishSplit</defName>
 		<label>splitting</label>
-		<description>A clump of hemogen inside this pawn is gradually morphing into a miniature version of this pawn. If the pawn shifts into a different form, this clump will still grow without issue. If they die, it will become a useless mass that the body will quickly destroy should the pawn be revived.</description>
+		<description>A clump of hemogen inside this pawn is gradually morphing into a child of this pawn. Shifting forms does not interrupt this. If they die, it will become a useless mass that the body will quickly destroy should the pawn be revived.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>

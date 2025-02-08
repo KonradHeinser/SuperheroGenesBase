@@ -35,17 +35,17 @@
         <geneClass>SuperHeroGenesBase.ResourceDrainGene</geneClass>
         <resourceLossPerDay>1</resourceLossPerDay>
         <customEffectDescriptions>
-            <li>Reaching 120% charge will start causing radiation loss as the body starts to expel radiation before it becomes harmful to the radiomancer.</li>
+            <li>Reaching 120% charge will start causing radiation loss as the body starts to expel radiation before it becomes harmful to the radiomancer. This can be disabled in the settings, or automatically managed with one of the ai settings.</li>
             <li>While dispelling energy this way, nearby non-radiomancer pawns have a risk of developing carcinoma.</li>
-            <li>Using Solar Recharging makes this a lot easier to automatically manage due to the passive regen.</li>
-            <li>Individuals with the following genes are immune to the expelled radiation: Radiomancer, Non-senescent, Anti-Hero, Life Bringer, Summon Uranium, Ferromancer, Hemopriest, Hemomorph, Reaper, Hemochampion, Super Healing, HALK, Cosmic Psionist, Psionic Guardian, or Psionic Commando</li>
+            <li>Using Solar Recharging makes this a lot easier to automatically manage due to the passive regen as long as you also have the ai setting active.</li>
+            <li>Individuals with the following genes are immune to the expelled radiation: Radiomancer, Non-senescent, Anti-Hero, Life Bringer, Summon Uranium, Ferromancer, Hemopriest, Hemomorph, Reaper, Hemochampion, Super Healing, HALK, Cosmic Psionist, Psionic Guardian, and Psionic Commando</li>
         </customEffectDescriptions>
     </GeneDef>
 
     <GeneDef ParentName="SHG_Radiomancer_FusionEnhancedBase">
         <defName>SHG_Radiomancer_InfusedMuscles</defName>
         <label>infused muscles</label>
-        <description>Radiomancers with this gene gain a buff when they remain at maximum radiation for an extended period of time. This buff enhances their physical strength, allowing them to deal more in melee combat and allowing them to carry more with them.</description>
+        <description>Radiomancers with this gene have increased strength when they remain at maximum radiation for an extended period of time.</description>
         <iconPath>Radiomancer/Fusion/Gene_Radiomancer_InfusedMuscles</iconPath>
         <displayOrderInCategory>1</displayOrderInCategory>
         <modExtensions>
@@ -68,7 +68,7 @@
     <GeneDef ParentName="SHG_Radiomancer_FusionEnhancedBase">
         <defName>SHG_Radiomancer_EnergizedNeurons</defName>
         <label>energized neurons</label>
-        <description>Radiomancers with this gene gain a buff when they remain at maximum radiation for an extended period of time. This buff enhances their mental capabilities, allowing them to learn new things faster.</description>
+        <description>Radiomancers with this gene have increased intelligence when they remain at maximum radiation for an extended period of time.</description>
         <iconPath>Radiomancer/Fusion/Gene_Radiomancer_EnergizedNeurons</iconPath>
         <displayOrderInCategory>2</displayOrderInCategory>
         <modExtensions>
@@ -91,7 +91,7 @@
     <GeneDef ParentName="SHG_Radiomancer_FusionEnhancedBase">
         <defName>SHG_Radiomancer_EnergyArmor</defName>
         <label>energy armor</label>
-        <description>Radiomancers with this gene gain a buff when they remain at maximum radiation for an extended period of time. This buff comes in the form of an armor coating their body that both protects the radiomancer and causes nearby hostile pawns to take damage whenever the radiomancer is hit. This will not affect pawns Rimworld doesn't recognize as hostile to the radiomancer.</description>
+        <description>Radiomancers with this gene gain an innate armor that deals retaliation damage when they remain at maximum radiation for an extended period of time.</description>
         <iconPath>Radiomancer/Fusion/Gene_Radiomancer_EnergyArmor</iconPath>
         <displayOrderInCategory>3</displayOrderInCategory>
         <modExtensions>
@@ -114,7 +114,7 @@
     <GeneDef ParentName="SuperPowersRadiomancyFusionBase">
         <defName>SHG_Radiomancer_CondenseRadiation</defName>
         <label>condense radiation</label>
-        <description>Radiomancers with this gene can condense massive amounts of radioactive energy within their body and output it as a radiation orb. This orb can be absorbed by a radiomancer at a later point to regain most of the energy expended in its creation.\n\nNote that while the orb does not cause side effects to other pawns near it, it can create extremely dangerous explosions if damaged.</description>
+        <description>Radiomancers with this gene can condense massive amounts of radioactive energy within their body and output it as a radiation orb.</description>
         <iconPath>Radiomancer/RadiationOrb/RadiationOrb_A</iconPath>
         <displayOrderInCategory>4</displayOrderInCategory>
         <customEffectDescriptions>
@@ -128,7 +128,7 @@
     <GeneDef ParentName="SuperPowersRadiomancyFusionBase">
         <defName>SHG_Radiomancer_SolarRecharging</defName>
         <label>solar recharging</label>
-        <description>Radiomancers with this gene gain large amounts of energy by standing in sources of really bright light, like the sun or sun lamps.</description>
+        <description>Radiomancers with this gene gain large amounts of energy by standing in sources of bright light, like the sun or sun lamps.</description>
         <iconPath>Radiomancer/Fusion/Gene_Radiomancer_SolarRecharging</iconPath>
         <geneClass>SuperHeroGenesBase.ResourceDrainGene</geneClass>
         <displayOrderInCategory>5</displayOrderInCategory>
@@ -136,7 +136,6 @@
         <customEffectDescriptions>
             <li>Removes the gather energy ability.</li>
             <li>Radiation recharge only active while standing in sunlight, or with the aid of artificial sources of 60%+ light.</li>
-            <li>Light created from sun lamps, the star rift created by "open rift to star", the star created from "miniature sun", and any other source that creates over 60% light level activate this ability.</li>
         </customEffectDescriptions>
         <modExtensions>
             <li Class="SuperHeroGenesBase.DRGExtension">
@@ -149,7 +148,7 @@
     <GeneDef ParentName="SuperPowersRadiomancyFusionBase">
         <defName>SHG_Radiomancer_SolarRegeneration</defName>
         <label>solar regeneration</label>
-        <description>Radiomancers with this gene quickly heal while in sunlight, natural or artificial, and if they remain in sunlight for an entire, unbroken hour they can even regrow parts.</description>
+        <description>Radiomancers with this gene quickly heal while in bright light, and if they remain in sunlight for a full unbroken hour they slowly regrow parts.</description>
         <iconPath>Radiomancer/Fusion/Gene_Radiomancer_SolarRegeneration</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <displayOrderInCategory>6</displayOrderInCategory>
@@ -168,7 +167,7 @@
     <GeneDef ParentName="SuperPowersRadiomancyFusionBase">
         <defName>SHG_Radiomancer_UndyingSun</defName>
         <label>undying sun</label>
-        <description>Radiomancers with this gene are exceptionally difficult to kill while in sunlight, even if said sunlight is artificial. Their body uses sunlight to reinforce their skin, destroy anything internally that is actively causing them harm, and stops the pawn from suffering from bloodloss.</description>
+        <description>Radiomancers with this gene are exceptionally difficult to kill while in sunlight, even if said sunlight is artificial.</description>
         <iconPath>Radiomancer/Fusion/Gene_Radiomancer_UndyingSun</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <displayOrderInCategory>7</displayOrderInCategory>

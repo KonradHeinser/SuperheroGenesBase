@@ -92,7 +92,7 @@
     <GeneDef ParentName="SuperDurabilityBase">
         <defName>SuperDurability</defName>
         <label>super durability</label>
-        <description>One of the most simplistic abilities super heroes often have, and yet it's also one of the most terrifying. Supers with this gene are almost completely immune to damage. From clubs to flamethrowers to shotguns, only the luckiest will even pierce this hero's skin.</description>
+        <description>One of the most simplistic abilities supers often have, and yet it's also one of the most terrifying. Supers with this gene are almost completely immune to damage.</description>
         <displayOrderInCategory>7</displayOrderInCategory>
         <biostatMet>-3</biostatMet>
         <damageFactors>
@@ -112,7 +112,7 @@
     <GeneDef ParentName="SuperGeneBase">
         <defName>SuperGluttony</defName>
         <label>super gluttony</label>
-        <description>Heroes with this gene feel a constant hunger deep inside, and fulfilling that hunger allows them to store far more food than normal, which results in them being able to go longer without food.</description>
+        <description>Supers with this gene feel a constant hunger deep inside, and fulfilling that hunger allows their body to store far more food than normal.</description>
         <iconPath>Base/SuperGluttony</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>-3</displayOrderInCategory>
@@ -136,7 +136,7 @@
     <GeneDef ParentName="SuperHealingBase">
         <defName>SuperHealing</defName>
         <label>super healing</label>
-        <description>Instant death may stop this hero in their tracks, but anything less will heal quickly. This gene also provides immunity to many permanent effects and ailments that come with old age.</description>
+        <description>Instant death may stop this super in their tracks, but anything less will heal quickly.</description>
         <displayOrderInCategory>27</displayOrderInCategory> 
         <biostatMet>-5</biostatMet>
         <statFactors>
@@ -182,7 +182,7 @@
     <GeneDef ParentName="SuperIntelligenceBase">
         <defName>SuperIntelligence</defName>
         <label>super intelligence</label>
-        <description>Supers with this gene have extremely efficient brains that make a neurocalculator look like a glorified abacus. This efficiency also grants them a higher control of their body, thus increasing their ability to control their bodies and observe their environment.</description>
+        <description>Supers with this gene have extremely efficient brains that make a neurocalculator look like a glorified abacus.</description>
         <displayOrderInCategory>37</displayOrderInCategory>
         <biostatMet>-4</biostatMet>
         <statFactors>
@@ -207,7 +207,7 @@
     <GeneDef ParentName="SuperPerceptionBase">
         <defName>SuperPerception</defName>
         <label>super perception</label>
-        <description>Heroes with this gene have hyperactive senses that allows them to observe their environment far better than most should be able to.</description>
+        <description>Supers with this gene have hyperactive senses that allows them to observe their environment far better than most should be able to.</description>
         <displayOrderInCategory>47</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
         <statFactors>
@@ -253,7 +253,7 @@
     <GeneDef ParentName="SuperPrecisionBase">
         <defName>SuperPrecision</defName>
         <label>super precision</label>
-        <description>The accuracy and control of this super is unmatched by even the best snipers and warriors the empire has ever made. Every step, move, and even breath is completely controlled, allowing supers with this gene to dodge the undodgeable, and hit the unhittable.</description>
+        <description>The accuracy and control of this super is unmatched by even the best snipers and warriors normal factions train.</description>
         <displayOrderInCategory>67</displayOrderInCategory>
         <biostatMet>-4</biostatMet>
         <statFactors>
@@ -278,7 +278,7 @@
     <GeneDef ParentName="SuperSpeedBase">
         <defName>SuperSpeed</defName>
         <label>super speed</label>
-        <description>Supers with this gene can move so quickly that even horses cannot keep up. They move several times faster than normal pawns, and can often take down unarmored foes before they have a chance to react.</description>
+        <description>Supers with this gene can move so quickly that few beings can even keep track of them.</description>
         <displayOrderInCategory>77</displayOrderInCategory>
         <biostatMet>-5</biostatMet>
         <statFactors>
@@ -311,7 +311,7 @@
     <GeneDef ParentName="SuperStrengthBase">
         <defName>SuperStrength</defName>
         <label>super strength</label>
-        <description>One hit from this super can cause exceptional damage, and not only can they carry more than an elephant, they can carry multiple elephants at the same time.</description>
+        <description>One hit from this super can cause exceptional damage, and they could probably carry multiple elephants at the same time.</description>
         <displayOrderInCategory>87</displayOrderInCategory>
         <biostatMet>-6</biostatMet>
         <statFactors>

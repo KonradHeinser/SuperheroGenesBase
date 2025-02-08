@@ -48,7 +48,7 @@
     <HediffDef ParentName="SHG_Radiomancer_DecayLink">
         <defName>SHG_Radiomancer_DrainEnergy_Debuff</defName>
         <label>drain energy</label>
-        <description>This pawn is constantly having their energy drained by a radiomancer. If the radiomancer dies, this will end.</description>
+        <description>Having their energy drained by a radiomancer. If the radiomancer dies, this will end.</description>
         <stages>
             <li>
                 <hungerRateFactorOffset>2</hungerRateFactorOffset>
@@ -62,7 +62,7 @@
     <HediffDef ParentName="SHG_Radiomancer_DecayLink">
         <defName>SHG_Radiomancer_DrainEnergy</defName>
         <label>drain energy</label>
-        <description>This pawn is constantly draining energy from another pawn. If the other pawn dies, this regeneration ends.</description>
+        <description>Draining energy from another pawn. If the other pawn dies, this radiation regeneration ends.</description>
         <stages />
     </HediffDef>
 
@@ -85,7 +85,7 @@
     <HediffDef ParentName="SHG_Radiomancer_DecayLink">
         <defName>SHG_Radiomancer_WeakenSkin</defName>
         <label>weaken skin</label>
-        <description>This pawn is constantly converting some of the life energy of another pawn into radioactive energy. If the other pawn dies, this regeneration ends.</description>
+        <description>Converting life energy of another pawn into radioactive energy. If the other pawn dies, this radiation regeneration ends.</description>
         <stages />
     </HediffDef>
 
@@ -108,7 +108,7 @@
     <HediffDef ParentName="SHG_Radiomancer_DecayLink">
         <defName>SHG_Radiomancer_SapStrength</defName>
         <label>sap strength</label>
-        <description>This pawn is constantly converting some of the life energy of another pawn into radioactive energy. If the other pawn dies, this regeneration ends.</description>
+        <description>Converting some of the life energy of another pawn into radioactive energy. If the other pawn dies, this radiation regeneration ends.</description>
         <stages />
     </HediffDef>
 
@@ -130,7 +130,7 @@
     <HediffDef ParentName="SHG_Radiomancer_DecayLink">
         <defName>SHG_Radiomancer_DrainLife</defName>
         <label>drain life</label>
-        <description>This pawn is constantly converting some of the life energy of another pawn into radioactive energy. If the other pawn dies, this regeneration ends.</description>
+        <description>Converting some of the life energy of another pawn into radioactive energy. If the other pawn dies, this radiation regeneration ends.</description>
         <stages />
     </HediffDef>
 
@@ -153,7 +153,7 @@
     <HediffDef ParentName="SHG_Radiomancer_DecayLink">
         <defName>SHG_Radiomancer_SlowSynapses</defName>
         <label>slow synapses</label>
-        <description>This pawn is constantly draining energy from another pawn. If the other pawn dies, this regeneration ends.</description>
+        <description>Draining energy from another pawn. If the other pawn dies, this radiation regeneration ends.</description>
         <stages />
     </HediffDef>
 

@@ -128,7 +128,7 @@
     <AbilityDef ParentName="SHG_HemoShifter_ShiftAbilityBase">
         <defName>SHG_Hemomancer_Starfish</defName>
         <label>hemoshift(starfish)</label>
-        <description>Gain an ability that causes the hemomorph to reproduce asexually after one day.\n\nUsing another hemoshift while the splitting is in progress will not stop the splitting.</description>
+        <description>Gain an ability that causes the hemomorph to reproduce asexually after one day.</description>
         <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Starfish</iconPath>
         <comps>
             <li Class="CompProperties_AbilityGiveHediff">
@@ -200,7 +200,7 @@
     <AbilityDef ParentName="SHGHemomancyBase">
         <defName>SHG_Hemomancer_ShiftStarfishStartSplitting</defName>
         <label>start splitting</label>
-        <description>Condense a large amount of hemogen into a clump that will begin developing into a human. This process will take 1 day, and will only be interrupted by death. The only penalty for changing forms is needing to spend hemogen to shift back into the starfish form to use this again.\n\nThe child created through this ability will not inherit xenogenes.</description>
+        <description>Condense a large amount of hemogen into a clump that will begin developing into a human. This process will take 1 day, and will only be interrupted by death. The hemomorph can still freely change forms while forming.</description>
         <iconPath>Hemomancer/Shifter/Ability_Hemomancer_Splitting</iconPath>
         <cooldownTicksRange>60000</cooldownTicksRange>
         <aiCanUse>false</aiCanUse>
@@ -237,7 +237,7 @@
     <AbilityDef ParentName="SHGHemomancyBase">
         <defName>SHG_Hemomancer_ShiftBearHibernation</defName>
         <label>hibernation</label>
-        <description>Use some hemogen to enter a hibernating sleep for 1 day. The need for food is almost completely halted while hibernating.</description>
+        <description>Use some hemogen to enter a hibernating sleep for 1 day to mostly remove the need for food temporarily.</description>
         <iconPath>Hemomancer/Shifter/Ability_Hemomancer_Hibernation</iconPath>
         <cooldownTicksRange>60000</cooldownTicksRange>
         <aiCanUse>false</aiCanUse>

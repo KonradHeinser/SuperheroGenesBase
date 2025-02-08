@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <GeneDef ParentName="SuperGeneBase">
+    <GeneDef ParentName="SuperGeneBase" Name="UnsuperBase" Abstract="True">
+        <description>Supers with this gene lack some of the enhanced stats base gives.</description>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <biostatMet>1</biostatMet>
+    </GeneDef>
+
+    <GeneDef ParentName="UnsuperBase">
         <defName>UnsuperDurability</defName>
         <label>unsuper durability</label>
-        <description>For the purposes of metabolic efficiency, this xenotype was not given the enhanced durability normal superheroes have.</description>
         <iconPath>Base/UnsuperDurability</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>5</displayOrderInCategory>
-        <biostatMet>1</biostatMet>
         <damageFactors>
             <SHG_Beam>1.33</SHG_Beam>
         </damageFactors>
@@ -29,15 +32,12 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperGeneBase">
+    <GeneDef ParentName="UnsuperBase">
         <defName>UnsuperHealing</defName>
         <label>unsuper healing</label>
-        <description>For the purposes of metabolic efficiency, this xenotype was not given the enhanced healing normal superheroes have.</description>
         <iconPath>Base/UnsuperHealing</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>25</displayOrderInCategory>
         <foodPoisoningChanceFactor>100</foodPoisoningChanceFactor>
-        <biostatMet>1</biostatMet>
         <statFactors>
             <ImmunityGainSpeed>0.667</ImmunityGainSpeed>
             <InjuryHealingFactor>0.5</InjuryHealingFactor>
@@ -54,14 +54,11 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperGeneBase">
+    <GeneDef ParentName="UnsuperBase">
         <defName>UnsuperIntelligence</defName>
         <label>unsuper intelligence</label>
-        <description>For the purposes of metabolic efficiency, this xenotype was not given the enhanced intelligence normal superheroes have.</description>
         <iconPath>Base/UnsuperIntelligence</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>35</displayOrderInCategory>
-        <biostatMet>1</biostatMet>
         <statFactors>
             <ResearchSpeed>0.83</ResearchSpeed>
             <GlobalLearningFactor>0.667</GlobalLearningFactor>
@@ -74,14 +71,11 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperGeneBase">
+    <GeneDef ParentName="UnsuperBase">
         <defName>UnsuperPerception</defName>
         <label>unsuper perception</label>
-        <description>For the purposes of metabolic efficiency, this xenotype was not given the enhanced perception normal superheroes have.</description>
         <iconPath>Base/UnsuperPerception</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>45</displayOrderInCategory>
-        <biostatMet>1</biostatMet>
         <statOffsets>
             <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
             <MeleeDodgeChance>-1.5</MeleeDodgeChance>
@@ -96,14 +90,11 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperGeneBase">
+    <GeneDef ParentName="UnsuperBase">
         <defName>UnsuperPersuasion</defName>
         <label>unsuper persuasion</label>
-        <description>For the purposes of metabolic efficiency, this xenotype was not given the enhanced persuasion normal superheroes have.</description>
         <iconPath>Base/UnsuperPersuasion</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>55</displayOrderInCategory>
-        <biostatMet>1</biostatMet>
         <statOffsets>
             <PawnBeauty>-3</PawnBeauty>
             <SocialImpact>-0.5</SocialImpact>
@@ -117,14 +108,11 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperGeneBase">
+    <GeneDef ParentName="UnsuperBase">
         <defName>UnsuperPrecision</defName>
         <label>unsuper precision</label>
-        <description>For the purposes of metabolic efficiency, this xenotype was not given the enhanced precision normal superheroes have.</description>
         <iconPath>Base/UnsuperPrecision</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>65</displayOrderInCategory>
-        <biostatMet>1</biostatMet>
         <statFactors>
             <PawnTrapSpringChance>100</PawnTrapSpringChance>
         </statFactors>
@@ -140,14 +128,11 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperGeneBase">
+    <GeneDef ParentName="UnsuperBase">
         <defName>UnsuperSpeed</defName>
         <label>unsuper speed</label>
-        <description>For the purposes of metabolic efficiency, this xenotype was not given the enhanced speed normal superheroes have.</description>
         <iconPath>Base/UnsuperSpeed</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>75</displayOrderInCategory>
-        <biostatMet>1</biostatMet>
         <statFactors>
             <StaggerDurationFactor>1.333</StaggerDurationFactor>
             <WorkSpeedGlobal>0.833</WorkSpeedGlobal>
@@ -163,14 +148,11 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperGeneBase">
+    <GeneDef ParentName="UnsuperBase">
         <defName>UnsuperStrength</defName>
         <label>unsuper strength</label>
-        <description>For the purposes of metabolic efficiency, this xenotype was not given the enhanced strength normal superheroes have.</description>
         <iconPath>Base/UnsuperStrength</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>85</displayOrderInCategory>
-        <biostatMet>1</biostatMet>
         <statFactors>
             <MeleeDamageFactor>0.667</MeleeDamageFactor>
         </statFactors>

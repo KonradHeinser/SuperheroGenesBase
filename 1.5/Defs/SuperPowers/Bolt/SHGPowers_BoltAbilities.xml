@@ -99,7 +99,7 @@
     <AbilityDef ParentName="SHGPowerBoltBase">
         <defName>SHG_FoamBolt</defName>
         <label>foam bolt</label>
-        <description>Toss a bolt of summoned foam that will douse flames on pawns and protect them from flames for a time.\n\nThis will NOT affect fires on the ground, item, or corpses.</description>
+        <description>Toss a bolt of summoned foam that will douse flames on pawns and protect them from flames for a time.\n\nThis will NOT affect fires on the ground, items, or corpses.</description>
         <iconPath>Powers/Gene_FoamBolt</iconPath>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>

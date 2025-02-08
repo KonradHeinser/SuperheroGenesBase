@@ -3,7 +3,7 @@
     <HediffDef>
         <defName>SHG_Radiomancer_LimitlessPotential</defName>
         <label>potential danger</label>
-        <description>This pawn had a Radiomancer use a bit of refined radioactive energy on their brain, which may have given them a permanent bonus, but now they need to keep an eye out for side effects.</description>
+        <description>This pawn had a Radiomancer use a bit of refined radioactive energy on their brain, and now they need to keep an eye out for side effects.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <defaultLabelColor>(1,0,0.25)</defaultLabelColor>
         <stages>

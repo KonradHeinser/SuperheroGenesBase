@@ -3,9 +3,12 @@
     <GeneDef ParentName="SuperPowersHemoShifterBase">
         <defName>SHG_Hemomancer_Shifter</defName>
         <label>hemoshifter</label>
-        <description>Hemoshifters use hemogen to slightly alter their body's makeup to copy the characteristics of animals without altering their appearance. These shifts give both advantages and disadvantages that often scale with hemogen proficiency.</description>
+        <description>Hemoshifters use hemogen to slightly alter their body's makeup to copy the characteristics of animals without altering their appearance.</description>
         <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Shifter</iconPath>
         <displayOrderInCategory>0</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>Effects scale with proficiency.</li>
+        </customEffectDescriptions>
         <statOffsets>
             <SHG_HemomancyProficiency>0.5</SHG_HemomancyProficiency>
         </statOffsets>
@@ -17,10 +20,13 @@
     <GeneDef ParentName="SuperPowersHemoShifterBase">
         <defName>SHG_Hemomancer_Turtle</defName>
         <label>hemoshift(turtle)</label>
-        <description>Carriers of this gene can alter their body to increase innate armor while reducing Moving.</description>
+        <description>Hemoshifters with this gene can alter their body to increase innate armor while reducing Moving.</description>
         <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Turtle</iconPath>
         <displayOrderInCategory>1</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Shifter</prerequisite>
+        <customEffectDescriptions>
+            <li>Effects scale with proficiency.</li>
+        </customEffectDescriptions>
         <abilities>
             <li>SHG_Hemomancer_Turtle</li>
         </abilities>
@@ -32,10 +38,13 @@
     <GeneDef ParentName="SuperPowersHemoShifterBase">
         <defName>SHG_Hemomancer_Rabbit</defName>
         <label>hemoshift(rabbit)</label>
-        <description>Carriers of this gene can alter their body to increase move speed in exchange for lowering Metabolism.</description>
+        <description>Hemoshifters with this gene can alter their body to increase move speed in exchange for lowering Metabolism.</description>
         <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Rabbit</iconPath>
         <displayOrderInCategory>2</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Shifter</prerequisite>
+        <customEffectDescriptions>
+            <li>Effects scale with proficiency.</li>
+        </customEffectDescriptions>
         <abilities>
             <li>SHG_Hemomancer_Rabbit</li>
         </abilities>
@@ -47,10 +56,13 @@
     <GeneDef ParentName="SuperPowersHemoShifterBase">
         <defName>SHG_Hemomancer_Dog</defName>
         <label>hemoshift(dog)</label>
-        <description>Carriers of this gene can alter their body to decrease mental break threshold in exchange for lowering Blood Filtration.</description>
+        <description>Hemoshifters with this gene can alter their body to decrease mental break threshold in exchange for lowering Blood Filtration.</description>
         <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Dog</iconPath>
         <displayOrderInCategory>3</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Shifter</prerequisite>
+        <customEffectDescriptions>
+            <li>Effects scale with proficiency.</li>
+        </customEffectDescriptions>
         <abilities>
             <li>SHG_Hemomancer_Dog</li>
         </abilities>
@@ -62,10 +74,13 @@
     <GeneDef ParentName="SuperPowersHemoShifterBase">
         <defName>SHG_Hemomancer_Cat</defName>
         <label>hemoshift(cat)</label>
-        <description>Carriers of this gene can alter their body to increase melee dodge chance in exchange for lowering Talking.</description>
+        <description>Hemoshifters with this gene can alter their body to increase melee dodge chance in exchange for lowering Talking.</description>
         <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Cat</iconPath>
         <displayOrderInCategory>4</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Shifter</prerequisite>
+        <customEffectDescriptions>
+            <li>Effects scale with proficiency.</li>
+        </customEffectDescriptions>
         <abilities>
             <li>SHG_Hemomancer_Cat</li>
         </abilities>
@@ -77,7 +92,7 @@
     <GeneDef ParentName="SuperPowersHemoShifterBase">
         <defName>SHG_Hemomancer_Morph</defName>
         <label>hemomorph</label>
-        <description>Hemomorphs can use hemogen to alter their bodies for more specialized purposes. These shifts usually don't have constant downsides like the hemoshifter's, but can be more difficult to use due to the strange nature of their abilty.\n\nMost of their abilities are not impacted by Hemomancy Proficiency.</description>
+        <description>Hemomorphs can use hemogen to alter their bodies for more specialized purposes. These shifts usually don't have constant downsides like the hemoshifter's, but can be more difficult to use due to the strange nature of their abilty.</description>
         <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Morph</iconPath>
         <displayOrderInCategory>10</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Shifter</prerequisite>
@@ -89,7 +104,7 @@
     <GeneDef ParentName="SuperPowersHemoShifterBase">
         <defName>SHG_Hemomancer_Snake</defName>
         <label>hemoshift(snake)</label>
-        <description>Carriers of this gene can alter their body to become immune to toxins and gain a short range tox bolt ability that shoots nigh-instantaneously.</description>
+        <description>Hemomorphs with this gene can alter their body to become immune to toxins and gain a short range tox bolt ability that shoots nigh-instantaneously.</description>
         <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Snake</iconPath>
         <displayOrderInCategory>11</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Morph</prerequisite>
@@ -104,7 +119,7 @@
     <GeneDef ParentName="SuperPowersHemoShifterBase">
         <defName>SHG_Hemomancer_Starfish</defName>
         <label>hemoshift(starfish)</label>
-        <description>Carriers of this gene can alter their body to gain an ability that causes the hemomorph to reproduce asexually after one day.\n\nUsing another hemoshift while the splitting is in progress will not stop the splitting.</description>
+        <description>Hemomorphs with this gene can alter their body to gain an ability that causes the hemomorph to reproduce asexually after one day.</description>
         <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Starfish</iconPath>
         <displayOrderInCategory>12</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Morph</prerequisite>
@@ -119,10 +134,13 @@
     <GeneDef ParentName="SuperPowersHemoShifterBase">
         <defName>SHG_Hemomancer_Bear</defName>
         <label>hemoshift(bear)</label>
-        <description>Carriers of this gene can alter their body to increase melee damage while decreasing shooting accuracy, and gain a hibernation ability.\n\nThe buff and debuff provided by this ability are impacted by Hemomancy Proficiency.</description>
+        <description>Hemomorphs with this gene can alter their body to increase melee damage while decreasing shooting accuracy, and gain a hibernation ability.</description>
         <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Bear</iconPath>
         <displayOrderInCategory>13</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Morph</prerequisite>
+        <customEffectDescriptions>
+            <li>Effects scale with proficiency.</li>
+        </customEffectDescriptions>
         <abilities>
             <li>SHG_Hemomancer_Bear</li>
         </abilities>
@@ -134,7 +152,7 @@
     <GeneDef ParentName="SuperPowersHemoShifterBase">
         <defName>SHG_Hemomancer_Chameleon</defName>
         <label>hemoshift(chameleon)</label>
-        <description>Carriers of this gene can alter their body to gain an ability to turn invisible.</description>
+        <description>Hemomorphs with this gene can alter their body to gain an ability to turn invisible.</description>
         <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Chameleon</iconPath>
         <displayOrderInCategory>14</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Morph</prerequisite>

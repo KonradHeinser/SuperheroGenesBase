@@ -147,10 +147,13 @@
     <GeneDef ParentName="SuperPowersHemoInitiateBase">
         <defName>SHG_Hemomancer_BloodCloud</defName>
         <label>blood cloud</label>
-        <description>Carriers of this gene can release a burst of hemogen that gives the hemopriest and all allies around them the benefits of bloodlust without removing their ability to think rationally. This does not stack with bloodlust, and will not stop a pawn under the effects of bloodlust from berserking.\n\nThis is not impacted by Hemomancy Proficiency.</description>
+        <description>Carriers of this gene can release a burst of hemogen that gives the hemopriest and all allies around them the benefits of bloodlust without removing their ability to think rationally.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_BloodCloud</iconPath>
         <displayOrderInCategory>13</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Priest</prerequisite>
+        <customEffectDescriptions>
+            <li>Does not stack with Bloodlust.</li>
+        </customEffectDescriptions>
         <abilities>
             <li>SHG_Hemomancer_BloodCloud</li>
         </abilities>
@@ -162,7 +165,7 @@
     <GeneDef ParentName="SuperPowersHemoInitiateBase">
         <defName>SHG_Hemomancer_ReplenishBlood</defName>
         <label>replenish blood</label>
-        <description>Carriers of this gene can release a burst of hemogen that seals wounds and removes any blood loss allies around them may have suffered.\n\nThis is not impacted by Hemomancy Proficiency.</description>
+        <description>Carriers of this gene can release a burst of hemogen that seals wounds, and removes any blood loss allies around them may have suffered.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_ReplenishBlood</iconPath>
         <displayOrderInCategory>14</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Priest</prerequisite>

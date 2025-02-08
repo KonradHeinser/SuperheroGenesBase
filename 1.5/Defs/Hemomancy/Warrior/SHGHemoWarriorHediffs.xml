@@ -168,7 +168,7 @@
     <HediffDef ParentName="SHG_WarriorBuffBase">
         <defName>SHG_Hemomancer_BloodInfusement</defName>
         <label>blood infusement</label>
-        <description>Hemogen has been infused in the body to enhance global work speed and reduce the need to sleep. Only the work speed enhancement is affected by Hemomancy Proficiency.</description>
+        <description>Hemogen has been infused in the body to enhance global work speed and reduce the need to sleep. Work speed is affected by Hemomancy Proficiency.</description>
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>

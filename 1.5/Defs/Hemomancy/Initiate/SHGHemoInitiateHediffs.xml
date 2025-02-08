@@ -42,7 +42,7 @@
     <HediffDef>
         <defName>SHG_Hemomancer_Bloodlust</defName>
 		<label>bloodlust</label>
-		<description>This pawn is immune to pain and is more deadly in melee combat.</description>
+		<description>This pawn is immune to pain, and is more deadly in melee combat.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <scenarioCanAdd>false</scenarioCanAdd>
 		<isBad>false</isBad>
@@ -137,6 +137,11 @@
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
 		<comps>
 			<li Class="SuperheroGenesBase.HediffCompProperties_CreateItems">
                 <intervalTicks>60000</intervalTicks>

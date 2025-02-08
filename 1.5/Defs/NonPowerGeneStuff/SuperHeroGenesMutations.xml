@@ -3,7 +3,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_DoubleHearted</defName>
         <label>double hearted</label>
-        <description>A second heart rests in their chest, pumping more blood in exchange for stopping the lungs from working at full capacity. Should this pawn die, this heart will be consumed to bring them back to life. It takes around 15 days for it to return to its full function.\n\nIn the long run, their partially-immortal nature makes them perfect for leaving a lasting legacy about saving the colony from certain doom. In the short-term, watching this pawn die multiple times is quite tramatizing for all of their friends.\n\nAll super, unsuper, and antisuper genes function by creating a large pool of life force that is rearranged to perform specific functions. Genes like this function by taking the portion of a life pool that was dedicated for altering a specific area of the pawn, in this case the pawn's healing.</description>
+        <description>Supers with this gene have a second heart in their chest, pumping more blood in exchange for hindering the lungs. This second heart will be consumed on death to bring them back to life, and will take around 15 days to fully regrow afterwards.</description>
         <geneClass>SuperHeroGenesBase.Gene_DoubleHearted</geneClass>
         <iconPath>Mutations/DoubleHearted</iconPath>
         <displayOrderInCategory>1</displayOrderInCategory>
@@ -19,7 +19,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_SuperPsychicPotential</defName>
         <label>super psychic potential</label>
-        <description>Latent within this pawn is a psychic sensitivity that makes them twice as capable of manipulating psychic things than any other. Unfortunately, this also means that their weakness to psychic phenomenon is greater than it is for most heroes.\n\nDue to the fact that they are exceptionally vulnerable to psychic effects, they must take care of their mental health constantly lest they be driven insane by an errant psychic drone. Despite this major issue, their attunement to psychic forces makes them exceptional Mechanitors, Gauranlen keepers, and Psionic Soldiers.</description>
+        <description>Supers with this gene are exceptionally sensitive to all psychic phenomena, for better or worse. This attunement makes them exceptional Mechanitors, Gauranlen keepers, and Psionic Soldiers.</description>
         <iconPath>Mutations/SuperPsychicPotential</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>2</displayOrderInCategory>
@@ -35,7 +35,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_SuperDenseBones</defName>
         <label>super dense bones</label>
-        <description>The bones of this super are nigh unbreakable, rendering this pawn nigh immune to blunt damage as most blunt attacks simply bounce off this pawn. This increased density makes it more difficult for the pawn to move around though.\n\nAll super, unsuper, and antisuper genes function by creating a large pool of life force that is rearranged to perform specific functions. Genes like this function by taking the portion of a life pool that was dedicated for altering a specific area of the pawn, in this case the pawn's durability.</description>
+        <description>Supers with this gene have nigh-unbreakable bones, helping them resist blunt attacks while also hindering their ability to move freely.</description>
         <iconPath>Mutations/SuperDenseBones</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>3</displayOrderInCategory>
@@ -61,7 +61,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_Blindsight</defName>
         <label>blindsight</label>
-        <description>This superhero is permanently blind, but their hearing is enhanced threefold and bodily control is enhanced twofold.\n\nA complete lack of vision makes it exceptionally difficult for this super to do what normal people do, and this frequently results in them being viewed as a lesser super. Right up until those people get into a fist fight with them, and find them to be disturbingly accurate for a blind person. Especially if the super has artificial parts helping them.</description>
+        <description>This superhero is permanently blind, but their hearing is enhanced threefold and bodily control is enhanced twofold.</description>
         <iconPath>Mutations/Blindsight</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>4</displayOrderInCategory>
@@ -88,7 +88,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_GhostlyPresence</defName>
         <label>ghostly presence</label>
-        <description>Whether they want it or not, this super always ends up being difficult to notice. This makes them a lot harder to hit in melee combat, and far more stealthy while hunting, but their ability to communicate with others in greatly diminished.\n\nMost supers with this gene end up becoming assassins and hunters because of how difficult it is to notice them. Some of the less reputable nobles use them as bodyguards, loving to watch others die by this super's hands after failing to notice that the noble was not actually unprotected.</description>
+        <description>Supers with this gene always seem to be difficult to notice, whether the super intends it or not. This "invisibility" makes them exceptional hunters and assassins as it is much harder to hit what you have difficulties seeing.</description>
         <iconPath>Mutations/GhostlyPresence</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>5</displayOrderInCategory>
@@ -107,7 +107,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_Prey</defName>
         <label>prey</label>
-        <description>This super fears combat instinctively, and their body is built for running away from anything that seeks to harm them.\n\nAll super, unsuper, and antisuper genes function by creating a large pool of life force that is rearranged to perform specific functions. Genes like this function by taking the portion of a life pool that was dedicated for altering a specific area of the pawn, in this case the pawn's speed.</description>
+        <description>Supers with this gene instinctively fear combat, and their body is built in a way to capitalize on this instinctive fear.</description>
         <iconPath>Mutations/Prey</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>6</displayOrderInCategory>
@@ -134,7 +134,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_Predator</defName>
         <label>predator</label>
-        <description>This super loves a hunt, and instinctively knows the best way to take down a target. Unfortunately this aggressive nature also extends into their social life.\n\nAll super, unsuper, and antisuper genes function by creating a large pool of life force that is rearranged to perform specific functions. Genes like this function by taking the portion of a life pool that was dedicated for altering a specific area of the pawn, in this case the pawn's strength.</description>
+        <description>Supers with this gene instinctively love to hunt and kill, making them exceptional fighters, but terrible friends.</description>
         <iconPath>Mutations/Predator</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>7</displayOrderInCategory>
@@ -155,7 +155,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_AdrenalineJunkie</defName>
         <label>adrenaline junkie</label>
-        <description>This super loves a challenge, and challenging fights are the best challenge of all. All pain does is make them want to hit harder, and just to ensure their enemy can put up a good fight they won't even bother dodging.\n\nDue to their nature, adrenaline junkie supers often require Super Durability or Super Healings to survive. Of course, not having those isn't an issue, it just increases the thrill of the fight.</description>
+        <description>Supers with this gene love a challenge, and often won't even both dodging in a fight just to increase the thrill.</description>
         <iconPath>Mutations/AdrenalineJunkie</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <causesNeed>KillThirst</causesNeed>
@@ -173,7 +173,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_Berserker</defName>
         <label>berserker</label>
-        <description>This super feels a call for violence, a beast inside constantly yearning for release. It takes much less to make them snap, and when they do, they will keep swinging until their body gives out.\n\nWhile nobody knows when the first berserker super appeared, it is commonly believed that they came into existence accidentally when someone tried to combine the superhero gene with a hussar. Since the acclaimed incident, the superhero gene was stabilized considerably to avoid further surprises.</description>
+        <description>Supers with this gene hear a constant call for violence, and when they finally heed it they will keep swinging until their body gives out.</description>
         <iconPath>Mutations/Berserker</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>9</displayOrderInCategory>
@@ -195,7 +195,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_MadGenius</defName>
         <label>mad genius</label>
-        <description>This pawn has an extreme level of intelligence that ends up making them alienate themselves from everyone else. They simply don't get why the simpletons around them just can't understand them, and it frustrates them greatly.\n\nAll super, unsuper, and antisuper genes function by creating a large pool of life force that is rearranged to perform specific functions. Genes like this function by taking the portion of a life pool that was dedicated for altering a specific area of the pawn, in this case the pawn's intelligence.</description>
+        <description>Supers with this gene have an extreme level of intelligence that ends up making them alienate themselves from everyone else.</description>
         <iconPath>Mutations/MadGenius</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>10</displayOrderInCategory>
@@ -222,7 +222,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_Technophile</defName>
         <label>technophile</label>
-        <description>This super has a love for technology and new advanced things that crosses the line into obsession. In fact, their obsession is so great that they would rather leave work to drones and robots, so they can get back to their technology.\n\nThe first supers with the technophile mutation were believed to be exceptionally lazy as they were being tested upon. Then one of those supers built a bomb that destroyed most of the facility using random things in their cell, and the general scientific community decided to not perform experiments on these supers.</description>
+        <description>This super has a love for technology and new advanced things that crosses the line into obsession.</description>
         <iconPath>Mutations/Technophile</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>11</displayOrderInCategory>
@@ -238,7 +238,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_Naturalist</defName>
         <label>naturalist</label>
-        <description>This super loves nature, from pruning and farming to animal handling. They feel uncomfortable working on anything that isn't nature based though.\n\nWhile their genetics does not cause them to innately hate urban areas and large groups of people, the destruction of wildlife that comes with those often creates the hatred just as easily.</description>
+        <description>This super loves nature, from pruning and farming to animal handling. They feel uncomfortable working on anything that isn't nature based though.</description>
         <iconPath>Mutations/Naturalist</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>12</displayOrderInCategory>
@@ -254,7 +254,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_HALK</defName>
         <label>HALK</label>
-        <description>HALKs, or Hyper-Agressive Large Killers, first came into existence long before even the first supers. After an extremely long development with many destroyed labs and dead scientists, it was eventually integrated with the superhero gene in hopes to avoid more destroyed labs and dead people with some success. While calm, HALKs display an exceptional level of intelligence, though faulty genetic sequences cause them to be almost completely useless for tasks like hunting and hauling due to their greatly weakened bodies. When they choose to fight though, they become extremely dangerous killing machines.\n\nScientists have found two major downsides to this mutation. One, its genetic rewriting makes it impossible to apply some other genes, and two, if the pawn experiences a violent mental break, they become even stronger than they would be if just drafted, making them very difficult to stop.\n\nWhile historians cannot find the exact point when the name was decided, it is commonly believed that what it meant was decided second, and the strange color the pawn turns into is caused for a related reason.</description>
+        <description>HALKs, or Hyper-Agressive Large Killers, first came into existence long before even the first supers. After an extremely long development with many destroyed labs and dead scientists, it was eventually integrated with the superhero gene in hopes to avoid more destroyed labs and dead people with some success. While calm, HALKs display an exceptional level of intelligence, but when they fight they become extremely dangerous killing machines.</description>
         <iconPath>Mutations/HALK</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>13</displayOrderInCategory>
@@ -263,9 +263,8 @@
         <customEffectDescriptions>
             <li>Very weak and very intelligence while undrafted.</li>
             <li>Exceptional melee and shooting while drafted.</li>
-            <li>In case of violent mental break, may need to pray to your deity of choice, plus a few extra to be safe.</li>
+            <li>In case of violent mental break, may need to pray to deity of choice, plus a few extra to be safe.</li>
             <li>This "constantly mutates" the pawn's genes causing this to be incompatible with various other genes, most notable ones being various combat genes.</li>
-            <li>Having RedMattis's framework installed causes size changes while drafted or violent.</li>
         </customEffectDescriptions>
         <exclusionTags>
             <li>Beauty</li>
@@ -292,7 +291,7 @@
     <HediffDef>
         <defName>SHG_HALK</defName>
         <label>HALK</label>
-        <description>This pawn is a Hyper-Agressive Large Killer, completely distinct from any fictional superheroes in ancient stories.</description>
+        <description>This pawn is a Hyper-Agressive Large Killer, completely distinct from any fictional supersupers in ancient stories.</description>
         <everCurableByItem>false</everCurableByItem>
         <initialSeverity>0.001</initialSeverity>
         <hediffClass>HediffWithComps</hediffClass>

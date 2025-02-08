@@ -3,7 +3,7 @@
     <GeneDef ParentName="SuperPowersHemoWarriorBase">
         <defName>SHG_Hemomancer_Warrior</defName>
         <label>hemowarrior</label>
-        <description>Hemowarriors specialize in layering enhancements on themselves that make it easier for them to brush off attacks and slash through the strongest of armors.</description>
+        <description>Hemowarriors specialize in layering enhancements on themselves that make it easier for them to brush off attacks and kill enemies.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_Warrior</iconPath>
         <displayOrderInCategory>0</displayOrderInCategory>
         <statOffsets>
@@ -17,11 +17,14 @@
     <GeneDef ParentName="SuperPowersHemoWarriorBase">
         <defName>SHG_Hemomancer_BloodClaws</defName>
         <label>blood claws</label>
-        <description>Carriers of this gene have claws attached to their hands, and can use an ability that boosts their melee damage based on tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost. The effects of this ability are influenced by Hemomancy Proficiency.\n\nIf the hand or arm is lost or replaced, then the claws are permanently gone. You can still use the buff in this situation.</description>
+        <description>Hemowarriors with this gene have claws attached to their hands, and can use an ability that boosts their melee damage based on tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost.\n\nIf the hand or arm is lost or replaced, then the claws are permanently gone, but the buff can still apply.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_BloodClaws</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <displayOrderInCategory>1</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Warrior</prerequisite>
+        <customEffectDescriptions>
+            <li>Effects scale with proficiency.</li>
+        </customEffectDescriptions>
         <abilities>
             <li>SHG_Hemomancer_BloodClaws</li>
         </abilities>
@@ -46,10 +49,13 @@
     <GeneDef ParentName="SuperPowersHemoWarriorBase">
         <defName>SHG_Hemomancer_BloodArmor</defName>
         <label>blood armor</label>
-        <description>Carriers of this gene can give themselves a coat of armor that provides a blunt and sharp armor boost based on tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost. The effects of this ability are influenced by Hemomancy Proficiency.</description>
+        <description>Hemowarriors with this gene can give themselves a coat of armor that provides a blunt and sharp armor boost based on tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_BloodArmor</iconPath>
         <displayOrderInCategory>2</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Warrior</prerequisite>
+        <customEffectDescriptions>
+            <li>Effects scale with proficiency.</li>
+        </customEffectDescriptions>
         <abilities>
             <li>SHG_Hemomancer_BloodArmor</li>
         </abilities>
@@ -61,8 +67,11 @@
     <GeneDef ParentName="SuperPowersHemoWarriorBase">
         <defName>SHG_Hemomancer_BloodInfusement</defName>
         <label>blood infusement</label>
-        <description>Carriers of this gene can give themselves enhanced global work speed and reduced rest fall rate based on tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost. The work speed enhancement is influenced by Hemomancy Proficiency, though the rest fall rate reduction is not.</description>
+        <description>Hemowarriors with this gene can give themselves enhanced global work speed and reduced rest fall rate based on tier. Each use adds one tier, up to a maximum of 6, and every day one tier is lost.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_BloodInfusement</iconPath>
+        <customEffectDescriptions>
+            <li>Work speed scales with proficiency.</li>
+        </customEffectDescriptions>
         <displayOrderInCategory>3</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Warrior</prerequisite>
         <abilities>
@@ -76,10 +85,13 @@
     <GeneDef ParentName="SuperPowersHemoWarriorBase">
         <defName>SHG_Hemomancer_BloodSpear</defName>
         <label>blood spear</label>
-        <description>Carriers of this gene can fire spears made of blood at targets. These spears deal large amounts of damage to fleshy creatures, but tend to have greatly reduced effectiveness against armored targets. The range of these abilities is influenced by Hemomancy Proficiency.</description>
+        <description>Hemowarriors with this gene can fire spears made of blood at targets. These spears deal large amounts of damage to fleshy creatures, but tend to have greatly reduced effectiveness against armored targets.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_BloodSpear</iconPath>
         <displayOrderInCategory>4</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Warrior</prerequisite>
+        <customEffectDescriptions>
+            <li>Range affected by proficiency.</li>
+        </customEffectDescriptions>
         <abilities>
             <li>SHG_Hemomancer_BloodSpear</li>
         </abilities>
@@ -91,7 +103,7 @@
     <GeneDef ParentName="SuperPowersHemoWarriorBase">
         <defName>SHG_Hemomancer_Champion</defName>
         <label>hemochampion</label>
-        <description>Hemochampions have a tendency to cover the the ground around them with blood, whether it's their own or their enemies matters not. Many of them are capable of regenerating even lost limbs, and some of them can release a burst of hemogen that revives everyone around them.</description>
+        <description>Hemochampions have a tendency to cover the the ground around them with blood, whether it's their own or their enemies matters not.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_Champion</iconPath>
         <displayOrderInCategory>10</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Warrior</prerequisite>
@@ -103,7 +115,7 @@
     <GeneDef ParentName="SuperPowersHemoWarriorBase">
         <defName>SHG_Hemomancer_HemogenBarrier</defName>
         <label>hemogen barrier</label>
-        <description>Carriers of this gene can Create a small shield made of hemogen that stops all projectiles from entering. This will not stop people, and will cause items to explode on impact with the shield. This will last for about one hour. This is not influenced by Hemomancy Proficiency.</description>
+        <description>Hemochampions with this gene can create a small shield made of hemogen that stops all projectiles from entering. This will not stop people, and can cause explosives to explode on impact with the shield. This will last for about one hour.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_HemogenBarrier</iconPath>
         <displayOrderInCategory>11</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Champion</prerequisite>
@@ -118,10 +130,13 @@
     <GeneDef ParentName="SuperPowersHemoWarriorBase">
         <defName>SHG_Hemomancer_EverlastingWar</defName>
         <label>everlasting war</label>
-        <description>Carriers of this gene have access to an ability that revives every pawn in an area, both allies and enemies. The Hemochampion does not need line of sight to resurrect pawns, but resurrected pawns will be unable to move for a couple days. The range of this influenced by Hemomancy Proficiency.</description>
+        <description>Hemochampions with this gene have access to an ability that revives every pawn in an area, both allies and enemies. The Hemochampion does not need line of sight to resurrect pawns, but resurrected pawns will be unable to move for a couple days.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_EverlastingWar</iconPath>
         <displayOrderInCategory>12</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Champion</prerequisite>
+        <customEffectDescriptions>
+            <li>Range affected by proficiency.</li>
+        </customEffectDescriptions>
         <abilities>
             <li>SHG_Hemomancer_EverlastingWar</li>
         </abilities>
@@ -134,7 +149,7 @@
     <GeneDef ParentName="SuperPowersHemoWarriorBase">
         <defName>SHG_Hemomancer_BloodAndDarkness</defName>
         <label>blood and darkness</label>
-        <description>Carriers of this gene can blind everyone in an area the hemochampion for an hour, and make them bleed twice as fast. The more people around the pawn, the more this ability costs. This is not influenced by Hemomancy Proficiency.</description>
+        <description>Hemochampions with this gene can blind everyone in an area the hemochampion for an hour, and make them bleed twice as fast.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_BloodAndDarkness</iconPath>
         <displayOrderInCategory>13</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Champion</prerequisite>
@@ -149,7 +164,7 @@
     <GeneDef ParentName="SuperPowersHemoWarriorBase">
         <defName>SHG_Hemomancer_TrueRegeneration</defName>
         <label>true regeneration</label>
-        <description>Carriers of this gene gain a constant regeneration in place of the hemogen regeneration normally granted to Hemomancers. This regeneration is capable of restoring lost parts after a bit of time, in addition to being able to heal normal wounds. This is not influenced by Hemomancy Proficiency.</description>
+        <description>Hemochampions with this gene gain a constant regeneration in place of the hemogen regeneration normally granted to Hemomancers. This regeneration is capable of restoring lost parts after a bit of time, in addition to being able to heal normal wounds.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_TrueRegeneration</iconPath>
         <displayOrderInCategory>14</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Champion</prerequisite>
