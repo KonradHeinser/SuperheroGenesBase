@@ -22,6 +22,23 @@ namespace SuperHeroGenesBase
             return false;
         }
 
+        public static Thing CreateThingCreationItem(ThingCreationItem item, Pawn creater = null)
+        {
+            if (!Rand.Chance(item.chance)) return null;
+
+            Thing thing = ThingMaker.MakeThing(item.thing, item.stuff);
+            thing.stackCount = Math.Min(item.count, item.thing.stackLimit);
+            CompQuality compQuality = thing.TryGetComp<CompQuality>();
+            if (compQuality != null)
+            {
+                compQuality.SetQuality(item.quality, ArtGenerationContext.Colony);
+
+                if (creater != null)
+                    QualityUtility.SendCraftNotification(thing, creater);
+            }
+            return thing;
+        }
+
         public static bool CheckNearbyWater(Pawn pawn, int maxNeededForTrue, out int waterCount, float maxDistance = 0)
         {
 

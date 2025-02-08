@@ -54,8 +54,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_CreateItems.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_InvisibleAtStage.cs" />
+    <Compile Include="Hediffs\CompProperties\HediffCompProperties_SpawnHumanlike.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_CreateItems.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_InvisibleAtStage.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_SpawnHumanlike.cs" />
+    <Compile Include="Hediffs\ThingCreationItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SHGDefOf.cs" />
     <Compile Include="SHGExtension.cs" />
