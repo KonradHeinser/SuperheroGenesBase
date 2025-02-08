@@ -117,7 +117,7 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Revive</defName>
         <label>revive</label>
-        <description>Carriers of this gene are able to revive a nearby pawn.\n\nJust as the superhero gene frequently makes people believe the super is a demigod or god, this ability frequently makes people believe that this super is some sort of demon or other undefined evil their religion fights.</description>
+        <description>Supers with this gene are able to revive a nearby pawn.\n\nJust as the superhero gene frequently makes people believe the super is a demigod or god, this ability frequently makes people believe that this super is some sort of demon or other undefined evil their religion fights.</description>
         <iconPath>UI/Icons/Genes/Gene_Resurrect</iconPath>
         <abilities>
             <li>SHG_Revive</li>
@@ -142,7 +142,7 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Invisibility</defName>
         <label>invisibility</label>
-        <description>Carriers of this gene are able to turn invisible for a short time every few hours.\n\nWhile there are many who worry that supers with this gene are going to sneak into places they shouldn't be, countless studies have found that it is far more likely that supers with this gene prefer to do harmless jump scares because watching people get spooked amuses them.</description>
+        <description>Supers with this gene are able to turn invisible for a short time every few hours.\n\nWhile there are many who worry that supers with this gene are going to sneak into places they shouldn't be, countless studies have found that it is far more likely that they prefer to do harmless jump scares.</description>
         <iconPath>Powers/Gene_Invisibility</iconPath>
         <biostatMet>-3</biostatMet>
         <abilities>
@@ -166,7 +166,7 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Blink</defName>
         <label>blink</label>
-        <description>Carriers of this gene are able to blink themselves away from a location. The destination is a random point between 20 and 30 tiles away. Using this to get out of danger will either work very well, or very poorly.\n\nThis ability was initially developed when a super with a psylink was spooked during some testing. After discovering how well teleportation abilities worked with the superhero gene, military scientists sought to create a controlled version of this ability.</description>
+        <description>Supers with this gene are able to blink themselves away from a location. The destination is a random point between 20 and 30 tiles away. Using this to get out of danger will either work very well, or very poorly.\n\nThis ability was initially developed when a super with a psylink was spooked during some testing. After discovering how well teleportation abilities worked with the superhero gene, military scientists sought to create a controlled version of this ability.</description>
         <iconPath>Powers/Gene_Blink</iconPath>
         <displayOrderInCategory>-0.5</displayOrderInCategory>
         <abilities>

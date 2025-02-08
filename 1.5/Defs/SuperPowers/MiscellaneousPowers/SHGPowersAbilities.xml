@@ -268,7 +268,7 @@
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_Gate</defName>
         <label>open gate</label>
-        <description>Teleport yourself and everyone within 10 tiles to a distant location that has at least one colonist.</description>
+        <description>Teleport yourself and everyone within 10 tiles to a distant location.</description>
         <iconPath>Powers/Gene_Gate</iconPath>
         <hotKey>Misc12</hotKey>
         <targetWorldCell>True</targetWorldCell>
@@ -299,7 +299,7 @@
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_Rift</defName>
         <label>open rift</label>
-        <description>Open a rift in the space time continuum that instantly teleports everyone within 200 tiles to a location that has at least one colonist.</description>
+        <description>Open a rift in the space time continuum that instantly teleports everyone within 200 tiles to a location.</description>
         <iconPath>Powers/Gene_Rift</iconPath>
         <hotKey>Misc12</hotKey>
         <targetWorldCell>True</targetWorldCell>

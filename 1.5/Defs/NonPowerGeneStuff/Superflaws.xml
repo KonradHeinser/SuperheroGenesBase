@@ -3,7 +3,7 @@
     <GeneDef ParentName="SHG_FlawBase" MayRequire="EBSG.Framework">
         <defName>SHG_Flaw_Weaponless</defName>
         <label>weaponless</label>
-        <description>This super is unable to use any sort of weapon other than their fists and maybe some unique tools.</description>
+        <description>Supers with this gene are unable to use any sort of weapon other than their fists and maybe some unique tools.</description>
         <iconPath>Flaws/Gene_Weaponless</iconPath>
         <geneClass>EBSGFramework.SpawnAgeLimiter</geneClass>
         <displayOrderInCategory>50</displayOrderInCategory>
@@ -21,7 +21,7 @@
     <GeneDef ParentName="SHG_FlawBase" MayRequire="EBSG.Framework">
         <defName>SHG_Flaw_Appareless</defName>
         <label>appareless</label>
-        <description>This super is unable to use any sort of apparel. Fortunately, that doesn't stop them from just killing people before they have a chance to do anything.</description>
+        <description>Supers with this gene are unable to use any sort of apparel. Fortunately, that doesn't stop them from just killing people before they have a chance to do anything.</description>
         <iconPath>Flaws/Gene_Appareless</iconPath>
         <geneClass>EBSGFramework.SpawnAgeLimiter</geneClass>
         <displayOrderInCategory>51</displayOrderInCategory>
@@ -39,7 +39,7 @@
     <GeneDef ParentName="SHG_FlawBase" MayRequire="EBSG.Framework">
         <defName>SHG_Flaw_Equipmentless</defName>
         <label>equipmentless</label>
-        <description>This super is unable to use any sort of equipment. Look at them though. They don't need nothing.\n\n\nMuscles not included. Terms and conditions may apply. Please don't text and fight.</description>
+        <description>Supers with this gene are unable to use any sort of equipment. Look at them though. They don't need nothing.\n\n\nMuscles not included. Terms and conditions may apply. Please don't text and fight.</description>
         <iconPath>Flaws/Gene_Equipmentless</iconPath>
         <geneClass>EBSGFramework.SpawnAgeLimiter</geneClass>
         <displayOrderInCategory>52</displayOrderInCategory>

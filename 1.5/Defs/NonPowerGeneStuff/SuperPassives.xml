@@ -241,6 +241,7 @@
                 <allowAnimals>False</allowAnimals>
                 <allowDryads>False</allowDryads>
                 <allowInsects>False</allowInsects>
+                <allowEntities>False</allowEntities>
             </li>
         </comps>
     </HediffDef>

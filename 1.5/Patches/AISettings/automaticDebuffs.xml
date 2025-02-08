@@ -40,14 +40,19 @@
                                             </li>
                                         </subNodes>
                                     </li>
-                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire">
-                                        <minRadius>15</minRadius>
-                                        <minEnemies>3</minEnemies>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                        <gene>Hemogenic</gene>
+                                        <useTargetValue>False</useTargetValue>
+                                        <minLevel>0.2</minLevel>
                                         <subNodes>
-                                            <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
-                                                <abilities>
-                                                    <li>SHG_Hemomancer_BloodAndDarkness</li>
-                                                </abilities>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire">
+                                                <minRadius>15</minRadius>
+                                                <minEnemies>3</minEnemies>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                        <ability>SHG_Hemomancer_BloodAndDarkness</ability>
+                                                    </li>
+                                                </subNodes>
                                             </li>
                                         </subNodes>
                                     </li>
@@ -161,14 +166,19 @@
                                                 </li>
                                             </subNodes>
                                         </li>
-                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire">
-                                            <minRadius>15</minRadius>
-                                            <minEnemies>3</minEnemies>
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                            <gene>Hemogenic</gene>
+                                            <useTargetValue>False</useTargetValue>
+                                            <minLevel>0.2</minLevel>
                                             <subNodes>
-                                                <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
-                                                    <abilities>
-                                                        <li>SHG_Hemomancer_BloodAndDarkness</li>
-                                                    </abilities>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire">
+                                                    <minRadius>15</minRadius>
+                                                    <minEnemies>3</minEnemies>
+                                                    <subNodes>
+                                                        <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                            <ability>SHG_Hemomancer_BloodAndDarkness</ability>
+                                                        </li>
+                                                    </subNodes>
                                                 </li>
                                             </subNodes>
                                         </li>

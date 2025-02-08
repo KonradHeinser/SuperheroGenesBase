@@ -79,8 +79,15 @@
                                                                         <ability>SHG_Psionist_PsionicShield</ability>
                                                                         <minTicksAgo>2500</minTicksAgo>
                                                                         <subNodes>
-                                                                            <li Class="JobGiver_AICastAbilityOnSelf">
-                                                                                <ability>SHG_Hemomancer_HemogenBarrier</ability>
+                                                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                                                                <gene>Hemogenic</gene>
+                                                                                <useTargetValue>False</useTargetValue>
+                                                                                <minLevel>0.4</minLevel>
+                                                                                <subNodes>
+                                                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                                        <ability>SHG_Hemomancer_HemogenBarrier</ability>
+                                                                                    </li>
+                                                                                </subNodes>
                                                                             </li>
                                                                         </subNodes>
                                                                     </li>
@@ -329,8 +336,15 @@
                                                                                     <ability>SHG_Psionist_PsionicShield</ability>
                                                                                     <minTicksAgo>2500</minTicksAgo>
                                                                                     <subNodes>
-                                                                                        <li Class="JobGiver_AICastAbilityOnSelf">
-                                                                                            <ability>SHG_Hemomancer_HemogenBarrier</ability>
+                                                                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                                                                            <gene>Hemogenic</gene>
+                                                                                            <useTargetValue>False</useTargetValue>
+                                                                                            <minLevel>0.4</minLevel>
+                                                                                            <subNodes>
+                                                                                                <li Class="JobGiver_AICastAbilityOnSelf">
+                                                                                                    <ability>SHG_Hemomancer_HemogenBarrier</ability>
+                                                                                                </li>
+                                                                                            </subNodes>
                                                                                         </li>
                                                                                     </subNodes>
                                                                                 </li>
