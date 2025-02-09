@@ -210,7 +210,7 @@
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_PsionicArmor</defName>
         <label>psionic armor</label>
-        <description>This gene creates a constant invisible psychic barrier around the Psionic Immortal's entire body that protects them from most physical attacks.</description>
+        <description>This gene creates a constant invisible psychic barrier around the Psionic Immortal's entire body that protects them from most physical attacks and extreme natural temperatures.</description>
         <prerequisite>SHG_Psionist_SoldierImmortal</prerequisite>
         <iconPath>Psionist/Soldier/Gene_Psionist_PsionicArmor</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>

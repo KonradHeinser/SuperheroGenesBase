@@ -116,13 +116,15 @@
     <HediffDef>
         <defName>SHG_Psionist_PsionicArmor</defName>
         <label>psionic armor</label>
-        <description>This Immortal is being protected by a psychic armor. The armor values listed are the base values, and are multiplied by psychic sensitivity.</description>
+        <description>This Immortal is being protected by a psychic armor. The values listed are the base values, and are multiplied by psychic sensitivity.</description>
 		<stages>
 			<li>
                 <statOffsets>
                     <ArmorRating_Blunt>.1</ArmorRating_Blunt>
                     <ArmorRating_Sharp>.1</ArmorRating_Sharp>
                     <ArmorRating_Heat>.1</ArmorRating_Heat>
+                    <ComfyTemperatureMin>-0.5</ComfyTemperatureMin>
+                    <ComfyTemperatureMax>0.5</ComfyTemperatureMax>
                 </statOffsets>
                 <statOffsetEffectMultiplier>PsychicSensitivity</statOffsetEffectMultiplier>
             </li>
