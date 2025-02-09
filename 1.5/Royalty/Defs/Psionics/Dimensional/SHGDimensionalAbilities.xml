@@ -266,7 +266,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_IcePlanet</defName>
         <label>open rift to ice planet</label>
-        <description>Open a rift to the ice planet to cause everyone in the area to immediately gain 60% hypothermia. There is nothing that can be done to resist this effect.\n\nHypothermia become life threatening at 62%, and lethal at 100%. This mean that if the victim(s) are already in an area that is too cold for them, they will quickly pass out as their hypothermia gets worse. This will affect the psionist if they are in the radius.</description>
+        <description>Open a rift to the ice planet to cause everyone in the area to immediately gain 60% hypothermia. There is nothing that can be done to resist this effect.\n\nHypothermia becomes life threatening at 62%, and lethal at 100%. This means that if the victim(s) are already in an area that is too cold for them, they will quickly pass out as their hypothermia gets worse. This will affect the psionist if they are in the radius.</description>
         <iconPath>Psionist/Dimensional/Gene_Psionist_Ice</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <statBases>
@@ -293,7 +293,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_Eldritch</defName>
         <label>open rift to eldritch planet</label>
-        <description>Open a rift to the eldritch planet to cause everyone in the area to immediately become terrified. Whatever exists on the planet is so terrifying that even the Astral Psionist has never laid eyes upon it, for if it is let loose, then this world will probably be lost.</description>
+        <description>Open a rift to the eldritch planet to cause everyone in the area to immediately become terrified.</description>
         <iconPath>Psionist/Dimensional/Gene_Psionist_Eldritch</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <statBases>
@@ -323,7 +323,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_Chaotic</defName>
         <label>open rift to chaotic planet</label>
-        <description>Open a rift to the chaotic planet to release a medley of exotic spores that have uncontrollable effects. Unlike the Psychedelic planet, these spores are not solely dedicated to engaging the anger portions of the brain, and the effects of them can vary wildly. There is a chance that they will have no effects at all, or they could have multiple effects on any given individual.</description>
+        <description>Open a rift to the chaotic planet to release a medley of exotic spores that have uncontrollable effects. Unlike the Psychedelic planet, these spores are not solely dedicated to engaging the anger portions of the brain, and the effects of them can vary wildly.</description>
         <iconPath>Psionist/Dimensional/Gene_Psionist_Chaotic</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <statBases>
@@ -354,7 +354,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_PsychicAnomaly</defName>
         <label>open rift to psychic anomaly</label>
-        <description>Connect to a psychic anomaly to minimize all entropy gains for a day. A small amount of entropy is still gained to use the link to the anomaly, but the amount usually immediately dissipated.\n\nDue to how the game handles neural heat, you may need to remove the limiter for higher cost abilities. This is because the game calculates the neural heat multiplier as the abilty is being cast instead of before.</description>
+        <description>Connect to a psychic anomaly to minimize all entropy gains for a day.\n\nDue to how the game handles neural heat, you may need to remove the limiter for higher cost abilities. This is because the game calculates the neural heat multiplier as the abilty is being cast instead of before.</description>
         <iconPath>Psionist/Dimensional/Gene_Psionist_PsychicAnomaly</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
@@ -437,7 +437,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_Utopia</defName>
         <label>open rift to utopian planet</label>
-        <description>Open a rift to the utopian planet to calm the minds of everyone around the Cosmic Psionist. This will make everyone more productive and resistant to the stresses of their less ideal world.</description>
+        <description>Open a rift to the utopian planet to calm the minds of everyone around the area. This will make everyone more productive and resistant to the stresses of their less ideal world.</description>
         <iconPath>Psionist/Dimensional/Gene_Psionist_Utopia</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <writeCombatLog>True</writeCombatLog>

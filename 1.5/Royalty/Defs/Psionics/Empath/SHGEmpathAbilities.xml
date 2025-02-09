@@ -38,7 +38,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_PsionicBond</defName>
         <label>psionic bond</label>
-        <description>Create a bond between the target and the caster that increases work speed and accuracy for both pawns. Pawns can't benefit from multiple bonds at the same time, but if multiple Placaters create bonds with other pawns, then the benefit increases for everyone who has the Psionic Bond hediff.</description>
+        <description>Create a bond between the target and the caster that increases work speed and accuracy for both pawns.\n\nPawns can't benefit from multiple bonds at the same time, but if multiple Placaters create bonds with other pawns, then the benefit increases for each pair of pawns that have the Psionic Bond hediff.</description>
         <iconPath>Psionist/Empath/Gene_Psionist_PsionicBond</iconPath>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
@@ -112,7 +112,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_UnshakableTeam</defName>
         <label>unshakable team</label>
-        <description>Add a pawn to the Psionic Network. If this is the first time the Unifier is using this ability and they were not made part of the network by another Unifier, they also gain the Unshakable Team hediff.</description>
+        <description>Add a pawn to the Psionic Network. If this is the first time the Unifier is using this ability and they were not made part of the network by another Unifier, they automatically gain the Unshakable Team hediff.</description>
         <iconPath>Psionist/Empath/Gene_Psionist_UnshakableTeam</iconPath>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
@@ -145,7 +145,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_OneOfAMillion</defName>
         <label>one of a million</label>
-        <description>Reduces damage taken for a day based on the number of nearby ally pawns.</description>
+        <description>Reduces damage taken for a day based on the number of nearby ally pawns. If there aren't any allies nearby, then the buff ends early.</description>
         <iconPath>Psionist/Empath/Gene_Psionist_PsionicBond</iconPath>
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>

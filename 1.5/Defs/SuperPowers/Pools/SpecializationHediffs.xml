@@ -3,7 +3,7 @@
     <HediffDef>
         <defName>SHG_Fortress</defName>
 		<label>fortress</label>
-		<description>This super became an immovable object for some time, decreasing the damage taken from most sources. As the ability wears off, the effects will gradually become weaker. Once this ability has worn off, their durability pool will be drained for around 10 days, reducing the benefits the pawn would receive from both the base Superhero gene and Super Durability(or what the ability provided by Super Durability would give while active, if you're using activatables).</description>
+		<description>This super used the super durability specialization ability to become almost immune to damage temporarily.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<initialSeverity>1.0</initialSeverity>
@@ -11,7 +11,7 @@
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
-		        <label>durability pool mostly recovered</label>
+		        <label>mostly recovered</label>
                 <statFactors>
                     <IncomingDamageFactor>1.05</IncomingDamageFactor>
                 </statFactors>
@@ -23,7 +23,7 @@
             </li>
             <li>
                 <minSeverity>0.3</minSeverity>
-		        <label>durability pool filling</label>
+		        <label>recovering</label>
                 <statFactors>
                     <IncomingDamageFactor>1.25</IncomingDamageFactor>
                 </statFactors>
@@ -35,7 +35,7 @@
             </li>
             <li>
                 <minSeverity>0.5</minSeverity>
-		        <label>durability pool half-filled</label>
+		        <label>half-recovered</label>
                 <statFactors>
                     <IncomingDamageFactor>1.5</IncomingDamageFactor>
                 </statFactors>
@@ -47,7 +47,7 @@
             </li>
             <li>
                 <minSeverity>0.65</minSeverity>
-		        <label>durability pool recovering</label>
+		        <label>recovering</label>
                 <statFactors>
                     <IncomingDamageFactor>1.6</IncomingDamageFactor>
                 </statFactors>
@@ -59,7 +59,7 @@
             </li>
             <li>
                 <minSeverity>0.73</minSeverity>
-		        <label>durability pool recovering</label>
+		        <label>recovering</label>
                 <statFactors>
                     <IncomingDamageFactor>1.75</IncomingDamageFactor>
                 </statFactors>
@@ -71,7 +71,7 @@
             </li>
             <li>
                 <minSeverity>0.8</minSeverity>
-		        <label>durability pool recovering</label>
+		        <label>recovering</label>
                 <statFactors>
                     <IncomingDamageFactor>1.8</IncomingDamageFactor>
                 </statFactors>
@@ -83,7 +83,7 @@
             </li>
             <li>
                 <minSeverity>0.9</minSeverity>
-		        <label>durability pool base recovered</label>
+		        <label>base recovered</label>
                 <statFactors>
                     <IncomingDamageFactor>2</IncomingDamageFactor>
                 </statFactors>
@@ -95,7 +95,7 @@
             </li>
             <li>
                 <minSeverity>0.975</minSeverity>
-		        <label>durabiltiy pool drained</label>
+		        <label>drained</label>
                 <statFactors>
                     <IncomingDamageFactor>1.48</IncomingDamageFactor>
                 </statFactors>
@@ -232,7 +232,7 @@
     <HediffDef>
         <defName>SHG_Regenerator</defName>
 		<label>regenerating</label>
-		<description>This super is quickly regenerating wounds faster than they land. Their wounds heal far faster than normal, and will continue to do so until the main effects have worn off. However, once the regeneration ability has begun wearing off, their healing pool will be drained for around 10 days, reducing the benefits the pawn would receive from both the base Superhero gene and Super Healing(or that the ability provided by Super Healing would give, if you're using activatables).</description>
+		<description>This super used the super healing specialization ability to increase their regeneration considerably temporarily.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<initialSeverity>1.0</initialSeverity>
@@ -262,7 +262,7 @@
             </li>
             <li>
                 <minSeverity>0.3</minSeverity>
-		        <label>healing pool filling</label>
+		        <label>healing pool recovering</label>
                 <statFactors>
                     <ImmunityGainSpeed>0.6</ImmunityGainSpeed>
                     <InjuryHealingFactor>0.6</InjuryHealingFactor>
@@ -284,7 +284,7 @@
             </li>
             <li>
                 <minSeverity>0.5</minSeverity>
-		        <label>healing pool half-filled</label>
+		        <label>healing pool half-recovered</label>
                 <statFactors>
                     <ImmunityGainSpeed>0.5</ImmunityGainSpeed>
                     <InjuryHealingFactor>0.5</InjuryHealingFactor>
@@ -375,7 +375,7 @@
             </li>
             <li>
                 <minSeverity>0.9</minSeverity>
-		        <label>healing pool base recovered</label>
+		        <label>base recovered</label>
                 <statFactors>
                     <ImmunityGainSpeed>0.1</ImmunityGainSpeed>
                     <InjuryHealingFactor>0.1</InjuryHealingFactor>
@@ -398,7 +398,7 @@
             </li>
             <li>
                 <minSeverity>0.975</minSeverity>
-		        <label>healing pool drained</label>
+		        <label>drained</label>
                 <statFactors>
                     <ImmunityGainSpeed>0.333</ImmunityGainSpeed>
                     <InjuryHealingFactor>0.333</InjuryHealingFactor>
@@ -482,7 +482,7 @@
             </li>
             <li>
                 <minSeverity>0.3</minSeverity>
-		        <label>perception pool filling</label>
+		        <label>perception pool recovering</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.75</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.75</MeleeDodgeChance>
@@ -501,7 +501,7 @@
             </li>
             <li>
                 <minSeverity>0.5</minSeverity>
-		        <label>perception pool half-filled</label>
+		        <label>perception pool half-recovered</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.5</MeleeDodgeChance>
@@ -577,7 +577,7 @@
             </li>
             <li>
                 <minSeverity>0.9</minSeverity>
-		        <label>perception pool base recovered</label>
+		        <label>base recovered</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.333</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.333</MeleeDodgeChance>
@@ -596,7 +596,7 @@
             </li>
             <li>
                 <minSeverity>0.975</minSeverity>
-		        <label>perception pool drained</label>
+		        <label>drained</label>
                 <statOffsets>
                     <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
                     <MeleeDodgeChance>-1.5</MeleeDodgeChance>
@@ -743,7 +743,7 @@
             </li>
             <li>
                 <minSeverity>0.3</minSeverity>
-		        <label>persuasion pool filling</label>
+		        <label>persuasion pool recovering</label>
                 <statFactors>
                     <PawnBeauty>0.7</PawnBeauty>
                     <SocialImpact>0.8</SocialImpact>
@@ -763,7 +763,7 @@
             </li>
             <li>
                 <minSeverity>0.5</minSeverity>
-		        <label>persuasion pool half-filled</label>
+		        <label>persuasion pool half-recovered</label>
                 <statFactors>
                     <PawnBeauty>0.6</PawnBeauty>
                     <SocialImpact>0.7</SocialImpact>
@@ -843,7 +843,7 @@
             </li>
             <li>
                 <minSeverity>0.9</minSeverity>
-		        <label>persuasion pool base recovered</label>
+		        <label>base recovered</label>
                 <statFactors>
                     <PawnBeauty>0.2</PawnBeauty>
                     <SocialImpact>0.333</SocialImpact>
@@ -863,7 +863,7 @@
             </li>
             <li>
                 <minSeverity>0.975</minSeverity>
-		        <label>persuasion pool drained</label>
+		        <label>drained</label>
                 <statFactors>
                     <PawnBeauty>0.2</PawnBeauty>
                     <SocialImpact>0.333</SocialImpact>
@@ -899,7 +899,7 @@
     <HediffDef>
         <defName>SHG_Snapshot</defName>
 		<label>snapshot</label>
-		<description>This super is utilizing their innate accuracy to shoot even faster and more accurately than before. As the ability wears off, the effects will gradually become weaker. Once this ability has worn off, their precision pool will be drained for around 10 days, reducing the benefits the pawn would receive from both the base Superhero gene and Super Precision(or what the ability provided by Super Precision would give while active, if you're using activatables).</description>
+		<description>This super used the super precision specialization ability to increase their accuracy and shooting speed temporarily.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<initialSeverity>1.0</initialSeverity>
@@ -927,7 +927,7 @@
             </li>
             <li>
                 <minSeverity>0.3</minSeverity>
-		        <label>precision pool filling</label>
+		        <label>precision pool recovering</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.7</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.7</MeleeDodgeChance>
@@ -947,7 +947,7 @@
             </li>
             <li>
                 <minSeverity>0.5</minSeverity>
-		        <label>precision pool half-filled</label>
+		        <label>precision pool half-recovered</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.5</MeleeDodgeChance>
@@ -1031,7 +1031,7 @@
             </li>
             <li>
                 <minSeverity>0.9</minSeverity>
-		        <label>precision pool base recovered</label>
+		        <label>base recovered</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.2</MeleeDodgeChance>
@@ -1052,7 +1052,7 @@
             </li>
             <li>
                 <minSeverity>0.975</minSeverity>
-		        <label>precision pool drained</label>
+		        <label>drained</label>
                 <statOffsets>
                     <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
                     <MeleeDodgeChance>-1.5</MeleeDodgeChance>
@@ -1187,7 +1187,7 @@
     <HediffDef>
         <defName>SHG_TitanStrength</defName>
         <label>titan strength</label>
-        <description>This super utilized its Super Strength in one big burst, dealing massive damage to anything that suffers their wrath. As the ability wears off, the effects will gradually become weaker. Once this ability has worn off, their precision pool will be drained for around 10 days, reducing the benefits the pawn would receive from both the base Superhero gene and Super Precision(or what the ability provided by Super Precision would give while active, if you're using activatables).</description>
+        <description>This super used the super strength specialization ability to increase their melee damage to unbelievable heights temporarily.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
 		<initialSeverity>1.0</initialSeverity>
@@ -1208,7 +1208,7 @@
             </li>
             <li>
                 <minSeverity>0.3</minSeverity>
-		        <label>strength pool filling</label>
+		        <label>strength pool recovering</label>
                 <statFactors>
                     <CarryingCapacity>0.7</CarryingCapacity>
                     <MeleeDamageFactor>0.7</MeleeDamageFactor>
@@ -1222,7 +1222,7 @@
             </li>
             <li>
                 <minSeverity>0.5</minSeverity>
-		        <label>strength pool half-filled</label>
+		        <label>strength pool half-recovered</label>
                 <statFactors>
                     <CarryingCapacity>0.5</CarryingCapacity>
                     <MeleeDamageFactor>0.5</MeleeDamageFactor>
@@ -1278,7 +1278,7 @@
             </li>
             <li>
                 <minSeverity>0.9</minSeverity>
-		        <label>strength pool base recovered</label>
+		        <label>base recovered</label>
                 <statFactors>
                     <CarryingCapacity>0.01</CarryingCapacity>
                     <MeleeDamageFactor>0.05</MeleeDamageFactor>
@@ -1292,7 +1292,7 @@
             </li>
             <li>
                 <minSeverity>0.975</minSeverity>
-		        <label>strength pool drained</label>
+		        <label>drained</label>
                 <statFactors>
                     <MeleeDamageFactor>0.017</MeleeDamageFactor>
                     <CarryingCapacity>0.01</CarryingCapacity>

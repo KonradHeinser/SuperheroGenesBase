@@ -3,7 +3,7 @@
     <GeneDef ParentName="SuperPowersPsychicTyrantBase">
         <defName>SHG_Psionist_Tyrant</defName>
         <label>psionic tyrant</label>
-        <description>Psionic Tyrants have an innate desire to take everything they desire. They are capable of infusing their will into a shout, forcing others to obey their desires.\n\nAny number of Superhero Psionic paths can be taken at the same time. The only limiting factor is metabolic efficiency.</description>
+        <description>Psionic Tyrants have an innate desire to take everything they desire, and can use their powers to make it so.</description>
         <prerequisite>SHG_Archetypes_Psionist</prerequisite>
         <iconPath>Psionist/Tyrant/Gene_Psionist_Tyrant</iconPath>
         <displayOrderInCategory>0</displayOrderInCategory>
@@ -26,7 +26,7 @@
     <GeneDef ParentName="SuperPowersPsychicTyrantBase">
         <defName>SHG_Psionist_Dread</defName>
         <label>dread</label>
-        <description>This gene gives access to an ability that causes a pawn to feel terrified for an hour.\n\nFear causes heart rate to increase while also creating a chance for the pawn to act irrationally and, in extreme cases, can cause heart attacks.</description>
+        <description>This gene gives access to an ability that causes a pawn to feel terrified for an hour.</description>
         <prerequisite>SHG_Psionist_Tyrant</prerequisite>
         <iconPath>Psionist/Tyrant/Gene_Psionist_Dread</iconPath>
         <displayOrderInCategory>0.1</displayOrderInCategory>
@@ -42,7 +42,7 @@
     <GeneDef ParentName="SuperPowersPsychicTyrantBase">
         <defName>SHG_Psionist_GraspHeart</defName>
         <label>grasp heart</label>
-        <description>This gene gives access to an ability that causes a pawn to feel like their heart is being crushed by the Tyrant. Their brain believes it so much that their heart begins to malfunction, limiting blood pumping and causing a risk of heart attack for an hour.</description>
+        <description>This gene gives access to an ability that causes a pawn to feel like their heart is being crushed by the Tyrant.</description>
         <prerequisite>SHG_Psionist_Tyrant</prerequisite>
         <iconPath>Psionist/Tyrant/Gene_Psionist_GraspHeart</iconPath>
         <displayOrderInCategory>0.2</displayOrderInCategory>
@@ -154,7 +154,7 @@
     <GeneDef ParentName="SuperPowersPsychicTyrantBase">
         <defName>SHG_Psionist_Despair</defName>
         <label>despair</label>
-        <description>This gene gives access to an ability that causes a group of pawns to feel terrified for half an hour.\n\nFear causes heart rate to increase while also creating a chance for the pawn to act irrationally and, in extreme cases, can cause heart attacks.</description>
+        <description>This gene gives access to an ability that causes a group of pawns to feel terrified for half an hour.</description>
         <prerequisite>SHG_Psionist_TyrantCorruptor</prerequisite>
         <iconPath>Psionist/Tyrant/Gene_Psionist_Despair</iconPath>
         <displayOrderInCategory>5.4</displayOrderInCategory>
@@ -170,7 +170,7 @@
     <GeneDef ParentName="SuperPowersPsychicTyrantBase">
         <defName>SHG_Psionist_TyrantConqueror</defName>
         <label>psionic conqueror</label>
-        <description>No matter what the conqueror wants, they will always find a way to get it as long as they are alive. Breaking the wills of others is a simple task for them, and something they often enjoy doing.</description>
+        <description>No matter what the conqueror wants, they will always find a way to get it as long as they are alive, and if they get to crush some people on the way, it's even better.</description>
         <prerequisite>SHG_Psionist_TyrantCorruptor</prerequisite>
         <iconPath>Psionist/Tyrant/Gene_Psionist_TyrantConqueror</iconPath>
         <displayOrderInCategory>10</displayOrderInCategory>
@@ -190,7 +190,7 @@
     <GeneDef ParentName="SuperPowersPsychicTyrantBase">
         <defName>SHG_Psionist_EmpiresWillFall</defName>
         <label>empires will fall</label>
-        <description>This gene gives access to an extremely powerful ability that can drive a large portion of the people on the map into a murderous rampage.\n\nThis ability acts like a super large Neuroquake. It causes a goodwill loss with nearby factions, and the standard Neuroquake mood penalty. Unlike the standard Neuroquake, the Conqueror will gain bonuses for using this ability instead of falling unconscious.\n\nBecause of how strong it is, every settlement near the colony will know that a powerful tyrant is active in the area, and a large scale war will likely be inevitable.</description>
+        <description>This gene gives access to a powerful ability that can drive a large portion of the people on the map into a murderous rampage.</description>
         <prerequisite>SHG_Psionist_TyrantConqueror</prerequisite>
         <iconPath>Psionist/Tyrant/Gene_Psionist_EmpiresWillFall</iconPath>
         <displayOrderInCategory>10.1</displayOrderInCategory>
@@ -220,7 +220,7 @@
     <GeneDef ParentName="SuperPowersPsychicTyrantBase">
         <defName>SHG_Psionist_GazeIntoTheAbyss</defName>
         <label>gaze into the abyss</label>
-        <description>This gene gives access to an ability that causes a group of pawns to become paralyzed with fear for half an hour.\n\nFear causes heart rate to increase while also creating a chance for the pawn to act irrationally and, in extreme cases, can cause heart attacks.</description>
+        <description>This gene gives access to an ability that causes a group of pawns to become paralyzed with fear for half an hour.</description>
         <prerequisite>SHG_Psionist_TyrantCorruptor</prerequisite>
         <iconPath>Psionist/Tyrant/Gene_Psionist_GazeIntoTheAbyss</iconPath>
         <displayOrderInCategory>10.3</displayOrderInCategory>

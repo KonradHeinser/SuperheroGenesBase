@@ -3,7 +3,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_FortifyPosition</defName>
         <label>fortify position</label>
-        <description>Raise a series of temporary walls around the Commander to provide cover for their squad. \n\nAll terrain within the radius must be standable. This means that things like trees, buildings, and chunks will disrupt this ability, but things mud and shallow water will not.</description>
+        <description>Raise a series of temporary walls around the Commander to provide cover for their squad.\n\nAll terrain within the radius must be standable. This means that things like trees, buildings, and chunks will disrupt this ability, but things mud and shallow water will not.</description>
         <iconPath>Psionist/Commander/Gene_Psionist_FortifyPosition</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <targetRequired>False</targetRequired>
@@ -112,7 +112,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_SharedBurden</defName>
         <label>shared burden</label>
-        <description>Form a psychic link between caster and target, so that gain and loss of neural heat is shared between both equally. The link lasts for some time, but will break if the two move far apart. A Commander can only maintain one link at a time.\n\nThis can be used on non-psychic colonists, but the non-psychic will have a very low heat limit and their focus bar will look strange due to them not being psychic. I don't recommend it due to the low heat limit, but the option is available.</description>
+        <description>Form a psychic link between caster and target, so that gain and loss of neural heat is shared between both equally. The link breaks if the two move far apart. A Commander can only maintain one link at a time.\n\nThis can be used on non-psychic colonists, but the non-psychic will have a very low heat limit and their focus bar will look strange due to them not being psychic. I don't recommend it due to the low heat limit, but the option is available.</description>
         <iconPath>Psionist/Commander/Gene_Psionist_SharedBurden</iconPath>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
@@ -269,7 +269,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_AssassinSquad</defName>
         <label>assassin squad</label>
-        <description>Release a psychic field that makes both the General and nearby allies invisible for a couple hours. The allies must be near the General to gain the benefits.</description>
+        <description>Release a psychic field that makes both the General and nearby allies invisible for a couple hours.</description>
         <iconPath>Psionist/Commander/Gene_Psionist_AssassinSquad</iconPath>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <targetRequired>False</targetRequired>
@@ -299,7 +299,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_MassLevitation</defName>
         <label>mass levitation</label>
-        <description>Release a psychic field that makes both the General and nearby allies levitate for a couple hours. The allies must be near the General to gain the benefits.</description>
+        <description>Release a psychic field that makes both the General and nearby allies levitate for a couple hours.</description>
         <iconPath>Psionist/Commander/Gene_Psionist_MassLevitation</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
@@ -505,7 +505,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_MassProtection</defName>
         <label>mass protection</label>
-        <description>Create a large shield that stops all projectiles from hostile targets from passing. This will not stop people, and will cause items to explode on impact with the shield. This will last for around 4 hours.</description>
+        <description>Create a large shield that stops all projectiles from hostile targets from passing. This will not stop people, and can cause items to explode on impact with the shield. This will last for around 4 hours.</description>
         <iconPath>Psionist/Commander/Gene_Psionist_MassProtection</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <targetRequired>False</targetRequired>

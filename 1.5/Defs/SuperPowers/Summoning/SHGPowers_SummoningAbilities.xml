@@ -148,7 +148,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonEnhancedToxipotato</defName>
         <label>summon enhanced toxipotato</label>
-        <description>Summons a super enhanced toxipotato plant at a location. This plant will be able to grow even if it's placed on stone flooring, and will provide 10 times its normal yield.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. This issue should just be graphical though.\n\nWARNING: This plant still requires the ground to be toxic, and if it is not then the plant will immediately die.</description>
+        <description>Summons a super enhanced toxipotato plant at a location. This plant will be able to grow even if it's placed on stone flooring, and will provide 10 times its normal yield.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. This issue should just be graphical though.\n\nWARNING: This plant still requires the ground to be toxic, and if it is not then the plant will die.</description>
         <iconPath>Things/Plant/Toxipotato/ToxipotatoA</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -190,7 +190,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonMineableWood</defName>
         <label>summon wood pillar</label>
-        <description>Summons a pillar of wood at a location that is so thick it requires a miner come to take it apart bit by bit.\n\nThis can be used as a method of getting wood without chopping down trees or planting something that gives wood.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of wood at a location that is so thick it requires a miner come to take it apart bit by bit.\n\nThis can be used as a method of getting wood without chopping down trees or planting something that gives wood.</description>
         <iconPath>Things/Item/Resource/WoodLog/WoodLog_c</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -255,7 +255,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonSandstone</defName>
         <label>summon sandstone</label>
-        <description>Summons a pillar of sandstone at a location. This stone will always give 9 chunks, and cannot be smoothed down.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of sandstone at a location. This stone will always give 9 chunks, and cannot be smoothed down.</description>
         <iconPath>Summons/Sandstone_blocks</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -268,7 +268,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonGranite</defName>
         <label>summon granite</label>
-        <description>Summons a pillar of granite at a location. This stone will always give 9 chunks, and cannot be smoothed down.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of granite at a location. This stone will always give 9 chunks, and cannot be smoothed down.</description>
         <iconPath>Summons/Granite_blocks</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -281,7 +281,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonLimestone</defName>
         <label>summon limestone</label>
-        <description>Summons a pillar of limestone at a location. This stone will always give 9 chunks, and cannot be smoothed down.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of limestone at a location. This stone will always give 9 chunks, and cannot be smoothed down.</description>
         <iconPath>Summons/Limestone_blocks</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -294,7 +294,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonSlate</defName>
         <label>summon slate</label>
-        <description>Summons a pillar of slate at a location. This stone will always give 9 chunks, and cannot be smoothed down.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of slate at a location. This stone will always give 9 chunks, and cannot be smoothed down.</description>
         <iconPath>Summons/Slate_blocks</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -307,7 +307,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonMarble</defName>
         <label>summon marble</label>
-        <description>Summons a pillar of marble at a location. This stone will always give 9 chunks, and cannot be smoothed down.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of marble at a location. This stone will always give 9 chunks, and cannot be smoothed down.</description>
         <iconPath>Summons/Marble_blocks</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -320,7 +320,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonMineableSteel</defName>
         <label>summon steel</label>
-        <description>Summons a pillar of steel at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of steel at a location.</description>
         <iconPath>Things/Item/Resource/Steel/Steel_c</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -333,7 +333,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonMineableSilver</defName>
         <label>summon silver</label>
-        <description>Summons a pillar of silver at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of silver at a location.</description>
         <iconPath>Things/Item/Resource/Silver/Silver_c</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -346,7 +346,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonMineableGold</defName>
         <label>summon gold</label>
-        <description>Summons a pillar of gold at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of gold at a location.</description>
         <iconPath>Things/Item/Resource/Gold/Gold_c</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -359,7 +359,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonMineableUranium</defName>
         <label>summon uranium</label>
-        <description>Summons a pillar of uranium at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of uranium at a location.</description>
         <iconPath>Things/Item/Resource/Uranium/Uranium_c</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -372,7 +372,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonMineablePlasteel</defName>
         <label>summon plasteel</label>
-        <description>Summons a pillar of plasteel at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of plasteel at a location.</description>
         <iconPath>Things/Item/Resource/Plasteel/Plasteel_c</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -385,7 +385,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonMineableJade</defName>
         <label>summon jade</label>
-        <description>Summons a pillar of jade at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of jade at a location.</description>
         <iconPath>Things/Item/Resource/Jade/Jade_c</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -398,7 +398,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonMineableComponentIndustrial</defName>
         <label>summon components</label>
-        <description>Summons a pillar of useless stone with some components in it at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of useless stone with some components in it at a location.</description>
         <iconPath>Things/Item/Resource/ComponentIndustrial/ComponentIndustrial</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -411,7 +411,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonMineableComponentSpacer</defName>
         <label>summon advanced components</label>
-        <description>Summons a pillar of useless stone with some advanced components in it at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of useless stone with some advanced components in it at a location.</description>
         <iconPath>Things/Item/Resource/ComponentSpacer/ComponentSpacer</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">

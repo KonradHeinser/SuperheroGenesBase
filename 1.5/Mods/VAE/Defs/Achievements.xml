@@ -87,7 +87,7 @@
 	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
 		<defName>SHG_WhyIsThereALimit</defName>
 		<label>Why is There a Limit?</label>
-		<description>Build an Unshakable Team with a Psionic Unifier and wonder why it caps at 20 people.</description>
+		<description>Start an Unshakable Team with a Psionic Unifier and wonder why it caps at 20 people.</description>
 		<tracker Class="AchievementsExpanded.HediffTracker">
 			<def>SHG_Psionist_UnshakableTeam</def>
 			<count>1</count>
@@ -134,7 +134,7 @@
 		<points>25</points>
 	</AchievementsExpanded.AchievementDef>
 
-	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
 		<defName>SHG_ItsLikeRemovingAndRegrowingALimb</defName>
 		<label>It's Like Removing and Regrowing a Limb</label>
 		<description>Use the Hemomorph's Starfish split ability. Please don't try this at home.</description>
@@ -167,7 +167,7 @@
 			</defs>
 		</tracker>
 		<texPath>Hemomancer/Thief/Gene_Hemomancer_Thief</texPath>
-		<points>25</points>
+		<points>40</points>
 	</AchievementsExpanded.AchievementDef>
 
 	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
@@ -211,6 +211,6 @@
 			</defs>
 		</tracker>
 		<texPath>Hemomancer/Warrior/Gene_Hemomancer_TrueRegeneration</texPath>
-		<points>75</points>
+		<points>50</points>
 	</AchievementsExpanded.AchievementDef>
 </Defs>

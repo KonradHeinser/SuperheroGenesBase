@@ -3,7 +3,7 @@
     <HediffDef>
         <defName>SecondHeart</defName>
         <label>second heart</label>
-        <description>This pawn has a second heart that will be consumed to revive a pawn from death once. Once the second heart is gone, the lungs will automatically reshape to work at a normal capacity, then gradually shrink again as the second heart begins regrowing.\n\nIf the second heart is not fully formed, then this pawn will find that death waits for no man.</description>
+        <description>This pawn has a second heart that will be consumed to revive a pawn from death once. Once the second heart is gone, the lungs will automatically reshape to work at a normal capacity, then gradually shrink again as the second heart begins regrowing.</description>
         <hediffClass>SuperHeroGenesBase.Hediff_SecondHeart</hediffClass>
         <isBad>false</isBad>
         <everCurableByItem>false</everCurableByItem>
@@ -362,7 +362,7 @@
     <HediffDef>
         <defName>SHG_WateryFoam</defName>
         <label>watery foam</label>
-        <description>This pawn was hit by a super's pressurized water attack that attached a blob around the cut that sticks to the skin and creates a firefoam-like coating over them, making them feel uncomfortable while also preventing them from catching fire briefly. This discomfort can stack with the soaking wet thought.</description>
+        <description>This pawn was hit by a super's pressurized water attack that attached a blob around the cut that sticks to the skin and creates a firefoam-like coating over them, making them feel uncomfortable while also preventing them from catching fire briefly.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
@@ -382,7 +382,7 @@
         <defName>SHG_BloodPillHigh</defName>
         <hediffClass>Hediff_High</hediffClass>
         <label>blood pill</label>
-        <description>This stops the pawn from suffering from new wound infections, and enhances their ability to heal wounds and fight off all infections.</description>
+        <description>This stops the pawn from suffering from new wound infections, and enhances their ability to heal wounds and fight off existing infections.</description>
         <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
         <scenarioCanAdd>true</scenarioCanAdd>
         <maxSeverity>1.0</maxSeverity>

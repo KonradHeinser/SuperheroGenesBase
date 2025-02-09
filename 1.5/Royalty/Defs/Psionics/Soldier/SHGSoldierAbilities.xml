@@ -43,7 +43,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_PsionicFlight</defName>
         <label>world travel</label>
-        <description>Allows the pawn to launch themselves to a distant location using a burst of psionic energy. When they arrive at their destination they'll need to take a brief break to reorient themselves and determine where they need to go next. The super will be unable to fly if their caravan's mass exceeds their maximum carry weight, and may need to seperate from a caravan if they want to move quickly.\n\nThe more psychic sensitivity the psionist has, the further they can travel in one burst. Anything that temporarily alters psychic sensitivity will impact the maximum range by the same amount.\n\nDue to potential bugs and performance issues, this ability won't allow pawns to fly together, and their speed is statically set to be the same as transport pods. I'm not sure if I'll be able to fix either of the issues, but I'm hopeful on the second one eventually being solved.</description>
+        <description>Allows the pawn to launch themselves to a distant location using a burst of psionic energy. When they arrive at their destination they'll need to take a brief break to reorient themselves and determine where they need to go next. The super will be unable to fly if their caravan's mass exceeds their maximum carry weight, and may need to seperate from a caravan if they want to move quickly.\n\nThe more psychic sensitivity the psionist has, the further they can travel in one burst. Anything that temporarily alters psychic sensitivity will impact the maximum range by the same amount.\n\nDue to potential bugs and performance issues, this ability won't allow pawns to fly together, and their speed is statically set to be the same as transport pods.</description>
         <iconPath>Psionist/Soldier/Gene_Psionist_PsionicFlight</iconPath>
         <targetWorldCell>True</targetWorldCell>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -85,7 +85,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_Stasis</defName>
         <label>stasis</label>
-        <description>Temporarily put a target into stasis for an hour by creating a bubble of dense psychic energy around them. This bubble will stop all non-explosive projectiles, protect against almost all physical attacks, and slowly heal the pawn inside. While in stasis, the pawn will be unable to do anything, but will also have their rest and food needs stopped.\n\nThis can be used on enemies to temporarily take them out of the fight.\n\nWhile the ability will allow you to attempt to put a psychically deaf pawn in stasis, the ability will fail. No shield will be made, the pawn will not be stunned, and they will not begin regenerating. Being able to target the pawn is a Rimworld bug that I can't fix.</description>
+        <description>Temporarily put a target into stasis for an hour by creating a bubble of dense psychic energy around them. This bubble will stop all non-explosive projectiles, protect against almost all physical attacks, and slowly heal the pawn inside. While in stasis, the pawn will be unable to do anything, but will also have their rest and food needs stopped.</description>
         <iconPath>Psionist/Soldier/Gene_Psionist_Stasis</iconPath>
         <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -105,6 +105,14 @@
             </targetParams>
         </verbProperties>
         <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityAbilityValidator">
+                <targetStatLimiters>
+                    <li>
+                        <minStatValue>0.001</minStatValue>
+                        <stat>PsychicSensitivity</stat>
+                    </li>
+                </targetStatLimiters>
+            </li>
             <li Class="CompProperties_AbilitySpawn">
                 <thingDef>SHG_Psionist_PsionicShield</thingDef>
                 <psychic>True</psychic>
@@ -158,7 +166,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_Entrench</defName>
         <label>entrench</label>
-        <description>Infused your body with dense psionic energy that stops your movement, but stabilizes your body and provides some protection.\n\nDue to how the game handles movement, your pawn's movement will not be set to 0, but 0.15.</description>
+        <description>Infused your body with dense psionic energy that stops your movement, but stabilizes your body and provides some protection.\n\nDue to how the game handles movement, your pawn's movement will not be set to 0, but 0.15, despite what the hediff says.</description>
         <iconPath>Psionist/Soldier/Gene_Psionist_Entrench</iconPath>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <targetRequired>False</targetRequired>

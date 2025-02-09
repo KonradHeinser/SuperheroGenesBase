@@ -93,7 +93,7 @@
     <HediffDef ParentName="SHG_AntiPowerMinorBase">
         <defName>SHG_AntiPower_Durability_MinorAura</defName>
         <label>minor anti-durability aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious for 12 hours.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
@@ -133,7 +133,7 @@
     <HediffDef ParentName="SHG_AntiPowerMajorBase">
         <defName>SHG_AntiPower_Durability_MajorAura</defName>
         <label>major anti-durability aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
@@ -174,7 +174,7 @@
     <HediffDef ParentName="SHG_AntiPowerMinorBase">
         <defName>SHG_AntiPower_Healing_MinorAura</defName>
         <label>minor anti-healing aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious for 12 hours.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
@@ -214,7 +214,7 @@
     <HediffDef ParentName="SHG_AntiPowerMajorBase">
         <defName>SHG_AntiPower_Healing_MajorAura</defName>
         <label>major anti-healing aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
@@ -262,7 +262,7 @@
     <HediffDef ParentName="SHG_AntiPowerMinorBase">
         <defName>SHG_AntiPower_Intelligence_MinorAura</defName>
         <label>minor anti-intelligence aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious for 12 hours.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
@@ -298,7 +298,7 @@
     <HediffDef ParentName="SHG_AntiPowerMajorBase">
         <defName>SHG_AntiPower_Intelligence_MajorAura</defName>
         <label>major anti-intelligence aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
@@ -334,7 +334,7 @@
     <HediffDef ParentName="SHG_AntiPowerMinorBase">
         <defName>SHG_AntiPower_Perception_MinorAura</defName>
         <label>minor anti-perception aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious for 12 hours.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
@@ -372,7 +372,7 @@
     <HediffDef ParentName="SHG_AntiPowerMajorBase">
         <defName>SHG_AntiPower_Perception_MajorAura</defName>
         <label>major anti-perception aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
@@ -417,7 +417,7 @@
     <HediffDef ParentName="SHG_AntiPowerMinorBase">
         <defName>SHG_AntiPower_Persuasion_MinorAura</defName>
         <label>minor anti-persuasion aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious for 12 hours.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
@@ -454,7 +454,7 @@
     <HediffDef ParentName="SHG_AntiPowerMajorBase">
         <defName>SHG_AntiPower_Persuasion_MajorAura</defName>
         <label>major anti-persuasion aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
@@ -499,7 +499,7 @@
     <HediffDef ParentName="SHG_AntiPowerMinorBase">
         <defName>SHG_AntiPower_Precision_MinorAura</defName>
         <label>minor anti-precision aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious for 12 hours.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
@@ -538,7 +538,7 @@
     <HediffDef ParentName="SHG_AntiPowerMajorBase">
         <defName>SHG_AntiPower_Precision_MajorAura</defName>
         <label>major anti-precision aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
@@ -581,7 +581,7 @@
     <HediffDef ParentName="SHG_AntiPowerMinorBase">
         <defName>SHG_AntiPower_Speed_MinorAura</defName>
         <label>minor anti-speed aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious for 12 hours.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
@@ -619,7 +619,7 @@
     <HediffDef ParentName="SHG_AntiPowerMajorBase">
         <defName>SHG_AntiPower_Speed_MajorAura</defName>
         <label>major anti-speed aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
@@ -667,7 +667,7 @@
     <HediffDef ParentName="SHG_AntiPowerMinorBase">
         <defName>SHG_AntiPower_Strength_MinorAura</defName>
         <label>minor anti-strength aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict a small part of their burden upon everyone in a small area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious for 12 hours.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious for 12 hours.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
@@ -703,7 +703,7 @@
     <HediffDef ParentName="SHG_AntiPowerMajorBase">
         <defName>SHG_AntiPower_Strength_MajorAura</defName>
         <label>major anti-strength aura</label>
-        <description>This super has weaponized the suppression their superhero gene suffers from to inflict their burden upon everyone in a large area around them. The aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
+        <description>This aura will affect all pawns, regardless of the genes they have, though pawns with unsuper and antisuper versions of this ability are less likely to care about the effects due to their already lowered stats. The burden of this ability will render the super unconscious after several hours, though their aura will stick around for around 10 days.</description>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>

@@ -83,7 +83,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_AuraBurst</defName>
         <label>aura burst</label>
-        <description>Increases the debuffer's aura range to 22.</description>
+        <description>Increases the debuffer's aura range to 22 temporarily.</description>
         <iconPath>Psionist/Debuffer/Gene_Psionist_AuraBurst</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
@@ -116,7 +116,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_ChannelAura</defName>
         <label>channel aura</label>
-        <description>Increases the debuffer's aura range to 37, stuns the caster, and gives them a psychic shield. This only protects against mundane ranged attacks, so it is recommended to have at least one wall between the Debilitator and their enemies.</description>
+        <description>Increases the debuffer's aura range to 37, stuns the caster, and gives them a psychic shield. This only protects against mundane ranged attacks, so it is recommended to have at least one wall between the Debilitator and their enemies. This stacks multiplicatively with aura burst.</description>
         <iconPath>Psionist/Debuffer/Gene_Psionist_ChannelAura</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
@@ -156,7 +156,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_RuinTheWorld</defName>
         <label>ruin the world</label>
-        <description>Increases the debuffer's aura range to 75, stuns the caster, and gives them a psychic shield. This only protects against mundane ranged attacks, so it is recommended to have at least one wall between the Debilitator and their enemies.</description>
+        <description>Increases the debuffer's aura range to 75, stuns the caster, and gives them a psychic shield. This only protects against mundane ranged attacks, so it is recommended to have at least one wall between the Debilitator and their enemies. This stacks multiplicatively with aura burst.</description>
         <iconPath>Psionist/Debuffer/Gene_Psionist_RuinTheWorld</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>

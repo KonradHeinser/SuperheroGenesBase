@@ -31,7 +31,7 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_HeroicLeap</defName>
         <label>heroic leap</label>
-        <description>Carriers of this gene are able to make long leaps that cover a lot of ground, usually involving a three-point landing at the end.\n\nIn glitterworld cities, use of this ability was banned due to multiple accidents involving a super breaking their legs or accidentally landing on someone.</description>
+        <description>Carriers of this gene are able to make long leaps that cover a lot of ground, usually involving a three-point landing at the end.\n\nIn glitterworld cities, use of this ability was banned due to multiple accidents involving a super accidentally landing on someone.</description>
         <iconPath>UI/Icons/Genes/Gene_LongJumpLegs</iconPath>
         <abilities>
             <li>SHG_HeroicLeap</li>
@@ -65,7 +65,7 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_SealWounds</defName>
         <label>seal wounds</label>
-        <description>Carriers of this gene are able to almost perfectly seal the wounds of a nearby pawn. This will not restore lost blood or completely heal the wound, but it will stop bleeding and aid the healing process greatly.\n\nRecently this ability is often overlooked on the battlefield due to the existence of superclotting and regeneration genes, but it was originally designed to create super medics who would use this in combination with the resurrection power to create an unstoppable army.</description>
+        <description>Carriers of this gene are able to almost perfectly seal the wounds of a nearby pawn. This will not restore lost blood or completely heal the wound, but it will stop bleeding and aid the healing process greatly.</description>
         <iconPath>UI/Icons/Genes/Gene_Coagulate</iconPath>
         <abilities>
             <li>SHG_SealWounds</li>
@@ -93,7 +93,7 @@
     <GeneDef ParentName="SuperPowersOffensiveBase">
         <defName>SHG_ThrowSpike</defName>
         <label>throw spike</label>
-        <description>Carriers of this gene are able to summon a spike that is launched at a larget at high speeds.\n\nWhile its damage is relatively low, the fact that it is extremely accurate and has exceptional armor penetration makes it very dangerous.</description>
+        <description>Carriers of this gene are able to summon a spike that is launched at a larget at high speeds. This spike has low damage but high armor penetration.</description>
         <iconPath>Powers/Gene_ThrowSpike</iconPath>
         <abilities>
             <li>SHG_ThrowSpike</li>
@@ -117,7 +117,7 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Revive</defName>
         <label>revive</label>
-        <description>Supers with this gene are able to revive a nearby pawn.\n\nJust as the superhero gene frequently makes people believe the super is a demigod or god, this ability frequently makes people believe that this super is some sort of demon or other undefined evil their religion fights.</description>
+        <description>Supers with this gene are able to revive a nearby pawn and be the god of a cult.</description>
         <iconPath>UI/Icons/Genes/Gene_Resurrect</iconPath>
         <abilities>
             <li>SHG_Revive</li>
@@ -142,7 +142,7 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Invisibility</defName>
         <label>invisibility</label>
-        <description>Supers with this gene are able to turn invisible for a short time every few hours.\n\nWhile there are many who worry that supers with this gene are going to sneak into places they shouldn't be, countless studies have found that it is far more likely that they prefer to do harmless jump scares.</description>
+        <description>Supers with this gene are able to turn invisible for a short time every few hours.</description>
         <iconPath>Powers/Gene_Invisibility</iconPath>
         <biostatMet>-3</biostatMet>
         <abilities>
@@ -166,7 +166,7 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Blink</defName>
         <label>blink</label>
-        <description>Supers with this gene are able to blink themselves away from a location. The destination is a random point between 20 and 30 tiles away. Using this to get out of danger will either work very well, or very poorly.\n\nThis ability was initially developed when a super with a psylink was spooked during some testing. After discovering how well teleportation abilities worked with the superhero gene, military scientists sought to create a controlled version of this ability.</description>
+        <description>Supers with this gene are able to blink themselves away from a location to a random point between 20 and 30 tiles away. Using this to get out of danger will either work very well, or very poorly.</description>
         <iconPath>Powers/Gene_Blink</iconPath>
         <displayOrderInCategory>-0.5</displayOrderInCategory>
         <abilities>
@@ -192,7 +192,7 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Teleport</defName>
         <label>teleportation</label>
-        <description>Carriers of this gene are able to teleport themselves and any other living thing a short distance away.\n\nExpanding on the super's ability to randomly teleport, this was used as a way to get melee focused supers behind enemy lines. Sometimes middlemen were completely removed, and the super would teleport themselves into enemy lines, blinking out the moment things began going poorly.</description>
+        <description>Carriers of this gene are able to teleport themselves and any other living thing a short distance away.</description>
         <iconPath>Powers/Gene_Teleport</iconPath>
         <prerequisite>SHG_Blink</prerequisite>
         <displayOrderInCategory>-0.4</displayOrderInCategory>
@@ -220,7 +220,7 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Gate</defName>
         <label>teleportation gate</label>
-        <description>Carriers of this gene are able to teleport themselves everyone within 10 tiles to any location where the colony has people.\n\nAfter developing teleportation, the next logical step was to find a way to get squads of soldiers from one front to another front quickly. The end result was the creation of porters who would take squads of supers quickly from battle to battle, single-handedly turning the tides of wars.</description>
+        <description>Carriers of this gene are able to teleport themselves everyone within 10 tiles to any location in the world.</description>
         <iconPath>Powers/Gene_Gate</iconPath>
         <prerequisite>SHG_Blink</prerequisite>
         <displayOrderInCategory>-0.3</displayOrderInCategory>
@@ -247,7 +247,7 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Rift</defName>
         <label>teleportation rift</label>
-        <description>Carriers of this gene are able to teleport themselves everyone within 200 tiles to any location where the colony has people.\n\nThis will teleport almost everyone on the current map to the desired location. If you use this in your colony, you will need to send someone back manually to be able to teleport back.\n\nWhen a losing battle turned devastating because the army's porter couldn't get enough people out of the fortification fast enough, this ability was developed to give supers a way to move entire platoons quickly. Moving a battalion quickly still required multiple porters, but teleportation rifts made the task only require 10% of the people it did before.</description>
+        <description>Carriers of this gene are able to teleport themselves everyone within 200 tiles to any location in the world.\n\nThis will teleport almost everyone on the current map to the desired location. If you use this in the middle of your colony, you will probably get most of your colonists. If used on the world map, this acts the same as Teleportation Gate's ability.</description>
         <iconPath>Powers/Gene_Rift</iconPath>
         <prerequisite>SHG_Blink</prerequisite>
         <displayOrderInCategory>-0.2</displayOrderInCategory>
@@ -308,9 +308,12 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_StunningAttraction</defName>
         <label>stunning attraction</label>
-        <description>Carriers of this gene are able to make every being around them become inexplicably attracted to them for a brief time. The pawns will automatically move towards the caster.\n\nThis is affected by stun susceptibility.</description>
+        <description>Carriers of this gene are able to make every being around them become inexplicably attracted to them for a brief time. The pawns will automatically move towards the caster.</description>
         <iconPath>Powers/Gene_StunningAttraction</iconPath>
         <biostatMet>-2</biostatMet>
+        <customEffectDescriptions>
+            <li>Duration affected by Stun Susceptibility.</li>
+        </customEffectDescriptions>
         <abilities>
             <li>SHG_StunningAttraction</li>
         </abilities>
@@ -376,7 +379,7 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Regenesis</defName>
         <label>regenesis</label>
-        <description>Carriers of this gene can put allies into a coma-like state. While in this state, the pawn will begin regenerating all wounds, and if in the coma for long enough, they will begin slowly regrowing lost parts. The pawn only requires 25% of their normal food intake.\n\nAfter a set number of days, the regeneration will become stronger.\n - 0 days: Begin slowly healing scars\n - 5 days: Scar healing rapidly accelerated\n 10 days: - Regrow 1 part every 5 days\n - 15 days: Regrow 1 part every 2 days\n\nWARNING: The only thing that can wake a pawn in regenesis is a pawn with the regenesis gene. The carrier cannot target themselves, so as long as they continue to survive, you should be able to wake your pawns without issue.</description>
+        <description>Carriers of this gene can put allies into a coma-like state that will cause them to  require 75% less food and begin regenerating all wounds.\n\nRegeneration grows stronger on day 5, 10, 15, and 20.\n\nWARNING: The only thing that can wake a pawn in regenesis is a pawn with the regenesis gene. The carrier cannot target themselves, so as long as they continue to survive, you should be able to wake your pawns without issue.</description>
         <iconPath>Powers/Gene_Regenesis</iconPath>
         <biostatMet>-3</biostatMet>
         <abilities>
@@ -392,7 +395,7 @@
     <GeneDef ParentName="SuperPowersOffensiveBase">
         <defName>SHG_RetractableFistBlades</defName>
         <label>retractable fist blades</label>
-        <description>Supers with this gene have blades that shoot out from inside their forearm to be extended well beyond their fist, granting them a new way to slice and dice.\n\nThey were initially referred to as claws by general public, but the scientific community decided on the more dry name of "retractable fist blades" by arguing that A, they don't come out of the fingers, and B, they are almost as long as the individuals forearm. Normal people still call them claws though, because nobody wants to remember a name as long as "Fist Blade Retractor".\n\nThe exact nature of the claws tends to vary slightly between users, with some having multiple thinner ones protruding from the knuckles, and some just having it extend from their wrist. They don't have any actual difference in effects, so they all get to be in one gene.</description>
+        <description>Supers with this gene have blades that shoot out from inside their forearm to be extended well beyond their fist, granting them a new way to slice and dice. These blades can take many forms, but all have the same effect.</description>
         <iconPath>Powers/Gene_SuperClaws</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <modExtensions>
@@ -414,7 +417,7 @@
     <GeneDef ParentName="SuperPowersOffensiveBase">
         <defName>SHG_BasicLaserEyes</defName>
         <label>laser eyes</label>
-        <description>Carriers of this gene can shoot lasers from their eyes. This weaker version was designed after the superhero version was made, and its much lower energy output makes it possible for even non-superheroes to use it.\n\nPlease make sure you go give Biotech Gene: Laser-Eyes a thumbs up for making this gene possible. Now on with the lasering!</description>
+        <description>Carriers of this gene can shoot lasers from their eyes. This is a weaker version of the superhero variant that doesn't require the superhero base gene.</description>
         <iconPath>Powers/BasicLaserEyes</iconPath>
         <displayOrderInCategory>997</displayOrderInCategory>
         <marketValueFactor>2</marketValueFactor>
@@ -434,7 +437,7 @@
     <GeneDef ParentName="SuperPowersOffensiveBase">
         <defName>SHG_NewLaserEyes</defName>
         <label>superhero laser eyes</label>
-        <description>Superheroes with this gene can shoot powerful lasers from their eyes.\n\nPlease make sure you go give Biotech Gene: Laser-Eyes a thumbs up for making this gene possible. Now on with the lasering!</description>
+        <description>Superheroes with this gene can shoot powerful lasers from their eyes.</description>
         <iconPath>Powers/LaserEyes</iconPath>
         <displayOrderInCategory>999</displayOrderInCategory>
         <marketValueFactor>5</marketValueFactor>
@@ -453,7 +456,7 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Flight</defName>
         <label>flight</label>
-        <description>Carriers of this gene are able to fly through the air, which can aid them greatly when travelling both short and long distances.\n\nWhile an infant, supers with this gene are still unable to fly around. However, as they age they quickly learn how to move themselve around by simply willing themselves to move in a direction.</description>
+        <description>Carriers of this gene are able to fly through the air, which can aid them greatly when travelling both short and long distances.</description>
         <iconPath>Powers/Gene_Flight</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <abilities>
@@ -527,7 +530,7 @@
     <GeneDef ParentName="SuperPowersOffensiveBase">
         <defName>SHG_DeathFromAbove</defName>
         <label>death from above</label>
-        <description>Superheroes with this gene have access to a subdimension that regularly steals nearby asteroids and starts accelerating them. Once enough of them are accelerated the super can create a rift in the air that releases some of them towards the ground similar to a bombardment.\n\nDue to the nature of this ability, the super needs to wait some time to gain another charge (5 days per charge), and a very finite number of charges can be held at any given time (3 charges).\n\nThe super can be hit if they happen to be in the blast radius.</description>
+        <description>Superheroes with this gene have access to a subdimension that regularly steals nearby asteroids and starts accelerating them. Once enough of them are accelerated the super can create a rift in the air that releases some of them towards the ground similar to an orbital bombardment.</description>
         <iconPath>Powers/Gene_DeathFromAbove</iconPath>
         <displayOrderInCategory>996</displayOrderInCategory>
         <marketValueFactor>4</marketValueFactor>

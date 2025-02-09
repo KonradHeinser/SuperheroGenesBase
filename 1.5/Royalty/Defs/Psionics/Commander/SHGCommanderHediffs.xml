@@ -138,7 +138,7 @@
     <HediffDef>
         <defName>SHG_Psionist_MassLevitation_Buff</defName>
 		<label>mass levitation</label>
-		<description>This pawn is floating in the air due to a nearby Psionic General. They can now move around more freely, but being too far from the General will result in them no longer floating.</description>
+		<description>This pawn is floating in the air due to a nearby Psionic General.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>

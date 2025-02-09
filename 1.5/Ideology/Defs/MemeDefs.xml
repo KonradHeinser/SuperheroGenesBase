@@ -21,7 +21,7 @@
     <IdeoPresetDef>
         <defName>SHG_VillainPreset</defName>
         <label>villains</label>
-        <description>We must work to ensure no non-super remains free to waste resources on their petty squabbles. If they will not join our ranks, they will become slaves, or face our wrath.</description>
+        <description>We must work to ensure no non-super remains free to waste resources on their petty squabbles. If their factions will not accept their people being harvested, then they shall face our wrath.</description>
         <categoryDef>Intense</categoryDef>
         <memes>
             <li>SHG_SuperSupremacy</li>
