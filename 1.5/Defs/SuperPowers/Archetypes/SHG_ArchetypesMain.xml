@@ -1246,7 +1246,7 @@
             <LifespanFactor>0.5</LifespanFactor>
             <ImmunityGainSpeed>0.5</ImmunityGainSpeed>
             <IncomingDamageFactor>1.333</IncomingDamageFactor>
-            <InjuryHealingFactor>0.667</InjuryHealingFactor>
+            <InjuryHealingFactor>0.5</InjuryHealingFactor>
             <MeleeDamageFactor>0.667</MeleeDamageFactor>
             <PawnTrapSpringChance>100</PawnTrapSpringChance>
             <StaggerDurationFactor>1.333</StaggerDurationFactor>
