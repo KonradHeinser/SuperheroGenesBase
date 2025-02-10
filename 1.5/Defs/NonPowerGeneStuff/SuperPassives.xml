@@ -94,6 +94,9 @@
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <cooldownTicksRange>600</cooldownTicksRange>
         <aiCanUse>false</aiCanUse>
+        <verbProperties>
+            <warmupTime>0.1</warmupTime>
+        </verbProperties>
     </AbilityDef>
 
     <AbilityDef ParentName="SHG_RestraintBase">

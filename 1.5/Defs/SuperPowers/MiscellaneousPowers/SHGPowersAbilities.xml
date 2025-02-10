@@ -258,7 +258,7 @@
                 <compClass>CompAbilityEffect_Teleport</compClass>
                 <destination>Selected</destination>
                 <requiresLineOfSight>False</requiresLineOfSight>
-                <range>50</range>
+                <range>70</range>
                 <clamorType>Ability</clamorType>
                 <clamorRadius>3</clamorRadius>
                 <destClamorType>Ability</destClamorType>

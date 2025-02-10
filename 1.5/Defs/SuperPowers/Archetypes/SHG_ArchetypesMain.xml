@@ -1246,14 +1246,14 @@
             <LifespanFactor>0.5</LifespanFactor>
             <ImmunityGainSpeed>0.5</ImmunityGainSpeed>
             <IncomingDamageFactor>1.333</IncomingDamageFactor>
-            <InjuryHealingFactor>0.5</InjuryHealingFactor>
-            <MeleeDamageFactor>0.5</MeleeDamageFactor>
+            <InjuryHealingFactor>0.667</InjuryHealingFactor>
+            <MeleeDamageFactor>0.667</MeleeDamageFactor>
             <PawnTrapSpringChance>100</PawnTrapSpringChance>
             <StaggerDurationFactor>1.333</StaggerDurationFactor>
             <GlobalLearningFactor>0.5</GlobalLearningFactor>
-            <LearningRateFactor>0.5</LearningRateFactor>
-            <ResearchSpeed>0.5</ResearchSpeed>
-            <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+            <LearningRateFactor>0.667</LearningRateFactor>
+            <ResearchSpeed>0.833</ResearchSpeed>
+            <WorkSpeedGlobal>0.833</WorkSpeedGlobal>
         </statFactors>
         <statOffsets>
             <ComfyTemperatureMin>20</ComfyTemperatureMin>
