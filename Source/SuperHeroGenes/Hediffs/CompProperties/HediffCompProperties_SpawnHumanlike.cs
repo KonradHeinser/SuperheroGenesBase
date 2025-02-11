@@ -4,8 +4,6 @@ namespace SuperHeroGenesBase
 {
     public class HediffCompProperties_SpawnHumanlike : HediffCompProperties
     {
-        public bool onRemoval = false;
-
         public FloatRange severities = new FloatRange(0f, 9999f);
 
         public IntRange spawnCount = new IntRange(1, 1);
