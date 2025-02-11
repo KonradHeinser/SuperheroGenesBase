@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!--Delete this file when 1.7 rolls around-->
+    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Hemomancer_StarfishSplitting</defName>
+		<label>splitting</label>
+		<description>A clump of hemogen inside this pawn is gradually morphing into a miniature version of this pawn. If the pawn shifts into a different form, this clump will still grow without issue. If they die, it will become a useless mass that the body will quickly destroy should the pawn be revived.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_AsexualReproduction">
+				<reproductionIntervalDays>1</reproductionIntervalDays>
+				<endogeneTransfer>true</endogeneTransfer>
+				<asexualHatchedMessage>SHG_Hemomancer_Starfish</asexualHatchedMessage>
+			</li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.999</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+    </HediffDef>
+
+    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>SHG_Hemomancer_TheGiftOfBlood</defName>
+		<label>the gift of blood</label>
+		<description>This hemopriest is constantly turning hemogen into blood pills. They produce one every day.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_Spawner">
+				<thingToSpawn>SHG_BloodPill</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>60000~60000</spawnIntervalRange>
+				<spawnMaxAdjacent>30</spawnMaxAdjacent>
+				<spawnForbidden>false</spawnForbidden>
+				<showMessageIfOwned>false</showMessageIfOwned>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core,Ludeon.Rimworld.Royalty">
+        <defName>SHG_Psionist_PsionicFlight</defName>
+		<label>old psionic flight</label>
+		<description>This super is always floating just a little bit off the ground, and their ability to move omnidirectionally makes it easier for them to move around quickly. The more psychic sensitivity the soldier has, the more they can propel themselves.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <MoveSpeed>1.25</MoveSpeed>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+            </li>
+        </stages>
+		<comps>
+            <li Class="AnimalBehaviours.HediffCompProperties_Floating" />
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-240</severityPerDay>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_CreateOtherHediffs">
+                <hediffSets>
+                    <li>
+                        <hediffDef>SHG_Psionist_New_PsionicFlight</hediffDef>
+                    </li>
+                </hediffSets>
+            </li>
+		</comps>
+	</HediffDef>
+</Defs>

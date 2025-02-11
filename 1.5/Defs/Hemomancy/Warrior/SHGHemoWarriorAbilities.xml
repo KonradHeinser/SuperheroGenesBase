@@ -97,7 +97,7 @@
     <AbilityDef ParentName="SHGHemomancyBase">
         <defName>SHG_Hemomancer_HemogenBarrier</defName>
         <label>hemogen barrier</label>
-        <description>Create a small shield made of hemogen that stops all projectiles from entering. This will not stop people, and will cause items to explode on impact with the shield. This will last for about one hour.</description>
+        <description>Create a small shield made of hemogen that stops all projectiles from entering. This will not stop people, and can cause explosives to explode on impact with the shield. This will last for about one hour.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_HemogenBarrier</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <targetRequired>False</targetRequired>
@@ -126,7 +126,7 @@
     <AbilityDef ParentName="SHGHemomancyBase">
         <defName>SHG_Hemomancer_EverlastingWar</defName>
         <label>everlasting war</label>
-        <description>Revive everyone in an area, both enemies and allies. The Hemochampion does not need line of sight to resurrect pawns, but resurrected pawns will be unable to move for a couple days. This costs more based on the number of corpses in the area.</description>
+        <description>Revive everyone in an area, both enemies and allies. The Hemochampion does not need line of sight to resurrect pawns, but resurrected pawns will be unable to move for a couple days. Cost listed is per corpse.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_EverlastingWar</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <writeCombatLog>True</writeCombatLog>
@@ -156,7 +156,7 @@
     <AbilityDef ParentName="SHGHemomancyBase">
         <defName>SHG_Hemomancer_BloodAndDarkness</defName>
         <label>blood and darkness</label>
-        <description>Use a blast of hemogen to blind all pawns in an area for an hour, and make them bleed twice as fast. The more people around the location, the more this ability costs. If the hemochampion is too close to the target pawn, they will also be affected.</description>
+        <description>Use a blast of hemogen to blind all pawns in an area for an hour and make them bleed twice as fast. Cost listed is per target. If the hemochampion is in the radius, they will also be affected.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_BloodAndDarkness</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <aiCanUse>false</aiCanUse>

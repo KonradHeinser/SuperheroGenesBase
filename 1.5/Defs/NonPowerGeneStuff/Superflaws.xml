@@ -7,7 +7,7 @@
         <iconPath>Flaws/Gene_Weaponless</iconPath>
         <geneClass>EBSGFramework.SpawnAgeLimiter</geneClass>
         <displayOrderInCategory>50</displayOrderInCategory>
-        <biostatMet>2</biostatMet>
+        <biostatMet>4</biostatMet>
         <exclusionTags>
             <li>SHG_Weaponless</li>
         </exclusionTags>
@@ -21,11 +21,11 @@
     <GeneDef ParentName="SHG_FlawBase" MayRequire="EBSG.Framework">
         <defName>SHG_Flaw_Appareless</defName>
         <label>appareless</label>
-        <description>Supers with this gene are unable to use any sort of apparel. Fortunately, that doesn't stop them from just killing people before they have a chance to do anything.</description>
+        <description>Supers with this gene are unable to use any sort of apparel.</description>
         <iconPath>Flaws/Gene_Appareless</iconPath>
         <geneClass>EBSGFramework.SpawnAgeLimiter</geneClass>
         <displayOrderInCategory>51</displayOrderInCategory>
-        <biostatMet>4</biostatMet>
+        <biostatMet>6</biostatMet>
         <exclusionTags>
             <li>SHG_Appareless</li>
         </exclusionTags>
@@ -39,11 +39,11 @@
     <GeneDef ParentName="SHG_FlawBase" MayRequire="EBSG.Framework">
         <defName>SHG_Flaw_Equipmentless</defName>
         <label>equipmentless</label>
-        <description>Supers with this gene are unable to use any sort of equipment. Look at them though. They don't need nothing.\n\n\nMuscles not included. Terms and conditions may apply. Please don't text and fight.</description>
+        <description>Supers with this gene are unable to use any sort of equipment.\n\n\nMuscles not included. Terms and conditions may apply. Please don't text and fight.</description>
         <iconPath>Flaws/Gene_Equipmentless</iconPath>
         <geneClass>EBSGFramework.SpawnAgeLimiter</geneClass>
         <displayOrderInCategory>52</displayOrderInCategory>
-        <biostatMet>6</biostatMet>
+        <biostatMet>10</biostatMet>
         <exclusionTags>
             <li>SHG_Weaponless</li>
             <li>SHG_Appareless</li>
@@ -69,7 +69,7 @@
         <biostatMet>7</biostatMet>
         <minAgeActive>13</minAgeActive>
         <customEffectDescriptions>
-            <li>The hemogen loss can be countered using any other source, including genes.</li>
+            <li>The hemogen loss can be countered using any source, including genes.</li>
             <li>Everytime this pawn kills a pawn that can bleed, some (and sometimes all) of the victim's remaining blood is converted into hemogen. It doesn't matter if the kill is with a ranged weapon, only that this pawn is the direct instigator.</li>
             <li>The bloodthirst need can also be satisfied by any kill, though melee kills will provide more reprieve.</li>
         </customEffectDescriptions>
@@ -111,13 +111,12 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_Flaw_SuperMoodyAura</defName>
         <label>super moody aura</label>
-        <description>This super really brings down the mood wherever they go. It's really sad really.</description>
+        <description>Supers with this gene really brings down the mood wherever they go. It's really sad really.</description>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <iconPath>Flaws/Gene_SuperMoodyAura</iconPath>
         <biostatMet>4</biostatMet>
         <customEffectDescriptions>
             <li>All pawns within a range of 50 get a -10 mood debuff.</li>
-            <li>If the carrier is your only colonist, the negative effects won't have much impact unless you have guests to take care of.</li>
         </customEffectDescriptions>
         <modExtensions>
 			<li Class="SuperHeroGenesBase.SHGExtension">
@@ -144,15 +143,14 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_Flaw_OverchargedPocket</defName>
         <label>overcharged pocket</label>
-        <description>This radiomancer has a pocket of energy in them that they are unable to finely control. While they are alive they can stablize it enough to reduce how much food they need, but the moment they die, it will quickly become unstable and cause a massive explosion.</description>
+        <description>Radiomancers with this gene have a pocket of energy in them that they are unable to finely control. While alive they can stablize it, but when they die it will quickly become unstable and cause a massive explosion.</description>
         <iconPath>Flaws/Gene_OverchargedPocket</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <prerequisite>SHG_Archetypes_Radiomancer</prerequisite>
         <displayOrderInCategory>300</displayOrderInCategory>
         <biostatMet>5</biostatMet>
         <customEffectDescriptions>
-            <li>In the event of the carrier's death, an explosion will be created at the location of their corpse with the equivalent power as I Am Become Death with 50 radiation.</li>
-            <li>If you are not familiar with the ability referenced above, just know it is named very accurately. The explosion from this is usually destructive enough to decimate at least 10% of a map.</li>
+            <li>The radiomancer's death causes an explosion with the same power as I Am Become Death at 50 radiation.</li>
         </customEffectDescriptions>
         <modExtensions>
 			<li Class="SuperHeroGenesBase.SHGExtension">
@@ -230,12 +228,12 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_Flaw_SuperRecluse</defName>
         <label>super recluse</label>
-        <description>Supers with tis gene hate being around groups of people to an unbelievable extent. There's been plenty of theories about why they feel this way, from overactive senses to innate aggressive competitiveness. Nobody knows for sure why they are this way.</description>
+        <description>Supers with this gene hate being around groups of people to an unbelievable extent. There's been plenty of theories about why they feel this way, from overactive senses to innate competitiveness, but no proof for any of them.</description>
         <iconPath>Flaws/Gene_SuperRecluse</iconPath>
         <displayOrderInCategory>10</displayOrderInCategory>
         <biostatMet>3</biostatMet>
         <customEffectDescriptions>
-            <li>This acts as a very potent variation of the vanilla recluse trait, with a notable mood bonus while alone, and a sizeable mood penalty when in large groups.</li>
+            <li>This acts as a very potent variation of the vanilla recluse trait, with a notable mood bonus while alone.</li>
         </customEffectDescriptions>
     </GeneDef>
 
@@ -305,8 +303,7 @@
         <displayOrderInCategory>11</displayOrderInCategory>
         <biostatMet>5</biostatMet>
         <customEffectDescriptions>
-            <li>This pawn has an extremely high mood bonus while alone or with only one companion, but that mood bonus quickly becomes a massive penalty the more people there are.</li>
-            <li>I'm not exaggerating about that mood penalty. It reaches -60 at a population of 16.</li>
+            <li>This super has an extremely high mood bonus while alone or with only one companion, but that mood bonus quickly becomes a massive penalty the more people there are, reaching -60 at a population of 16.</li>
         </customEffectDescriptions>
     </GeneDef>
 
@@ -365,7 +362,7 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_NoNaturalHealing</defName>
         <label>no natural healing</label>
-        <description>Supers with this gene are completely incapable of healing naturally. Super genes that provide natual regeneration are usually not available. Abilities that provide direct healing or regeneration, even when cast by the carrier, will still function, and non-super genes that provide advanced regeneration will also still take effect</description>
+        <description>Supers with this gene are completely incapable of healing naturally. Abilities that provide direct healing or regeneration, even when cast by the carrier, will still function, and compatible genes that provide advanced regeneration will also still take effect.</description>
         <iconPath>Flaws/Gene_NoNaturalHealing</iconPath>
         <statFactors>
             <InjuryHealingFactor>0</InjuryHealingFactor>
@@ -421,7 +418,7 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_SuperPyrophobia</defName>
         <label>super pyrophobia</label>
-        <description>Supers with this gene are terrified of fire, and have a good reason for it. Even in the best case scenario, being touched by fire will cause them to suffer extreme damage, and in most cases it will quickly kill them.\n\nThe fear of fire works the same as pyrophobia.</description>
+        <description>Supers with this gene are terrified of fire, and have a good reason for it.</description>
         <displayOrderInCategory>21</displayOrderInCategory>
         <damageFactors>
             <Flame>10</Flame>
@@ -472,7 +469,7 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_Hydrophobia</defName>
         <label>hydrophobia</label>
-        <description>Supers with this gene have an irrational fear of water, and may end up running away any time they are near any notable body of water. It is recommended that you adjust their allowed area to prevent them from around rivers, ponds, lakes, oceans, etc.\n\nOn a desert this tends to not be an issue, but for places with rivers or marshes, this is can be a major debuff. The radius and frequency are lower than pyrophobia's.</description>
+        <description>Supers with this gene have an irrational fear of water, and may end up running away any time they are near any notable body of water.</description>
         <displayOrderInCategory>22</displayOrderInCategory>
         <customEffectDescriptions>
             <li>May have a mental breakdown when near bodies of water.</li>

@@ -103,6 +103,11 @@
             </li>
         </stages>
         <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_InvisibleAtStage">
+                <invisibleStages>
+                    <li>1</li>
+                </invisibleStages>
+            </li>
             <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityByLightLevel">
                 <lightToSeverityCurve>
                     <points>
@@ -139,6 +144,11 @@
             </li>
         </stages>
         <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_InvisibleAtStage">
+                <invisibleStages>
+                    <li>1</li>
+                </invisibleStages>
+            </li>
             <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityByLightLevel">
                 <lightToSeverityCurve>
                     <points>

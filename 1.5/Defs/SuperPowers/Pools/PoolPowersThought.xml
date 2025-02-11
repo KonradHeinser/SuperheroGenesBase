@@ -9,7 +9,7 @@
         <stages>
             <li>
                 <label>calming aura</label>
-                <description>Having my persuasion life pool in such a chaotic state is giving me a headache. I hope it's at least helping the others.</description>
+                <description>Helping everyone around like this is quite taxing.</description>
                 <baseMoodEffect>-20</baseMoodEffect>
             </li>
         </stages>

@@ -16,7 +16,7 @@
     <HediffDef ParentName="SHG_ThiefStealBase">
         <defName>SHG_Hemomancer_StealPerceptiveness</defName>
 		<label>steal perceptiveness</label>
-		<description>This pawn has enhanced perception for a time after stealing from another pawn.</description>
+		<description>This pawn stole another pawn's perception.</description>
         <stages>
 			<li>
 				<statFactors>
@@ -32,7 +32,7 @@
     <HediffDef ParentName="SHG_ThiefStealBase">
         <defName>SHG_Hemomancer_StealPerceptivenessDebuff</defName>
 		<label>steal perceptiveness mark</label>
-		<description>This pawn has reduced perception for a time after it was stolen by another pawn.</description>
+		<description>This pawn's perception was temporarily stolen.</description>
         <stages>
 			<li>
 				<statFactors>
@@ -47,7 +47,7 @@
     <HediffDef ParentName="SHG_ThiefStealBase">
         <defName>SHG_Hemomancer_StealDefense</defName>
 		<label>steal defense</label>
-		<description>This pawn has enhanced innate armor for a time after stealing from another pawn.</description>
+		<description>This pawn stole another pawn's innate armor.\n\nIf this pawn doesn't have innate armor, they do not gain a buff</description>
         <stages>
 			<li>
 				<statFactors>
@@ -63,7 +63,7 @@
     <HediffDef ParentName="SHG_ThiefStealBase">
         <defName>SHG_Hemomancer_StealDefenseDebuff</defName>
 		<label>steal defense mark</label>
-		<description>This pawn lost all innate armor for a time after it was stolen by another pawn.</description>
+		<description>This pawn's innate armor was temporarily stolen.</description>
         <stages>
 			<li>
 				<statFactors>
@@ -78,7 +78,7 @@
     <HediffDef ParentName="SHG_ThiefStealBase">
         <defName>SHG_Hemomancer_StealStrength</defName>
 		<label>steal strength</label>
-		<description>This pawn has enhanced strength for a time after stealing from another pawn.</description>
+		<description>This pawn stole another pawn's strength.</description>
         <stages>
 			<li>
 				<statFactors>
@@ -94,7 +94,7 @@
     <HediffDef ParentName="SHG_ThiefStealBase">
         <defName>SHG_Hemomancer_StealStrengthDebuff</defName>
 		<label>steal strength mark</label>
-		<description>This pawn reduced strength for a time after it was stolen by another pawn.</description>
+		<description>This pawn's strength was temporarily stolen.</description>
         <stages>
 			<li>
 				<statFactors>
@@ -145,5 +145,3 @@
         </comps>
     </HediffDef>
 </Defs>
-
-

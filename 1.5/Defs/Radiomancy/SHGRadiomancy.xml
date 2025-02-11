@@ -3,7 +3,7 @@
     <ThingDef>
         <defName>SHG_RadiationOrb</defName>
         <label>radiation orb</label>
-        <description>A ball of unstable energy packed into a ball with an unknown material encasing it. While many feel uncomfortable carrying it around, studies have found that there are no negative effects associated with being around the orbs. The same study did have a sudden discovery that piercing the outer shell has the sudden very unfortunate side effect of instant death by an explosion comparable to a small antigrain warhead.\n\nA radiomancer can absorb the orb to regain part of the energy used to create it.</description>
+        <description>A ball of unstable energy packed into a ball with an unknown material encasing it that Radiomancers can absorb for energy. While many feel uncomfortable carrying it around, studies have found that there are no negative effects associated with being around the orbs. The same study did have a sudden discovery that piercing the outer shell has the sudden very unfortunate side effect of instant death by explosion.</description>
         <category>Item</category>
         <thingClass>ThingWithComps</thingClass>
         <drawerType>MapMeshOnly</drawerType>

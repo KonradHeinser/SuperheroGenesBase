@@ -37,7 +37,7 @@
     <HediffDef>
         <defName>SHG_Psionist_New_PsionicFlight</defName>
 		<label>psionic flight</label>
-		<description>This super is always floating just a little bit off the ground, and their ability to move omnidirectionally makes it easier for them to move around quickly. The more psychic sensitivity the soldier has, the more they can propel themselves.</description>
+		<description>This Psionic Soldier is always floating just a little bit off the ground, and their ability to move omnidirectionally makes it easier for them to move around quickly. The more psychic sensitivity they have, the faster they can propel themselves.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
@@ -53,37 +53,6 @@
 		<comps>
 			<li Class="SuperHeroGenesBase.HediffCompProperties_TerrainCostOverride">
                 <universalCostOverride>0</universalCostOverride>
-            </li>
-		</comps>
-	</HediffDef>
-
-    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
-        <defName>SHG_Psionist_PsionicFlight</defName>
-		<label>old psionic flight</label>
-		<description>This super is always floating just a little bit off the ground, and their ability to move omnidirectionally makes it easier for them to move around quickly. The more psychic sensitivity the soldier has, the more they can propel themselves.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
-        <stages>
-            <li>
-                <statFactors>
-                    <MoveSpeed>1.25</MoveSpeed>
-                </statFactors>
-                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
-            </li>
-        </stages>
-		<comps>
-            <li Class="AnimalBehaviours.HediffCompProperties_Floating" />
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-240</severityPerDay>
-            </li>
-            <li Class="SuperHeroGenesBase.HediffCompProperties_CreateOtherHediffs">
-                <hediffSets>
-                    <li>
-                        <hediffDef>SHG_Psionist_New_PsionicFlight</hediffDef>
-                    </li>
-                </hediffSets>
             </li>
 		</comps>
 	</HediffDef>
@@ -106,7 +75,7 @@
 
     <HediffDef>
         <defName>SHG_Psionist_Entrench</defName>
-        <label>psionic infusement</label>
+        <label>entrench</label>
         <description>This Commando infused their body with dense psionic energy that stops their movement, but stabilizes their body and provides some protection. The offsets listed here is the base amount, and is multiplied by psychic sensitivity.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
@@ -147,13 +116,15 @@
     <HediffDef>
         <defName>SHG_Psionist_PsionicArmor</defName>
         <label>psionic armor</label>
-        <description>This Immortal is being protected by a psychic armor. The armor values listed are the base values, and are multiplied by psychic sensitivity.</description>
+        <description>This Immortal is being protected by a psychic armor. The values listed are the base values, and are multiplied by psychic sensitivity.</description>
 		<stages>
 			<li>
                 <statOffsets>
                     <ArmorRating_Blunt>.1</ArmorRating_Blunt>
                     <ArmorRating_Sharp>.1</ArmorRating_Sharp>
                     <ArmorRating_Heat>.1</ArmorRating_Heat>
+                    <ComfyTemperatureMin>-0.5</ComfyTemperatureMin>
+                    <ComfyTemperatureMax>0.5</ComfyTemperatureMax>
                 </statOffsets>
                 <statOffsetEffectMultiplier>PsychicSensitivity</statOffsetEffectMultiplier>
             </li>

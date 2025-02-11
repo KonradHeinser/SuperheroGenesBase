@@ -7,7 +7,7 @@
     <ThingDef ParentName="SHG_MineableResourceBase">
         <defName>SHG_MineableWood</defName>
         <label>super compacted wood</label>
-        <description>A pillar of super compact wood that was instantly created by a superhero. This wood is so compact it will require a miner to break it apart.</description>
+        <description>A pillar of super compact wood that was instantly created by a super. This wood is so compact it will require a miner to break it apart.</description>
         <graphicData>
             <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
             <color>(103,67,37)</color>
@@ -25,7 +25,7 @@
 
         <!--Stone-->
     <ThingDef ParentName="UglyRockBase" Name="SHGStoneBase" Abstract="True">
-        <description>A pillar consisting of solid stone that was buried deep undergound. This stone was compacted and brought to the surface by a superhero.\n\nUnlike normal mineable stone, this will always give 9 chunks but cannot be smoothed down into walls.</description>
+        <description>A pillar consisting of solid stone that was buried deep undergound. This stone was compacted and brought to the surface by a super.\n\nUnlike normal mineable stone, this will always give 9 chunks but cannot be smoothed down into walls.</description>
         <statBases>
             <MaxHitPoints>1000</MaxHitPoints>
         </statBases>
@@ -114,7 +114,7 @@
     <ThingDef ParentName="SHG_MineableResourceBase">
         <defName>SHG_MineableSteel</defName>
         <label>super compacted steel</label>
-        <description>A pillar consisting largely of steel that was buried deep undergound. These resources were compacted and brought to the surface by a superhero.</description>
+        <description>A pillar consisting largely of steel that was buried deep undergound.</description>
         <graphicData>
             <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
             <color>(145,123,97)</color>
@@ -132,7 +132,7 @@
     <ThingDef ParentName="SHG_MineableResourceBase">
         <defName>SHG_MineableSilver</defName>
         <label>super compacted silver</label>
-        <description>A pillar consisting largely of silver that was buried deep undergound. These resources were compacted and brought to the surface by a superhero.</description>
+        <description>A pillar consisting largely of silver that was buried deep undergound.</description>
         <graphicData>
             <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
             <color>(137,134,124)</color>
@@ -150,7 +150,7 @@
     <ThingDef ParentName="SHG_MineableResourceBase">
         <defName>SHG_MineableGold</defName>
         <label>super condensed gold</label>
-        <description>A pillar consisting largely of gold that was buried deep undergound. These resources were compacted and brought to the surface by a superhero.</description>
+        <description>A pillar consisting largely of gold that was buried deep undergound.</description>
         <graphicData>
             <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
             <color>(177,163,15)</color>
@@ -168,7 +168,7 @@
     <ThingDef ParentName="SHG_MineableResourceBase">
         <defName>SHG_MineableUranium</defName>
         <label>super compacted uranium ore</label>
-        <description>A pillar consisting largely of uranium that was buried deep undergound. These resources were compacted and brought to the surface by a superhero.</description>
+        <description>A pillar consisting largely of uranium that was buried deep undergound.</description>
         <graphicData>
             <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
             <color>(60,60,60)</color>
@@ -186,7 +186,7 @@
     <ThingDef ParentName="SHG_MineableResourceBase">
         <defName>SHG_MineablePlasteel</defName>
         <label>super compacted plasteel</label>
-        <description>A pillar consisting largely of plasteel that was buried deep undergound long ago. These resources were compacted and brought to the surface by a superhero.</description>
+        <description>A pillar consisting largely of plasteel that was buried deep undergound long ago.</description>
         <graphicData>
             <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
             <color>(124,156,156)</color>
@@ -204,7 +204,7 @@
     <ThingDef ParentName="SHG_MineableResourceBase">
         <defName>SHG_MineableJade</defName>
         <label>super compacted jade</label>
-        <description>A pillar consisting largely of jade that was buried deep undergound. These resources were compacted and brought to the surface by a superhero.</description>
+        <description>A pillar consisting largely of jade that was buried deep undergound.</description>
         <graphicData>
             <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
             <color>(20,163,15)</color>
@@ -222,7 +222,7 @@
     <ThingDef ParentName="SHG_MineableResourceBase">
         <defName>SHG_MineableComponentsIndustrial</defName>
         <label>super compacted machinery</label>
-        <description>A pillar consisting of a large number of components encased in useless stone that were buried deep undergound long ago. These resources were compacted and brought to the surface by a superhero.</description>
+        <description>A pillar consisting of a large number of components encased in useless stone that were buried deep undergound long ago.</description>
         <graphicData>
             <texPath>Things/Building/Linked/CompactedMachinery_Atlas</texPath>
         </graphicData>
@@ -238,7 +238,7 @@
     <ThingDef ParentName="SHG_MineableResourceBase">
         <defName>SHG_MineableComponentsSpacer</defName>
         <label>super compacted spacer machinery</label>
-        <description>A pillar consisting of some advanced components encased in useless stone that ended up buried deep undergound long ago. Due to the delicacy of the components, pawns will need to spend extra time extracting them. These resources were compacted and brought to the surface by a superhero.</description>
+        <description>A pillar consisting of some advanced components encased in useless stone that ended up buried deep undergound long ago.</description>
         <graphicData>
             <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
             <color>(68,68,68)</color>

@@ -5,12 +5,16 @@
     <GeneDef ParentName="SHG_ArchetypeBase" MayRequire="Ludeon.Rimworld.Royalty">
         <defName>SHG_Archetypes_Psionist</defName>
         <label>psionist</label>
-        <description>Psionists have an innate connection to the psychic fields many royals use. This connection allows them to manipulate psychic energy far better than any human should be able to. This will give them an innate psylink to utilize their power.\n\nSome archetypes, like this one, tend to have massive variances between supers due to an over-generalization of the individuals who belong to the archetype.\n\nThis can have weird interactions with VPE. Most things will work, but because this gene and the Psionic Soldier increase psychic sensitivity, this can end up having strange effects. For example, someone on the Discord server was able to confirm that the Frost Ray ability was channeling for so long that it was starving the Psionist. If you choose to use them together, please be careful with what VPE abilties you use.</description>
+        <description>Psionists have an innate connection to the psychic fields many royals use. This connection allows them to manipulate psychic energy far better than any human should be able to.\n\nThis can have weird interactions with VPE. Most things will work, but because this gene and the Psionic Soldier increase psychic sensitivity, this can end up having strange effects. For example, someone on the Discord server was able to confirm that the Frost Ray ability was channeling for so long that it was starving the Psionist.</description>
         <iconPath>Archetypes/Gene_Psionist</iconPath>
         <prerequisite Inherit="False" />
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <biostatArc>1</biostatArc>
         <displayOrderInCategory>-1</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>Gives innate psylink.</li>
+            <li>Required gene for all psionic paths.</li>
+        </customEffectDescriptions>
         <suppressedTraits>
             <li>
                 <def>PsychicSensitivity</def>
@@ -56,7 +60,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Hemomancer</defName>
         <label>hemomancer</label>
-        <description>Hemomancers, contrary to popular belief, don't gain their abilities from being superheroes, but from a mutated version of the hemogenic gene. This mutation initially caused extreme bloodlust, but that was removed about a decade later by introducing small portions of the superhero gene. The final version of the gene contains just enough of the superhero gene directly inside it to allow hemomancers to be classified as superheroes without actually having the superhero gene.\n\nThe prerequisite for this gene is Hemogenic, not the Superhero Gene. This gives access to the hemogen power paths.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Some archetypes, like this one, tend to have massive variances between supers due to an over-generalization of the individuals who belong to the archetype.</description>
+        <description>Hemomancers, contrary to popular belief, don't gain their abilities from being superheroes, but from a mutated version of the hemogenic gene.\n\nThe prerequisite for this gene is Hemogenic, not the Superhero Gene.</description>
         <iconPath>Archetypes/Gene_Hemomancer</iconPath>
         <prerequisite>Hemogenic</prerequisite>
         <geneClass>SuperHeroGenesBase.Gene_HemoHediffAdder</geneClass>
@@ -67,6 +71,7 @@
         <customEffectDescriptions>
             <li>When the carrier consumes a hemogen pack they have a chance to gain a new hemomancy gene. The success rate declines as they gain more genes.</li>
             <li>If the carrier gains an ability/effect through the above effect that relies on hemomancy proficiency and they don't have a gene that provides that, it will not be immediately useable.</li>
+            <li>Required for all Hemomantic paths.</li>
         </customEffectDescriptions>
 		<modExtensions>
 			<li Class="SuperHeroGenesBase.SHGExtension">
@@ -101,6 +106,7 @@
 		<stages>
 			<li>
                 <totalBleedFactor>0.25</totalBleedFactor>
+                <becomeVisible>false</becomeVisible>
             </li>
         </stages>
     </HediffDef>
@@ -129,7 +135,7 @@
                     <li><geneSet><li>SHG_Hemomancer_Hemoclotting</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_Priest</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_Worship</li></geneSet></li>
-                    <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core"><geneSet><li>SHG_Hemomancer_TheGiftOfBlood</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_TheGiftOfBlood</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_BloodCloud</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_ReplenishBlood</li></geneSet></li>
 
@@ -141,7 +147,7 @@
                     <li><geneSet><li>SHG_Hemomancer_Cat</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_Morph</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_Snake</li></geneSet></li>
-                    <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core"><geneSet><li>SHG_Hemomancer_Starfish</li></geneSet></li>
+                    <li><geneSet><li>SHG_Hemomancer_Starfish</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_Bear</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_Chameleon</li></geneSet></li>
 
@@ -176,7 +182,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Radiomancer</defName>
         <label>radiomancer</label>
-        <description>Radiomancers manipulate the energies of their body and the air around them to create extraordinary effects. Unlike Psionists and Hemomancers, Radiomancers deal with energy in its purist form, allowing them to gain radioactive energy from various sources, though they technically cannot store much at any given time. The creation of this gene was achieved by splicing specific portions of a Superhero Gene, then recombining them into something that essentially makes the carrier a biological energy converter.</description>
+        <description>Radiomancers manipulate the energies of their body and the air around them to create extraordinary effects. Unlike Psionists and Hemomancers, Radiomancers deal with energy in its purist form, allowing them to gain radioactive energy from various sources, though they can't store much at any given time.</description>
         <iconPath>Archetypes/Gene_Radiomancer</iconPath>
         <prerequisite />
         <geneClass>SuperHeroGenesBase.ResourceGene</geneClass>
@@ -251,7 +257,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Electromancer</defName>
         <label>electromancer</label>
-        <description>Electromancers specialize in the weaponization of electricity, from the electronics disabling EMPs to the flesh frying lightning.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Electromancers specialize in the weaponization of electricity, from the electronics disabling EMPs to flesh frying lightning.</description>
         <iconPath>Archetypes/Gene_Electromancer</iconPath>
         <biostatMet>-3</biostatMet>
         <damageFactors>
@@ -296,7 +302,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Petrimancer</defName>
         <label>petrimancer</label>
-        <description>Petrimancers specialize in petrifying opponents, and are vital in any colony that relies on large numbers of prisoners or slaves.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Petrimancers specialize in petrifying opponents, and are vital in any colony that relies on large numbers of prisoners or slaves.</description>
         <iconPath>Archetypes/Gene_Petrimancer</iconPath>
         <biostatMet>-3</biostatMet>
         <damageFactors>
@@ -331,7 +337,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Pyromancer</defName>
         <label>pyromancer</label>
-        <description>Pyromancer specialize in burning everything around them to ashes, and usually the only way to stop them involves a lot of fireproofing.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Pyromancer specialize in burning everything around them to ashes, and usually the only way to stop them involves a lot of fireproofing.</description>
         <iconPath>Archetypes/Gene_Pyromancer</iconPath>
         <biostatMet>-5</biostatMet>
         <statFactors>
@@ -373,7 +379,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Cryomancer</defName>
         <label>cryomancer</label>
-        <description>Pyromancer specialize in inflicting debilating frostbite upon all their foes.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Pyromancer specialize in inflicting debilating frostbite upon all their foes.</description>
         <iconPath>Archetypes/Gene_Cryomancer</iconPath>
         <biostatMet>-4</biostatMet>
         <damageFactors>
@@ -418,7 +424,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Caustimancer</defName>
         <label>caustimancer</label>
-        <description>Caustimancers specialize in throwing acid around, and frequently get banned from bars after a fight because of the mess they leave behind.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Caustimancers specialize in throwing acid around, and frequently get banned from bars after a fight because of the mess they leave behind.</description>
         <iconPath>Archetypes/Gene_Caustimancer</iconPath>
         <biostatMet>-2</biostatMet>
         <damageFactors>
@@ -456,7 +462,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Toximancer</defName>
         <label>toximancer</label>
-        <description>Toximancers tend to play more of a supporting roll on the battlefield. While their blasts may not kill anyone directly, they are excellent for forcing people to flee to new cover.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Toximancers tend to play more of a supporting roll on the battlefield because their blasts seldom kill anyone directly, but are excellent for forcing people to flee to new cover.</description>
         <iconPath>Archetypes/Gene_Toximancer</iconPath>
         <immuneToToxGasExposure>true</immuneToToxGasExposure>
         <biostatMet>-1</biostatMet>
@@ -493,7 +499,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Hydromancer</defName>
         <label>hydromancer</label>
-        <description>Hydromancers shoot out streams of water at high pressures that can both kill fires and put out enemies.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Hydromancers shoot out streams of water at high pressures that can both kill fires and put out enemies.</description>
         <iconPath>Archetypes/Gene_Hydromancer</iconPath>
         <biostatMet>-4</biostatMet>
         <damageFactors>
@@ -529,7 +535,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Pugilist</defName>
         <label>pugilist</label>
-        <description>Pugilists have been called many different things throughout the years. Boxers, brawlers, and sometimes just known by the generic term martial artists. A pugilist's true strength lies not in the innate powers of their archetype, but the training and equipment they use to compliment the abilities. They are often the first ones to the front lines, and the last ones to leave.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Pugilists have been called many different things throughout the years, like boxers, brawlers, and martial artists. They tend to rely more on their equipment and training over their archetype.</description>
         <iconPath>Archetypes/Gene_Pugilist</iconPath>
         <biostatMet>-1</biostatMet>
         <statOffsets>
@@ -559,7 +565,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Medic</defName>
         <label>medic</label>
-        <description>Medics often spend their life constantly moving around. Every day there's a new person to patch up, a new triage clinic to tend to, a new person to bring back from the brink of death.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>For Medics, there's always new person to patch up, a new triage clinic to tend to, a new person to bring back from the brink of death.</description>
         <iconPath>Archetypes/Gene_Medic</iconPath>
         <biostatMet>-2</biostatMet>
         <statFactors>
@@ -590,7 +596,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_LifeBringer</defName>
         <label>life bringer</label>
-        <description>The very existence of Life Bringers defies common sense and the natural order. Those under the Life Bringer's care will find that wounds never last long, and death is nothing more than an inconvenience.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>The very existence of Life Bringers defies common sense and the natural order. Those under the Life Bringer's care will find that wounds never last long, and death is little more than an inconvenience.</description>
         <iconPath>Archetypes/Gene_LifeBringer</iconPath>
         <biostatMet>-5</biostatMet>
         <statFactors>
@@ -628,7 +634,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Druid</defName>
         <label>druid</label>
-        <description>Most believe that druids seek to have balance with nature, to ensure it is not disrupted. This belief is what caused people to begin calling Druids as such, and it was only reinforced when they found their own animals turning against them.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Most believe that Druids seek to have balance with nature, to ensure it is not disrupted. This belief is what caused people to begin calling Druids as such, and it was only reinforced when they found their own animals turning against them.</description>
         <iconPath>Archetypes/Gene_Druid</iconPath>
         <biostatMet>-2</biostatMet>
         <statFactors>
@@ -657,7 +663,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Skirmisher</defName>
         <label>skirmisher</label>
-        <description>Skirmishers tend to be extremely hard to pin down due to their dextrous nature. They leap in and out of battles with ease, and while it is minor, their ability to predict the actions of everyone near them makes them a deadly force. Lightly equipped Skirmishers will often leap to the back lines to tear apart the enemy's ranged troops, while heavily equipped Skirmishers will wade through enemies, leaping out of the way just before things really get dangerous.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Skirmishers specialize in fighting on the front lines, and being an overall pain to pin down.</description>
         <iconPath>Archetypes/Gene_Skirmisher</iconPath>
         <biostatMet>-1</biostatMet>
         <capMods>
@@ -683,7 +689,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Analyzer</defName>
         <label>analyzer</label>
-        <description>Analyzers are capable of viewing everything around them with extreme detail, and use this power to take down foes with extreme precision.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Analyzers are capable of viewing everything around them with extreme detail, and use this power to take down foes with extreme precision.</description>
         <iconPath>Archetypes/Gene_Analyzer</iconPath>
         <biostatMet>-2</biostatMet>
         <capMods>
@@ -713,7 +719,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Porter</defName>
         <label>porter</label>
-        <description>Porters are capable of transporting large amounts of people and things from place to place with ease. While they themselves usually don't have much assistance to provide in direct combat, their abilities are still valued highly in any army or raiding party as all they require when moving large amounts of people is a person at the destination to act as a destination beacon.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Porters are capable of transporting large amounts of people and things from place to place with ease. While they themselves usually don't have much assistance to provide in direct combat, their abilities are still valued highly in any army or raiding party as all due to their ability to transport entire armies on a whim.</description>
         <iconPath>Archetypes/Gene_Porter</iconPath>
         <biostatMet>-5</biostatMet>
         <abilities>
@@ -744,7 +750,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Hacker</defName>
         <label>hacker</label>
-        <description>Hackers excel when fighting mechanoids. Their excellence comes not from how much destruction they cause, but from the destruction the mechanoids can cause. All they need to do is touch the strongest mechanoid, and all that will be left is cleanup.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Hackers excel when fighting mechanoids. Their excellence comes not from how much destruction they cause, but from the destruction the mechanoids can cause after they hack the strongest one.</description>
         <iconPath>Archetypes/Gene_Hacker</iconPath>
         <biostatMet>-2</biostatMet>
         <statFactors>
@@ -775,7 +781,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Antihero</defName>
         <label>anti-hero</label>
-        <description>When all hope is lost, when the villains run rampant and unkillable monsters infest the lands, the Anti-hero will be there. They turn strengths into weakness, and tear apart their enemies with brutal efficiency. No mercy will be given, and no weakness will be left unused. Some may be unsaveable, but all are killable.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>When all hope is lost, when the villains run rampant and unkillable monsters infest the lands, the Anti-hero will be there. They turn strengths into weakness, and tear apart their enemies with brutal efficiency.</description>
         <iconPath>Archetypes/Gene_Antihero</iconPath>
         <biostatMet>-4</biostatMet>
         <abilities>
@@ -834,7 +840,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Firefighter</defName>
         <label>firefighter</label>
-        <description>Firefighters specialize in exactly what their name states. Fighting fires. Should push come to shove their water abilties can also be turned to a more violent purpose as the high pressure water those abilities shoot is capable of destroying limbs.</description>
+        <description>Firefighters specialize in exactly what their name states, fighting fires. Should push come to shove their water abilties can also be turned to a more violent purpose as the high pressure water those abilities shoot is capable of destroying limbs.</description>
         <iconPath>Archetypes/Gene_Firefighter</iconPath>
         <biostatMet>-5</biostatMet>
         <statFactors>
@@ -884,7 +890,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Stunner</defName>
         <label>stunner</label>
-        <description>Stunners specialize in using their superhero beauty as a weapon, distracting their enemies, allies, and sometimes themselves.</description>
+        <description>Stunners specialize in using their superhuman beauty as a weapon, distracting their enemies, allies, and sometimes themselves.</description>
         <iconPath>Archetypes/Gene_Stunner</iconPath>
         <biostatMet>-3</biostatMet>
         <statFactors>
@@ -922,7 +928,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Ninja</defName>
         <label>ninja</label>
-        <description>Ninjas are masters of the art of misdirection. With a smoke bomb here and a poison blast there, their enemies often end up running around blind, only realizing their target escaped when it's too late.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Ninjas are masters of the art of misdirection. With a smoke bomb here and a poison blast there, their enemies often end up running around blind, only realizing their target escaped when it's too late.</description>
         <iconPath>Archetypes/Gene_Ninja</iconPath>
         <biostatMet>-1</biostatMet>
         <abilities>
@@ -951,10 +957,10 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Phantom</defName>
         <label>phantom</label>
-        <description>Phantoms are master assassins, capable of ignoring every minefield and barricade in their way, while also having the ability to camouflage themselves in any environment. When their invisibility falls, they become easier to stop, but by then it may be too late.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Phantoms are master assassins, capable of ignoring every minefield and barricade in their way, while also having the ability to camouflage themselves in any environment. When their invisibility falls, they become easier to stop, but by then it may be too late.</description>
         <iconPath>Archetypes/Gene_Phantom</iconPath>
 		<customEffectDescriptions>
-			<li>Colonist will always be floating at least a little bit over the ground.</li>
+			<li>Super will always be floating at least a little bit over the ground.</li>
 		</customEffectDescriptions>
         <biostatMet>-3</biostatMet>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
@@ -984,7 +990,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Biomancer</defName>
         <label>biomancer</label>
-        <description>Biomancers are capable of creating plants from seemingly nothing. These plants, usually trees and exotic plants, can survive in situations that would normally be inhospitable.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Biomancers are capable of creating plants from seemingly nothing. These plants, usually trees and exotic plants, can survive in situations that would normally be inhospitable.</description>
         <iconPath>Archetypes/Gene_Biomancer</iconPath>
         <biostatMet>-3</biostatMet>
         <abilities>
@@ -1021,7 +1027,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Farmer</defName>
         <label>farmer</label>
-        <description>Farmers usually are often overlooked in more advanced worlds, but their ability to create crops that thrive even on solid stone can often save a struggling colony or tribe.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Farmers are often overlooked in more advanced worlds, but their ability to create crops that thrive even on solid stone can often save a struggling colony or tribe.</description>
         <iconPath>Archetypes/Gene_Farmer</iconPath>
         <biostatMet>-2</biostatMet>
         <statFactors>
@@ -1056,7 +1062,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Chemist</defName>
         <label>chemist</label>
-        <description>With a little bit of time and equipment, a Chemist can easily create a stable supply of a variety of drugs, from lifesaving ones made from healroot to potent narcotics made from psychoid plants.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>With a little bit of time and equipment, a Chemist can easily create a stable supply of a variety of drugs, from lifesaving ones made from healroot to potent narcotics made from psychoid plants.</description>
         <iconPath>Archetypes/Gene_Chemist</iconPath>
         <biostatMet>-2</biostatMet>
         <statFactors>
@@ -1094,7 +1100,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Geomancer</defName>
         <label>geomancer</label>
-        <description>Unlike most supers with earth based powers, Geomancers have difficulty manipulating anything other than normal stones. However, through a lot of practice they have mastered this ability in a way that allows them to move stone precisely, leaving just valuable resources left.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Unlike most supers with earth based powers, Geomancers have difficulty manipulating anything other than normal stones. However, through a lot of practice they have mastered this ability in a way that allows them to move stone precisely, leaving just valuable resources left.</description>
         <iconPath>Archetypes/Gene_Geomancer</iconPath>
         <biostatMet>-2</biostatMet>
         <statFactors>
@@ -1140,7 +1146,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Ferromancer</defName>
         <label>ferromancer</label>
-        <description>Ferromancers specialize in moving mass amounts of metal from far undergound to the surface. They can also use their innate metal control to ensure they always have the best results when extracting resources from a location.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>Ferromancers specialize in moving mass amounts of metal from far undergound to the surface. They can also use their innate metal control to ensure they always have the best results when extracting resources from a location.</description>
         <iconPath>Archetypes/Gene_Ferromancer</iconPath>
         <biostatMet>-4</biostatMet>
         <statFactors>
@@ -1183,7 +1189,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Midas</defName>
         <label>midas</label>
-        <description>While a Midas can't actually turn things into gold, they frequently gather large amounts of wealth by pulling precious resources from deep underground to themselves, usually ordering someone else to break it apart in exchange for a couple trinkets.\n\nMost superheroes have some archetype that they follow, from those that specialize in melee combat to those who specialize in burning everything to the ground. The specific name an archetype goes by often varies, but their overall abilities seldom change. Supers with an archetype usually aren't as burdened by the abilities that come with it, and often don't require the prerequisites that some abilities normally require. The effects, and side effects, of the abilities remain the same.</description>
+        <description>While a Midas can't actually turn things into gold, they frequently gather large amounts of wealth by pulling precious resources from deep underground to themselves, usually ordering someone else to break it apart in exchange for a couple trinkets.</description>
         <iconPath>Archetypes/Gene_Midas</iconPath>
         <biostatMet>-2</biostatMet>
         <abilities>
@@ -1233,7 +1239,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_DormantSuper</defName>
         <label>dormant super</label>
-        <description>At some point in this super's lineage, the superhero gene was introduced but never activated. While this pawn will likely never become a true super, one of their children may suddenly become far greater than their ancestors.\n\nAssuming no mods alter inheritence, there is a 50% for a given gene to be inherited if one parent has it, and a 100% chance of inheriting the gene if both do. There are some issues with vanilla's inheritence system, which are described more in the mod description. Assuming the gene inheritence system doesn't mess up, these are the chances of a child being a true super.\n\nBoth have Super: 50% Super 50% Dormant\nOnly one Super: 25% Super 25% Dormant 25% Both Lost 25% Complete Disappointment</description>
+        <description>At some point in this super's lineage, the superhero gene was introduced but never activated. While this pawn will likely never become a true super, one of their children may suddenly become far greater than their ancestors.\n\nAssuming no mods alter inheritence, there is a 50% for a given gene to be inherited if one parent has it, and a 100% chance of inheriting the gene if both do. Assuming the gene inheritence system doesn't mess up, these are the chances of a child being a true super.\n\nBoth have Super: 50% Super 50% Dormant\nOnly one Super: 25% Super 25% Dormant 25% Both Lost 25% Complete Disappointment</description>
         <iconPath>Archetypes/Gene_DormantSuper</iconPath>
         <biostatMet>0</biostatMet>
         <statFactors>
@@ -1241,13 +1247,13 @@
             <ImmunityGainSpeed>0.5</ImmunityGainSpeed>
             <IncomingDamageFactor>1.333</IncomingDamageFactor>
             <InjuryHealingFactor>0.5</InjuryHealingFactor>
-            <MeleeDamageFactor>0.5</MeleeDamageFactor>
+            <MeleeDamageFactor>0.667</MeleeDamageFactor>
             <PawnTrapSpringChance>100</PawnTrapSpringChance>
             <StaggerDurationFactor>1.333</StaggerDurationFactor>
             <GlobalLearningFactor>0.5</GlobalLearningFactor>
-            <LearningRateFactor>0.5</LearningRateFactor>
-            <ResearchSpeed>0.5</ResearchSpeed>
-            <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+            <LearningRateFactor>0.667</LearningRateFactor>
+            <ResearchSpeed>0.833</ResearchSpeed>
+            <WorkSpeedGlobal>0.833</WorkSpeedGlobal>
         </statFactors>
         <statOffsets>
             <ComfyTemperatureMin>20</ComfyTemperatureMin>

@@ -3,7 +3,7 @@
     <ThingDef ParentName="SHG_MineableResourceBase">
         <defName>SHG_MineableGWAdamantium</defName>
         <label>super compacted adamantium(Grimworld)</label>
-        <description>A pillar largely consisting of adamantium that was buried deep undergound. These resources were compacted and brought to the surface by a superhero.</description>
+        <description>A pillar largely consisting of adamantium that was buried deep undergound.</description>
         <graphicData>
             <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
             <color>(159,160,159)</color>
@@ -21,7 +21,7 @@
     <ThingDef ParentName="SHG_MineableResourceBase">
         <defName>SHG_MineableGWAuramite</defName>
         <label>super compacted auramite(Grimworld)</label>
-        <description>A pillar consisting of auramite that was buried deep undergound, encased in large amounts of useless stone. These resources were compacted and brought to the surface by a superhero.</description>
+        <description>A pillar consisting of auramite that was buried deep undergound, encased in large amounts of useless stone.</description>
         <graphicData>
             <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
             <color>(89,83,68)</color>
@@ -39,7 +39,7 @@
     <ThingDef ParentName="SHG_MineableResourceBase">
         <defName>SHG_MineableGWCeramite</defName>
         <label>super compacted ceramite(Grimworld)</label>
-        <description>A pillar largely consisting of ceramite that was buried deep undergound. These resources were compacted and brought to the surface by a superhero.</description>
+        <description>A pillar largely consisting of ceramite that was buried deep undergound.</description>
         <graphicData>
             <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
             <color>(220,220,220)</color>
@@ -57,7 +57,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonMineableGWAdamantium</defName>
         <label>summon adamantium(Grimworld)</label>
-        <description>Summons a pillar of adamantium(Grimworld variant) at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of adamantium(Grimworld variant) at a location.</description>
         <iconPath>Things/Resource/Adamantium/Adamantium_c</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -70,7 +70,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonMineableGWAuramite</defName>
         <label>summon auramite(Grimworld)</label>
-        <description>Summons a pillar of auramite(Grimworld variant) at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of auramite(Grimworld variant) at a location.</description>
         <iconPath>Things/Resource/Auramite/Auramite_c</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -83,7 +83,7 @@
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonMineableGWCeramite</defName>
         <label>summon ceramite(Grimworld)</label>
-        <description>Summons a pillar of ceramite(Grimworld variant) at a location.\n\nWARNING: Using this on a location with a plant will destroy said plant. This is as expected.</description>
+        <description>Summons a pillar of ceramite(Grimworld variant) at a location.</description>
         <iconPath>Things/Resource/Ceramite/Ceramite_c</iconPath>
         <comps>
             <li Class="CompProperties_AbilitySpawn">
@@ -96,7 +96,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonMineableGWAdamantium</defName>
         <label>summon adamantium(Grimworld)</label>
-        <description>Carriers of this gene can summons a pillar of adamantium(Grimworld variant) at a location once per quadrum. This pillar can be mined to get a lot of the resource.</description>
+        <description>Carriers of this gene can summons a pillar of adamantium(Grimworld variant) at a location once per quadrum.</description>
         <iconPath>Things/Resource/Adamantium/Adamantium_c</iconPath>
         <displayOrderInCategory>39.9</displayOrderInCategory>
         <biostatMet>-3</biostatMet>
@@ -132,7 +132,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonMineableGWCeramite</defName>
         <label>summon ceramite(Grimworld)</label>
-        <description>Carriers of this gene can summons a pillar of ceramite(Grimworld variant) at a location once per quadrum. This pillar can be mined to get a lot of the resource.</description>
+        <description>Carriers of this gene can summons a pillar of ceramite(Grimworld variant) at a location once per quadrum.</description>
         <iconPath>Things/Resource/Ceramite/Ceramite_c</iconPath>
         <displayOrderInCategory>39.7</displayOrderInCategory>
         <biostatMet>-2</biostatMet>

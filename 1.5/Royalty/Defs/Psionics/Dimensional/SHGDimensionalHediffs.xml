@@ -22,7 +22,7 @@
     <HediffDef>
         <defName>SHG_Psionist_Chaotic</defName>
         <label>chaotic spores</label>
-        <description>An Astral Psionist subjected this pawn to a medley of extremely toxic spores that have unpredictable effects on people's mind. It may make them go berserk, it may make them feel like their starving, it may even make them wander off to seek an even greater high. In some cases, it causes no effects at all.</description>
+        <description>An Astral Psionist subjected this pawn to a medley of extremely toxic spores that have unpredictable effects on the mind.</description>
         <isBad>false</isBad>
         <hediffClass>HediffWithComps</hediffClass>
         <descriptionHyperlinks>

@@ -6,7 +6,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase" MayRequire="Ludeon.Rimworld.Royalty">
         <defName>SHG_SummonAnimaTree</defName>
         <label>summon anima tree</label>
-        <description>Carriers of this gene can summon an anima tree at a location once per quadrum. The tree will be able to grow even if placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. You should still be able to interact with them like you could any other anima tree.</description>
+        <description>Carriers of this gene can summon an anima tree at a location once per quadrum.</description>
         <iconPath>Things/Plant/TreeAnima/TreeAnimaA</iconPath>
         <displayOrderInCategory>0</displayOrderInCategory>
         <abilities>
@@ -24,7 +24,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonPoluxTree</defName>
         <label>summon polux tree</label>
-        <description>Carriers of this gene can summon a polux tree at a location once per year. The tree will be able to grow even if placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. It should still act as any other polux tree would though.</description>
+        <description>Carriers of this gene can summon a polux tree at a location once per year.</description>
         <iconPath>Things/Plant/TreePolux/PoluxTreeB</iconPath>
         <displayOrderInCategory>1</displayOrderInCategory>
         <abilities>
@@ -56,7 +56,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonEnhancedCorn</defName>
         <label>summon enhanced corn</label>
-        <description>Carriers of this gene can summon a super enhanced corn plant at a location once per quadrum. The plant will be able to grow even if placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. The issue shouldn't cause any gameplay issues, it will just look strange.</description>
+        <description>Carriers of this gene can summon a super enhanced corn plant at a location once per quadrum.</description>
         <iconPath>Things/Plant/CornPlant/CornPlantA</iconPath>
         <displayOrderInCategory>2</displayOrderInCategory>
         <abilities>
@@ -73,7 +73,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonEnhancedDevilstrand</defName>
         <label>summon enhanced devilstrand</label>
-        <description>Carriers of this gene can summon a super enhanced devilstrand plant at a location once per quadrum. The plant will be able to grow even if placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. The issue shouldn't cause any gameplay issues, it will just look strange.</description>
+        <description>Carriers of this gene can summon a super enhanced devilstrand plant at a location once per quadrum.</description>
         <iconPath>Things/Plant/Devilstrand/DevilstrandA</iconPath>
         <displayOrderInCategory>3</displayOrderInCategory>
         <abilities>
@@ -90,7 +90,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonEnhancedHealroot</defName>
         <label>summon enhanced healroot</label>
-        <description>Carriers of this gene can summon a super enhanced healroot plant at a location once per quadrum. The plant will be able to grow even if placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. The issue shouldn't cause any gameplay issues, it will just look strange.</description>
+        <description>Carriers of this gene can summon a super enhanced healroot plant at a location once per quadrum.</description>
         <iconPath>Things/Plant/Healroot/HealrootA</iconPath>
         <displayOrderInCategory>4</displayOrderInCategory>
         <abilities>
@@ -107,7 +107,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonEnhancedHops</defName>
         <label>summon enhanced hops</label>
-        <description>Carriers of this gene can summon a super enhanced hops plant at a location once per quadrum. The plant will be able to grow even if placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. The issue shouldn't cause any gameplay issues, it will just look strange.</description>
+        <description>Carriers of this gene can summon a super enhanced hops plant at a location once per quadrum.</description>
         <iconPath>Things/Plant/HopsPlant/HopsPlantA</iconPath>
         <displayOrderInCategory>5</displayOrderInCategory>
         <abilities>
@@ -124,7 +124,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonEnhancedSmokeleaf</defName>
         <label>summon enhanced smokeleaf</label>
-        <description>Carriers of this gene can summon a super enhanced smokeleaf plant at a location once per quadrum. The plant will be able to grow even if placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. The issue shouldn't cause any gameplay issues, it will just look strange.</description>
+        <description>Carriers of this gene can summon a super enhanced smokeleaf plant at a location once per quadrum.</description>
         <iconPath>Things/Plant/SmokeleafPlant/SmokeleafPlantA</iconPath>
         <displayOrderInCategory>6</displayOrderInCategory>
         <abilities>
@@ -141,7 +141,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonEnhancedPsychoid</defName>
         <label>summon enhanced psychoid</label>
-        <description>Carriers of this gene can summon a super enhanced psychoid plant at a location once per quadrum. The plant will be able to grow even if placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. The issue shouldn't cause any gameplay issues, it will just look strange.</description>
+        <description>Carriers of this gene can summon a super enhanced psychoid plant at a location once per quadrum.</description>
         <iconPath>Things/Plant/PsychoidPlant/PsychoidPlantA</iconPath>
         <displayOrderInCategory>7</displayOrderInCategory>
         <abilities>
@@ -158,7 +158,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase" MayRequire="Ludeon.RimWorld.Ideology">
         <defName>SHG_SummonEnhancedNutrifungus</defName>
         <label>summon enhanced nutrifungus</label>
-        <description>Carriers of this gene can summon a super enhanced nutrifungus plant at a location once per quadrum. The plant will be able to grow even if placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. The issue shouldn't cause any gameplay issues, it will just look strange.</description>
+        <description>Carriers of this gene can summon a super enhanced nutrifungus plant at a location once per quadrum.</description>
         <iconPath>Things/Plant/Nutrifungus/NutrifungusA</iconPath>
         <displayOrderInCategory>8</displayOrderInCategory>
         <abilities>
@@ -175,7 +175,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonEnhancedToxipotato</defName>
         <label>summon enhanced toxipotato</label>
-        <description>Carriers of this gene can summon a super enhanced toxipotato plant at a location once per quadrum. The plant will be able to grow even if placed on stone flooring.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. The issue shouldn't cause any gameplay issues, it will just look strange.</description>
+        <description>Carriers of this gene can summon a super enhanced toxipotato plant at a location once per quadrum.</description>
         <iconPath>Things/Plant/Toxipotato/ToxipotatoA</iconPath>
         <displayOrderInCategory>9</displayOrderInCategory>
         <abilities>
@@ -192,7 +192,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonGlowPod</defName>
         <label>summon glow pod</label>
-        <description>Carriers of this gene can summon a glow pod at a location once per quadrum. This glow pod will survive as long as it doesn't take any damage.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. The issue shouldn't cause any gameplay issues, it will just look strange.</description>
+        <description>Carriers of this gene can summon a glow pod at a location once per quadrum that will survive as long as it doesn't take any damage.</description>
         <iconPath>Things/Building/Natural/GlowPod</iconPath>
         <displayOrderInCategory>10</displayOrderInCategory>
         <abilities>
@@ -209,7 +209,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase" MayRequire="Ludeon.RimWorld.Ideology">
         <defName>SHG_SummonGauranlenPod</defName>
         <label>summon gauranlen pod</label>
-        <description>Carriers of this gene can summon a gauranlen pod at a location once per quadrum.\n\nDespite my best efforts, I could not get the ability to disable spots that already have plants. The issue shouldn't cause any gameplay issues, it will just look strange.</description>
+        <description>Carriers of this gene can summon a gauranlen pod at a location once per quadrum.</description>
         <iconPath>Things/Plant/GauranlenTree/GauranlenTreeA</iconPath>
         <displayOrderInCategory>11</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
@@ -227,7 +227,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonMineableWood</defName>
         <label>summon wood pillar</label>
-        <description>Carriers of this gene can summon a pillar of wood at a location once per quadrum. This pillar is so dense it will require a miner come carefully take it apart bit by bit.\n\nThis provides a method of getting wood that doesn't involve chopping down trees or growing crops.</description>
+        <description>Carriers of this gene can summon a pillar of wood at a location once per quadrum that is so dense it will require a miner come carefully take it apart bit by bit.\n\nThis provides a method of getting wood that doesn't involve chopping down trees or growing crops.</description>
         <iconPath>Things/Item/Resource/WoodLog/WoodLog_c</iconPath>
         <displayOrderInCategory>18</displayOrderInCategory>
         <abilities>
@@ -262,7 +262,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonMineableStone</defName>
         <label>summon stone</label>
-        <description>Carriers of this gene can summon a pillars of various stones at specified locations once per quadrum. These pillars are guaranteed to give 9 chunks.</description>
+        <description>Carriers of this gene can summon a pillars of various stones at specified locations once per quadrum, with each pillar giving a guaranteed 9 chunks.</description>
         <iconPath>Things/Item/Chunk/ChunkStone/RockLowC</iconPath>
         <displayOrderInCategory>20</displayOrderInCategory>
         <abilities>
@@ -287,7 +287,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonMineableSteel</defName>
         <label>summon steel</label>
-        <description>Carriers of this gene can summon a pillar of steel at a location once per quadrum. This pillar can be mined to get a lot of the resource.</description>
+        <description>Carriers of this gene can summon a pillar of steel at a location once per quadrum.</description>
         <iconPath>Things/Item/Resource/Steel/Steel_c</iconPath>
         <displayOrderInCategory>20.1</displayOrderInCategory>
         <abilities>
@@ -304,7 +304,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonMineableSilver</defName>
         <label>summon silver</label>
-        <description>Carriers of this gene can summon a pillar of silver at a location once per quadrum. This pillar can be mined to get a lot of the resource.</description>
+        <description>Carriers of this gene can summon a pillar of silver at a location once per quadrum.</description>
         <iconPath>Things/Item/Resource/Silver/Silver_c</iconPath>
         <displayOrderInCategory>21</displayOrderInCategory>
         <abilities>
@@ -321,7 +321,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonMineableGold</defName>
         <label>summon gold</label>
-        <description>Carriers of this gene can summon a pillar of gold at a location once per quadrum. This pillar can be mined to get a lot of the resource.</description>
+        <description>Carriers of this gene can summon a pillar of gold at a location once per quadrum.</description>
         <iconPath>Things/Item/Resource/Gold/Gold_c</iconPath>
         <displayOrderInCategory>22</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
@@ -339,7 +339,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonMineableUranium</defName>
         <label>summon uranium</label>
-        <description>Carriers of this gene can summon a pillar of uranium at a location once per quadrum. This pillar can be mined to get a lot of the resource.</description>
+        <description>Carriers of this gene can summon a pillar of uranium at a location once per quadrum.</description>
         <iconPath>Things/Item/Resource/Uranium/Uranium_c</iconPath>
         <displayOrderInCategory>23</displayOrderInCategory>
         <abilities>
@@ -356,7 +356,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonMineablePlasteel</defName>
         <label>summon plasteel</label>
-        <description>Carriers of this gene can summon a pillar of plasteel at a location once per quadrum. This pillar can be mined to get a lot of the resource.</description>
+        <description>Carriers of this gene can summon a pillar of plasteel at a location once per quadrum.</description>
         <iconPath>Things/Item/Resource/Plasteel/Plasteel_c</iconPath>
         <displayOrderInCategory>24</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
@@ -374,7 +374,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonMineableJade</defName>
         <label>summon jade</label>
-        <description>Carriers of this gene can summon a pillar of jade at a location once per quadrum. This pillar can be mined to get a lot of the resource.</description>
+        <description>Carriers of this gene can summon a pillar of jade at a location once per quadrum.</description>
         <iconPath>Things/Item/Resource/Jade/Jade_c</iconPath>
         <displayOrderInCategory>25</displayOrderInCategory>
         <abilities>
@@ -391,7 +391,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonMineableComponentIndustrial</defName>
         <label>summon components</label>
-        <description>Carriers of this gene can summon a pillar of useless stone with some components in it at a location once per quadrum. This pillar can be mined to get a bunch of components.</description>
+        <description>Carriers of this gene can summon a pillar of useless stone with some components in it at a location once per quadrum.</description>
         <iconPath>Things/Item/Resource/ComponentIndustrial/ComponentIndustrial</iconPath>
         <displayOrderInCategory>30.1</displayOrderInCategory>
         <abilities>
@@ -408,7 +408,7 @@
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonMineableComponentSpacer</defName>
         <label>summon advanced components</label>
-        <description>Carriers of this gene can summon a pillar of useless stone with some advanced components in it at a location once per quadrum. This pillar can be mined to get a several advanced components.</description>
+        <description>Carriers of this gene can summon a pillar of useless stone with some advanced components in it at a location once per quadrum.</description>
         <iconPath>Things/Item/Resource/ComponentSpacer/ComponentSpacer</iconPath>
         <displayOrderInCategory>30.2</displayOrderInCategory>
         <abilities>

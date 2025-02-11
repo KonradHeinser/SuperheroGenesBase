@@ -3,7 +3,7 @@
     <HediffDef>
         <defName>SHG_PsychicDisconnection</defName>
         <label>psychic disconnection</label>
-        <description>This pawn has been temporarily disconnected from the psychic field. If they had neural heat before this then that heat will stop dissipating for a while, and likely begin causing issues.</description>
+        <description>This pawn has been temporarily disconnected from the psychic field. If they had neural heat before this then that heat will stop dissipating for a while, and potentially begin causing issues.</description>
         <isBad>false</isBad>
         <hediffClass>HediffWithComps</hediffClass>
         <stages>
@@ -72,7 +72,7 @@
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
-                <label>slow heal</label>
+                <label>slow healing</label>
                 <hungerRateFactorOffset>-0.75</hungerRateFactorOffset>
                 <capMods>
                     <li>
@@ -233,7 +233,7 @@
     <HediffDef MayRequire="Ludeon.Rimworld.Anomaly">
         <defName>SHG_DetectMetalHorror</defName>
         <label>detect metal horror</label>
-        <description>A super put a special invisible mark on this pawn that searches their body for hidden metal horrors. It will not be able to tell where the exact location of the target is within the pawn as it uses oddities in the marked pawn's blood and nervous system as an indicator. If this goes away without metal horror detected appearing, the pawn is safe. For now.</description>
+        <description>A super put a special invisible mark on this pawn that searches their body for hidden metal horrors. It will not be able to tell where the exact location of the target is within the pawn as it uses oddities in the marked pawn's blood and nervous system as an indicator.\n\nIf this goes away without metal horror detected appearing, the pawn is safe. For now.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
@@ -246,7 +246,7 @@
     <HediffDef MayRequire="Ludeon.Rimworld.Anomaly">
         <defName>SHG_MetalHorrorDetected</defName>
         <label>metal horror detected</label>
-        <description>This pawn has a metal horror somewhere within them. You still need to do surgery stuff to find the exact location, but at least you know to be ready now. Note: If something removes the horror, then this should go away on its own. This usually occurs due to the surgery or it popping out, but any other means should also be covered. This hediff will remain even after the intial detection hediff is gone.</description>
+        <description>This pawn has a metal horror somewhere within them. You still need to do surgery stuff to find the exact location, but at least you know to be ready now. Note: If something removes the horror, then this should go away on its own. This usually occurs due to the surgery or it popping out, but any other means should also be covered. This hediff will remain even after the intial detection hediff is gone.\n\nUnless you have a mod that alters how metal horrors are handled, you will still need to wait for the strange flesh to appear for the surgery to succeed.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <defaultLabelColor>(0.9, 0.35, 0.35)</defaultLabelColor>
         <stages>

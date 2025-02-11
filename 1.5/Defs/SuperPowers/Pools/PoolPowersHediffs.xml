@@ -68,7 +68,7 @@
     <HediffDef>
         <defName>SHG_LesserPortent</defName>
 		<label>lesser portent</label>
-		<description>This super is focusing their senses to such an extent that they can avoid most melee attacks, and have heightened melee accuracy. Once the ability wears off, their perception pool will be drained for around a day, reducing the benefits the pawn would receive from the Perception portion of the base Superhero gene.</description>
+		<description>This super is focusing their senses to such an extent that they can avoid most melee attacks, and have heightened melee accuracy. Once the ability wears off, the pawn temporarily loses the Perception portion of the base Superhero gene.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<initialSeverity>1.0</initialSeverity>
@@ -218,7 +218,7 @@
         <defName>SHG_Pools_SniperSquad_Buff</defName>
         <label>focused shooting</label>
         <defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
-        <description>A nearby super is calming this person's mind. This pawn feels calmer, and their mind feels a little clearer.</description>
+        <description>A nearby super is enhancing this pawn's ability to perceive their environment.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
         <stages>
@@ -244,7 +244,7 @@
     <HediffDef>
         <defName>SHG_Pools_CrushingStrength</defName>
 		<label>crushing blows</label>
-		<description>This super is focusing their strength into a big burst that lasts for an hour, during which their melee blows will be far stronger than usual. Once the ability wears off, their strength pool will be drained for around a day, reducing the benefits the pawn would receive from the Strength portion of the base Superhero gene.</description>
+		<description>This super is focusing their strength into a big burst that lasts for an hour, during which their melee blows will be far stronger than usual. Once the ability wears off, the pawn temporarily loses the Strength portion of the base Superhero gene.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<initialSeverity>1.0</initialSeverity>
@@ -279,7 +279,7 @@
     <HediffDef>
         <defName>SHG_Pools_HealAllies</defName>
         <label>healing</label>
-        <description>This super is providing their regeneration abilities to everyone around them for a day. In addition to sacrificing the superhero base's healing for a time, the body will be unable to repair damage dealt to it, though the superclotting effects will still remain, if the superhero has a gene that provides one.</description>
+        <description>This super is providing their regeneration abilities to everyone around them for a day. In addition to sacrificing the superhero base's healing for a time, the body will be unable to repair damage dealt to it.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>False</isBad>
 		<initialSeverity>1.0</initialSeverity>
@@ -363,14 +363,9 @@
                     <StaggerDurationFactor>1.333</StaggerDurationFactor>
                 </statFactors>
                 <statOffsets>
+                    <MoveSpeed>-3</MoveSpeed>
                     <AimingDelayFactor>.1</AimingDelayFactor>
                 </statOffsets>
-                <capMods>
-                    <li>
-                        <capacity>Moving</capacity>
-                        <postFactor>0.90</postFactor>
-                    </li>
-                </capMods>
             </li>
         </stages>
 		<comps>

@@ -10,7 +10,7 @@
     <AbilityDef ParentName="SHGHemoThiefBase">
         <defName>SHG_Hemomancer_Drain</defName>
         <label>drain</label>
-        <description>Drain a target of some of their blood, and instantly convert it into hemogen.\n\nUnlike bloodfeed, this will not create thoughts or opinions, but is considered hostile.</description>
+        <description>Drain a target of some of their blood, and instantly convert it into hemogen.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_Drain</iconPath>
         <cooldownTicksRange>2500</cooldownTicksRange>
         <verbProperties>
@@ -30,7 +30,7 @@
     <AbilityDef ParentName="SHGHemoThiefBase">
         <defName>SHG_Hemomancer_StealPerceptiveness</defName>
         <label>steal perceptiveness</label>
-        <description>Drain a distant target of some of their blood, and instantly convert it into hemogen. This will also leave a mark on the target that makes them less perceptive for an hour, and will automatically turn some of the hemogen the hemothief would have normally gained into a perception boost.</description>
+        <description>Drain a distant target of some of their blood, and instantly convert it into hemogen and a perception buff. This leaves a mark on the target that makes them less perceptive for an hour.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_StealPerceptiveness</iconPath>
         <cooldownTicksRange>2500</cooldownTicksRange>
         <verbProperties>
@@ -52,7 +52,7 @@
     <AbilityDef ParentName="SHGHemoThiefBase">
         <defName>SHG_Hemomancer_StealDefense</defName>
         <label>steal defense</label>
-        <description>Drain a distant target of some of their blood, and instantly convert it into hemogen. This will also leave a mark on the target that removes all innate armor they may have for an hour, and will automatically turn some of the hemogen the hemothief would have normally gained into a defense boost that is stronger the more innate armor they have.</description>
+        <description>Drain a distant target of some of their blood, and instantly convert it into hemogen and a defense buff. This leaves a mark on the target that removes all innate armor they may have for an hour.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_StealDefense</iconPath>
         <cooldownTicksRange>2500</cooldownTicksRange>
         <verbProperties>
@@ -74,7 +74,7 @@
     <AbilityDef ParentName="SHGHemoThiefBase">
         <defName>SHG_Hemomancer_StealStrength</defName>
         <label>steal strength</label>
-        <description>Drain a distant target of some of their blood, and instantly convert it into hemogen. This will also leave a mark on the target that makes them have less strength for an hour, and will automatically turn some of the hemogen the hemothief would have normally gained into a strength boost.</description>
+        <description>Drain a distant target of some of their blood, and instantly convert it into hemogen and a strength buff. This leaves a mark on the target that makes them have less strength for an hour.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_StealStrength</iconPath>
         <cooldownTicksRange>2500</cooldownTicksRange>
         <verbProperties>
@@ -96,7 +96,7 @@
     <AbilityDef ParentName="SHGHemoThiefBase">
         <defName>SHG_Hemomancer_Reap</defName>
         <label>reap</label>
-        <description>Drain a target of large quantities blood, usually killing those who are already missing some, and instantly convert it into hemogen.\n\nUnlike bloodfeed, this will not create thoughts or opinions, but is considered hostile.</description>
+        <description>Drain a target of large quantities blood, usually killing those who are already missing some, and instantly convert it into hemogen.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_Drain</iconPath>
         <cooldownTicksRange>2500</cooldownTicksRange>
         <verbProperties>
@@ -119,7 +119,7 @@
     <AbilityDef ParentName="SHGHemoThiefBase">
         <defName>SHG_Hemomancer_Sow</defName>
         <label>sow</label>
-        <description>Instantly removes almost all mundane injuries/chronic conditions and returns missing limbs. This will not get rid of infections.\n\nThe hemogen cost will remain the same regardless of how many conditions there are. This can make higher risk situations more rewarding since you won't need to spend as much hemogen healing a pawn.\n\nThis will also return eyes even for ideologies that love blindness. Scarification will not be removed because it was easier to differentiate without causing potential issues. However, this will NOT remove part replacing implants like bionic arms and legs.</description>
+        <description>Instantly removes almost all mundane injuries/chronic conditions and returns missing limbs. This will not get rid of infections or artificial parts.\n\nThe hemogen cost will remain the same regardless of how many conditions there are..\n\nThis returns eyes even for ideologies that love blindness. Scarification will not be removed because it was easier to differentiate without causing potential issues.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_Sow</iconPath>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
@@ -176,7 +176,7 @@
     <AbilityDef ParentName="SHGHemoThiefBase">
         <defName>SHG_Hemomancer_MarkForDeath</defName>
         <label>mark for death</label>
-        <description>Mark a pawn for death, removing any innate armor they may have and making them bleed three times faster than normal. This will return some of the hemogen used to cast it by draining a little bit of blood from the target. This cannot raise hemogen above 80.\n\nIf the target survives for 5 hours after being marked for death, their hediff will change from doomed to defiance, giving them a one-use ability that completely removes all injuries, excluding body part loss. If this ability is not used within 18-19 hours, it is lost.</description>
+        <description>Mark a pawn for death, removing any innate armor they may have and making them bleed three times faster than normal. This will return some of the hemogen used to cast it by draining a little bit of blood from the target.\n\nIf the target survives for 5 hours after being marked for death, their hediff will change from doomed to defiance, giving them a single-use ability that completely removes all injuries, excluding body part loss.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_MarkForDeath</iconPath>
         <verbProperties>
             <range>23</range>

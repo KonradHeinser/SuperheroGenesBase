@@ -3,7 +3,7 @@
     <GeneDef ParentName="SHG_ResistanceBase">
         <defName>SHG_LaserImmune</defName>
         <label>eye laser immune</label> 
-        <description>Carriers of this gene are immune to beam damage.</description>
+        <description>Supers with this gene are immune to beam damage.</description>
         <iconPath>Powers/Gene_LaserEyeImmunity</iconPath>
         <displayOrderInCategory>0</displayOrderInCategory>
         <prerequisite>SuperDurability</prerequisite>

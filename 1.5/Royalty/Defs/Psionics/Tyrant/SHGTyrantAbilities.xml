@@ -74,7 +74,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_GraspHeart</defName>
         <label>grasp heart</label>
-        <description>Cause a pawn to start having heart issues for an hour. This causes reduced blood pumping and has a small chance to cause a heart attack. The duration of this effect is influenced by psychic sensitivity.</description>
+        <description>Cause a pawn to start having heart issues for an hour. This reduces blood pumping and has a small chance to cause a heart attack. The duration of this effect is influenced by psychic sensitivity.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_GraspHeart</iconPath>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <statBases>
@@ -91,6 +91,7 @@
             <targetParams>
                 <canTargetSelf>False</canTargetSelf>
                 <canTargetPawns>True</canTargetPawns>
+                <canTargetMechs>False</canTargetMechs>
             </targetParams>
         </verbProperties>
         <comps>
@@ -107,7 +108,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_DestroyResistance</defName>
         <label>destroy resistance</label>
-        <description>Attempt to psychically break a prisoner's resistance. Psychically deaf pawns are immune to this ability.</description>
+        <description>Attempt to psychically break a prisoner's resistance.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_DestroyResistance</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -124,6 +125,14 @@
             </targetParams>
         </verbProperties>
         <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityAbilityValidator">
+                <targetStatLimiters>
+                    <li>
+                        <minStatValue>0.001</minStatValue>
+                        <stat>PsychicSensitivity</stat>
+                    </li>
+                </targetStatLimiters>
+            </li>
             <li Class="CompProperties_AbilityOffsetPrisonerResistance">
                 <offset>-100</offset>
                 <psychic>True</psychic>
@@ -241,7 +250,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_RendMinds</defName>
         <label>rend minds</label>
-        <description>Attempt to psychically break the resistance of multiple prisoners in an area. Psychically deaf pawns are immune to this ability.</description>
+        <description>Attempt to psychically break the resistance of multiple prisoners in an area.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_RendMinds</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -300,7 +309,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_Despair</defName>
         <label>despair</label>
-        <description>Psychically trigger the fear portions of several people's brains to make them feel terrified. This requires the target to not be psychically deaf, and the duration will be impacted by fear susceptibility.</description>
+        <description>Psychically trigger the fear portions of several people's brains to make them feel terrified. Duration is based on fear susceptibility.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_Despair</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <descriptionHyperlinks>
@@ -369,7 +378,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_EmpiresWillFall</defName>
         <label>empires will fall</label>
-        <description>Release massive amounts of psycic energy to cause almost everything in a massive area around the Conqueror to go into a murderous rampage. The effects of this ability will be felt by every nearby faction, and nobody likes a potentially dangeous tyrant.\n\nThis will leave the Conquerer extra vulnerable to effects that remove psychic sensitivity for several days.</description>
+        <description>Release massive amounts of psycic energy to cause almost everything in a massive area around the Conqueror to go into a murderous rampage. The effects of this ability will be felt by every nearby faction, and nobody likes a potentially dangeous tyrant.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_EmpiresWillFall</iconPath>
         <jobDef>CastAbilityOnThingUninterruptible</jobDef>
         <targetRequired>False</targetRequired>
@@ -419,7 +428,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_YouWillSubmit</defName>
         <label>you will submit</label>
-        <description>Attempt to psychically break the resistance of multiple prisoners in an area, while also clouding their minds with happiness to make the recruiting itself easier. Psychic sensitivity only impacts the mood portion of this ability. Their resistance will be reduced regardless of sensitivity.</description>
+        <description>Attempt to psychically break the resistance of multiple prisoners in an area, while also clouding their minds with happiness to make the recruiting itself easier. Psychic sensitivity only impacts the mood portion of this ability.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_YouWillSubmit</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -454,7 +463,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_GazeIntoTheAbyss</defName>
         <label>gaze into the abyss</label>
-        <description>Psychically trigger the fear portions of several people's brains to make them question their very existence as they lie paralyzed with fear. This requires the target to not be psychically deaf, and the duration will be impacted by fear susceptibility.</description>
+        <description>Psychically trigger the fear portions of several people's brains to make them question their very existence as they lie paralyzed with fear. Duration impacted by fear susceptibility.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_GazeIntoTheAbyss</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <descriptionHyperlinks>

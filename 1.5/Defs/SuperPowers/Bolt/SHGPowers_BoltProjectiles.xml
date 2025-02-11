@@ -128,7 +128,8 @@
             <preExplosionSpawnThingDef>Filth_Water</preExplosionSpawnThingDef>
             <filthCount>1</filthCount>
             <soundExplode>Foam_Impact</soundExplode>
-            <speed>500</speed>      <!--It's really fast to both represent the high speed of pressurized water, and to help make the waterskip portion less intrusive-->
+            <speed>500</speed>      
+    <!--It's really fast to both represent the high speed of pressurized water, and to help make the waterskip portion less intrusive-->
         </projectile>
     </ThingDef>
 </Defs>

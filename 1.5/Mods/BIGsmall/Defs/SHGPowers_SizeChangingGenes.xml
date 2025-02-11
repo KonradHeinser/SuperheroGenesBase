@@ -3,7 +3,7 @@
     <GeneDef ParentName="SHG_ArchetypeBase">
         <defName>SHG_Archetypes_Giantman</defName>
         <label>giantman</label>
-        <description>The Giantman can alter their size at will, along with the size of all their equipment. They can become a massive being capable of crushing people underfoot or a being so small it's almost impossible to see them.\n\nThis archetype was put here to increase the chances that the category warning will be read.\n\nNote:If your size does not change after using one of these abilities, you may need to save and reload. Rimworld usually doesn't like changing graphic sizes mid-game.\n\nWARNING: Rimworld pathfinding, combat, and graphics tend to expect pawns to be a certain size. You will likely not have any game-breaking issues, but if one of your pawns starts acting funny, first save and reload. If that doesn't work revert them to normal size, followed by a save and reload. If that doesn't work, then I don't really have any other ideas because size shouldn't be a factor anymore.</description>
+        <description>The Giantman can alter their size at will, along with the size of all their equipment. They can become a massive being capable of crushing people underfoot or a being so small it's almost impossible to see them.\n\nWARNING: Rimworld pathfinding, combat, and graphics tend to expect pawns to be a certain size. You will likely not have any game-breaking issues, but if one of your pawns starts acting funny, first save and reload. If that doesn't work revert them to normal size, followed by a save and reload. If that doesn't work, then I don't really have any other ideas because size shouldn't be a factor anymore.</description>
         <iconPath>Archetypes/Gene_Giantman</iconPath>
         <displayCategory>SuperPowersResize</displayCategory>
         <displayOrderInCategory>-1</displayOrderInCategory>
@@ -65,7 +65,7 @@
     <GeneDef ParentName="SuperPowersResizeBase">
         <defName>SHG_MicroscopicSize</defName>
         <label>become microscopic</label>
-        <description>Carriers of this gene are able to become 1% size, reducing melee damage, hunger rate, and any stat related to size. This will also increase melee dodge chance, and reduce the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this small may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <description>Carriers of this gene are able to become 1% size, reducing melee damage, hunger rate, and any stat related to size. This will also increase melee dodge chance, and reduce the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this small may have unforseen consequences. All I can guarantee is that this will change your size.</description>
         <iconPath>Powers/Size/Gene_MicroscopicSize</iconPath>
         <displayOrderInCategory>0</displayOrderInCategory>
         <abilities>
@@ -87,7 +87,7 @@
     <GeneDef ParentName="SuperPowersResizeBase">
         <defName>SHG_MinuteSize</defName>
         <label>become minute</label>
-        <description>Carriers of this gene are able to become significantly smaller, reducing melee damage, food hunger rate, and any stat related to size. This will also increase melee dodge chance, and reduce the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this small may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <description>Carriers of this gene are able to become significantly smaller, reducing melee damage, food hunger rate, and any stat related to size. This will also increase melee dodge chance, and reduce the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this small may have unforseen consequences. All I can guarantee is that this will change your size.</description>
         <iconPath>Powers/Size/Gene_MinuteSize</iconPath>
         <displayOrderInCategory>1</displayOrderInCategory>
         <abilities>
@@ -111,7 +111,7 @@
     <GeneDef ParentName="SuperPowersResizeBase">
         <defName>SHG_TinySize</defName>
         <label>become tiny</label>
-        <description>Carriers of this gene are able to become a lot smaller, reducing melee damage, food hunger rate, and any stat related to size. This will also increase melee dodge chance, and reduce the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this small may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <description>Carriers of this gene are able to become a lot smaller, reducing melee damage, food hunger rate, and any stat related to size. This will also increase melee dodge chance, and reduce the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this small may have unforseen consequences. All I can guarantee is that this will change your size.</description>
         <iconPath>Powers/Size/Gene_TinySize</iconPath>
         <displayOrderInCategory>2</displayOrderInCategory>
         <abilities>
@@ -135,7 +135,7 @@
     <GeneDef ParentName="SuperPowersResizeBase">
         <defName>SHG_SmallSize</defName>
         <label>become small</label>
-        <description>Carriers of this gene are able to become smaller, reducing melee damage, food hunger rate, and any stat related to size. This will also increase melee dodge chance, and reduce the perceived danger of this pawn when calculating raid size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <description>Carriers of this gene are able to become smaller, reducing melee damage, food hunger rate, and any stat related to size. This will also increase melee dodge chance, and reduce the perceived danger of this pawn when calculating raid size.</description>
         <iconPath>Powers/Size/Gene_SmallSize</iconPath>
         <displayOrderInCategory>3</displayOrderInCategory>
         <abilities>
@@ -154,7 +154,7 @@
     <GeneDef ParentName="SuperPowersResizeBase">
         <defName>SHG_BigSize</defName>
         <label>become big</label>
-        <description>Carriers of this gene are able to become larger, increasing melee damage, hunger rate, and any stat related to size. This will also reduce melee dodge chance, and increase the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this large may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <description>Carriers of this gene are able to become larger, increasing melee damage, hunger rate, and any stat related to size. This will also reduce melee dodge chance, and increase the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this large may have unforseen consequences. All I can guarantee is that this will change your size.</description>
         <iconPath>Powers/Size/Gene_BigSize</iconPath>
         <displayOrderInCategory>4</displayOrderInCategory>
         <abilities>
@@ -173,7 +173,7 @@
     <GeneDef ParentName="SuperPowersResizeBase">
         <defName>SHG_HugeSize</defName>
         <label>become huge</label>
-        <description>Carriers of this gene are able to become a lot larger, increasing melee damage, hunger rate, and any stat related to size. This will also reduce melee dodge chance, and increase the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this large may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <description>Carriers of this gene are able to become a lot larger, increasing melee damage, hunger rate, and any stat related to size. This will also reduce melee dodge chance, and increase the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this large may have unforseen consequences. All I can guarantee is that this will change your size.</description>
         <iconPath>Powers/Size/Gene_HugeSize</iconPath>
         <displayOrderInCategory>5</displayOrderInCategory>
         <abilities>
@@ -192,7 +192,7 @@
     <GeneDef ParentName="SuperPowersResizeBase">
         <defName>SHG_EnormousSize</defName>
         <label>become enormous</label>
-        <description>Carriers of this gene are able to become significantly larger, increasing melee damage, hunger rate, and any stat related to size. This will also reduce melee dodge chance, and increase the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this large may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <description>Carriers of this gene are able to become significantly larger, increasing melee damage, hunger rate, and any stat related to size. This will also reduce melee dodge chance, and increase the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this large may have unforseen consequences. All I can guarantee is that this will change your size.</description>
         <iconPath>Powers/Size/Gene_EnormousSize</iconPath>
         <displayOrderInCategory>6</displayOrderInCategory>
         <abilities>
@@ -211,7 +211,7 @@
     <GeneDef ParentName="SuperPowersResizeBase">
         <defName>SHG_ColossalSize</defName>
         <label>become colossal</label>
-        <description>Carriers of this gene are able to become 500% size, increasing melee damage, hunger rate, and any stat related to size. This will also reduce melee dodge chance, and increase the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this large may have unforseen consequences. All I can guarantee is that this will change your size.\n\nIf you use a change size ability and don't see the pawn's size change, save and reload. The game doesn't like changing graphics outside of something aging, but reloading will force the issue.</description>
+        <description>Carriers of this gene are able to become 500% size, increasing melee damage, hunger rate, and any stat related to size. This will also reduce melee dodge chance, and increase the perceived danger of this pawn when calculating raid size.\n\nWARNING: Becoming this large may have unforseen consequences. All I can guarantee is that this will change your size.</description>
         <iconPath>Powers/Size/Gene_ColossalSize</iconPath>
         <displayOrderInCategory>7</displayOrderInCategory>
         <abilities>

@@ -42,7 +42,7 @@
     <HediffDef>
         <defName>SHG_Hemomancer_Bloodlust</defName>
 		<label>bloodlust</label>
-		<description>This pawn is immune to pain and is more deadly in melee combat.</description>
+		<description>This pawn is immune to pain, and is more deadly in melee combat.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <scenarioCanAdd>false</scenarioCanAdd>
 		<isBad>false</isBad>
@@ -129,22 +129,27 @@
         </stages>
     </HediffDef>
 
-    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
-		<defName>SHG_Hemomancer_TheGiftOfBlood</defName>
+    <HediffDef>
+		<defName>SHG_Hemomancer_GiftOfBlood</defName>
 		<label>the gift of blood</label>
 		<description>This hemopriest is constantly turning hemogen into blood pills. They produce one every day.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
 		<comps>
-			<li Class="AnimalBehaviours.HediffCompProperties_Spawner">
-				<thingToSpawn>SHG_BloodPill</thingToSpawn>
-				<spawnCount>1</spawnCount>
-				<spawnIntervalRange>60000~60000</spawnIntervalRange>
-				<spawnMaxAdjacent>30</spawnMaxAdjacent>
-				<spawnForbidden>false</spawnForbidden>
-				<showMessageIfOwned>false</showMessageIfOwned>
+			<li Class="SuperheroGenesBase.HediffCompProperties_CreateItems">
+                <intervalTicks>60000</intervalTicks>
+                <intervalThings>
+                    <li>
+                        <li><thing>SHG_BloodPill</thing></li>
+                    </li>
+                </intervalThings>
 			</li>
 		</comps>
 	</HediffDef>

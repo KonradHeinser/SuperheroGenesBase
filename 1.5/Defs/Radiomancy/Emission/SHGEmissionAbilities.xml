@@ -52,7 +52,7 @@
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_Radiomancer_LimitlessPotential</defName>
         <label>limitless potential</label>
-        <description>Inject a little bit of radiation into a pawn's brain to permanently enhance their mental capabilities. This can only be use on a person once per day as their mind needs time to finish processing the changes, regardless of how slight they are, and carries a rather notable risk of making them develop carcinoma, making this dangerous to use on anyone not immune to carcinoma.\n\nIt usually takes about 2 years of repeated casting for a pawn to gain full enlightenment, and if they are not immune to carcinoma they will get it a total of 10 times on average.\n\nJust in case the cancer risk didn't make this clear, don't try this at home. Even if you have super powers, probably not a good idea.</description>
+        <description>Inject a little bit of radiation into a pawn's brain to permanently enhance their mental capabilities. This can only be use on a person once per day as their mind needs time to finish processing the changes, and carries a notable risk of making the target develop carcinoma.\n\nIt usually takes about 2 years of repeated casting for a pawn to gain full enlightenment, and if they are not immune to carcinoma they will get it a total of 10 times on average.\n\nJust in case the cancer risk didn't make this clear, don't try this at home. Even if you have super powers, probably not a good idea.</description>
         <iconPath>Radiomancer/Emission/Gene_Radiomancer_LimitlessPotential</iconPath>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
@@ -88,7 +88,7 @@
     <AbilityDef ParentName="SHGSelfCastBase">
         <defName>SHG_Radiomancer_NuclearWinter</defName>
         <label>nuclear winter</label>
-        <description>Release large amounts of energy up into the atmosphere to cause the local area to fall into an exceptionally cold period for an entire quadrum. This ability won't work if there is a heat wave, cold snap, or other similar condition already active.</description>
+        <description>Release large amounts of energy up into the atmosphere to cause the local area to experience a cold snap for an entire quadrum. This ability won't work if there is a heat wave, cold snap, or other similar condition already active.</description>
         <iconPath>Radiomancer/Emission/Gene_Radiomancer_NuclearWinter</iconPath>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
@@ -112,7 +112,7 @@
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_Radiomancer_Detonation</defName>
         <label>detonation</label>
-        <description>Create a blast of energy containing half of currently stored radiation. The more radiation stored, the larger and more damaging this blast is. Radius is equal to one quarter of the radiomancer's stored radiation, and damage is equal to half of the stored radiation amount at the center. This energy blast only damages buildings and hostile pawns.\n\nWith full radiation, this will kill many pawns that have no universal damage resistance (i.e. pawns with the superhero gene or the robust gene) or flame resistance. This can cause notable damage to walls and other buildings, though only fragile ones are likely to outright break.</description>
+        <description>Create a blast of energy containing half of currently stored radiation. The more radiation stored, the larger and more damaging this blast is. Radius is equal to one quarter of the radiomancer's stored radiation, and damage is equal to half of the stored radiation amount at the center. This energy blast only damages buildings and hostile pawns.</description>
         <iconPath>Radiomancer/Emission/Gene_Radiomancer_Detonation</iconPath>
         <verbProperties>
             <range>40</range>
@@ -138,7 +138,7 @@
     <AbilityDef ParentName="SHGPowerBlastBase">
         <defName>SHG_Radiomancer_AshesToAshes</defName>
         <label>ashes to ashes</label>
-        <description>Use a bit of radioactive energy to trigger spontaneous combustion in an area. This will release a blast of energy in the area that instantly sets every flammable thing on fire. Walls will stop this blast of energy, though if said wall is flammable, it will also catch fire. If the wall itself is targeted, then the energy will attempt to go through both sides of the wall.</description>
+        <description>Use a bit of radioactive energy to trigger spontaneous combustion in an area. This will release a blast of energy in the area that instantly sets every flammable thing on fire. Walls block this blast of energy, though if said wall is flammable, it will also catch fire. If the wall itself is targeted, then the energy will attempt to go through both sides of the wall.</description>
         <iconPath>Radiomancer/Emission/Gene_Radiomancer_AshesToAshes</iconPath>
         <comps>
             <li Class="SuperHeroGenesBase.CompProperties_SHGBlast">
@@ -192,7 +192,7 @@
     <AbilityDef ParentName="SHGSelfCastBase">
         <defName>SHG_Radiomancer_IAmBecomeDeath</defName>
         <label>i am become death</label>
-        <description>Create a burst of energy containing every bit of radiation currently stored. The more radiation stored, the larger and more damaging this burst is. Radius is equal to half of the radiomancer's stored radiation, and damage is 10 times stored radiation at the center. The only safe pawn in this burst is the caster.\n\nThis ability usually leaves everything around the caster dead, and can outright destroy buildings at high radiation levels. At full radiation levels, this can destroy almost everything on around 20-30% of the map. On the bright side, no radiation cleanup.</description>
+        <description>Create a burst of energy containing every bit of radiation currently stored. The more radiation stored, the larger and more damaging this burst is. Radius is equal to half of the radiomancer's stored radiation, and damage is 10 times stored radiation at the center. The only safe pawn in this burst is the caster.\n\nThis ability usually leaves everything around the caster dead, and can outright destroy buildings at high radiation levels. At full radiation levels, this can destroy almost everything on around 20-30% of the map.</description>
         <iconPath>Radiomancer/Emission/Gene_Radiomancer_IAmBecomeDeath</iconPath>
         <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
         <verbProperties>

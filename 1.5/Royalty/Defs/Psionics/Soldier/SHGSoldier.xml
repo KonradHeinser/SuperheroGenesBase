@@ -3,7 +3,7 @@
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_Soldier</defName>
         <label>psionic soldier</label>
-        <description>Psionic Soldiers have an even stronger innate connection to psychic fields than most psionists. Most of their genes are focused on enhancing their personal combat abilities, and become stronger based on the carrier's psychic sensitivity.\n\nAny number of Superhero Psionic paths can be taken at the same time. The only limiting factor is metabolic efficiency.</description>
+        <description>Psionic Soldiers excel at enhancing their personal combat abilities and making the most of a heightened psychic sensitivity.</description>
         <prerequisite>SHG_Archetypes_Psionist</prerequisite>
         <iconPath>Psionist/Soldier/Gene_Psionist_Soldier</iconPath>
         <displayOrderInCategory>0</displayOrderInCategory>
@@ -18,7 +18,7 @@
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_EmergencyPatch</defName>
         <label>emergency patch</label>
-        <description>This gene gives access to an ability that psychically seals the Psionic Soldier's wounds. This sealing happens almost instantly, but has low quality.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <description>This gene gives access to an ability that psychically seals the Psionic Soldier's wounds.</description>
         <prerequisite>SHG_Psionist_Soldier</prerequisite>
         <iconPath>Psionist/Soldier/Gene_Psionist_EmergencyPatch</iconPath>
         <displayOrderInCategory>0.1</displayOrderInCategory>
@@ -36,7 +36,7 @@
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_PsionicFlight</defName>
         <label>psionic flight</label>
-        <description>This gene makes it so the Psionic Soldier is always floating above the ground, and grants bonus speed based on psychic sensitivity.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <description>This gene makes it so the Psionic Soldier is always floating above the ground, and grants bonus speed based on psychic sensitivity.</description>
         <prerequisite>SHG_Psionist_Soldier</prerequisite>
         <iconPath>Psionist/Soldier/Gene_Psionist_PsionicFlight</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
@@ -63,7 +63,7 @@
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_Stasis</defName>
         <label>stasis</label>
-        <description>This gene gives access to an ability that puts a pawn into stasis for an hour. While in stasis, they will be protected by a psionic shield, be almost immune to all physical physical damage, have minor regenerative abilities, lose the need to sleep or eat, and will be stunned for the duration. This ability will NOT protect against more exotic damage types like ice and lightning, nor will it protect against more indirect dangers like poison gas.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <description>This gene gives access to an ability that puts a pawn into stasis for an hour, somewhat protecting them from most damage types and healing them some.</description>
         <prerequisite>SHG_Psionist_Soldier</prerequisite>
         <iconPath>Psionist/Soldier/Gene_Psionist_Stasis</iconPath>
         <displayOrderInCategory>0.3</displayOrderInCategory>
@@ -81,7 +81,7 @@
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_Fearless</defName>
         <label>fearless</label>
-        <description>This gene allows the Psionic Soldier to completely ignore the effects of fear and stress by constantly suppressing the parts of the brain responsible for processing those emotions. This makes it difficult for normal people to relate to this pawn personally.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <description>This gene allows the Psionic Soldier to completely ignore the effects of fear and stress by constantly suppressing the parts of the brain responsible for processing those emotions.</description>
         <prerequisite>SHG_Psionist_Soldier</prerequisite>
         <iconPath>Psionist/Soldier/Gene_Psionist_Fearless</iconPath>
         <displayOrderInCategory>0.4</displayOrderInCategory>
@@ -105,7 +105,7 @@
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_SoldierCommando</defName>
         <label>psionic commando</label>
-        <description>Psionic Commandos enhance their combative abilities even more than normal soldiers. Commandos focus their energies on either melee or ranged combat, and their capabilities within their specializations are almost impossible to surpass. Some are genetically engineered to be more diverses in their specialities, allowing them to switch fighting styles at will at the expense of making them weaker overall.</description>
+        <description>Psionic Commandos often specialize in certain forms of combat, and there are few that can surpass them in their chosen field.</description>
         <prerequisite>SHG_Psionist_Soldier</prerequisite>
         <iconPath>Psionist/Soldier/Gene_Psionist_SoldierCommando</iconPath>
         <displayOrderInCategory>5</displayOrderInCategory>
@@ -117,7 +117,7 @@
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_PsionicInfusement</defName>
         <label>psionic infusement</label>
-        <description>This gene makes it so all of the Psionic Commando's melee attacks are infused with psychic energy. All melee damage is influenced by psychic sensitivity.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <description>This gene makes it so all of the Psionic Commando's melee attacks are infused with psychic energy, increasing melee damage based on psychic sensitivity.</description>
         <prerequisite>SHG_Psionist_SoldierCommando</prerequisite>
         <iconPath>Psionist/Soldier/Gene_Psionist_PsionicInfusement</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
@@ -135,7 +135,7 @@
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_CompelledDuel</defName>
         <label>compelled duel</label>
-        <description>This gene gives access to an ability that forces a distant pawn to walk towards the Psionic Commando to fight hand-to-hand.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <description>This gene gives access to an ability that forces a distant pawn to walk towards the Psionic Commando to fight hand-to-hand.</description>
         <prerequisite>SHG_Psionist_SoldierCommando</prerequisite>
         <iconPath>Psionist/Soldier/Gene_Psionist_CompelledDuel</iconPath>
         <displayOrderInCategory>5.2</displayOrderInCategory>
@@ -153,7 +153,7 @@
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_Entrench</defName>
         <label>entrench</label>
-        <description>This gene gives access to an ability that greatly limits the Psionic Commando's movement in exchange for increasing their shooting accuracy and defense considerably for some time.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <description>This gene gives access to an ability that greatly limits the Psionic Commando's movement in exchange for increasing their shooting accuracy and defense considerably for some time.</description>
         <prerequisite>SHG_Psionist_SoldierCommando</prerequisite>
         <iconPath>Psionist/Soldier/Gene_Psionist_Entrench</iconPath>
         <displayOrderInCategory>6.1</displayOrderInCategory>
@@ -171,7 +171,7 @@
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_PsionicShield</defName>
         <label>psionic shield</label>
-        <description>This gene gives access to an ability that creates a small barrier at their current location that will stop all bullets from entering without stopping the soldier from shooting out. This shield will last for 1 hour.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <description>This gene gives access to an ability that creates a small barrier at their current location that will stop all bullets from entering without stopping the soldier from shooting out. This shield will last for 1 hour.</description>
         <prerequisite>SHG_Psionist_SoldierCommando</prerequisite>
         <iconPath>Psionist/Soldier/Gene_Psionist_PsionicShield</iconPath>
         <displayOrderInCategory>6.2</displayOrderInCategory>
@@ -189,7 +189,7 @@
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_SoldierImmortal</defName>
         <label>psionic immortal</label>
-        <description>While Psionic Immortals are not truly immortal, the psychic energy fused into their blood makes it almost impossible to kill them without destroying a vital organ. Some Psionic Immortals have genes that enhance their resilience to death even further, making them completely incomprehensible to those in the medical field.</description>
+        <description>While Psionic Immortals are not truly immortal, their psychic energies are often heavily infused into their body to make them resistant to death.</description>
         <prerequisite>SHG_Psionist_SoldierCommando</prerequisite>
         <iconPath>Psionist/Soldier/Gene_Psionist_SoldierImmortal</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
@@ -210,7 +210,7 @@
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_PsionicArmor</defName>
         <label>psionic armor</label>
-        <description>This gene creates a constant invisible barrier around the Psionic Immortal's entire body that protects them from most physical attacks. The more psychically sensitive the Immortal is, the stronger the protection will be.\n\nPsionic genes reduce the special bonus granted by the related psionic path.</description>
+        <description>This gene creates a constant invisible psychic barrier around the Psionic Immortal's entire body that protects them from most physical attacks and extreme natural temperatures.</description>
         <prerequisite>SHG_Psionist_SoldierImmortal</prerequisite>
         <iconPath>Psionist/Soldier/Gene_Psionist_PsionicArmor</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
@@ -228,7 +228,7 @@
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_PsionicMetabolism</defName>
         <label>psionic metabolism</label>
-        <description>This gene makes the Psionic Immortal's metabolism far more efficient by utilizing the entropy bonuses granted by the Psionist gene.</description>
+        <description>This gene makes the Psionic Immortal's metabolism far more efficient by sacrificing the entropy bonuses most psionists enjoy.</description>
         <prerequisite>SHG_Psionist_SoldierImmortal</prerequisite>
         <iconPath>Psionist/Soldier/Gene_Psionist_PsionicMetabolism</iconPath>
         <displayOrderInCategory>10.2</displayOrderInCategory>
@@ -245,7 +245,7 @@
     <GeneDef ParentName="SuperPowersPsychicSoldierBase">
         <defName>SHG_Psionist_PsionicRegeneration</defName>
         <label>psionic regeneration</label>
-        <description>This gene makes the Psionic Immortal constantly use the focus graned by the Psionist gene to gradually heal from all wounds. This regeneration will also help with immunity gain based on the sensitivity of the psionist. This will heal most scars, but will not regenerate lost parts.</description>
+        <description>This gene makes the Psionic Immortal constantly use the focus graned by the Psionist gene to gradually heal from all wounds, though it cannot replace lost parts.</description>
         <prerequisite>SHG_Psionist_SoldierImmortal</prerequisite>
         <iconPath>Psionist/Soldier/Gene_Psionist_PsionicRegeneration</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>

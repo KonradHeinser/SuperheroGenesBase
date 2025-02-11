@@ -3,7 +3,7 @@
     <HediffDef>
         <defName>SHG_Radiomancer_RampantRegeneration</defName>
         <label>rampant regeneration</label>
-        <description>This pawn's body is recovering from wounds at an unbelievable pace. Even lost parts appear to be regrowing. Unfortunately, this comes with an extreme risk that some of their cells will be negatively affected by the radioactive energy.</description>
+        <description>This pawn's body is recovering from wounds at an unbelievable pace. Unfortunately, this comes with an extreme risk that some of their cells will be negatively affected by the radioactive energy.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
@@ -40,7 +40,7 @@
     <HediffDef>
         <defName>SHG_Radiomancer_ExcitableCells</defName>
         <label>excitable cells</label>
-        <description>This pawn's body is recovering from infections at an unbelievable pace due to the energy that was injected into their body. Unfortunately, this comes with an notable risk that some of their cells will be negatively affected by the radioactive energy.</description>
+        <description>This pawn's body is recovering from infections at an unbelievable pace. Unfortunately, this comes with an notable risk that some of their cells will be negatively affected by the radioactive energy.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
@@ -84,6 +84,8 @@
                 <showMessage>False</showMessage>
                 <inheritable>False</inheritable>
                 <geneSets>
+                    <li><geneSet><li>SHG_Flaw_OverchargedPocket</li></geneSet></li>
+
 <!-- <xpath>Defs/HediffDef[defName="SHG_Radiomancer_EverEvolving"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets</xpath> -->
                     <!--Decay Genes-->
                     <li><geneSet><li>SHG_Radiomancer_CellularDestabilization</li></geneSet></li>
