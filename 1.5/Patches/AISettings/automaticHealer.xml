@@ -122,6 +122,20 @@
                                             </li>
                                         </subNodes>
                                     </li>
+                                    <li Class="ThinkNode_ConditionalHasHediff"> <!--Undrafted pawn with severe blood loss-->
+                                        <hediff>BloodLoss</hediff>
+                                        <severityRange>0.50</severityRange>
+                                        <subNodes>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Hemomancer_ReplenishBlood</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
                                     <li Class="SuperHeroGenesBase.ThinkNode_ConditionalTendableAlly">
                                         <subNodes>
                                             <li Class="ThinkNode_ConditionalHasAbility">
@@ -166,20 +180,6 @@
                                             </li>
                                         </subNodes>
                                     </li>
-                                    <li Class="ThinkNode_ConditionalHasHediff"> <!--Undrafted pawn with severe blood loss-->
-                                        <hediff>BloodLoss</hediff>
-                                        <severityRange>0.50</severityRange>
-                                        <subNodes>
-                                            <li Class="ThinkNode_ConditionalHasAbility">
-                                                <ability>SHG_Hemomancer_ReplenishBlood</ability>
-                                                <subNodes>
-                                                    <li Class="JobGiver_AICastAbilityOnSelf">
-                                                        <ability>SHG_Hemomancer_ReplenishBlood</ability>
-                                                    </li>
-                                                </subNodes>
-                                            </li>
-                                        </subNodes>
-                                    </li>
                                 </subNodes>
                             </thinkRoot>
                         </ThinkTreeDef> 
@@ -190,22 +190,27 @@
                             <insertPriority>500</insertPriority>
                             <thinkRoot Class="ThinkNode_Priority">
                                 <subNodes>
-                                    <li Class="ThinkNode_ConditionalHasAbility">
-                                        <ability>SHG_Radiomancer_ReverseAging</ability>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasGene">
+                                        <gene>SHG_Archetypes_Radiomancer</gene>
                                         <subNodes>
-                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalOver25YearsOld">
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_Radiomancer_ReverseAging</ability>
                                                 <subNodes>
-                                                    <li Class="ThinkNode_ConditionalHasHediff">
-                                                        <hediff>SHG_Radiomancer_ReverseAging</hediff>
-                                                        <invert>True</invert>
+                                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalOver25YearsOld">
                                                         <subNodes>
-                                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
-                                                                <gene>SHG_Archetypes_Radiomancer</gene>
-                                                                <useTargetValue>False</useTargetValue>
-                                                                <minLevel>0.1</minLevel>
+                                                            <li Class="ThinkNode_ConditionalHasHediff">
+                                                                <hediff>SHG_Radiomancer_ReverseAging</hediff>
+                                                                <invert>True</invert>
                                                                 <subNodes>
-                                                                    <li Class="JobGiver_AICastAbilityOnSelf"> 
-                                                                        <ability>SHG_Radiomancer_ReverseAging</ability>
+                                                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                                                        <gene>SHG_Archetypes_Radiomancer</gene>
+                                                                        <useTargetValue>False</useTargetValue>
+                                                                        <minLevel>0.1</minLevel>
+                                                                        <subNodes>
+                                                                            <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                                                <ability>SHG_Radiomancer_ReverseAging</ability>
+                                                                            </li>
+                                                                        </subNodes>
                                                                     </li>
                                                                 </subNodes>
                                                             </li>
@@ -213,21 +218,21 @@
                                                     </li>
                                                 </subNodes>
                                             </li>
-                                        </subNodes>
-                                    </li>
-                                    <li Class="ThinkNode_ConditionalHasAbility">
-                                        <ability>SHG_Radiomancer_ReformPart</ability>
-                                        <subNodes>
-                                            <li Class="ThinkNode_ConditionalHasHediff">
-                                                <hediff>MissingBodyPart</hediff>
+                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                                <ability>SHG_Radiomancer_ReformPart</ability>
                                                 <subNodes>
-                                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
-                                                        <gene>SHG_Archetypes_Radiomancer</gene>
-                                                        <useTargetValue>False</useTargetValue>
-                                                        <minLevel>0.5</minLevel>
+                                                    <li Class="ThinkNode_ConditionalHasHediff">
+                                                        <hediff>MissingBodyPart</hediff>
                                                         <subNodes>
-                                                            <li Class="JobGiver_AICastAbilityOnSelf"> 
-                                                                <ability>SHG_Radiomancer_ReformPart</ability>
+                                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                                                <gene>SHG_Archetypes_Radiomancer</gene>
+                                                                <useTargetValue>False</useTargetValue>
+                                                                <minLevel>0.5</minLevel>
+                                                                <subNodes>
+                                                                    <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                                        <ability>SHG_Radiomancer_ReformPart</ability>
+                                                                    </li>
+                                                                </subNodes>
                                                             </li>
                                                         </subNodes>
                                                     </li>

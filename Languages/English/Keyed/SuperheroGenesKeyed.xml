@@ -84,7 +84,7 @@
     <!--Settings stuff-->
     <SHG_ModMenu>Superhero Genes</SHG_ModMenu>
 
-    <SHG_ModName>Superhero Genes - Base (Restart Required for all of these)</SHG_ModName>
+    <SHG_ModName>Superhero Genes - Base</SHG_ModName>
     <SHG_ModDescription>Much like the people in superhero stories, pawns with these genes can accomplish incomprehensible feats and slay countless foes with ease. Killing a super often requires extraordinary weapons, or a bigger monster.\n\nThe core module of the Superhero Genes series.\n\nThe checkboxes of each section only hide the options, they do not set anything.</SHG_ModDescription>
 
     <SHG_CondensedMeteors>    Allow Condensed Meteors</SHG_CondensedMeteors>
@@ -142,7 +142,7 @@
     <SHG_OneDay>One day</SHG_OneDay>
 
     <!--AI Settings-->
-    <SHG_SuperAI>Autocast Abilities (Restart Required for any changes)</SHG_SuperAI>
+    <SHG_SuperAI>Autocast Abilities</SHG_SuperAI>
     <SHG_SuperAIDescription>This causes colonists to automatically try to use some of their super abilities when appropriate. This is disabled by default for a few reasons.
 \n\nFirst, some may not like the idea of having the pawns they are supposed to be controlling doing things on their own.
 \nThe second reason is that this can cause the game to run slower due to the game needing to process more things by itself.
@@ -151,6 +151,9 @@
 \n\nSecond note, while Hemomancer and Psionist abilities are on the automated lists, they are the last ones used. The order of abilities chosen is Generic Powers > Psionic Powers > Hemomantic Powers > Pool Consuming Powers(if enabled).
 \n\nCasting while drafted is a separate option because some people may not like the idea of pawns acting on their own in battle. Usually, the pawn will only autocast while drafted if it does not have a forced job, so you usually don't need to worry about a pawn standing still when you really, really need them to move. One of the most notable exceptions where the pawn will ignore orders is self healing wounds when bleeding a lot, though the only abilities ever available for this purpose have a cast time of one or lower.
 </SHG_SuperAIDescription>
+
+    <SHG_DisableColonistAI>    Disable Colonist AI</SHG_DisableColonistAI>
+    <SHG_DisableColonistAIDescription>While this is active, colonists will completely skip the Superhero Genes think tree. If you don't use any of the AI settings and happen to be having performance issues, or just want to be extra safe, it's recommended to enable this. Even while the other checks are disabled there are a handful of checks the tree automatically makes, and this prevents those. This will NOT impact whether non-player pawns can cast abilities, so this won't weaken your enemies any.</SHG_DisableColonistAIDescription>
 
     <SHG_AllowPoolUsage>    Allow Life Pool Usage</SHG_AllowPoolUsage>
     <SHG_AllowPoolUsageDescription>Some abilities grant powerful bonuses in the short term, but cause the super to have various debuffs afterwards. If this disabled, then these abilities will never be autocast.\n\nTo avoid having the AI use these abilities when it makes no sense, the only autocast categories that will use this abilty are autocast defense and autocast healing.</SHG_AllowPoolUsageDescription>
