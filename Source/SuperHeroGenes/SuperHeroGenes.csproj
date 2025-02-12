@@ -73,6 +73,7 @@
     <Compile Include="Genes\Gene_CustomizableClotting.cs" />
     <Compile Include="Hediffs\AbilitiesAtSeverities.cs" />
     <Compile Include="Genes\VanishingGene.cs" />
+    <Compile Include="SuperAI\ThinkNodeCondtional_CanUseColonistAI.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalHasGene.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalHasPsylink.cs" />
     <Compile Include="Thoughts\ThoughtWorker_Precept_GeneExtension_Social.cs" />
