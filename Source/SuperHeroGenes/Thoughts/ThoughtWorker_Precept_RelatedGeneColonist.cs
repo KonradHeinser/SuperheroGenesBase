@@ -16,6 +16,8 @@ namespace SuperHeroGenesBase
             SHGExtension extension = def.GetModExtension<SHGExtension>();
             foreach (Pawn item in p.MapHeld.mapPawns.SpawnedPawnsInFaction(p.Faction))
             {
+                if (!item.IsColonist) continue;
+
                 if (!extension.checkNotPresent)
                 {
                     if (HasRelatedGene(item, extension.relatedGene))
