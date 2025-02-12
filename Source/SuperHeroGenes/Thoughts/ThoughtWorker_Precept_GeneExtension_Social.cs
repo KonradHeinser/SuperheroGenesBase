@@ -1,6 +1,5 @@
-﻿using System;
+﻿using RimWorld;
 using Verse;
-using RimWorld;
 
 namespace SuperHeroGenesBase
 {
@@ -13,8 +12,8 @@ namespace SuperHeroGenesBase
 
             SHGExtension extension = def.GetModExtension<SHGExtension>();
             if (!extension.checkNotPresent)
-                return SHGUtilities.HasRelatedGene(otherPawn, extension.relatedGene);
-            return !SHGUtilities.HasRelatedGene(otherPawn, extension.relatedGene);
+                return SHGUtilities.HasAnyOfRelatedGene(otherPawn, extension.relatedGenes);
+            return !SHGUtilities.HasAnyOfRelatedGene(otherPawn, extension.relatedGenes);
         }
     }
 }

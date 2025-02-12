@@ -1,6 +1,5 @@
-﻿using System;
+﻿using RimWorld;
 using Verse;
-using RimWorld;
 
 namespace SuperHeroGenesBase
 {
@@ -15,7 +14,7 @@ namespace SuperHeroGenesBase
             if (!extension.checkNotPresent)
             {
                 foreach (Pawn item in p.MapHeld.mapPawns.AllPawnsSpawned)
-                    if (SHGUtilities.HasRelatedGene(item, extension.relatedGene) && (item.IsPrisonerOfColony || item.IsSlaveOfColony || item.IsColonist))
+                    if (SHGUtilities.HasAnyOfRelatedGene(item, extension.relatedGenes) && (item.IsPrisonerOfColony || item.IsSlaveOfColony || item.IsColonist))
                         return ThoughtState.ActiveDefault;
 
                 return ThoughtState.Inactive;
@@ -23,7 +22,7 @@ namespace SuperHeroGenesBase
             else
             {
                 foreach (Pawn item in p.MapHeld.mapPawns.AllPawnsSpawned)
-                    if (!SHGUtilities.HasRelatedGene(item, extension.relatedGene) && (item.IsPrisonerOfColony || item.IsSlaveOfColony || item.IsColonist))
+                    if (!SHGUtilities.HasAnyOfRelatedGene(item, extension.relatedGenes) && (item.IsPrisonerOfColony || item.IsSlaveOfColony || item.IsColonist))
                         return ThoughtState.ActiveDefault;
 
                 return ThoughtState.Inactive;

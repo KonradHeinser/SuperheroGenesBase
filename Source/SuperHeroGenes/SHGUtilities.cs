@@ -75,12 +75,11 @@ namespace SuperHeroGenesBase
 
         public static bool HasAnyOfRelatedGene(Pawn pawn, List<GeneDef> relatedGenes)
         {
-            if (!ModsConfig.BiotechActive || pawn.genes == null) return false;
+            if (pawn.genes?.GenesListForReading.NullOrEmpty() != false) return false;
 
             foreach (GeneDef gene in relatedGenes)
-            {
                 if (HasRelatedGene(pawn, gene)) return true;
-            }
+            
             return false;
         }
 

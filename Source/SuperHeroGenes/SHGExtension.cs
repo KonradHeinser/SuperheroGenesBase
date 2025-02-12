@@ -6,7 +6,7 @@ namespace SuperHeroGenesBase
 {
     public class SHGExtension : DefModExtension
     {
-        public GeneDef relatedGene; // Gene to check for
+        public List<GeneDef> relatedGenes; // Genes to check for
         public bool checkNotPresent = false; // Check if the pawn does NOT have relatedGene
         public int ClotCheckInterval = 360; // Shouldn't be below 60, but I won't force it. This just determines how often it tries to heal, so a lower number means it's less likely that there will be a delay in clotting
         public float minTendQuality = 0.2f; // Never below 0
