@@ -3,7 +3,7 @@ using Verse.AI;
 
 namespace SuperHeroGenesBase
 {
-    public class ThinkNodeCondtional_CanUseColonistAI : ThinkNode_Conditional
+    public class ThinkNode_ConditionalCanUseColonistAI : ThinkNode_Conditional
     {
         protected override bool Satisfied(Pawn pawn)
         {
