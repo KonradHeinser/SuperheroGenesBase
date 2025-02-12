@@ -96,7 +96,12 @@
         </stages>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
-                <relatedGene>SuperHeroBase</relatedGene>
+                <relatedGenes>
+                    <li>SuperHeroBase</li>
+                    <li>SHG_Archetypes_Psionist</li>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </relatedGenes>
                 <checkNotPresent>True</checkNotPresent>
             </li>
         </modExtensions>
@@ -115,7 +120,12 @@
         </stages>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
-                <relatedGene>SuperHeroBase</relatedGene>
+                <relatedGenes>
+                    <li>SuperHeroBase</li>
+                    <li>SHG_Archetypes_Psionist</li>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </relatedGenes>
                 <checkNotPresent>True</checkNotPresent>
             </li>
         </modExtensions>
@@ -161,7 +171,12 @@
         </stages>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
-                <relatedGene>SuperHeroBase</relatedGene>
+                <relatedGenes>
+                    <li>SuperHeroBase</li>
+                    <li>SHG_Archetypes_Psionist</li>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </relatedGenes>
                 <checkNotPresent>True</checkNotPresent> <!--Only checks colonists. Slaves and Prisoners are ignored-->
             </li>                                       <!--Iguanas are ignored too-->
         </modExtensions>
@@ -212,7 +227,12 @@
         </stages>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
-                <relatedGene>SuperHeroBase</relatedGene>
+                <relatedGenes>
+                    <li>SuperHeroBase</li>
+                    <li>SHG_Archetypes_Psionist</li>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </relatedGenes>
             </li>
         </modExtensions>
     </ThoughtDef>
@@ -230,7 +250,12 @@
         </stages>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
-                <relatedGene>SuperHeroBase</relatedGene>
+                <relatedGenes>
+                    <li>SuperHeroBase</li>
+                    <li>SHG_Archetypes_Psionist</li>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </relatedGenes>
             </li>
         </modExtensions>
     </ThoughtDef>
@@ -275,7 +300,12 @@
         </stages>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
-                <relatedGene>SuperHeroBase</relatedGene>
+                <relatedGenes>
+                    <li>SuperHeroBase</li>
+                    <li>SHG_Archetypes_Psionist</li>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </relatedGenes>
             </li>
         </modExtensions>
     </ThoughtDef>
@@ -320,7 +350,12 @@
         </stages>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
-                <relatedGene>SuperHeroBase</relatedGene>
+                <relatedGenes>
+                    <li>SuperHeroBase</li>
+                    <li>SHG_Archetypes_Psionist</li>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </relatedGenes>
             </li>
         </modExtensions>
     </ThoughtDef>
@@ -338,7 +373,12 @@
         </stages>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
-                <relatedGene>SuperHeroBase</relatedGene>
+                <relatedGenes>
+                    <li>SuperHeroBase</li>
+                    <li>SHG_Archetypes_Psionist</li>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </relatedGenes>
             </li>
         </modExtensions>
     </ThoughtDef>
@@ -373,7 +413,12 @@
         </stages>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
-                <relatedGene>SuperHeroBase</relatedGene>
+                <relatedGenes>
+                    <li>SuperHeroBase</li>
+                    <li>SHG_Archetypes_Psionist</li>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </relatedGenes>
             </li>
         </modExtensions>
     </ThoughtDef>
@@ -422,7 +467,12 @@
         </stages>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
-                <relatedGene>SuperHeroBase</relatedGene>
+                <relatedGenes>
+                    <li>SuperHeroBase</li>
+                    <li>SHG_Archetypes_Psionist</li>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </relatedGenes>
             </li>
         </modExtensions>
     </ThoughtDef>
@@ -440,7 +490,12 @@
         </stages>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
-                <relatedGene>SuperHeroBase</relatedGene>
+                <relatedGenes>
+                    <li>SuperHeroBase</li>
+                    <li>SHG_Archetypes_Psionist</li>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </relatedGenes>
             </li>
         </modExtensions>
     </ThoughtDef>
@@ -475,7 +530,12 @@
         </stages>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
-                <relatedGene>SuperHeroBase</relatedGene>
+                <relatedGenes>
+                    <li>SuperHeroBase</li>
+                    <li>SHG_Archetypes_Psionist</li>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </relatedGenes>
             </li>
         </modExtensions>
     </ThoughtDef>
@@ -529,7 +589,12 @@
         </stages>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
-                <relatedGene>SuperHeroBase</relatedGene>
+                <relatedGenes>
+                    <li>SuperHeroBase</li>
+                    <li>SHG_Archetypes_Psionist</li>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </relatedGenes>
             </li>
         </modExtensions>
     </ThoughtDef>
@@ -547,7 +612,12 @@
         </stages>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
-                <relatedGene>SuperHeroBase</relatedGene>
+                <relatedGenes>
+                    <li>SuperHeroBase</li>
+                    <li>SHG_Archetypes_Psionist</li>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </relatedGenes>
             </li>
         </modExtensions>
     </ThoughtDef>
@@ -582,7 +652,12 @@
         </stages>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
-                <relatedGene>SuperHeroBase</relatedGene>
+                <relatedGenes>
+                    <li>SuperHeroBase</li>
+                    <li>SHG_Archetypes_Psionist</li>
+                    <li>SHG_Archetypes_Hemomancer</li>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </relatedGenes>
             </li>
         </modExtensions>
     </ThoughtDef>
