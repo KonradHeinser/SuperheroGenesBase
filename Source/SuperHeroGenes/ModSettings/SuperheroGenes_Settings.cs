@@ -185,7 +185,7 @@ namespace SuperHeroGenesBase
             Rect tabs = new Rect(inRect)
             {
                 yMin = 80,
-                height = Mathf.CeilToInt((float)TabsList.Count / 5f) * 40
+                height = 40
             };
             TabDrawer.DrawTabs<TabRecord>(tabs, TabsList, Mathf.CeilToInt(TabsList.Count / 5), Mathf.FloorToInt(tabs.width / 5));
 
@@ -200,13 +200,9 @@ namespace SuperHeroGenesBase
             frameRect.height -= 15;
             var contentRect = frameRect;
             contentRect.x = 0;
-            contentRect.y = 0;
-            contentRect.width -= 20;
-            contentRect.height = 600;
+            contentRect.height = 550;
 
-            Widgets.BeginScrollView(frameRect, ref scrollPosition, contentRect, true);
-
-            optionsMenu.Begin(contentRect.AtZero());
+            optionsMenu.Begin(contentRect);
 
             switch (tabInt)
             {
@@ -318,7 +314,6 @@ namespace SuperHeroGenesBase
             }
 
             optionsMenu.End();
-            Widgets.EndScrollView();
             base.Write();
         }
     }
