@@ -11,35 +11,40 @@
                             <subNodes>
                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalColonistShouldFlee">
                                     <subNodes>
-                                        <li Class="ThinkNode_ConditionalHasAbility">
-                                            <ability>SHG_Invisibility</ability>
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasGene">
+                                            <gene>SuperHeroBase</gene>
                                             <subNodes>
-                                                <li Class="JobGiver_AICastAbilityOnSelf">
+                                                <li Class="ThinkNode_ConditionalHasAbility">
                                                     <ability>SHG_Invisibility</ability>
+                                                    <subNodes>
+                                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                                            <ability>SHG_Invisibility</ability>
+                                                        </li>
+                                                    </subNodes>
                                                 </li>
-                                            </subNodes>
-                                        </li>
-                                        <li Class="ThinkNode_ConditionalHasAbility">
-                                            <ability>SHG_HeroicLeap</ability>
-                                            <subNodes>
-                                                <li Class="JobGiver_AIJumpEscapeEnemies">
+                                                <li Class="ThinkNode_ConditionalHasAbility">
                                                     <ability>SHG_HeroicLeap</ability>
+                                                    <subNodes>
+                                                        <li Class="JobGiver_AIJumpEscapeEnemies">
+                                                            <ability>SHG_HeroicLeap</ability>
+                                                        </li>
+                                                    </subNodes>
                                                 </li>
-                                            </subNodes>
-                                        </li>
-                                        <li Class="ThinkNode_ConditionalHasAbility">
-                                            <ability>SHG_Teleport</ability>
-                                            <subNodes>
-                                                <li Class="SuperHeroGenesBase.JobGiver_AITeleportEscapeEnemies">
+                                                <li Class="ThinkNode_ConditionalHasAbility">
                                                     <ability>SHG_Teleport</ability>
+                                                    <subNodes>
+                                                        <li Class="SuperHeroGenesBase.JobGiver_AITeleportEscapeEnemies">
+                                                            <ability>SHG_Teleport</ability>
+                                                        </li>
+                                                    </subNodes>
                                                 </li>
-                                            </subNodes>
-                                        </li>
-                                        <li Class="ThinkNode_ConditionalHasAbility">
-                                            <ability>SHG_Blink</ability>
-                                            <subNodes>
-                                                <li Class="JobGiver_AICastAbilityOnSelf">
+                                                <li Class="ThinkNode_ConditionalHasAbility">
                                                     <ability>SHG_Blink</ability>
+                                                    <subNodes>
+                                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                                            <ability>SHG_Blink</ability>
+                                                        </li>
+                                                    </subNodes>
                                                 </li>
                                             </subNodes>
                                         </li>

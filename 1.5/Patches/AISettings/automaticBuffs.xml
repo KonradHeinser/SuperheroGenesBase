@@ -33,71 +33,75 @@
                                     </li>
                                 </subNodes>
                             </li>
-                            <li Class="ThinkNode_ConditionalHasAbility">
-                                <ability>SHG_Psionist_MassLevitation</ability>
+                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasPsylink">
                                 <subNodes>
-                                    <li Class="ThinkNode_ConditionalHasHediff">
-                                        <hediff>SHG_Psionist_MassLevitation</hediff>
-                                        <invert>True</invert>
+                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                        <ability>SHG_Psionist_MassLevitation</ability>
                                         <subNodes>
-                                            <li Class="JobGiver_AICastAbilityOnSelf">
-                                                <ability>SHG_Psionist_MassLevitation</ability>
+                                            <li Class="ThinkNode_ConditionalHasHediff">
+                                                <hediff>SHG_Psionist_MassLevitation</hediff>
+                                                <invert>True</invert>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Psionist_MassLevitation</ability>
+                                                    </li>
+                                                </subNodes>
                                             </li>
                                         </subNodes>
                                     </li>
-                                </subNodes>
-                            </li>
-                            <li Class="ThinkNode_ConditionalHasAbility">
-                                <ability>SHG_Psionist_Inspire</ability>
-                                <subNodes>
-                                    <li Class="ThinkNode_ConditionalHasHediff">
-                                        <hediff>SHG_Psionist_Inspire</hediff>
-                                        <invert>True</invert>
+                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                        <ability>SHG_Psionist_Inspire</ability>
                                         <subNodes>
-                                            <li Class="JobGiver_AICastAbilityOnSelf">
-                                                <ability>SHG_Psionist_Inspire</ability>
+                                            <li Class="ThinkNode_ConditionalHasHediff">
+                                                <hediff>SHG_Psionist_Inspire</hediff>
+                                                <invert>True</invert>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Psionist_Inspire</ability>
+                                                    </li>
+                                                </subNodes>
                                             </li>
                                         </subNodes>
                                     </li>
-                                </subNodes>
-                            </li>
-                            <li Class="ThinkNode_ConditionalHasAbility">
-                                <ability>SHG_Psionist_Rally</ability>
-                                <subNodes>
-                                    <li Class="ThinkNode_ConditionalHasHediff">
-                                        <hediff>SHG_Psionist_Rally</hediff>
-                                        <invert>True</invert>
+                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                        <ability>SHG_Psionist_Rally</ability>
                                         <subNodes>
-                                            <li Class="JobGiver_AICastAbilityOnSelf">
-                                                <ability>SHG_Psionist_Rally</ability>
+                                            <li Class="ThinkNode_ConditionalHasHediff">
+                                                <hediff>SHG_Psionist_Rally</hediff>
+                                                <invert>True</invert>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Psionist_Rally</ability>
+                                                    </li>
+                                                </subNodes>
                                             </li>
                                         </subNodes>
                                     </li>
-                                </subNodes>
-                            </li>
-                            <li Class="ThinkNode_ConditionalHasAbility">
-                                <ability>SHG_Psionist_Legion</ability>
-                                <subNodes>
-                                    <li Class="ThinkNode_ConditionalHasHediff">
-                                        <hediff>SHG_Psionist_Legion</hediff>
-                                        <invert>True</invert>
+                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                        <ability>SHG_Psionist_Legion</ability>
                                         <subNodes>
-                                            <li Class="JobGiver_AICastAbilityOnSelf">
-                                                <ability>SHG_Psionist_Legion</ability>
+                                            <li Class="ThinkNode_ConditionalHasHediff">
+                                                <hediff>SHG_Psionist_Legion</hediff>
+                                                <invert>True</invert>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Psionist_Legion</ability>
+                                                    </li>
+                                                </subNodes>
                                             </li>
                                         </subNodes>
                                     </li>
-                                </subNodes>
-                            </li>
-                            <li Class="ThinkNode_ConditionalHasAbility">
-                                <ability>SHG_Psionist_Utopia</ability>
-                                <subNodes>
-                                    <li Class="ThinkNode_ConditionalHasHediff">
-                                        <hediff>SHG_Psionist_Utopia</hediff>
-                                        <invert>True</invert>
+                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                        <ability>SHG_Psionist_Utopia</ability>
                                         <subNodes>
-                                            <li Class="JobGiver_AICastAbilityOnSelf">
-                                                <ability>SHG_Psionist_Utopia</ability>
+                                            <li Class="ThinkNode_ConditionalHasHediff">
+                                                <hediff>SHG_Psionist_Utopia</hediff>
+                                                <invert>True</invert>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Psionist_Utopia</ability>
+                                                    </li>
+                                                </subNodes>
                                             </li>
                                         </subNodes>
                                     </li>
@@ -113,67 +117,72 @@
                     <insertPriority>400</insertPriority>
                     <thinkRoot Class="ThinkNode_Priority">
                         <subNodes>
-                            <li Class="ThinkNode_ConditionalHasAbility">
-                                <ability>SHG_Radiomancer_ExplosiveBlows</ability>
+                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasGene">
+                                <gene>SHG_Archetypes_Radiomancer</gene>
                                 <subNodes>
-                                    <li Class="ThinkNode_ConditionalHasHediff">
-                                        <hediff>SHG_Radiomancer_ExplosiveBlows</hediff>
-                                        <invert>True</invert>
-                                        <severityRange>5</severityRange>
+                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                        <ability>SHG_Radiomancer_ExplosiveBlows</ability>
                                         <subNodes>
-                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
-                                                <gene>SHG_Archetypes_Radiomancer</gene>
-                                                <useTargetValue>False</useTargetValue>
-                                                <minLevel>1</minLevel>
+                                            <li Class="ThinkNode_ConditionalHasHediff">
+                                                <hediff>SHG_Radiomancer_ExplosiveBlows</hediff>
+                                                <invert>True</invert>
+                                                <severityRange>5</severityRange>
                                                 <subNodes>
-                                                    <li Class="JobGiver_AICastAbilityOnSelf"> 
-                                                        <ability>SHG_Radiomancer_ExplosiveBlows</ability>
+                                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                                        <gene>SHG_Archetypes_Radiomancer</gene>
+                                                        <useTargetValue>False</useTargetValue>
+                                                        <minLevel>1</minLevel>
+                                                        <subNodes>
+                                                            <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                                <ability>SHG_Radiomancer_ExplosiveBlows</ability>
+                                                            </li>
+                                                        </subNodes>
                                                     </li>
                                                 </subNodes>
                                             </li>
                                         </subNodes>
                                     </li>
-                                </subNodes>
-                            </li>
 
-                            <li Class="ThinkNode_ConditionalHasAbility">
-                                <ability>SHG_Radiomancer_LimitlessPotential</ability>
-                                <subNodes>
-                                    <li Class="ThinkNode_ConditionalHasHediff">
-                                        <hediff>SHG_EverEvolving_Enlightenment</hediff>
-                                        <severityRange>100</severityRange>
-                                        <invert>True</invert>
+                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                        <ability>SHG_Radiomancer_LimitlessPotential</ability>
                                         <subNodes>
-                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
-                                                <gene>SHG_Archetypes_Radiomancer</gene>
-                                                <useTargetValue>False</useTargetValue>
-                                                <minLevel>0.1</minLevel>
+                                            <li Class="ThinkNode_ConditionalHasHediff">
+                                                <hediff>SHG_EverEvolving_Enlightenment</hediff>
+                                                <severityRange>100</severityRange>
+                                                <invert>True</invert>
                                                 <subNodes>
-                                                    <li Class="JobGiver_AICastAbilityOnSelf"> 
-                                                        <ability>SHG_Radiomancer_LimitlessPotential</ability>
+                                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                                        <gene>SHG_Archetypes_Radiomancer</gene>
+                                                        <useTargetValue>False</useTargetValue>
+                                                        <minLevel>0.1</minLevel>
+                                                        <subNodes>
+                                                            <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                                <ability>SHG_Radiomancer_LimitlessPotential</ability>
+                                                            </li>
+                                                        </subNodes>
                                                     </li>
                                                 </subNodes>
                                             </li>
                                         </subNodes>
                                     </li>
-                                </subNodes>
-                            </li>
-                            
-                            <li Class="ThinkNode_ConditionalHasAbility">
-                                <ability>SHG_Radiomancer_EverEvolving</ability>
-                                <subNodes>
-                                    <li Class="ThinkNode_ConditionalHasHediff">
-                                        <hediff>SHG_EverEvolving_Foodless</hediff>
-                                        <severityRange>100</severityRange>
-                                        <invert>True</invert>
+                                    
+                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                        <ability>SHG_Radiomancer_EverEvolving</ability>
                                         <subNodes>
-                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
-                                                <gene>SHG_Archetypes_Radiomancer</gene>
-                                                <useTargetValue>False</useTargetValue>
-                                                <minLevel>1</minLevel>
+                                            <li Class="ThinkNode_ConditionalHasHediff">
+                                                <hediff>SHG_EverEvolving_Foodless</hediff>
+                                                <severityRange>100</severityRange>
+                                                <invert>True</invert>
                                                 <subNodes>
-                                                    <li Class="JobGiver_AICastAbilityOnSelf"> 
-                                                        <ability>SHG_Radiomancer_EverEvolving</ability>
+                                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                                        <gene>SHG_Archetypes_Radiomancer</gene>
+                                                        <useTargetValue>False</useTargetValue>
+                                                        <minLevel>1</minLevel>
+                                                        <subNodes>
+                                                            <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                                <ability>SHG_Radiomancer_EverEvolving</ability>
+                                                            </li>
+                                                        </subNodes>
                                                     </li>
                                                 </subNodes>
                                             </li>
