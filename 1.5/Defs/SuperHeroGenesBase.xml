@@ -444,9 +444,6 @@
         <foodPoisoningChanceFactor>0.01</foodPoisoningChanceFactor>
         <deathHistoryEvent>SHG_SuperDied</deathHistoryEvent>
         <biostatMet>0</biostatMet>
-        <damageFactors>
-            <SHG_Beam>0.75</SHG_Beam>
-        </damageFactors>
         <statFactors>
             <LifespanFactor>2</LifespanFactor>
             <ImmunityGainSpeed>1.5</ImmunityGainSpeed>
