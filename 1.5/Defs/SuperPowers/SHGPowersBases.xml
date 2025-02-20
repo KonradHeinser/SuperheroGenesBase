@@ -153,7 +153,7 @@
     <AbilityDef Abstract="True" Name="SHGPowerAbilitiesBase">
         <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
         <aiCanUse>True</aiCanUse>
-        <cooldownTicksRange>100</cooldownTicksRange>
+        <cooldownTicksRange>60</cooldownTicksRange>
         <category>SuperPowers</category>
         <hostile>true</hostile>
         <verbProperties>
