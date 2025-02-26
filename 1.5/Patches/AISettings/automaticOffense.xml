@@ -81,10 +81,13 @@
                                                 <hashInterval>1</hashInterval> <!--Replaces normal attacks-->
                                                 <abilities>
                                                     <li>SHG_ThrowSpike</li>
+                                                    <li>SHG_FireBolt</li>
                                                     <li>SHG_AcidBolt</li>
                                                     <li>SHG_LightningBolt</li>
+                                                    <li>SHG_ToxBolt</li>
                                                     <li>SHG_IceBolt</li>
                                                     <li>SHG_PetrificationBolt</li>
+                                                    <li>SHG_WaterBolt</li>
                                                 </abilities>
                                             </li>
                                         </subNodes>
@@ -205,10 +208,13 @@
                                                             <hashInterval>1</hashInterval> <!--Replaces normal attacks-->
                                                             <abilities>
                                                                 <li>SHG_ThrowSpike</li>
+                                                                <li>SHG_FireBolt</li>
                                                                 <li>SHG_AcidBolt</li>
                                                                 <li>SHG_LightningBolt</li>
+                                                                <li>SHG_ToxBolt</li>
                                                                 <li>SHG_IceBolt</li>
                                                                 <li>SHG_PetrificationBolt</li>
+                                                                <li>SHG_WaterBolt</li>
                                                             </abilities>
                                                         </li>
                                                     </subNodes>
