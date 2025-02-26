@@ -632,13 +632,14 @@ namespace SuperHeroGenesBase
         public static Pawn AutoSearchTarget(Pawn pawn, bool onlyHostiles = true, bool onlyInFaction = false, float searchRadius = 50, bool LoSRequired = false)
         {
 
-            List<Pawn> pawns = pawn.Map.mapPawns.AllPawns;
+            List<Pawn> pawns = new List<Pawn>(pawn.Map.mapPawns.AllPawnsSpawned);
             pawns.SortBy((Pawn c) => c.Position.DistanceToSquared(pawn.Position));
             foreach (Pawn otherPawn in pawns)
             {
                 if (otherPawn == pawn) continue;
                 if (LoSRequired && !GenSight.LineOfSight(pawn.Position, otherPawn.Position, pawn.Map)) continue;
-                if (otherPawn.Dead || otherPawn.Downed) continue;
+                if (otherPawn.DeadOrDowned || otherPawn.IsPrisonerOfColony || 
+                    otherPawn.IsSlaveOfColony) continue;
                 if (otherPawn.Position.DistanceTo(pawn.Position) > searchRadius) break;
                 if (onlyHostiles && otherPawn.HostileTo(pawn)) return otherPawn;
                 if (onlyInFaction && otherPawn.Faction == pawn.Faction) return otherPawn;
