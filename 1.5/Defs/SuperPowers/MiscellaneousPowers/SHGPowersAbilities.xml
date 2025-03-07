@@ -685,7 +685,7 @@
         </verbProperties>
         <comps>
             <li Class="SuperHeroGenesBase.CompProperties_Launch">
-                <maxDistance>2</maxDistance>
+                <maxDistance>3</maxDistance>
                 <distanceFactorStat>MoveSpeed</distanceFactorStat>
                 <skyfallerLeaving>SuperLeaving</skyfallerLeaving>
                 <worldObject>SuperFlying</worldObject>
