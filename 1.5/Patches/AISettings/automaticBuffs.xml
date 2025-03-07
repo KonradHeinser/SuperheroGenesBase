@@ -11,6 +11,20 @@
                     <insertPriority>400</insertPriority>
                     <thinkRoot Class="ThinkNode_Priority">
                         <subNodes>
+                            <li Class="ThinkNode_ConditionalHasAbility" MayRequire="EBSG.Framework">
+                                <ability>SHG_TemporaryForcefield</ability>
+                                <subNodes>
+                                    <li Class="ThinkNode_ConditionalHasHediff" MayRequire="EBSG.Framework">
+                                        <hediff>SHG_TemporaryForcefield</hediff>
+                                        <invert>True</invert>
+                                        <subNodes>
+                                            <li Class="JobGiver_AICastAbilityOnSelf" MayRequire="EBSG.Framework"> 
+                                                <ability>SHG_TemporaryForcefield</ability>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </li>
                             <li Class="ThinkNode_ConditionalHasAbility">
                                 <ability>SHG_Radiomancer_ExplosiveBlows</ability>
                                 <subNodes>

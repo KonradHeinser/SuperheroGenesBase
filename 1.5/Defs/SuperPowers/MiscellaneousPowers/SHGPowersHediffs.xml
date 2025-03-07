@@ -268,4 +268,29 @@
             </li>
         </comps>
     </HediffDef>
+
+    <HediffDef MayRequire="EBSG.Framework">
+        <defName>SHG_TemporaryForcefield</defName>
+        <label>forcefield</label>
+        <description>A constant forcefield is being generated around this pawn to protect them from damage.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="EBSGFramework.HediffCompProperties_Shield">
+                <maxEnergy>5</maxEnergy>
+                <energyRechargeRate>0</energyRechargeRate>
+                <blocksMeleeDamage>True</blocksMeleeDamage>
+                <gizmoTip>A constant forcefield protects this pawn from most harm.</gizmoTip>
+                <energyOnReset>1</energyOnReset>
+                <energyPerDamageModifier>0.01</energyPerDamageModifier>
+                <removeOnBreak>True</removeOnBreak>
+            </li>
+        </comps>
+    </HediffDef>
 </Defs>

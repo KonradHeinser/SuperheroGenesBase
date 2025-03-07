@@ -721,7 +721,7 @@
                         <hediffDef>SHG_DetectMetalHorror</hediffDef>
                         <severity>0.25</severity>
                     </li>
-                    <li> <!--This one will either dissappear or suddenly become visible, depending on results-->
+                    <li> <!--This one will either disappear or suddenly become visible, depending on results-->
                         <hediffDef>SHG_MetalHorrorDetected</hediffDef>
                         <severity>0.1</severity>
                     </li>
@@ -801,6 +801,23 @@
                 <centerMarker>SHG_OrbitalCenter_Colorless</centerMarker>
                 <fireChance>0</fireChance>
                 <explosionSound>Explosion_Thump</explosionSound>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase" MayRequire="EBSG.Framework">
+        <defName>SHG_TemporaryForcefield</defName>
+        <label>forcefield</label>
+        <description>Create a barrier around the pawn that blocks up to 500 points of damage. This barrier does not vanish after the day is up, but will be replaced if this ability is used again.</description>
+        <iconPath>Powers/Gene_Forcefield</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_TemporaryForcefield</hediffDef>
+                <replaceExisting>True</replaceExisting>
             </li>
         </comps>
     </AbilityDef>

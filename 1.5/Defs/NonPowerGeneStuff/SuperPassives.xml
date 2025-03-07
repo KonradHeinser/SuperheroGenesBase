@@ -256,4 +256,47 @@
             </li>
         </comps>
     </HediffDef>
+
+    <GeneDef ParentName="SuperPowersPassiveBase" MayRequire="EBSG.Framework">
+        <defName>SHG_Forcefield</defName>
+        <label>forcefield</label>
+        <description>Supers with this gene have a constantly regenerating forcefield around them that can block most bodily threats.\n\nThe strength and regeneration rate of this shield do not scale with anything, meaning the maximum will always be 200, and the recharge rate will always be 20/sec. If enough damage is dealt to break the shield, it will remain completely inactive for 10 seconds, afterwhich it will return at full strength.</description>
+        <biostatMet>-3</biostatMet>
+        <iconPath>Powers/Gene_Forcefield</iconPath>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <exclusionTags>
+            <li>SHG_Forcefield</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_Forcefield</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+    
+    <HediffDef MayRequire="EBSG.Framework">
+        <defName>SHG_Forcefield</defName>
+        <label>forcefield</label>
+        <description>A constant forcefield is being generated around this pawn to protect them from damage.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <hediffClass>HediffWithComps</hediffClass>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="EBSGFramework.HediffCompProperties_Shield">
+                <maxEnergy>2</maxEnergy>
+                <energyRechargeRate>0.2</energyRechargeRate>
+                <blocksMeleeDamage>True</blocksMeleeDamage>
+                <gizmoTip>A constant forcefield protects this pawn from most harm.</gizmoTip>
+                <resetDelay>600</resetDelay>
+                <energyOnReset>1</energyOnReset>
+                <blockOverdamage>False</blockOverdamage>
+                <energyPerDamageModifier>0.01</energyPerDamageModifier>
+            </li>
+        </comps>
+    </HediffDef>
 </Defs>
