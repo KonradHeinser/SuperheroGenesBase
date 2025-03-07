@@ -388,11 +388,19 @@ namespace SuperHeroGenesBase
             return true;
         }
 
-        public static bool HasHediff(Pawn pawn, HediffDef hediff) // Only made this to make checking for null hediffSets require less work
+        public static bool HasHediff(this Pawn pawn, HediffDef hediff) // Only made this to make checking for null hediffSets require less work
         {
             if (pawn.health.hediffSet == null) return false;
             if (pawn.health.hediffSet.HasHediff(hediff)) return true;
             return false;
+        }
+
+        public static bool HasHediff(this Pawn pawn, HediffDef hediff, out Hediff result)
+        {
+            result = null;
+            if (pawn?.health?.hediffSet == null || hediff == null) return false;
+            result = pawn.health.hediffSet.GetFirstHediffOfDef(hediff);
+            return result != null;
         }
 
         public static bool PawnHasAnyOfHediffs(Pawn pawn, List<HediffDef> hediffs)

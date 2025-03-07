@@ -76,6 +76,7 @@
     <Compile Include="SuperAI\ThinkNodeCondtional_CanUseColonistAI.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalHasGene.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalHasPsylink.cs" />
+    <Compile Include="Thoughts\ThoughtWorker_HediffSeverity.cs" />
     <Compile Include="Thoughts\ThoughtWorker_Precept_GeneExtension_Social.cs" />
     <Compile Include="Thoughts\ThoughtWorker_Precept_HasRelatedGene.cs" />
     <Compile Include="Thoughts\ThoughtWorker_Precept_RelatedGeneColonist.cs" />
@@ -192,6 +193,7 @@
     <Compile Include="Hediffs\Comps\HediffComp_TerrainCostOverride.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_TerrainCostOverride.cs" />
     <Compile Include="Hediffs\SHGCache_Component.cs" />
+    <Compile Include="Thoughts\Thought_Situational_HediffSeverity.cs" />
     <Compile Include="Thoughts\Thought_Situational_PeopleInColony.cs" />
     <Compile Include="Thoughts\ThoughtWorker_PeopleInColony.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_HediffsOnRemoval.cs" />

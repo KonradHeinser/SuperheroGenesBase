@@ -20,6 +20,9 @@ namespace SuperHeroGenesBase
         public float maxWaterDistance = 14.9f;
         public HediffsToParts hediffOnConsumption;
 
+        public HediffDef hediff;
+        public SimpleCurve curve;
+
         public float speed = 0.00025f;
         public StatDef relatedStat;
 
