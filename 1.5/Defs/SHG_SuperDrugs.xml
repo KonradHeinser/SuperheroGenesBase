@@ -650,6 +650,7 @@
                         <li><geneSet><li>SHG_MadGenius</li></geneSet></li>
                         <li><geneSet><li>SHG_Technophile</li></geneSet></li>
                         <li><geneSet><li>SHG_Naturalist</li></geneSet></li>
+                        <li><geneSet><li>SHG_UncontrollableMindReading</li></geneSet></li>
                     </geneSets>
                 </li>
             </outcomeDoers>
