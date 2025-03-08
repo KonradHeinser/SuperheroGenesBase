@@ -61,6 +61,7 @@
     <Compile Include="Hediffs\Comps\HediffComp_InvisibleAtStage.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_SpawnHumanlike.cs" />
     <Compile Include="Hediffs\ThingCreationItem.cs" />
+    <Compile Include="IngestionOutcomeDoer_AlterGenes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SHGDefOf.cs" />
     <Compile Include="SHGExtension.cs" />
