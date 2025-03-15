@@ -463,6 +463,7 @@
             <AimingDelayFactor>-0.1</AimingDelayFactor>
             <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
             <CarryingCapacity>25</CarryingCapacity>
+            <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">25</VEF_MassCarryCapacity>
             <CarryBulk MayRequire="ceteam.combatextended">10</CarryBulk>
             <MoveSpeed>3</MoveSpeed>
             <MeleeDodgeChance>3</MeleeDodgeChance>
