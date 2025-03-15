@@ -316,6 +316,7 @@
         <biostatMet>-6</biostatMet>
         <statFactors>
             <CarryingCapacity>20</CarryingCapacity>
+            <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">20</VEF_MassCarryCapacity>
             <CarryBulk MayRequire="ceteam.combatextended">20</CarryBulk>
             <MeleeDamageFactor>7</MeleeDamageFactor>
         </statFactors>

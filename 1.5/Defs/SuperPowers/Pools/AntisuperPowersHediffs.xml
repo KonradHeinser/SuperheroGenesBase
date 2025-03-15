@@ -694,6 +694,7 @@
                 </statFactors>
                 <statOffsets>
                     <CarryingCapacity>-100</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">-100</VEF_MassCarryCapacity>
                     <MentalBreakThreshold>.15</MentalBreakThreshold>
                 </statOffsets>
             </li>
@@ -726,9 +727,10 @@
         <stages>
             <li>
                 <statFactors>
-                    <CarryingCapacity>.1</CarryingCapacity>
-                    <MeleeDamageFactor>.1</MeleeDamageFactor>
-                    <MeleeArmorPenetration>.1</MeleeArmorPenetration>
+                    <CarryingCapacity>0.1</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.1</VEF_MassCarryCapacity>
+                    <MeleeDamageFactor>0.1</MeleeDamageFactor>
+                    <MeleeArmorPenetration>0.1</MeleeArmorPenetration>
                 </statFactors>
                 <capMods>
                     <li>

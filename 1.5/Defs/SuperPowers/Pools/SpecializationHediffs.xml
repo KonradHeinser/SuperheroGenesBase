@@ -1197,6 +1197,7 @@
 		        <label>strength pool mostly recovered</label>
                 <statFactors>
                     <CarryingCapacity>0.9</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.9</VEF_MassCarryCapacity>
                     <MeleeDamageFactor>0.9</MeleeDamageFactor>
                 </statFactors>
                 <capMods>
@@ -1211,6 +1212,7 @@
 		        <label>strength pool recovering</label>
                 <statFactors>
                     <CarryingCapacity>0.7</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.7</VEF_MassCarryCapacity>
                     <MeleeDamageFactor>0.7</MeleeDamageFactor>
                 </statFactors>
                 <capMods>
@@ -1225,6 +1227,7 @@
 		        <label>strength pool half-recovered</label>
                 <statFactors>
                     <CarryingCapacity>0.5</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.5</VEF_MassCarryCapacity>
                     <MeleeDamageFactor>0.5</MeleeDamageFactor>
                 </statFactors>
                 <capMods>
@@ -1239,6 +1242,7 @@
 		        <label>strength pool recovering</label>
                 <statFactors>
                     <CarryingCapacity>0.3</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.3</VEF_MassCarryCapacity>
                     <MeleeDamageFactor>0.4</MeleeDamageFactor>
                 </statFactors>
                 <capMods>
@@ -1253,6 +1257,7 @@
 		        <label>strength pool recovering</label>
                 <statFactors>
                     <CarryingCapacity>0.2</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.2</VEF_MassCarryCapacity>
                     <MeleeDamageFactor>0.3</MeleeDamageFactor>
                 </statFactors>
                 <capMods>
@@ -1267,6 +1272,7 @@
 		        <label>strength pool recovering</label>
                 <statFactors>
                     <CarryingCapacity>0.1</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.1</VEF_MassCarryCapacity>
                     <MeleeDamageFactor>0.2</MeleeDamageFactor>
                 </statFactors>
                 <capMods>
@@ -1281,6 +1287,7 @@
 		        <label>base recovered</label>
                 <statFactors>
                     <CarryingCapacity>0.01</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.01</VEF_MassCarryCapacity>
                     <MeleeDamageFactor>0.05</MeleeDamageFactor>
                 </statFactors>
                 <capMods>
@@ -1296,9 +1303,11 @@
                 <statFactors>
                     <MeleeDamageFactor>0.017</MeleeDamageFactor>
                     <CarryingCapacity>0.01</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.01</VEF_MassCarryCapacity>
                 </statFactors>
                 <statOffsets>
                     <CarryingCapacity>-100</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">-100</VEF_MassCarryCapacity>
                     <MentalBreakThreshold>.15</MentalBreakThreshold>
                 </statOffsets>
                 <capMods>

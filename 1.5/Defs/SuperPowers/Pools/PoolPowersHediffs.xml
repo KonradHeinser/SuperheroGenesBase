@@ -258,6 +258,7 @@
                 </statFactors>
                 <statOffsets>
                     <CarryingCapacity>-100</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">-100</VEF_MassCarryCapacity>
                     <MentalBreakThreshold>.15</MentalBreakThreshold>
                 </statOffsets>
             </li>

@@ -158,6 +158,7 @@
         </statFactors>
         <statOffsets>
             <CarryingCapacity>-25</CarryingCapacity>
+            <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">-25</VEF_MassCarryCapacity>
             <CarryBulk MayRequire="ceteam.combatextended">-10</CarryBulk>
             <MentalBreakThreshold>.15</MentalBreakThreshold>
         </statOffsets>
