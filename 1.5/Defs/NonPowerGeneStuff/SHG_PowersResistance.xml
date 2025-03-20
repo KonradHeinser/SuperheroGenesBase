@@ -21,6 +21,32 @@
     </GeneDef>
 
     <GeneDef ParentName="SHG_ResistanceBase">
+        <defName>BombResistant</defName>
+        <label>bomb resistant</label>
+        <description>Supers with this gene always seem to suffer less from normal explosions than normal.</description>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>-2</displayOrderInCategory>
+        <biostatMet>-1</biostatMet>
+        <damageFactors>
+            <Bomb>0.5</Bomb>
+            <BombSuper>0.5</BombSuper>
+        </damageFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ResistanceBase">
+        <defName>BombImmune</defName>
+        <label>bomb immune</label>
+        <description>Supers with this gene are immune to almost every standard type of explosive, from rocket launchers to antigrain warheads.</description>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>-1</displayOrderInCategory>
+        <biostatMet>-2</biostatMet>
+        <damageFactors>
+            <Bomb>0</Bomb>
+            <BombSuper>0</BombSuper>
+        </damageFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_ResistanceBase">
         <defName>SHG_LightningImmune</defName>
         <label>lightning immune</label> 
         <description>Carriers of this gene are immune to lightning.</description>
