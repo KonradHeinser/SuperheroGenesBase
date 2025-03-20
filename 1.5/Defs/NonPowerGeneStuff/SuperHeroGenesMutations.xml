@@ -357,7 +357,7 @@
                             <li>AptitudeTerrible_Shooting</li>
                             <li>MeleeDamage_Weak</li>
                         </genes>
-                        <maxSeverity>1</maxSeverity>
+                        <severities>0~1</severities>
                     </li>
                     <li>
                         <genes>
@@ -368,8 +368,7 @@
                             <li>Skin_Orange</li>
                             <li>Beauty_VeryUgly</li>
                         </genes>
-                        <minSeverity>1</minSeverity>
-                        <maxSeverity>2</maxSeverity>
+                        <severities>1~2</severities>
                     </li>
                     <li>
                         <genes>
@@ -380,8 +379,7 @@
                             <li>Skin_Orange</li>
                             <li>Beauty_VeryUgly</li>
                         </genes>
-                        <minSeverity>2</minSeverity>
-                        <maxSeverity>3</maxSeverity>
+                        <severities>2~3</severities>
                     </li>
                 </genesAtSeverities>
             </li>
