@@ -280,7 +280,6 @@
         <description>A constant forcefield is being generated around this pawn to protect them from damage.</description>
         <everCurableByItem>false</everCurableByItem>
         <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
         <stages>
             <li>
                 <becomeVisible>false</becomeVisible>
@@ -297,6 +296,41 @@
                 <blockOverdamage>False</blockOverdamage>
                 <energyPerDamageModifier>0.01</energyPerDamageModifier>
             </li>
+        </comps>
+    </HediffDef>
+
+    <GeneDef ParentName="SuperPowersPassiveBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Phasing</defName>
+        <label>phasing</label>
+        <description>Supers with this gene can phase through walls and objects at will.</description>
+        <biostatMet>-5</biostatMet>
+        <iconPath>Powers/Gene_Forcefield</iconPath>
+        <displayOrderInCategory>4</displayOrderInCategory>
+        <exclusionTags>
+            <li>SHG_Phasing</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_Phasing</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Phasing</defName>
+        <label>phasing</label>
+        <description>This pawn phases through obstacles.</description>
+        <everCurableByItem>false</everCurableByItem>
+        <hediffClass>HediffWithComps</hediffClass>
+        <stages>
+            <li>
+                <becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties">
+				<compClass>VFECore.HediffComp_Phasing</compClass>
+			</li>
         </comps>
     </HediffDef>
 </Defs>

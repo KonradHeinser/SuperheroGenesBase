@@ -118,30 +118,6 @@
         </additionalHediffs>
     </DamageDef>
 
-    <DamageDef>
-        <defName>SHG_Sonic</defName>
-        <label>sonic</label>
-        <workerClass>DamageWorker_AddInjury</workerClass>
-        <externalViolence>false</externalViolence>
-        <deathMessage>{0} has been bursted apart.</deathMessage>
-        <hediff>Shredded</hediff>
-        <armorCategory>Sharp</armorCategory>
-        <defaultDamage>10</defaultDamage>
-        <isRanged>True</isRanged>
-        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
-        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
-        <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
-        <explosionCellFleck>BlastDry</explosionCellFleck>
-        <explosionColorEdge>(0.8, 0.8, 0.8, 0.1)</explosionColorEdge>
-        <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
-        <soundExplosion>Explosion_EMP</soundExplosion>
-        <combatLogRules>Damage_Bomb</combatLogRules>
-        <buildingDamageFactor>0</buildingDamageFactor>
-        <makesBlood>False</makesBlood>
-        <defaultArmorPenetration>1</defaultArmorPenetration>
-    </DamageDef>
-
-
     <!--This damage def is for anyone who wants to add this to an attack. Every point of damage will cause 10% fear.
     This is intended as a secondary attack as it may cause weird combat logs when used as a primary-->
     <DamageDef>
