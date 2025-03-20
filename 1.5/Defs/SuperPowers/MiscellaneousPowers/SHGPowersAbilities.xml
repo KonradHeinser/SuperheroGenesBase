@@ -821,4 +821,31 @@
             </li>
         </comps>
     </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_MidasTouch</defName>
+        <label>midas touch</label>
+        <description>Turn the target into a pile of gold.</description>
+        <iconPath>Powers/Gene_DeathFromAbove</iconPath>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <cooldownPerCharge>true</cooldownPerCharge>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <hostile>true</hostile>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <range>30</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetBuildings>False</canTargetBuildings>
+              </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_InstantKill">
+                <makeFilth>False</makeFilth>
+                <thingToMake>Gold</thingToMake>
+                <bodySizeFactor>10</bodySizeFactor>
+            </li>
+        </comps>
+    </AbilityDef>
+
 </Defs>
