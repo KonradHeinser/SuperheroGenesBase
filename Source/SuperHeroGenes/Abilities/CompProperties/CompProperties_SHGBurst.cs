@@ -17,6 +17,7 @@ namespace SuperHeroGenesBase
         public StatDef statRadius;
         public DamageDef damageDef;
         public int damageAmount = -1;
+        public StatDef damageStat;
         public float armorPenetration = -1f;
         public SoundDef explosionSound = null;
         public ThingDef postExplosionThing = null; // This is usually what you want
