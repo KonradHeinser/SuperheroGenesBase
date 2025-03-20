@@ -23,8 +23,9 @@
     <GeneDef ParentName="SHG_ResistanceBase">
         <defName>BombResistant</defName>
         <label>bomb resistant</label>
-        <description>Supers with this gene always seem to suffer less from normal explosions than normal.</description>
+        <description>Supers with this gene always seem to suffer less from normal explosions than normal.\n\nThere are technically two types of bomb damage in vanilla, which is why bomb is listed twice.</description>
         <prerequisite>SuperHeroBase</prerequisite>
+        <iconPath>Powers/Gene_PartialExplosionResistance</iconPath>
         <displayOrderInCategory>-2</displayOrderInCategory>
         <biostatMet>-1</biostatMet>
         <damageFactors>
@@ -36,8 +37,9 @@
     <GeneDef ParentName="SHG_ResistanceBase">
         <defName>BombImmune</defName>
         <label>bomb immune</label>
-        <description>Supers with this gene are immune to almost every standard type of explosive, from rocket launchers to antigrain warheads.</description>
+        <description>Supers with this gene are immune to almost every standard type of explosive, from rocket launchers to antigrain warheads.\n\nThere are technically two types of bomb damage in vanilla (Bomb and BombSuper for those curious), which is why bomb is listed twice.</description>
         <prerequisite>SuperHeroBase</prerequisite>
+        <iconPath>Powers/Gene_TotatExplosionResistance</iconPath>
         <displayOrderInCategory>-1</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
         <damageFactors>

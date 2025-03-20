@@ -150,6 +150,21 @@
         </symbolPack>
     </GeneDef>
 
+    <GeneDef Abstract="True" Name="SuperPowersSonicBase" ParentName="SuperPowersOffensiveBase">
+        <biostatMet>-3</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>shriek</symbol></li>
+                <li><symbol>screamer</symbol></li>
+                <li><symbol>deafen</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>hear</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+
     <AbilityDef Abstract="True" Name="SHGPowerAbilitiesBase">
         <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
         <aiCanUse>True</aiCanUse>

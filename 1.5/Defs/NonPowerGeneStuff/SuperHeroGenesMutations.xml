@@ -264,18 +264,8 @@
             <li>Very weak and very intelligence while undrafted.</li>
             <li>Exceptional melee and shooting while drafted.</li>
             <li>In case of violent mental break, may need to pray to deity of choice, plus a few extra to be safe.</li>
-            <li>This "constantly mutates" the pawn's genes causing this to be incompatible with various other genes, most notable ones being various combat genes.</li>
+            <li>This "constantly mutates" the pawn's genes causing this to interact poorly with many other genes. If you take this gene, it is recommended that you don't take any intellectual, melee, shooting, or social aptitude genes. Melee damage and beauty genes may also have issues.</li>
         </customEffectDescriptions>
-        <exclusionTags>
-            <li>Beauty</li>
-            <li>MeleeDamage</li>
-            <li>Aptitude_Shooting</li>
-            <li>Aptitude_Melee</li>
-            <li>Aptitude_Social</li>
-            <li>Aptitude_Intellectual</li>
-            <li>Aggressive</li>
-            <li>Aggression</li>
-        </exclusionTags>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <hediffsToApply>
