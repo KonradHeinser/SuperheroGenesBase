@@ -25,7 +25,7 @@ namespace SuperHeroGenesBase
 
             foreach (GenesAtSeverity geneSet in Props.genesAtSeverities)
             {
-                if (parent.Severity >= geneSet.minSeverity && parent.Severity <= geneSet.maxSeverity)
+                if (geneSet.severities.Includes(parent.Severity))
                 {
                     if (SHGUtilities.EquivalentGeneLists(new List<GeneDef>(addedGenes), new List<GeneDef>(geneSet.genes))) break;
                     SHGUtilities.RemoveGenesFromPawn(parent.pawn, addedGenes);
@@ -42,7 +42,7 @@ namespace SuperHeroGenesBase
 
             foreach (GenesAtSeverity geneSet in Props.genesAtSeverities)
             {
-                if (parent.Severity >= geneSet.minSeverity && parent.Severity <= geneSet.maxSeverity)
+                if (geneSet.severities.Includes(parent.Severity))
                 {
                     if (SHGUtilities.EquivalentGeneLists(new List<GeneDef>(addedGenes), new List<GeneDef>(geneSet.genes))) break;
                     SHGUtilities.RemoveGenesFromPawn(parent.pawn, addedGenes);

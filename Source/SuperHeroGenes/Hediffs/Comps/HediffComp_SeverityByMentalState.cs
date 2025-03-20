@@ -33,7 +33,7 @@ namespace SuperHeroGenesBase
                 }
             }
 
-            if (SHGUtilities.GetCurrentTarget(pawn) != null) parent.Severity = Props.fightingSeverity;
+            if (SHGUtilities.GetCurrentTarget(pawn, true, false, false) != null) parent.Severity = Props.fightingSeverity;
             else if (pawn.Drafted) parent.Severity = Props.draftedSeverity;
             else parent.Severity = Props.defaultSeverity;
         }

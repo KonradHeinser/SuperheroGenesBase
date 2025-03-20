@@ -5,9 +5,7 @@ namespace SuperHeroGenesBase
 {
     public class GenesAtSeverity
     {
-        public float minSeverity = 0;
-
-        public float maxSeverity = 999;
+        public FloatRange severities;
 
         public bool xenogenes = true;
 
