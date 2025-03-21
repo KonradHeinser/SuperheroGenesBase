@@ -45,15 +45,15 @@
         <description>Absorb a corpse to gain some progress on a related ever-evolving hediff. This will not provide any nutrition.</description>
         <iconPath>Powers/Specializations/Gene_Beezlebub</iconPath>
         <warmupEffecter>Bloodfeed_Warmup</warmupEffecter>
-        <jobDef>CastAbilityOnThingMelee</jobDef>
         <warmupStartSound>Bloodfeed_Cast</warmupStartSound>
-        <verbClass>Verb_CastAbilityTouch</verbClass>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
         <verbProperties>
             <range>-1</range>
-            <targetParms>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <targetParams>
                 <canTargetCorpses>True</canTargetCorpses>
-                <onlyTargetCorpses>False</onlyTargetCorpses>
-            </targetParms>
+                <onlyTargetCorpses>True</onlyTargetCorpses>
+            </targetParams>
         </verbProperties>
         <comps>
             <li Class="CompProperties_AbilityRequiresCapacity">
