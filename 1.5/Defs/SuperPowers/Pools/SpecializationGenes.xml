@@ -27,10 +27,10 @@
             <li>Absorbing anything else gives ever-evolving (enlightenment) progress.</li>
 		</customEffectDescriptions>
         <abilities>
-            <li>SHG_Beelzebub</li>
+            <li>SHG_BeelzebubAbsorb</li>
         </abilities>
         <descriptionHyperlinks>
-            <AbilityDef>SHG_Beelzebub</AbilityDef>
+            <AbilityDef>SHG_BeelzebubAbsorb</AbilityDef>
         </descriptionHyperlinks>
     </GeneDef>
 

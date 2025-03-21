@@ -15,8 +15,9 @@
         </comps>
     </AbilityDef>
 
+
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
-        <defName>SHG_Beelzebub</defName>
+        <defName>SHG_BeelzebubAbsorb</defName>
         <label>beelzebub</label>
         <description>Absorb a corpse to gain some progress on a related ever-evolving hediff. This will not provide any nutrition.</description>
         <iconPath>Powers/Specializations/Gene_Beezlebub</iconPath>
