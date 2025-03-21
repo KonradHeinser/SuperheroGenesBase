@@ -91,6 +91,7 @@
                 <statFactors>
                     <GlobalLearningFactor>1.01</GlobalLearningFactor>
                     <ResearchSpeed>1.01</ResearchSpeed>
+                    <EntityStudyRate MayRequire="Ludeon.Rimworld.Anomaly">1.01</EntityStudyRate>
                 </statFactors>
                 <multiplyStatChangesBySeverity>True</multiplyStatChangesBySeverity>
             </li>

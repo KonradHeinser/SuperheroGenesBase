@@ -828,12 +828,11 @@
         <description>Turn the target into a pile of gold.</description>
         <iconPath>Powers/Gene_DeathFromAbove</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>
-        <cooldownPerCharge>true</cooldownPerCharge>
         <cooldownTicksRange>60000</cooldownTicksRange>
         <hostile>true</hostile>
         <verbProperties>
             <verbClass>Verb_CastAbilityTouch</verbClass>
-            <range>30</range>
+            <range>-1</range>
             <requireLineOfSight>False</requireLineOfSight>
             <targetParams>
                 <canTargetBuildings>False</canTargetBuildings>
