@@ -15,33 +15,9 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHGSelfCastBase">
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_Beelzebub</defName>
         <label>beelzebub</label>
-        <description>Absorb nutrtition from all living things around you, and even from the very ground you stand on. While the effects to the soil are negligible, this can cause great damage to all living things near you. Both the bonus to the super and the draining only lasts for 1 hour.</description>
-        <iconPath>Powers/Specializations/Gene_Beezlebub</iconPath>
-        <warmupEffecter>Bloodfeed_Warmup</warmupEffecter>
-        <warmupStartSound>Bloodfeed_Cast</warmupStartSound>
-        <cooldownTicksRange>600000</cooldownTicksRange>
-        <verbProperties>
-            <range>10</range>
-        </verbProperties>
-        <comps>
-            <li Class="CompProperties_AbilityRequiresCapacity">
-                <capacity>Eating</capacity>
-            </li>
-            <li Class="CompProperties_AbilityGiveHediff">
-                <compClass>CompAbilityEffect_GiveHediff</compClass>
-                <hediffDef>SHG_Beelzebub</hediffDef>
-                <onlyApplyToSelf>True</onlyApplyToSelf>
-                <replaceExisting>true</replaceExisting>
-            </li>
-        </comps>
-    </AbilityDef>
-
-    <AbilityDef ParentName="SHGPowerAbilitiesBase">
-        <defName>SHG_BeelzebubAbsorbPower</defName>
-        <label>beelzebub (absorb power)</label>
         <description>Absorb a corpse to gain some progress on a related ever-evolving hediff. This will not provide any nutrition.</description>
         <iconPath>Powers/Specializations/Gene_Beezlebub</iconPath>
         <warmupEffecter>Bloodfeed_Warmup</warmupEffecter>

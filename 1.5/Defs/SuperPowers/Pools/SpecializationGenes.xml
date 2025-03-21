@@ -17,11 +17,10 @@
     <GeneDef ParentName="SHG_SpecializationBase">
         <defName>SHG_Beelzebub</defName>
         <label>beelzebub</label>
-        <description>Carriers of this gene can drain nutrition from all living things around them, colonist and enemy alike, and can also absorb the power from a corpse to gain permanent ever-evolving buffs.</description>
+        <description>Carriers of this gene can absorb the power from a corpse to gain permanent buffs based on the type and size of the corpse.</description>
         <iconPath>Powers/Specializations/Gene_Beezlebub</iconPath>
         <prerequisite>SuperGluttony</prerequisite>
         <customEffectDescriptions>
-            <li>Absorbing things with a larger body size grants more progress.</li>
 			<li>Absorbing a mechanoid gives ever-evolving (foodless) progress.</li>
             <li MayRequire="EBSG.Framework">Absorbing an insectoid gives ever-evolving (lethality) progress.</li>
             <li MayRequire="EBSG.Framework,Ludeon.Rimworld.Anomaly">Absorbing an entity gives ever-evolving (lethality) progress.</li>
@@ -29,11 +28,9 @@
 		</customEffectDescriptions>
         <abilities>
             <li>SHG_Beelzebub</li>
-            <li>SHG_BeelzebubAbsorbPower</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_Beelzebub</AbilityDef>
-            <AbilityDef>SHG_BeelzebubAbsorbPower</AbilityDef>
         </descriptionHyperlinks>
     </GeneDef>
 
