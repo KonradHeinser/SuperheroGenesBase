@@ -1,18 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
 namespace SuperHeroGenesBase
 {
     public class CompAbilityEffect_AbsorbPower : CompAbilityEffect
     {
+        public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            return target.Thing != null && target.Thing is Corpse;
+        }
+
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            base.Apply(target, dest);
             if (target.Thing != null && target.Thing is Corpse c)
             {
                 Pawn caster = parent.pawn;
