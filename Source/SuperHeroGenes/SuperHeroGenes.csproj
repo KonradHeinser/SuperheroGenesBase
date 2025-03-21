@@ -78,6 +78,14 @@
     <Compile Include="SuperAI\ThinkNodeCondtional_CanUseColonistAI.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalHasGene.cs" />
     <Compile Include="SuperAI\ThinkNode_ConditionalHasPsylink.cs" />
+    <Compile Include="Thoughts\MentalBreakWorker_Entomophobia.cs" />
+    <Compile Include="Thoughts\MentalBreakWorker_Anthropophobia.cs" />
+    <Compile Include="Thoughts\MentalBreakWorker_Phasmophobia.cs" />
+    <Compile Include="Thoughts\MentalBreakWorker_Mechanophobia.cs" />
+    <Compile Include="Thoughts\MentalState_PanicFleeEntity.cs" />
+    <Compile Include="Thoughts\MentalState_PanicFleeInsect.cs" />
+    <Compile Include="Thoughts\MentalState_PanicFleeHumanlike.cs" />
+    <Compile Include="Thoughts\MentalState_PanicFleeMech.cs" />
     <Compile Include="Thoughts\ThoughtWorker_HediffSeverity.cs" />
     <Compile Include="Thoughts\ThoughtWorker_Precept_GeneExtension_Social.cs" />
     <Compile Include="Thoughts\ThoughtWorker_Precept_HasRelatedGene.cs" />

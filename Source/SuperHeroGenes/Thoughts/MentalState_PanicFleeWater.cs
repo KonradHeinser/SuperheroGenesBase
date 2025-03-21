@@ -34,12 +34,7 @@ namespace SuperHeroGenesBase
 
         private bool NearbyWater()
         {
-            SHGExtension extension = def.GetModExtension<SHGExtension>();
-
-            if (extension == null)
-                return SHGUtilities.CheckNearbyWater(pawn, 1, out _);
-
-            return SHGUtilities.CheckNearbyWater(pawn, 1, out _, extension.radius);
+            return SHGUtilities.CheckNearbyWater(pawn, 1, out _, def.GetModExtension<SHGExtension>().radius);
         }
     }
 }
