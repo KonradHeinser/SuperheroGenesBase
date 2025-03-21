@@ -39,6 +39,30 @@
         </comps>
     </AbilityDef>
 
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_BeelzebubAbsorbPower</defName>
+        <label>beelzebub (absorb power)</label>
+        <description>Absorb a corpse to gain some progress on a related ever-evolving hediff. This will not provide any nutrition.</description>
+        <iconPath>Powers/Specializations/Gene_Beezlebub</iconPath>
+        <warmupEffecter>Bloodfeed_Warmup</warmupEffecter>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <warmupStartSound>Bloodfeed_Cast</warmupStartSound>
+        <verbClass>Verb_CastAbilityTouch</verbClass>
+        <verbProperties>
+            <range>-1</range>
+            <targetParms>
+                <canTargetCorpses>True</canTargetCorpses>
+                <onlyTargetCorpses>False</onlyTargetCorpses>
+            </targetParms>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityRequiresCapacity">
+                <capacity>Eating</capacity>
+            </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityAbsorbPower" />
+        </comps>
+    </AbilityDef>
+
     <AbilityDef ParentName="SHGSelfCastBase">
         <defName>SHG_Regenerator</defName>
         <label>super regeneration</label>

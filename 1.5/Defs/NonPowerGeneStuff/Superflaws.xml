@@ -482,9 +482,7 @@
             <li>Archetypes_HydromancerWaterBlast</li>
             <li>Archetypes_FirefighterWaterBlast</li>
             <li>Archetypes_HydromancerWaterBolt</li>
-            <li>Archetypes_FirefighterWaterBolt</li>
             <li>Archetypes_HydromancerWaterBurst</li>
-            <li>Archetypes_FirefighterWaterBurst</li>
         </exclusionTags>
         <modExtensions>
             <li Class="SuperHeroGenesBase.SHGExtension">
@@ -553,81 +551,4 @@
             </li>
         </modExtensions>
     </MentalStateDef>
-<!--
-    <MentalStateDef ParentName="BaseMentalState">
-        <defName>SHG_Mechanophobia</defName>
-        <label>panic-fleeing mechs</label>
-        <stateClass>SuperHeroGenesBase.MentalState_PanicFleeMech</stateClass>
-        <category>Misc</category>
-        <nameColor>(0.65, 0.9, 0.93)</nameColor>
-        <beginLetterLabel>fleeing mech</beginLetterLabel>
-        <beginLetter>{0} is fleeing from a mech.</beginLetter>    
-        <recoveryMessage>{0} is no longer fleeing from mech.</recoveryMessage>
-        <baseInspectLine>Mental state: Fleeing from mech</baseInspectLine>
-        <blockNormalThoughts>true</blockNormalThoughts>
-        <minTicksBeforeRecovery>60</minTicksBeforeRecovery>
-        <modExtensions>
-            <li Class="SuperHeroGenesBase.SHGExtension">
-                <radius>14.9</radius>
-            </li>
-        </modExtensions>
-    </MentalStateDef>
-
-    <MentalStateDef ParentName="BaseMentalState">
-        <defName>SHG_Entomophobia</defName>
-        <label>panic-fleeing insects</label>
-        <stateClass>SuperHeroGenesBase.MentalState_PanicFleeInsect</stateClass>
-        <category>Misc</category>
-        <nameColor>(0.65, 0.9, 0.93)</nameColor>
-        <beginLetterLabel>fleeing insect</beginLetterLabel>
-        <beginLetter>{0} is fleeing from an insect.</beginLetter>    
-        <recoveryMessage>{0} is no longer fleeing from insect.</recoveryMessage>
-        <baseInspectLine>Mental state: Fleeing from insect</baseInspectLine>
-        <blockNormalThoughts>true</blockNormalThoughts>
-        <minTicksBeforeRecovery>60</minTicksBeforeRecovery>
-        <modExtensions>
-            <li Class="SuperHeroGenesBase.SHGExtension">
-                <radius>14.9</radius>
-            </li>
-        </modExtensions>
-    </MentalStateDef>
-
-    <MentalStateDef ParentName="BaseMentalState">
-        <defName>SHG_Phasmophobia</defName>
-        <label>panic-fleeing entitys</label>
-        <stateClass>SuperHeroGenesBase.MentalState_PanicFleeEntity</stateClass>
-        <category>Misc</category>
-        <nameColor>(0.65, 0.9, 0.93)</nameColor>
-        <beginLetterLabel>fleeing entity</beginLetterLabel>
-        <beginLetter>{0} is fleeing from a entity.</beginLetter>    
-        <recoveryMessage>{0} is no longer fleeing from entity.</recoveryMessage>
-        <baseInspectLine>Mental state: Fleeing from entity</baseInspectLine>
-        <blockNormalThoughts>true</blockNormalThoughts>
-        <minTicksBeforeRecovery>60</minTicksBeforeRecovery>
-        <modExtensions>
-            <li Class="SuperHeroGenesBase.SHGExtension">
-                <radius>14.9</radius>
-            </li>
-        </modExtensions>
-    </MentalStateDef>
-
-    <MentalStateDef ParentName="BaseMentalState">
-        <defName>SHG_Anthropophobia</defName>
-        <label>panic-fleeing pawns</label>
-        <stateClass>SuperHeroGenesBase.MentalState_PanicFleePawn</stateClass>
-        <category>Misc</category>
-        <nameColor>(0.65, 0.9, 0.93)</nameColor>
-        <beginLetterLabel>fleeing pawn</beginLetterLabel>
-        <beginLetter>{0} is fleeing from a pawn.</beginLetter>    
-        <recoveryMessage>{0} is no longer fleeing from pawn.</recoveryMessage>
-        <baseInspectLine>Mental state: Fleeing from pawn</baseInspectLine>
-        <blockNormalThoughts>true</blockNormalThoughts>
-        <minTicksBeforeRecovery>60</minTicksBeforeRecovery>
-        <modExtensions>
-            <li Class="SuperHeroGenesBase.SHGExtension">
-                <radius>14.9</radius>
-            </li>
-        </modExtensions>
-    </MentalStateDef>
--->
 </Defs>
