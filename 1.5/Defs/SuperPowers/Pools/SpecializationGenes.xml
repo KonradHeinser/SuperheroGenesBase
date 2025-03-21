@@ -21,9 +21,10 @@
         <iconPath>Powers/Specializations/Gene_Beezlebub</iconPath>
         <prerequisite>SuperGluttony</prerequisite>
         <customEffectDescriptions>
+            <li>Absorbing things with a larger body size grants more progress.</li>
 			<li>Absorbing a mechanoid gives ever-evolving (foodless) progress.</li>
-            <li MayRequire="EBSGFramework">Absorbing an insectoid gives ever-evolving (lethality) progress.</li>
-            <li MayRequire="EBSGFramework,Ludeon.Rimworld.Anomaly">Absorbing an entity gives ever-evolving (lethality) progress.</li>
+            <li MayRequire="EBSG.Framework">Absorbing an insectoid gives ever-evolving (lethality) progress.</li>
+            <li MayRequire="EBSG.Framework,Ludeon.Rimworld.Anomaly">Absorbing an entity gives ever-evolving (lethality) progress.</li>
             <li>Absorbing anything else gives ever-evolving (enlightenment) progress.</li>
 		</customEffectDescriptions>
         <abilities>
