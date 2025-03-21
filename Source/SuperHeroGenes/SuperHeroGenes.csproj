@@ -54,6 +54,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abilities\CompAbilityEffects\CompAbilityEffect_AbsorbPower.cs" />
+    <Compile Include="Abilities\CompProperties\CompProperties_AbilityAbsorbPower.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_CreateItems.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_InvisibleAtStage.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_SpawnHumanlike.cs" />

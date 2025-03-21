@@ -224,13 +224,13 @@ namespace SuperHeroGenesBase
             return IntVec3.Invalid;
         }
 
-        public static void AddOrAppendHediffs(Pawn pawn, float initialSeverity = 1, float severityPerTick = 0, HediffDef hediff = null, List<HediffDef> hediffs = null)
+        public static void AddOrAppendHediffs(this Pawn pawn, float initialSeverity = 1, float severityChange = 0, HediffDef hediff = null, List<HediffDef> hediffs = null)
         {
             if (hediff != null)
             {
                 if (HasHediff(pawn, hediff))
                 {
-                    pawn.health.hediffSet.GetFirstHediffOfDef(hediff).Severity += severityPerTick;
+                    pawn.health.hediffSet.GetFirstHediffOfDef(hediff).Severity += severityChange;
                 }
                 else
                 {
@@ -245,7 +245,7 @@ namespace SuperHeroGenesBase
                 {
                     if (HasHediff(pawn, hediffDef))
                     {
-                        pawn.health.hediffSet.GetFirstHediffOfDef(hediffDef).Severity += severityPerTick;
+                        pawn.health.hediffSet.GetFirstHediffOfDef(hediffDef).Severity += severityChange;
                     }
                     else
                     {
