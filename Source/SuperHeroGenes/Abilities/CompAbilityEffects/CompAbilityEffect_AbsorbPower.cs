@@ -15,7 +15,7 @@ namespace SuperHeroGenesBase
             if (target.Thing != null && target.Thing is Corpse c)
             {
                 Pawn caster = parent.pawn;
-                float severity = c.InnerPawn.BodySize * 0.1f;
+                float severity = c.InnerPawn.BodySize;
                 if (c.InnerPawn.RaceProps.IsMechanoid)
                     caster.AddOrAppendHediffs(severity, severity, SHGDefOf.SHG_EverEvolving_Foodless);
                 else if ((c.InnerPawn.RaceProps.Insect || c.InnerPawn.IsEntity) && ModsConfig.IsActive("EBSG.Framework"))
