@@ -90,8 +90,9 @@ namespace SuperHeroGenesBase
         {
             if (!base.Valid(target, throwMessages)) return false;
 
-            Map map = parent.pawn.Map;
-            if (AffectedCells(target, parent.pawn.Map).Any((IntVec3 c) => c.Filled(map)))
+            Map map = parent.pawn.MapHeld;
+            if (map == null) return false;
+            if (AffectedCells(target, map).Any((IntVec3 c) => c.Filled(map)))
             {
                 if (throwMessages)
                 {
@@ -99,7 +100,7 @@ namespace SuperHeroGenesBase
                 }
                 return false;
             }
-            if (AffectedCells(target, parent.pawn.Map).Any((IntVec3 c) => !c.Standable(map)))
+            if (AffectedCells(target, map).Any((IntVec3 c) => !c.Standable(map)))
             {
                 if (throwMessages)
                 {
@@ -107,7 +108,7 @@ namespace SuperHeroGenesBase
                 }
                 return false;
             }
-            if (Props.pollutedForbidden && AffectedCells(target, parent.pawn.Map).Any((IntVec3 c) => c.IsPolluted(map)))
+            if (Props.pollutedForbidden && AffectedCells(target, map).Any((IntVec3 c) => c.IsPolluted(map)))
             {
                 if (throwMessages)
                 {
@@ -115,7 +116,7 @@ namespace SuperHeroGenesBase
                 }
                 return false;
             }
-            if (Props.pollutedRequired && AffectedCells(target, parent.pawn.Map).Any((IntVec3 c) => !c.IsPolluted(parent.pawn.Map)))
+            if (Props.pollutedRequired && AffectedCells(target, map).Any((IntVec3 c) => !c.IsPolluted(parent.pawn.Map)))
             {
                 if (throwMessages)
                 {
@@ -123,7 +124,7 @@ namespace SuperHeroGenesBase
                 }
                 return false;
             }
-            if (Props.waterForbidden && AffectedCells(target, parent.pawn.Map).Any((IntVec3 c) => c.GetTerrain(parent.pawn.Map).IsWater))
+            if (Props.waterForbidden && AffectedCells(target, map).Any((IntVec3 c) => c.GetTerrain(parent.pawn.Map).IsWater))
             {
                 if (throwMessages)
                 {
@@ -131,7 +132,7 @@ namespace SuperHeroGenesBase
                 }
                 return false;
             }
-            if (Props.waterRequired && AffectedCells(target, parent.pawn.Map).Any((IntVec3 c) => !c.GetTerrain(parent.pawn.Map).IsWater))
+            if (Props.waterRequired && AffectedCells(target, map).Any((IntVec3 c) => !c.GetTerrain(parent.pawn.Map).IsWater))
             {
                 if (throwMessages)
                 {
@@ -139,7 +140,7 @@ namespace SuperHeroGenesBase
                 }
                 return false;
             }
-            if (Props.roofForbidden && AffectedCells(target, parent.pawn.Map).Any((IntVec3 c) => c.Roofed(parent.pawn.Map)))
+            if (Props.roofForbidden && AffectedCells(target, map).Any((IntVec3 c) => c.Roofed(parent.pawn.Map)))
             {
                 if (throwMessages)
                 {
@@ -147,7 +148,7 @@ namespace SuperHeroGenesBase
                 }
                 return false;
             }
-            if (Props.roofForbidden && AffectedCells(target, parent.pawn.Map).Any((IntVec3 c) => !c.Roofed(parent.pawn.Map)))
+            if (Props.roofForbidden && AffectedCells(target, map).Any((IntVec3 c) => !c.Roofed(parent.pawn.Map)))
             {
                 if (throwMessages)
                 {
@@ -155,7 +156,7 @@ namespace SuperHeroGenesBase
                 }
                 return false;
             }
-            if (Props.roofForbidden && AffectedCells(target, parent.pawn.Map).Any((IntVec3 c) => c.GetPlant(parent.pawn.Map) != null))
+            if (Props.roofForbidden && AffectedCells(target, map).Any((IntVec3 c) => c.GetPlant(parent.pawn.Map) != null))
             {
                 if (throwMessages)
                 {
@@ -163,7 +164,7 @@ namespace SuperHeroGenesBase
                 }
                 return false;
             }
-            if (Props.noPlants && AffectedCells(target, parent.pawn.Map).Any((IntVec3 c) => c.GetPlant(parent.pawn.Map) != null))
+            if (Props.noPlants && AffectedCells(target, map).Any((IntVec3 c) => c.GetPlant(parent.pawn.Map) != null))
             {
                 if (throwMessages)
                 {
@@ -186,7 +187,7 @@ namespace SuperHeroGenesBase
                     return false;
                 }
             }
-            if (Props.noBuildings && AffectedCells(target, parent.pawn.Map).Any((IntVec3 c) => c.GetFirstBuilding(map) != null))
+            if (Props.noBuildings && AffectedCells(target, map).Any((IntVec3 c) => c.GetFirstBuilding(map) != null))
             {
                 if (throwMessages)
                 {

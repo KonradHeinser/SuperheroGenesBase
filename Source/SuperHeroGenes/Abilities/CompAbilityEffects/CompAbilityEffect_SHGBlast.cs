@@ -18,7 +18,7 @@ namespace SuperHeroGenesBase
             float radius = Props.radius;
             if (Props.statRadius != null)
             {
-                if (caster.GetStatValue(Props.statRadius) > 0) radius = caster.GetStatValue(Props.statRadius);
+                if (caster.StatOrOne(Props.statRadius) > 0) radius = caster.StatOrOne(Props.statRadius);
                 else radius = 0;
             }
 
@@ -83,7 +83,7 @@ namespace SuperHeroGenesBase
         public override void DrawEffectPreview(LocalTargetInfo target)
         {
             float radius = Props.radius;
-            if (Props.statRadius != null && parent.pawn.GetStatValue(Props.statRadius) >= 0) radius = parent.pawn.GetStatValue(Props.statRadius);
+            if (Props.statRadius != null && parent.pawn.StatOrOne(Props.statRadius) >= 0) radius = parent.pawn.StatOrOne(Props.statRadius);
 
             GenDraw.DrawFieldEdges(SHGUtilities.AffectedCells(target, parent.pawn.Map, parent.pawn, radius).ToList(), Valid(target) ? Color.white : Color.red);
         }

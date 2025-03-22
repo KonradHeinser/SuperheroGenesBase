@@ -9,9 +9,9 @@ namespace SuperHeroGenesBase
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            if (target.Pawn == null || target.Pawn == parent.pawn) return;
             Pawn targetPawn = target.Pawn;
             Pawn caster = parent.pawn;
+            if (targetPawn?.health == null || targetPawn == caster) return;
 
             if (Props.hediffOnTarget != null)
             {

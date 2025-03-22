@@ -10,9 +10,9 @@ namespace SuperHeroGenesBase
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            if (target.Pawn != null && target.Pawn != parent.pawn && target.Pawn.ageTracker.AgeBiologicalYearsFloat > 16f && parent.pawn.ageTracker.AgeBiologicalYearsFloat > 16f)
+            Pawn pawn = target.Pawn;
+            if (pawn?.health != null && pawn != parent.pawn && pawn.ageTracker.AgeBiologicalYearsFloat > 16f && parent.pawn.ageTracker.AgeBiologicalYearsFloat > 16f)
             {
-                Pawn pawn = target.Pawn;
                 Hediff firstHediffOfDef = pawn.health.hediffSet.GetFirstHediffOfDef(Props.hediffToApply);
                 if (firstHediffOfDef != null)
                 {
@@ -36,6 +36,7 @@ namespace SuperHeroGenesBase
 
         public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
         {
+            if (target.Pawn == null) return false;
             if (target.Pawn != null && target.Pawn.ageTracker.AgeBiologicalYearsFloat < 16f)
             {
                 Messages.Message("CannotUseAbility".Translate(parent.def.label) + ": " + "AbilityCantApplyTooYoung".Translate(target.Pawn), target.Pawn, MessageTypeDefOf.RejectInput, historical: false);

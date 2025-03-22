@@ -65,23 +65,26 @@ namespace SuperHeroGenesBase
                     Messages.Message(baseExplanation + targetLightExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
                 return false;
             }
-            if (!CheckTargetHediffs(target, out string targetHediffExplanation))
+            if (target.Pawn != null)
             {
-                if (throwMessages)
-                    Messages.Message(baseExplanation + targetHediffExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
-                return false;
-            }
-            if (!CheckTargetGenes(target, out string targetGeneExplanation))
-            {
-                if (throwMessages)
-                    Messages.Message(baseExplanation + targetGeneExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
-                return false;
-            }
-            if (!CheckTargetPawn(target, out string targetExplanation))
-            {
-                if (throwMessages)
-                    Messages.Message(baseExplanation + targetExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
-                return true;
+                if (!CheckTargetHediffs(target, out string targetHediffExplanation))
+                {
+                    if (throwMessages)
+                        Messages.Message(baseExplanation + targetHediffExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
+                    return false;
+                }
+                if (!CheckTargetGenes(target, out string targetGeneExplanation))
+                {
+                    if (throwMessages)
+                        Messages.Message(baseExplanation + targetGeneExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
+                    return false;
+                }
+                if (!CheckTargetPawn(target, out string targetExplanation))
+                {
+                    if (throwMessages)
+                        Messages.Message(baseExplanation + targetExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
+                    return true;
+                }
             }
 
             return true;
