@@ -826,7 +826,7 @@
         <defName>SHG_MidasTouch</defName>
         <label>midas touch</label>
         <description>Turn the target into a pile of gold.</description>
-        <iconPath>Powers/Gene_DeathFromAbove</iconPath>
+        <iconPath>Powers/Gene_MidasTouch</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <cooldownTicksRange>60000</cooldownTicksRange>
         <hostile>true</hostile>
