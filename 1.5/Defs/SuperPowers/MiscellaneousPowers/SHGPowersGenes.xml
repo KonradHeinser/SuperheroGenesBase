@@ -561,7 +561,7 @@
         <defName>SHG_MidasTouch</defName>
         <label>midas touch</label>
         <description>Superheroes with this gene can turn someone into gold at a touch, which will immediately crumble under its weight into a pile.</description>
-        <iconPath>Powers/Gene_DeathFromAbove</iconPath>
+        <iconPath>Powers/Gene_MidasTouch</iconPath>
         <displayOrderInCategory>995</displayOrderInCategory>
         <marketValueFactor>3</marketValueFactor>
         <biostatArc>1</biostatArc>

@@ -304,7 +304,7 @@
         <label>phasing</label>
         <description>Supers with this gene can phase through walls and objects at will.</description>
         <biostatMet>-5</biostatMet>
-        <iconPath>Powers/Gene_Forcefield</iconPath>
+        <iconPath>Powers/Gene_Phasing</iconPath>
         <displayOrderInCategory>4</displayOrderInCategory>
         <exclusionTags>
             <li>SHG_Phasing</li>
