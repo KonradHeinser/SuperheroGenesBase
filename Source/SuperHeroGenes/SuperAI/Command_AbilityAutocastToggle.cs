@@ -7,6 +7,7 @@ using Verse.Sound;
 
 namespace SuperHeroGenesBase
 {
+    [StaticConstructorOnStartup]
     public class Command_AbilityAutocastToggle : Command
     {
         CompAbilityEffect_AutocastToggle toggle = null;
