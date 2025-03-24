@@ -70,6 +70,22 @@
                         </ThinkTreeDef>
                     </value>
                 </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/AbilityDef[defName="SHG_Radiomancer_RefocusEnergy_Wakefulness" or defName="SHG_Radiomancer_CondenseRadiation" 
+                    or defName="SHG_Radiomancer_DissipateEnergy"]</xpath>
+                    <value>
+                        <gizmoClass>SuperHeroGenesBase.Command_AbilityAutocastToggle</gizmoClass>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/AbilityDef[defName="SHG_Radiomancer_RefocusEnergy_Wakefulness" or defName="SHG_Radiomancer_CondenseRadiation"
+                    or defName="SHG_Radiomancer_DissipateEnergy"]/comps</xpath>
+                    <value>
+                        <li Class="SuperHeroGenesBase.CompProperties_AbilityAutocastToggle" />
+                    </value>
+                </li>
             </operations>
         </active>
     </Operation>

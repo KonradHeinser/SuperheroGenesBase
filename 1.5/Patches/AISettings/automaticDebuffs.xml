@@ -97,10 +97,8 @@
                                         </subNodes>
                                     </li>
 
-                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
-                                        <gene>Hemogenic</gene>
-                                        <useTargetValue>False</useTargetValue>
-                                        <minLevel>0.2</minLevel>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                        <ability>SHG_Hemomancer_BloodAndDarkness</ability>
                                         <subNodes>
                                             <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire">
                                                 <minRadius>15</minRadius>
@@ -123,7 +121,7 @@
                             <insertPriority>200</insertPriority>
                             <thinkRoot Class="ThinkNode_Priority">
                                 <subNodes>
-                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                         <ability>SHG_CommandAnimal</ability>
                                         <subNodes>
                                             <li Class="SuperHeroGenesBase.JobGiver_AICastBerserkAbility">
@@ -131,7 +129,7 @@
                                             </li>
                                         </subNodes>
                                     </li>
-                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                         <ability>AnimalWarcall</ability>
                                         <subNodes>
                                             <li Class="SuperHeroGenesBase.JobGiver_AICastBerserkAbility">
@@ -238,6 +236,12 @@
                                                         <li>SHG_Hemomancer_MarkForDeath</li>
                                                     </abilities>
                                                 </li>
+                                            </subNodes>
+                                        </li>
+                                                
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                            <ability>SHG_Hemomancer_BloodAndDarkness</ability>
+                                            <subNodes>
                                                 <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire">
                                                     <minRadius>15</minRadius>
                                                     <minEnemies>3</minEnemies>
@@ -259,7 +263,7 @@
                                 <insertPriority>200</insertPriority>
                                 <thinkRoot Class="ThinkNode_Priority">
                                     <subNodes>
-                                        <li Class="ThinkNode_ConditionalHasAbility">
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                             <ability>SHG_CommandAnimal</ability>
                                             <subNodes>
                                                 <li Class="SuperHeroGenesBase.JobGiver_AICastBerserkAbility">
@@ -267,7 +271,7 @@
                                                 </li>
                                             </subNodes>
                                         </li>
-                                        <li Class="ThinkNode_ConditionalHasAbility">
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                             <ability>AnimalWarcall</ability>
                                             <subNodes>
                                                 <li Class="SuperHeroGenesBase.JobGiver_AICastBerserkAbility">
@@ -280,6 +284,24 @@
                             </ThinkTreeDef>
                         </value>
                     </active>
+                </li>
+
+                <!--Psycasts don't allow for the gizmo class to be changed-->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/AbilityDef[defName="SHG_Distraction" or defName="SHG_Narcissus" or defName="SHG_Hemomancer_BloodAndDarkness" 
+                        or defName="SHG_CommandAnimal" or defName="AnimalWarcall"]</xpath>
+                    <value>
+                        <gizmoClass>SuperHeroGenesBase.Command_AbilityAutocastToggle</gizmoClass>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/AbilityDef[defName="SHG_Distraction" or defName="SHG_Narcissus" or defName="SHG_Hemomancer_BloodAndDarkness" 
+                        or defName="SHG_CommandAnimal" or defName="AnimalWarcall" or defName="SHG_Hemomancer_StealPerceptiveness" 
+                        or defName="SHG_Hemomancer_StealDefense" or defName="SHG_Hemomancer_StealStrength" 
+                        or defName="SHG_Hemomancer_MarkForDeath"]/comps</xpath>
+                    <value>
+                        <li Class="SuperHeroGenesBase.CompProperties_AbilityAutocastToggle" />
+                    </value>
                 </li>
             </operations>
         </active>

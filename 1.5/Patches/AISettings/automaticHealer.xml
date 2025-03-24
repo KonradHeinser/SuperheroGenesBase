@@ -16,7 +16,7 @@
                                     <li Class="SuperHeroGenesBase.ThinkNode_ConditionalConcerningBleeding">
                                         <bleedThreshold>1.0</bleedThreshold>
                                         <subNodes>
-                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                                 <ability>SHG_SealWounds</ability>
                                                 <subNodes>
                                                     <li Class="JobGiver_AICastAbilityOnSelf">
@@ -24,7 +24,7 @@
                                                     </li>
                                                 </subNodes>
                                             </li>
-                                            <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
                                                 <ability>SHG_Psionist_EmergencyPatch</ability>
                                                 <subNodes>
                                                     <li Class="JobGiver_AICastAbilityOnSelf">
@@ -38,7 +38,7 @@
                                                 <useTargetValue>False</useTargetValue>
                                                 <minLevel>0.2</minLevel>
                                                 <subNodes>
-                                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                                         <ability>SHG_Hemomancer_Hemoclotting</ability>
                                                         <subNodes>
                                                             <li Class="JobGiver_AICastAbilityOnSelf">
@@ -47,7 +47,7 @@
                                                         </subNodes>
                                                     </li>
 
-                                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                                         <ability>SHG_Hemomancer_ReplenishBlood</ability>
                                                         <subNodes>
                                                             <li Class="JobGiver_AICastAbilityOnSelf">
@@ -58,11 +58,24 @@
                                                 </subNodes>
                                             </li>
 
-                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                                 <ability>SHG_Hemomancer_MarkForDeathDefiance</ability>
                                                 <subNodes>
                                                     <li Class="JobGiver_AICastAbilityOnSelf">
                                                         <ability>SHG_Hemomancer_MarkForDeathDefiance</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                    <li Class="ThinkNode_ConditionalTotalDamage">
+                                        <thresholdPercent>0.50</thresholdPercent>
+                                        <subNodes>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                                <ability>SHG_Regenerator</ability>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf">
+                                                        <ability>SHG_Regenerator</ability>
                                                     </li>
                                                 </subNodes>
                                             </li>
@@ -80,7 +93,7 @@
                                 <subNodes>
                                     <li Class="SuperHeroGenesBase.ThinkNode_ConditionalNeedTending">
                                         <subNodes>
-                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                                 <ability>SHG_SealWounds</ability>
                                                 <subNodes>
                                                     <li Class="JobGiver_AICastAbilityOnSelf">
@@ -88,7 +101,7 @@
                                                     </li>
                                                 </subNodes>
                                             </li>
-                                            <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
                                                 <ability>SHG_Psionist_EmergencyPatch</ability>
                                                 <subNodes>
                                                     <li Class="JobGiver_AICastAbilityOnSelf">
@@ -101,7 +114,7 @@
                                                 <useTargetValue>False</useTargetValue>
                                                 <minLevel>0.2</minLevel>
                                                 <subNodes>
-                                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                                         <ability>SHG_Hemomancer_Hemoclotting</ability>
                                                         <subNodes>
                                                             <li Class="JobGiver_AICastAbilityOnSelf">
@@ -110,7 +123,7 @@
                                                         </subNodes>
                                                     </li>
 
-                                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                                         <ability>SHG_Hemomancer_ReplenishBlood</ability>
                                                         <subNodes>
                                                             <li Class="JobGiver_AICastAbilityOnSelf">
@@ -126,7 +139,7 @@
                                         <hediff>BloodLoss</hediff>
                                         <severityRange>0.50</severityRange>
                                         <subNodes>
-                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                                 <ability>SHG_Hemomancer_ReplenishBlood</ability>
                                                 <subNodes>
                                                     <li Class="JobGiver_AICastAbilityOnSelf">
@@ -138,7 +151,7 @@
                                     </li>
                                     <li Class="SuperHeroGenesBase.ThinkNode_ConditionalTendableAlly">
                                         <subNodes>
-                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                                 <ability>SHG_SealWounds</ability>
                                                 <subNodes>
                                                     <li Class="SuperHeroGenesBase.JobGiver_AICastHealingAbility">
@@ -151,7 +164,7 @@
                                                 <useTargetValue>False</useTargetValue>
                                                 <minLevel>0.2</minLevel>
                                                 <subNodes>
-                                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                                         <ability>SHG_Hemomancer_Hemoclotting</ability>
                                                         <subNodes>
                                                             <li Class="JobGiver_AICastAbilityOnSelf">
@@ -160,7 +173,7 @@
                                                         </subNodes>
                                                     </li>
 
-                                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                                         <ability>SHG_Hemomancer_ReplenishBlood</ability>
                                                         <subNodes>
                                                             <li Class="JobGiver_AICastAbilityOnSelf">
@@ -170,7 +183,7 @@
                                                     </li>
                                                 </subNodes>
                                             </li>
-                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                                 <ability>Coagulate</ability>
                                                 <subNodes>
                                                     <li Class="SuperHeroGenesBase.JobGiver_AICastHealingAbility">
@@ -193,7 +206,7 @@
                                     <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasGene">
                                         <gene>SHG_Archetypes_Radiomancer</gene>
                                         <subNodes>
-                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                                 <ability>SHG_Radiomancer_ReverseAging</ability>
                                                 <subNodes>
                                                     <li Class="SuperHeroGenesBase.ThinkNode_ConditionalOver25YearsOld">
@@ -218,7 +231,7 @@
                                                     </li>
                                                 </subNodes>
                                             </li>
-                                            <li Class="ThinkNode_ConditionalHasAbility">
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                                 <ability>SHG_Radiomancer_ReformPart</ability>
                                                 <subNodes>
                                                     <li Class="ThinkNode_ConditionalHasHediff">
@@ -240,7 +253,7 @@
                                             </li>
                                         </subNodes>
                                     </li>
-                                    <li Class="ThinkNode_ConditionalHasAbility">
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
                                         <ability>SHG_Revive</ability>
                                         <subNodes>
                                             <li Class="SuperHeroGenesBase.JobGiver_AIResurrectHumanoid">
@@ -255,35 +268,23 @@
                     </value>
                 </li>
 
-                <li Class="SuperHeroGenesBase.PatchOperationSetting">
-                    <setting>poolUsage</setting>
-                    <active Class="PatchOperationAdd"> <!--If under half health, use a potent regeneration ability-->
-                        <xpath>Defs</xpath>
-                        <value>
-                            <ThinkTreeDef>
-                                <defName>SHG_SuperAI_PoolHealer_Pawn</defName>
-                                <insertTag>SHGAI_Colonist</insertTag>
-                                <insertPriority>450</insertPriority>
-                                <thinkRoot Class="ThinkNode_Priority">
-                                    <subNodes>
-                                        <li Class="ThinkNode_ConditionalTotalDamage">
-                                            <thresholdPercent>0.50</thresholdPercent>
-                                            <subNodes>
-                                                <li Class="ThinkNode_ConditionalHasAbility">
-                                                    <ability>SHG_Regenerator</ability>
-                                                    <subNodes>
-                                                        <li Class="JobGiver_AICastAbilityOnSelf">
-                                                            <ability>SHG_Regenerator</ability>
-                                                        </li>
-                                                    </subNodes>
-                                                </li>
-                                            </subNodes>
-                                        </li>
-                                    </subNodes>
-                                </thinkRoot>
-                            </ThinkTreeDef>  
-                        </value>
-                    </active>
+                <!--Psycasts don't allow for the gizmo class to be changed-->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_MarkForDeathDefiance" or defName="SHG_SealWounds" 
+                        or defName="SHG_Hemomancer_Hemoclotting" or defName="SHG_Hemomancer_ReplenishBlood" or defName="Coagulate" 
+                        or defName="SHG_Radiomancer_ReverseAging" or defName="SHG_Radiomancer_ReformPart" or defName="SHG_Regenerator"]</xpath>
+                    <value>
+                        <gizmoClass>SuperHeroGenesBase.Command_AbilityAutocastToggle</gizmoClass>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_MarkForDeathDefiance" or defName="SHG_SealWounds" 
+                        or defName="SHG_Hemomancer_Hemoclotting" or defName="SHG_Hemomancer_ReplenishBlood" or defName="Coagulate" 
+                        or defName="SHG_Radiomancer_ReverseAging" or defName="SHG_Radiomancer_ReformPart" or defName="SHG_Regenerator"]/comps</xpath>
+                    <value>
+                        <li Class="SuperHeroGenesBase.CompProperties_AbilityAutocastToggle" />
+                    </value>
                 </li>
             </operations>
         </active>
