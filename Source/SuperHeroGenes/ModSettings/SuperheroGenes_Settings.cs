@@ -33,8 +33,6 @@ namespace SuperHeroGenesBase
 
     public class SuperheroGenes_Settings : ModSettings
     {
-        private static Vector2 scrollPosition = Vector2.zero;
-
         public static bool condensedMeteors = true;
         public static bool multipleArchetypes;
         public static bool multipleMutations;
@@ -55,7 +53,6 @@ namespace SuperHeroGenesBase
 
         // AI stuff
         public static bool disableColonistAI;
-        public static bool poolUsage;
         public static bool automaticHealer;
         public static bool automaticDefense;
         public static bool automaticDefenseDrafted;
@@ -157,7 +154,6 @@ namespace SuperHeroGenesBase
 
             // AI stuff
             Scribe_Values.Look(ref disableColonistAI, "disableColonistAI");
-            Scribe_Values.Look(ref poolUsage, "poolUsage");
             Scribe_Values.Look(ref automaticHealer, "automaticHealer");
             Scribe_Values.Look(ref automaticDefense, "automaticDefense");
             Scribe_Values.Look(ref automaticDefenseDrafted, "automaticDefenseDrafted");
@@ -286,8 +282,6 @@ namespace SuperHeroGenesBase
                     optionsMenu.Gap(10f);
                     if (!disableColonistAI)
                     {
-                        optionsMenu.CheckboxLabeled("SHG_AllowPoolUsage".Translate(), ref poolUsage, "SHG_AllowPoolUsageDescription".Translate());
-                        optionsMenu.Gap(10f);
                         optionsMenu.CheckboxLabeled("SHG_AutomaticHealer".Translate(), ref automaticHealer, "SHG_AutomaticHealerDescription".Translate());
                         optionsMenu.Gap(10f);
                         optionsMenu.CheckboxLabeled("SHG_AutomaticDefense".Translate(), ref automaticDefense, "SHG_AutomaticDefenseDescription".Translate());
