@@ -11,14 +11,13 @@ namespace SuperHeroGenesBase
         private GeneDef gene = null;
         protected override bool Satisfied(Pawn pawn)
         {
-            if (gene == null || !SHGUtilities.HasRelatedGene(pawn, gene)) return false;
-            try
+            if (!SHGUtilities.HasRelatedGene(pawn, gene)) return false;
+            if (pawn.genes.GetGene(gene) is Gene_Resource resourceGene)
             {
-                Gene_Resource resourceGene = (Gene_Resource)pawn.genes.GetGene(gene);
                 if (useTargetValue) return resourceGene.Value >= resourceGene.targetValue + 0.1f;
                 return resourceGene.Value >= minLevel;
             }
-            catch
+            else
             {
                 Log.Error(gene + " doesn't appear to be a resource gene");
                 return false;
