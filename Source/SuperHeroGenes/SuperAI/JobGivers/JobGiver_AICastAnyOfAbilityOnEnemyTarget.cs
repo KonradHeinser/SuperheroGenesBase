@@ -38,7 +38,11 @@ namespace SuperHeroGenesBase
                     if (currentEnemy is Pawn otherPawn && !tempAbility.comps.NullOrEmpty())
                         foreach (AbilityComp compAbility in tempAbility.comps)
                         {
-                            if (compAbility is CompAbilityEffect_GiveHediff comp)
+                            if (compAbility is CompAbilityEffect_AutocastToggle toggle)
+                            {
+                                flag = !toggle.autocast;
+                            }
+                            else if (compAbility is CompAbilityEffect_GiveHediff comp)
                             {
                                 if ((comp.Props.psychic && otherPawn.GetStatValue(StatDefOf.PsychicSensitivity) <= 0) ||
                                     (comp.Props.durationMultiplier != null && otherPawn.GetStatValue(comp.Props.durationMultiplier) <= 0) ||
@@ -98,7 +102,7 @@ namespace SuperHeroGenesBase
             // If it's supposed to be cast on the caster (i.e. a burst) return the caster
             if (!ability.def.targetRequired) return new LocalTargetInfo(caster);
             // If targetting a pawn, but can't cast pawns, just target the ground
-            if (currentEnemy is Pawn pawnTarget && !ability.verb.verbProps.targetParams.canTargetPawns)
+            if (currentEnemy is Pawn && !ability.verb.verbProps.targetParams.canTargetPawns)
                 return new LocalTargetInfo(currentEnemy);
 
             if (!ability.CanApplyOn(new LocalTargetInfo(currentEnemy))) return LocalTargetInfo.Invalid;
