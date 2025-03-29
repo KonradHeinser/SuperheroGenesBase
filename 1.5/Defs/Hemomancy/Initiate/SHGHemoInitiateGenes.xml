@@ -5,6 +5,7 @@
         <label>hemoinitiate</label>
         <description>For hemoinitiates, the blood in their veins doesn't just give them life, it's a moral guide. Hemoinitiates specialize in enhancing the abilities of others.</description>
         <iconPath>Hemomancer/Initiate/Gene_Hemomancer_Initiate</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <displayOrderInCategory>0</displayOrderInCategory>
         <statOffsets>
             <SHG_HemomancyProficiency>0.5</SHG_HemomancyProficiency>

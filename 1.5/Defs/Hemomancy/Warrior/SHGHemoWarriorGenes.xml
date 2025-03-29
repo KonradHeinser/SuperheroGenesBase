@@ -5,6 +5,7 @@
         <label>hemowarrior</label>
         <description>Hemowarriors specialize in layering enhancements on themselves that make it easier for them to brush off attacks and kill enemies.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_Warrior</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <displayOrderInCategory>0</displayOrderInCategory>
         <statOffsets>
             <SHG_HemomancyProficiency>0.5</SHG_HemomancyProficiency>
@@ -105,6 +106,7 @@
         <label>hemochampion</label>
         <description>Hemochampions have a tendency to cover the the ground around them with blood, whether it's their own or their enemies matters not.</description>
         <iconPath>Hemomancer/Warrior/Gene_Hemomancer_Champion</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <displayOrderInCategory>10</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Warrior</prerequisite>
         <statOffsets>
