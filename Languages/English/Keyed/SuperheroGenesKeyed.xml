@@ -155,9 +155,6 @@
     <SHG_DisableColonistAI>    Disable Colonist AI</SHG_DisableColonistAI>
     <SHG_DisableColonistAIDescription>While this is active, colonists will completely skip the Superhero Genes think tree. If you don't use any of the AI settings and happen to be having performance issues, or just want to be extra safe, it's recommended to enable this. Even while the other checks are disabled there are a handful of checks the tree automatically makes, and this prevents those. This will NOT impact whether non-player pawns can cast abilities, so this won't weaken your enemies any.</SHG_DisableColonistAIDescription>
 
-    <SHG_AllowPoolUsage>    Allow Life Pool Usage</SHG_AllowPoolUsage>
-    <SHG_AllowPoolUsageDescription>Some abilities grant powerful bonuses in the short term, but cause the super to have various debuffs afterwards. If this disabled, then these abilities will never be autocast.\n\nTo avoid having the AI use these abilities when it makes no sense, the only autocast categories that will use this abilty are autocast defense and autocast healing.</SHG_AllowPoolUsageDescription>
-
     <SHG_AutomaticHealer>    Autocast Healing</SHG_AutomaticHealer>
     <SHG_AutomaticHealerDescription>Makes multiple healing abilities automatically cast, along with the basic revive ability. This will also include the vanilla Coagulate ability as one of the last resort ability-based healing methods.\n\nYou may occassionally be unable to stop a pawn that's reviving a colonist by drafting them due to the nature of the ability. Revival will only be attempted while the pawn is undrafted and there are no enemies on the map. The pawn will also revive forbidden colonist corpses, so you don't need to worry about one being missed that way. If you want to dispose of the corpse rather than revive it, you will need to keep the reviver drafted or manually busy as your other colonists deal with the corpse.</SHG_AutomaticHealerDescription>
 
