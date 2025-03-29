@@ -18,7 +18,7 @@ namespace SuperHeroGenesBase
                 foreach (var offset in def.statOffsets)
                     if (offset.stat == SHGDefOf.SHG_HemomancyProficiency)
                     {
-                        pawn.genes.GetFirstGeneOfType<Gene_Hemogen>().ResetMax();
+                        pawn.genes?.GetFirstGeneOfType<Gene_Hemogen>()?.ResetMax();
                         break;
                     }
         }
@@ -53,7 +53,7 @@ namespace SuperHeroGenesBase
                 foreach (var offset in def.statOffsets)
                     if (offset.stat == SHGDefOf.SHG_HemomancyProficiency)
                     {
-                        pawn.genes.GetFirstGeneOfType<Gene_Hemogen>().ResetMax();
+                        pawn.genes?.GetFirstGeneOfType<Gene_Hemogen>()?.ResetMax();
                         break;
                     }
         }

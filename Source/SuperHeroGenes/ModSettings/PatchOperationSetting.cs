@@ -182,7 +182,7 @@ namespace SuperHeroGenesBase
                 if (SuperheroGenes_Settings.radiantQuests && active != null) return active.Apply(xml);
             }
 
-            else if (setting != null) Log.Error("A patch is using a setting that is either mispelled or unhandled");
+            else if (setting != null) Log.Error($"A patch is {setting}, which is either mispelled or unhandled");
             else Log.Error("A patch is using this mod's settings, but doesn't specify which one.");
             return true;
         }
