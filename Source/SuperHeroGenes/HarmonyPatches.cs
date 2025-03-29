@@ -89,14 +89,14 @@ namespace SuperHeroGenesBase
                         GRCExtension extension = gene.def.GetModExtension<GRCExtension>();
                         if (extension.carrierStat != null)
                         {
-                            float statValue = otherPawn.GetStatValue(extension.carrierStat);
+                            float statValue = otherPawn.StatOrOne(extension.carrierStat);
                             if (extension.onlyWhileLoweredCarrier && statValue < 1) num *= statValue;
                             else if (extension.onlyWhileRaisedCarrier && statValue > 1) num *= statValue;
                             else if (!extension.onlyWhileLoweredCarrier && !extension.onlyWhileRaisedCarrier) num *= statValue;
                         }
                         if (extension.otherStat != null)
                         {
-                            float statValue = ___pawn.GetStatValue(extension.otherStat);
+                            float statValue = ___pawn.StatOrOne(extension.otherStat);
                             if (extension.onlyWhileLoweredOther && statValue < 1) num *= statValue;
                             else if (extension.onlyWhileRaisedOther && statValue > 1) num *= statValue;
                             else if (!extension.onlyWhileLoweredOther && !extension.onlyWhileRaisedOther) num *= statValue;
@@ -121,14 +121,14 @@ namespace SuperHeroGenesBase
                         GRCExtension extension = gene.def.GetModExtension<GRCExtension>();
                         if (extension.carrierStat != null)
                         {
-                            float statValue = romancer.GetStatValue(extension.carrierStat);
+                            float statValue = romancer.StatOrOne(extension.carrierStat);
                             if (extension.onlyWhileLoweredCarrier && statValue < 1) num *= statValue;
                             else if (extension.onlyWhileRaisedCarrier && statValue > 1) num *= statValue;
                             else if (!extension.onlyWhileLoweredCarrier && !extension.onlyWhileRaisedCarrier) num *= statValue;
                         }
                         if (extension.otherStat != null)
                         {
-                            float statValue = romanceTarget.GetStatValue(extension.otherStat);
+                            float statValue = romanceTarget.StatOrOne(extension.otherStat);
                             if (extension.onlyWhileLoweredOther && statValue < 1) num *= statValue;
                             else if (extension.onlyWhileRaisedOther && statValue > 1) num *= statValue;
                             else if (!extension.onlyWhileLoweredOther && !extension.onlyWhileRaisedOther) num *= statValue;
@@ -147,7 +147,7 @@ namespace SuperHeroGenesBase
 
         public static void HemomancerHemogenMaxPostFix(ref float __result, ref Pawn ___pawn)
         {
-            float hemomancyProficiency = ___pawn.GetStatValue(SHGDefOf.SHG_HemomancyProficiency);
+            float hemomancyProficiency = ___pawn.StatOrOne(SHGDefOf.SHG_HemomancyProficiency);
             __result += hemomancyProficiency;
         }
 

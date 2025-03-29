@@ -14,6 +14,13 @@ namespace SuperHeroGenesBase
             base.PostAdd();
             HediffAdding(pawn, this);
             if (addedAbilities == null) addedAbilities = new List<AbilityDef>();
+            if (!def.statOffsets.NullOrEmpty())
+                foreach (var offset in def.statOffsets)
+                    if (offset.stat == SHGDefOf.SHG_HemomancyProficiency)
+                    {
+                        pawn.genes.GetFirstGeneOfType<Gene_Hemogen>().ResetMax();
+                        break;
+                    }
         }
 
         public override void Tick()
@@ -41,6 +48,14 @@ namespace SuperHeroGenesBase
 
             if (!addedAbilities.NullOrEmpty())
                 SHGUtilities.RemovePawnAbilities(pawn, addedAbilities);
+
+            if (!def.statOffsets.NullOrEmpty())
+                foreach (var offset in def.statOffsets)
+                    if (offset.stat == SHGDefOf.SHG_HemomancyProficiency)
+                    {
+                        pawn.genes.GetFirstGeneOfType<Gene_Hemogen>().ResetMax();
+                        break;
+                    }
         }
 
         public static void HediffAdding(Pawn pawn, Gene gene)
