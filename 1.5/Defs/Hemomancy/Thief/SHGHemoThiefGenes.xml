@@ -5,6 +5,7 @@
         <label>hemothief</label>
         <description>Hemothieves, just as their name implies, are known for stealing blood and other things from their enemies.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_Thief</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <displayOrderInCategory>0</displayOrderInCategory>
         <statOffsets>
             <SHG_HemomancyProficiency>0.5</SHG_HemomancyProficiency>
@@ -91,6 +92,7 @@
         <label>reaper</label>
         <description>Reapers can often decide the life and death of their targets by healing their allies and draining their enemies.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_Reaper</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <prerequisite>SHG_Hemomancer_Thief</prerequisite>
         <displayOrderInCategory>10</displayOrderInCategory>
         <statOffsets>

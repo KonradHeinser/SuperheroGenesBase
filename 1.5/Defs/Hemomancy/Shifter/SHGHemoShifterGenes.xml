@@ -5,6 +5,7 @@
         <label>hemoshifter</label>
         <description>Hemoshifters use hemogen to slightly alter their body's makeup to copy the characteristics of animals without altering their appearance.</description>
         <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Shifter</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <displayOrderInCategory>0</displayOrderInCategory>
         <customEffectDescriptions>
             <li>Effects scale with proficiency.</li>
@@ -94,6 +95,7 @@
         <label>hemomorph</label>
         <description>Hemomorphs can use hemogen to alter their bodies for more specialized purposes. These shifts usually don't have constant downsides like the hemoshifter's, but can be more difficult to use due to the strange nature of their abilty.</description>
         <iconPath>Hemomancer/Shifter/Gene_Hemomancer_Morph</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <displayOrderInCategory>10</displayOrderInCategory>
         <prerequisite>SHG_Hemomancer_Shifter</prerequisite>
         <statOffsets>
