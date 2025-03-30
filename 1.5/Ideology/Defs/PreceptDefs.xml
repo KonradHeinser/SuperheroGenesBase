@@ -136,13 +136,13 @@
         <thoughtClass>Thought_Memory</thoughtClass>
         <validWhileDespawned>true</validWhileDespawned>
         <durationDays>10</durationDays>
-        <stackLimit>5</stackLimit>
+        <stackLimit>10</stackLimit>
         <stackedEffectMultiplier>1</stackedEffectMultiplier>
         <stages>
             <li>
                 <label>super died</label>
                 <description>A super has died. This shouldn't be possible!</description>
-                <baseMoodEffect>-10</baseMoodEffect>
+                <baseMoodEffect>-2</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
@@ -265,13 +265,13 @@
         <thoughtClass>Thought_Memory</thoughtClass>
         <validWhileDespawned>true</validWhileDespawned>
         <durationDays>10</durationDays>
-        <stackLimit>5</stackLimit>
+        <stackLimit>10</stackLimit>
         <stackedEffectMultiplier>1</stackedEffectMultiplier>
         <stages>
             <li>
                 <label>super died</label>
                 <description>A super has died. This is a terrible day.</description>
-                <baseMoodEffect>-5</baseMoodEffect>
+                <baseMoodEffect>-1</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
@@ -388,13 +388,13 @@
         <thoughtClass>Thought_Memory</thoughtClass>
         <validWhileDespawned>true</validWhileDespawned>
         <durationDays>10</durationDays>
-        <stackLimit>10</stackLimit>
+        <stackLimit>5</stackLimit>
         <stackedEffectMultiplier>1</stackedEffectMultiplier>
         <stages>
             <li>
                 <label>super died</label>
                 <description>A super died. This is a great loss for the world.</description>
-                <baseMoodEffect>-2</baseMoodEffect>
+                <baseMoodEffect>-1</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
@@ -511,7 +511,7 @@
             <li>
                 <label>super died</label>
                 <description>A super let their power get to their head, but that shouldn't be a problem anymore.</description>
-                <baseMoodEffect>2</baseMoodEffect>
+                <baseMoodEffect>1</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
@@ -633,7 +633,7 @@
             <li>
                 <label>super died</label>
                 <description>The only good supe is a dead supe.</description>
-                <baseMoodEffect>5</baseMoodEffect>
+                <baseMoodEffect>3</baseMoodEffect>
             </li>
         </stages>
     </ThoughtDef>
