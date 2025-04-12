@@ -242,7 +242,7 @@
             </li>
             <li Class="EBSGFramework.HediffCompProperties_SeverityChangeWhenDamaged">
                 <cooldownTicks>30</cooldownTicks>
-                <severityChangeFactor>0.001</severityChangeFactor>
+                <severityChangeFactor>0.01</severityChangeFactor>
             </li>
             <li Class="EBSGFramework.HediffCompProperties_HediffOnKill">
                 <hediff>SHG_EverEvolving_Lethality</hediff>
