@@ -138,9 +138,9 @@
                 </li>
 
                 <li Class="PatchOperationConditional">
-                    <xpath>Defs/XenotypeDef/genes/li[text()="AptitudePoor_Intellectual"]</xpath>
+                    <xpath>Defs/XenotypeDef/genes/li[text()="AptitudeTerrible_Intellectual"]</xpath>
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/XenotypeDef/genes/li[text()="AptitudePoor_Intellectual"]</xpath>
+                        <xpath>Defs/XenotypeDef/genes/li[text()="AptitudeTerrible_Intellectual"]</xpath>
                         <value>
                             <li>AntisuperIntelligence</li>
                             <li>UnsuperIntelligence</li>
@@ -475,16 +475,39 @@
                 </li>
 
                 <!--Alpha Genes-->
-                <li Class="PatchOperationSequence">
-                    <operations>
-                        <li Class="PatchOperationConditional">
-                            <xpath>Defs/XenotypeDef[defName="AG_Fleetkind"]/genes/li[text()="AntisuperDurability"]</xpath>
-                            <match Class="PatchOperationRemove">
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/XenotypeDef[defName="AG_Fleetkind"]</xpath>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationConditional">
                                 <xpath>Defs/XenotypeDef[defName="AG_Fleetkind"]/genes/li[text()="AntisuperDurability"]</xpath>
-                            </match>
-                        </li>
-                    </operations>
+                                <match Class="PatchOperationRemove">
+                                    <xpath>Defs/XenotypeDef[defName="AG_Fleetkind"]/genes/li[text()="AntisuperDurability"]</xpath>
+                                </match>
+                            </li>
+                        </operations>
+                    </match>
                 </li>
+            </operations>
+        </active>
+    </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>mutationsAnywhere</setting>
+        <active Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/XenotypeDef/genes/li[text()="SHG_RandomMutation"]</xpath>
+                    <match Class="PatchOperationRemove"> <!--Remove from super xenotypes-->
+                        <xpath>Defs/XenotypeDef/genes/li[text()="SHG_RandomMutation"]</xpath>
+                    </match>
+                </li>
+                
+                <li Class="PatchOperationAdd"> <!--Add to all xenotypes-->
+                    <xpath>Defs/XenotypeDef/genes</xpath>
+                    <value><li>SHG_RandomMutation</li></value>
+                </li>
+                <!--If other mods use parents, may need compatibility patches below this point-->
             </operations>
         </active>
     </Operation>
