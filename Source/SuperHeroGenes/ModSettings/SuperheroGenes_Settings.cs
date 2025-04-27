@@ -201,7 +201,18 @@ namespace SuperHeroGenesBase
             var contentRect = frameRect.ContractedBy(10);
 
             if (tabInt == 0)
-                contentRect.height = 550;
+            {
+                var num = 0;
+                if (supersEverywhere)
+                    num += 2;
+                if (activatableSuperGenes)
+                    num += 1;
+                if (middleGrounds)
+                    num += 1;
+                if (num > 1)
+                    contentRect.height = 460 + num * 35;
+            }
+
             Widgets.BeginScrollView(frameRect, ref scrollPosition, contentRect);
             optionsMenu.Begin(contentRect);
 
