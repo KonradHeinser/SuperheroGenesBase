@@ -488,4 +488,24 @@
             </operations>
         </active>
     </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>mutationsAnywhere</setting>
+        <active Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/XenotypeDef/genes/li[text()="SHG_RandomMutation"]</xpath>
+                    <match Class="PatchOperationRemove"> <!--Remove from super xenotypes-->
+                        <xpath>Defs/XenotypeDef/genes/li[text()="SHG_RandomMutation"]</xpath>
+                    </match>
+                </li>
+                
+                <li Class="PatchOperationAdd"> <!--Add to all xenotypes-->
+                    <xpath>Defs/XenotypeDef/genes</xpath>
+                    <value><li>SHG_RandomMutation</li></value>
+                </li>
+                <!--If other mods use parents, may need compatibility patches below this point-->
+            </operations>
+        </active>
+    </Operation>
 </Patch>
