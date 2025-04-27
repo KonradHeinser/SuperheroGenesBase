@@ -438,7 +438,7 @@
     <GeneDef ParentName="SuperGeneBase">
         <defName>SuperHeroBase</defName>
         <label>Superhero gene</label>
-        <description>Carriers of this gene are stronger and faster than almost any other xenotype. These enhancements alone are enough that there are some who believe those with this genes are actually demigods, using their existence to prove their religion correct.</description>
+        <description>Carriers of this gene are enhanced to a point that allows them to excel in almost any field.</description>
         <iconPath>Base/SuperheroGeneBase</iconPath>
         <displayOrderInCategory>-999</displayOrderInCategory>
         <foodPoisoningChanceFactor>0.01</foodPoisoningChanceFactor>
