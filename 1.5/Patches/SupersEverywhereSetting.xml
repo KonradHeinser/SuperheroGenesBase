@@ -138,9 +138,9 @@
                 </li>
 
                 <li Class="PatchOperationConditional">
-                    <xpath>Defs/XenotypeDef/genes/li[text()="AptitudePoor_Intellectual"]</xpath>
+                    <xpath>Defs/XenotypeDef/genes/li[text()="AptitudeTerrible_Intellectual"]</xpath>
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/XenotypeDef/genes/li[text()="AptitudePoor_Intellectual"]</xpath>
+                        <xpath>Defs/XenotypeDef/genes/li[text()="AptitudeTerrible_Intellectual"]</xpath>
                         <value>
                             <li>AntisuperIntelligence</li>
                             <li>UnsuperIntelligence</li>
@@ -475,15 +475,18 @@
                 </li>
 
                 <!--Alpha Genes-->
-                <li Class="PatchOperationSequence">
-                    <operations>
-                        <li Class="PatchOperationConditional">
-                            <xpath>Defs/XenotypeDef[defName="AG_Fleetkind"]/genes/li[text()="AntisuperDurability"]</xpath>
-                            <match Class="PatchOperationRemove">
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/XenotypeDef[defName="AG_Fleetkind"]</xpath>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationConditional">
                                 <xpath>Defs/XenotypeDef[defName="AG_Fleetkind"]/genes/li[text()="AntisuperDurability"]</xpath>
-                            </match>
-                        </li>
-                    </operations>
+                                <match Class="PatchOperationRemove">
+                                    <xpath>Defs/XenotypeDef[defName="AG_Fleetkind"]/genes/li[text()="AntisuperDurability"]</xpath>
+                                </match>
+                            </li>
+                        </operations>
+                    </match>
                 </li>
             </operations>
         </active>
