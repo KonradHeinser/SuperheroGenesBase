@@ -1,7 +1,7 @@
-﻿using RimWorld;
+﻿using System.Collections.Generic;
+using RimWorld;
 using UnityEngine;
 using Verse;
-using System.Collections.Generic;
 
 namespace SuperHeroGenesBase
 {
@@ -33,6 +33,8 @@ namespace SuperHeroGenesBase
 
     public class SuperheroGenes_Settings : ModSettings
     {
+        private static Vector2 scrollPosition = Vector2.zero;
+
         public static bool condensedMeteors = true;
         public static bool multipleArchetypes;
         public static bool multipleMutations;
@@ -200,6 +202,7 @@ namespace SuperHeroGenesBase
             contentRect.x = 0;
             contentRect.height = 550;
 
+            Widgets.BeginScrollView(frameRect, ref scrollPosition, contentRect);
             optionsMenu.Begin(contentRect);
 
             switch (tabInt)
@@ -310,9 +313,10 @@ namespace SuperHeroGenesBase
                     }
                     break;
             }
-
+            
             optionsMenu.End();
-            base.Write();
+            Widgets.EndScrollView();
+            Write();
         }
     }
 }
