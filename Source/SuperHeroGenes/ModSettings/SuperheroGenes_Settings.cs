@@ -198,10 +198,9 @@ namespace SuperHeroGenesBase
             var frameRect = innerContainer.ContractedBy(5);
             frameRect.y += 15;
             frameRect.height -= 15;
-            var contentRect = frameRect;
-            contentRect.x = 0;
-            contentRect.height = 550;
+            var contentRect = frameRect.ContractedBy(10);
 
+            contentRect.height = 550;
             Widgets.BeginScrollView(frameRect, ref scrollPosition, contentRect);
             optionsMenu.Begin(contentRect);
 
