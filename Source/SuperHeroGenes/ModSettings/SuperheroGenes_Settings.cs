@@ -39,6 +39,7 @@ namespace SuperHeroGenesBase
         public static bool expensiveBase;
         public static bool supersEverywhere;
         public static bool archetypesEverywhere;
+        public static bool mutationsAnywhere;
         public static bool activatableSuperGenes;
         public static bool interruptibleActivatables;
         public static bool middleGrounds;
@@ -67,7 +68,6 @@ namespace SuperHeroGenesBase
         // Villains and Stereotypes stuff
         public static bool medievalVillains;
         public static bool vengefulOne = true;
-        public static bool mutationsAnywhere;
 
         // Hero Organization stuff
         public static bool medievalHeroes;
@@ -140,6 +140,7 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref expensiveBase, "expensiveBase");
             Scribe_Values.Look(ref supersEverywhere, "supersEverywhere");
             Scribe_Values.Look(ref archetypesEverywhere, "archetypesEverywhere");
+            Scribe_Values.Look(ref mutationsAnywhere, "mutationsAnywhere");
             Scribe_Values.Look(ref activatableSuperGenes, "activatableSuperGenes");
             Scribe_Values.Look(ref interruptibleActivatables, "interruptibleActivatables");
             Scribe_Values.Look(ref middleGrounds, "middleGrounds");
@@ -168,7 +169,6 @@ namespace SuperHeroGenesBase
             // Villains and Stereotypes stuff
             Scribe_Values.Look(ref medievalVillains, "medievalVillains");
             Scribe_Values.Look(ref vengefulOne, "vengefulOne", true);
-            Scribe_Values.Look(ref mutationsAnywhere, "mutationsAnywhere");
 
             // Villains and Stereotypes stuff
             Scribe_Values.Look(ref medievalHeroes, "medievalHeroes");
@@ -219,6 +219,8 @@ namespace SuperHeroGenesBase
                     {
                         optionsMenu.CheckboxLabeled("SHG_ArchetypesEverywhere".Translate(), ref archetypesEverywhere, "SHG_ArchetypesEverywhereDescription".Translate());
                         optionsMenu.Gap(10f);
+                        optionsMenu.CheckboxLabeled("SHG_MutationsAnywhere".Translate(), ref mutationsAnywhere, "SHG_MutationsAnywhereDescription".Translate());
+                        optionsMenu.Gap(10f);
                     }
                     optionsMenu.CheckboxLabeled("SHG_ActivatableSuperGenes".Translate(), ref activatableSuperGenes, "SHG_ActivatableSuperGenesDescription".Translate());
                     optionsMenu.Gap(10f);
@@ -263,11 +265,6 @@ namespace SuperHeroGenesBase
                     optionsMenu.Gap(10f);
                     optionsMenu.CheckboxLabeled("SHG_VengefulOne".Translate(), ref vengefulOne, "SHG_VengefulOneDescription".Translate());
                     optionsMenu.Gap(10f);
-                    if (supersEverywhere)
-                    {
-                        optionsMenu.CheckboxLabeled("SHG_MutationsAnywhere".Translate(), ref mutationsAnywhere, "SHG_MutationsAnywhereDescription".Translate());
-                        optionsMenu.Gap(10f);
-                    }
                     break;
                 case 2:
                     optionsMenu.CheckboxLabeled("SHG_MedievalHeroes".Translate(), ref medievalHeroes, "SHG_MedievalHeroesDescription".Translate());

@@ -50,6 +50,10 @@ namespace SuperHeroGenesBase
             {
                 if (SuperheroGenes_Settings.supersEverywhere && SuperheroGenes_Settings.archetypesEverywhere && active != null) return active.Apply(xml);
             }
+            else if (setting == "mutationsAnywhere")
+            {
+                if (SuperheroGenes_Settings.supersEverywhere && SuperheroGenes_Settings.mutationsAnywhere && active != null) return active.Apply(xml);
+            }
             else if (setting == "activatableSuperGenes")
             {
                 if (SuperheroGenes_Settings.activatableSuperGenes && active != null) return active.Apply(xml);
@@ -161,10 +165,6 @@ namespace SuperHeroGenesBase
             else if (setting == "vengefulOne")
             {
                 if (!SuperheroGenes_Settings.vengefulOne && inactive != null) return inactive.Apply(xml);
-            }
-            else if (setting == "mutationsAnywhere")
-            {
-                if (SuperheroGenes_Settings.supersEverywhere && SuperheroGenes_Settings.mutationsAnywhere && active != null) return active.Apply(xml);
             }
 
             // Hero Organization Stuff
