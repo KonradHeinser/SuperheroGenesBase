@@ -200,7 +200,8 @@ namespace SuperHeroGenesBase
             frameRect.height -= 15;
             var contentRect = frameRect.ContractedBy(10);
 
-            contentRect.height = 550;
+            if (tabInt == 0)
+                contentRect.height = 550;
             Widgets.BeginScrollView(frameRect, ref scrollPosition, contentRect);
             optionsMenu.Begin(contentRect);
 
