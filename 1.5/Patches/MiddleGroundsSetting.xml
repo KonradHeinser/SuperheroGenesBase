@@ -362,21 +362,21 @@
                             <displayOrderInCategory>73.5</displayOrderInCategory>
                             <biostatMet>1</biostatMet>
                             <statFactors>
-                                <StaggerDurationFactor>1.667</StaggerDurationFactor>
-                                <MeleeDodgeChance>0.7</MeleeDodgeChance>
-                                <MeleeCooldownFactor>1.667</MeleeCooldownFactor>
+                                <StaggerDurationFactor>1.5</StaggerDurationFactor>
+                                <MeleeDodgeChance>0.8</MeleeDodgeChance>
+                                <MeleeCooldownFactor>1.5</MeleeCooldownFactor>
                             </statFactors>
                             <statOffsets>
-                                <AimingDelayFactor>2.5</AimingDelayFactor>
+                                <AimingDelayFactor>1.667</AimingDelayFactor>
                             </statOffsets>
                             <capMods>
                                 <li>
                                     <capacity>BloodPumping</capacity>
-                                    <offset>-0.05</offset>
+                                    <offset>-0.033</offset>
                                 </li>
                                 <li>
                                     <capacity>Moving</capacity>
-                                    <offset>-0.05</offset>
+                                    <offset>-0.033</offset>
                                 </li>
                             </capMods>
                         </GeneDef>
@@ -392,7 +392,6 @@
                                 <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.6</VEF_MassCarryCapacity>
                                 <CarryBulk MayRequire="ceteam.combatextended">0.6</CarryBulk>
                                 <MeleeDamageFactor>0.6</MeleeDamageFactor>
-                                <MeleeArmorPenetration>0.6</MeleeArmorPenetration>
                             </statFactors>
                             <capMods>
                                 <li>

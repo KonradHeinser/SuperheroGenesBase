@@ -85,7 +85,7 @@
     <GeneDef ParentName="AntisuperHealingBase">
         <defName>AntisuperHealing</defName>
         <label>antisuper healing</label>
-        <description>Supers with this gene have far weaker antibodies and hemoglobin, forcing them to take extra precautions to never get sick or injured, lest they be bedridden for weeks or die.</description>
+        <description>Supers with this gene have far weaker antibodies and hemoglobin, forcing them to take extra precautions to never get sick or injured.</description>
         <displayOrderInCategory>23</displayOrderInCategory>
         <biostatMet>5</biostatMet>
         <statFactors>
@@ -194,7 +194,7 @@
         <label>antisuper speed</label>
         <description>Supers with this gene are so painfully slow, they may have issues keeping up with a one-legged human.</description>
         <displayOrderInCategory>73</displayOrderInCategory>
-        <biostatMet>2</biostatMet>
+        <biostatMet>3</biostatMet>
         <statFactors>
             <StaggerDurationFactor>2.5</StaggerDurationFactor>
             <MeleeDodgeChance>0.4</MeleeDodgeChance>
@@ -226,7 +226,6 @@
             <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.4</VEF_MassCarryCapacity>
             <CarryBulk MayRequire="ceteam.combatextended">0.4</CarryBulk>
             <MeleeDamageFactor>0.4</MeleeDamageFactor>
-            <MeleeArmorPenetration>0.4</MeleeArmorPenetration>
         </statFactors>
         <capMods>
             <li>
