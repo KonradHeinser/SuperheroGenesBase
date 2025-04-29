@@ -486,7 +486,10 @@
         </customEffectDescriptions>
         <modExtensions>
             <li Class="EBSGFramework.FertilityByGenderAgeExtension" MayRequire="EBSG.Framework">
-                <overridingGenes><li>SuperHealing</li></overridingGenes>
+                <overridingGenes>
+                    <li>SuperHealing</li>
+                    <li>UnsuperHealing</li>
+                </overridingGenes>
                 <maleFertilityAgeFactor>
                     <points>
                         <li>(14, 0)</li>

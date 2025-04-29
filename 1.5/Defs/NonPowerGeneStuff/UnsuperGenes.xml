@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <GeneDef ParentName="SuperGeneBase" Name="UnsuperBase" Abstract="True">
-        <description>Supers with this gene lack some of the enhanced stats base gives.</description>
+        <description>Supers with this gene lack some of the enhanced stats the base superhero gene gives.</description>
         <prerequisite>SuperHeroBase</prerequisite>
         <biostatMet>1</biostatMet>
     </GeneDef>
