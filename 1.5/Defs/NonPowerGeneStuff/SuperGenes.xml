@@ -92,9 +92,9 @@
     <GeneDef ParentName="SuperDurabilityBase">
         <defName>SuperDurability</defName>
         <label>super durability</label>
-        <description>One of the most simplistic abilities supers often have, and yet it's also one of the most terrifying. Supers with this gene are almost completely immune to damage.</description>
+        <description>Supers with this gene are extremely resistant to standard types of damage.</description>
         <displayOrderInCategory>7</displayOrderInCategory>
-        <biostatMet>-3</biostatMet>
+        <biostatMet>-4</biostatMet>
         <damageFactors>
             <SHG_Beam>0.1</SHG_Beam>
         </damageFactors>
@@ -109,34 +109,10 @@
         </statOffsets>
     </GeneDef>
 
-    <GeneDef ParentName="SuperGeneBase">
-        <defName>SuperGluttony</defName>
-        <label>super gluttony</label>
-        <description>Supers with this gene feel a constant hunger deep inside, and fulfilling that hunger allows their body to store far more food than normal.</description>
-        <iconPath>Base/SuperGluttony</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
-        <displayOrderInCategory>-3</displayOrderInCategory>
-        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
-        <biostatMet>-1</biostatMet>
-        <statFactors>
-            <MaxNutrition>3</MaxNutrition>
-            <EatingSpeed>3</EatingSpeed>
-        </statFactors>
-        <capMods>
-          <li>
-            <capacity>Metabolism</capacity>
-            <offset>1.0</offset>
-          </li>
-        </capMods>
-        <exclusionTags>
-            <li>SuperGluttonies</li>
-        </exclusionTags>
-    </GeneDef>
-
     <GeneDef ParentName="SuperHealingBase">
         <defName>SuperHealing</defName>
         <label>super healing</label>
-        <description>Instant death may stop this super in their tracks, but anything less will heal quickly.</description>
+        <description>Supers with this gene will one day die, but anything less than instant death will usually heal very quickly.</description>
         <displayOrderInCategory>27</displayOrderInCategory> 
         <biostatMet>-5</biostatMet>
         <statFactors>
@@ -207,7 +183,7 @@
     <GeneDef ParentName="SuperPerceptionBase">
         <defName>SuperPerception</defName>
         <label>super perception</label>
-        <description>Supers with this gene have hyperactive senses that allows them to observe their environment far better than most should be able to.</description>
+        <description>Supers with this gene have hyperactive senses that allows them to observe their environment far better than most.</description>
         <displayOrderInCategory>47</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
         <statFactors>
@@ -229,7 +205,7 @@
     <GeneDef ParentName="SuperPersuasionBase">
         <defName>SuperPersuasion</defName>
         <label>super persuasion</label>
-        <description>Every part of this super is designed to win over people, from their appearance to their communication skills.</description>
+        <description>Supers with this gene excel at winning people over with their supernatural beauty and voice.</description>
         <displayOrderInCategory>57</displayOrderInCategory>
         <biostatMet>-4</biostatMet>
         <statFactors>
@@ -253,7 +229,7 @@
     <GeneDef ParentName="SuperPrecisionBase">
         <defName>SuperPrecision</defName>
         <label>super precision</label>
-        <description>The accuracy and control of this super is unmatched by even the best snipers and warriors normal factions train.</description>
+        <description>Supers with this gene can achieve levels of accuracy and bodily control that more mundane individuals can never hope to attain.</description>
         <displayOrderInCategory>67</displayOrderInCategory>
         <biostatMet>-4</biostatMet>
         <statFactors>
@@ -311,7 +287,7 @@
     <GeneDef ParentName="SuperStrengthBase">
         <defName>SuperStrength</defName>
         <label>super strength</label>
-        <description>One hit from this super can cause exceptional damage, and they could probably carry multiple elephants at the same time.</description>
+        <description>Supers with this gene are exceptionally deadly in melee combat, and have an exceptionally high carry capacity.</description>
         <displayOrderInCategory>87</displayOrderInCategory>
         <biostatMet>-6</biostatMet>
         <statFactors>
@@ -326,5 +302,29 @@
                 <offset>2.0</offset>
             </li>
         </capMods>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase">
+        <defName>SuperGluttony</defName>
+        <label>super gluttony</label>
+        <description>Supers with this gene feel a constant hunger deep inside, and fulfilling that hunger allows their body to store far more food than normal.</description>
+        <iconPath>Base/SuperGluttony</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>-3</displayOrderInCategory>
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+        <biostatMet>-1</biostatMet>
+        <statFactors>
+            <MaxNutrition>3</MaxNutrition>
+            <EatingSpeed>3</EatingSpeed>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>1.0</offset>
+          </li>
+        </capMods>
+        <exclusionTags>
+            <li>SuperGluttonies</li>
+        </exclusionTags>
     </GeneDef>
 </Defs>

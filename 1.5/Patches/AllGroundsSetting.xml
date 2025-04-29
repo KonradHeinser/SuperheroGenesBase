@@ -14,16 +14,36 @@
                             <displayOrderInCategory>6.4</displayOrderInCategory>
                             <biostatMet>-1</biostatMet>
                             <damageFactors>
-                                <SHG_Beam>0.7</SHG_Beam>
+                                <SHG_Beam>0.775</SHG_Beam>
                             </damageFactors>
                             <statFactors>
-                                <IncomingDamageFactor>0.833</IncomingDamageFactor>
-                                <SHG_StunSusceptibility>0.833</SHG_StunSusceptibility>
+                                <IncomingDamageFactor>0.875</IncomingDamageFactor>
+                                <SHG_StunSusceptibility>0.875</SHG_StunSusceptibility>
                             </statFactors>
                             <statOffsets>
-                                <ArmorRating_Blunt>0.333</ArmorRating_Blunt>
-                                <ArmorRating_Sharp>0.333</ArmorRating_Sharp>
-                                <ArmorRating_Heat>0.333</ArmorRating_Heat>
+                                <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+                                <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+                                <ArmorRating_Heat>0.25</ArmorRating_Heat>
+                            </statOffsets>
+                        </GeneDef>
+
+                        <GeneDef ParentName="SuperDurabilityBase">
+                            <defName>SHG_SuperDurability3</defName>
+                            <label>greater super durability</label>
+                            <description>Supers with this gene have skin that is more durable, allowing them to resist various attacks.</description>
+                            <displayOrderInCategory>6.6</displayOrderInCategory>
+                            <biostatMet>-3</biostatMet>
+                            <damageFactors>
+                                <SHG_Beam>0.325</SHG_Beam>
+                            </damageFactors>
+                            <statFactors>
+                                <IncomingDamageFactor>0.625</IncomingDamageFactor>
+                                <SHG_StunSusceptibility>0.625</SHG_StunSusceptibility>
+                            </statFactors>
+                            <statOffsets>
+                                <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+                                <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+                                <ArmorRating_Heat>0.75</ArmorRating_Heat>
                             </statOffsets>
                         </GeneDef>
 
@@ -782,9 +802,19 @@
                                 <xpath>Defs/GeneDef[defName="SHG_SuperDurability1"]/statOffsets</xpath>
                                 <value>
                                     <statOffsets>
-                                        <ArmorRating_Blunt>33</ArmorRating_Blunt>
-                                        <ArmorRating_Sharp>33</ArmorRating_Sharp>
-                                        <ArmorRating_Heat>0.33</ArmorRating_Heat>
+                                        <ArmorRating_Blunt>25</ArmorRating_Blunt>
+                                        <ArmorRating_Sharp>25</ArmorRating_Sharp>
+                                        <ArmorRating_Heat>0.25</ArmorRating_Heat>
+                                    </statOffsets>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_SuperDurability3"]/statOffsets</xpath>
+                                <value>
+                                    <statOffsets>
+                                        <ArmorRating_Blunt>75</ArmorRating_Blunt>
+                                        <ArmorRating_Sharp>75</ArmorRating_Sharp>
+                                        <ArmorRating_Heat>0.75</ArmorRating_Heat>
                                     </statOffsets>
                                 </value>
                             </li>
