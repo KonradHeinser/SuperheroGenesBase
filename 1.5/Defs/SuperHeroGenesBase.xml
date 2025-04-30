@@ -60,7 +60,7 @@
 
     <GeneCategoryDef>
         <defName>SuperPowersPools</defName>
-        <label>super powers - pool manipulation</label>
+        <label>super powers - minor specializations</label>
         <displayPriorityInXenotype>999.894</displayPriorityInXenotype>
     </GeneCategoryDef>
 
