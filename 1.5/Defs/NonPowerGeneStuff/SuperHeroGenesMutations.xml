@@ -3,7 +3,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_DoubleHearted</defName>
         <label>double hearted</label>
-        <description>Supers with this gene have a second heart in their chest, pumping more blood in exchange for hindering the lungs. This second heart will be consumed on death to bring them back to life, and will take around 15 days to fully regrow afterwards.</description>
+        <description>Supers with this gene have a second heart in their chest which allows them to immediately revive from a killing blow once every 15 days.</description>
         <geneClass>SuperHeroGenesBase.Gene_DoubleHearted</geneClass>
         <iconPath>Mutations/DoubleHearted</iconPath>
         <displayOrderInCategory>1</displayOrderInCategory>
@@ -18,8 +18,8 @@
 
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_SuperPsychicPotential</defName>
-        <label>super psychic potential</label>
-        <description>Supers with this gene are exceptionally sensitive to all psychic phenomena, for better or worse. This attunement makes them exceptional Mechanitors, Gauranlen keepers, and Psionic Soldiers.</description>
+        <label>super psychic</label>
+        <description>Supers with this gene are exceptionally sensitive to all psychic phenomena, for better and worse.</description>
         <iconPath>Mutations/SuperPsychicPotential</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>2</displayOrderInCategory>
@@ -61,7 +61,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_Blindsight</defName>
         <label>blindsight</label>
-        <description>This superhero is permanently blind, but their hearing is enhanced threefold and bodily control is enhanced twofold.</description>
+        <description>Supers with this gene are permanently blind, but their hearing and bodily control is greatly enhanced.</description>
         <iconPath>Mutations/Blindsight</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>4</displayOrderInCategory>
@@ -72,11 +72,11 @@
             </li>
             <li>
                 <capacity>Hearing</capacity>
-                <postFactor>3</postFactor>
+                <postFactor>5</postFactor>
             </li>
             <li>
                 <capacity>Manipulation</capacity>
-                <postFactor>2</postFactor>
+                <postFactor>3</postFactor>
             </li>
             <li>
                 <capacity>Moving</capacity>
@@ -88,13 +88,13 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_GhostlyPresence</defName>
         <label>ghostly presence</label>
-        <description>Supers with this gene always seem to be difficult to notice, whether the super intends it or not. This "invisibility" makes them exceptional hunters and assassins as it is much harder to hit what you have difficulties seeing.</description>
+        <description>Supers with this gene always seem to be difficult to notice, whether the super intends it or not.</description>
         <iconPath>Mutations/GhostlyPresence</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>5</displayOrderInCategory>
         <statFactors>
-            <MeleeDodgeChance>2</MeleeDodgeChance>
-            <HuntingStealth>2</HuntingStealth>
+            <MeleeDodgeChance>3</MeleeDodgeChance>
+            <HuntingStealth>3</HuntingStealth>
         </statFactors>
         <capMods>
             <li>
@@ -222,7 +222,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_Technophile</defName>
         <label>technophile</label>
-        <description>This super has a love for technology and new advanced things that crosses the line into obsession.</description>
+        <description>Supers with this gene have a love for technology and new advanced things that crosses the line into obsession.</description>
         <iconPath>Mutations/Technophile</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>11</displayOrderInCategory>
@@ -238,7 +238,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_Naturalist</defName>
         <label>naturalist</label>
-        <description>This super loves nature, from pruning and farming to animal handling. They feel uncomfortable working on anything that isn't nature based though.</description>
+        <description>Supers with this gene love nature, but feel uncomfortable working on anything that isn't nature based though.</description>
         <iconPath>Mutations/Naturalist</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>12</displayOrderInCategory>
@@ -254,7 +254,7 @@
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_HALK</defName>
         <label>HALK</label>
-        <description>HALKs, or Hyper-Agressive Large Killers, first came into existence long before even the first supers. After an extremely long development with many destroyed labs and dead scientists, it was eventually integrated with the superhero gene in hopes to avoid more destroyed labs and dead people with some success. While calm, HALKs display an exceptional level of intelligence, but when they fight they become extremely dangerous killing machines.</description>
+        <description>Supers with this gene display an exceptional level of intelligence, but when they fight they become extremely dangerous killing machines.</description>
         <iconPath>Mutations/HALK</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <displayOrderInCategory>13</displayOrderInCategory>
@@ -278,108 +278,10 @@
 		</modExtensions>
     </GeneDef>
 
-    <HediffDef>
-        <defName>SHG_HALK</defName>
-        <label>HALK</label>
-        <description>This pawn is a Hyper-Agressive Large Killer, completely distinct from any fictional supersupers in ancient stories.</description>
-        <everCurableByItem>false</everCurableByItem>
-        <initialSeverity>0.001</initialSeverity>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
-        <maxSeverity>3.0</maxSeverity>
-        <stages>
-            <li>
-                <minSeverity>1</minSeverity>
-                <label>calm</label>
-                <statFactors>
-                    <CarryingCapacity>0.5</CarryingCapacity>
-                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.5</VEF_MassCarryCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">0.5</CarryBulk>
-                </statFactors>
-            </li>
-            <li>
-                <minSeverity>2</minSeverity>
-                <label>fighting</label>
-                <statFactors>
-                    <SM_BodySizeMultiplier MayRequire="RedMattis.BetterPrerequisites">2.00</SM_BodySizeMultiplier>
-                    <IncomingDamageFactor>0.75</IncomingDamageFactor>
-                </statFactors>
-            </li>
-            <li>
-                <minSeverity>3</minSeverity>
-                <label>RAMPAGE!!!</label>
-                <statFactors>
-                    <SM_BodySizeMultiplier MayRequire="RedMattis.BetterPrerequisites">3.00</SM_BodySizeMultiplier>
-                    <IncomingDamageFactor>0.50</IncomingDamageFactor>
-                </statFactors>
-            </li>
-        </stages>
-        <comps>
-            <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityByMentalState">
-                <mentalStateEffects>
-                    <li>
-                        <mentalStates>
-                            <li>Berserk</li>
-                            <li>Slaughterer</li>
-                            <li>MurderousRage</li>
-                            <li>Tantrum</li>
-                            <li>TargetedTantrum</li>
-                            <li>BedroomTantrum</li>
-                            <li>SadisticRage</li>
-                            <li>SocialFighting</li>
-                        </mentalStates>
-                    </li>
-                    <li MayRequire="Ludeon.Rimworld.Ideology">
-                        <mentalState>BerserkTrance</mentalState>
-                    </li>
-                    <li MayRequire="Ludeon.Rimworld.Ideology">
-                        <mentalState>Rebellion</mentalState>
-                    </li>
-                </mentalStateEffects>
-            </li>
-            <li Class="SuperHeroGenesBase.HediffCompProperties_TemporaryGenes">
-                <genesAtSeverities>
-                    <li>
-                        <genes>
-                            <li>AptitudeRemarkable_Intellectual</li>
-                            <li>AptitudeRemarkable_Social</li>
-                            <li>AptitudeTerrible_Melee</li>
-                            <li>AptitudeTerrible_Shooting</li>
-                            <li>MeleeDamage_Weak</li>
-                        </genes>
-                        <severities>0~1</severities>
-                    </li>
-                    <li>
-                        <genes>
-                            <li>AptitudeTerrible_Intellectual</li>
-                            <li>AptitudeTerrible_Social</li>
-                            <li>AptitudeRemarkable_Melee</li>
-                            <li>AptitudeRemarkable_Shooting</li>
-                            <li>Skin_Orange</li>
-                            <li>Beauty_VeryUgly</li>
-                        </genes>
-                        <severities>1~2</severities>
-                    </li>
-                    <li>
-                        <genes>
-                            <li>AptitudeTerrible_Intellectual</li>
-                            <li>AptitudeTerrible_Social</li>
-                            <li>AptitudeRemarkable_Melee</li>
-                            <li>MeleeDamage_Strong</li>
-                            <li>Skin_Orange</li>
-                            <li>Beauty_VeryUgly</li>
-                        </genes>
-                        <severities>2~3</severities>
-                    </li>
-                </genesAtSeverities>
-            </li>
-        </comps>
-    </HediffDef>
-
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_UncontrollableMindReading</defName>
         <label>uncontrollable mind reading</label>
-        <description>Supers with this gene suffer mood penalties when a lot of people are nearby, but their ability and experience reading minds allows them to talk with and predict what other beings are or will think.\n\nThe incoming damage reduction applies for all damage sources, and the mood reduction will include hostile pawns in its count.</description>
+        <description>Supers with this gene suffer mood penalties when in groups as they have to skim the minds of everyone around them.</description>
         <iconPath>Mutations/Gene_UncontrollableMindReading</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <displayOrderInCategory>14</displayOrderInCategory>
@@ -393,59 +295,4 @@
 			</li>
 		</modExtensions>
     </GeneDef>
-
-    <HediffDef>
-        <defName>SHG_UncontrollableMindReading</defName>
-        <label>uncontrollable mind reading</label>
-        <description>Know what others are thinking, and know what they will do before they even think it.</description>
-        <everCurableByItem>false</everCurableByItem>
-        <initialSeverity>1</initialSeverity>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
-        <stages>
-            <li>
-                <becomeVisible>False</becomeVisible>
-            </li>
-        </stages>
-        <comps>
-            <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityByNearbyPawns">
-                <onlyHumanlikes>True</onlyHumanlikes>
-                <includeSelf>True</includeSelf>
-                <range>30</range>
-            </li>
-        </comps>
-    </HediffDef>
-
-    <ThoughtDef>
-        <defName>SHG_UncontrollableMindReading</defName>
-        <thoughtClass>SuperHeroGenesBase.Thought_Situational_HediffSeverity</thoughtClass>
-        <workerClass>SuperHeroGenesBase.ThoughtWorker_HediffSeverity</workerClass>
-        <validWhileDespawned>true</validWhileDespawned>
-        <stages>
-            <li>
-                <label>{HEDIFF}</label>
-                <description>I'm surrounded by people, and all their thoughts are causing me a headache.</description>
-                <baseMoodEffect>-1</baseMoodEffect>
-            </li>
-        </stages>
-        <modExtensions>
-            <li Class="SuperHeroGenesBase.SHGExtension">
-                <hediff>SHG_UncontrollableMindReading</hediff>
-                <curve>
-                    <points>
-                        <li>(0, 0)</li>
-                        <li>(4, 0)</li>
-                        <li>(5, -1)</li>
-                        <li>(7, -3)</li>
-                        <li>(9, -6)</li>
-                        <li>(11, -10)</li>
-                        <li>(13, -15)</li>
-                        <li>(15, -21)</li>
-                        <li>(17, -28)</li>
-                    </points>
-                </curve>
-            </li>
-        </modExtensions>
-    </ThoughtDef>
-
 </Defs>
