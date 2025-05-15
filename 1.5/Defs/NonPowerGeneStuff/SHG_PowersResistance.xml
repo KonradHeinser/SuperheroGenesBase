@@ -5,7 +5,7 @@
         <label>eye laser immune</label> 
         <description>Supers with this gene are immune to beam damage.</description>
         <iconPath>Powers/Gene_LaserEyeImmunity</iconPath>
-        <displayOrderInCategory>0</displayOrderInCategory>
+        <displayOrderInCategory>999</displayOrderInCategory>
         <prerequisite>SuperDurability</prerequisite>
         <damageFactors>
             <SHG_Beam>0</SHG_Beam>
@@ -26,7 +26,7 @@
         <description>Supers with this gene always seem to suffer less from normal explosions than normal.\n\nThere are technically two types of bomb damage in vanilla, which is why bomb is listed twice.</description>
         <prerequisite>SuperHeroBase</prerequisite>
         <iconPath>Powers/Gene_PartialExplosionResistance</iconPath>
-        <displayOrderInCategory>-2</displayOrderInCategory>
+        <displayOrderInCategory>990</displayOrderInCategory>
         <biostatMet>-1</biostatMet>
         <damageFactors>
             <Bomb>0.5</Bomb>
@@ -40,7 +40,7 @@
         <description>Supers with this gene are immune to almost every standard type of explosive, from rocket launchers to antigrain warheads.\n\nThere are technically two types of bomb damage in vanilla (Bomb and BombSuper for those curious), which is why bomb is listed twice.</description>
         <prerequisite>SuperHeroBase</prerequisite>
         <iconPath>Powers/Gene_TotatExplosionResistance</iconPath>
-        <displayOrderInCategory>-1</displayOrderInCategory>
+        <displayOrderInCategory>989</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
         <damageFactors>
             <Bomb>0</Bomb>
@@ -53,7 +53,7 @@
         <label>lightning immune</label> 
         <description>Carriers of this gene are immune to lightning.</description>
         <iconPath>Powers/Gene_LightningImmunity</iconPath>
-        <displayOrderInCategory>1</displayOrderInCategory>
+        <displayOrderInCategory>991</displayOrderInCategory>
         <damageFactors>
             <SHG_Lightning>0</SHG_Lightning>
             <AG_Electric MayRequire="sarg.alphagenes">0</AG_Electric>
@@ -75,7 +75,7 @@
         <label>lightning resistant</label> 
         <description>Carriers of this gene are resistant to lightning.</description>
         <iconPath>Powers/Gene_LightningResistant</iconPath>
-        <displayOrderInCategory>2</displayOrderInCategory>
+        <displayOrderInCategory>992</displayOrderInCategory>
         <damageFactors>
             <SHG_Lightning>0.5</SHG_Lightning>
             <AG_Electric MayRequire="sarg.alphagenes">0.5</AG_Electric>
@@ -97,7 +97,7 @@
         <label>lightning vulnerable</label> 
         <description>Carriers of this gene are vulnerable to lightning.</description>
         <iconPath>Powers/Gene_LightningVulnerability</iconPath>
-        <displayOrderInCategory>3</displayOrderInCategory>
+        <displayOrderInCategory>993</displayOrderInCategory>
         <damageFactors>
             <SHG_Lightning>2</SHG_Lightning>
             <AG_Electric MayRequire="sarg.alphagenes">2</AG_Electric>
@@ -119,7 +119,7 @@
         <label>lightning weakness</label> 
         <description>Carriers of this gene are very weak to lightning.</description>
         <iconPath>Powers/Gene_LightningWeakness</iconPath>
-        <displayOrderInCategory>4</displayOrderInCategory>
+        <displayOrderInCategory>994</displayOrderInCategory>
         <damageFactors>
             <SHG_Lightning>4</SHG_Lightning>
             <AG_Electric MayRequire="sarg.alphagenes">4</AG_Electric>
@@ -135,7 +135,4 @@
             <li>LightningDamage</li>
         </exclusionTags>
     </GeneDef>
-
-    
-
 </Defs>

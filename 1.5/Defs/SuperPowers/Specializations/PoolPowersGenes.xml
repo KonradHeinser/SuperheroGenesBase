@@ -4,7 +4,7 @@
         <defName>SHG_Pools_EndurePain</defName>
         <label>endure pain</label>
         <description>Supers with this gene can use their innate super durability in one big burst for a couple hours. During this time, they will become immune to pain and somewhat resistant to all sources of external damage.</description>
-        <iconPath>Powers/Pools/Gene_EndurePain</iconPath>
+        <iconPath>Powers/Specializations/Gene_EndurePain</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <biostatMet>-1</biostatMet>
         <abilities>
@@ -14,7 +14,7 @@
             <AbilityDef>SHG_Pools_EndurePain</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
-            <li>DurabilityPool</li>
+            <li>DurabilitySpecialization</li>
             <li>Archetype_PugilistEndurePain</li>
         </exclusionTags>
     </GeneDef>
@@ -23,7 +23,7 @@
         <defName>SHG_Pools_EmergencyShutdown</defName>
         <label>emergency shutdown</label>
         <description>Supers with this gene can remotely trigger the emergency shutdown of a mechanoid for some time. After half an hour, the mechanoid's systems will process they were hacked and automatically reboot.</description>
-        <iconPath>Powers/Pools/Gene_Shutdown</iconPath>
+        <iconPath>Powers/Specializations/Gene_Shutdown</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <biostatMet>-2</biostatMet>
         <abilities>
@@ -33,7 +33,7 @@
             <AbilityDef>SHG_Pools_EmergencyShutdown</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
-            <li>IntelligencePool</li>
+            <li>IntelligenceSpecialization</li>
             <li>Archetypes_HackerShutdown</li>
         </exclusionTags>
     </GeneDef>
@@ -42,7 +42,7 @@
         <defName>SHG_LesserPortent</defName>
         <label>lesser seer</label>
         <description>Supers with this gene can utilize their enhanced senses to predict what other beings around them will do with hightened accuracy, increasing melee dodge and accuracy chance.</description>
-        <iconPath>Powers/Pools/Gene_LesserPortent</iconPath>
+        <iconPath>Powers/Specializations/Gene_LesserPortent</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <biostatMet>-2</biostatMet>
         <abilities>
@@ -52,7 +52,7 @@
             <AbilityDef>SHG_LesserPortent</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
-            <li>PerceptionPool</li>
+            <li>PerceptionSpecialization</li>
             <li>Archetype_SkirmisherSeer</li>
         </exclusionTags>
     </GeneDef>
@@ -61,7 +61,7 @@
         <defName>SHG_Pools_CalmingAura</defName>
         <label>calming aura</label>
         <description>Supers with this gene can utilize their superior persuasion abilities to soothe everyone in a wide area around them for a day to increase the mood of everyone within a radius of 50 while decreasing the super's mood by 20 and removing their super persuasive powers.</description>
-        <iconPath>Powers/Pools/Gene_CalmingAura</iconPath>
+        <iconPath>Powers/Specializations/Gene_CalmingAura</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <biostatMet>-1</biostatMet>
         <abilities>
@@ -71,7 +71,7 @@
             <AbilityDef>SHG_Pools_CalmingAura</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
-            <li>PersuasionPool</li>
+            <li>PersuasionSpecialization</li>
         </exclusionTags>
     </GeneDef>
 
@@ -79,7 +79,7 @@
         <defName>SHG_Pools_SniperSquad</defName>
         <label>sniping aura</label>
         <description>Supers with this gene can grant everyone around them some of their precision abilities for a day. During this time, the precision bonuses the super would receive from the base Superhero Gene is gone and their ability to move properly is diminished.</description>
-        <iconPath>Powers/Pools/Gene_SniperSquad</iconPath>
+        <iconPath>Powers/Specializations/Gene_SniperSquad</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <biostatMet>-2</biostatMet>
         <abilities>
@@ -89,7 +89,7 @@
             <AbilityDef>SHG_Pools_SniperSquad</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
-            <li>PrecisionPool</li>
+            <li>PrecisionSpecialization</li>
         </exclusionTags>
     </GeneDef>
 
@@ -97,7 +97,7 @@
         <defName>SHG_Pools_CrushingStrength</defName>
         <label>crushing strength</label>
         <description>Supers with this gene can use their strength pool in one great burst to increase their melee damage considerably for an hour.</description>
-        <iconPath>Powers/Pools/Gene_CrushingStrength</iconPath>
+        <iconPath>Powers/Specializations/Gene_CrushingStrength</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <biostatMet>-3</biostatMet>
         <abilities>
@@ -107,7 +107,7 @@
             <AbilityDef>SHG_Pools_CrushingStrength</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
-            <li>StrengthPool</li>
+            <li>StrengthSpecialization</li>
         </exclusionTags>
     </GeneDef>
 
@@ -115,7 +115,7 @@
         <defName>SHG_Pools_HealAllies</defName>
         <label>healing aura</label>
         <description>Supers with this gene can use their innate super healing to constantly heal all neaby allies for a day at the cost of being unable to naturally heal wounds for that time.</description>
-        <iconPath>Powers/Pools/Gene_HealAllies</iconPath>
+        <iconPath>Powers/Specializations/Gene_HealAllies</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <biostatMet>-2</biostatMet>
         <abilities>
@@ -125,7 +125,7 @@
             <AbilityDef>SHG_Pools_HealAllies</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
-            <li>HealingPool</li>
+            <li>HealingSpecialization</li>
             <li>Archetype_MedicHeal</li>
             <li>Archetype_LifeBringerHeal</li>
         </exclusionTags>
@@ -135,7 +135,7 @@
         <defName>SHG_Pools_WindStep</defName>
         <label>wind step</label>
         <description>Supers with this gene can use their innate speed to fly for a day, at the expense of both their base super speed.</description>
-        <iconPath>Powers/Pools/Gene_WindStep</iconPath>
+        <iconPath>Powers/Specializations/Gene_WindStep</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
         <biostatMet>-1</biostatMet>
         <abilities>
@@ -145,7 +145,7 @@
             <AbilityDef>SHG_Pools_WindStep</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
-            <li>SpeedPool</li>
+            <li>SpeedSpecialization</li>
         </exclusionTags>
     </GeneDef>
 

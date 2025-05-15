@@ -4,7 +4,7 @@
         <defName>SHG_Pools_EndurePain</defName>
         <label>endure pain</label>
         <description>Become immune to pain and resistant to damage for a few hours. Afterwards, the durability portion of the basic superhero gene will be depleted for some time.</description>
-        <iconPath>Powers/Pools/Gene_EndurePain</iconPath>
+        <iconPath>Powers/Specializations/Gene_EndurePain</iconPath>
         <cooldownTicksRange>60000</cooldownTicksRange>
         <statBases>
             <Ability_Duration>136</Ability_Duration>
@@ -22,7 +22,7 @@
         <defName>SHG_Pools_EmergencyShutdown</defName>
         <label>hack mech</label>
         <description>Hack a mech to make it shutdown for about half an hour. This will disable the intelligence portion of the super's base Superhero Gene for about a day.</description>
-        <iconPath>Powers/Pools/Gene_Shutdown</iconPath>
+        <iconPath>Powers/Specializations/Gene_Shutdown</iconPath>
         <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <groupAbility>True</groupAbility>
@@ -68,7 +68,7 @@
         <defName>SHG_LesserPortent</defName>
         <label>lesser portent</label>
         <description>Focus your senses to predict the future actions of everything around you to increase melee accuracy and dodge chance. Once this wears off, the perception benefits from the basic superhero gene will be lost for about a day.</description>
-        <iconPath>Powers/Pools/Gene_LesserPortent</iconPath>
+        <iconPath>Powers/Specializations/Gene_LesserPortent</iconPath>
         <cooldownTicksRange>600000</cooldownTicksRange>
         <comps>
             <li Class="CompProperties_AbilityGiveHediff">
@@ -83,7 +83,7 @@
         <defName>SHG_Pools_CalmingAura</defName>
         <label>calming aura</label>
         <description>Release a calming aura that improves the mood of all allies around the super for a day at the expense of both the super's mood and persuasive abilities.</description>
-        <iconPath>Powers/Pools/Gene_CalmingAura</iconPath>
+        <iconPath>Powers/Specializations/Gene_CalmingAura</iconPath>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <statBases>
@@ -107,7 +107,7 @@
         <defName>SHG_Pools_SniperSquad</defName>
         <label>sniper squad</label>
         <description>Release an aura for a day that increases the accuracy of all allies around the super for a day at the expense of both the super's manipulation and precision abilities.</description>
-        <iconPath>Powers/Pools/Gene_SniperSquad</iconPath>
+        <iconPath>Powers/Specializations/Gene_SniperSquad</iconPath>
         <statBases>
             <Ability_Duration>1000</Ability_Duration>
         </statBases>
@@ -129,7 +129,7 @@
         <defName>SHG_Pools_CrushingStrength</defName>
         <label>crushing strength</label>
         <description>Increase your melee damage considerably for an hour. Afterwards, the strength portion of the basic superhero gene will be depleted for some time.</description>
-        <iconPath>Powers/Pools/Gene_CrushingStrength</iconPath>
+        <iconPath>Powers/Specializations/Gene_CrushingStrength</iconPath>
         <statBases>
             <Ability_Duration>1000</Ability_Duration>
         </statBases>
@@ -148,7 +148,7 @@
         <defName>SHG_Pools_HealAllies</defName>
         <label>heal allies</label>
         <description>Release a healing aura for your allies for a day, during which the basic healing granted by the superhero gene will be lost, and the super's injuries will not be able to heal naturally.</description>
-        <iconPath>Powers/Pools/Gene_HealAllies</iconPath>
+        <iconPath>Powers/Specializations/Gene_HealAllies</iconPath>
         <cooldownTicksRange>60000</cooldownTicksRange>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
@@ -168,7 +168,7 @@
         <defName>SHG_Pools_WindStep</defName>
         <label>wind step</label>
         <description>Take flight for a day. During this day, you will be unaffected by ground obstacles, but will lose both your innate speed bonuses from the Superhero base gene along with an additional penalty on general moving abilities.</description>
-        <iconPath>Powers/Pools/Gene_WindStep</iconPath>
+        <iconPath>Powers/Specializations/Gene_WindStep</iconPath>
         <statBases>
             <Ability_Duration>1000</Ability_Duration>
         </statBases>

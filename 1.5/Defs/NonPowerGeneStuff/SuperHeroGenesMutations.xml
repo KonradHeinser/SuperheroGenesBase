@@ -12,7 +12,7 @@
         </customEffectDescriptions>
         <exclusionTags>
             <li>SuperHealings</li>
-            <li>HealingPool</li>
+            <li>HealingSpecialization</li>
         </exclusionTags>
     </GeneDef>
 
@@ -54,7 +54,7 @@
         </capMods>
         <exclusionTags>
             <li>SuperDurabilities</li>
-            <li>DurabilityPool</li>
+            <li>DurabilitySpecialization</li>
         </exclusionTags>
     </GeneDef>
 
@@ -127,7 +127,7 @@
         <exclusionTags>
             <li>Aggressive</li>
             <li>SuperSpeeds</li>
-            <li>SpeedPool</li>
+            <li>SpeedSpecialization</li>
         </exclusionTags>
     </GeneDef>
 
@@ -148,7 +148,7 @@
         <exclusionTags>
             <li>Aggressive</li>
             <li>SuperStrengths</li>
-            <li>StrengthPool</li>
+            <li>StrengthSpecialization</li>
         </exclusionTags>
     </GeneDef>
 
@@ -215,7 +215,7 @@
         </statFactors>
         <exclusionTags>
             <li>SuperIntelligences</li>
-            <li>IntelligencePool</li>
+            <li>IntelligenceSpecialization</li>
         </exclusionTags>
     </GeneDef>
 
