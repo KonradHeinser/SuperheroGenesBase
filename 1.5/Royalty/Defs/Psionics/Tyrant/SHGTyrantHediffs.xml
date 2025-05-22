@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_March</defName>
 		<label>MARCH</label>
 		<description>This pawn is under a psychic command to move faster.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
         <stages>
             <li>
                 <capMods>
@@ -27,14 +23,10 @@
         </comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_GraspHeart</defName>
 		<label>grasp heart</label>
 		<description>This pawn's heart is not working properly due to the mental manipulation of a Psionic Tyrant.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
         <descriptionHyperlinks>
             <HediffDef>HeartAttack</HediffDef>
         </descriptionHyperlinks>
@@ -65,13 +57,10 @@
         </comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_Forfeit</defName>
 		<label>FORFEIT</label>
 		<description>This pawn is under a psychic command that renders it almost impossible for them to move.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
         <stages>
             <li>
                 <capMods>
@@ -90,14 +79,10 @@
         </comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_Legion</defName>
 		<label>legion</label>
 		<description>This pawn's feelings of pain and fear are being suppressed by a Psionic Tyrant. The more psychically sensitive the pawn is, the more this impacts their fear susceptibility and mental break threshold.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
         <stages>
             <li>
                 <statOffsets>
@@ -116,14 +101,10 @@
         </comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_EmpiresWillFall</defName>
 		<label>toppling empires</label>
 		<description>This Conqueror thinks more clearly when they can freely cause chaos and destruction. Kingdoms will burn, and they will build their own empire from the ashes.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
         <stages>
             <li>
                 <capMods>
@@ -143,15 +124,10 @@
         </comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_YouWillSubmit</defName>
 		<label>you will submit</label>
 		<description>A Psionic Conqueror has completely dominated this pawn's mind, making it's thoughts become clouded.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
-        <stages><li></li></stages>
         <comps>
             <li Class="HediffCompProperties_Disappears">
                 <showRemainingTime>True</showRemainingTime>

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef Abstract="true" Name="SuperActivatableHediffBase">
-        <isBad>false</isBad>
-        <everCurableByItem>false</everCurableByItem>
-        <hediffClass>HediffWithComps</hediffClass>
+    <HediffDef Abstract="true" Name="SuperActivatableHediffBase" ParentName="SHG_SpecialHediffBase">
         <descriptionHyperlinks>
             <HediffDef>HeartAttack</HediffDef>
         </descriptionHyperlinks>

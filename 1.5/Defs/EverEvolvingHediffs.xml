@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef Name="SHG_EverEvolvingBase" Abstract="True">
-        <everCurableByItem>false</everCurableByItem>
+    <HediffDef Name="SHG_EverEvolvingBase" ParentName="SHG_SpecialHediffBase" Abstract="True">
         <initialSeverity>1</initialSeverity>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
         <maxSeverity>100</maxSeverity>
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_DisplaySeverity">

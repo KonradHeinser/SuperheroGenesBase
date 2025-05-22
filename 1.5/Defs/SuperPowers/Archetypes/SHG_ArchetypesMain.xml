@@ -95,14 +95,11 @@
         </symbolPack>
     </GeneDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Hemomancer</defName>
         <label>hemomancer</label>
         <description>This pawn's ability to control blood allows them to slow the rate that they lose blood from open wounds.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
 		<stages>
 			<li>
                 <totalBleedFactor>0.25</totalBleedFactor>
@@ -111,17 +108,11 @@
         </stages>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_GainRandomHemomancy</defName>
         <label>picking hemomancy gene</label>
         <description>This pawn will generate new genes once you STOP LOOKING AT DEVMODE STUFF AND UNPAUSE YOU CHEATER. Unless you're a fellow modder, in which case welcome! You won't get much use from this tooltip, but the SHG_ArchetypesMain.xml file contains the randomization data for this hediff.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <stages>
-			<li>
-                <becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
-                <comps>
+        <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
                 <removeGenesFromOtherLists>False</removeGenesFromOtherLists>
                 <showMessage>False</showMessage>

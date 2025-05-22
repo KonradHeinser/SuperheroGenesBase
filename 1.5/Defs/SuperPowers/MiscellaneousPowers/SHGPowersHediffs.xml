@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_PsychicDisconnection</defName>
         <label>psychic disconnection</label>
         <description>This pawn has been temporarily disconnected from the psychic field. If they had neural heat before this then that heat will stop dissipating for a while, and potentially begin causing issues.</description>
-        <isBad>false</isBad>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
                 <statFactors>
@@ -22,12 +20,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Invisibility</defName>
         <label>invisible super</label>
         <description>This super has become invisible to the naked eye.</description>
-        <isBad>false</isBad>
-        <hediffClass>HediffWithComps</hediffClass>
         <comps>
             <li Class="HediffCompProperties_Invisibility">
                 <visibleToPlayer>false</visibleToPlayer>
@@ -40,12 +36,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_UntouchableBeauty</defName>
         <label>untouchable beauty</label>
         <description>This pawn is using their beauty as a distraction for melee attackers.</description>
-        <isBad>false</isBad>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
                 <statFactors>
@@ -61,13 +55,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
 		<defName>SHG_Regenesis</defName>
 		<label>regenesis</label>
 		<description>This pawn was put into a regenerating coma by a super.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
         <maxSeverity>4.0</maxSeverity>
         <stages>
             <li>
@@ -150,16 +141,12 @@
         </comps>	
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
 		<defName>SHG_SuperClaws</defName>
 		<label>retractable fist blade</label>
         <labelNoun>a retractable fist blade</labelNoun>
 		<description>Blades around the length of the forearm that can pop out at will to the end of their fist for slicing and dicing.</description>
-		<hediffClass>HediffWithComps</hediffClass>
 		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>		
 		<comps>
             <li Class="HediffCompProperties_VerbGiver">
                 <tools>
@@ -184,14 +171,10 @@
         </addedPartProps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Powers_Flight</defName>
 		<label>flight</label>
 		<description>This super is always floating just a little bit off the ground, and their ability to move omnidirectionally makes it easier for them to move around quickly.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
         <stages>
             <li>
                 <statFactors>
@@ -206,14 +189,11 @@
 		</comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Soaring</defName>
 		<label>soaring</label>
 		<description>This super is soaring high through the air, where those on the ground cannot touch them and they are free to fly as they please.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
         <stages>
             <li>
                 <statFactors>
@@ -230,11 +210,10 @@
         </comps>
 	</HediffDef>
 
-    <HediffDef MayRequire="Ludeon.Rimworld.Anomaly">
+    <HediffDef ParentName="SHG_SpecialHediffBase" MayRequire="Ludeon.Rimworld.Anomaly">
         <defName>SHG_DetectMetalHorror</defName>
         <label>detect metal horror</label>
         <description>A super put a special invisible mark on this pawn that searches their body for hidden metal horrors. It will not be able to tell where the exact location of the target is within the pawn as it uses oddities in the marked pawn's blood and nervous system as an indicator.\n\nIf this goes away without metal horror detected appearing, the pawn is safe. For now.</description>
-        <hediffClass>HediffWithComps</hediffClass>
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-24</severityPerDay>
@@ -243,11 +222,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef MayRequire="Ludeon.Rimworld.Anomaly">
+    <HediffDef ParentName="SHG_SpecialHediffBase" MayRequire="Ludeon.Rimworld.Anomaly">
         <defName>SHG_MetalHorrorDetected</defName>
         <label>metal horror detected</label>
         <description>This pawn has a metal horror somewhere within them. You still need to do surgery stuff to find the exact location, but at least you know to be ready now. Note: If something removes the horror, then this should go away on its own. This usually occurs due to the surgery or it popping out, but any other means should also be covered. This hediff will remain even after the intial detection hediff is gone.\n\nUnless you have a mod that alters how metal horrors are handled, you will still need to wait for the strange flesh to appear for the surgery to succeed.</description>
-        <hediffClass>HediffWithComps</hediffClass>
         <defaultLabelColor>(0.9, 0.35, 0.35)</defaultLabelColor>
         <stages>
 			<li>
@@ -269,18 +247,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef MayRequire="EBSG.Framework">
+    <HediffDef ParentName="SHG_HiddenHediffBase" MayRequire="EBSG.Framework">
         <defName>SHG_TemporaryForcefield</defName>
         <label>forcefield</label>
         <description>A constant forcefield is being generated around this pawn to protect them from damage.</description>
-        <everCurableByItem>false</everCurableByItem>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
-        <stages>
-            <li>
-                <becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
         <comps>
             <li Class="EBSGFramework.HediffCompProperties_Shield">
                 <maxEnergy>5</maxEnergy>

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef Abstract="True" Name="SHG_ThiefStealBase">
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
+    <HediffDef Abstract="True" Name="SHG_ThiefStealBase" ParentName="SHG_SpecialHediffBase">
         <comps>
             <li Class="HediffCompProperties_Disappears">
                 <disappearsAfterTicks>2500</disappearsAfterTicks>   <!--1 hour-->
@@ -108,13 +105,10 @@
         </stages>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Hemomancer_MarkForDeath</defName>
 		<label>marked for death</label>
 		<description>This pawn was marked for death by a Reaper. If they happen to survive for 5 hours after being marked, this hediff changes from Doomed to Defiance, granting a single-use Defy Death ability that removes most physical injuries, including blood loss.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
         <stages>
 			<li>
                 <minSeverity>0.001</minSeverity>

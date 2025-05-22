@@ -412,6 +412,22 @@
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
+    <HediffDef Name="SHG_SpecialHediffBase" Abstract="True">
+        <hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>False</scenarioCanAdd>
+		<isBad>False</isBad>
+        <everCurableByItem>False</everCurableByItem>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase" Name="SHG_HiddenHediffBase" Abstract="True">
+        <stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+    </HediffDef>
+
+
         <!--Superhero Gene Base-->
     <HistoryEventDef>
         <defName>SHG_SuperDied</defName>

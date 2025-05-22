@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef Name="SuperPowersPassiveHediffBase" Abstract="True">
-        <hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
-        <stages>
-			<li>
-				<becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
-    </HediffDef>
-    
     <GeneDef ParentName="SuperPowersPassiveBase">
         <defName>SHG_LesserSuperRegeneration</defName>
         <label>lesser super regeneration</label>
@@ -25,7 +14,7 @@
 		</modExtensions>
     </GeneDef>
 
-    <HediffDef ParentName="SuperPowersPassiveHediffBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
 		<defName>SHG_LesserSuperRegeneration</defName>
 		<label>lesser super regeneration</label>
 		<description>Once per day, a new part will regrow. Appendages tend to take longer as fingers and toes will require an extra day each.</description>
@@ -55,7 +44,7 @@
 		</modExtensions>
     </GeneDef>
 
-    <HediffDef ParentName="SuperPowersPassiveHediffBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
 		<defName>SHG_SuperRegeneration</defName>
 		<label>super regeneration</label>
 		<description>This super is constantly regenerating. Even lost parts will return with a bit of time. Parts with more things attached, like arms, require extra time to properly regrow functioning appendages. Even regrowing fingers can take some time.</description>
@@ -147,11 +136,11 @@
         </comps>
     </AbilityDef>
 
-    <HediffDef ParentName="SuperPowersPassiveHediffBase">
+    <HediffDef ParentName="SHG_SpecialHediffBase">
 		<defName>SHG_Restraint</defName>
 		<label>restraint</label>
 		<description>How much this pawn is holding back.</description>
-        <stages Inherit="False">
+        <stages>
             <li />
             <li>
                 <label>restrained</label>
@@ -217,14 +206,11 @@
 		</modExtensions>
     </GeneDef>
 
-    <HediffDef MayRequire="EBSG.Framework">
+    <HediffDef ParentName="SHG_SpecialHediffBase" MayRequire="EBSG.Framework">
         <defName>SHG_EverGrowingPower</defName>
         <label>ever-growing power</label>
         <description>Each time this pawn is hit they become more resilient, and every time they kill a humanlike foe they become more lethal overall.</description>
-        <everCurableByItem>false</everCurableByItem>
         <initialSeverity>1</initialSeverity>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
         <maxSeverity>100</maxSeverity>
         <stages>
             <li>
@@ -274,17 +260,10 @@
 		</modExtensions>
     </GeneDef>
     
-    <HediffDef MayRequire="EBSG.Framework">
+    <HediffDef ParentName="SHG_HiddenHediffBase" MayRequire="EBSG.Framework">
         <defName>SHG_Forcefield</defName>
         <label>forcefield</label>
         <description>A constant forcefield is being generated around this pawn to protect them from damage.</description>
-        <everCurableByItem>false</everCurableByItem>
-        <hediffClass>HediffWithComps</hediffClass>
-        <stages>
-            <li>
-                <becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
         <comps>
             <li Class="EBSGFramework.HediffCompProperties_Shield">
                 <maxEnergy>2</maxEnergy>
@@ -316,17 +295,10 @@
 		</modExtensions>
     </GeneDef>
 
-    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <HediffDef ParentName="SHG_HiddenHediffBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
         <defName>SHG_Phasing</defName>
         <label>phasing</label>
         <description>This pawn phases through obstacles.</description>
-        <everCurableByItem>false</everCurableByItem>
-        <hediffClass>HediffWithComps</hediffClass>
-        <stages>
-            <li>
-                <becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
         <comps>
             <li Class="HediffCompProperties">
 				<compClass>VFECore.HediffComp_Phasing</compClass>

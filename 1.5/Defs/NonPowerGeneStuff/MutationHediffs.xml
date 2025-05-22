@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-        <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SecondHeart</defName>
         <label>second heart</label>
         <description>This pawn has a second heart that will be consumed to revive a pawn from death once. Once the second heart is gone, the lungs will automatically reshape to work at a normal capacity, then gradually shrink again as the second heart begins regrowing.</description>
         <hediffClass>SuperHeroGenesBase.Hediff_SecondHeart</hediffClass>
-        <isBad>false</isBad>
-        <everCurableByItem>false</everCurableByItem>
         <initialSeverity>0.001</initialSeverity>
         <stages>
             <li>
@@ -86,14 +84,11 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_HALK</defName>
         <label>HALK</label>
         <description>This pawn is a Hyper-Agressive Large Killer, completely distinct from any fictional supersupers in ancient stories.</description>
-        <everCurableByItem>false</everCurableByItem>
         <initialSeverity>0.001</initialSeverity>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
         <maxSeverity>3.0</maxSeverity>
         <stages>
             <li>
@@ -184,19 +179,11 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_UncontrollableMindReading</defName>
         <label>uncontrollable mind reading</label>
         <description>Know what others are thinking, and know what they will do before they even think it.</description>
-        <everCurableByItem>false</everCurableByItem>
         <initialSeverity>1</initialSeverity>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
-        <stages>
-            <li>
-                <becomeVisible>False</becomeVisible>
-            </li>
-        </stages>
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityByNearbyPawns">
                 <onlyHumanlikes>True</onlyHumanlikes>

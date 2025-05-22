@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef Name="SHG_AntiPowerMinorBase" Abstract="true">
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
+    <HediffDef ParentName="SHG_SpecialHediffBase" Name="SHG_AntiPowerMinorBase" Abstract="true">
         <initialSeverity>1.0</initialSeverity>
         <stages>
             <li>
@@ -28,7 +26,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef Name="SHG_AntiPowerMajorBase" Abstract="true">
+    <HediffDef ParentName="SHG_SpecialHediffBase" Name="SHG_AntiPowerMajorBase" Abstract="true">
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
 		<initialSeverity>1.0</initialSeverity>
@@ -57,9 +55,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef Name="SHG_AntiPowerMinor_VictimBase" Abstract="true">
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
+    <HediffDef ParentName="SHG_SpecialHediffBase" Name="SHG_AntiPowerMinor_VictimBase" Abstract="true">
         <comps>
             <li Class="HediffCompProperties_Disappears">
                 <showRemainingTime>false</showRemainingTime>
@@ -73,9 +69,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef Name="SHG_AntiPowerMajor_VictimBase" Abstract="true">
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
+    <HediffDef ParentName="SHG_SpecialHediffBase" Name="SHG_AntiPowerMajor_VictimBase" Abstract="true">
         <comps>
             <li Class="HediffCompProperties_Disappears">
                 <showRemainingTime>false</showRemainingTime>

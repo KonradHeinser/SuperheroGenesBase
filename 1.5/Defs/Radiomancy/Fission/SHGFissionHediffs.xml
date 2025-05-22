@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Radiomancer_RampantRegeneration</defName>
         <label>rampant regeneration</label>
         <description>This pawn's body is recovering from wounds at an unbelievable pace. Unfortunately, this comes with an extreme risk that some of their cells will be negatively affected by the radioactive energy.</description>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
                 <vomitMtbDays>0.1</vomitMtbDays>
@@ -37,11 +36,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Radiomancer_ExcitableCells</defName>
         <label>excitable cells</label>
         <description>This pawn's body is recovering from infections at an unbelievable pace. Unfortunately, this comes with an notable risk that some of their cells will be negatively affected by the radioactive energy.</description>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
                 <vomitMtbDays>0.3</vomitMtbDays>
@@ -68,16 +66,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Radiomancer_EverEvolving</defName>       
         <label>ever-evolving</label>
         <description>This pawn will generate new genes once you STOP LOOKING AT DEVMODE STUFF AND UNPAUSE YOU CHEATER. Unless you're a fellow modder, in which case welcome! You won't get much use from this tooltip, but the SHGFissionHediffs.xml file contains the randomization data for the ever evolving hediff itself.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <stages>
-			<li>
-                <becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
                 <removeGenesFromOtherLists>False</removeGenesFromOtherLists>
@@ -130,16 +122,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Radiomancer_Mutate</defName>       
         <label>mutating</label>
         <description>This pawn will generate new genes once you STOP LOOKING AT DEVMODE STUFF AND UNPAUSE YOU CHEATER. Unless you're a fellow modder, in which case welcome! You won't get much use from this tooltip, but the SHGFissionHediffs.xml file contains the randomization data for the mutating hediff.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <stages>
-			<li>
-                <becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
                 <showMessage>False</showMessage>
@@ -162,15 +148,11 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Radiomancer_ReverseAging</defName>
         <label>reverse aging</label>
         <description>This pawn is gradually becoming younger.</description>
-        <everCurableByItem>false</everCurableByItem>
         <initialSeverity>1</initialSeverity>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
-        <maxSeverity>1.0</maxSeverity>
         <stages />
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_Aging">
@@ -184,11 +166,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Radiomancer_RefocusEnergy_Wakefulness</defName>
         <label>refocus energy</label>
         <description>This pawn is feeling more awake due to an extra pocket of energy refreshes their body constantly.</description>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
                 <statFactors>
@@ -204,11 +185,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Radiomancer_RefocusEnergy_Sleepy</defName>
         <label>refocus energy</label>
         <description>This pawn is feeling very sleepy after generating a bunch of energy by draining their body's reserves.</description>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
                 <statFactors>

@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Fortress</defName>
 		<label>fortress</label>
 		<description>This super used the super durability specialization ability to become almost immune to damage temporarily.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
 		<initialSeverity>1.0</initialSeverity>
-		<isBad>false</isBad>
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
@@ -148,14 +145,11 @@
         </comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Regenerator</defName>
 		<label>regenerating</label>
 		<description>This super used the super healing specialization ability to increase their regeneration considerably temporarily.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
 		<initialSeverity>1.0</initialSeverity>
-		<isBad>false</isBad>
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
@@ -371,14 +365,11 @@
         </comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Portent</defName>
 		<label>portent</label>
 		<description>This super is focusing their senses to such an extent that they can deflect most attacks. As the ability wears off, the effects will gradually become weaker. Once this ability has worn off, their perception pool will be drained for around 10 days, reducing the benefits the pawn would receive from both the base Superhero gene and Super Perception(or what the ability provided by Super Perception would give while active, if you're using activatables).</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
 		<initialSeverity>1.0</initialSeverity>
-		<isBad>false</isBad>
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
@@ -631,14 +622,11 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Beguile</defName>
 		<label>beguile</label>
 		<description>This super has drained their persuasion pool for around 10 days, reducing the benefits the pawn would receive from both the base Superhero gene and Super Persuasion(or what the ability provided by Super Persuasion would give while active, if you're using activatables).</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
 		<initialSeverity>1.0</initialSeverity>
-		<isBad>false</isBad>
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
@@ -815,14 +803,11 @@
         </comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Snapshot</defName>
 		<label>snapshot</label>
 		<description>This super used the super precision specialization ability to increase their accuracy and shooting speed temporarily.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
 		<initialSeverity>1.0</initialSeverity>
-		<isBad>false</isBad>
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
@@ -1035,12 +1020,10 @@
         </comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Sprinter</defName>
         <label>sprinter</label>
         <description>This super's body is moving at speeds unmatched by even archotech machines, but once it wears off this pawn will need some time to recover. Their body will lie comatose for around 10 days.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
 		<initialSeverity>1.0</initialSeverity>
         <stages>
             <li>
@@ -1103,12 +1086,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_TitanStrength</defName>
         <label>titan strength</label>
         <description>This super used the super strength specialization ability to increase their melee damage to unbelievable heights temporarily.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
 		<initialSeverity>1.0</initialSeverity>
         <stages>
             <li>

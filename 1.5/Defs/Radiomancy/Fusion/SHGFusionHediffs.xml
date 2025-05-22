@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef Name="SHG_Radiomancer_OverchargeHediffs" Abstract="True">
-        <isBad>False</isBad>
-        <everCurableByItem>False</everCurableByItem>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>False</scenarioCanAdd>
+    <HediffDef ParentName="SHG_SpecialHediffBase" Name="SHG_Radiomancer_OverchargeHediffs" Abstract="True">
         <minSeverity>0.001</minSeverity>
         <initialSeverity>0.5</initialSeverity>
         <maxSeverity>6</maxSeverity>
@@ -23,12 +19,8 @@
         </comps>
     </HediffDef>
 
-    <HediffDef Name="SHG_Radiomancer_OverchargeTooMuch" Abstract="True">
+    <HediffDef ParentName="SHG_SpecialHediffBase" Name="SHG_Radiomancer_OverchargeTooMuch" Abstract="True">
         <description>This pawn had to much energy stored, and now must let their body cool off by remaining below their limit. This doesn't cause any direct debuffs to the radiomancer, just causes their body to gradually expel some of their stored energy into the air around them.</description>
-        <isBad>False</isBad>
-        <everCurableByItem>False</everCurableByItem>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>False</scenarioCanAdd>
         <initialSeverity>0.001</initialSeverity>
         <stages />
         <comps>
@@ -70,11 +62,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Radiomancer_ExpelledRadiation</defName>
         <label>expelled radiation</label>
         <description>This pawn's body is being bombarded with radioactive energy from a nearby radiomancer because that radiomancer couldn't keep their internal radiation under control anymore.</description>
-        <hediffClass>HediffWithComps</hediffClass>
         <makesSickThought>true</makesSickThought>
         <stages>
             <li>
@@ -261,14 +252,11 @@
         <label>overcharge (armor)</label>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Radiomancer_SolarRegeneration</defName>
         <label>solar regeneration</label>
         <description>This pawn is quickly healing while in sunlight, natural or artificial, and if they remain in sunlight for a full unbroken hour they can even regrow parts.</description>
-        <everCurableByItem>false</everCurableByItem>
         <initialSeverity>1</initialSeverity>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
         <maxSeverity>1.0</maxSeverity>
         <stages>
             <li>
@@ -317,14 +305,11 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Radiomancer_UndyingSun</defName>
         <label>undying sun</label>
         <description>This pawn is extremely difficult to kill while standing in sunlight, be it natural or artificial.</description>
-        <everCurableByItem>false</everCurableByItem>
         <initialSeverity>1</initialSeverity>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
         <maxSeverity>1.0</maxSeverity>
         <stages>
             <li>

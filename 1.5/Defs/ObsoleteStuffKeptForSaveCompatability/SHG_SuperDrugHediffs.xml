@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <!--Remove when 1.7 rolls around. Also need to remove the patches in the ExpensiveBaseSetting patches file-->
-    <HediffDef Name="SHG_SuperCreatingDrugHediffBase" Abstract="True">
+    <HediffDef ParentName="SHG_HiddenHediffBase" Name="SHG_SuperCreatingDrugHediffBase" Abstract="True">
         <hediffClass>Hediff_High</hediffClass>
         <description>This will give the pawn superhero genes if they do not already have them. These genes will be inheritable, even if the pawn's other genes are not. This will always give the superhero base gene in addition to trying to give other genes related to the pill. Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome.</description>
-        <stages>
-			<li>
-                <becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
     </HediffDef>
 
     <HediffDef ParentName="SHG_SuperCreatingDrugHediffBase">

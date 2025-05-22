@@ -197,16 +197,10 @@
 		</modExtensions>
     </GeneDef>
 
-    <HediffDef MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+    <HediffDef ParentName="SHG_HiddenHediffBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
         <defName>SHG_RandomPsionicFlaw</defName>
         <label>generating new genes</label>
         <description>This psionist will soon have either the sunbound or moonbound gene.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <stages>
-			<li>
-                <becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
                 <geneSets>

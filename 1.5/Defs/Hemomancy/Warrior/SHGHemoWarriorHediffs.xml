@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef Abstract="True" Name="SHG_WarriorBuffBase">
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
+    <HediffDef Abstract="True" Name="SHG_WarriorBuffBase" ParentName="SHG_SpecialHediffBase">
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay"> <!--All buff tiers come in severities of 0.5, so this drops it by 1 tier per day.-->
                 <severityPerDay>-0.5</severityPerDay>
@@ -13,16 +10,13 @@
         </comps>
     </HediffDef>
 
-	<HediffDef>
+	<HediffDef ParentName="SHG_SpecialHediffBase">
 		<defName>SHG_Hemomancer_BloodClaws</defName>
 		<label>blood claw</label>
         <labelNoun>a blood claw</labelNoun>
 		<description>Claws on the hands that can be used as a fast melee attack.</description>
-		<hediffClass>HediffWithComps</hediffClass>
 		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
-		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>		
 		<comps>
             <li Class="HediffCompProperties_VerbGiver">
                 <tools>
@@ -239,14 +233,11 @@
         </stages>
     </HediffDef>
 
-	<HediffDef>
+	<HediffDef ParentName="SHG_SpecialHediffBase">
 		<defName>SHG_Hemomancer_BloodAndDarkness</defName>
 		<label>blood and darkness</label>
 		<description>This pawn is temporarily blind and will bleed twice as much for an hour.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
         <stages>
             <li>
                 <totalBleedFactor>2.00</totalBleedFactor>
@@ -267,14 +258,11 @@
         </comps>	
 	</HediffDef>
 
-	<HediffDef>
+	<HediffDef ParentName="SHG_SpecialHediffBase">
 		<defName>SHG_Hemomancer_TrueRegeneration</defName>
 		<label>true regeneration</label>
 		<description>This hemochampion is constantly regenerating. Even lost parts will return with a little bit of time. Parts with more things attached, like arms, require extra time to properly regrow functioning appendages. Even regrowing fingers can take some time.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
                 <healWhileRegrowing>True</healWhileRegrowing>

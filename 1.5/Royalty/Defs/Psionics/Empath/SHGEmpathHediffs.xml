@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_PsionicManipulator</defName>
         <label>psionic manipulator</label>
         <description>This Empath is multiplying their social impact by 1.5 * psychic sensitivity.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
 			<li>
                 <statFactors>
@@ -17,12 +15,10 @@
         </stages>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_PsionicTerrorizer</defName>
         <label>psionic terrorizer</label>
         <description>This Empath is multiplying their arrest success chance and suppression (if ideology is enabled) by 1.5 * psychic sensitivity.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
 			<li>
                 <statFactors>
@@ -35,12 +31,10 @@
         </stages>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_PsionicInfluencer</defName>
         <label>psionic influencer</label>
         <description>This Empath is multiplying their negotiation power by 1.5 * psychic sensitivity.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
 			<li>
                 <statFactors>
@@ -52,12 +46,10 @@
         </stages>
     </HediffDef>
 
-    <HediffDef MayRequire="Ludeon.Rimworld.Ideology">
+    <HediffDef ParentName="SHG_SpecialHediffBase" MayRequire="Ludeon.Rimworld.Ideology">
         <defName>SHG_Psionist_PsionicMissionary</defName>
         <label>psionic missionary</label>
         <description>This Empath is multiplying their religion spread frequency and conversion power by 1.5 * psychic sensitivity.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
 			<li>
                 <statFactors>
@@ -70,12 +62,10 @@
         </stages>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_PsionicBond</defName>
         <label>psionic bond</label>
         <description>The more people in the faction with this hediff, the better the benefits. This caps at 5 pairs.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
             <li>
                 <minSeverity>1</minSeverity>
@@ -153,12 +143,10 @@
         <stages><li></li></stages>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_UnshakableTeam</defName>
         <label>unshakable team</label>
         <description>The more people in the faction with this hediff, the better the benefits. This caps at 20 people.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
             <li>
                 <minSeverity>1</minSeverity>
@@ -274,12 +262,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_OneOfAMillion</defName>
         <label>one of a million</label>
         <description>The more player pawns near this pawn, the less damage they will take.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
             <li>
                 <minSeverity>1</minSeverity>

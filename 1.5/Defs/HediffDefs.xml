@@ -273,11 +273,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_WateryFoam</defName>
         <label>watery foam</label>
         <description>This pawn was hit by a super's pressurized water attack that attached a blob around the cut that sticks to the skin and creates a firefoam-like coating over them, making them feel uncomfortable while also preventing them from catching fire briefly.</description>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
                 <statFactors>
@@ -298,6 +297,7 @@
         <label>blood pill</label>
         <description>This stops the pawn from suffering from new wound infections, and enhances their ability to heal wounds and fight off existing infections.</description>
         <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+        <everCurableByItem>False</everCurableByItem>
         <scenarioCanAdd>true</scenarioCanAdd>
         <maxSeverity>1.0</maxSeverity>
         <isBad>false</isBad>

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_SizeShift</defName>
         <label>size shift</label>
         <description>This super has altered their size using an ability.</description>
-        <isBad>false</isBad>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
-                    <!--Size Decrease-->
+            <!--Size Decrease-->
             <li>
                 <minSeverity>0.001</minSeverity>
                 <label>Microscopic</label>

@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Hemomancer_Hemoshift</defName>
 		<label>hemoshift</label>
 		<description>This pawn has used hemogen to alter their body structure slightly, making them take on some of the characteristics of a specific animal.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
         <stages>
 			<li>
                 <minSeverity>0.001</minSeverity>
@@ -122,14 +119,11 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
 		<defName>SHG_Hemomancer_StarfishSplit</defName>
 		<label>splitting</label>
 		<description>A clump of hemogen inside this pawn is gradually morphing into a child of this pawn. Shifting forms does not interrupt this. If they die, it will become a useless mass that the body will quickly destroy should the pawn be revived.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
 		<comps>
 			<li Class="SuperheroGenesBase.HediffCompProperties_SpawnHumanlike">
 				<sendLetters>True</sendLetters>
@@ -145,14 +139,11 @@
 		</comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
 		<defName>SHG_Hemomancer_BearHibernating</defName>
 		<label>hibernating</label>
 		<description>This hemomorph is in a hibernation state where their need for food is almost completely removed.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
         <stages>
             <li>
                 <hungerRateFactorOffset>-.9999</hungerRateFactorOffset>
@@ -172,12 +163,10 @@
 		</comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Hemomancer_ChameleonInvisibility</defName>
         <label>chameleon</label>
         <description>This hemomorph is blending into their surroundings.</description>
-        <isBad>false</isBad>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li />
         </stages>

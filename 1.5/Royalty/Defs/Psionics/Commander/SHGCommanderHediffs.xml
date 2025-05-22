@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_Encourage</defName>
         <label>encourage</label>
         <description>This pawn received encouragement from a Psionic Commander.</description>
-        <isBad>false</isBad>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
                 <capMods>
@@ -27,12 +25,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_Inspire</defName>
         <label>inpired</label>
         <description>This pawn received inspiration from a Psionic General.</description>
-        <isBad>false</isBad>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
                 <capMods>
@@ -54,12 +50,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_AssassinSquad</defName>
         <label>assassination squad</label>
         <description>This super has become invisible, and is also making nearby allies invisible.</description>
-        <isBad>false</isBad>
-        <hediffClass>HediffWithComps</hediffClass>
         <comps>
             <li Class="HediffCompProperties_Invisibility">
                 <visibleToPlayer>false</visibleToPlayer>
@@ -83,12 +77,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_AssassinSquad_Buff</defName>
         <label>assassination squad</label>
         <description>A nearby general is making this pawn invisible for a time.</description>
-        <isBad>false</isBad>
-        <hediffClass>HediffWithComps</hediffClass>
         <comps>
             <li Class="HediffCompProperties_Invisibility">
                 <visibleToPlayer>false</visibleToPlayer>
@@ -106,14 +98,11 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_MassLevitation</defName>
 		<label>mass levitation</label>
 		<description>This Commander is temporarily floating in the air, and allies around them will do the same.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
 		<comps>
 			<li Class="SuperHeroGenesBase.HediffCompProperties_TerrainCostOverride">
                 <universalCostOverride>0</universalCostOverride>
@@ -135,14 +124,11 @@
 		</comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_MassLevitation_Buff</defName>
 		<label>mass levitation</label>
 		<description>This pawn is floating in the air due to a nearby Psionic General.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
 		<comps>
 			<li Class="SuperHeroGenesBase.HediffCompProperties_TerrainCostOverride">
                 <universalCostOverride>0</universalCostOverride>
@@ -158,12 +144,10 @@
 		</comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_Rally</defName>
         <label>rally</label>
         <description>This pawn feels like they can do anything thanks to a Psionic Paragon.</description>
-        <isBad>false</isBad>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
                 <capMods>

@@ -30,11 +30,8 @@
         </comps>
     </HediffDef>
 
-    <HediffDef Name="SHG_Radiomancer_DecayLink" Abstract="True">
-        <everCurableByItem>false</everCurableByItem>
+    <HediffDef ParentName="SHG_SpecialHediffBase" Name="SHG_Radiomancer_DecayLink" Abstract="True">
         <initialSeverity>1</initialSeverity>
-        <hediffClass>HediffWithTarget</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
         <maxSeverity>1.0</maxSeverity>
         <comps>
             <li Class="HediffCompProperties_Disappears">
@@ -158,14 +155,11 @@
         <stages />
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Radiomancer_RapidAging</defName>
         <label>rapidly aging</label>
         <description>This pawn is rapidly aging.</description>
-        <everCurableByItem>false</everCurableByItem>
         <initialSeverity>1</initialSeverity>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
         <maxSeverity>1.0</maxSeverity>
         <stages />
         <comps>
@@ -180,13 +174,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Radiomancer_DangerousAura</defName>
 		<label>dangerous aura</label>
 		<description>This pawn is releasing a field of radioactive energy around them that causes major issues for any non-radiomancers. Non-senescent pawns are immune to the risk of carcinoma, but the other penalties remain.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsInRangeGeneRestricting">
                 <range>20</range>
@@ -210,11 +201,10 @@
         </comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Radiomancer_DangerousAura_Debuff</defName>
         <label>dangerous aura</label>
         <description>This pawn's body is being bombarded with radioactive energy from a nearby radiomancer. This stacks with cellular destabilization.</description>
-        <hediffClass>HediffWithComps</hediffClass>
         <makesSickThought>true</makesSickThought>
         <stages>
             <li>

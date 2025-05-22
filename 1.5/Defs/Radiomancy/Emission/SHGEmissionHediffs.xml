@@ -25,12 +25,11 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Radiomancer_ExplosiveBlows</defName>
         <label>explosive blows</label>
         <description>Every time this pawn hits something with a melee attack, they deal additional damage to all hostiles nearby.</description>
         <initialSeverity>1</initialSeverity>
-        <hediffClass>HediffWithComps</hediffClass>
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityChangePerAttack">
                 <changePerMeleeAttack>-1</changePerMeleeAttack>

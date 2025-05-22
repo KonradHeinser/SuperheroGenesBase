@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_Psychedelic</defName>
         <label>psychedelic spores</label>
         <description>A Dimensional Psionist subjected this pawn to some extremely toxic spores that have left this pawn in a berserk state.</description>
-        <isBad>false</isBad>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
                 <painFactor>0</painFactor>
@@ -83,12 +81,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_PsychicAnomaly</defName>
         <label>psychic anomaly</label>
         <description>This Cosmic Psionist connected themselves to a psychic anomaly.</description>
-        <isBad>false</isBad>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
                 <statFactors>
@@ -104,12 +100,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_Utopia</defName>
         <label>utopia</label>
         <description>A Cosmic Psionist opened a rift to a world so utopian it calms the minds of people who see it, however briefly that rift stays open.</description>
-        <isBad>false</isBad>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
             <li>
                 <statOffsets>

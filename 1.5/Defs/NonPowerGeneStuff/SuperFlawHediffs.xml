@@ -1,34 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef>
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Flaw_Bloodthirsty</defName>
         <label>bloodthirsty</label>
         <description>This pawn constantly needs to kill things, and will gain some hemogen for the effort.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
-        <stages>
-			<li>
-				<becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_HemogenOnKill" />
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Flaw_SuperMoodyAura</defName>
         <label>super moody aura</label>
         <description>This pawn constantly releases a depressing aura.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
-        <stages>
-			<li>
-				<becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>50</range>
@@ -44,18 +28,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Flaw_SuperMoodyAura_Debuff</defName>
         <label>super moody aura debuff</label>
         <description>Be sad.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
-        <stages>
-			<li>
-				<becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
         <comps>
             <li Class="HediffCompProperties_Disappears">
                 <showRemainingTime>false</showRemainingTime>
@@ -64,18 +40,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Flaw_OverchargedPocket</defName>
         <label>overcharged pocket</label>
         <description>Try not to die or you'll probably end up killing everyone around you.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
-        <stages>
-			<li>
-				<becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_ExplodeOnDeath">
                 <radius>25</radius>
@@ -86,11 +54,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+    <HediffDef ParentName="SHG_SpecialHediffBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
         <defName>SHG_Flaw_Moonbound</defName>
         <label>moonbound</label>
         <description>If standing in an area with over 40% brightness, this psionist will lose all psychic sensitivity.</description>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
 			<li>
 				<becomeVisible>false</becomeVisible>
@@ -127,11 +94,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+    <HediffDef ParentName="SHG_SpecialHediffBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
         <defName>SHG_Flaw_Sunbound</defName>
         <label>sunbound</label>
         <description>If standing in an area with under 60% brightness, this psionist will lose all psychic sensitivity.</description>
-        <hediffClass>HediffWithComps</hediffClass>
         <stages>
 			<li>
 				<becomeVisible>false</becomeVisible>

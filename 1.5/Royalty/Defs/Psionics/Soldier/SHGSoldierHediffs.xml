@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_Stasis</defName>
 		<label>stasis</label>
 		<description>This pawn was put into stasis by a Psionic Soldier. Any wounds they have will slowly heal.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
         <stages>
             <li>
                 <statOffsets>
@@ -34,14 +30,10 @@
 		</comps>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_New_PsionicFlight</defName>
 		<label>psionic flight</label>
 		<description>This Psionic Soldier is always floating just a little bit off the ground, and their ability to move omnidirectionally makes it easier for them to move around quickly. The more psychic sensitivity they have, the faster they can propel themselves.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
         <stages>
             <li>
                 <statFactors>
@@ -61,8 +53,8 @@
         <defName>SHG_Psionist_PsionicInfusement</defName>
         <label>psionic infusement</label>
         <description>This Commando infuses their melee attacks with psionic energy to make them stronger. The multiplier listed here is the base amount, and are multiplied by psychic sensitivity.</description>
-        <hediffClass>HediffWithComps</hediffClass>
         <isBad>false</isBad>
+        <everCurableByItem>False</everCurableByItem>
         <stages>
 			<li>
                 <statFactors>
@@ -73,12 +65,10 @@
         </stages>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_Entrench</defName>
         <label>entrench</label>
         <description>This Commando infused their body with dense psionic energy that stops their movement, but stabilizes their body and provides some protection. The offsets listed here is the base amount, and is multiplied by psychic sensitivity.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
 			<li>
                 <statFactors>
@@ -105,6 +95,8 @@
         <defName>SHG_Psionist_SoldierImmortal</defName>
         <label>nigh-immortal</label>
         <description>Due to the psychic energy infused in this pawn's blood, they lose blood at 1% of the normal rate. For those use Bleeding Genes, this is not quite as good as Extreme Blood Clotting, but is still an extremely slow bleeding rate.</description>
+        <isBad>false</isBad>
+        <everCurableByItem>False</everCurableByItem>
 		<stages>
 			<li>
                 <totalBleedFactor>0.01</totalBleedFactor>
@@ -117,6 +109,8 @@
         <defName>SHG_Psionist_PsionicArmor</defName>
         <label>psionic armor</label>
         <description>This Immortal is being protected by a psychic armor. The values listed are the base values, and are multiplied by psychic sensitivity.</description>
+        <isBad>false</isBad>
+        <everCurableByItem>False</everCurableByItem>
 		<stages>
 			<li>
                 <statOffsets>
@@ -131,11 +125,10 @@
         </stages>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_PsionicRegeneration</defName>
         <label>psionic regeneration</label>
         <description>This Immortal is constanly healing themselves with psionic energy. The immunity gain listed is the base value, and is multiplied by psychic sensitivity.</description>
-		<hediffClass>HediffWithComps</hediffClass>
         <stages>
 			<li>
                 <statFactors>

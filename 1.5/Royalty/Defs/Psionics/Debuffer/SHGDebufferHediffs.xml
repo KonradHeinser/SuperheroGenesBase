@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef Abstract="true" Name="SHG_DebufferBase">
-        <hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
-        <stages>
-			<li>
-				<becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
-    </HediffDef>
-
-    <HediffDef Abstract="true" Name="SHG_DebufferDebuffBase">
-        <hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
+    <HediffDef Abstract="true" Name="SHG_DebufferDebuffBase" ParentName="SHG_SpecialHediffBase">
         <comps>
             <li Class="HediffCompProperties_Disappears">
                 <showRemainingTime>false</showRemainingTime>
@@ -23,13 +9,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_Debuffer_Base</defName>
 		<label>psionic debuffer</label>
 		<description>This pawn is releasing a field of psychic energy around them that provides constant buffs to all allies around themselves. The other hediffs will not be visible to avoid flooding this page, but they should still impact the debuffer's nearby allies regardless.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsToNonAlliesInRange">
                 <range>15</range>
@@ -51,7 +34,7 @@
 		<description>This pawn is receiving various penalties from a nearby debuffer. To avoid flooding this page with all of the debuffs, the other ones have been hidden. If you can see this, then the pawn is gaining all banes that the debuffer inflicts.</description>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_DebufferBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_TunnelVisionAura</defName>
 		<label>tunnel vision aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that makes nearby enemies less accurate and evasive.</description>
@@ -87,7 +70,7 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_DebufferBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_PsychicAura_Dull</defName>
 		<label>psychic aura (dull)</label>
 		<description>This pawn is releasing a field of psychic energy around them that makes nearby enemies become less impacted by psychic effects, both positive and negative.</description>
@@ -125,7 +108,7 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_DebufferBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_PsychicAura_Sensitive</defName>
 		<label>psychic aura (sensitive)</label>
 		<description>This pawn is releasing a field of psychic energy around them that makes nearby enemies more sensitive to psychic effects.</description>
@@ -163,7 +146,7 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_DebufferBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_MolassesAura</defName>
 		<label>molasses aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that makes nearby enemies slower and less evasive.</description>
@@ -198,12 +181,10 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_AuraBurst</defName>
         <label>aura burst</label>
         <description>This Debuffer is increasing their aura's range to 22.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
 			<li>
                 <statFactors>
@@ -219,7 +200,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef ParentName="SHG_DebufferBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_GlassAura</defName>
 		<label>glass aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that makes nearby enemies have lower innate armor and healing rate.</description>
@@ -256,7 +237,7 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_DebufferBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_WoundErodingAura</defName>
 		<label>wound eroding aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that makes the wounds of nearby enemies constantly worsen. Pawns with multiple wounds will usually only have slowed healing rather than reverse healing.</description>
@@ -295,7 +276,7 @@
         </comps>
 	</HediffDef>
     
-    <HediffDef ParentName="SHG_DebufferBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_EnergyBurnerAura</defName>
 		<label>energy burning aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that makes nearby enemies constantly lose nutrition and have lower melee damage.</description>
@@ -330,12 +311,10 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_ChannelAura</defName>
         <label>channel aura</label>
         <description>This Debilitator is increasing their aura's range to 37.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
 			<li>
                 <statFactors>
@@ -351,7 +330,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef ParentName="SHG_DebufferBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_NauseousAura</defName>
 		<label>nauseous aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that makes nearby enemies vomit frequently.</description>
@@ -383,7 +362,7 @@
         </stages>
 	</HediffDef>
         
-    <HediffDef ParentName="SHG_DebufferBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_SiphonAura</defName>
 		<label>siphon aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that makes nearby non-player pawns take more damage, heal slower, and gain immunity slower, while also granting the carrier regeneration, immunity gain, and damage reduction based on the number of nearby non-player pawns. Unlike most auras, this is constantly active and is not affected by aura increases.</description>
@@ -603,12 +582,10 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_RuinTheWorld</defName>
         <label>ruin the world</label>
         <description>This Ruiner is increasing their aura's range to 75.</description>
-        <hediffClass>HediffWithComps</hediffClass>
-        <isBad>false</isBad>
         <stages>
 			<li>
                 <statFactors>

@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <HediffDef Abstract="true" Name="SHG_GuardianBase">
-        <hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
-        <stages>
-			<li>
-				<becomeVisible>false</becomeVisible>
-            </li>
-        </stages>
-    </HediffDef>
-
-    <HediffDef Abstract="true" Name="SHG_GuardianBuffBase">
-        <hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
+    <HediffDef Abstract="true" Name="SHG_GuardianBuffBase" ParentName="SHG_SpecialHediffBase">
         <comps>
             <li Class="HediffCompProperties_Disappears">
                 <showRemainingTime>false</showRemainingTime>
@@ -23,13 +9,10 @@
         </comps>
     </HediffDef>
 
-    <HediffDef>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_Guardian_Base</defName>
 		<label>psionic guardian</label>
 		<description>This pawn is releasing a field of psychic energy around them that provides constant buffs to all allies around themselves. The other hediffs will not be visible to avoid flooding this page, but they should still impact the guardian's nearby allies regardless.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<scenarioCanAdd>false</scenarioCanAdd>
-		<isBad>false</isBad>
         <comps>
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
@@ -51,7 +34,7 @@
 		<description>This pawn is receiving various boons from a nearby guardian. To avoid flooding this page with all of the bonuses, the other ones have been hidden. If you can see this, then the pawn is gaining all bonuses that the guardian provides.</description>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_GuardianBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_Nimble</defName>
 		<label>nimble aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that makes nearby allies more nimble.</description>
@@ -87,7 +70,7 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_GuardianBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_Destructive</defName>
 		<label>destructive aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that makes nearby allies more precise when manually destroying something.</description>
@@ -123,7 +106,7 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_GuardianBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_Precision</defName>
 		<label>nimble aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that makes nearby allies more nimble.</description>
@@ -162,7 +145,7 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_GuardianBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_Industrious</defName>
 		<label>industrious aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that makes nearby allies more industrious.</description>
@@ -195,7 +178,7 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_GuardianBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_TemperatureResistance</defName>
 		<label>temperature resistance aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that protects nearby allies from extreme temperatures.</description>
@@ -233,7 +216,7 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_GuardianBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_ToxicResistance</defName>
 		<label>toxic resistance aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that protects nearby allies from toxic buildup.</description>
@@ -266,7 +249,7 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_GuardianBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_Solace</defName>
 		<label>solace aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that calms nearby allies, and makes them a little more social.</description>
@@ -302,7 +285,7 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_GuardianBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_Enlightenment</defName>
 		<label>enlightenment aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that enlightens nearby allies.</description>
@@ -337,7 +320,7 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_GuardianBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_Armor</defName>
 		<label>armor aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that protects nearby allies from sharp and blunt attacks.</description>
@@ -371,7 +354,7 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_GuardianBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_PsionicEfficiency</defName>
 		<label>psionic efficiency aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that makes psychic abilities generate less entropy.</description>
@@ -404,7 +387,7 @@
         </stages>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_GuardianBase">
+    <HediffDef ParentName="SHG_HiddenHediffBase">
         <defName>SHG_Psionist_Life</defName>
 		<label>life aura</label>
 		<description>This pawn is releasing a field of psychic energy around them that heals allies and helps with immunity development.</description>
