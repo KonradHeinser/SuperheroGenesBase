@@ -58,7 +58,7 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_Flaw_Bloodthirsty</defName>
         <label>bloodthirsty</label>
-        <description>Hemomancer's with this gene burn through hemogen at an unsustainable rate, and their mind recognizes this fact, causing them to constantly seek to kill other beings to convert their blood into hemogen.</description>
+        <description>Hemomancer's with this gene burn through hemogen at an unsustainable rate, causing they constantly seek to kill other beings to convert their blood into hemogen.</description>
         <prerequisite>SHG_Archetypes_Hemomancer</prerequisite>
         <geneClass>SuperHeroGenesBase.Gene_HemoHediffAdder</geneClass>
         <displayOrderInCategory>200</displayOrderInCategory>
@@ -143,7 +143,7 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_Flaw_OverchargedPocket</defName>
         <label>overcharged pocket</label>
-        <description>Radiomancers with this gene have a pocket of energy in them that they are unable to finely control. While alive they can stablize it, but when they die it will quickly become unstable and cause a massive explosion.</description>
+        <description>Radiomancers with this gene have a pocket of energy in them that they constantly stabilize, but when they die it will cause a massive explosion.</description>
         <iconPath>Flaws/Gene_OverchargedPocket</iconPath>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <prerequisite>SHG_Archetypes_Radiomancer</prerequisite>
@@ -162,7 +162,7 @@
     <GeneDef ParentName="SHG_FlawBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
         <defName>SHG_Flaw_Moonbound</defName>
         <label>moonbound</label>
-        <description>This psionist only has psychic sensitivity when standing in an area with 40% light or lower.</description>
+        <description>Psionists with this gene only have psychic sensitivity when standing in an area with 40% light or lower.</description>
         <prerequisite>SHG_Archetypes_Psionist</prerequisite>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <displayOrderInCategory>100</displayOrderInCategory>
@@ -181,7 +181,7 @@
     <GeneDef ParentName="SHG_FlawBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
         <defName>SHG_Flaw_Sunbound</defName>
         <label>sunbound</label>
-        <description>This psionist only has psychic sensitivity when standing in an area with 60% light or higher.</description>
+        <description>Psionists with this gene only have psychic sensitivity when standing in an area with 60% light or higher.</description>
         <prerequisite>SHG_Archetypes_Psionist</prerequisite>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <displayOrderInCategory>101</displayOrderInCategory>
@@ -222,7 +222,7 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_Flaw_SuperRecluse</defName>
         <label>super recluse</label>
-        <description>Supers with this gene hate being around groups of people to an unbelievable extent. There's been plenty of theories about why they feel this way, from overactive senses to innate competitiveness, but no proof for any of them.</description>
+        <description>Supers with this gene hate being around groups of people to an unbelievable extent.</description>
         <iconPath>Flaws/Gene_SuperRecluse</iconPath>
         <displayOrderInCategory>10</displayOrderInCategory>
         <biostatMet>3</biostatMet>
@@ -292,7 +292,7 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_Flaw_TheLonelyKnight</defName>
         <label>the lonely knight</label>
-        <description>Supers with this gene innately believe they can do just about anything alone or with just a single companion. More people quickly become burdens, nuisances, or just needless attachments that distract from the fight.</description>
+        <description>Supers with this gene innately believe they can do just about anything alone or with just a single companion.</description>
         <iconPath>Flaws/Gene_TheLonelyKnight</iconPath>
         <displayOrderInCategory>11</displayOrderInCategory>
         <biostatMet>5</biostatMet>
@@ -356,7 +356,7 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_NoNaturalHealing</defName>
         <label>no natural healing</label>
-        <description>Supers with this gene are completely incapable of healing naturally. Abilities that provide direct healing or regeneration, even when cast by the carrier, will still function, and compatible genes that provide advanced regeneration will also still take effect.</description>
+        <description>Supers with this gene are completely incapable of healing naturally, though effects that directly heal or regerate will still work.</description>
         <iconPath>Flaws/Gene_NoNaturalHealing</iconPath>
         <statFactors>
             <InjuryHealingFactor>0</InjuryHealingFactor>
@@ -384,7 +384,7 @@
     <GeneDef ParentName="SHG_FlawBase">
         <defName>SHG_SameTrickPony</defName>
         <label>same trick pony</label>
-        <description>Supers with this gene are completely incapable of learning new skills. They may sometimes still gain bonuses from anything that directly increases their skill level like a gene, implant, item, or ability, but practice will never make them perfect.</description>
+        <description>Supers with this gene are unable to learn new skills without using something that directly increases their skill level like a gene, implant, item, or ability.</description>
         <iconPath>Flaws/Gene_SameTrickPony</iconPath>
         <statFactors>
             <GlobalLearningFactor>0</GlobalLearningFactor>
