@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <GeneDef ParentName="SHG_PoolsBase">
+    <GeneDef ParentName="SHG_MinorSpecializationBase">
         <defName>SHG_AntiPower_Durability</defName>
         <label>anti-power (Durability)</label>
         <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them.\n\nMultiple anti-super abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.</description>
@@ -21,7 +21,7 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SHG_PoolsBase">
+    <GeneDef ParentName="SHG_MinorSpecializationBase">
         <defName>SHG_AntiPower_Healing</defName>
         <label>anti-power (Healing)</label>
         <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them.\n\nMultiple anti-super abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.</description>
@@ -42,7 +42,7 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SHG_PoolsBase">
+    <GeneDef ParentName="SHG_MinorSpecializationBase">
         <defName>SHG_AntiPower_Intelligence</defName>
         <label>anti-power (Intelligence)</label>
         <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them.\n\nMultiple anti-super abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.</description>
@@ -63,7 +63,7 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SHG_PoolsBase">
+    <GeneDef ParentName="SHG_MinorSpecializationBase">
         <defName>SHG_AntiPower_Perception</defName>
         <label>anti-power (Perception)</label>
         <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them.\n\nMultiple anti-super abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.</description>
@@ -84,7 +84,7 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SHG_PoolsBase">
+    <GeneDef ParentName="SHG_MinorSpecializationBase">
         <defName>SHG_AntiPower_Persuasion</defName>
         <label>anti-power (Persuasion)</label>
         <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them.\n\nMultiple anti-super abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.</description>
@@ -105,7 +105,7 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SHG_PoolsBase">
+    <GeneDef ParentName="SHG_MinorSpecializationBase">
         <defName>SHG_AntiPower_Precision</defName>
         <label>anti-power (Precision)</label>
         <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them.\n\nMultiple anti-super abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.</description>
@@ -126,7 +126,7 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SHG_PoolsBase">
+    <GeneDef ParentName="SHG_MinorSpecializationBase">
         <defName>SHG_AntiPower_Speed</defName>
         <label>anti-power (Speed)</label>
         <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them.\n\nMultiple anti-super abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.</description>
@@ -147,7 +147,7 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SHG_PoolsBase">
+    <GeneDef ParentName="SHG_MinorSpecializationBase">
         <defName>SHG_AntiPower_Strength</defName>
         <label>anti-power (Strength)</label>
         <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them.\n\nMultiple anti-super abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.</description>

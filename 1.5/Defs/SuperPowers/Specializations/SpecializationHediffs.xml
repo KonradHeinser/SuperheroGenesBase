@@ -101,8 +101,8 @@
                     <ArmorRating_Blunt>-1.1</ArmorRating_Blunt>
                     <ArmorRating_Sharp>-1.1</ArmorRating_Sharp>
                     <ArmorRating_Heat>-1.1</ArmorRating_Heat>
-                    <ComfyTemperatureMin>20</ComfyTemperatureMin>
-                    <ComfyTemperatureMax>-20</ComfyTemperatureMax>
+                    <ComfyTemperatureMin>10</ComfyTemperatureMin>
+                    <ComfyTemperatureMax>-10</ComfyTemperatureMax>
                 </statOffsets>
             </li>
             <li>
@@ -153,7 +153,7 @@
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
-		        <label>healing pool mostly recovered</label>
+		        <label>healing mostly recovered</label>
                 <statFactors>
                     <ImmunityGainSpeed>0.8</ImmunityGainSpeed>
                     <InjuryHealingFactor>0.8</InjuryHealingFactor>
@@ -175,7 +175,7 @@
             </li>
             <li>
                 <minSeverity>0.3</minSeverity>
-		        <label>healing pool recovering</label>
+		        <label>healing recovering</label>
                 <statFactors>
                     <ImmunityGainSpeed>0.6</ImmunityGainSpeed>
                     <InjuryHealingFactor>0.6</InjuryHealingFactor>
@@ -197,7 +197,7 @@
             </li>
             <li>
                 <minSeverity>0.5</minSeverity>
-		        <label>healing pool half-recovered</label>
+		        <label>healing half-recovered</label>
                 <statFactors>
                     <ImmunityGainSpeed>0.5</ImmunityGainSpeed>
                     <InjuryHealingFactor>0.5</InjuryHealingFactor>
@@ -219,7 +219,7 @@
             </li>
             <li>
                 <minSeverity>0.65</minSeverity>
-		        <label>healing pool recovering</label>
+		        <label>healing recovering</label>
                 <statFactors>
                     <ImmunityGainSpeed>0.3</ImmunityGainSpeed>
                     <InjuryHealingFactor>0.3</InjuryHealingFactor>
@@ -242,7 +242,7 @@
             </li>
             <li>
                 <minSeverity>0.73</minSeverity>
-		        <label>healing pool recovering</label>
+		        <label>healing recovering</label>
                 <statFactors>
                     <ImmunityGainSpeed>0.25</ImmunityGainSpeed>
                     <InjuryHealingFactor>0.25</InjuryHealingFactor>
@@ -265,7 +265,7 @@
             </li>
             <li>
                 <minSeverity>0.8</minSeverity>
-		        <label>healing pool recovering</label>
+		        <label>healing recovering</label>
                 <statFactors>
                     <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
                     <InjuryHealingFactor>0.2</InjuryHealingFactor>
@@ -313,9 +313,9 @@
                 <minSeverity>0.975</minSeverity>
 		        <label>drained</label>
                 <statFactors>
-                    <ImmunityGainSpeed>0.333</ImmunityGainSpeed>
-                    <InjuryHealingFactor>0.333</InjuryHealingFactor>
-                    <LifespanFactor>0.111</LifespanFactor>
+                    <ImmunityGainSpeed>0.067</ImmunityGainSpeed>
+                    <InjuryHealingFactor>0.05</InjuryHealingFactor>
+                    <LifespanFactor>0.167</LifespanFactor>
                 </statFactors>
                 <statOffsets>
                     <ImmunityGainSpeed>-10</ImmunityGainSpeed>
@@ -368,12 +368,12 @@
     <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Portent</defName>
 		<label>portent</label>
-		<description>This super is focusing their senses to such an extent that they can deflect most attacks. As the ability wears off, the effects will gradually become weaker. Once this ability has worn off, their perception pool will be drained for around 10 days, reducing the benefits the pawn would receive from both the base Superhero gene and Super Perception(or what the ability provided by Super Perception would give while active, if you're using activatables).</description>
+		<description>This super is focusing their senses to such an extent that they can deflect most attacks. As the ability wears off, the effects will gradually become weaker. Once this ability has worn off, their perception will be drained for around 10 days, reducing the benefits the pawn would receive from both the base Superhero gene and Super Perception(or what the ability provided by Super Perception would give while active, if you're using activatables).</description>
 		<initialSeverity>1.0</initialSeverity>
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
-		        <label>perception pool mostly recovered</label>
+		        <label>perception mostly recovered</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.9</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.9</MeleeDodgeChance>
@@ -392,7 +392,7 @@
             </li>
             <li>
                 <minSeverity>0.3</minSeverity>
-		        <label>perception pool recovering</label>
+		        <label>perception recovering</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.75</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.75</MeleeDodgeChance>
@@ -411,7 +411,7 @@
             </li>
             <li>
                 <minSeverity>0.5</minSeverity>
-		        <label>perception pool half-recovered</label>
+		        <label>perception half-recovered</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.5</MeleeDodgeChance>
@@ -430,7 +430,7 @@
             </li>
             <li>
                 <minSeverity>0.65</minSeverity>
-		        <label>perception pool recovering</label>
+		        <label>perception recovering</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.45</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.45</MeleeDodgeChance>
@@ -449,7 +449,7 @@
             </li>
             <li>
                 <minSeverity>0.73</minSeverity>
-		        <label>perception pool recovering</label>
+		        <label>perception recovering</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.4</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.4</MeleeDodgeChance>
@@ -468,7 +468,7 @@
             </li>
             <li>
                 <minSeverity>0.8</minSeverity>
-		        <label>perception pool recovering</label>
+		        <label>perception recovering</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.35</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.35</MeleeDodgeChance>
@@ -537,56 +537,48 @@
                     <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
                     <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
                 </statOffsets>
+                <statFactors>
+                    <ShootingAccuracyPawn>1.50</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.50</MeleeHitChance>
+                </statFactors>
             </li>
             <li>
                 <minSeverity>0.985</minSeverity>
 		        <label>concentration wavering</label>
                 <statFactors>
                     <IncomingDamageFactor>0.95</IncomingDamageFactor>
+                    <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+                    <MeleeHitChance>2</MeleeHitChance>
                 </statFactors>
                 <statOffsets>
                     <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
                     <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
                 </statOffsets>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <postFactor>0.85</postFactor>
-                    </li>
-                </capMods>
             </li>
             <li>
                 <minSeverity>0.99</minSeverity>
 		        <label>concentration wavering</label>
                 <statFactors>
                     <IncomingDamageFactor>0.85</IncomingDamageFactor>
+                    <ShootingAccuracyPawn>2.5</ShootingAccuracyPawn>
+                    <MeleeHitChance>2.5</MeleeHitChance>
                 </statFactors>
                 <statOffsets>
                     <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
                     <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
                 </statOffsets>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <postFactor>0.75</postFactor>
-                    </li>
-                </capMods>
             </li>
             <li>
                 <minSeverity>0.995</minSeverity>
                 <statFactors>
                     <IncomingDamageFactor>0.75</IncomingDamageFactor>
+                    <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+                    <MeleeHitChance>3</MeleeHitChance>
                 </statFactors>
                 <statOffsets>
                     <ArmorRating_Blunt>1</ArmorRating_Blunt>
                     <ArmorRating_Sharp>1</ArmorRating_Sharp>
                 </statOffsets>
-                <capMods>
-                    <li>
-                        <capacity>Consciousness</capacity>
-                        <postFactor>0.5</postFactor>
-                    </li>
-                </capMods>
             </li>
         </stages>
         <comps>
@@ -625,12 +617,12 @@
     <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Beguile</defName>
 		<label>beguile</label>
-		<description>This super has drained their persuasion pool for around 10 days, reducing the benefits the pawn would receive from both the base Superhero gene and Super Persuasion(or what the ability provided by Super Persuasion would give while active, if you're using activatables).</description>
+		<description>This super has drained their persuasion for around 10 days, reducing the benefits the pawn would receive from both the base Superhero gene and Super Persuasion(or what the ability provided by Super Persuasion would give while active, if you're using activatables).</description>
 		<initialSeverity>1.0</initialSeverity>
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
-		        <label>persuasion pool mostly recovered</label>
+		        <label>persuasion mostly recovered</label>
                 <statFactors>
                     <PawnBeauty>0.8</PawnBeauty>
                     <SocialImpact>0.9</SocialImpact>
@@ -650,7 +642,7 @@
             </li>
             <li>
                 <minSeverity>0.3</minSeverity>
-		        <label>persuasion pool recovering</label>
+		        <label>persuasion recovering</label>
                 <statFactors>
                     <PawnBeauty>0.7</PawnBeauty>
                     <SocialImpact>0.8</SocialImpact>
@@ -670,7 +662,7 @@
             </li>
             <li>
                 <minSeverity>0.5</minSeverity>
-		        <label>persuasion pool half-recovered</label>
+		        <label>persuasion half-recovered</label>
                 <statFactors>
                     <PawnBeauty>0.6</PawnBeauty>
                     <SocialImpact>0.7</SocialImpact>
@@ -690,7 +682,7 @@
             </li>
             <li>
                 <minSeverity>0.65</minSeverity>
-		        <label>persuasion pool recovering</label>
+		        <label>persuasion recovering</label>
                 <statFactors>
                     <PawnBeauty>0.5</PawnBeauty>
                     <SocialImpact>0.6</SocialImpact>
@@ -710,7 +702,7 @@
             </li>
             <li>
                 <minSeverity>0.73</minSeverity>
-		        <label>persuasion pool recovering</label>
+		        <label>persuasion recovering</label>
                 <statFactors>
                     <PawnBeauty>0.4</PawnBeauty>
                     <SocialImpact>0.5</SocialImpact>
@@ -730,7 +722,7 @@
             </li>
             <li>
                 <minSeverity>0.8</minSeverity>
-		        <label>persuasion pool recovering</label>
+		        <label>persuasion recovering</label>
                 <statFactors>
                     <PawnBeauty>0.3</PawnBeauty>
                     <SocialImpact>0.4</SocialImpact>
@@ -778,7 +770,7 @@
                     <ConversionPower MayRequire="ludeon.rimworld.ideology">0.333</ConversionPower>
                 </statFactors>
                 <statOffsets>
-                    <PawnBeauty>-5</PawnBeauty>
+                    <PawnBeauty>-3</PawnBeauty>
                     <SocialImpact>-0.5</SocialImpact>
                     <NegotiationAbility>-0.5</NegotiationAbility>
                     <ConversionPower MayRequire="ludeon.rimworld.ideology">-0.5</ConversionPower>
@@ -811,7 +803,7 @@
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
-		        <label>precision pool mostly recovered</label>
+		        <label>precision mostly recovered</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.9</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.9</MeleeDodgeChance>
@@ -831,7 +823,7 @@
             </li>
             <li>
                 <minSeverity>0.3</minSeverity>
-		        <label>precision pool recovering</label>
+		        <label>precision recovering</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.7</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.7</MeleeDodgeChance>
@@ -851,7 +843,7 @@
             </li>
             <li>
                 <minSeverity>0.5</minSeverity>
-		        <label>precision pool half-recovered</label>
+		        <label>precision half-recovered</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.5</MeleeDodgeChance>
@@ -872,7 +864,7 @@
             </li>
             <li>
                 <minSeverity>0.65</minSeverity>
-		        <label>precision pool recovering</label>
+		        <label>precision recovering</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.4</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.4</MeleeDodgeChance>
@@ -893,7 +885,7 @@
             </li>
             <li>
                 <minSeverity>0.73</minSeverity>
-		        <label>precision pool recovering</label>
+		        <label>precision recovering</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.35</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.35</MeleeDodgeChance>
@@ -914,7 +906,7 @@
             </li>
             <li>
                 <minSeverity>0.8</minSeverity>
-		        <label>precision pool recovering</label>
+		        <label>precision recovering</label>
                 <statFactors>
                     <ShootingAccuracyPawn>0.3</ShootingAccuracyPawn>
                     <MeleeDodgeChance>0.3</MeleeDodgeChance>
@@ -1082,7 +1074,6 @@
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-0.1</severityPerDay>
             </li>
-            
         </comps>
     </HediffDef>
 
@@ -1094,7 +1085,7 @@
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
-		        <label>strength pool mostly recovered</label>
+		        <label>strength mostly recovered</label>
                 <statFactors>
                     <CarryingCapacity>0.9</CarryingCapacity>
                     <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.9</VEF_MassCarryCapacity>
@@ -1109,7 +1100,7 @@
             </li>
             <li>
                 <minSeverity>0.3</minSeverity>
-		        <label>strength pool recovering</label>
+		        <label>strength recovering</label>
                 <statFactors>
                     <CarryingCapacity>0.7</CarryingCapacity>
                     <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.7</VEF_MassCarryCapacity>
@@ -1124,7 +1115,7 @@
             </li>
             <li>
                 <minSeverity>0.5</minSeverity>
-		        <label>strength pool half-recovered</label>
+		        <label>strength half-recovered</label>
                 <statFactors>
                     <CarryingCapacity>0.5</CarryingCapacity>
                     <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.5</VEF_MassCarryCapacity>
@@ -1139,7 +1130,7 @@
             </li>
             <li>
                 <minSeverity>0.65</minSeverity>
-		        <label>strength pool recovering</label>
+		        <label>strength recovering</label>
                 <statFactors>
                     <CarryingCapacity>0.3</CarryingCapacity>
                     <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.3</VEF_MassCarryCapacity>
@@ -1154,7 +1145,7 @@
             </li>
             <li>
                 <minSeverity>0.73</minSeverity>
-		        <label>strength pool recovering</label>
+		        <label>strength recovering</label>
                 <statFactors>
                     <CarryingCapacity>0.2</CarryingCapacity>
                     <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.2</VEF_MassCarryCapacity>
@@ -1169,7 +1160,7 @@
             </li>
             <li>
                 <minSeverity>0.8</minSeverity>
-		        <label>strength pool recovering</label>
+		        <label>strength recovering</label>
                 <statFactors>
                     <CarryingCapacity>0.1</CarryingCapacity>
                     <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.1</VEF_MassCarryCapacity>
@@ -1186,9 +1177,9 @@
                 <minSeverity>0.9</minSeverity>
 		        <label>base recovered</label>
                 <statFactors>
-                    <CarryingCapacity>0.01</CarryingCapacity>
-                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.01</VEF_MassCarryCapacity>
-                    <MeleeDamageFactor>0.05</MeleeDamageFactor>
+                    <CarryingCapacity>0.05</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.05</VEF_MassCarryCapacity>
+                    <MeleeDamageFactor>0.14</MeleeDamageFactor>
                 </statFactors>
                 <capMods>
                     <li>
@@ -1201,13 +1192,13 @@
                 <minSeverity>0.975</minSeverity>
 		        <label>drained</label>
                 <statFactors>
-                    <MeleeDamageFactor>0.017</MeleeDamageFactor>
-                    <CarryingCapacity>0.01</CarryingCapacity>
-                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.01</VEF_MassCarryCapacity>
+                    <MeleeDamageFactor>0.095</MeleeDamageFactor>
+                    <CarryingCapacity>0.05</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.05</VEF_MassCarryCapacity>
                 </statFactors>
                 <statOffsets>
-                    <CarryingCapacity>-100</CarryingCapacity>
-                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">-100</VEF_MassCarryCapacity>
+                    <CarryingCapacity>-25</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">-25</VEF_MassCarryCapacity>
                     <MentalBreakThreshold>.15</MentalBreakThreshold>
                 </statOffsets>
                 <capMods>

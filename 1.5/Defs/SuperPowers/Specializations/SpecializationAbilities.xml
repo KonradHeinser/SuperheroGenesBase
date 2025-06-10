@@ -14,8 +14,7 @@
             </li>
         </comps>
     </AbilityDef>
-
-
+    
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_BeelzebubAbsorb</defName>
         <label>beelzebub</label>

@@ -10,7 +10,7 @@
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
-                <label>pool refilling</label>
+                <label>recovering</label>
                 <statFactors>
                     <IncomingDamageFactor>1.333</IncomingDamageFactor>
                 </statFactors>
@@ -19,8 +19,8 @@
                     <ArmorRating_Blunt>-0.1</ArmorRating_Blunt>
                     <ArmorRating_Sharp>-0.1</ArmorRating_Sharp>
                     <ArmorRating_Heat>-0.1</ArmorRating_Heat>
-                    <ComfyTemperatureMin>20</ComfyTemperatureMin>
-                    <ComfyTemperatureMax>-20</ComfyTemperatureMax>
+                    <ComfyTemperatureMin>10</ComfyTemperatureMin>
+                    <ComfyTemperatureMax>-10</ComfyTemperatureMax>
                 </statOffsets>
             </li>
             <li>
@@ -49,11 +49,11 @@
 		<initialSeverity>1.0</initialSeverity>
         <stages>
             <li>
-                <label>pool refilling</label>
+                <label>recovering</label>
                 <statFactors>
-                    <ResearchSpeed>0.5</ResearchSpeed>
-                    <GlobalLearningFactor>0.5</GlobalLearningFactor>
-                    <LearningRateFactor>0.5</LearningRateFactor>
+                    <ResearchSpeed>0.833</ResearchSpeed>
+                    <GlobalLearningFactor>0.667</GlobalLearningFactor>
+                    <LearningRateFactor>0.667</LearningRateFactor>
                 </statFactors>
             </li>
         </stages>
@@ -76,7 +76,7 @@
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
-		        <label>pool refilling</label>
+		        <label>recovering</label>
                 <statOffsets>
                     <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
                     <MeleeDodgeChance>-1.5</MeleeDodgeChance>
@@ -111,7 +111,7 @@
         <stages>
             <li>
                 <statOffsets>
-                    <PawnBeauty>-5</PawnBeauty>
+                    <PawnBeauty>-3</PawnBeauty>
                     <SocialImpact>-0.5</SocialImpact>
                     <NegotiationAbility>-0.5</NegotiationAbility>
                     <ConversionPower MayRequire="ludeon.rimworld.ideology">-0.5</ConversionPower>
@@ -171,7 +171,7 @@
 
     <HediffDef>
         <defName>SHG_Pools_SniperSquad</defName>
-        <label>calming aura</label>
+        <label>sniper squad</label>
         <description>This super is releasing an aura that increases the accuracy of all allies around the super for a day at the expense of both the super's manipulation and precision abilities.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>true</isBad>
@@ -179,7 +179,7 @@
         <stages>
             <li>
                 <statFactors>
-                    <PawnTrapSpringChance>100</PawnTrapSpringChance>
+                    <PawnTrapSpringChance>10</PawnTrapSpringChance>
                 </statFactors>
                 <statOffsets>
                     <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
@@ -252,14 +252,14 @@
         <stages>
             <li>
                 <minSeverity>0.001</minSeverity>
-		        <label>pool refilling</label>
+		        <label>recovering</label>
                 <statFactors>
-                    <MeleeDamageFactor>0.333</MeleeDamageFactor>
+                    <MeleeDamageFactor>0.667</MeleeDamageFactor>
                 </statFactors>
                 <statOffsets>
-                    <CarryingCapacity>-100</CarryingCapacity>
-                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">-100</VEF_MassCarryCapacity>
-                    <MentalBreakThreshold>.15</MentalBreakThreshold>
+                    <CarryingCapacity>-25</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">-25</VEF_MassCarryCapacity>
+                    <MentalBreakThreshold>0.15</MentalBreakThreshold>
                 </statOffsets>
             </li>
             <li>
@@ -280,7 +280,7 @@
     <HediffDef>
         <defName>SHG_Pools_HealAllies</defName>
         <label>healing</label>
-        <description>This super is providing their regeneration abilities to everyone around them for a day. In addition to sacrificing the superhero base's healing for a time, the body will be unable to repair damage dealt to it.</description>
+        <description>This super is providing their regeneration abilities to everyone around them for a day.</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>False</isBad>
 		<initialSeverity>1.0</initialSeverity>
@@ -288,13 +288,12 @@
             <li>
                 <minSeverity>0.001</minSeverity>
                 <statFactors>
-                    <ImmunityGainSpeed>0.333</ImmunityGainSpeed>
-                    <InjuryHealingFactor>0</InjuryHealingFactor>
-                    <LifespanFactor>0.333</LifespanFactor>
+                    <ImmunityGainSpeed>0.667</ImmunityGainSpeed>
+                    <InjuryHealingFactor>0.5</InjuryHealingFactor>
+                    <LifespanFactor>0.5</LifespanFactor>
                 </statFactors>
                 <statOffsets>
-                    <ToxicEnvironmentResistance>-.1</ToxicEnvironmentResistance>
-                    <ToxicResistance>-.1</ToxicResistance>
+                    <ToxicResistance>-0.1</ToxicResistance>
                 </statOffsets>
             </li>
         </stages>
@@ -353,7 +352,7 @@
     <HediffDef>
         <defName>SHG_Pools_NewWindStep</defName>
 		<label>wind step</label>
-		<description>This super is clumsily floating just a little bit off the ground, allowing them to move over all obstacles without issue with some minor mobility issues.</description>
+		<description>This super is clumsily floating just a little bit off the ground, allowing them to move over all obstacles with some minor mobility issues.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>false</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
@@ -365,7 +364,7 @@
                 </statFactors>
                 <statOffsets>
                     <MoveSpeed>-3</MoveSpeed>
-                    <AimingDelayFactor>.1</AimingDelayFactor>
+                    <AimingDelayFactor>0.1</AimingDelayFactor>
                 </statOffsets>
             </li>
         </stages>

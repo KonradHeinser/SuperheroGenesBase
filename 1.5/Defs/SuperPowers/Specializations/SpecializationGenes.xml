@@ -3,7 +3,7 @@
     <GeneDef ParentName="SHG_SpecializationBase">
         <defName>SHG_Fortress</defName>
         <label>fortress</label>
-        <description>Carriers of this gene are able to fortify themselves further for a while. During this time their movement is reduced greatly and they become immune to most attacks, with the buff and debuff gradually fading over time.</description>
+        <description>Supers with this gene can temporarily sacrifice their super durability to fortify themselves further, reducing their movement greatly and making them immune to most attacks.</description>
         <iconPath>Powers/Specializations/Gene_Fortress</iconPath>
         <prerequisite>SuperDurability</prerequisite>
         <abilities>
@@ -17,7 +17,7 @@
     <GeneDef ParentName="SHG_SpecializationBase">
         <defName>SHG_Beelzebub</defName>
         <label>beelzebub</label>
-        <description>Carriers of this gene can absorb the power from a corpse to gain permanent buffs based on the type and size of the corpse.</description>
+        <description>Supers with this gene can absorb the power from a corpse to gain permanent buffs based on the type and size of the corpse.</description>
         <iconPath>Powers/Specializations/Gene_Beezlebub</iconPath>
         <prerequisite>SuperGluttony</prerequisite>
         <customEffectDescriptions>
@@ -37,7 +37,7 @@
     <GeneDef ParentName="SHG_SpecializationBase">
         <defName>SHG_Regenerator</defName>
         <label>regenerator</label>
-        <description>Carriers of this gene can activate a regeneration effect that enhances their healing even further. This will gradually wear off over the span of two hours.</description>
+        <description>Supers with this gene can temporarily sacrifice their super healing to enhance their regenerative abilities to extreme levels for a couple hours.</description>
         <iconPath>Powers/Specializations/Gene_Regenerator</iconPath>
         <prerequisite>SuperHealing</prerequisite>
         <abilities>
@@ -51,7 +51,7 @@
     <GeneDef ParentName="SHG_SpecializationBase">
         <defName>SHG_HackMech</defName>
         <label>hack mechanoid</label>
-        <description>Carriers of this gene can quickly hack any mechanoid that they can touch, forcing it to turn violent against everything in the area, a feat that makes the pawn fall unconscious for some time.</description>
+        <description>Supers with this gene can quickly hack any mechanoid that they can touch, forcing it to turn violent against everything near it, a feat that makes the pawn fall unconscious for some time.</description>
         <iconPath>Powers/Specializations/Gene_HackMech</iconPath>
         <prerequisite>SuperIntelligence</prerequisite>
         <abilities>
@@ -67,8 +67,8 @@
 
     <GeneDef ParentName="SHG_SpecializationBase">
         <defName>SHG_Portent</defName>
-        <label>seer</label>
-        <description>Carriers of this gene can utilize their enhanced senses to predict what other beings around them will do with extreme accuracy. This allows them to deflect most attacks that come their way for a few hours, though this requires significant concentration on their part.</description>
+        <label>portent</label>
+        <description>Supers with this gene can temporarily sacrifice their super perception to predict what other beings around them will do, allowing them to avoid taking damage and improving their accuracy.</description>
         <iconPath>Powers/Specializations/Gene_Portent</iconPath>
         <prerequisite>SuperPerception</prerequisite>
         <abilities>
@@ -82,7 +82,7 @@
     <GeneDef ParentName="SHG_SpecializationBase">
         <defName>SHG_Beguile</defName>
         <label>beguiler</label>
-        <description>Carriers of this gene can use a burst of persuasiveness to beguile a hostile pawn, causing it to go berserk and attack everything around it.</description>
+        <description>Supers with this gene can temporarily sacrifice their super persuasion to beguile a hostile pawn, causing it to go berserk and attack everything around it.</description>
         <iconPath>Powers/Specializations/Gene_Beguile</iconPath>
         <prerequisite>SuperPersuasion</prerequisite>
         <abilities>
@@ -96,7 +96,7 @@
     <GeneDef ParentName="SHG_SpecializationBase">
         <defName>SHG_Snapshot</defName>
         <label>snapshot</label>
-        <description>Carriers of this gene can call on their subconscious to guide them on their next several shots. These shots have a negligable chance to miss, and the time between shots is greatly shortened.</description>
+        <description>Supers with this gene can temporarily sacrifice their super precision to guide them on their next several shots. These shots have a negligible chance to miss, and the time between shots is greatly shortened.</description>
         <iconPath>Powers/Specializations/Gene_Snapshot</iconPath>
         <prerequisite>SuperPrecision</prerequisite>
         <abilities>
@@ -113,7 +113,7 @@
     <GeneDef ParentName="SHG_SpecializationBase">
         <defName>SHG_Sprinter</defName>
         <label>sprinter</label>
-        <description>Carriers of this gene can push their speed to physics-defying levels for a couple hours. During this time, they will be almost impossible to injure, will be completely unaffected by terrain, and their melee blows will travel so quickly they are nigh-impossible to dodge and deal devastating amounts of damage.</description>
+        <description>Supers with this gene can to push themselves to become nigh unstoppable in melee combat for a couple hours before falling unconscious due to overexertion.</description>
         <iconPath>Powers/Specializations/Gene_Sprinter</iconPath>
         <prerequisite>SuperSpeed</prerequisite>
         <abilities>
@@ -127,7 +127,7 @@
     <GeneDef ParentName="SHG_SpecializationBase">
         <defName>SHG_TitanStrength</defName>
         <label>titan strength</label>
-        <description>Carriers of this gene increase their strength considerably for an hour. During that hour, every melee blow they land will deal massive amounts of damage, most likely destroying anything in their path.</description>
+        <description>Supers with this gene can temporarily sacrifice their super strength to increase the melee damage they deal to extreme levels for an hour.</description>
         <iconPath>Powers/Specializations/Gene_TitanStrength</iconPath>
         <prerequisite>SuperStrength</prerequisite>
         <abilities>

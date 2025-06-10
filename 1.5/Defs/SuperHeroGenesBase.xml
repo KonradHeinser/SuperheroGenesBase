@@ -215,7 +215,7 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef Name="SHG_PoolsBase" Abstract="True">
+    <GeneDef Name="SHG_MinorSpecializationBase" Abstract="True">
         <displayCategory>SuperPowersPools</displayCategory>
         <biostatCpx>1</biostatCpx>
     </GeneDef>
@@ -457,7 +457,7 @@
             <IncomingDamageFactor>0.75</IncomingDamageFactor>
             <InjuryHealingFactor>2</InjuryHealingFactor>
             <MeleeDamageFactor>1.5</MeleeDamageFactor>
-            <PawnTrapSpringChance>0.01</PawnTrapSpringChance>
+            <PawnTrapSpringChance>0.1</PawnTrapSpringChance>
             <StaggerDurationFactor>0.75</StaggerDurationFactor>
             <GlobalLearningFactor>1.5</GlobalLearningFactor>
             <LearningRateFactor>1.5</LearningRateFactor>
@@ -465,8 +465,8 @@
             <WorkSpeedGlobal>1.2</WorkSpeedGlobal>
         </statFactors>
         <statOffsets>
-            <ComfyTemperatureMin>-20</ComfyTemperatureMin>
-            <ComfyTemperatureMax>20</ComfyTemperatureMax>
+            <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+            <ComfyTemperatureMax>10</ComfyTemperatureMax>
             <AimingDelayFactor>-0.1</AimingDelayFactor>
             <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
             <CarryingCapacity>25</CarryingCapacity>
