@@ -113,7 +113,7 @@
     <GeneDef ParentName="SHG_SpecializationBase">
         <defName>SHG_Sprinter</defName>
         <label>sprinter</label>
-        <description>Supers with this gene can to push themselves to become nigh unstoppable in melee combat for a couple hours before falling unconscious due to overexertion.</description>
+        <description>Supers with this gene can to push themselves to become nigh unstoppable in melee combat for several hours before falling unconscious for about 10 days due to overexertion.</description>
         <iconPath>Powers/Specializations/Gene_Sprinter</iconPath>
         <prerequisite>SuperSpeed</prerequisite>
         <abilities>

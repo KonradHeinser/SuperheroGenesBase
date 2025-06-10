@@ -1029,7 +1029,7 @@
                 </capMods>
             </li>
             <li>
-                <minSeverity>0.98</minSeverity>
+                <minSeverity>0.96</minSeverity>
 		        <label>wearing off</label>
                 <statFactors>
                     <MoveSpeed>25</MoveSpeed>
@@ -1039,7 +1039,7 @@
                 </statFactors>
             </li>
             <li>
-                <minSeverity>0.985</minSeverity>
+                <minSeverity>0.97</minSeverity>
 		        <label>slowing</label>
                 <statFactors>
                     <MoveSpeed>50</MoveSpeed>
@@ -1049,7 +1049,7 @@
                 </statFactors>
             </li>
             <li>
-                <minSeverity>0.99</minSeverity>
+                <minSeverity>0.98</minSeverity>
 		        <label>running</label>
                 <statFactors>
                     <MoveSpeed>75</MoveSpeed>
@@ -1059,7 +1059,7 @@
                 </statFactors>
             </li>
             <li>
-                <minSeverity>0.995</minSeverity>
+                <minSeverity>0.99</minSeverity>
 		        <label>sprinting</label>
                 <statFactors>
                     <MoveSpeed>100</MoveSpeed>
