@@ -42,7 +42,7 @@
                 </capMods>
             </li>
             <li>
-                <minSeverity>0.96</minSeverity>
+                <minSeverity>0.8</minSeverity>
 		        <label>aura active</label>
             </li>
         </stages>
@@ -50,7 +50,7 @@
         <comps>
             <li Class="HediffCompProperties_DisappearsOnDeath"/>
             <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-0.1</severityPerDay>
+                <severityPerDay>-0.4</severityPerDay>
             </li>
         </comps>
     </HediffDef>
@@ -637,8 +637,8 @@
             <li>
                 <statFactors>
                     <StaggerDurationFactor>10</StaggerDurationFactor>
-                    <MeleeDodgeChance>.2</MeleeDodgeChance>
-                    <MeleeDamageFactor>.2</MeleeDamageFactor>
+                    <MeleeDodgeChance>0.2</MeleeDodgeChance>
+                    <MeleeDamageFactor>0.2</MeleeDamageFactor>
                 </statFactors>
                 <statOffsets>
                     <AimingDelayFactor>5</AimingDelayFactor>

@@ -3,7 +3,7 @@
     <GeneDef ParentName="SHG_MinorSpecializationBase">
         <defName>SHG_AntiPower_Durability</defName>
         <label>anti-power (Durability)</label>
-        <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them.\n\nMultiple anti-super abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.</description>
+        <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them.\n\nMultiple anti-super abilities can be triggered back to back, which allows them to stack, but will not cause the coma start to be delayed.</description>
         <iconPath>Base/AntisuperDurability</iconPath>
         <prerequisite>AntisuperDurability</prerequisite>
         <biostatMet>-1</biostatMet>
@@ -24,7 +24,7 @@
     <GeneDef ParentName="SHG_MinorSpecializationBase">
         <defName>SHG_AntiPower_Healing</defName>
         <label>anti-power (Healing)</label>
-        <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them.\n\nMultiple anti-super abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.</description>
+        <description>Carriers of this gene can use their weakness as an indiscriminate weapon against everyone around them.\n\nMultiple anti-super abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.</description>
         <iconPath>Base/AntisuperHealing</iconPath>
         <prerequisite>AntisuperHealing</prerequisite>
         <biostatMet>-2</biostatMet>
@@ -132,7 +132,7 @@
         <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them.\n\nMultiple anti-super abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.</description>
         <iconPath>Base/AntisuperSpeed</iconPath>
         <prerequisite>AntisuperSpeed</prerequisite>
-        <biostatMet>-1</biostatMet>
+        <biostatMet>-2</biostatMet>
         <displayOrderInCategory>-1.6</displayOrderInCategory>
         <abilities>
             <li>SHG_AntiPower_Speed_MinorAura</li>
@@ -153,7 +153,7 @@
         <description>Carriers of this gene can use their weakness as an indescriminate weapon against everyone around them.\n\nMultiple anti-super abilities can be triggered back to back, which allows them to stack. However, this will not delay the comatose state, and in fact may make it happen sooner.</description>
         <iconPath>Base/AntisuperStrength</iconPath>
         <prerequisite>AntisuperStrength</prerequisite>
-        <biostatMet>-1</biostatMet>
+        <biostatMet>-3</biostatMet>
         <displayOrderInCategory>-1.7</displayOrderInCategory>
         <abilities>
             <li>SHG_AntiPower_Strength_MinorAura</li>
