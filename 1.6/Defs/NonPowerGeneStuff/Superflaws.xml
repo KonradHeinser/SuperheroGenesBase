@@ -65,7 +65,9 @@
         <iconPath>Flaws/Gene_Bloodthirsty</iconPath>
         <resourceLossPerDay>1.2</resourceLossPerDay>
         <resourceLabel>hemogen</resourceLabel>
-        <causesNeed>SHG_Flaw_Bloodthirsty</causesNeed>
+        <enablesNeeds>
+            <li>SHG_Flaw_Bloodthirsty</li>
+        </enablesNeeds>
         <biostatMet>7</biostatMet>
         <minAgeActive>13</minAgeActive>
         <customEffectDescriptions>

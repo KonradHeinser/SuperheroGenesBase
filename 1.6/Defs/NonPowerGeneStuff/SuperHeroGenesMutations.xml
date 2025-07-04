@@ -158,7 +158,9 @@
         <description>Supers with this gene love a challenge, and often won't even both dodging in a fight just to increase the thrill.</description>
         <iconPath>Mutations/AdrenalineJunkie</iconPath>
         <prerequisite>SuperHeroBase</prerequisite>
-        <causesNeed>KillThirst</causesNeed>
+        <enablesNeeds>
+            <li>KillThirst</li>
+        </enablesNeeds>
         <displayOrderInCategory>8</displayOrderInCategory>
         <painFactor>0</painFactor>
         <statFactors>
