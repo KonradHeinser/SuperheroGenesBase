@@ -84,8 +84,7 @@
 				<statFactors>
                     <MeleeDamageFactor>1.5</MeleeDamageFactor>
                     <CarryingCapacity>1.5</CarryingCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">1.5</CarryBulk>
-                </statFactors>
+                                    </statFactors>
                 <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
             </li>
         </stages>
@@ -100,8 +99,7 @@
 				<statFactors>
                     <MeleeDamageFactor>0.5</MeleeDamageFactor>
                     <CarryingCapacity>0.5</CarryingCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">0.5</CarryBulk>
-                </statFactors>
+                                    </statFactors>
             </li>
         </stages>
     </HediffDef>
@@ -145,5 +143,3 @@
         </comps>
     </HediffDef>
 </Defs>
-
-

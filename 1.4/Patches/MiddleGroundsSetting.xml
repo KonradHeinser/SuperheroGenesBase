@@ -224,8 +224,7 @@
                             <biostatMet>-3</biostatMet>
                             <statFactors>
                                 <CarryingCapacity>50</CarryingCapacity>
-                                <CarryBulk MayRequire="ceteam.combatextended">50</CarryBulk>
-                                <MeleeDamageFactor>4</MeleeDamageFactor>
+                                                                <MeleeDamageFactor>4</MeleeDamageFactor>
                             </statFactors>
                             <capMods>
                                 <li>
@@ -392,8 +391,7 @@
                             <biostatMet>2</biostatMet>
                             <statFactors>
                                 <CarryingCapacity>0.4</CarryingCapacity>
-                                <CarryBulk MayRequire="ceteam.combatextended">0.4</CarryBulk>
-                                <MeleeDamageFactor>0.4</MeleeDamageFactor>
+                                                                <MeleeDamageFactor>0.4</MeleeDamageFactor>
                                 <MeleeArmorPenetration>0.4</MeleeArmorPenetration>
                             </statFactors>
                             <capMods>

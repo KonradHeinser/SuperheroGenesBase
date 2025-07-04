@@ -100,8 +100,7 @@
                     <MeleeDamageFactor>1.2</MeleeDamageFactor>
                     <CarryingCapacity>1.2</CarryingCapacity>
                     <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">1.2</VEF_MassCarryCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">1.2</CarryBulk>
-                </statFactors>
+                                    </statFactors>
                 <multiplyStatChangesBySeverity>True</multiplyStatChangesBySeverity>
             </li>
             <li>
@@ -111,8 +110,7 @@
                     <MeleeDamageFactor>2</MeleeDamageFactor>
                     <CarryingCapacity>2</CarryingCapacity>
                     <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">2</VEF_MassCarryCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">2</CarryBulk>
-                </statFactors>
+                                    </statFactors>
             </li>
         </stages>
         <comps>

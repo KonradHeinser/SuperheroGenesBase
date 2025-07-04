@@ -98,72 +98,63 @@
 				<statFactors>
                     <MeleeDamageFactor>1.1</MeleeDamageFactor>
                     <CarryingCapacity>1.1</CarryingCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">1.1</CarryBulk>
-                </statFactors>
+                                    </statFactors>
             </li>
             <li>
                 <minSeverity>1</minSeverity>
 				<statFactors>
                     <MeleeDamageFactor>1.2</MeleeDamageFactor>
                     <CarryingCapacity>1.2</CarryingCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">1.2</CarryBulk>
-                </statFactors>
+                                    </statFactors>
             </li>
             <li>
                 <minSeverity>1.5</minSeverity>
 				<statFactors>
                     <MeleeDamageFactor>1.3</MeleeDamageFactor>
                     <CarryingCapacity>1.3</CarryingCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">1.3</CarryBulk>
-                </statFactors>
+                                    </statFactors>
             </li>
             <li>
                 <minSeverity>2</minSeverity>
 				<statFactors>
                     <MeleeDamageFactor>1.4</MeleeDamageFactor>
                     <CarryingCapacity>1.4</CarryingCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">1.4</CarryBulk>
-                </statFactors>
+                                    </statFactors>
             </li>
             <li>
                 <minSeverity>2.5</minSeverity>
 				<statFactors>
                     <MeleeDamageFactor>1.5</MeleeDamageFactor>
                     <CarryingCapacity>1.5</CarryingCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">1.5</CarryBulk>
-                </statFactors>
+                                    </statFactors>
             </li>
             <li>
                 <minSeverity>3</minSeverity>
 				<statFactors>
                     <MeleeDamageFactor>1.6</MeleeDamageFactor>
                     <CarryingCapacity>1.6</CarryingCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">1.6</CarryBulk>
-                </statFactors>
+                                    </statFactors>
             </li>
             <li>
                 <minSeverity>3.5</minSeverity>
 				<statFactors>
                     <MeleeDamageFactor>1.7</MeleeDamageFactor>
                     <CarryingCapacity>1.7</CarryingCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">1.7</CarryBulk>
-                </statFactors>
+                                    </statFactors>
             </li>
             <li>
                 <minSeverity>4</minSeverity>
 				<statFactors>
                     <MeleeDamageFactor>1.8</MeleeDamageFactor>
                     <CarryingCapacity>1.8</CarryingCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">1.8</CarryBulk>
-                </statFactors>
+                                    </statFactors>
             </li>
             <li>
                 <minSeverity>4.5</minSeverity>
 				<statFactors>
                     <MeleeDamageFactor>1.9</MeleeDamageFactor>
                     <CarryingCapacity>1.9</CarryingCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">1.9</CarryBulk>
-                </statFactors>
+                                    </statFactors>
             </li>
             <li>
                 <minSeverity>5</minSeverity>
@@ -171,8 +162,7 @@
 				<statFactors>
                     <MeleeDamageFactor>2</MeleeDamageFactor>
                     <CarryingCapacity>2</CarryingCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">2</CarryBulk>
-                </statFactors>
+                                    </statFactors>
             </li>
         </stages>
         <comps>

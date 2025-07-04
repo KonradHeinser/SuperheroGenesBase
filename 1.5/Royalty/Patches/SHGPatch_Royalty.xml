@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/HediffDef[@Name="SHG_Radiomancer_OverchargeTooMuch"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsInRangeGeneRestricting"]</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/HediffDef[@Name="SHG_Radiomancer_OverchargeTooMuch"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GiveHediffsInRangeGeneRestricting"]/forbiddenGenes</xpath>
+            <value>
+                <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_DimensionalCosmic</li>
+                <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Guardian</li>
+                <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_SoldierCommando</li>
+            </value>
+        </match>
+    </Operation>
+</Patch>

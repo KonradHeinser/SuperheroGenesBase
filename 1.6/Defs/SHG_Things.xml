@@ -12,6 +12,29 @@
         </comps>
     </ThingDef>
 
+    <ThingDef Abstract="true" Name="SuperPowersBlastBase">
+        <thingClass>Projectile_Explosive</thingClass>
+        <category>Projectile</category>
+        <tickerType>Normal</tickerType>
+        <altitudeLayer>Projectile</altitudeLayer>
+        <useHitPoints>False</useHitPoints>
+        <neverMultiSelect>True</neverMultiSelect>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+        <projectile>
+            <explosionRadius>1</explosionRadius>
+            <speed>50</speed>
+            <damageAmountBase>10</damageAmountBase>
+            <arcHeightFactor>0.4</arcHeightFactor>
+            <armorPenetrationBase>0.8</armorPenetrationBase>
+            <stoppingPower>1</stoppingPower>
+            <shadowSize>0</shadowSize>
+            <ai_IsIncendiary>true</ai_IsIncendiary>
+        </projectile>
+    </ThingDef>
+
     <ThingDef ParentName="MoteBase" Name="SHG_GenericMoteBase">
         <defName>SHG_Mote_Generic</defName>
         <thingClass>MoteDualAttached</thingClass>

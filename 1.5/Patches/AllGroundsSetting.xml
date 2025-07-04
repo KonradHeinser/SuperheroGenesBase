@@ -470,8 +470,7 @@
                             <statFactors>
                                 <CarryingCapacity>3.33</CarryingCapacity>
                                 <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">3.33</VEF_MassCarryCapacity>
-                                <CarryBulk MayRequire="ceteam.combatextended">3.33</CarryBulk>
-                                <MeleeDamageFactor>2</MeleeDamageFactor>
+                                                                <MeleeDamageFactor>2</MeleeDamageFactor>
                             </statFactors>
                             <capMods>
                                 <li>
@@ -490,8 +489,7 @@
                             <statFactors>
                                 <CarryingCapacity>6.67</CarryingCapacity>
                                 <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">6.67</VEF_MassCarryCapacity>
-                                <CarryBulk MayRequire="ceteam.combatextended">6.67</CarryBulk>
-                                <MeleeDamageFactor>3</MeleeDamageFactor>
+                                                                <MeleeDamageFactor>3</MeleeDamageFactor>
                             </statFactors>
                             <capMods>
                                 <li>
@@ -510,8 +508,7 @@
                             <statFactors>
                                 <CarryingCapacity>13.33</CarryingCapacity>
                                 <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">13.33</VEF_MassCarryCapacity>
-                                <CarryBulk MayRequire="ceteam.combatextended">13.33</CarryBulk>
-                                <MeleeDamageFactor>5</MeleeDamageFactor>
+                                                                <MeleeDamageFactor>5</MeleeDamageFactor>
                             </statFactors>
                             <capMods>
                                 <li>
@@ -530,8 +527,7 @@
                             <statFactors>
                                 <CarryingCapacity>16.67</CarryingCapacity>
                                 <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">16.67</VEF_MassCarryCapacity>
-                                <CarryBulk MayRequire="ceteam.combatextended">16.67</CarryBulk>
-                                <MeleeDamageFactor>6</MeleeDamageFactor>
+                                                                <MeleeDamageFactor>6</MeleeDamageFactor>
                             </statFactors>
                             <capMods>
                                 <li>
@@ -772,8 +768,7 @@
                             <statFactors>
                                 <CarryingCapacity>0.8</CarryingCapacity>
                                 <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.8</VEF_MassCarryCapacity>
-                                <CarryBulk MayRequire="ceteam.combatextended">0.8</CarryBulk>
-                                <MeleeDamageFactor>0.8</MeleeDamageFactor>
+                                                                <MeleeDamageFactor>0.8</MeleeDamageFactor>
                             </statFactors>
                             <capMods>
                                 <li>

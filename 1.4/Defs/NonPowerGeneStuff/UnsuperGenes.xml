@@ -175,8 +175,7 @@
         </statFactors>
         <statOffsets>
             <CarryingCapacity>-50</CarryingCapacity>
-            <CarryBulk MayRequire="ceteam.combatextended">-25</CarryBulk>
-            <MentalBreakThreshold>.15</MentalBreakThreshold>
+                        <MentalBreakThreshold>.15</MentalBreakThreshold>
         </statOffsets>
         <exclusionTags>
             <li>SuperStrengths</li>

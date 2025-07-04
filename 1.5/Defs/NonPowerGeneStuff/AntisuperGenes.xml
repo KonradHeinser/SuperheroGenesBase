@@ -224,8 +224,7 @@
         <statFactors>
             <CarryingCapacity>0.4</CarryingCapacity>
             <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.4</VEF_MassCarryCapacity>
-            <CarryBulk MayRequire="ceteam.combatextended">0.4</CarryBulk>
-            <MeleeDamageFactor>0.4</MeleeDamageFactor>
+                        <MeleeDamageFactor>0.4</MeleeDamageFactor>
         </statFactors>
         <capMods>
             <li>

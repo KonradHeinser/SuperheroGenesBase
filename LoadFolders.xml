@@ -4,7 +4,6 @@
 		<li>/</li>
 		<li>1.4</li>
 		<li IfModActive="vanillaexpanded.achievements">1.4/Mods/VAE</li>
-        <li IfModActive="ceteam.combatextended">1.4/Mods/CE</li>
 		<li IfModActive="RedMattis.BetterPrerequisites">1.4/Mods/BIGsmall</li>
 		<li IfModActive="Grimworld.Core">1.4/Mods/Grimworld</li>
 		<li IfModActive="Ludeon.Rimworld.Royalty">1.4/Royalty</li>
@@ -14,7 +13,6 @@
 		<li>/</li>
 		<li>1.5</li>
 		<li IfModActive="vanillaexpanded.achievements">1.5/Mods/VAE</li>
-        <li IfModActive="ceteam.combatextended">1.5/Mods/CE</li>
 		<li IfModActive="RedMattis.BetterPrerequisites">1.5/Mods/BIGsmall</li>
 		<li IfModActive="Grimworld.Core">1.5/Mods/Grimworld</li>
 		<li IfModActive="Ludeon.Rimworld.Royalty">1.5/Royalty</li>
@@ -24,7 +22,6 @@
 		<li>/</li>
 		<li>1.6</li>
 		<li IfModActive="vanillaexpanded.achievements">1.6/Mods/VAE</li>
-        <li IfModActive="ceteam.combatextended">1.6/Mods/CE</li>
 		<li IfModActive="RedMattis.BetterPrerequisites">1.6/Mods/BIGsmall</li>
 		<li IfModActive="Grimworld.Core">1.6/Mods/Grimworld</li>
 		<li IfModActive="Ludeon.Rimworld.Royalty">1.6/Royalty</li>

@@ -285,6 +285,9 @@
         <biostatMet>-5</biostatMet>
         <iconPath>Powers/Gene_Phasing</iconPath>
         <displayOrderInCategory>4</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Phasing</li>
+        </abilities>
         <exclusionTags>
             <li>SHG_Phasing</li>
         </exclusionTags>
@@ -295,13 +298,26 @@
 		</modExtensions>
     </GeneDef>
 
-    <HediffDef ParentName="SHG_HiddenHediffBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <AbilityDef ParentName="SHGSelfCastBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Phasing</defName>
+        <label>toggle phasing</label>
+        <description>Use this to toggle whether the pawn can phase through walls.\n\nThis was mostly added because some have found weird edge case scenarios that result in errors, and I am unable to fix them due that part of the code being out of my hands.\n\nFor safest results, keep phasing constantly disabled until you need the pawn to fight stuff.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityToggleHediffExistence">
+                <hediff>
+                    <hediff>SHG_Phasing</hediff>
+                </hediff>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
         <defName>SHG_Phasing</defName>
         <label>phasing</label>
         <description>This pawn phases through obstacles.</description>
         <comps>
             <li Class="HediffCompProperties">
-				<compClass>VFECore.HediffComp_Phasing</compClass>
+				<compClass>VEF.Hediffs.HediffComp_Phasing</compClass>
 			</li>
         </comps>
     </HediffDef>

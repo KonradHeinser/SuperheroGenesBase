@@ -82,8 +82,7 @@
                     <MeleeDamageFactor>1.5</MeleeDamageFactor>
                     <CarryingCapacity>1.5</CarryingCapacity>
                     <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">1.5</VEF_MassCarryCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">1.5</CarryBulk>
-                </statFactors>
+                                    </statFactors>
                 <statFactorEffectMultiplier>SHG_HemomancyProficiency</statFactorEffectMultiplier>
             </li>
         </stages>
@@ -99,8 +98,7 @@
                     <MeleeDamageFactor>0.5</MeleeDamageFactor>
                     <CarryingCapacity>0.5</CarryingCapacity>
                     <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.5</VEF_MassCarryCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">0.5</CarryBulk>
-                </statFactors>
+                                    </statFactors>
             </li>
         </stages>
     </HediffDef>

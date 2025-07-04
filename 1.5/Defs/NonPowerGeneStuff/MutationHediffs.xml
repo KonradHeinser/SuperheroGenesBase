@@ -97,8 +97,7 @@
                 <statFactors>
                     <CarryingCapacity>0.5</CarryingCapacity>
                     <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.5</VEF_MassCarryCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">0.5</CarryBulk>
-                </statFactors>
+                                    </statFactors>
             </li>
             <li>
                 <minSeverity>2</minSeverity>

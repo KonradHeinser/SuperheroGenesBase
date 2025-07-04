@@ -1257,8 +1257,7 @@
             <ShootingAccuracyPawn>-3</ShootingAccuracyPawn>
             <CarryingCapacity>-50</CarryingCapacity>
             <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">-50</VEF_MassCarryCapacity>
-            <CarryBulk MayRequire="ceteam.combatextended">-25</CarryBulk>
-            <MoveSpeed>-3</MoveSpeed>
+                        <MoveSpeed>-3</MoveSpeed>
             <MeleeDodgeChance>-3</MeleeDodgeChance>
             <MeleeHitChance>-3</MeleeHitChance>
             <MentalBreakThreshold>.15</MentalBreakThreshold>

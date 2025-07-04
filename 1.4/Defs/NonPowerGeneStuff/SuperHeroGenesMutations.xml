@@ -304,8 +304,7 @@
                 <label>calm</label>
                 <statFactors>
                     <CarryingCapacity>0.5</CarryingCapacity>
-                    <CarryBulk MayRequire="ceteam.combatextended">0.5</CarryBulk>
-                </statFactors>
+                                    </statFactors>
             </li>
             <li>
                 <minSeverity>2</minSeverity>
