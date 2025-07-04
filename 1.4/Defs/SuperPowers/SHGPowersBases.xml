@@ -163,6 +163,7 @@
     </AbilityDef>
 
     <AbilityDef Abstract="True" ParentName="SHGPowerAbilitiesBase" Name="SHGSelfCastBase">
+        <hostile>False</hostile>
         <targetRequired>false</targetRequired>
         <showCastingProgressBar>true</showCastingProgressBar>
         <verbProperties>
@@ -172,6 +173,15 @@
             <targetParams>
                 <canTargetSelf>True</canTargetSelf>
             </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef Abstract="True" ParentName="SHGSelfCastBase" Name="SHGToggleSelf">
+        <aiCanUse>False</aiCanUse>
+        <showCastingProgressBar>False</showCastingProgressBar>
+        <cooldownTicksRange>0</cooldownTicksRange>
+        <verbProperties>
+            <warmupTime>0.1</warmupTime>
         </verbProperties>
     </AbilityDef>
 

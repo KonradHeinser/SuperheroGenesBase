@@ -298,7 +298,7 @@
 		</modExtensions>
     </GeneDef>
 
-    <AbilityDef ParentName="SHGSelfCastBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+    <AbilityDef ParentName="SHGToggleSelf" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
         <defName>SHG_Phasing</defName>
         <label>toggle phasing</label>
         <description>Use this to toggle whether the pawn can phase through walls.\n\nThis was mostly added because some have found weird edge case scenarios that result in errors, and I am unable to fix them due that part of the code being out of my hands.\n\nFor safest results, keep phasing constantly disabled until you need the pawn to fight stuff.</description>
