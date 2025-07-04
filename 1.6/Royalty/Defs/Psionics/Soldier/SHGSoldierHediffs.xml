@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Psionist_Stasis</defName>
+		<label>stasis</label>
+		<description>This pawn was put into stasis by a Psionic Soldier. Any wounds they have will slowly heal.</description>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ArmorRating_Blunt>1</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>1</ArmorRating_Sharp>
+                    <ArmorRating_Heat>1</ArmorRating_Heat>
+                </statOffsets>
+                <statFactors>
+                    <RestFallRateFactor>0</RestFallRateFactor>
+                </statFactors>
+                <hungerRateFactor>0</hungerRateFactor>
+            </li>
+        </stages>
+		<comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
+                <regenSets>
+                    <li />
+                </regenSets>
+            </li>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>True</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Psionist_New_PsionicFlight</defName>
+		<label>psionic flight</label>
+		<description>This Psionic Soldier is always floating just a little bit off the ground, and their ability to move omnidirectionally makes it easier for them to move around quickly. The more psychic sensitivity they have, the faster they can propel themselves.</description>
+        <stages>
+            <li>
+                <statFactors>
+                    <MoveSpeed>1.25</MoveSpeed>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+            </li>
+        </stages>
+		<comps>
+			<li Class="SuperHeroGenesBase.HediffCompProperties_TerrainCostOverride">
+                <universalCostOverride>0</universalCostOverride>
+            </li>
+		</comps>
+	</HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_PsionicInfusement</defName>
+        <label>psionic infusement</label>
+        <description>This Commando infuses their melee attacks with psionic energy to make them stronger. The multiplier listed here is the base amount, and are multiplied by psychic sensitivity.</description>
+        <isBad>false</isBad>
+        <everCurableByItem>False</everCurableByItem>
+        <stages>
+			<li>
+                <statFactors>
+                    <MeleeDamageFactor>1.5</MeleeDamageFactor>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Psionist_Entrench</defName>
+        <label>entrench</label>
+        <description>This Commando infused their body with dense psionic energy that stops their movement, but stabilizes their body and provides some protection. The offsets listed here is the base amount, and is multiplied by psychic sensitivity.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <MoveSpeed>0</MoveSpeed>
+                </statFactors>
+                <statOffsets>
+                    <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+                    <ArmorRating_Blunt>.1</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>.1</ArmorRating_Sharp>
+                    <ArmorRating_Heat>.1</ArmorRating_Heat>
+                </statOffsets>
+                <statOffsetEffectMultiplier>PsychicSensitivity</statOffsetEffectMultiplier>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>True</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_SoldierImmortal</defName>
+        <label>nigh-immortal</label>
+        <description>Due to the psychic energy infused in this pawn's blood, they lose blood at 1% of the normal rate. For those use Bleeding Genes, this is not quite as good as Extreme Blood Clotting, but is still an extremely slow bleeding rate.</description>
+        <isBad>false</isBad>
+        <everCurableByItem>False</everCurableByItem>
+		<stages>
+			<li>
+                <totalBleedFactor>0.01</totalBleedFactor>
+				<becomeVisible>false</becomeVisible>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Psionist_PsionicArmor</defName>
+        <label>psionic armor</label>
+        <description>This Immortal is being protected by a psychic armor. The values listed are the base values, and are multiplied by psychic sensitivity.</description>
+        <isBad>false</isBad>
+        <everCurableByItem>False</everCurableByItem>
+		<stages>
+			<li>
+                <statOffsets>
+                    <ArmorRating_Blunt>.1</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>.1</ArmorRating_Sharp>
+                    <ArmorRating_Heat>.1</ArmorRating_Heat>
+                    <ComfyTemperatureMin>-0.5</ComfyTemperatureMin>
+                    <ComfyTemperatureMax>0.5</ComfyTemperatureMax>
+                </statOffsets>
+                <statOffsetEffectMultiplier>PsychicSensitivity</statOffsetEffectMultiplier>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Psionist_PsionicRegeneration</defName>
+        <label>psionic regeneration</label>
+        <description>This Immortal is constanly healing themselves with psionic energy. The immunity gain listed is the base value, and is multiplied by psychic sensitivity.</description>
+        <stages>
+			<li>
+                <statFactors>
+                    <ImmunityGainSpeed>1.5</ImmunityGainSpeed>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
+                <regenSets>
+                    <li>
+                        <ticksToHealInterval>1000</ticksToHealInterval>
+                        <repeatHealCount>10</repeatHealCount>
+                        <healAmount>0.1</healAmount>
+                    </li>
+                </regenSets>
+            </li>
+		</comps>
+    </HediffDef>
+</Defs>

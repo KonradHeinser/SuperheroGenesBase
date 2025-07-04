@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+        <!--Ore Summons-->
+    <!-- To avoid them being in regular map gen, the scatter commonality is 0-->
+
+    <!--Non-tree wood-->
+    <ThingDef ParentName="SHG_MineableResourceBase">
+        <defName>SHG_MineableWood</defName>
+        <label>super compacted wood</label>
+        <description>A pillar of super compact wood that was instantly created by a super. This wood is so compact it will require a miner to break it apart.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <color>(103,67,37)</color>
+            <colorTwo>(93,57,27)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>4000</MaxHitPoints>
+        </statBases>
+        <building>
+            <mineableThing>WoodLog</mineableThing>
+            <mineableYield>350</mineableYield>
+            <smoothedThing />
+        </building>
+    </ThingDef>
+
+        <!--Stone-->
+    <ThingDef ParentName="UglyRockBase" Name="SHGStoneBase" Abstract="True">
+        <description>A pillar consisting of solid stone that was buried deep undergound. This stone was compacted and brought to the surface by a super.\n\nUnlike normal mineable stone, this will always give 9 chunks but cannot be smoothed down into walls.</description>
+        <statBases>
+            <MaxHitPoints>1000</MaxHitPoints>
+        </statBases>
+        <building>
+            <mineableDropChance>1</mineableDropChance>
+            <mineableYield>9</mineableYield>
+            <isNaturalRock>false</isNaturalRock>
+            <claimable>false</claimable>
+            <mineableScatterCommonality>0</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>0</mineableScatterLumpSizeRange>
+            <smoothedThing />
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="SHGStoneBase">
+        <defName>SHG_Sandstone</defName>
+        <label>condensed sandstone</label>
+        <graphicData>
+            <color>(126,104,94)</color>
+        </graphicData>
+        <building>
+            <mineableThing>ChunkSandstone</mineableThing>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="SHGStoneBase">
+        <defName>SHG_Granite</defName>
+        <label>condensed granite</label>
+        <graphicData>
+            <color>(105,95,97)</color>
+        </graphicData>
+        <building>
+            <mineableThing>ChunkGranite</mineableThing>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="SHGStoneBase">
+        <defName>SHG_Limestone</defName>
+        <label>condensed limestone</label>
+        <graphicData>
+            <color>(158,153,135)</color>
+        </graphicData>
+        <building>
+            <mineableThing>ChunkLimestone</mineableThing>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="SHGStoneBase">
+        <defName>SHG_Slate</defName>
+        <label>condensed slate</label>
+        <graphicData>
+            <color>(70,70,70)</color>
+        </graphicData>
+        <building>
+            <mineableThing>ChunkSlate</mineableThing>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="SHGStoneBase">
+        <defName>SHG_Marble</defName>
+        <label>condensed marble</label>
+        <graphicData>
+            <color>(132,135,132)</color>
+        </graphicData>
+        <building>
+            <mineableThing>ChunkMarble</mineableThing>
+        </building>
+    </ThingDef>
+
+        <!--Resources--> 
+
+    <ThingDef ParentName="RockBase" Name="SHG_MineableResourceBase" Abstract="True">
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+        <building>
+            <claimable>false</claimable>
+            <isResourceRock>false</isResourceRock>
+            <isNaturalRock>false</isNaturalRock>
+            <mineableScatterCommonality>0</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>0</mineableScatterLumpSizeRange>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_MineableResourceBase">
+        <defName>SHG_MineableSteel</defName>
+        <label>super compacted steel</label>
+        <description>A pillar consisting largely of steel that was buried deep undergound.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <color>(145,123,97)</color>
+            <colorTwo>(155,133,107)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>4000</MaxHitPoints>
+        </statBases>
+        <building>
+            <mineableThing>Steel</mineableThing>
+            <mineableYield>1600</mineableYield>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_MineableResourceBase">
+        <defName>SHG_MineableSilver</defName>
+        <label>super compacted silver</label>
+        <description>A pillar consisting largely of silver that was buried deep undergound.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <color>(137,134,124)</color>
+            <colorTwo>(147,144,134)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>4000</MaxHitPoints>
+        </statBases>
+        <building>
+            <mineableThing>Silver</mineableThing>
+            <mineableYield>20000</mineableYield>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_MineableResourceBase">
+        <defName>SHG_MineableGold</defName>
+        <label>super condensed gold</label>
+        <description>A pillar consisting largely of gold that was buried deep undergound.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <color>(177,163,15)</color>
+            <colorTwo>(187,173,25)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>5000</MaxHitPoints>
+        </statBases>
+        <building>
+            <mineableThing>Gold</mineableThing>
+            <mineableYield>6400</mineableYield>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_MineableResourceBase">
+        <defName>SHG_MineableUranium</defName>
+        <label>super compacted uranium ore</label>
+        <description>A pillar consisting largely of uranium that was buried deep undergound.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <color>(60,60,60)</color>
+            <colorTwo>(70,70,70)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>6000</MaxHitPoints>
+        </statBases>
+        <building>
+            <mineableThing>Uranium</mineableThing>
+            <mineableYield>480</mineableYield>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_MineableResourceBase">
+        <defName>SHG_MineablePlasteel</defName>
+        <label>super compacted plasteel</label>
+        <description>A pillar consisting largely of plasteel that was buried deep undergound long ago.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <color>(124,156,156)</color>
+            <colorTwo>(134,166,166)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>15000</MaxHitPoints>
+        </statBases>
+        <building>
+            <mineableThing>Plasteel</mineableThing>
+            <mineableYield>320</mineableYield>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_MineableResourceBase">
+        <defName>SHG_MineableJade</defName>
+        <label>super compacted jade</label>
+        <description>A pillar consisting largely of jade that was buried deep undergound.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <color>(20,163,15)</color>
+            <colorTwo>(30,173,25)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>4000</MaxHitPoints>
+        </statBases>
+        <building>
+            <mineableThing>Jade</mineableThing>
+            <mineableYield>320</mineableYield>
+        </building>
+    </ThingDef>
+    
+    <ThingDef ParentName="SHG_MineableResourceBase">
+        <defName>SHG_MineableComponentsIndustrial</defName>
+        <label>super compacted machinery</label>
+        <description>A pillar consisting of a large number of components encased in useless stone that were buried deep undergound long ago.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/CompactedMachinery_Atlas</texPath>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>5000</MaxHitPoints>
+        </statBases>
+        <building>
+            <mineableThing>ComponentIndustrial</mineableThing>
+            <mineableYield>36</mineableYield>
+        </building>
+    </ThingDef> 
+
+    <ThingDef ParentName="SHG_MineableResourceBase">
+        <defName>SHG_MineableComponentsSpacer</defName>
+        <label>super compacted spacer machinery</label>
+        <description>A pillar consisting of some advanced components encased in useless stone that ended up buried deep undergound long ago.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <color>(68,68,68)</color>
+            <colorTwo>(30,30,30)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>10000</MaxHitPoints>
+        </statBases>
+        <building>
+            <mineableThing>ComponentSpacer</mineableThing>
+            <mineableYield>6</mineableYield>
+        </building>
+    </ThingDef>     
+</Defs>

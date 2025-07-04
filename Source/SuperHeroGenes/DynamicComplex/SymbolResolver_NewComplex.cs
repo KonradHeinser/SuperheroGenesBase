@@ -1,6 +1,5 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Collections.Generic;
 using RimWorld;
 using RimWorld.BaseGen;
 using UnityEngine;
@@ -181,7 +180,7 @@ namespace SuperHeroGenesBase
                     // These ones will attack the player after a while. Will usually spawn outside the complex then run to the center to prepare. The spawning outside is a bug I haven't figured out yet
                     if (rp.interiorThreatPoints.HasValue)
                     {
-                        Lord lord = (rp.settlementLord = rp.singlePawnLord ?? LordMaker.MakeNewLord(faction, new LordJob_DefendBase(faction, rp.rect.CenterCell, rp.attackWhenPlayerBecameEnemy ?? false), map));
+                        Lord lord = (rp.settlementLord = rp.singlePawnLord ?? LordMaker.MakeNewLord(faction, new LordJob_DefendBase(faction, rp.rect.CenterCell, 2500, rp.attackWhenPlayerBecameEnemy ?? false), map));
                         List<PawnKindDef> validPawnKinds = new List<PawnKindDef>();
                         foreach (PawnGroupMaker item in faction.def.pawnGroupMakers.Where((PawnGroupMaker x) => x.kindDef == PawnGroupKindDefOf.Combat))
                             foreach (PawnGenOption option in item.options)

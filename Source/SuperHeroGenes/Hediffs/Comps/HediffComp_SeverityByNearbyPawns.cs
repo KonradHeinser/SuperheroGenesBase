@@ -5,27 +5,21 @@ using System.Linq;
 
 namespace SuperHeroGenesBase
 {
-    public class HediffComp_SeverityByNearbyPawns : HediffComp
+    public class HediffComp_SeverityByNearbyPawns : HediffComp_SetterBase
     {
         public HediffCompProperties_SeverityByNearbyPawns Props => (HediffCompProperties_SeverityByNearbyPawns)props;
 
-        public override void CompPostTick(ref float severityAdjustment)
+        protected override void SetSeverity()
         {
-            if (!Pawn.Spawned) return;
-            if (Props.onlyDifferentFaction && Props.onlySameFaction)
-            {
-                Log.Error(parent.def + ": has both onlySameFaction and onlyDifferentFaction, which makes no sense for obvious reasons");
-                Pawn.health.RemoveHediff(parent);
-                return;
-            }
-            float range = Props.range;
-            if (Props.rangeStat != null && parent.pawn.GetStatValue(Props.rangeStat) > 0) range = parent.pawn.GetStatValue(Props.rangeStat);
+            base.SetSeverity();
 
-            List<Pawn> list = parent.pawn.Map.mapPawns.AllPawnsSpawned.Where((Pawn p) => CheckPawn(p, range)).ToList();
+            List<Pawn> list = Pawn.Map.mapPawns.AllPawns.Where((Pawn p) => CheckPawn(p)).ToList();
             parent.Severity = list.Count;
+
+            ticksToNextCheck = 60;
         }
 
-        public bool CheckPawn(Pawn p, float range)
+        public bool CheckPawn(Pawn p)
         {
             if (p.Dead) return false;
             if (!p.RaceProps.Humanlike && Props.onlyHumanlikes) return false;
@@ -39,7 +33,7 @@ namespace SuperHeroGenesBase
                 if (Props.onlyDifferentFaction && (p.Faction == null || p.Faction == parent.pawn.Faction)) return false;
                 if (Props.onlyEnemies && !p.HostileTo(parent.pawn)) return false;
             }
-            if (p.Position.DistanceTo(parent.pawn.Position) > range) return false;
+            if (p.Position.DistanceTo(parent.pawn.Position) > Props.range) return false;
             return true;
         }
     }

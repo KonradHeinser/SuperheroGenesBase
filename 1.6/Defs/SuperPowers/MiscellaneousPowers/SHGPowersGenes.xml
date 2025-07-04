@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_CommandAnimal</defName>
+        <label>command animal</label>
+        <description>Carriers of this gene can command animals to fight by their side for several hours.\n\nTo ensure no mistakes are made the super must command each animal one by one. This tends to be worth the effort though as there aren't many things that can stop a herd of angry muffalos and elephants from leveling a fortified location.</description>
+        <iconPath>UI/Icons/Genes/Gene_AnimalWarcall</iconPath>
+        <abilities>
+            <li>SHG_CommandAnimal</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_CommandAnimal</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-5</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>war</symbol></li>
+                <li><symbol>animal</symbol></li>
+                <li><symbol>commander</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>caller</symbol></li>
+                <li><symbol>hailer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>Archetype_DruidCommand</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_HeroicLeap</defName>
+        <label>heroic leap</label>
+        <description>Carriers of this gene are able to make long leaps that cover a lot of ground, usually involving a three-point landing at the end.\n\nIn glitterworld cities, use of this ability was banned due to multiple accidents involving a super accidentally landing on someone.</description>
+        <iconPath>UI/Icons/Genes/Gene_LongJumpLegs</iconPath>
+        <abilities>
+            <li>SHG_HeroicLeap</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_HeroicLeap</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-2</biostatMet>
+        <exclusionTags>
+            <li>Archetypes_NinjaHeroicLeap</li>
+            <li>Archetype_SkirmisherLeap</li>
+            <li>Archetype_PugilistLeap</li>
+        </exclusionTags>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li><symbol>jumper</symbol></li>
+                <li><symbol>leaper</symbol></li>
+                <li><symbol>bouncer</symbol></li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li><symbol>jump</symbol></li>
+                <li><symbol>leap</symbol></li>
+                <li><symbol>vault</symbol></li>
+                <li><symbol>long</symbol></li>
+                <li><symbol>fly</symbol></li>
+                <li><symbol>hop</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_SealWounds</defName>
+        <label>seal wounds</label>
+        <description>Carriers of this gene are able to almost perfectly seal the wounds of a nearby pawn. This will not restore lost blood or completely heal the wound, but it will stop bleeding and aid the healing process greatly.</description>
+        <iconPath>UI/Icons/Genes/Gene_Coagulate</iconPath>
+        <abilities>
+            <li>SHG_SealWounds</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SealWounds</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-4</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>life</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>clotter</symbol></li>
+                <li><symbol>tender</symbol></li>
+                <li><symbol>healer</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>Archetype_MedicSeal</li>
+            <li>Archetype_LifeBringerSeal</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersOffensiveBase">
+        <defName>SHG_ThrowSpike</defName>
+        <label>throw spike</label>
+        <description>Carriers of this gene are able to summon a spike that is launched at a larget at high speeds. This spike has low damage but high armor penetration.</description>
+        <iconPath>Powers/Gene_ThrowSpike</iconPath>
+        <abilities>
+            <li>SHG_ThrowSpike</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_ThrowSpike</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-2</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>spike</symbol></li>
+                <li><symbol>thorn</symbol></li>
+                <li><symbol>bolt</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>Archetype_AnalzerSpike</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Revive</defName>
+        <label>revive</label>
+        <description>Supers with this gene are able to revive a nearby pawn and be the god of a cult.</description>
+        <iconPath>UI/Icons/Genes/Gene_Resurrect</iconPath>
+        <abilities>
+            <li>SHG_Revive</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Revive</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-9</biostatMet>
+        <symbolPack>
+            <wholeNameSymbols>
+                <li><symbol>resurrector</symbol></li>
+            </wholeNameSymbols>
+            <prefixSymbols>
+                <li><symbol>life</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>Archetype_LifeBringerRevive</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Invisibility</defName>
+        <label>invisibility</label>
+        <description>Supers with this gene are able to turn invisible for a short time every few hours.</description>
+        <iconPath>Powers/Gene_Invisibility</iconPath>
+        <biostatMet>-3</biostatMet>
+        <abilities>
+            <li>SHG_Invisibility</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Invisibility</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_PhantomInvisibility</li>
+            <li>Archetypes_HackerInvisibility</li>
+        </exclusionTags>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>camo</symbol></li>
+                <li><symbol>invis</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Blink</defName>
+        <label>blink</label>
+        <description>Supers with this gene are able to blink themselves away from a location to a random point between 20 and 30 tiles away. Using this to get out of danger will either work very well, or very poorly.</description>
+        <iconPath>Powers/Gene_Blink</iconPath>
+        <displayOrderInCategory>-0.5</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Blink</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Blink</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-1</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>blink</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>port</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>Archetype_PorterBlink</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Teleport</defName>
+        <label>teleportation</label>
+        <description>Carriers of this gene are able to teleport themselves and any other living thing a short distance away.</description>
+        <iconPath>Powers/Gene_Teleport</iconPath>
+        <prerequisite>SHG_Blink</prerequisite>
+        <displayOrderInCategory>-0.4</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Teleport</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Teleport</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-3</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>tele</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>port</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>Archetype_PorterTeleport</li>
+        </exclusionTags>
+
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Gate</defName>
+        <label>teleportation gate</label>
+        <description>Carriers of this gene are able to teleport themselves everyone within 10 tiles to any location in the world.</description>
+        <iconPath>Powers/Gene_Gate</iconPath>
+        <prerequisite>SHG_Blink</prerequisite>
+        <displayOrderInCategory>-0.3</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Gate</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Gate</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-5</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>gate</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>port</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>Archetype_PorterGate</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Rift</defName>
+        <label>teleportation rift</label>
+        <description>Carriers of this gene are able to teleport themselves everyone within 200 tiles to any location in the world.\n\nThis will teleport almost everyone on the current map to the desired location. If you use this in the middle of your colony, you will probably get most of your colonists. If used on the world map, this acts the same as Teleportation Gate's ability.</description>
+        <iconPath>Powers/Gene_Rift</iconPath>
+        <prerequisite>SHG_Blink</prerequisite>
+        <displayOrderInCategory>-0.2</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Rift</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Rift</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-7</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>rift</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>port</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>Archetype_PorterRift</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_PsychicDisconnection</defName>
+        <label>psychic disconnection</label>
+        <description>Carriers of this gene are able to temporarily render people psychically deaf. This gene requires that the carrier does not have any other genes that manipulate their own psychic sensitivity.</description>
+        <iconPath>Powers/Gene_PsychicDisconnection</iconPath>
+        <abilities>
+            <li>SHG_PsychicDisconnection</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_PsychicDisconnection</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-3</biostatMet>
+        <exclusionTags>
+            <li>PsychicAbility</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_MassStoneShift</defName>
+        <label>mass stone shift</label>
+        <description>Carriers of this gene are able to move massive amounts of stone chunks to a specified location instantly.</description>
+        <iconPath>Powers/Gene_MassStoneShift</iconPath>
+        <abilities>
+            <li>SHG_MassStoneShift</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_MassStoneShift</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-1</biostatMet>
+        <exclusionTags>
+            <li>Archetype_GeomancerChunkSkip</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_StunningAttraction</defName>
+        <label>stunning attraction</label>
+        <description>Carriers of this gene are able to make every being around them become inexplicably attracted to them for a brief time. The pawns will automatically move towards the caster.</description>
+        <iconPath>Powers/Gene_StunningAttraction</iconPath>
+        <biostatMet>-2</biostatMet>
+        <customEffectDescriptions>
+            <li>Duration affected by Stun Susceptibility.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_StunningAttraction</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_StunningAttraction</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_StunnerAttraction</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Narcissus</defName>
+        <label>narcissus</label>
+        <description>Carriers of this gene are able to put a seed of narcissistic thoughts into a target's head, blooming into an internal distraction with a duration based on how much beauty they have.</description>
+        <iconPath>Powers/Gene_Narcissus</iconPath>
+        <biostatMet>-4</biostatMet>
+        <abilities>
+            <li>SHG_Narcissus</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Narcissus</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_StunnerNarcissus</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Distraction</defName>
+        <label>distraction</label>
+        <description>Carriers of this gene are able to distract a target, stunning them for a time based on the stun susceptibility.</description>
+        <iconPath>Powers/Gene_Distraction</iconPath>
+        <biostatMet>-1</biostatMet>
+        <abilities>
+            <li>SHG_Distraction</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Distraction</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_StunnerDistraction</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_UntouchableBeauty</defName>
+        <label>untouchable beauty</label>
+        <description>Carriers of this gene are able to increase their melee dodge chance based on how much beauty this pawn has for an hour.</description>
+        <iconPath>Powers/Gene_UntouchableBeauty</iconPath>
+        <biostatMet>-1</biostatMet>
+        <abilities>
+            <li>SHG_UntouchableBeauty</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_UntouchableBeauty</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_StunnerUntouchable</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Regenesis</defName>
+        <label>regenesis</label>
+        <description>Carriers of this gene can put allies into a coma-like state that will cause them to  require 75% less food and begin regenerating all wounds.\n\nRegeneration grows stronger on day 5, 10, 15, and 20.\n\nWARNING: The only thing that can wake a pawn in regenesis is a pawn with the regenesis gene. The carrier cannot target themselves, so as long as they continue to survive, you should be able to wake your pawns without issue.</description>
+        <iconPath>Powers/Gene_Regenesis</iconPath>
+        <biostatMet>-3</biostatMet>
+        <abilities>
+            <li>SHG_Regenesis</li>
+            <li>SHG_RegenesisWake</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Regenesis</AbilityDef>
+            <AbilityDef>SHG_RegenesisWake</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersOffensiveBase">
+        <defName>SHG_RetractableFistBlades</defName>
+        <label>retractable fist blades</label>
+        <description>Supers with this gene have blades that shoot out from inside their forearm to be extended well beyond their fist, granting them a new way to slice and dice. These blades can take many forms, but all have the same effect.</description>
+        <iconPath>Powers/Gene_SuperClaws</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply>
+                    <li>
+                        <hediff>SHG_SuperClaws</hediff>
+                        <bodyParts>
+							<li>Hand</li>
+							<li>Hand</li>
+						</bodyParts>
+                    </li>
+                </hediffsToApply>
+			</li>
+		</modExtensions>
+        <biostatMet>-2</biostatMet>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersOffensiveBase">
+        <defName>SHG_BasicLaserEyes</defName>
+        <label>laser eyes</label>
+        <description>Carriers of this gene can shoot lasers from their eyes. This is a weaker version of the superhero variant that doesn't require the superhero base gene.</description>
+        <iconPath>Powers/BasicLaserEyes</iconPath>
+        <displayOrderInCategory>997</displayOrderInCategory>
+        <marketValueFactor>2</marketValueFactor>
+        <biostatMet>-3</biostatMet>
+        <prerequisite />
+        <exclusionTags>
+            <li>SHG_LaserEyes</li>
+        </exclusionTags>
+        <abilities>
+            <li>SHG_BasicLaserEyes</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_BasicLaserEyes</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersOffensiveBase">
+        <defName>SHG_NewLaserEyes</defName>
+        <label>superhero laser eyes</label>
+        <description>Superheroes with this gene can shoot powerful lasers from their eyes.</description>
+        <iconPath>Powers/LaserEyes</iconPath>
+        <displayOrderInCategory>999</displayOrderInCategory>
+        <marketValueFactor>5</marketValueFactor>
+        <biostatMet>-9</biostatMet>
+        <exclusionTags>
+            <li>SHG_LaserEyes</li>
+        </exclusionTags>
+        <abilities>
+            <li>SHG_NewLaserEyes</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_NewLaserEyes</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Flight</defName>
+        <label>flight</label>
+        <description>Carriers of this gene are able to fly through the air, which can aid them greatly when travelling both short and long distances.</description>
+        <iconPath>Powers/Gene_Flight</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <abilities>
+            <li>SHG_Flight</li>
+            <li>SHG_Flight_WorldTravel</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Flight</AbilityDef>
+            <AbilityDef>SHG_Flight_WorldTravel</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-3</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>float</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>floater</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+		<customEffectDescriptions>
+			<li>Colonist will always be floating at least a little bit over the ground.</li>
+		</customEffectDescriptions>
+        <exclusionTags>
+            <li>Archetype_PhantomFlight</li>
+            <li>Psionist_SoldierFlight</li>
+        </exclusionTags>
+		<modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Powers_Flight</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase" MayRequire="Ludeon.Rimworld.Anomaly">
+        <defName>SHG_DetectMetalHorror</defName>
+        <label>detect metal horror</label>
+        <description>Carriers of this gene can place marks on themselves and everyone around them that will search through the targets' blood and nervous system for oddities. If a metal horror style oddity is found, the mark releases a pheromone that causes others to know that the individual is infected.</description>
+        <iconPath>Things/Pawn/Metalhorror/Metalhorror_Mature_east</iconPath>
+        <biostatMet>-3</biostatMet>
+        <customEffectDescriptions>
+            <li>The exact location of a metal horror detected this way is still unknown, meaning they still need to undergo surgeries, but also won't have a metal horror popping out immediately due to this detection.</li>
+            <li>The ability will apply two hediffs, one that lasts very briefly to let you know the pawn is being searched, and another that only appears if the search finds something. The second one will remain until the hidden horror is gone for any reason.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_DetectMetalHorror</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Telepush</defName>
+        <label>telepush</label>
+        <description>Carriers of this gene can attempt to teleport a target backwards a bit, assuming the area behind the target is clear.</description>
+        <iconPath>Powers/Gene_Telepush</iconPath>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>SHG_Telepush</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Telepull</defName>
+        <label>telepull</label>
+        <description>Carriers of this gene can attempt to teleport a target towards the caster a bit, or to the caster if the target is close enough.</description>
+        <iconPath>Powers/Gene_Telepull</iconPath>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>SHG_Telepull</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersOffensiveBase">
+        <defName>SHG_DeathFromAbove</defName>
+        <label>death from above</label>
+        <description>Superheroes with this gene have access to a subdimension that regularly steals nearby asteroids and starts accelerating them. Once enough of them are accelerated the super can create a rift in the air that releases some of them towards the ground similar to an orbital bombardment.</description>
+        <iconPath>Powers/Gene_DeathFromAbove</iconPath>
+        <displayOrderInCategory>996</displayOrderInCategory>
+        <marketValueFactor>4</marketValueFactor>
+        <biostatMet>-5</biostatMet>
+        <abilities>
+            <li>SHG_DeathFromAbove</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_DeathFromAbove</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase" MayRequire="EBSG.Framework">
+        <defName>SHG_TemporaryForcefield</defName>
+        <label>temporary forcefield</label>
+        <description>Carriers of this gene can create a forcefield around themselves that blocks up to 500 points of damage once per day.</description>
+        <iconPath>Powers/Gene_Forcefield</iconPath>
+        <biostatMet>-1</biostatMet>
+        <abilities>
+            <li>SHG_TemporaryForcefield</li>
+        </abilities>
+        <exclusionTags>
+            <li>SHG_Forcefield</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersOffensiveBase">
+        <defName>SHG_MidasTouch</defName>
+        <label>midas touch</label>
+        <description>Superheroes with this gene can turn someone into gold at a touch, which will immediately crumble under its weight into a pile.</description>
+        <iconPath>Powers/Gene_MidasTouch</iconPath>
+        <displayOrderInCategory>995</displayOrderInCategory>
+        <marketValueFactor>3</marketValueFactor>
+        <biostatArc>1</biostatArc>
+        <abilities>
+            <li>SHG_MidasTouch</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_MidasTouch</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+</Defs>

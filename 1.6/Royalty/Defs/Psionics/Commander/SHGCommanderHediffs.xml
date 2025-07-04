@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Psionist_Encourage</defName>
+        <label>encourage</label>
+        <description>This pawn received encouragement from a Psionic Commander.</description>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <postFactor>1.1</postFactor>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <MentalBreakThreshold>-0.1</MentalBreakThreshold>
+                    <SHG_FearSusceptibility>-0.25</SHG_FearSusceptibility>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>True</showRemainingTime>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Psionist_Inspire</defName>
+        <label>inpired</label>
+        <description>This pawn received inspiration from a Psionic General.</description>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <postFactor>1.3</postFactor>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <MentalBreakThreshold>-0.3</MentalBreakThreshold>
+                    <SHG_FearSusceptibility>-0.5</SHG_FearSusceptibility>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>True</showRemainingTime>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Psionist_AssassinSquad</defName>
+        <label>assassination squad</label>
+        <description>This super has become invisible, and is also making nearby allies invisible.</description>
+        <comps>
+            <li Class="HediffCompProperties_Invisibility">
+                <visibleToPlayer>false</visibleToPlayer>
+                <fadeDurationTicks>60</fadeDurationTicks>
+                <recoverFromDisruptedTicks>90</recoverFromDisruptedTicks>
+            </li>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>True</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>10</range>
+                <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>true</canTargetAnimals>
+                    <canTargetMechs>True</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Psionist_AssassinSquad_Buff</hediff>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Psionist_AssassinSquad_Buff</defName>
+        <label>assassination squad</label>
+        <description>A nearby general is making this pawn invisible for a time.</description>
+        <comps>
+            <li Class="HediffCompProperties_Invisibility">
+                <visibleToPlayer>false</visibleToPlayer>
+                <fadeDurationTicks>60</fadeDurationTicks>
+                <recoverFromDisruptedTicks>90</recoverFromDisruptedTicks>
+            </li>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>False</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_Link">
+                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+                <maxDistance>10</maxDistance>
+                <customMote>SHG_Mote_Psionic</customMote>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Psionist_MassLevitation</defName>
+		<label>mass levitation</label>
+		<description>This Commander is temporarily floating in the air, and allies around them will do the same.</description>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="SuperHeroGenesBase.HediffCompProperties_TerrainCostOverride">
+                <universalCostOverride>0</universalCostOverride>
+            </li>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>True</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>20</range>
+                <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>true</canTargetAnimals>
+                    <canTargetMechs>True</canTargetMechs>
+                    <onlyTargetColonists>True</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Psionist_MassLevitation_Buff</hediff>
+            </li>
+		</comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Psionist_MassLevitation_Buff</defName>
+		<label>mass levitation</label>
+		<description>This pawn is floating in the air due to a nearby Psionic General.</description>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="SuperHeroGenesBase.HediffCompProperties_TerrainCostOverride">
+                <universalCostOverride>0</universalCostOverride>
+            </li>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>False</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_Link">
+                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+                <maxDistance>20</maxDistance>
+                <customMote>SHG_Mote_Psionic</customMote>
+            </li>
+		</comps>
+	</HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Psionist_Rally</defName>
+        <label>rally</label>
+        <description>This pawn feels like they can do anything thanks to a Psionic Paragon.</description>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <postFactor>1.5</postFactor>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <MentalBreakThreshold>-0.5</MentalBreakThreshold>
+                    <SHG_FearSusceptibility>-1</SHG_FearSusceptibility>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>True</showRemainingTime>
+            </li>
+        </comps>
+    </HediffDef>
+</Defs>

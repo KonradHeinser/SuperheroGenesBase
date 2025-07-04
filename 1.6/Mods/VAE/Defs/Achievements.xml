@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AchievementsExpanded.AchievementTabDef>
+		<defName>SHG_Achievements</defName>
+		<label>Superhero Genes</label>
+	</AchievementsExpanded.AchievementTabDef>
+
+    <AchievementsExpanded.AchievementDef Name="SHG_VAEBase" Abstract="true">
+		<bgtexPath>OtherSHG/AchievementBackground</bgtexPath>
+		<tab>SHG_Achievements</tab>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
+		<defName>SHG_BloodPillsObtained_Tier1</defName>
+		<label>Phenominal Cosmic Power, Ity Bity Living Space</label>
+		<description>Obtain a super creating pill, which can turn any pawn into a superhero.</description>
+		<tracker Class="AchievementsExpanded.ItemTracker">
+			<def>SHG_SuperCreatingPill</def>
+			<count>1</count>
+		</tracker>
+		<texPath>Drug/SHG_BloodPill/SHG_BloodPill_a</texPath>
+		<points>10</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
+		<defName>SHG_BloodPillsObtained_Tier2</defName>
+		<label>Creating a new league?</label>
+		<description>Have 10 super creating pills at the same time. Maybe you should use some of them now.</description>
+		<tracker Class="AchievementsExpanded.ItemTracker">
+			<def>SHG_SuperCreatingPill</def>
+			<count>10</count>
+		</tracker>
+		<texPath>Drug/SHG_BloodPill/SHG_BloodPill_b</texPath>
+		<points>100</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
+		<defName>SHG_IsThisThingOn</defName>
+		<label>Is This Thing On?</label>
+		<description>Use Psychic Disconnection to remove a pawn's psychic sensitivity temporarily.</description>
+		<tracker Class="AchievementsExpanded.HediffTracker">
+			<def>SHG_PsychicDisconnection</def>
+			<count>1</count>
+		</tracker>
+		<texPath>Powers/Gene_PsychicDisconnection</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
+		<defName>SHG_IllWakeYouUpLater</defName>
+		<label>I'll Wake You Up Later</label>
+		<description>Use the Regenesis ability on a pawn.</description>
+		<tracker Class="AchievementsExpanded.HediffTracker">
+			<def>SHG_Regenesis</def>
+			<count>1</count>
+		</tracker>
+		<texPath>Powers/Gene_Regenesis</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
+		<defName>SHG_ShakingInYourBoots</defName>
+		<label>Shaking in Your Boots</label>
+		<description>Have fear inflicted on any pawn. The severity of the fear does not matter.</description>
+		<tracker Class="AchievementsExpanded.HediffTracker">
+			<def>SHG_Fear</def>
+			<count>1</count>
+		</tracker>
+		<texPath>Psionist/Tyrant/Gene_Psionist_Dread</texPath>
+		<points>5</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<!--Psionic Achievements-->
+	
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+		<defName>SHG_GamblingIsFun</defName>
+		<label>Gambling is Fun</label>
+		<description>Have a total of 50 pawns get affected by an Astral Psionist Chaotic Planet ability.</description>
+		<tracker Class="AchievementsExpanded.HediffTracker">
+			<def>SHG_Psionist_Chaotic</def>
+			<count>50</count>
+		</tracker>
+		<texPath>Psionist/Dimensional/Gene_Psionist_Chaotic</texPath>
+		<points>50</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+		<defName>SHG_WhyIsThereALimit</defName>
+		<label>Why is There a Limit?</label>
+		<description>Start an Unshakable Team with a Psionic Unifier and wonder why it caps at 20 people.</description>
+		<tracker Class="AchievementsExpanded.HediffTracker">
+			<def>SHG_Psionist_UnshakableTeam</def>
+			<count>1</count>
+		</tracker>
+		<texPath>Psionist/Empath/Gene_Psionist_UnshakableTeam</texPath>
+		<points>50</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+		<defName>SHG_Stasis</defName>
+		<label>Stasis</label>
+		<description>Put a pawn into stasis. Not much of a long term fix, but it can help in the short term.</description>
+		<tracker Class="AchievementsExpanded.HediffTracker">
+			<def>SHG_Psionist_Stasis</def>
+			<count>1</count>
+		</tracker>
+		<texPath>Psionist/Soldier/Gene_Psionist_Stasis</texPath>
+		<points>15</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+		<defName>SHG_EmpiresWillFall</defName>
+		<label>Empires Will Fall</label>
+		<description>Have a Psionic Conqueror make their desire for world domination well known.</description>
+		<tracker Class="AchievementsExpanded.HediffTracker">
+			<def>SHG_Psionist_EmpiresWillFall</def>
+			<count>1</count>
+		</tracker>
+		<texPath>Psionist/Tyrant/Gene_Psionist_EmpiresWillFall</texPath>
+		<points>50</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<!--Hemomancer Achievements-->
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
+		<defName>SHG_Rampaaage</defName>
+		<label>RAMPAAAGE</label>
+		<description>Use the Hemopriest's bloodlust ability to make a pawn start rampaging.</description>
+		<tracker Class="AchievementsExpanded.HediffTracker">
+			<def>SHG_Hemomancer_Bloodlust</def>
+			<count>1</count>
+		</tracker>
+		<texPath>Hemomancer/Initiate/Gene_Hemomancer_Bloodlust</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
+		<defName>SHG_ItsLikeRemovingAndRegrowingALimb</defName>
+		<label>It's Like Removing and Regrowing a Limb</label>
+		<description>Use the Hemomorph's Starfish split ability. Please don't try this at home.</description>
+		<tracker Class="AchievementsExpanded.HediffTracker">
+			<def>SHG_Hemomancer_StarfishSplitting</def>
+			<count>1</count>
+		</tracker>
+		<texPath>Hemomancer/Shifter/Gene_Hemomancer_Starfish</texPath>
+		<points>50</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
+		<defName>SHG_MasterThief</defName>
+		<label>Master Thief</label>
+		<description>Have a hemo-thief with all three stealing buffs active at the same time.</description>
+		<tracker Class="AchievementsExpanded.MultiHediffTracker">
+			<defs>
+				<li>
+					<key>SHG_Hemomancer_StealPerceptiveness</key>
+					<value>1</value>
+				</li>
+				<li>
+					<key>SHG_Hemomancer_StealDefense</key>
+					<value>1</value>
+				</li>
+				<li>
+					<key>SHG_Hemomancer_StealStrength</key>
+					<value>1</value>
+				</li>
+			</defs>
+		</tracker>
+		<texPath>Hemomancer/Thief/Gene_Hemomancer_Thief</texPath>
+		<points>40</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
+		<defName>SHG_BathingInBlood</defName>
+		<label>Bathing in Blood</label>
+		<description>Have a hemo-warrior with all three basic buffs active at the same time.</description>
+		<tracker Class="AchievementsExpanded.MultiHediffTracker">
+			<defs>
+				<li>
+					<key>SHG_Hemomancer_BloodClawsBuff</key>
+					<value>1</value>
+				</li>
+				<li>
+					<key>SHG_Hemomancer_BloodArmor</key>
+					<value>1</value>
+				</li>
+				<li>
+					<key>SHG_Hemomancer_BloodInfusement</key>
+					<value>1</value>
+				</li>
+			</defs>
+		</tracker>
+		<texPath>Hemomancer/Warrior/Gene_Hemomancer_Champion</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
+		<defName>SHG_GiveMeAMinute</defName>
+		<label>Give Me a Minute!</label>
+		<description>Have a hemo-champion with True Regeneration lose any part. They'll be fine. Eventually.</description>
+		<tracker Class="AchievementsExpanded.MultiHediffTracker">
+			<defs>
+				<li>
+					<key>MissingBodyPart</key>
+					<value>1</value>
+				</li>
+				<li>
+					<key>SHG_Hemomancer_TrueRegeneration</key>
+					<value>1</value>
+				</li>
+			</defs>
+		</tracker>
+		<texPath>Hemomancer/Warrior/Gene_Hemomancer_TrueRegeneration</texPath>
+		<points>50</points>
+	</AchievementsExpanded.AchievementDef>
+</Defs>

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperGeneBase" Name="SuperDurabilityBase" Abstract="True">
+        <iconPath>Base/SuperDurability</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <exclusionTags>
+            <li>SuperDurabilities</li>
+            <li>RandomDurability</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="SuperHealingBase" Abstract="True">
+        <iconPath>Base/SuperHealing</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <geneClass>SuperHeroGenesBase.Gene_CustomizableClotting</geneClass>
+        <preventPermanentWounds>true</preventPermanentWounds>
+        <customEffectDescriptions>
+            <li>Bleeding wounds close very quickly.</li>
+        </customEffectDescriptions>
+        <hediffGiversCannotGive>
+            <li>Carcinoma</li>
+            <li>HeartAttack</li>
+            <li>BadBack</li>
+            <li>Frail</li>
+            <li>Cataract</li>
+            <li>Dementia</li>
+            <li>Alzheimers</li>
+            <li>Asthma</li>
+            <li>HeartArteryBlockage</li>
+        </hediffGiversCannotGive>
+        <exclusionTags>
+            <li>SuperHealings</li>
+            <li>Immunity</li>
+            <li>RandomHealing</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="SuperIntelligenceBase" Abstract="True">
+        <iconPath>Base/SuperIntelligence</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <exclusionTags>
+            <li>SuperIntelligences</li>
+            <li>RandomIntelligence</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="SuperPerceptionBase" Abstract="True">
+        <iconPath>Base/SuperPerception</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <exclusionTags>
+            <li>SuperPerceptions</li>
+            <li>RandomPerception</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="SuperPersuasionBase" Abstract="True">
+        <iconPath>Base/SuperPersuasion</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <exclusionTags>
+            <li>SuperPersuasions</li>
+            <li>RandomPersuasion</li>
+        </exclusionTags>
+    </GeneDef>
+    
+    <GeneDef ParentName="SuperGeneBase" Name="SuperPrecisionBase" Abstract="True">
+        <iconPath>Base/SuperPrecision</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <exclusionTags>
+            <li>SuperPrecisions</li>
+            <li>RandomPrecision</li>
+        </exclusionTags>
+    </GeneDef>
+    
+    <GeneDef ParentName="SuperGeneBase" Name="SuperSpeedBase" Abstract="True">
+        <iconPath>Base/SuperSpeed</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <exclusionTags>
+            <li>SuperSpeeds</li>
+            <li>RandomSpeed</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="SuperStrengthBase" Abstract="True">
+        <iconPath>Base/SuperStrength</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <exclusionTags>
+            <li>SuperStrengths</li>
+            <li>RandomStrength</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperDurabilityBase">
+        <defName>SuperDurability</defName>
+        <label>super durability</label>
+        <description>Supers with this gene are extremely resistant to standard types of damage.</description>
+        <displayOrderInCategory>7</displayOrderInCategory>
+        <biostatMet>-4</biostatMet>
+        <damageFactors>
+            <SHG_Beam>0.1</SHG_Beam>
+        </damageFactors>
+        <statFactors>
+            <IncomingDamageFactor>0.5</IncomingDamageFactor>
+            <SHG_StunSusceptibility>0.5</SHG_StunSusceptibility>
+        </statFactors>
+        <statOffsets>
+            <ArmorRating_Blunt>1</ArmorRating_Blunt>
+            <ArmorRating_Sharp>1</ArmorRating_Sharp>
+            <ArmorRating_Heat>1</ArmorRating_Heat>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperHealingBase">
+        <defName>SuperHealing</defName>
+        <label>super healing</label>
+        <description>Supers with this gene will one day die, but anything less than instant death will usually heal very quickly.</description>
+        <displayOrderInCategory>27</displayOrderInCategory> 
+        <biostatMet>-5</biostatMet>
+        <statFactors>
+            <LifespanFactor>3</LifespanFactor>
+            <ImmunityGainSpeed>10</ImmunityGainSpeed>
+            <InjuryHealingFactor>10</InjuryHealingFactor>
+        </statFactors>
+        <statOffsets>
+            <ImmunityGainSpeed>10</ImmunityGainSpeed>
+            <InjuryHealingFactor>10</InjuryHealingFactor>
+        </statOffsets>
+        <customEffectDescriptions>
+            <li MayRequire="EBSG.Framework">Completely stops fertility loss due to old age.</li>
+        </customEffectDescriptions>
+        <capMods>
+            <li>
+                <capacity>BloodFiltration</capacity>
+                <offset>1.0</offset>
+            </li>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <offset>1.0</offset>
+            </li>
+        </capMods>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <ClotCheckInterval>60</ClotCheckInterval>
+                <minTendQuality>0.8</minTendQuality>
+                <maxTendQuality>0.99</maxTendQuality>
+            </li>
+            <li Class="EBSGFramework.FertilityByGenderAgeExtension" MayRequire="EBSG.Framework">
+                <fertilityAgeFactor>
+                    <points>
+                        <li>(14, 0)</li>
+                        <li>(20, 1)</li>
+                        <li>(50, 1)</li>
+                    </points>
+                </fertilityAgeFactor>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperIntelligenceBase">
+        <defName>SuperIntelligence</defName>
+        <label>super intelligence</label>
+        <description>Supers with this gene have extremely efficient brains that make a neurocalculator look like a glorified abacus.</description>
+        <displayOrderInCategory>37</displayOrderInCategory>
+        <biostatMet>-4</biostatMet>
+        <statFactors>
+            <ResearchSpeed>3</ResearchSpeed>
+            <GlobalLearningFactor>3</GlobalLearningFactor>
+            <LearningRateFactor>3</LearningRateFactor>
+            <HackingSpeed MayRequire="ludeon.rimworld.ideology">3</HackingSpeed>
+            <SHG_StunSusceptibility>0.5</SHG_StunSusceptibility>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <offset>1.0</offset>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <offset>1.0</offset>
+            </li>
+        </capMods>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPerceptionBase">
+        <defName>SuperPerception</defName>
+        <label>super perception</label>
+        <description>Supers with this gene have hyperactive senses that allows them to observe their environment far better than most.</description>
+        <displayOrderInCategory>47</displayOrderInCategory>
+        <biostatMet>-2</biostatMet>
+        <statFactors>
+            <MeleeDodgeChance>2.5</MeleeDodgeChance>
+            <MeleeHitChance>2</MeleeHitChance>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Hearing</capacity>
+                <offset>1.0</offset>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <offset>1.0</offset>
+            </li>
+        </capMods>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPersuasionBase">
+        <defName>SuperPersuasion</defName>
+        <label>super persuasion</label>
+        <description>Supers with this gene excel at winning people over with their supernatural beauty and voice.</description>
+        <displayOrderInCategory>57</displayOrderInCategory>
+        <biostatMet>-4</biostatMet>
+        <statFactors>
+            <PawnBeauty>5</PawnBeauty>
+            <SocialImpact>3</SocialImpact>
+            <NegotiationAbility>3</NegotiationAbility>
+            <ConversionPower MayRequire="ludeon.rimworld.ideology">3</ConversionPower>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Hearing</capacity>
+                <offset>1.0</offset>
+            </li>
+            <li>
+                <capacity>Talking</capacity>
+                <offset>2.0</offset>
+            </li>
+        </capMods>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPrecisionBase">
+        <defName>SuperPrecision</defName>
+        <label>super precision</label>
+        <description>Supers with this gene can achieve levels of accuracy and bodily control that more mundane individuals can never hope to attain.</description>
+        <displayOrderInCategory>67</displayOrderInCategory>
+        <biostatMet>-4</biostatMet>
+        <statFactors>
+            <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+            <MeleeDodgeChance>5</MeleeDodgeChance>
+            <MeleeHitChance>3</MeleeHitChance>
+            <PawnTrapSpringChance>0.01</PawnTrapSpringChance>
+            <IncomingDamageFactor>0.9</IncomingDamageFactor>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <offset>1.0</offset>
+            </li>
+            <li>
+                <capacity>Breathing</capacity>
+                <offset>1.0</offset>
+            </li>
+        </capMods>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperSpeedBase">
+        <defName>SuperSpeed</defName>
+        <label>super speed</label>
+        <description>Supers with this gene can move so quickly that few beings can even keep track of them.</description>
+        <displayOrderInCategory>77</displayOrderInCategory>
+        <biostatMet>-5</biostatMet>
+        <statFactors>
+            <StaggerDurationFactor>0.01</StaggerDurationFactor>
+            <MeleeCooldownFactor>0.5</MeleeCooldownFactor>
+        </statFactors>
+        <statOffsets>
+            <AimingDelayFactor>-5</AimingDelayFactor>
+        </statOffsets>
+        <capMods>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <offset>1.0</offset>
+            </li>
+            <li>
+                <capacity>Breathing</capacity>
+                <offset>1.0</offset>
+            </li>
+            <li>
+                <capacity>Moving</capacity>
+                <offset>2.0</offset>
+            </li>
+            <li>
+                <capacity>Consciousness</capacity>
+                <offset>1.0</offset>
+            </li>
+        </capMods>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperStrengthBase">
+        <defName>SuperStrength</defName>
+        <label>super strength</label>
+        <description>Supers with this gene are exceptionally deadly in melee combat, and have an exceptionally high carry capacity.</description>
+        <displayOrderInCategory>87</displayOrderInCategory>
+        <biostatMet>-6</biostatMet>
+        <statFactors>
+            <CarryingCapacity>20</CarryingCapacity>
+            <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">20</VEF_MassCarryCapacity>
+            <CarryBulk MayRequire="ceteam.combatextended">20</CarryBulk>
+            <MeleeDamageFactor>7</MeleeDamageFactor>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <offset>2.0</offset>
+            </li>
+        </capMods>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase">
+        <defName>SuperGluttony</defName>
+        <label>super gluttony</label>
+        <description>Supers with this gene feel a constant hunger deep inside, and fulfilling that hunger allows their body to store far more food than normal.</description>
+        <iconPath>Base/SuperGluttony</iconPath>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>-3</displayOrderInCategory>
+        <foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+        <biostatMet>-1</biostatMet>
+        <statFactors>
+            <MaxNutrition>3</MaxNutrition>
+            <EatingSpeed>3</EatingSpeed>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>1.0</offset>
+          </li>
+        </capMods>
+        <exclusionTags>
+            <li>SuperGluttonies</li>
+        </exclusionTags>
+    </GeneDef>
+</Defs>

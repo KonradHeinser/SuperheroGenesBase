@@ -19,10 +19,6 @@ namespace SuperHeroGenesBase
 
         public bool allowAnimals = true;
 
-        public bool onlyMaleVictims = false;
-
-        public bool onlyFemaleVictims = false;
-
         public HediffCompProperties_HediffOnKill()
         {
             compClass = typeof(HediffComp_HediffOnKill);

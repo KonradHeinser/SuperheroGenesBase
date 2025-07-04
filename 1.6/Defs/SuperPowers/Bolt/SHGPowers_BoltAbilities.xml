@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef Abstract="true" Name="SHGPowerBoltBase" ParentName="SHGPowerAbilitiesBase">
+        <verbProperties>
+            <range>40</range>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_FireBolt</defName>
+        <label>fire bolt</label>
+        <description>Toss a bolt of summoned fire that will set a pawn on fire.</description>
+        <iconPath>Powers/Gene_FireBolt</iconPath>
+        <verbProperties>
+            <soundCast>Explosion_Flame</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Fire</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_AcidBolt</defName>
+        <label>acid bolt</label>
+        <description>Toss a bolt of summoned acid that will leave corrode any pawn that it hits.</description>
+        <iconPath>Powers/Gene_AcidBolt</iconPath>
+        <verbProperties>
+            <soundCast>AcidSpray_Resolve</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Acid</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_LightningBolt</defName>
+        <label>lightning bolt</label>
+        <description>Toss a bolt of summoned lightning that will electrocute whatever it hits. The damage is too destructive to cause an EMP effect.</description>
+        <iconPath>Powers/Gene_LightningBolt</iconPath>
+        <verbProperties>
+            <soundCast>Explosion_EMP</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Lightning</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_IceBolt</defName>
+        <label>ice bolt</label>
+        <description>Toss a bolt of summoned ice that inflicts debilitating frostbite.</description>
+        <iconPath>Powers/Gene_IceBolt</iconPath>
+        <verbProperties>
+            <soundCast>Foam_Impact</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Ice</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_ToxBolt</defName>
+        <label>toxic bolt</label>
+        <description>Toss a bolt of summoned poison that pierces into its target to inflict toxic buildup.</description>
+        <iconPath>Powers/Gene_ToxicBolt</iconPath>
+        <verbProperties>
+            <soundCast>PiercingSpine_Launch</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Toxic</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_EMPBolt</defName>
+        <label>emp bolt</label>
+        <description>Toss a bolt of summoned electricity that will disable electronics that it hits for a while.</description>
+        <iconPath>Powers/Gene_LightningBolt</iconPath>
+        <verbProperties>
+            <soundCast>Explosion_EMP</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_EMP</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_FoamBolt</defName>
+        <label>foam bolt</label>
+        <description>Toss a bolt of summoned foam that will douse flames on pawns and protect them from flames for a time.\n\nThis will NOT affect fires on the ground, items, or corpses.</description>
+        <iconPath>Powers/Gene_FoamBolt</iconPath>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <verbProperties>
+            <soundCast>Foam_Impact</soundCast>
+            <targetParams>
+                <canTargetCorpses>true</canTargetCorpses>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Foam</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_PetrificationBolt</defName>
+        <label>petrification bolt</label>
+        <description>Toss a bolt of infused stone that will flow through a targets blood stream to gradually petrify them.\n\nPetrification will not kill a target and gradually wears off. It is primarily for disabling people you want to capture.</description>
+        <iconPath>Powers/Gene_PetrifyBolt</iconPath>
+        <verbProperties>
+            <soundCast>BuildingDestroyed_Stone_Big</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Petrification</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBoltBase">
+        <defName>SHG_WaterBolt</defName>
+        <label>water bolt</label>
+        <description>Toss a bolt of summoned pressurized water that will cut a target and leave a weird substance on the target at the site of the wound that feels uncomfortable, but creates a thin coat of protective foam over their body similar to firefoam.</description>
+        <iconPath>Powers/Gene_WaterBolt</iconPath>
+        <statBases>
+            <Ability_EffectRadius>0.5</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <soundCast>Foam_Impact</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>SHG_Proj_Bolt_Water</projectileDef>
+            </li>
+            <li Class = "CompProperties_AbilityWaterskip" />
+        </comps>
+    </AbilityDef>
+</Defs>

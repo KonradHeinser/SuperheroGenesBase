@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!--Delete this file when 1.6 rolls around-->
+    <GeneDef ParentName="SuperPowersOffensiveBase" MayRequire="Sov.Homelander">
+        <defName>SHG_LaserEyes</defName>
+        <label>superhero laser eyes</label>
+        <description>This is an old gene kept for save compatability. If possible, try to remove this gene and add the SHG_NewLaserEyes gene to use the updated ability.</description>
+        <iconPath>Powers/LaserEyes</iconPath>
+        <displayOrderInCategory>999</displayOrderInCategory>
+        <marketValueFactor>5</marketValueFactor>
+        <abilities>
+            <li>SHG_LaserEyes</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_LaserEyes</AbilityDef>
+        </descriptionHyperlinks>
+        <biostatMet>-9</biostatMet>
+        <modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+				<hideGene>true</hideGene>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase" MayRequire="Sov.Homelander">
+        <defName>SHG_LaserEyes</defName>
+        <label>superhero laser eyes</label>
+        <description>This is an old ability linked to a gene kept for save compatability. If possible, try to remove the gene and add the SHG_NewLaserEyes gene to use the updated ability.</description>
+        <iconPath>Powers/LaserEyes</iconPath>
+        <cooldownTicksRange>300</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <targetRequired>true</targetRequired>
+        <showCastingProgressBar>false</showCastingProgressBar>
+        <verbProperties>
+            <verbClass>UFO.CastBeam.Verb_AbilityCastBeam</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <hasStandardCommand>true</hasStandardCommand>
+            <warmupTime>0.1</warmupTime>
+            <range>40</range>
+            <beamFullWidthRange>7</beamFullWidthRange>
+            <burstShotCount>20</burstShotCount>
+            <beamWidth>5</beamWidth>
+            <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+            <beamDamageDef>SHG_Beam</beamDamageDef>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+            <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
+            <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
+            <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+            <beamMaxDeviation>0.1</beamMaxDeviation>
+            <beamCurvature>0.1</beamCurvature>
+            <beamMoteDef>SHG_Mote_LaserEyeBeam</beamMoteDef>
+            <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
+            <beamChanceToStartFire>0</beamChanceToStartFire>
+            <beamChanceToAttachFire>0</beamChanceToAttachFire>
+            <beamFireSizeRange>0.55~0.85</beamFireSizeRange>
+            <beamLineFleckDef>Fleck_BeamSpark</beamLineFleckDef>
+            <beamStartOffset>0.8</beamStartOffset>
+            <beamLineFleckChanceCurve>
+                <points>
+                    <li>(0, 0)</li>
+                    <li>(0.65, 0)</li>
+                    <li>(1, 0)</li>
+                </points>
+            </beamLineFleckChanceCurve>
+            <targetParams>
+                <canTargetLocations>True</canTargetLocations>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetBuildings>True</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <ThingDef Abstract="true" Name="SuperPowersBlastBase">
+        <thingClass>Projectile_Explosive</thingClass>
+        <category>Projectile</category>
+        <tickerType>Normal</tickerType>
+        <altitudeLayer>Projectile</altitudeLayer>
+        <useHitPoints>False</useHitPoints>
+        <neverMultiSelect>True</neverMultiSelect>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.85</drawSize>
+        </graphicData>
+        <projectile>
+            <explosionRadius>1</explosionRadius>
+            <speed>50</speed>
+            <damageAmountBase>10</damageAmountBase>
+            <arcHeightFactor>0.4</arcHeightFactor>
+            <armorPenetrationBase>0.8</armorPenetrationBase>
+            <stoppingPower>1</stoppingPower>
+            <shadowSize>0</shadowSize>
+            <ai_IsIncendiary>true</ai_IsIncendiary>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Fire</defName>
+        <label>fire ball</label>
+        <graphicData>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
+            <shaderType>MoteGlow</shaderType>
+        </graphicData>
+        <projectile>
+            <damageDef>Flame</damageDef>
+            <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+            <filthCount>1</filthCount>
+            <soundExplode>Explosion_Flame</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Acid</defName>
+        <label>acid ball</label>
+        <graphicData>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
+            <shaderType>MoteGlow</shaderType>
+        </graphicData>
+        <projectile>
+            <damageDef>AcidBurn</damageDef>
+            <preExplosionSpawnThingDef>Filth_SpentAcid</preExplosionSpawnThingDef>
+            <filthCount>1</filthCount>
+            <soundExplode>AcidSpray_Resolve</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Lightning</defName>
+        <label>lightning ball</label>
+        <graphicData>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
+            <shaderType>MoteGlow</shaderType>
+        </graphicData>
+        <projectile>
+            <speed>100</speed>
+            <damageDef>SHG_Lightning</damageDef>
+            <soundExplode>Explosion_EMP</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Ice</defName>
+        <label>ice ball</label>
+        <graphicData>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
+        </graphicData>
+        <projectile>
+            <damageDef>SHG_Ice</damageDef>
+            <soundExplode>Foam_Impact</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Toxic</defName>
+        <label>toxic ball</label>
+        <graphicData>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
+        </graphicData>
+        <projectile>
+            <damageDef>ToxGas</damageDef>
+            <postExplosionGasType>ToxGas</postExplosionGasType>
+            <soundExplode>SHG_GasReleasing</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_EMP</defName>
+        <label>electricity ball</label>
+        <graphicData>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
+            <shaderType>MoteGlow</shaderType>
+        </graphicData>
+        <projectile>
+            <ai_IsIncendiary>false</ai_IsIncendiary>
+            <damageDef>EMP</damageDef>
+            <soundExplode>Explosion_EMP</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Foam</defName>
+        <label>foam ball</label>
+        <graphicData>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
+        </graphicData>
+        <projectile>
+            <ai_IsIncendiary>false</ai_IsIncendiary>
+            <damageAmountBase>9999</damageAmountBase>
+            <damageDef>Extinguish</damageDef>
+            <preExplosionSpawnThingDef>Filth_FireFoam</preExplosionSpawnThingDef>
+            <filthCount>1</filthCount>
+            <landedEffecter>ExtinguisherPuffSmall</landedEffecter>
+            <numExtraHitCells>10</numExtraHitCells>
+            <soundExplode>Foam_Impact</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Petrification</defName>
+        <label>petrification ball</label>
+        <graphicData>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
+        </graphicData>
+        <projectile>
+            <damageAmountBase>2</damageAmountBase>
+            <damageDef>SHG_Petrification</damageDef>
+            <preExplosionSpawnThingDef>Filth_RubbleRock</preExplosionSpawnThingDef>
+            <filthCount>1</filthCount>
+            <numExtraHitCells>10</numExtraHitCells>
+            <soundExplode>BuildingDestroyed_Stone_Big</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBlastBase">
+        <defName>SHG_Proj_Blast_Water</defName>
+        <label>water ball</label>
+        <graphicData>
+            <texPath>Things/Projectile/Acid/Acid_C</texPath>
+        </graphicData>
+        <projectile>
+            <damageDef>SHG_Water</damageDef>
+            <preExplosionSpawnThingDef>Filth_Water</preExplosionSpawnThingDef>
+            <filthCount>1</filthCount>
+            <numExtraHitCells>10</numExtraHitCells>
+            <soundExplode>Foam_Impact</soundExplode>
+            <speed>500</speed>      <!--It's really fast to both represent the high speed of pressurized water, and to help make the waterskip portion less intrusive-->
+        </projectile>
+    </ThingDef>
+
+    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Flight</defName>
+		<label>old flight</label>
+		<description>This super is always floating just a little bit off the ground, and their ability to move omnidirectionally makes it easier for them to move around quickly.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <MoveSpeed>1.5</MoveSpeed>
+                </statFactors>
+            </li>
+        </stages>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_Floating" />
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-240</severityPerDay>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_CreateOtherHediffs">
+                <hediffSets>
+                    <li>
+                        <hediffDef>SHG_Powers_Flight</hediffDef>
+                    </li>
+                </hediffSets>
+            </li>
+		</comps>
+	</HediffDef>
+
+    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Pools_WindStep</defName>
+		<label>wind step</label>
+		<description>This super is clumsily floating just a little bit off the ground, allowing them to move over all obstacles without issue with some minor mobility issues.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <StaggerDurationFactor>1.333</StaggerDurationFactor>
+                </statFactors>
+                <statOffsets>
+                    <AimingDelayFactor>.1</AimingDelayFactor>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <postFactor>0.90</postFactor>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_Floating" />
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>60000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+		</comps>
+	</HediffDef>
+</Defs>

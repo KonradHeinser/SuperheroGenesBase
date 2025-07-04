@@ -58,7 +58,7 @@ namespace SuperHeroGenesBase
 
             Faction faction = Find.FactionManager.FirstFactionOfDef(extension.faction);
             if (faction == null) return false;
-            return FactionCanBeGroupSource(faction, (Map)parms.target);
+            return FactionCanBeGroupSource(faction, parms);
         }
 
         protected override void SendLetter(IncidentParms parms, List<Pawn> pawns, TraderKindDef traderKind)

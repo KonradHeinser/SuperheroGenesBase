@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGSelfCastBase" Name="MinorAntisuperAbilityBase" Abstract="True">
+        <description>This ability will weaken the stats of everyone around this super for the next 12 hours, after which the super will lie comatose for 12 hours.\n\nCertain supers will have stats high enough to not care about this, but this will make supers unsuper, make unsupers twice as weak, and greatly penalize non-supers.</description>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>5</range>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase" Name="MajorAntisuperAbilityBase" Abstract="True">
+        <description>This ability will weaken the stats of everyone around this super for several hours, after which the super will lie comatose for 10 days.\n\nCertain supers will have stats high enough that this will just bring them to around normal super levels, but this will leave everyone else at unsuper level or lower.</description>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <verbProperties>
+            <range>20</range>
+        </verbProperties>
+    </AbilityDef>
+
+            <!--Anti-super Durability-->
+    <AbilityDef ParentName="MinorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Durability_MinorAura</defName>
+        <label>anti-durability aura(minor)</label>
+        <iconPath>Base/UnsuperDurability</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Durability_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="MajorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Durability_MajorAura</defName>
+        <label>anti-durability aura(major)</label>
+        <iconPath>Base/AntisuperDurability</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Durability_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+            <!--Anti-super Healing-->
+    <AbilityDef ParentName="MinorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Healing_MinorAura</defName>
+        <label>anti-healing aura(minor)</label>
+        <iconPath>Base/UnsuperHealing</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Healing_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="MajorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Healing_MajorAura</defName>
+        <label>anti-healing aura(major)</label>
+        <iconPath>Base/AntisuperHealing</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Healing_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+            <!--Anti-super Intelligence-->
+    <AbilityDef ParentName="MinorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Intelligence_MinorAura</defName>
+        <label>anti-intelligence aura(minor)</label>
+        <iconPath>Base/UnsuperIntelligence</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Intelligence_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="MajorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Intelligence_MajorAura</defName>
+        <label>anti-intelligence aura(major)</label>
+        <iconPath>Base/AntisuperIntelligence</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Intelligence_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+            <!--Anti-super Perception-->
+    <AbilityDef ParentName="MinorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Perception_MinorAura</defName>
+        <label>anti-perception aura(minor)</label>
+        <iconPath>Base/UnsuperPerception</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Perception_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="MajorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Perception_MajorAura</defName>
+        <label>anti-perception aura(major)</label>
+        <iconPath>Base/AntisuperPerception</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Perception_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+            <!--Anti-super Persuasion-->
+    <AbilityDef ParentName="MinorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Persuasion_MinorAura</defName>
+        <label>anti-persuasion aura(minor)</label>
+        <iconPath>Base/UnsuperPersuasion</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Persuasion_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="MajorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Persuasion_MajorAura</defName>
+        <label>anti-persuasion aura(major)</label>
+        <iconPath>Base/AntisuperPersuasion</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Persuasion_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+            <!--Anti-super Precision-->
+    <AbilityDef ParentName="MinorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Precision_MinorAura</defName>
+        <label>anti-precision aura(minor)</label>
+        <iconPath>Base/UnsuperPrecision</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Precision_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="MajorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Precision_MajorAura</defName>
+        <label>anti-precision aura(major)</label>
+        <iconPath>Base/AntisuperPrecision</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Precision_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+            <!--Anti-super Speed-->
+    <AbilityDef ParentName="MinorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Speed_MinorAura</defName>
+        <label>anti-speed aura(minor)</label>
+        <iconPath>Base/UnsuperSpeed</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Speed_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="MajorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Speed_MajorAura</defName>
+        <label>anti-speed aura(major)</label>
+        <iconPath>Base/AntisuperSpeed</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Speed_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+            <!--Anti-super Strength-->
+    <AbilityDef ParentName="MinorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Strength_MinorAura</defName>
+        <label>anti-strength aura(minor)</label>
+        <iconPath>Base/UnsuperStrength</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Speed_MinorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="MajorAntisuperAbilityBase">
+        <defName>SHG_AntiPower_Strength_MajorAura</defName>
+        <label>anti-strength aura(major)</label>
+        <iconPath>Base/AntisuperStrength</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_AntiPower_Strength_MajorAura</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

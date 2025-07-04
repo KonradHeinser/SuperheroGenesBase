@@ -22,7 +22,7 @@ namespace SuperHeroGenesBase
 
         public FactionDef roomFaction;
 
-        protected override bool CanResolveInt(ResolveParams parms)
+        protected override bool CanResolveInt(SketchResolveParams parms)
         {
             if (parms.rect.HasValue)
             {
@@ -31,13 +31,13 @@ namespace SuperHeroGenesBase
             return false;
         }
 
-        protected override void ResolveInt(ResolveParams parms)
+        protected override void ResolveInt(SketchResolveParams parms)
         {
             CellRect rect = parms.rect.Value;
 
             if (cornerThing != null)
             {
-                ResolveParams parms2 = parms;
+                SketchResolveParams parms2 = parms;
                 parms2.cornerThing = cornerThing;
                 parms2.requireFloor = true;
                 SketchResolverDefOf.AddCornerThings.Resolve(parms2);
@@ -51,7 +51,7 @@ namespace SuperHeroGenesBase
 
             if (wallEdgeThing != null)
             {
-                ResolveParams parms3 = parms;
+                SketchResolveParams parms3 = parms;
                 parms3.chance = 1f;
                 parms3.wallEdgeThing = wallEdgeThing;
                 SketchResolverDefOf.AddWallEdgeThings.Resolve(parms3);
@@ -59,7 +59,7 @@ namespace SuperHeroGenesBase
 
             if (centerThing != null)
             {
-                ResolveParams parms4 = parms;
+                SketchResolveParams parms4 = parms;
                 parms4.thingCentral = centerThing;
                 parms4.requireFloor = true;
                 SketchResolverDefOf.AddThingsCentral.Resolve(parms4);

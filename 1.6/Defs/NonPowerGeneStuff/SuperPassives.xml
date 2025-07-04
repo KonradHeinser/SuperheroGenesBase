@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersPassiveBase">
+        <defName>SHG_LesserSuperRegeneration</defName>
+        <label>lesser super regeneration</label>
+        <description>Supers with this gene can regrow a part every 24 hours. Appendages tend to take longer as fingers and toes will require an extra day each due to the complexity of the nerve rewiring.</description>
+        <biostatMet>-2</biostatMet>
+        <iconPath>Powers/Gene_SuperRegeneration</iconPath>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_LesserSuperRegeneration</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <HediffDef ParentName="SHG_HiddenHediffBase">
+		<defName>SHG_LesserSuperRegeneration</defName>
+		<label>lesser super regeneration</label>
+		<description>Once per day, a new part will regrow. Appendages tend to take longer as fingers and toes will require an extra day each.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
+                <regenSets>
+                    <li>
+                        <ticksToRegrowPart>60000</ticksToRegrowPart>
+                        <ticksToHealInterval>0</ticksToHealInterval>
+                    </li>
+                </regenSets>
+            </li>
+        </comps>	
+	</HediffDef>
+
+    <GeneDef ParentName="SuperPowersPassiveBase">
+        <defName>SHG_SuperRegeneration</defName>
+        <label>super regeneration</label>
+        <description>Supers with this gene gain a constant regeneration that is capable of restoring lost parts after a bit of time, in addition to being able to heal normal wounds.</description>
+        <biostatMet>-5</biostatMet>
+        <iconPath>Powers/Gene_SuperRegeneration</iconPath>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_SuperRegeneration</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <HediffDef ParentName="SHG_HiddenHediffBase">
+		<defName>SHG_SuperRegeneration</defName>
+		<label>super regeneration</label>
+		<description>This super is constantly regenerating. Even lost parts will return with a bit of time. Parts with more things attached, like arms, require extra time to properly regrow functioning appendages. Even regrowing fingers can take some time.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
+                <healWhileRegrowing>True</healWhileRegrowing>
+                <regenSets>
+                    <li>
+                        <ticksToRegrowPart>10000</ticksToRegrowPart>
+                        <repeatHealCount>10</repeatHealCount>
+                        <healAmount>0.3</healAmount>
+                    </li>
+                </regenSets>
+            </li>
+        </comps>	
+	</HediffDef>
+
+    <GeneDef ParentName="SuperPowersPassiveBase">
+        <defName>SHG_Restraint</defName>
+        <label>restraint</label>
+        <description>Supers with this gene can freely change the upper limits on how much damage they can do in melee combat.</description>
+        <biostatMet>0</biostatMet>
+        <iconPath>Powers/Gene_Restraint</iconPath>
+        <displayOrderInCategory>10</displayOrderInCategory>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_Restraint</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <AbilityDef Name="SHG_RestraintBase" ParentName="SHGSelfCastBase" Abstract="True">
+        <iconPath>Powers/Gene_Restraint</iconPath>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>600</cooldownTicksRange>
+        <aiCanUse>false</aiCanUse>
+        <verbProperties>
+            <warmupTime>0.1</warmupTime>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_RestraintBase">
+        <defName>SHG_Unrestrained</defName>
+        <label>unrestrained</label>
+        <description>No holding back.</description>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Restraint</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_RestraintBase">
+        <defName>SHG_Restrained</defName>
+        <label>restrained</label>
+        <description>Multiplies melee damage factor by 0.1.</description>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Restraint</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>1.1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_RestraintBase">
+        <defName>SHG_VeryRestrained</defName>
+        <label>very restrained</label>
+        <description>Multiplies melee damage factor by 0.01.</description>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Restraint</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <severity>2.1</severity>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+		<defName>SHG_Restraint</defName>
+		<label>restraint</label>
+		<description>How much this pawn is holding back.</description>
+        <stages>
+            <li />
+            <li>
+                <label>restrained</label>
+                <minSeverity>1.01</minSeverity>
+                <statFactors>
+                    <MeleeDamageFactor>0.1</MeleeDamageFactor>
+                </statFactors>
+            </li>
+            <li>
+                <label>very restrained</label>
+                <minSeverity>2.01</minSeverity>
+                <statFactors>
+                    <MeleeDamageFactor>0.01</MeleeDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_InvisibleAtStage">
+                <invisibleStages>
+                    <li>1</li>
+                </invisibleStages>
+            </li>
+            <li Class="SuperheroGenesBase.HediffCompProperties_GiveAbilityAtSeverity">
+                <abilitiesAtSeverities>
+                    <li>
+                        <abilityDef>SHG_Restrained</abilityDef>
+                        <maxSeverity>1</maxSeverity>
+                    </li>
+                    <li>
+                        <abilityDef>SHG_Unrestrained</abilityDef>
+                        <minSeverity>1.01</minSeverity>
+                        <maxSeverity>99</maxSeverity>
+                    </li>
+                    <li>
+                        <abilityDef>SHG_VeryRestrained</abilityDef>
+                        <minSeverity>1.01</minSeverity>
+                        <maxSeverity>2</maxSeverity>
+                    </li>
+                    <li> 
+                        <abilityDef>SHG_Restrained</abilityDef>
+                        <minSeverity>2.01</minSeverity>
+                        <maxSeverity>99</maxSeverity>
+                    </li>
+                </abilitiesAtSeverities>
+            </li>
+        </comps>	
+	</HediffDef>
+
+    <GeneDef ParentName="SuperPowersPassiveBase" MayRequire="EBSG.Framework">
+        <defName>SHG_EverGrowingPower</defName>
+        <label>ever-growing power</label>
+        <description>Supers with this gene constantly grow stronger as they fight more. Every time they are hit they become more durable, and every time they kill another humanlike foe they gain an increase in the damage they deal against all foes.</description>
+        <biostatArc>1</biostatArc>
+        <iconPath>Powers/Gene_EverGrowingPower</iconPath>
+        <displayOrderInCategory>10</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>This can take a long time to reach full power, but once they do reach that point, they are nigh unstoppable.</li>
+        </customEffectDescriptions>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_EverGrowingPower</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase" MayRequire="EBSG.Framework">
+        <defName>SHG_EverGrowingPower</defName>
+        <label>ever-growing power</label>
+        <description>Each time this pawn is hit they become more resilient, and every time they kill a humanlike foe they become more lethal overall.</description>
+        <initialSeverity>1</initialSeverity>
+        <maxSeverity>100</maxSeverity>
+        <stages>
+            <li>
+                <multiplyStatChangesBySeverity>true</multiplyStatChangesBySeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.99</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_DisplaySeverity">
+                <prependString>Durability : </prependString>
+                <appendString>%</appendString>
+                <roundDigits>0</roundDigits>
+            </li>
+            <li Class="EBSGFramework.HediffCompProperties_SeverityChangeWhenDamaged">
+                <cooldownTicks>30</cooldownTicks>
+                <severityChangeFactor>0.01</severityChangeFactor>
+            </li>
+            <li Class="EBSGFramework.HediffCompProperties_HediffOnKill">
+                <hediff>SHG_EverEvolving_Lethality</hediff>
+                <severityForFirstKill>0.1</severityForFirstKill>
+                <severityPerExtraKill>0.1</severityPerExtraKill>
+                <allowMechanoids>False</allowMechanoids>
+                <allowAnimals>False</allowAnimals>
+                <allowDryads>False</allowDryads>
+                <allowInsects>False</allowInsects>
+                <allowEntities>False</allowEntities>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <GeneDef ParentName="SuperPowersPassiveBase" MayRequire="EBSG.Framework">
+        <defName>SHG_Forcefield</defName>
+        <label>forcefield</label>
+        <description>Supers with this gene have a constantly regenerating forcefield around them that can block most bodily threats.\n\nThe strength and regeneration rate of this shield do not scale with anything, meaning the maximum will always be 200, and the recharge rate will always be 20/sec. If enough damage is dealt to break the shield, it will remain completely inactive for 10 seconds, afterwhich it will return at full strength.</description>
+        <biostatMet>-3</biostatMet>
+        <iconPath>Powers/Gene_Forcefield</iconPath>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <exclusionTags>
+            <li>SHG_Forcefield</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_Forcefield</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+    
+    <HediffDef ParentName="SHG_HiddenHediffBase" MayRequire="EBSG.Framework">
+        <defName>SHG_Forcefield</defName>
+        <label>forcefield</label>
+        <description>A constant forcefield is being generated around this pawn to protect them from damage.</description>
+        <comps>
+            <li Class="EBSGFramework.HediffCompProperties_Shield">
+                <maxEnergy>2</maxEnergy>
+                <energyRechargeRate>0.2</energyRechargeRate>
+                <blocksMeleeDamage>True</blocksMeleeDamage>
+                <gizmoTip>A constant forcefield protects this pawn from most harm.</gizmoTip>
+                <resetDelay>600</resetDelay>
+                <energyOnReset>1</energyOnReset>
+                <blockOverdamage>False</blockOverdamage>
+                <energyPerDamageModifier>0.01</energyPerDamageModifier>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <GeneDef ParentName="SuperPowersPassiveBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Phasing</defName>
+        <label>phasing</label>
+        <description>Supers with this gene can phase through walls and objects at will.</description>
+        <biostatMet>-5</biostatMet>
+        <iconPath>Powers/Gene_Phasing</iconPath>
+        <displayOrderInCategory>4</displayOrderInCategory>
+        <exclusionTags>
+            <li>SHG_Phasing</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_Phasing</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <HediffDef ParentName="SHG_HiddenHediffBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Phasing</defName>
+        <label>phasing</label>
+        <description>This pawn phases through obstacles.</description>
+        <comps>
+            <li Class="HediffCompProperties">
+				<compClass>VFECore.HediffComp_Phasing</compClass>
+			</li>
+        </comps>
+    </HediffDef>
+</Defs>

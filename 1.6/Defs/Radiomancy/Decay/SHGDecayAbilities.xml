@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Radiomancer_CellularDestabilization</defName>
+        <label>cellular destabilization</label>
+        <description>Bombard a pawn's body with radiation to induce vomiting, weaken their immune system, and potentially give them carcinoma.</description>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_CellularDestabilization</iconPath>
+        <verbProperties>
+            <range>10</range>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityAbilityValidator">
+                <targetHasNoneOfGenes>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </targetHasNoneOfGenes>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Radiomancer_CellularDestabilization</hediffDef>
+            </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>0.20</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef Name="SHG_Radiomancer_DrainLinkAbility" ParentName="SHGPowerAbilitiesBase" Abstract="True">
+        <description>Create a link between this radiomancer and another pawn to debuff the target while also increasing radiation regeneration.</description>
+        <cooldownTicksRange>10000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>168</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <requireLineOfSight>false</requireLineOfSight>
+            <targetParams>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetLocations>False</canTargetLocations>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetPlants>False</canTargetPlants>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityAbilityValidator">
+                <targetHasNoneOfGenes>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </targetHasNoneOfGenes>
+            </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>0.20</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_Radiomancer_DrainLinkAbility">
+        <defName>SHG_Radiomancer_DrainEnergy</defName>
+        <label>drain energy</label>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_DrainEnergy</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_CreateLinkedHediff">
+                <hediffOnCaster>SHG_Radiomancer_DrainEnergy</hediffOnCaster>
+                <hediffOnTarget>SHG_Radiomancer_DrainEnergy_Debuff</hediffOnTarget>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_Radiomancer_DrainLinkAbility">
+        <defName>SHG_Radiomancer_WeakenSkin</defName>
+        <label>weaken skin</label>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_WeakenSkin</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_CreateLinkedHediff">
+                <hediffOnCaster>SHG_Radiomancer_WeakenSkin</hediffOnCaster>
+                <hediffOnTarget>SHG_Radiomancer_WeakenSkin_Debuff</hediffOnTarget>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_Radiomancer_DrainLinkAbility">
+        <defName>SHG_Radiomancer_SapStrength</defName>
+        <label>sap strength</label>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_SapStrength</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_CreateLinkedHediff">
+                <hediffOnCaster>SHG_Radiomancer_SapStrength</hediffOnCaster>
+                <hediffOnTarget>SHG_Radiomancer_SapStrength_Debuff</hediffOnTarget>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_Radiomancer_DrainLinkAbility">
+        <defName>SHG_Radiomancer_DrainLife</defName>
+        <label>drain life</label>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_DrainLife</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_CreateLinkedHediff">
+                <hediffOnCaster>SHG_Radiomancer_DrainLife</hediffOnCaster>
+                <hediffOnTarget>SHG_Radiomancer_DrainLife_Debuff</hediffOnTarget>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHG_Radiomancer_DrainLinkAbility">
+        <defName>SHG_Radiomancer_SlowSynapses</defName>
+        <label>slow synapses</label>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_SlowSynapses</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_CreateLinkedHediff">
+                <hediffOnCaster>SHG_Radiomancer_SlowSynapses</hediffOnCaster>
+                <hediffOnTarget>SHG_Radiomancer_SlowSynapses_Debuff</hediffOnTarget>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Radiomancer_RapidAging</defName>
+        <label>rapid aging</label>
+        <description>Shoot a small amount of radiation into another pawn's body to cause their cells to begin rapidly deteriorating, making them age an entire decade over the span of one hour.</description>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_RapidAging</iconPath>
+        <statBases>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>30</range>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityAbilityValidator">
+                <targetHasNoneOfGenes>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </targetHasNoneOfGenes>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Radiomancer_RapidAging</hediffDef>
+                <replaceExisting>true</replaceExisting>
+            </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>0.30</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Radiomancer_DangerousAura</defName>
+        <label>dangerous aura</label>
+        <description>Release radioactive energy in an aura around the radiomancer to cause all non-radiomancer's to suffer penalties. This aura remains until dispelled, and drains radiation over time.</description>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_DangerousAura</iconPath>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Radiomancer_DangerousAura</hediffDef>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Radiomancer_DangerousAura_Deactivate</defName>
+        <label>stop aura</label>
+        <description>Stop releasing energy everywhere.</description>
+        <iconPath>Radiomancer/Decay/Gene_Radiomancer_DangerousAura</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityRemoveHediff">
+                <compClass>CompAbilityEffect_RemoveHediff</compClass>
+                <hediffDef>SHG_Radiomancer_DangerousAura</hediffDef>
+                <applyToSelf>True</applyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

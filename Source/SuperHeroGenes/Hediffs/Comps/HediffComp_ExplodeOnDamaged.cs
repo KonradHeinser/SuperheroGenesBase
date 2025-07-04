@@ -7,9 +7,12 @@ namespace SuperHeroGenesBase
 
         public int cooldownTicks = 0; // Not saved because this is just to avoid performance issues
 
-        public override void CompPostTick(ref float severityAdjustment)
+        public override void CompPostTickInterval(ref float severityAdjustment, int delta)
         {
-            if (cooldownTicks > 0) cooldownTicks--;
+            base.CompPostTickInterval(ref severityAdjustment, delta);
+
+            if (cooldownTicks > 0)
+                cooldownTicks -= delta;
         }
 
         public override void Notify_PawnPostApplyDamage(DamageInfo dinfo, float totalDamageDealt)

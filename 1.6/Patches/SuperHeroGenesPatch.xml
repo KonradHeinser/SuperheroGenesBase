@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationConditional"> <!--Stops players from taking superclotting when they have SuperHealing because SuperHealing has superclotting as part of it-->
+        <xpath>/Defs/GeneDef[defName="Superclotting"]/exclusionTags</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/GeneDef[defName="Superclotting"]/exclusionTags</xpath>
+            <value><li>SuperHealings</li></value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/GeneDef[defName="Superclotting"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>SuperHealings</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/StatDef[@Name="ArmorRatingBase"]/maxValue</xpath>
+        <match Class="PatchOperationRemove">
+            <xpath>Defs/StatDef[@Name="ArmorRatingBase"]/maxValue</xpath>
+        </match>
+    </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>condensedMeteors</setting>
+        <inactive Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="SHG_MineableResourceBase"]/building</xpath>
+            <value><smoothedThing /></value>
+        </inactive>
+    </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>multipleMutations</setting>
+        <active Class="PatchOperationRemove">
+            <xpath>Defs/GeneDef[@Name="SuperMutationsBase"]/exclusionTags</xpath>
+        </active>
+    </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>multipleArchetypes</setting>
+        <active Class="PatchOperationRemove">
+            <xpath>Defs/GeneDef[@Name="SHG_ArchetypeBase"]/exclusionTags</xpath>
+        </active>
+    </Operation>
+</Patch>

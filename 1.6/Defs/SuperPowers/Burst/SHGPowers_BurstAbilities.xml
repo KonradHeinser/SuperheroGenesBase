@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef Abstract="true" Name="SHGPowerBurstBase" ParentName="SHGSelfCastBase">
+        <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBurstBase">
+        <defName>SHG_FireBurst</defName>
+        <label>fire burst</label>
+        <description>Emit bursts of fire that set several things around the super on fire.\n\nUnlike other burst genes, this will not kick up a dust cloud as being on fire usually deters melee enemies, leaving the super free to take down ranged enemies.</description>
+        <iconPath>Powers/FireBurst</iconPath>
+        <verbProperties>
+            <soundCast>Explosion_Flame</soundCast>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityFireBurst">
+                <radius>5</radius>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBurstBase">
+        <defName>SHG_AcidBurst</defName>
+        <label>acid burst</label>
+        <description>Emit a burst of acid in all directions that corrodes anything it touches.\n\nThis will also kick up a dust cloud that may buy this super some time to heal themselves and plan their next move.</description>
+        <iconPath>Powers/Gene_AcidBurst</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
+                <radius>5</radius>
+				<damageDef>AcidBurn</damageDef>
+				<injureSelf>true</injureSelf>
+				<explosionSound>AcidSpray_Resolve</explosionSound>
+				<postExplosionThing>SHG_AcidGas</postExplosionThing>
+				<postExplosionThingChance>50</postExplosionThingChance>
+				<damageAmount>35</damageAmount>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBurstBase">
+        <defName>SHG_LightningBurst</defName>
+        <label>lightning burst</label>
+        <description>Emit a burst of electricity in all directions that burns anything it touches. This will simply burn through electronics instead of disabling them.\n\nThis will also kick up a dust cloud that may buy this super some time to heal themselves and plan their next move.</description>
+        <iconPath>Powers/Gene_LightningBurst</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
+                <radius>5</radius>
+				<damageDef>SHG_Lightning</damageDef>
+				<injureSelf>true</injureSelf>
+				<explosionSound>Explosion_EMP</explosionSound>
+				<postExplosionThing>SHG_ElectricrifiedCloud</postExplosionThing>
+				<postExplosionThingChance>50</postExplosionThingChance>
+				<damageAmount>35</damageAmount>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBurstBase">
+        <defName>SHG_IceBurst</defName>
+        <label>ice burst</label>
+        <description>Emit a burst of freezing cold in all directions that freezes anything it touches.\n\nThis will also kick up a dust cloud that may buy this super some time to heal themselves and plan their next move.</description>
+        <iconPath>Powers/Gene_IceBurst</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
+                <radius>5</radius>
+				<damageDef>SHG_Ice</damageDef>
+				<injureSelf>true</injureSelf>
+				<explosionSound>Foam_Impact</explosionSound>
+				<postExplosionThing>SHG_IceCloud</postExplosionThing>
+				<postExplosionThingChance>50</postExplosionThingChance>
+				<damageAmount>35</damageAmount>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBurstBase">
+        <defName>SHG_ToxicBurst</defName>
+        <label>toxic burst</label>
+        <description>Emit a burst of acid in all directions that corrodes anything it touches.\n\nThis will also kick up a dust cloud that may buy this super some time to heal themselves and plan their next move.</description>
+        <iconPath>Powers/Gene_ToxicBurst</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
+                <radius>5</radius>
+				<damageDef>SHG_ToxicCloud</damageDef>
+				<injureSelf>true</injureSelf>
+				<explosionSound>Explosion_Smoke</explosionSound>
+				<postExplosionThing>SHG_ToxicGas</postExplosionThing>
+				<postExplosionThingChance>50</postExplosionThingChance>
+				<damageAmount>2</damageAmount> <!--A damage of 10 causes instant death by toxicity at standard resistance-->
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBurstBase">
+        <defName>SHG_EMPBurst</defName>
+        <label>EMP burst</label>
+        <description>Emit an EMP burst in all directions that disables all electronics for a time.\n\nThis will also kick up a dust cloud that may buy this super some time to heal themselves and plan their next move.</description>
+        <iconPath>Powers/Gene_LightningBurst</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
+                <radius>5</radius>
+				<damageDef>EMP</damageDef>
+				<injureSelf>true</injureSelf>
+				<explosionSound>Explosion_EMP</explosionSound>
+				<postExplosionThing>SHG_ElectricrifiedCloud</postExplosionThing>
+				<postExplosionThingChance>50</postExplosionThingChance>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBurstBase">
+        <defName>SHG_FoamBurst</defName>
+        <label>foam burst</label>
+        <description>Emit a burst of foam in all directions that removes fires and protects all pawns in the area from catching fire. This protection will only prevent the pawn from catching fire, and doesn't do anything against fire damage itself.\n\nThis will also kick up a dust cloud that may buy this super some time to get a fallen ally out of the area.</description>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <iconPath>Powers/Gene_FoamBurst</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
+                <radius>5</radius>
+				<damageDef>Extinguish</damageDef>
+				<injureSelf>true</injureSelf>
+				<explosionSound>Foam_Impact</explosionSound>
+				<postExplosionThing>Filth_FireFoam</postExplosionThing>
+				<postExplosionThingChance>50</postExplosionThingChance>
+				<damageAmount>9999</damageAmount>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBurstBase">
+        <defName>SHG_PetrificationBurst</defName>
+        <label>petrification burst</label>
+        <description>Emit a burst of infused stone that invades the bloodstreams of everyone at the explosion sight. People will not become completely petrified by a single blast, and any pawns with a larger body size or innate blunt armor will be somewhat resistant to petrification.\n\nThis will also kick up a dust cloud that may buy this super some time to allow the super to move away from the area to recover from the side effects of this ability, or to double down and use it again.</description>
+        <iconPath>Powers/Gene_PetrifyBurst</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
+                <radius>5</radius>
+				<damageDef>SHG_Petrification</damageDef>
+				<injureSelf>true</injureSelf>
+				<explosionSound>BuildingDestroyed_Stone_Big</explosionSound>
+				<postExplosionThing>Filth_RubbleRock</postExplosionThing>
+				<postExplosionThingChance>50</postExplosionThingChance>
+				<damageAmount>1</damageAmount>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBurstBase">
+        <defName>SHG_WaterBurst</defName>
+        <label>water burst</label>
+        <description>Emit a burst of pressurized water that shoots in all directions around the pawn. This will put out fires and stick clumps of a weird watery foam to everyone that feels very uncomfortable, but protects them similar to firefoam.\n\nThis will also kick up a dust cloud that may buy this super some time to allow the super to move away from the area to recover from the side effects of this ability, or to double down and use it again.</description>
+        <iconPath>Powers/Gene_WaterBurst</iconPath>
+        <statBases>
+            <Ability_EffectRadius>5</Ability_EffectRadius>
+        </statBases>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
+                <radius>5</radius>
+				<damageDef>SHG_Water</damageDef>
+				<injureSelf>true</injureSelf>
+				<explosionSound>Foam_Impact</explosionSound>
+				<postExplosionThing>Filth_Water</postExplosionThing>
+				<postExplosionThingChance>50</postExplosionThingChance>
+				<damageAmount>35</damageAmount>
+            </li>
+            <li Class = "CompProperties_AbilityWaterskip" />
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerBurstBase">
+        <defName>SHG_SmokeBomb</defName>
+        <label>smoke bomb</label>
+        <description>Emit a burst of smoke that stuns everyone around you.\n\nThis will also kick up a dust cloud that may buy this super some time to get out of the area as it makes it more difficult to shoot through the area.</description>
+        <iconPath>Powers/Gene_SmokeBomb</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
+                <radius>5</radius>
+				<damageDef>Stun</damageDef>
+				<injureSelf>false</injureSelf>
+				<explosionSound>MortarBomb_Explode</explosionSound>
+				<damageAmount>15</damageAmount>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

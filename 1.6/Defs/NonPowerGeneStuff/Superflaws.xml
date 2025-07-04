@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SHG_FlawBase" MayRequire="EBSG.Framework">
+        <defName>SHG_Flaw_Weaponless</defName>
+        <label>weaponless</label>
+        <description>Supers with this gene are unable to use any sort of weapon other than their fists and maybe some unique tools.</description>
+        <iconPath>Flaws/Gene_Weaponless</iconPath>
+        <geneClass>EBSGFramework.SpawnAgeLimiter</geneClass>
+        <displayOrderInCategory>50</displayOrderInCategory>
+        <biostatMet>4</biostatMet>
+        <exclusionTags>
+            <li>SHG_Weaponless</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="EBSGFramework.EquipRestrictExtension">
+                <noWeapons>True</noWeapons>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_FlawBase" MayRequire="EBSG.Framework">
+        <defName>SHG_Flaw_Appareless</defName>
+        <label>appareless</label>
+        <description>Supers with this gene are unable to use any sort of apparel.</description>
+        <iconPath>Flaws/Gene_Appareless</iconPath>
+        <geneClass>EBSGFramework.SpawnAgeLimiter</geneClass>
+        <displayOrderInCategory>51</displayOrderInCategory>
+        <biostatMet>6</biostatMet>
+        <exclusionTags>
+            <li>SHG_Appareless</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="EBSGFramework.EquipRestrictExtension">
+                <noApparel>True</noApparel>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_FlawBase" MayRequire="EBSG.Framework">
+        <defName>SHG_Flaw_Equipmentless</defName>
+        <label>equipmentless</label>
+        <description>Supers with this gene are unable to use any sort of equipment.\n\n\nMuscles not included. Terms and conditions may apply. Please don't text and fight.</description>
+        <iconPath>Flaws/Gene_Equipmentless</iconPath>
+        <geneClass>EBSGFramework.SpawnAgeLimiter</geneClass>
+        <displayOrderInCategory>52</displayOrderInCategory>
+        <biostatMet>10</biostatMet>
+        <exclusionTags>
+            <li>SHG_Weaponless</li>
+            <li>SHG_Appareless</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="EBSGFramework.EquipRestrictExtension">
+                <noEquipment>True</noEquipment>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_FlawBase">
+        <defName>SHG_Flaw_Bloodthirsty</defName>
+        <label>bloodthirsty</label>
+        <description>Hemomancer's with this gene burn through hemogen at an unsustainable rate, causing they constantly seek to kill other beings to convert their blood into hemogen.</description>
+        <prerequisite>SHG_Archetypes_Hemomancer</prerequisite>
+        <geneClass>SuperHeroGenesBase.Gene_HemoHediffAdder</geneClass>
+        <displayOrderInCategory>200</displayOrderInCategory>
+        <iconPath>Flaws/Gene_Bloodthirsty</iconPath>
+        <resourceLossPerDay>1.2</resourceLossPerDay>
+        <resourceLabel>hemogen</resourceLabel>
+        <causesNeed>SHG_Flaw_Bloodthirsty</causesNeed>
+        <biostatMet>7</biostatMet>
+        <minAgeActive>13</minAgeActive>
+        <customEffectDescriptions>
+            <li>The hemogen loss can be countered using any source, including genes.</li>
+            <li>Everytime this pawn kills a pawn that can bleed, some (and sometimes all) of the victim's remaining blood is converted into hemogen. It doesn't matter if the kill is with a ranged weapon, only that this pawn is the direct instigator.</li>
+            <li>The bloodthirst need can also be satisfied by any kill, though melee kills will provide more reprieve.</li>
+        </customEffectDescriptions>
+        <exclusionTags>
+            <li>KillThirst</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_Flaw_Bloodthirsty</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <NeedDef> <!--For a less hard-coded variant take a look at the EBSG Framework's murderous need class-->
+        <defName>SHG_Flaw_Bloodthirsty</defName>
+        <needClass>SuperHeroGenesBase.Need_BloodThirst</needClass>
+        <label>bloodthirst</label>
+        <description>This person just wants to kill things and doesn't care too much how it happens. A good ol' slice and dice would be ideal though.</description>
+        <baseLevel>0</baseLevel>
+        <minIntelligence>ToolUser</minIntelligence>
+        <colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
+        <onlyIfCausedByGene>true</onlyIfCausedByGene>
+    </NeedDef>
+
+    <ThoughtDef>
+        <defName>SHG_Flaw_Bloodthirsty</defName>
+        <thoughtClass>SuperHeroGenesBase.Thought_Situational_Bloodthirsty</thoughtClass>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_Bloodthirsty</workerClass>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>bloodthirsty</label>
+                <description>Must kill... it has been too long since I have killed somebody.</description>
+                <baseMoodEffect>-1</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <GeneDef ParentName="SHG_FlawBase">
+        <defName>SHG_Flaw_SuperMoodyAura</defName>
+        <label>super moody aura</label>
+        <description>Supers with this gene really brings down the mood wherever they go. It's really sad really.</description>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <iconPath>Flaws/Gene_SuperMoodyAura</iconPath>
+        <biostatMet>4</biostatMet>
+        <customEffectDescriptions>
+            <li>All pawns within a range of 50 get a -10 mood debuff.</li>
+        </customEffectDescriptions>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_Flaw_SuperMoodyAura</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <ThoughtDef>
+        <defName>SHG_Flaw_SuperMoodyAura</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>SHG_Flaw_SuperMoodyAura_Debuff</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>moody aura</label>
+                <description>I feel kind of sad for some reason.</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <GeneDef ParentName="SHG_FlawBase">
+        <defName>SHG_Flaw_OverchargedPocket</defName>
+        <label>overcharged pocket</label>
+        <description>Radiomancers with this gene have a pocket of energy in them that they constantly stabilize, but when they die it will cause a massive explosion.</description>
+        <iconPath>Flaws/Gene_OverchargedPocket</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <prerequisite>SHG_Archetypes_Radiomancer</prerequisite>
+        <displayOrderInCategory>300</displayOrderInCategory>
+        <biostatMet>5</biostatMet>
+        <customEffectDescriptions>
+            <li>The radiomancer's death causes an explosion with the same power as I Am Become Death at 50 radiation.</li>
+        </customEffectDescriptions>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_Flaw_OverchargedPocket</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_FlawBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+        <defName>SHG_Flaw_Moonbound</defName>
+        <label>moonbound</label>
+        <description>Psionists with this gene only have psychic sensitivity when standing in an area with 40% light or lower.</description>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <displayOrderInCategory>100</displayOrderInCategory>
+        <iconPath>Flaws/Gene_Moonbound</iconPath>
+        <biostatMet>2</biostatMet>
+        <exclusionTags>
+            <li>SHG_Flaw_BoundPsionist</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_Flaw_Moonbound</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_FlawBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+        <defName>SHG_Flaw_Sunbound</defName>
+        <label>sunbound</label>
+        <description>Psionists with this gene only have psychic sensitivity when standing in an area with 60% light or higher.</description>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <displayOrderInCategory>101</displayOrderInCategory>
+        <iconPath>Flaws/Gene_Sunbound</iconPath>
+        <biostatMet>2</biostatMet>
+        <exclusionTags>
+            <li>SHG_Flaw_BoundPsionist</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_Flaw_Sunbound</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <HediffDef ParentName="SHG_HiddenHediffBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+        <defName>SHG_RandomPsionicFlaw</defName>
+        <label>generating new genes</label>
+        <description>This psionist will soon have either the sunbound or moonbound gene.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
+                <geneSets>
+                    <li>
+                        <geneSet>
+                            <li>SHG_Flaw_Moonbound</li>
+                        </geneSet>
+                    </li>
+                    <li>
+                        <geneSet>
+                            <li>SHG_Flaw_Sunbound</li>
+                        </geneSet>
+                    </li>
+                </geneSets>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <GeneDef ParentName="SHG_FlawBase">
+        <defName>SHG_Flaw_SuperRecluse</defName>
+        <label>super recluse</label>
+        <description>Supers with this gene hate being around groups of people to an unbelievable extent.</description>
+        <iconPath>Flaws/Gene_SuperRecluse</iconPath>
+        <displayOrderInCategory>10</displayOrderInCategory>
+        <biostatMet>3</biostatMet>
+        <customEffectDescriptions>
+            <li>This acts as a very potent variation of the vanilla recluse trait, with a notable mood bonus while alone.</li>
+        </customEffectDescriptions>
+    </GeneDef>
+
+    <ThoughtDef>
+        <defName>SHG_Flaw_SuperRecluse</defName>
+        <thoughtClass>SuperheroGenesBase.Thought_Situational_PeopleInColony</thoughtClass>
+        <workerClass>SuperheroGenesBase.ThoughtWorker_PeopleInColony</workerClass>
+        <requiredGenes>
+            <li>SHG_Flaw_SuperRecluse</li>
+        </requiredGenes>
+        <stages>
+            <li>
+                <label>super recluse alone</label>
+                <description>It's a relief not to have to think about other people.</description>
+                <baseMoodEffect>20</baseMoodEffect>
+            </li>
+            <li>
+                <label>super recluse in small group</label>
+                <description>I'm happy I don't have too many people to think about. Alone would be better, but this is good too.</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+            <li>
+                <label>super recluse in group</label>
+                <description>This is starting to get out of hand with how many people there are here.</description>
+                <baseMoodEffect>0</baseMoodEffect>
+            </li>
+            <li>
+                <label>super recluse crowded</label>
+                <description>There's too many people around here. The weight of having to think about them bears down on me.</description>
+                <baseMoodEffect>-15</baseMoodEffect>
+            </li>
+            <li>
+                <label>super recluse very crowded</label>
+                <description>There are so many people I'm supposed to be working with. They're overwhelming.</description>
+                <baseMoodEffect>-30</baseMoodEffect>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperheroGenesBase.SHGExtension">
+                <peopleToMoodCurve>
+                    <points>
+                        <li>(1, 20)</li>
+                        <li>(2, 17)</li>
+                        <li>(3, 14)</li>
+                        <li>(4, 10)</li>
+                        <li>(5, 7)</li>
+                        <li>(6, 4)</li>
+                        <li>(7, 0)</li>
+                        <li>(10, 0)</li>
+                        <li>(11, -5)</li>
+                        <li>(12, -10)</li>
+                        <li>(13, -15)</li>
+                        <li>(14, -20)</li>
+                        <li>(15, -25)</li>
+                        <li>(16, -30)</li>
+                    </points>
+                </peopleToMoodCurve>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+    <GeneDef ParentName="SHG_FlawBase">
+        <defName>SHG_Flaw_TheLonelyKnight</defName>
+        <label>the lonely knight</label>
+        <description>Supers with this gene innately believe they can do just about anything alone or with just a single companion.</description>
+        <iconPath>Flaws/Gene_TheLonelyKnight</iconPath>
+        <displayOrderInCategory>11</displayOrderInCategory>
+        <biostatMet>5</biostatMet>
+        <customEffectDescriptions>
+            <li>This super has an extremely high mood bonus while alone or with only one companion, but that mood bonus quickly becomes a massive penalty the more people there are, reaching -60 at a population of 16.</li>
+        </customEffectDescriptions>
+    </GeneDef>
+
+    <ThoughtDef>
+        <defName>SHG_Flaw_TheLonelyKnight</defName>
+        <thoughtClass>SuperheroGenesBase.Thought_Situational_PeopleInColony</thoughtClass>
+        <workerClass>SuperheroGenesBase.ThoughtWorker_PeopleInColony</workerClass>
+        <requiredGenes>
+            <li>SHG_Flaw_TheLonelyKnight</li>
+        </requiredGenes>
+        <stages>
+            <li>
+                <label>the lonely knight</label>
+                <description>Nothing around to disrupt my focus. Good.</description>
+                <baseMoodEffect>30</baseMoodEffect>
+            </li>
+            <li>
+                <label>lonely knight in small group</label>
+                <description>Even the mightiest of heroes accept help when they need it. I just need to make sure they don't become a burden.</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+            <li>
+                <label>lonely knight in group</label>
+                <description>This is getting out of hand with how many people there are here. Maybe some of them should go somewhere safer.</description>
+                <baseMoodEffect>-15</baseMoodEffect>
+            </li>
+            <li>
+                <label>lonely knight crowded</label>
+                <description>There's too many people around here. The weight of having to think about them bears down on me.</description>
+                <baseMoodEffect>-30</baseMoodEffect>
+            </li>
+            <li>
+                <label>lonely knight very crowded</label>
+                <description>There are so many people I'm supposed to be working with. Maybe I should leave.</description>
+                <baseMoodEffect>-60</baseMoodEffect>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperheroGenesBase.SHGExtension">
+                <peopleToMoodCurve>
+                    <points>
+                        <li>(1, 30)</li>
+                        <li>(2, 30)</li>
+                        <li>(3, 15)</li>
+                        <li>(4, 0)</li>
+                        <li>(5, -5)</li>
+                        <li>(6, -10)</li>
+                        <li>(10, -30)</li>
+                        <li>(16, -60)</li>
+                    </points>
+                </peopleToMoodCurve>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+    <GeneDef ParentName="SHG_FlawBase">
+        <defName>SHG_NoNaturalHealing</defName>
+        <label>no natural healing</label>
+        <description>Supers with this gene are completely incapable of healing naturally, though effects that directly heal or regerate will still work.</description>
+        <iconPath>Flaws/Gene_NoNaturalHealing</iconPath>
+        <statFactors>
+            <InjuryHealingFactor>0</InjuryHealingFactor>
+        </statFactors>
+        <biostatMet>5</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>soft</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>WoundHealingRate</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <conflictingGenes>
+                    <li>SHG_Radiomancer_SolarRegeneration</li>
+                    <li>SHG_Hemomancer_TrueRegeneration</li>
+                    <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_PsionicRegeneration</li>
+                </conflictingGenes>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_FlawBase">
+        <defName>SHG_SameTrickPony</defName>
+        <label>same trick pony</label>
+        <description>Supers with this gene are unable to learn new skills without using something that directly increases their skill level like a gene, implant, item, or ability.</description>
+        <iconPath>Flaws/Gene_SameTrickPony</iconPath>
+        <statFactors>
+            <GlobalLearningFactor>0</GlobalLearningFactor>
+            <LearningRateFactor MayRequire="ChildrenCanLearnFast.Mod">0</LearningRateFactor>
+        </statFactors>
+        <biostatMet>5</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>thag</symbol></li>
+                <li><symbol>grunt</symbol></li>
+                <li><symbol>slow</symbol></li>
+                <li><symbol>dull</symbol></li>
+                <li><symbol>dumb</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>grunt</symbol></li>
+                <li><symbol>dafty</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>Learning</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SHG_FlawBase">
+        <defName>SHG_SuperPyrophobia</defName>
+        <label>super pyrophobia</label>
+        <description>Supers with this gene are terrified of fire, and have a good reason for it.</description>
+        <displayOrderInCategory>21</displayOrderInCategory>
+        <damageFactors>
+            <Flame>10</Flame>
+        </damageFactors>
+        <customEffectDescriptions>
+            <li>May have a mental breakdown when near fires.</li>
+        </customEffectDescriptions>
+        <suppressedTraits>
+            <li>
+                <def>Pyromaniac</def>
+            </li>
+        </suppressedTraits>
+        <iconPath>UI/Icons/Genes/Gene_FireTerror</iconPath>
+        <mentalBreakMtbDays>0.1</mentalBreakMtbDays>
+        <mentalBreakDef>FireTerror</mentalBreakDef>
+        <biostatMet>9</biostatMet>
+        <exclusionTags>
+            <li>FireDamage</li>
+            <li>Archetypes_PyromancerFireBlast</li>
+            <li>Archetypes_PyromancerFireBolt</li>
+            <li>Archetypes_PyromancerFireBurst</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <conflictingGenes>
+                    <li>FireTerror</li>
+                </conflictingGenes>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <ThoughtDef>
+        <defName>Pyrophobia</defName>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_NearFire</workerClass>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <requiredGenes>
+            <li>SHG_SuperPyrophobia</li>
+        </requiredGenes>
+        <stages>
+            <li>
+                <label>afraid of fire</label>
+                <description>The flames make me so nervous. Such searing heat - I feel like it will leap at me at any moment!</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <GeneDef ParentName="SHG_FlawBase">
+        <defName>SHG_Hydrophobia</defName>
+        <label>hydrophobia</label>
+        <description>Supers with this gene have an irrational fear of water, and may end up running away any time they are near any notable body of water.</description>
+        <displayOrderInCategory>22</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>May have a mental breakdown when near bodies of water.</li>
+        </customEffectDescriptions>
+        <iconPath>Flaws/Gene_Hydrophobia</iconPath>
+        <mentalBreakMtbDays>0.3</mentalBreakMtbDays>
+        <mentalBreakDef>SHG_Hydrophobia</mentalBreakDef>
+        <biostatMet>4</biostatMet>
+        <exclusionTags>
+            <li>Archetypes_HydromancerWaterBlast</li>
+            <li>Archetypes_FirefighterWaterBlast</li>
+            <li>Archetypes_HydromancerWaterBolt</li>
+            <li>Archetypes_HydromancerWaterBurst</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <conflictingGenes>
+                    <li MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">SHG_Psionist_Ocean</li>
+                </conflictingGenes>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <ThoughtDef>
+        <defName>SHG_Hydrophobia</defName>
+        <workerClass>SuperHeroGenesBase.ThoughtWorker_NearWater</workerClass>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <requiredGenes>
+            <li>SHG_Hydrophobia</li>
+        </requiredGenes>
+        <stages>
+            <li>
+                <label>hydrophobia</label>
+                <description>Water be scary. Stay away from it.</description>
+                <baseMoodEffect>0</baseMoodEffect>
+            </li>
+            <li>
+                <label>hydrophobia</label>
+                <description>The water makes me so nervous. What lies hidden within it, just waiting for me to drop my guard?</description>
+                <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+        </stages>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <radius>9.9</radius>
+            </li>
+        </modExtensions>
+    </ThoughtDef>
+
+    <MentalBreakDef>
+        <defName>SHG_Hydrophobia</defName>
+        <label>hydrophobia</label>
+        <intensity>Minor</intensity>
+        <workerClass>SuperHeroGenesBase.MentalBreakWorker_Hydrophobia</workerClass>
+        <mentalState>SHG_Hydrophobia</mentalState>
+        <requiredGene>SHG_Hydrophobia</requiredGene>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <radius>9.9</radius>
+            </li>
+        </modExtensions>
+    </MentalBreakDef>
+    
+    <MentalStateDef ParentName="BaseMentalState">
+        <defName>SHG_Hydrophobia</defName>
+        <label>panic-fleeing water</label>
+        <stateClass>SuperHeroGenesBase.MentalState_PanicFleeWater</stateClass>
+        <category>Misc</category>
+        <nameColor>(0.65, 0.9, 0.93)</nameColor>
+        <beginLetterLabel>fleeing water</beginLetterLabel>
+        <beginLetter>{0} is fleeing from a body of water.</beginLetter>    
+        <recoveryMessage>{0} is no longer fleeing from water.</recoveryMessage>
+        <baseInspectLine>Mental state: Fleeing from water</baseInspectLine>
+        <blockNormalThoughts>true</blockNormalThoughts>
+        <minTicksBeforeRecovery>60</minTicksBeforeRecovery>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <radius>14.9</radius>
+            </li>
+        </modExtensions>
+    </MentalStateDef>
+</Defs>

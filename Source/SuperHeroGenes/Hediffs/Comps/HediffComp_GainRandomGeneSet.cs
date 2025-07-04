@@ -5,35 +5,18 @@ namespace SuperHeroGenesBase
     public class HediffComp_GainRandomGeneSet : HediffComp
     {
         public HediffCompProperties_GainRandomGeneSet Props => (HediffCompProperties_GainRandomGeneSet)props;
-        public int delayTicks;
+        public int delayTicks = 10;
 
-        public override void CompPostPostAdd(DamageInfo? dinfo)
+        public override void CompPostTickInterval(ref float severityAdjustment, int delta)
         {
-            if (Props.delayTicks < 10) // To avoid potential issues of having multiple things happen to a pawn at spawn, wait several ticks
-            {
-                delayTicks = 10;
-            }
-            else
-            {
-                delayTicks = Props.delayTicks;
-            }
-        }
+            base.CompPostTickInterval(ref severityAdjustment, delta);
 
-        public override void CompPostTick(ref float severityAdjustment)
-        {
-            if (delayTicks < 0) return;
-            if (delayTicks == 0)
+            delayTicks -= delta;
+            if (delayTicks <= 0)
             {
-                delayTicks--;
                 SHGUtilities.GainRandomGeneSet(parent.pawn, Props.inheritable, Props.removeGenesFromOtherLists, Props.geneSets, Props.alwaysAddedGenes, Props.alwaysRemovedGenes, Props.showMessage);
-                if (parent.pawn.health.hediffSet.GetFirstHediffOfDef(parent.def) != null && Props.removeHediffAfterwards)
-                {
+                if (parent.pawn.health.hediffSet.GetFirstHediffOfDef(parent.def) != null)
                     parent.pawn.health.RemoveHediff(parent.pawn.health.hediffSet.GetFirstHediffOfDef(parent.def));
-                }
-            }
-            else if (parent.Severity >= Props.minSeverity && parent.Severity <= Props.maxSeverity)
-            {
-                delayTicks--;
             }
         }
 

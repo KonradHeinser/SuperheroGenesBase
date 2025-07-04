@@ -26,15 +26,15 @@ namespace SuperHeroGenesBase
                 transportComp.GetDirectlyHeldThings().TryAddOrTransfer(parent.pawn.SplitOff(1));
                 ThingOwner directlyHeldThings = transportComp.GetDirectlyHeldThings();
 
-                ActiveDropPod activeDropPod = (ActiveDropPod)ThingMaker.MakeThing(ThingDefOf.ActiveDropPod);
-                activeDropPod.Contents = new ActiveDropPodInfo();
-                activeDropPod.Contents.innerContainer.TryAddRangeOrTransfer(directlyHeldThings, true, true);
+                ActiveTransporter activeTransporter = (ActiveTransporter)ThingMaker.MakeThing(ThingDefOf.TransportPod);
+                activeTransporter.Contents = new ActiveTransporterInfo();
+                activeTransporter.Contents.innerContainer.TryAddRangeOrTransfer(directlyHeldThings, true, true);
 
-                FlyShipLeaving obj = (FlyShipLeaving)SkyfallerMaker.MakeSkyfaller(Props.skyfallerLeaving ?? ThingDefOf.DropPodLeaving, activeDropPod);
+                FlyShipLeaving obj = (FlyShipLeaving)SkyfallerMaker.MakeSkyfaller(Props.skyfallerLeaving ?? ThingDefOf.ActiveDropPod, activeTransporter);
                 obj.groupID = transportComp.groupID;
                 obj.destinationTile = target.Tile;
-                obj.arrivalAction = new TransportPodsArrivalAction_FormCaravan("MessagePawnArrived");
-                obj.worldObjectDef = Props.worldObject ?? WorldObjectDefOf.TravelingTransportPods;
+                obj.arrivalAction = new TransportersArrivalAction_FormCaravan("MessagePawnArrived");
+                obj.worldObjectDef = Props.worldObject ?? WorldObjectDefOf.TravellingTransporters;
 
                 transportComp.CleanUpLoadingVars(map);
                 transportComp.parent.Destroy();
@@ -45,16 +45,16 @@ namespace SuperHeroGenesBase
             {
                 Caravan caravan = parent.pawn.GetCaravan();
                 if (caravan == null) return;
-                WorldObject newCaravan = WorldObjectMaker.MakeWorldObject(Props.worldObject ?? WorldObjectDefOf.TravelingTransportPods);
-                if (newCaravan is TravelingTransportPods transport)
+                WorldObject newCaravan = WorldObjectMaker.MakeWorldObject(Props.worldObject ?? WorldObjectDefOf.TravellingTransporters);
+                if (newCaravan is TravellingTransporters transport)
                 {
                     transport.Tile = caravan.Tile;
                     transport.destinationTile = target.Tile;
-                    transport.arrivalAction = new TransportPodsArrivalAction_FormCaravan("MessagePawnArrived");
-                    ActiveDropPodInfo podInfo = new ActiveDropPodInfo();
+                    transport.arrivalAction = new TransportersArrivalAction_FormCaravan("MessagePawnArrived");
+                    ActiveTransporterInfo podInfo = new ActiveTransporterInfo();
                     podInfo.innerContainer.TryAddRangeOrTransfer(caravan.AllThings);
                     podInfo.innerContainer.TryAddRangeOrTransfer(caravan.pawns);
-                    transport.AddPod(podInfo, false);
+                    transport.AddTransporter(podInfo, false);
                     Find.WorldObjects.Add(transport);
                     caravan.Destroy();
                 }

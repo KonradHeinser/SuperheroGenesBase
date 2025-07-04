@@ -2,17 +2,15 @@
 
 namespace SuperHeroGenesBase
 {
-    public class HediffComp_SeverityByMentalState : HediffComp
+    public class HediffComp_SeverityByMentalState : HediffComp_SetterBase
     {
         public HediffCompProperties_SeverityByMentalState Props => (HediffCompProperties_SeverityByMentalState)props;
 
-        public override void CompPostTick(ref float severityAdjustment)
+        protected override void SetSeverity()
         {
-            if (!parent.pawn.IsHashIntervalTick(100)) return;
-            Pawn pawn = parent.pawn;
-
-            if (pawn.InMentalState && !Props.mentalStateEffects.NullOrEmpty())
-            {
+            base.SetSeverity();
+            ticksToNextCheck = 120;
+            if (Pawn.InMentalState && !Props.mentalStateEffects.NullOrEmpty())
                 foreach (MentalStateEffect mentalStateEffect in Props.mentalStateEffects)
                 {
                     if (mentalStateEffect.mentalState == null && mentalStateEffect.mentalStates.NullOrEmpty())
@@ -20,22 +18,24 @@ namespace SuperHeroGenesBase
                         parent.Severity = mentalStateEffect.mentalSeverity;
                         return;
                     }
-                    if (mentalStateEffect.mentalState != null && pawn.MentalStateDef == mentalStateEffect.mentalState)
+                    if (mentalStateEffect.mentalState != null && Pawn.MentalStateDef == mentalStateEffect.mentalState)
                     {
                         parent.Severity = mentalStateEffect.mentalSeverity;
                         return;
                     }
-                    if (!mentalStateEffect.mentalStates.NullOrEmpty() && mentalStateEffect.mentalStates.Contains(pawn.MentalStateDef))
+                    if (!mentalStateEffect.mentalStates.NullOrEmpty() && mentalStateEffect.mentalStates.Contains(Pawn.MentalStateDef))
                     {
                         parent.Severity = mentalStateEffect.mentalSeverity;
                         return;
                     }
                 }
-            }
 
-            if (SHGUtilities.GetCurrentTarget(pawn, true, false, false) != null) parent.Severity = Props.fightingSeverity;
-            else if (pawn.Drafted) parent.Severity = Props.draftedSeverity;
-            else parent.Severity = Props.defaultSeverity;
+            if (Pawn.GetCurrentTarget(true, false, false) != null)
+                parent.Severity = Props.fightingSeverity;
+            else if (Pawn.Drafted)
+                parent.Severity = Props.draftedSeverity;
+            else
+                parent.Severity = Props.defaultSeverity;
         }
     }
 }

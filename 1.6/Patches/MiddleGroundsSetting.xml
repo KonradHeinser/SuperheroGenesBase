@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>middleGrounds</setting>
+        <active Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+                        <GeneDef ParentName="SuperDurabilityBase">
+                            <defName>SHG_SuperDurability2</defName>
+                            <label>super durability</label>
+                            <description>Supers with this gene have skin that is very durable, allowing them to resist various attacks.</description>
+                            <displayOrderInCategory>6.5</displayOrderInCategory>
+                            <biostatMet>-2</biostatMet>
+                            <damageFactors>
+                                <SHG_Beam>0.55</SHG_Beam>
+                            </damageFactors>
+                            <statFactors>
+                                <IncomingDamageFactor>0.75</IncomingDamageFactor>
+                                <SHG_StunSusceptibility>0.75</SHG_StunSusceptibility>
+                            </statFactors>
+                            <statOffsets>
+                                <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+                                <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+                                <ArmorRating_Heat>0.5</ArmorRating_Heat>
+                            </statOffsets>
+                        </GeneDef>
+
+                        <GeneDef ParentName="SuperHealingBase">
+                            <defName>SHG_SuperHealing3</defName>
+                            <label>super healing</label>
+                            <description>Heroes with this gene are very hard to keep down due to how quickly their bodies recover from injuries.</description>
+                            <displayOrderInCategory>26.5</displayOrderInCategory> 
+                            <biostatMet>-3</biostatMet>
+                            <statFactors>
+                                <LifespanFactor>2.2</LifespanFactor>
+                                <ImmunityGainSpeed>6</ImmunityGainSpeed>
+                                <InjuryHealingFactor>6</InjuryHealingFactor>
+                            </statFactors>
+                            <statOffsets>
+                                <ImmunityGainSpeed>6</ImmunityGainSpeed>
+                                <InjuryHealingFactor>6</InjuryHealingFactor>
+                            </statOffsets>
+                            <capMods>
+                                <li>
+                                    <capacity>BloodFiltration</capacity>
+                                    <offset>0.6</offset>
+                                </li>
+                                <li>
+                                    <capacity>BloodPumping</capacity>
+                                    <offset>0.6</offset>
+                                </li>
+                            </capMods>
+                            <customEffectDescriptions>
+                                <li MayRequire="EBSG.Framework">Age takes a much longer time to cause fertility issues, and never takes all fertility.</li>
+                            </customEffectDescriptions>
+                            <modExtensions>
+                                <li Class="SuperHeroGenesBase.SHGExtension">
+                                    <ClotCheckInterval>180</ClotCheckInterval>
+                                    <minTendQuality>0.6</minTendQuality>
+                                    <maxTendQuality>0.8</maxTendQuality>
+                                </li>
+                                <li Class="EBSGFramework.FertilityByGenderAgeExtension" MayRequire="EBSG.Framework">
+                                    <overridingGenes><li>SuperHealing</li></overridingGenes>
+                                    <maleFertilityAgeFactor>
+                                        <points>
+                                            <li>(14, 0)</li>
+                                            <li>(18, 1)</li>
+                                            <li>(440, 1)</li>
+                                            <li>(792, 0.62)</li>
+                                        </points>
+                                    </maleFertilityAgeFactor>
+                                    <femaleFertilityAgeFactor>
+                                        <points>
+                                            <li>(14, 0)</li>
+                                            <li>(20, 1)</li>
+                                            <li>(246, 1)</li>
+                                            <li>(308, 0.62)</li>
+                                        </points>
+                                    </femaleFertilityAgeFactor>
+                                </li>
+                            </modExtensions>
+                        </GeneDef>
+
+                        <GeneDef ParentName="SuperIntelligenceBase">
+                            <defName>SHG_SuperIntelligence2</defName>
+                            <label>super intelligence</label>
+                            <description>Supers with this gene have incredibly heightened intelligence that allows them to be far more efficient than most.</description>
+                            <displayOrderInCategory>36.5</displayOrderInCategory>
+                            <biostatMet>-2</biostatMet>
+                            <statFactors>
+                                <ResearchSpeed>2</ResearchSpeed>
+                                <GlobalLearningFactor>2</GlobalLearningFactor>
+                                <LearningRateFactor>2</LearningRateFactor>
+                                <HackingSpeed MayRequire="ludeon.rimworld.ideology">2</HackingSpeed>
+                                <SHG_StunSusceptibility>0.75</SHG_StunSusceptibility>
+                            </statFactors>
+                            <capMods>
+                                <li>
+                                    <capacity>Manipulation</capacity>
+                                    <offset>0.5</offset>
+                                </li>
+                                <li>
+                                    <capacity>Sight</capacity>
+                                    <offset>0.5</offset>
+                                </li>
+                            </capMods>
+                        </GeneDef>
+
+                        <GeneDef ParentName="SuperPerceptionBase">
+                            <defName>SHG_SuperPerception1</defName>
+                            <label>super perception</label>
+                            <description>Heroes with this gene have hyperactive senses that allows them to observe their environment extremely well.</description>
+                            <displayOrderInCategory>46</displayOrderInCategory>
+                            <biostatMet>-1</biostatMet>
+                            <statFactors>
+                                <MeleeDodgeChance>1.75</MeleeDodgeChance>
+                                <MeleeHitChance>1.5</MeleeHitChance>
+                            </statFactors>
+                            <capMods>
+                                <li>
+                                    <capacity>Hearing</capacity>
+                                    <offset>0.5</offset>
+                                </li>
+                                <li>
+                                    <capacity>Sight</capacity>
+                                    <offset>0.5</offset>
+                                </li>
+                            </capMods>
+                        </GeneDef>
+
+                        <GeneDef ParentName="SuperPersuasionBase">
+                            <defName>SHG_SuperPersuasion2</defName>
+                            <label>super persuasion</label>
+                            <description>Supers with this gene have a much easier time bringing people over to their side.</description>
+                            <displayOrderInCategory>56.5</displayOrderInCategory>
+                            <biostatMet>-2</biostatMet>
+                            <statFactors>
+                                <PawnBeauty>3</PawnBeauty>
+                                <SocialImpact>2</SocialImpact>
+                                <NegotiationAbility>2</NegotiationAbility>
+                                <ConversionPower MayRequire="ludeon.rimworld.ideology">2</ConversionPower>
+                            </statFactors>
+                            <capMods>
+                                <li>
+                                    <capacity>Hearing</capacity>
+                                    <offset>0.5</offset>
+                                </li>
+                                <li>
+                                    <capacity>Talking</capacity>
+                                    <offset>1.0</offset>
+                                </li>
+                            </capMods>
+                        </GeneDef>
+
+                        <GeneDef ParentName="SuperPrecisionBase">
+                            <defName>SHG_SuperPrecision2</defName>
+                            <label>super precision</label>
+                            <description>Supers with this gene are capable of amazing feats of precision.</description>
+                            <displayOrderInCategory>66.5</displayOrderInCategory>
+                            <biostatMet>-2</biostatMet>
+                            <statFactors>
+                                <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+                                <MeleeDodgeChance>3</MeleeDodgeChance>
+                                <MeleeHitChance>2</MeleeHitChance>
+                                <PawnTrapSpringChance>0.50</PawnTrapSpringChance>
+                                <IncomingDamageFactor>0.95</IncomingDamageFactor>
+                            </statFactors>
+                            <capMods>
+                                <li>
+                                    <capacity>Manipulation</capacity>
+                                    <offset>0.5</offset>
+                                </li>
+                                <li>
+                                    <capacity>Breathing</capacity>
+                                    <offset>0.5</offset>
+                                </li>
+                            </capMods>
+                        </GeneDef>
+
+                        <GeneDef ParentName="SuperSpeedBase">
+                            <defName>SHG_SuperSpeed3</defName>
+                            <label>super speed</label>
+                            <description>Supers with this gene move far faster than normal pawns.</description>
+                            <displayOrderInCategory>76.5</displayOrderInCategory>
+                            <biostatMet>-3</biostatMet>
+                            <statFactors>
+                                <StaggerDurationFactor>0.40</StaggerDurationFactor>
+                                <MeleeCooldownFactor>0.625</MeleeCooldownFactor>
+                            </statFactors>
+                            <statOffsets>
+                                <AimingDelayFactor>-3</AimingDelayFactor>
+                            </statOffsets>
+                            <capMods>
+                                <li>
+                                    <capacity>BloodPumping</capacity>
+                                    <offset>0.6</offset>
+                                </li>
+                                <li>
+                                    <capacity>Breathing</capacity>
+                                    <offset>0.6</offset>
+                                </li>
+                                <li>
+                                    <capacity>Moving</capacity>
+                                    <offset>1.2</offset>
+                                </li>
+                                <li>
+                                    <capacity>Consciousness</capacity>
+                                    <offset>0.6</offset>
+                                </li>
+                            </capMods>
+                        </GeneDef>
+
+                        <GeneDef ParentName="SuperStrengthBase">
+                            <defName>SHG_SuperStrength3</defName>
+                            <label>super strength</label>
+                            <description>Supers with this gene can achieve incredible feats of strength.</description>
+                            <displayOrderInCategory>86.5</displayOrderInCategory>
+                            <biostatMet>-3</biostatMet>
+                            <statFactors>
+                                <CarryingCapacity>10</CarryingCapacity>
+                                <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">10</VEF_MassCarryCapacity>
+                                <CarryBulk MayRequire="ceteam.combatextended">10</CarryBulk>
+                                <MeleeDamageFactor>4</MeleeDamageFactor>
+                            </statFactors>
+                            <capMods>
+                                <li>
+                                    <capacity>BloodPumping</capacity>
+                                    <offset>1.0</offset>
+                                </li>
+                            </capMods>
+                        </GeneDef>
+
+                        <GeneDef ParentName="AntisuperDurabilityBase">
+                            <defName>SHG_AntisuperDurability2</defName>
+                            <label>antisuper durability</label>
+                            <description>This super's skin is abnormally fragile, and receives lower benefits from sources of innate armor.</description>
+                            <displayOrderInCategory>3.5</displayOrderInCategory>
+                            <biostatMet>2</biostatMet>
+                            <statFactors>
+                                <IncomingDamageFactor>1.33</IncomingDamageFactor>
+                            </statFactors>
+                            <statOffsets>
+                                <ArmorRating_Blunt>-0.067</ArmorRating_Blunt>
+                                <ArmorRating_Sharp>-0.067</ArmorRating_Sharp>
+                                <ArmorRating_Heat>-0.067</ArmorRating_Heat>
+                            </statOffsets>
+                        </GeneDef>
+
+                        <GeneDef ParentName="AntisuperHealingBase">
+                            <defName>SHG_AntisuperHealing3</defName>
+                            <label>antisuper healing</label>
+                            <description>This super heals much slower than normal pawns.</description>
+                            <displayOrderInCategory>23.5</displayOrderInCategory>
+                            <biostatMet>3</biostatMet>
+                            <statFactors>
+                                <ImmunityGainSpeed>0.88</ImmunityGainSpeed>
+                                <InjuryHealingFactor>0.7</InjuryHealingFactor>
+                            </statFactors>
+                            <statOffsets>
+                                <ImmunityGainSpeed>-0.06</ImmunityGainSpeed>
+                                <InjuryHealingFactor>-0.06</InjuryHealingFactor>
+                            </statOffsets>
+                            <capMods>
+                                <li>
+                                    <capacity>BloodFiltration</capacity>
+                                    <offset>-0.06</offset>
+                                </li>
+                                <li>
+                                    <capacity>BloodPumping</capacity>
+                                    <offset>-0.06</offset>
+                                </li>
+                            </capMods>
+                        </GeneDef>
+
+                        <GeneDef ParentName="AntisuperIntelligenceBase">
+                            <defName>SHG_AntisuperIntelligence2</defName>
+                            <label>antisuper intelligence</label>
+                            <description>Supers with this gene have smoother brains than normal pawns, making it more difficult for them to retain information.</description>
+                            <displayOrderInCategory>33.5</displayOrderInCategory>
+                            <biostatMet>2</biostatMet>
+                            <statFactors>
+                                <ResearchSpeed>0.6</ResearchSpeed>
+                                <GlobalLearningFactor>0.6</GlobalLearningFactor>
+                                <LearningRateFactor>0.6</LearningRateFactor>
+                                <HackingSpeed MayRequire="ludeon.rimworld.ideology">0.6</HackingSpeed>
+                            </statFactors>
+                        </GeneDef>
+
+                        <GeneDef ParentName="AntisuperPerceptionBase">
+                            <defName>SHG_AntisuperPerception1</defName>
+                            <label>antisuper perception</label>
+                            <description>Heroes with this gene have issues perceiving things that even normal humans find easy to notice.</description>
+                            <displayOrderInCategory>43.5</displayOrderInCategory>
+                            <biostatMet>1</biostatMet>
+                            <statFactors>
+                                <ShootingAccuracyPawn>0.9</ShootingAccuracyPawn>
+                                <MeleeDodgeChance>0.9</MeleeDodgeChance>
+                                <MeleeHitChance>0.9</MeleeHitChance>
+                            </statFactors>
+                            <capMods>
+                            <li>
+                                <capacity>Hearing</capacity>
+                                <offset>-0.05</offset>
+                            </li>
+                            <li>
+                                <capacity>Sight</capacity>
+                                <offset>-0.05</offset>
+                            </li>
+                            </capMods>
+                        </GeneDef>
+
+                        <GeneDef ParentName="AntisuperPersuasionBase">
+                            <defName>SHG_AntisuperPersuasion2</defName>
+                            <label>antisuper persuasion</label>
+                            <description>Supers with this gene became deformed due to their superhero gene, and their ability to speak has suffered as well.</description>
+                            <displayOrderInCategory>53.5</displayOrderInCategory>
+                            <biostatMet>2</biostatMet>
+                            <statFactors>
+                                <SocialImpact>0.75</SocialImpact>
+                                <NegotiationAbility>0.75</NegotiationAbility>
+                                <TradePriceImprovement>0.75</TradePriceImprovement>
+                                <ConversionPower MayRequire="ludeon.rimworld.ideology">0.75</ConversionPower>
+                            </statFactors>
+                            <statOffsets>
+                                <PawnBeauty>-2.5</PawnBeauty>
+                            </statOffsets>
+                            <capMods>
+                                <li>
+                                    <capacity>Talking</capacity>
+                                    <offset>-0.1</offset>
+                                </li>
+                            </capMods>
+                        </GeneDef>
+
+                        <GeneDef ParentName="AntisuperPrecisionBase">
+                            <defName>SHG_AntisuperPrecision2</defName>
+                            <label>antisuper precision</label>
+                            <description>Supers with this gene are clumsy, prone to dropping things while they work, and missing foes frequently when the super attacks.</description>
+                            <displayOrderInCategory>63.5</displayOrderInCategory>
+                            <biostatMet>2</biostatMet>
+                            <statFactors>
+                                <ShootingAccuracyPawn>0.8</ShootingAccuracyPawn>
+                                <MeleeDodgeChance>0.8</MeleeDodgeChance>
+                                <MeleeHitChance>0.8</MeleeHitChance>
+                                <PawnTrapSpringChance>5.5</PawnTrapSpringChance>
+                                <IncomingDamageFactor>1.05</IncomingDamageFactor>
+                            </statFactors>
+                            <capMods>
+                                <li>
+                                    <capacity>Manipulation</capacity>
+                                    <offset>-0.05</offset>
+                                </li>
+                            </capMods>
+                        </GeneDef>
+
+                        <GeneDef ParentName="AntisuperSpeedBase">
+                            <defName>SHG_AntisuperSpeed1</defName>
+                            <label>antisuper speed</label>
+                            <description>Supers with this gene are slower than normal pawns.</description>
+                            <displayOrderInCategory>73.5</displayOrderInCategory>
+                            <biostatMet>1</biostatMet>
+                            <statFactors>
+                                <StaggerDurationFactor>1.5</StaggerDurationFactor>
+                                <MeleeDodgeChance>0.8</MeleeDodgeChance>
+                                <MeleeCooldownFactor>1.5</MeleeCooldownFactor>
+                            </statFactors>
+                            <statOffsets>
+                                <AimingDelayFactor>1.667</AimingDelayFactor>
+                            </statOffsets>
+                            <capMods>
+                                <li>
+                                    <capacity>BloodPumping</capacity>
+                                    <offset>-0.033</offset>
+                                </li>
+                                <li>
+                                    <capacity>Moving</capacity>
+                                    <offset>-0.033</offset>
+                                </li>
+                            </capMods>
+                        </GeneDef>
+
+                        <GeneDef ParentName="AntisuperStrengthBase">
+                            <defName>SHG_AntisuperStrength2</defName>
+                            <label>antisuper strength</label>
+                            <description>This super is weaker than normal pawns.</description>
+                            <displayOrderInCategory>83.5</displayOrderInCategory>
+                            <biostatMet>2</biostatMet>
+                            <statFactors>
+                                <CarryingCapacity>0.6</CarryingCapacity>
+                                <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.6</VEF_MassCarryCapacity>
+                                <CarryBulk MayRequire="ceteam.combatextended">0.6</CarryBulk>
+                                <MeleeDamageFactor>0.6</MeleeDamageFactor>
+                            </statFactors>
+                            <capMods>
+                                <li>
+                                    <capacity>BloodPumping</capacity>
+                                    <offset>-0.067</offset>
+                                </li>
+                            </capMods>
+                        </GeneDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="SuperDurability"]/label</xpath>
+                    <value><label>true super durability</label></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="SuperHealing"]/label</xpath>
+                    <value><label>true super healing</label></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="SuperIntelligence"]/label</xpath>
+                    <value><label>true super intelligence</label></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="SuperPerception"]/label</xpath>
+                    <value><label>true super perception</label></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="SuperPersuasion"]/label</xpath>
+                    <value><label>true super persuasion</label></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="SuperPrecision"]/label</xpath>
+                    <value><label>true super precision</label></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="SuperSpeed"]/label</xpath>
+                    <value><label>true super speed</label></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="SuperStrength"]/label</xpath>
+                    <value><label>true super strength</label></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="AntisuperDurability"]/label</xpath>
+                    <value><label>true antisuper durability</label></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="AntisuperHealing"]/label</xpath>
+                    <value><label>true antisuper healing</label></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="AntisuperIntelligence"]/label</xpath>
+                    <value><label>true antisuper intelligence</label></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="AntisuperPerception"]/label</xpath>
+                    <value><label>true antisuper perception</label></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="AntisuperPersuasion"]/label</xpath>
+                    <value><label>true antisuper persuasion</label></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="AntisuperPrecision"]/label</xpath>
+                    <value><label>true antisuper precision</label></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="AntisuperSpeed"]/label</xpath>
+                    <value><label>true antisuper speed</label></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="AntisuperStrength"]/label</xpath>
+                    <value><label>true antisuper strength</label></value>
+                </li>
+
+                <li Class="PatchOperationAdd" MayRequire="EBSG.Framework">
+                    <xpath>Defs/GeneDef[defName="SuperHeroBase"]/modExtensions/li[@Class="EBSGFramework.FertilityByGenderAgeExtension"]/overridingGenes</xpath>
+                    <value><li>SHG_SuperHealing3</li></value>
+                </li>
+
+                <li Class="PatchOperationFindMod">
+                    <mods><li>Combat Extended</li></mods>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_SuperDurability2"]/statOffsets</xpath>
+                                <value>
+                                    <statOffsets>
+                                        <ArmorRating_Blunt>50</ArmorRating_Blunt>
+                                        <ArmorRating_Sharp>50</ArmorRating_Sharp>
+                                        <ArmorRating_Heat>0.50</ArmorRating_Heat>
+                                    </statOffsets>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_SuperPerception1"]/statFactors</xpath>
+                                <value>
+                                    <statFactors>
+                                        <AimingAccuracy>1.25</AimingAccuracy>
+                                        <MeleeDodgeChance>1.05</MeleeDodgeChance>
+                                        <MeleeHitChance>1.1</MeleeHitChance>
+                                        <MeleeParryChance>1.1</MeleeParryChance>
+                                    </statFactors>
+                                </value>
+                            </li>                            
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_SuperPrecision2"]/statFactors</xpath>
+                                <value>
+                                    <statFactors>
+                                        <ShootingAccuracyPawn>1.665</ShootingAccuracyPawn>
+                                        <AimingAccuracy>1.5</AimingAccuracy>
+                                        <MeleeDodgeChance>1.075</MeleeDodgeChance>
+                                        <MeleeHitChance>1.125</MeleeHitChance>
+                                        <MeleeParryChance>1.125</MeleeParryChance>
+                                        <PawnTrapSpringChance>0.55</PawnTrapSpringChance>
+                                        <IncomingDamageFactor>0.95</IncomingDamageFactor>
+                                    </statFactors>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_SuperSpeed3"]/statFactors</xpath>
+                                <value>
+                                    <statFactors>
+                                        <StaggerDurationFactor>0.55</StaggerDurationFactor>
+                                        <MeleeParryChance>1.15</MeleeParryChance>
+                                    </statFactors>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_SuperSpeed3"]/statOffsets</xpath>
+                                <value>
+                                    <statOffsets>
+                                        <AimingDelayFactor>-1.5</AimingDelayFactor>
+                                    </statOffsets>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_AntisuperDurability2"]/statFactors/IncomingDamageFactor</xpath>
+                                <value>
+                                    <IncomingDamageFactor>1.533</IncomingDamageFactor>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_AntisuperDurability2"]/statOffsets</xpath>
+                                <value>
+                                    <ArmorRating_Blunt>-6.7</ArmorRating_Blunt>
+                                    <ArmorRating_Sharp>-6.7</ArmorRating_Sharp>
+                                    <ArmorRating_Heat>-0.067</ArmorRating_Heat>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_AntisuperPerception1"]/statFactors</xpath>
+                                <value>
+                                    <statFactors>
+                                        <ShootingAccuracyPawn>0.925</ShootingAccuracyPawn>
+                                        <AimingAccuracy>0.95</AimingAccuracy>
+                                        <MeleeDodgeChance>0.925</MeleeDodgeChance>
+                                        <MeleeHitChance>0.925</MeleeHitChance>
+                                        <MeleeParryChance>0.925</MeleeParryChance>
+                                    </statFactors>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_AntisuperPrecision2"]/statFactors</xpath>
+                                <value>
+                                    <statFactors>
+                                        <ShootingAccuracyPawn>0.65</ShootingAccuracyPawn>
+                                        <AimingAccuracy>0.7</AimingAccuracy>
+                                        <MeleeDodgeChance>0.625</MeleeDodgeChance>
+                                        <MeleeHitChance>0.625</MeleeHitChance>
+                                        <MeleeParryChance>0.625</MeleeParryChance>
+                                        <PawnTrapSpringChance>5</PawnTrapSpringChance>
+                                        <IncomingDamageFactor>1.2</IncomingDamageFactor>
+                                    </statFactors>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_AntisuperSpeed1"]/statOffsets/AimingDelayFactor</xpath>
+                                <value>
+                                    <AimingDelayFactor>1.25</AimingDelayFactor>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/GeneDef[defName="SHG_AntisuperSpeed1"]/statFactors</xpath>
+                                <value>
+                                    <statFactors>
+                                        <StaggerDurationFactor>2</StaggerDurationFactor>
+                                        <MeleeDodgeChance>0.625</MeleeDodgeChance>
+                                        <MeleeHitChance>0.625</MeleeHitChance>
+                                        <MeleeParryChance>0.625</MeleeParryChance>
+                                    </statFactors>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
+                </li>
+            </operations>
+        </active>
+    </Operation>
+</Patch>

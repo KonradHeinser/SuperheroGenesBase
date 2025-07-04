@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="SHG_MineableResourceBase">
+        <defName>SHG_MineableGWAdamantium</defName>
+        <label>super compacted adamantium(Grimworld)</label>
+        <description>A pillar largely consisting of adamantium that was buried deep undergound.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <color>(159,160,159)</color>
+            <colorTwo>(169,170,169)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>10000</MaxHitPoints>
+        </statBases>
+        <building>
+            <mineableThing>HP_Adamantium</mineableThing>
+            <mineableYield>400</mineableYield>
+        </building>
+    </ThingDef> 
+
+    <ThingDef ParentName="SHG_MineableResourceBase">
+        <defName>SHG_MineableGWAuramite</defName>
+        <label>super compacted auramite(Grimworld)</label>
+        <description>A pillar consisting of auramite that was buried deep undergound, encased in large amounts of useless stone.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <color>(89,83,68)</color>
+            <colorTwo>(167,128,91)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>15000</MaxHitPoints>
+        </statBases>
+        <building>
+            <mineableThing>HP_Auramite</mineableThing>
+            <mineableYield>80</mineableYield>
+        </building>
+    </ThingDef> 
+
+    <ThingDef ParentName="SHG_MineableResourceBase">
+        <defName>SHG_MineableGWCeramite</defName>
+        <label>super compacted ceramite(Grimworld)</label>
+        <description>A pillar largely consisting of ceramite that was buried deep undergound.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <color>(220,220,220)</color>
+            <colorTwo>(230,230,230)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>10000</MaxHitPoints>
+        </statBases>
+        <building>
+            <mineableThing>HP_Ceramite</mineableThing>
+            <mineableYield>660</mineableYield>
+        </building>
+    </ThingDef> 
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonMineableGWAdamantium</defName>
+        <label>summon adamantium(Grimworld)</label>
+        <description>Summons a pillar of adamantium(Grimworld variant) at a location.</description>
+        <iconPath>Things/Resource/Adamantium/Adamantium_c</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_MineableGWAdamantium</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonMineableGWAuramite</defName>
+        <label>summon auramite(Grimworld)</label>
+        <description>Summons a pillar of auramite(Grimworld variant) at a location.</description>
+        <iconPath>Things/Resource/Auramite/Auramite_c</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_MineableGWAuramite</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSummoningBase">
+        <defName>SHG_SummonMineableGWCeramite</defName>
+        <label>summon ceramite(Grimworld)</label>
+        <description>Summons a pillar of ceramite(Grimworld variant) at a location.</description>
+        <iconPath>Things/Resource/Ceramite/Ceramite_c</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_MineableGWCeramite</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <GeneDef ParentName="SuperPowersSummoningBase">
+        <defName>SHG_SummonMineableGWAdamantium</defName>
+        <label>summon adamantium(Grimworld)</label>
+        <description>Carriers of this gene can summons a pillar of adamantium(Grimworld variant) at a location once per quadrum.</description>
+        <iconPath>Things/Resource/Adamantium/Adamantium_c</iconPath>
+        <displayOrderInCategory>39.9</displayOrderInCategory>
+        <biostatMet>-3</biostatMet>
+        <abilities>
+            <li>SHG_SummonMineableGWAdamantium</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SummonMineableGWAdamantium</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_FerromancerAdmantium</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSummoningBase">
+        <defName>SHG_SummonMineableGWGWAuramite</defName>
+        <label>summon auramite(Grimworld)</label>
+        <description>Carriers of this gene can summons a pillar of auramite(Grimworld variant) at a location once per quadrum. This pillar can be mined to get some of the resource, though due to how rare it is, this pillar mostly consists of useless stone.</description>
+        <iconPath>Things/Resource/Auramite/Auramite_c</iconPath>
+        <displayOrderInCategory>39.8</displayOrderInCategory>
+        <biostatMet>-4</biostatMet>
+        <abilities>
+            <li>SHG_SummonMineableGWAuramite</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SummonMineableGWAuramite</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_FerromancerAuramite</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersSummoningBase">
+        <defName>SHG_SummonMineableGWCeramite</defName>
+        <label>summon ceramite(Grimworld)</label>
+        <description>Carriers of this gene can summons a pillar of ceramite(Grimworld variant) at a location once per quadrum.</description>
+        <iconPath>Things/Resource/Ceramite/Ceramite_c</iconPath>
+        <displayOrderInCategory>39.7</displayOrderInCategory>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>SHG_SummonMineableGWCeramite</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SummonMineableGWCeramite</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_FerromancerAdmantium</li>
+        </exclusionTags>
+    </GeneDef>
+</Defs>

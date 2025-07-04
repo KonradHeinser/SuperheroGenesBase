@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef Name="SHG_EverEvolvingBase" ParentName="SHG_SpecialHediffBase" Abstract="True">
+        <initialSeverity>1</initialSeverity>
+        <maxSeverity>100</maxSeverity>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_DisplaySeverity">
+                <prependString>Evolution progress : </prependString>
+                <appendString>%</appendString>
+                <roundDigits>0</roundDigits>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_EverEvolvingBase">
+        <defName>SHG_EverEvolving_Foodless</defName>
+        <label>ever evolving (foodless)</label>
+        <description>This pawn consumed or had something used on them that allows them to surpass the limits of their genetic code. This particular evolution makes their body become capable of processing food more efficiently, thus reducing the amount they need to eat. As more progress is made, it will take a bit longer to gain the next bonus. Hunger rate decrease caps at -99%.</description>
+        <stages>
+            <li>
+                <hungerRateFactorOffset>-0.01</hungerRateFactorOffset>
+            </li>
+            <li>
+                <minSeverity>5</minSeverity>
+                <hungerRateFactorOffset>-0.05</hungerRateFactorOffset>
+            </li>
+            <li>
+                <minSeverity>10</minSeverity>
+                <hungerRateFactorOffset>-0.1</hungerRateFactorOffset>
+            </li>
+            <li>
+                <minSeverity>15</minSeverity>
+                <hungerRateFactorOffset>-0.15</hungerRateFactorOffset>
+            </li>
+            <li>
+                <minSeverity>25</minSeverity>
+                <hungerRateFactorOffset>-0.25</hungerRateFactorOffset>
+            </li>
+            <li>
+                <minSeverity>30</minSeverity>
+                <hungerRateFactorOffset>-0.30</hungerRateFactorOffset>
+            </li>
+            <li>
+                <minSeverity>35</minSeverity>
+                <hungerRateFactorOffset>-0.35</hungerRateFactorOffset>
+            </li>
+            <li>
+                <minSeverity>42</minSeverity>
+                <hungerRateFactorOffset>-0.415</hungerRateFactorOffset>
+            </li>
+            <li>
+                <minSeverity>50</minSeverity>
+                <hungerRateFactorOffset>-0.49</hungerRateFactorOffset>
+            </li>
+            <li>
+                <minSeverity>57</minSeverity>
+                <hungerRateFactorOffset>-0.56</hungerRateFactorOffset>
+            </li>
+            <li>
+                <minSeverity>65</minSeverity>
+                <hungerRateFactorOffset>-0.64</hungerRateFactorOffset>
+            </li>
+            <li>
+                <minSeverity>72</minSeverity>
+                <hungerRateFactorOffset>-0.71</hungerRateFactorOffset>
+            </li>
+            <li>
+                <minSeverity>80</minSeverity>
+                <hungerRateFactorOffset>-0.79</hungerRateFactorOffset>
+            </li>
+            <li>
+                <minSeverity>90</minSeverity>
+                <hungerRateFactorOffset>-0.89</hungerRateFactorOffset>
+            </li>
+            <li>
+                <minSeverity>100</minSeverity>
+                <hungerRateFactorOffset>-0.99</hungerRateFactorOffset>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_EverEvolvingBase">
+        <defName>SHG_EverEvolving_Enlightenment</defName>
+        <label>ever evolving (enlightenment)</label>
+        <description>This pawn consumed or had something used on them that allows them to surpass the limits of their genetic code. This particular evolution makes their mind become capable of processing new information more efficiently, thus increasing the rate that they learn new skills and research things.</description>
+        <stages>
+            <li>
+                <statFactors>
+                    <GlobalLearningFactor>1.01</GlobalLearningFactor>
+                    <ResearchSpeed>1.01</ResearchSpeed>
+                    <EntityStudyRate MayRequire="Ludeon.Rimworld.Anomaly">1.01</EntityStudyRate>
+                </statFactors>
+                <multiplyStatChangesBySeverity>True</multiplyStatChangesBySeverity>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_EverEvolvingBase" MayRequire="EBSG.Framework">
+        <defName>SHG_EverEvolving_Lethality</defName>
+        <label>ever evolving (lethality)</label>
+        <description>This pawn consumed or had something used on them that allows them to surpass the limits of their genetic code. This particular evolution makes them far more deadly than they normally would be.</description>
+        <stages>
+            <li>
+                <statOffsets>
+                    <EBSG_OutgoingDamageFactor>0.1</EBSG_OutgoingDamageFactor>
+                </statOffsets>
+                <multiplyStatChangesBySeverity>true</multiplyStatChangesBySeverity>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>

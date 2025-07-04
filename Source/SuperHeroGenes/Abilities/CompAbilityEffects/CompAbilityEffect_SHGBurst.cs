@@ -32,7 +32,7 @@ namespace SuperHeroGenesBase
             {
                 GenExplosion.DoExplosion(caster.Position, caster.Map, radius, Props.damageDef, caster, damageAmount,
                     Props.armorPenetration, Props.explosionSound, null, null, null, Props.postExplosionThing, Props.postExplosionThingChance,
-                    Props.postExplosionSpawnThingCount, (GasType)(int)Props.extraGasType, Props.applyDamageToExplosionCellsNeighbors,
+                    Props.postExplosionSpawnThingCount, (GasType)(int)Props.extraGasType, null, 255, Props.applyDamageToExplosionCellsNeighbors,
                     Props.preExplosionThing, Props.preExplosionThingChance, Props.preExplosionSpawnThingCount, Props.chanceToStartFire,
                     Props.damageFalloff, null, ignoreList, null, true, 1f, Props.excludeRadius, true,
                     Props.postExplosionThingWater, Props.screenShakeFactor);
@@ -41,7 +41,7 @@ namespace SuperHeroGenesBase
             {
                 GenExplosion.DoExplosion(caster.Position, caster.Map, radius, Props.damageDef, caster, damageAmount,
                     Props.armorPenetration, Props.explosionSound, null, null, null, Props.postExplosionThing, Props.postExplosionThingChance,
-                    Props.postExplosionSpawnThingCount, null, Props.applyDamageToExplosionCellsNeighbors, Props.preExplosionThing,
+                    Props.postExplosionSpawnThingCount, null, null, 255, Props.applyDamageToExplosionCellsNeighbors, Props.preExplosionThing,
                     Props.preExplosionThingChance, Props.preExplosionSpawnThingCount, Props.chanceToStartFire, Props.damageFalloff, null, ignoreList,
                     null, true, 1f, Props.excludeRadius, true, Props.postExplosionThingWater, Props.screenShakeFactor);
             }

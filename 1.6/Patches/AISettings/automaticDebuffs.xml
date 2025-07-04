@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>automaticDebuffs</setting>
+        <active Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+                        <ThinkTreeDef>
+                            <defName>SHG_SuperAI_UndraftedDebuffs_NeabyEnemy</defName>
+                            <insertTag>SHGAI_UndraftedPawn_NearbyEnemy</insertTag>
+                            <insertPriority>200</insertPriority>
+                            <thinkRoot Class="ThinkNode_Priority">
+                                <subNodes>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasGene">
+                                        <gene>SuperHeroBase</gene>
+                                        <subNodes>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalTargetIsMechanoid">
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                        <abilities>
+                                                            <li>SHG_EMPBolt</li>
+                                                        </abilities>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                <abilities>
+                                                    <li>SHG_Distraction</li>
+                                                    <li>SHG_Narcissus</li>
+                                                </abilities>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                        <gene>Hemogenic</gene>
+                                        <subNodes>
+                                            <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                <abilities>
+                                                    <li>SHG_Hemomancer_StealPerceptiveness</li>
+                                                    <li>SHG_Hemomancer_StealDefense</li>
+                                                    <li>SHG_Hemomancer_StealStrength</li>
+                                                    <li>SHG_Hemomancer_MarkForDeath</li>
+                                                </abilities>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasPsylink">
+                                        <subNodes>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                <minRadius>30</minRadius>
+                                                <minEnemies>5</minEnemies>
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                        <abilities>
+                                                            <li>SHG_Psionist_IcePlanet</li>
+                                                            <li>SHG_Psionist_Eldritch</li>
+                                                            <li>SHG_Psionist_GazeIntoTheAbyss</li> <!--In this category because it's not worth casting if there aren't a bunch of pawns to deal with-->
+                                                        </abilities>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                <minRadius>15</minRadius>
+                                                <minEnemies>3</minEnemies>
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                        <abilities>
+                                                            <li>SHG_Psionist_Psychedelic</li>
+                                                            <li>SHG_Psionist_Enough</li>
+                                                            <li>SHG_Psionist_InstigateConflict</li>
+                                                            <li>SHG_Psionist_Despair</li>
+                                                        </abilities>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                <abilities>
+                                                    <li>SHG_Psionist_InternalDebate</li>
+                                                    <li>SHG_Psionist_GraspHeart</li>
+                                                    <li>SHG_Psionist_Dread</li>
+                                                </abilities>
+                                            </li>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                <invert>true</invert>
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget"> <!--A last ditch ability to use even though the target may be immune-->
+                                                        <abilities>
+                                                            <li>SHG_Psionist_CompelledDuel</li>
+                                                        </abilities>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                        <ability>SHG_Hemomancer_BloodAndDarkness</ability>
+                                        <subNodes>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire">
+                                                <minRadius>15</minRadius>
+                                                <minEnemies>3</minEnemies>
+                                                <subNodes>
+                                                    <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                        <ability>SHG_Hemomancer_BloodAndDarkness</ability>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </thinkRoot>
+                        </ThinkTreeDef>
+
+                        <ThinkTreeDef>
+                            <defName>SHG_SuperAI_UndraftedDebuffs_EnemyOnMap</defName>
+                            <insertTag>SHGAI_UndraftedPawn_EnemyOnMap</insertTag>
+                            <insertPriority>200</insertPriority>
+                            <thinkRoot Class="ThinkNode_Priority">
+                                <subNodes>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                        <ability>SHG_CommandAnimal</ability>
+                                        <subNodes>
+                                            <li Class="SuperHeroGenesBase.JobGiver_AICastBerserkAbility">
+                                                <ability>SHG_CommandAnimal</ability>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                        <ability>AnimalWarcall</ability>
+                                        <subNodes>
+                                            <li Class="SuperHeroGenesBase.JobGiver_AICastBerserkAbility">
+                                                <ability>AnimalWarcall</ability>
+                                            </li>
+                                        </subNodes>
+                                    </li>
+                                </subNodes>
+                            </thinkRoot>
+                        </ThinkTreeDef>
+                    </value>
+                </li>
+
+                <li Class="SuperHeroGenesBase.PatchOperationSetting">
+                    <setting>automaticDebuffsDrafted</setting>
+                    <active Class="PatchOperationAdd">
+                        <xpath>Defs</xpath>
+                        <value>
+                            <ThinkTreeDef>
+                                <defName>SHG_SuperAI_DraftedDebuffs_FreePawn</defName>
+                                <insertTag>SHGAI_DraftedAndFreePawn</insertTag>
+                                <insertPriority>200</insertPriority>
+                                <thinkRoot Class="ThinkNode_Priority">
+                                    <subNodes>
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasGene">
+                                            <gene>SuperHeroBase</gene>
+                                            <subNodes>
+                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalTargetIsMechanoid">
+                                                <subNodes>
+                                                    <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                        <abilities>
+                                                            <li>SHG_EMPBolt</li>
+                                                        </abilities>
+                                                    </li>
+                                                </subNodes>
+                                            </li>
+                                            <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                <abilities>
+                                                    <li>SHG_Distraction</li>
+                                                    <li>SHG_Narcissus</li>
+                                                </abilities>
+                                            </li>
+                                            </subNodes>
+                                        </li>
+                                        
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasPsylink">
+                                            <subNodes>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                    <minRadius>30</minRadius>
+                                                    <minEnemies>5</minEnemies>
+                                                    <subNodes>
+                                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                            <abilities>
+                                                                <li>SHG_Psionist_IcePlanet</li>
+                                                                <li>SHG_Psionist_Eldritch</li>
+                                                                <li>SHG_Psionist_GazeIntoTheAbyss</li> <!--In this category because it's not worth casting if there aren't a bunch of pawns to deal with-->
+                                                            </abilities>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                    <minRadius>15</minRadius>
+                                                    <minEnemies>3</minEnemies>
+                                                    <subNodes>
+                                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                            <abilities>
+                                                                <li>SHG_Psionist_Psychedelic</li>
+                                                                <li>SHG_Psionist_Enough</li>
+                                                                <li>SHG_Psionist_InstigateConflict</li>
+                                                                <li>SHG_Psionist_Despair</li>
+                                                            </abilities>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                                <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                    <abilities>
+                                                        <li>SHG_Psionist_InternalDebate</li>
+                                                        <li>SHG_Psionist_GraspHeart</li>
+                                                        <li>SHG_Psionist_Dread</li>
+                                                    </abilities>
+                                                </li>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalUsingRangedWeapon" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                                    <invert>true</invert>
+                                                    <subNodes>
+                                                        <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget"> <!--A last ditch ability to use even though the target may be immune-->
+                                                            <abilities>
+                                                                <li>SHG_Psionist_CompelledDuel</li>
+                                                            </abilities>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                            </subNodes>
+                                        </li>
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                            <gene>Hemogenic</gene>
+                                            <useTargetValue>False</useTargetValue>
+                                            <minLevel>0.2</minLevel>
+                                            <subNodes>
+                                                <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                                    <abilities>
+                                                        <li>SHG_Hemomancer_StealPerceptiveness</li>
+                                                        <li>SHG_Hemomancer_StealDefense</li>
+                                                        <li>SHG_Hemomancer_StealStrength</li>
+                                                        <li>SHG_Hemomancer_MarkForDeath</li>
+                                                    </abilities>
+                                                </li>
+                                            </subNodes>
+                                        </li>
+                                                
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                            <ability>SHG_Hemomancer_BloodAndDarkness</ability>
+                                            <subNodes>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire">
+                                                    <minRadius>15</minRadius>
+                                                    <minEnemies>3</minEnemies>
+                                                    <subNodes>
+                                                        <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                            <ability>SHG_Hemomancer_BloodAndDarkness</ability>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                            </subNodes>
+                                        </li>
+                                    </subNodes>
+                                </thinkRoot>
+                            </ThinkTreeDef>
+
+                            <ThinkTreeDef>
+                                <defName>SHG_SuperAI_DraftedDebuffs_EnemyOnMap</defName>
+                                <insertTag>SHGAI_DraftedPawn_EnemyOnMap</insertTag>
+                                <insertPriority>200</insertPriority>
+                                <thinkRoot Class="ThinkNode_Priority">
+                                    <subNodes>
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                            <ability>SHG_CommandAnimal</ability>
+                                            <subNodes>
+                                                <li Class="SuperHeroGenesBase.JobGiver_AICastBerserkAbility">
+                                                    <ability>SHG_CommandAnimal</ability>
+                                                </li>
+                                            </subNodes>
+                                        </li>
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                            <ability>AnimalWarcall</ability>
+                                            <subNodes>
+                                                <li Class="SuperHeroGenesBase.JobGiver_AICastBerserkAbility">
+                                                    <ability>AnimalWarcall</ability>
+                                                </li>
+                                            </subNodes>
+                                        </li>
+                                    </subNodes>
+                                </thinkRoot>
+                            </ThinkTreeDef>
+                        </value>
+                    </active>
+                </li>
+
+                <!--Psycasts don't allow for the gizmo class to be changed-->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/AbilityDef[defName="SHG_Distraction" or defName="SHG_Narcissus" or defName="SHG_Hemomancer_BloodAndDarkness" 
+                        or defName="SHG_CommandAnimal" or defName="AnimalWarcall"]</xpath>
+                    <value>
+                        <gizmoClass>SuperHeroGenesBase.Command_AbilityAutocastToggle</gizmoClass>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/AbilityDef[defName="SHG_Distraction" or defName="SHG_Narcissus" or defName="SHG_Hemomancer_BloodAndDarkness" 
+                        or defName="SHG_CommandAnimal" or defName="AnimalWarcall" or defName="SHG_Hemomancer_StealPerceptiveness" 
+                        or defName="SHG_Hemomancer_StealDefense" or defName="SHG_Hemomancer_StealStrength" 
+                        or defName="SHG_Hemomancer_MarkForDeath"]/comps</xpath>
+                    <value>
+                        <li Class="SuperHeroGenesBase.CompProperties_AbilityAutocastToggle" />
+                    </value>
+                </li>
+            </operations>
+        </active>
+    </Operation>
+</Patch>

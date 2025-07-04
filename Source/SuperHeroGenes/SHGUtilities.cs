@@ -630,7 +630,7 @@ namespace SuperHeroGenesBase
             return false;
         }
 
-        public static Thing GetCurrentTarget(Pawn pawn, bool onlyHostiles = true, bool onlyInFaction = false, bool autoSearch = true, float searchRadius = 50, bool LoSRequired = false, bool allowDowned = false)
+        public static Thing GetCurrentTarget(this Pawn pawn, bool onlyHostiles = true, bool onlyInFaction = false, bool autoSearch = true, float searchRadius = 50, bool LoSRequired = false, bool allowDowned = false)
         {
             if (!pawn.Spawned) return null;
             if (onlyHostiles && onlyInFaction) return null;

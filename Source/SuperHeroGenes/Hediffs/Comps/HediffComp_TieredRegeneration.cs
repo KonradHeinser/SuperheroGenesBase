@@ -34,7 +34,7 @@ namespace SuperHeroGenesBase
             GetSet();
         }
 
-        public override void CompPostTick(ref float severityAdjustment)
+        public override void CompPostTickInterval(ref float severityAdjustment, int delta)
         {
             Hediff missingPart = Pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.MissingBodyPart);
 
@@ -59,7 +59,7 @@ namespace SuperHeroGenesBase
                             Pawn.health.RemoveHediff(missingPart);
                             regrowTicksRemaining = -1;
                         }
-                        else { regrowTicksRemaining--; } // If not done with regrowing, then tick on
+                        else { regrowTicksRemaining -= delta; } // If not done with regrowing, then tick on
                     }
                 }
                 // Heal stuff
@@ -93,7 +93,7 @@ namespace SuperHeroGenesBase
                             }
                             healTicksRemaining = -1;
                         }
-                        else { healTicksRemaining--; } // If not done healing, then tick on
+                        else { healTicksRemaining -= delta; } // If not done healing, then tick on
                     }
                 }
 
@@ -108,11 +108,11 @@ namespace SuperHeroGenesBase
 
                     if (regrowTicksRemaining < 0 && missingPart != null && regrowthAllowed) // If the inactive one is regrowth and there is a missing part, start the timer
                     {
-                        regrowTicksRemaining = regrowthInterval;
+                        regrowTicksRemaining += regrowthInterval;
                     }
                     else if (healTicksRemaining < 0 && wounds.Count > 0 && healAllowed) // If healing is the inactive one, and there are wounds to heal, start a timer
                     {
-                        healTicksRemaining = healInterval;
+                        healTicksRemaining += healInterval;
                     }
                 }
             }

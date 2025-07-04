@@ -31,7 +31,7 @@ namespace SuperHeroGenesBase
         {
             ShuffleQueue();
             QuestScriptDef questScriptDef = questQueue.First();
-            if (!questScriptDef.CanRun(InitSlate()))
+            if (!questScriptDef.CanRun(InitSlate(), Find.World))
                 return null;
 
             questQueue.RemoveAt(0);

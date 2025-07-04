@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperGeneBase" Name="UnsuperBase" Abstract="True">
+        <description>Supers with this gene lack some of the enhanced stats the base superhero gene gives.</description>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <biostatMet>1</biostatMet>
+    </GeneDef>
+
+    <GeneDef ParentName="UnsuperBase">
+        <defName>UnsuperDurability</defName>
+        <label>unsuper durability</label>
+        <iconPath>Base/UnsuperDurability</iconPath>
+        <displayOrderInCategory>5</displayOrderInCategory>
+        <damageFactors>
+            <SHG_Beam>1.33</SHG_Beam>
+        </damageFactors>
+        <statFactors>
+            <IncomingDamageFactor>1.333</IncomingDamageFactor>
+        </statFactors>
+        <statOffsets>
+            <PainShockThreshold>-0.50</PainShockThreshold>
+            <ArmorRating_Blunt>-0.1</ArmorRating_Blunt>
+            <ArmorRating_Sharp>-0.1</ArmorRating_Sharp>
+            <ArmorRating_Heat>-0.1</ArmorRating_Heat>
+            <ComfyTemperatureMin>20</ComfyTemperatureMin>
+            <ComfyTemperatureMax>-20</ComfyTemperatureMax>
+        </statOffsets>
+        <exclusionTags>
+            <li>SuperDurabilities</li>
+            <li>DurabilitySpecialization</li>
+            <li>RandomDurability</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="UnsuperBase">
+        <defName>UnsuperHealing</defName>
+        <label>unsuper healing</label>
+        <iconPath>Base/UnsuperHealing</iconPath>
+        <displayOrderInCategory>25</displayOrderInCategory>
+        <foodPoisoningChanceFactor>100</foodPoisoningChanceFactor>
+        <statFactors>
+            <ImmunityGainSpeed>0.667</ImmunityGainSpeed>
+            <InjuryHealingFactor>0.5</InjuryHealingFactor>
+            <LifespanFactor>0.5</LifespanFactor>
+        </statFactors>
+        <statOffsets>
+            <ToxicEnvironmentResistance>-.1</ToxicEnvironmentResistance>
+            <ToxicResistance>-.1</ToxicResistance>
+        </statOffsets>
+        <exclusionTags>
+            <li>SuperHealings</li>
+            <li>HealingSpecialization</li>
+            <li>RandomHealing</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="UnsuperBase">
+        <defName>UnsuperIntelligence</defName>
+        <label>unsuper intelligence</label>
+        <iconPath>Base/UnsuperIntelligence</iconPath>
+        <displayOrderInCategory>35</displayOrderInCategory>
+        <statFactors>
+            <ResearchSpeed>0.83</ResearchSpeed>
+            <GlobalLearningFactor>0.667</GlobalLearningFactor>
+            <LearningRateFactor>0.667</LearningRateFactor>
+        </statFactors>
+        <exclusionTags>
+            <li>SuperIntelligences</li>
+            <li>IntelligenceSpecialization</li>
+            <li>RandomIntelligence</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="UnsuperBase">
+        <defName>UnsuperPerception</defName>
+        <label>unsuper perception</label>
+        <iconPath>Base/UnsuperPerception</iconPath>
+        <displayOrderInCategory>45</displayOrderInCategory>
+        <statOffsets>
+            <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
+            <MeleeDodgeChance>-1.5</MeleeDodgeChance>
+            <MeleeHitChance>-1.5</MeleeHitChance>
+            <TameAnimalChance>-0.1</TameAnimalChance>
+            <TrainAnimalChance>-0.1</TrainAnimalChance>
+        </statOffsets>
+        <exclusionTags>
+            <li>SuperPerceptions</li>
+            <li>PerceptionSpecialization</li>
+            <li>RandomPerception</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="UnsuperBase">
+        <defName>UnsuperPersuasion</defName>
+        <label>unsuper persuasion</label>
+        <iconPath>Base/UnsuperPersuasion</iconPath>
+        <displayOrderInCategory>55</displayOrderInCategory>
+        <statOffsets>
+            <PawnBeauty>-3</PawnBeauty>
+            <SocialImpact>-0.5</SocialImpact>
+            <NegotiationAbility>-0.5</NegotiationAbility>
+            <ConversionPower MayRequire="ludeon.rimworld.ideology">-0.5</ConversionPower>
+        </statOffsets>
+        <exclusionTags>
+            <li>SuperPersuasions</li>
+            <li>PersuasionSpecialization</li>
+            <li>RandomPersuasion</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="UnsuperBase">
+        <defName>UnsuperPrecision</defName>
+        <label>unsuper precision</label>
+        <iconPath>Base/UnsuperPrecision</iconPath>
+        <displayOrderInCategory>65</displayOrderInCategory>
+        <statFactors>
+            <PawnTrapSpringChance>100</PawnTrapSpringChance>
+        </statFactors>
+        <statOffsets>
+            <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
+            <MeleeDodgeChance>-1.5</MeleeDodgeChance>
+            <MeleeHitChance>-1.5</MeleeHitChance>
+        </statOffsets>
+        <exclusionTags>
+            <li>SuperPrecisions</li>
+            <li>PrecisionSpecialization</li>
+            <li>RandomPrecision</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="UnsuperBase">
+        <defName>UnsuperSpeed</defName>
+        <label>unsuper speed</label>
+        <iconPath>Base/UnsuperSpeed</iconPath>
+        <displayOrderInCategory>75</displayOrderInCategory>
+        <statFactors>
+            <StaggerDurationFactor>1.333</StaggerDurationFactor>
+            <WorkSpeedGlobal>0.833</WorkSpeedGlobal>
+        </statFactors>
+        <statOffsets>
+            <MoveSpeed>-3</MoveSpeed>
+            <AimingDelayFactor>.1</AimingDelayFactor>
+        </statOffsets>
+        <exclusionTags>
+            <li>SuperSpeeds</li>
+            <li>SpeedSpecialization</li>
+            <li>RandomSpeed</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="UnsuperBase">
+        <defName>UnsuperStrength</defName>
+        <label>unsuper strength</label>
+        <iconPath>Base/UnsuperStrength</iconPath>
+        <displayOrderInCategory>85</displayOrderInCategory>
+        <statFactors>
+            <MeleeDamageFactor>0.667</MeleeDamageFactor>
+        </statFactors>
+        <statOffsets>
+            <CarryingCapacity>-25</CarryingCapacity>
+            <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">-25</VEF_MassCarryCapacity>
+            <CarryBulk MayRequire="ceteam.combatextended">-10</CarryBulk>
+            <MentalBreakThreshold>.15</MentalBreakThreshold>
+        </statOffsets>
+        <exclusionTags>
+            <li>SuperStrengths</li>
+            <li>StrengthSpecialization</li>
+            <li>RandomStrength</li>
+        </exclusionTags>
+    </GeneDef>
+</Defs>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersFireBase">
+        <defName>SHG_FireBurst</defName>
+        <label>fire burst</label>
+        <description>Carriers of this gene are able to set everything in the area around them on fire.\n\nThis doesn't render you immune to fire, so remember to get protection. This is doubly true for bursts as even the user will be affected.</description>
+        <iconPath>Powers/FireBurst</iconPath>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <abilities>
+            <li>SHG_FireBurst</li>
+        </abilities>
+        <statFactors>
+            <Flammability>0.5</Flammability>
+        </statFactors>
+        <damageFactors>
+            <Flame>0.5</Flame>
+        </damageFactors>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_FireBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_PyromancerFireBurst</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersAcidBase">
+        <defName>SHG_AcidBurst</defName>
+        <label>acid burst</label>
+        <description>Carriers of this gene are able to release a burst of acid that corrodes everything in the area around them.\n\nThis doesn't render you completely immune to acid, so remember to get protection. This is doubly true for bursts as even the user will be affected.</description>
+        <iconPath>Powers/Gene_AcidBurst</iconPath>
+        <displayOrderInCategory>13</displayOrderInCategory>
+        <abilities>
+            <li>SHG_AcidBurst</li>
+        </abilities>
+        <damageFactors>
+            <AcidBurn>0.5</AcidBurn>
+        </damageFactors>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_AcidBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_CaustimancerAcidBurst</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersLightningBase">
+        <defName>SHG_LightningBurst</defName>
+        <label>lightning burst</label>
+        <description>Carriers of this gene are able to release a burst of lightning that electrocutes everything around them. The damage caused by this lightning is so destructive it burns straight through electronics instead of disabling them.\n\nThis doesn't render you completely immune to lightning, so remember to get protection. This is doubly true for bursts as even the user will be affected.</description>
+        <iconPath>Powers/Gene_LightningBurst</iconPath>
+        <displayOrderInCategory>23</displayOrderInCategory>
+        <abilities>
+            <li>SHG_LightningBurst</li>
+        </abilities>
+        <damageFactors>
+            <SHG_Lightning>0.5</SHG_Lightning>
+        </damageFactors>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_LightningBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_ElectromancerLightningBurst</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersIceBase">
+        <defName>SHG_IceBurst</defName>
+        <label>ice burst</label>
+        <description>Carriers of this gene are able to release a burst of freezing cold that inflicts frostbite on everything around them.\n\nThis doesn't render you completely immune to ice and frostbite, so remember to get protection. This is doubly true for bursts as even the user will be affected.</description>
+        <iconPath>Powers/Gene_IceBurst</iconPath>
+        <displayOrderInCategory>33</displayOrderInCategory>
+        <abilities>
+            <li>SHG_IceBurst</li>
+        </abilities>
+        <damageFactors>
+			<Frostbite>0.5</Frostbite>
+            <SHG_Ice>0.5</SHG_Ice>
+        </damageFactors>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_IceBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_CryomancerIceBurst</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersToxicBase">
+        <defName>SHG_ToxicBurst</defName>
+        <label>toxic burst</label>
+        <description>Carriers of this gene are able to release a burst of toxins that poison everyone around the area.\n\nThis doesn't render you completely immune to acid, so remember to get protection. This is doubly true for bursts as even the user will be affected.</description>
+        <iconPath>Powers/Gene_ToxicBurst</iconPath>
+        <displayOrderInCategory>43</displayOrderInCategory>
+        <abilities>
+            <li>SHG_ToxicBurst</li>
+        </abilities>
+        <statOffsets>
+            <ToxicResistance>0.5</ToxicResistance>
+        </statOffsets>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_ToxicBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_ToximancerToxicBurst</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersEMPBase">
+        <defName>SHG_EMPBurst</defName>
+        <label>EMP burst</label>
+        <description>Carriers of this gene are able to release a burst of electricity that disables all electronics around them for a time.</description>
+        <iconPath>Powers/Gene_LightningBurst</iconPath>
+        <displayOrderInCategory>53</displayOrderInCategory>
+        <abilities>
+            <li>SHG_EMPBurst</li>
+        </abilities>
+        <damageFactors>
+            <SHG_Lightning>0.95</SHG_Lightning>
+        </damageFactors>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_EMPBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_ElectromancerEMPBurst</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersFoamBase">
+        <defName>SHG_FoamBurst</defName>
+        <label>foam burst</label>
+        <description>Carriers of this gene are able to release a burst of foam that douses all fires around them and covers the people around them in a protective foam.</description>
+        <iconPath>Powers/Gene_FoamBurst</iconPath>
+        <displayOrderInCategory>63</displayOrderInCategory>
+        <abilities>
+            <li>SHG_FoamBurst</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_FoamBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_FirefighterFoamBurst</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPetrificationBase">
+        <defName>SHG_PetrificationBurst</defName>
+        <label>petrification burst</label>
+        <description>Carriers of this gene are able to release a burst of infused stone dust that invades the blood streams of everyone in the area around tham, including themselves, like a toxin. The dust collects around veins and muscles, gradually restricting the individual's ability to move freely as it becomes denser.</description>
+        <iconPath>Powers/Gene_PetrifyBurst</iconPath>
+        <displayOrderInCategory>73</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>Petrification doesn't kill targets by itself, and wears off over time.</li>
+            <li>Petrification is less effective against large targets and targets with higher innate armor.</li>
+        </customEffectDescriptions>
+        <statOffsets>
+            <ArmorRating_Blunt>.1</ArmorRating_Blunt>
+        </statOffsets>
+        <abilities>
+            <li>SHG_PetrificationBurst</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_PetrificationBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_PetrimancerPetrificationBurst</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersWaterBase">
+        <defName>SHG_WaterBurst</defName>
+        <label>water burst</label>
+        <description>Carriers of this gene are able to release a burst of pressurized water that shoots in all directions around the pawn. This will put out fires and stick clumps of a weird watery foam to everyone that feels very uncomfortable, but protects them similar to firefoam.</description>
+        <iconPath>Powers/Gene_WaterBurst</iconPath>
+        <displayOrderInCategory>83</displayOrderInCategory>
+        <damageFactors>
+            <SHG_Water>0.50</SHG_Water>
+        </damageFactors>
+        <abilities>
+            <li>SHG_WaterBurst</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_WaterBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_HydromancerWaterBurst</li>
+            <li>Archetypes_FirefighterWaterBurst</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersFoamBase">
+        <defName>SHG_SmokeBomb</defName>
+        <label>smoke bomb</label>
+        <description>Carriers of this gene are able to release of smoke that will leave everyone around them stunned for a while.</description>
+        <iconPath>Powers/Gene_SmokeBomb</iconPath>
+        <displayOrderInCategory>74</displayOrderInCategory>
+        <abilities>
+            <li>SHG_SmokeBomb</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SmokeBomb</AbilityDef>
+        </descriptionHyperlinks>
+        <symbolPack inherit="false">
+            <prefixSymbols>
+                <li><symbol>smoke</symbol></li>
+                <li><symbol>gas</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>smoker</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+        <exclusionTags>
+            <li>Archetypes_NinjaSmokeBomb</li>
+        </exclusionTags>
+    </GeneDef>
+</Defs>

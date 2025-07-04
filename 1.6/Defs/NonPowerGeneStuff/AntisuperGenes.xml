@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperGeneBase" Name="AntisuperDurabilityBase" Abstract="True">
+        <iconPath>Base/AntisuperDurability</iconPath>
+        <prerequisite>UnsuperDurability</prerequisite>
+        <exclusionTags>
+            <li>AntisuperDurabilities</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="AntisuperHealingBase" Abstract="True">
+        <iconPath>Base/AntisuperHealing</iconPath>
+        <prerequisite>UnsuperHealing</prerequisite>
+        <exclusionTags>
+            <li>AntisuperHealings</li>
+            <li>WoundHealingRate</li>
+            <li>Immunity</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="AntisuperIntelligenceBase" Abstract="True">
+        <iconPath>Base/AntisuperIntelligence</iconPath>
+        <prerequisite>UnsuperIntelligence</prerequisite>
+        <exclusionTags>
+            <li>AntisuperIntelligences</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="AntisuperPerceptionBase" Abstract="True">
+        <iconPath>Base/AntisuperPerception</iconPath>
+        <prerequisite>UnsuperPerception</prerequisite>
+        <exclusionTags>
+            <li>AntisuperPerceptions</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="AntisuperPersuasionBase" Abstract="True">
+        <iconPath>Base/AntisuperPersuasion</iconPath>
+        <prerequisite>UnsuperPersuasion</prerequisite>
+        <exclusionTags>
+            <li>AntisuperPersuasions</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="AntisuperPrecisionBase" Abstract="True">
+        <iconPath>Base/AntisuperPrecision</iconPath>
+        <prerequisite>UnsuperPrecision</prerequisite>
+        <exclusionTags>
+            <li>AntisuperPrecisions</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="AntisuperSpeedBase" Abstract="True">
+        <iconPath>Base/AntisuperSpeed</iconPath>
+        <prerequisite>UnsuperSpeed</prerequisite>
+        <exclusionTags>
+            <li>AntisuperSpeeds</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperGeneBase" Name="AntisuperStrengthBase" Abstract="True">
+        <iconPath>Base/AntisuperStrength</iconPath>
+        <prerequisite>UnsuperStrength</prerequisite>
+        <exclusionTags>
+            <li>AntisuperStrengths</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="AntisuperDurabilityBase">
+        <defName>AntisuperDurability</defName>
+        <label>antisuper durability</label>
+        <description>Supers with this gene have skin that is so abnormally fragile any decent attack could potentially kill them, and they need strong armor counteract this problem.</description>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <biostatMet>3</biostatMet>
+        <statFactors>
+            <IncomingDamageFactor>1.5</IncomingDamageFactor>
+        </statFactors>
+        <statOffsets>
+            <ArmorRating_Blunt>-0.1</ArmorRating_Blunt>
+            <ArmorRating_Sharp>-0.1</ArmorRating_Sharp>
+            <ArmorRating_Heat>-0.1</ArmorRating_Heat>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="AntisuperHealingBase">
+        <defName>AntisuperHealing</defName>
+        <label>antisuper healing</label>
+        <description>Supers with this gene have far weaker antibodies and hemoglobin, forcing them to take extra precautions to never get sick or injured.</description>
+        <displayOrderInCategory>23</displayOrderInCategory>
+        <biostatMet>5</biostatMet>
+        <statFactors>
+            <ImmunityGainSpeed>0.8</ImmunityGainSpeed>
+            <InjuryHealingFactor>0.5</InjuryHealingFactor>
+        </statFactors>
+        <statOffsets>
+            <ImmunityGainSpeed>-0.1</ImmunityGainSpeed>
+            <InjuryHealingFactor>-0.1</InjuryHealingFactor>
+        </statOffsets>
+        <capMods>
+            <li>
+                <capacity>BloodFiltration</capacity>
+                <offset>-0.10</offset>
+            </li>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <offset>-0.10</offset>
+            </li>
+        </capMods>
+    </GeneDef>
+
+    <GeneDef ParentName="AntisuperIntelligenceBase">
+        <defName>AntisuperIntelligence</defName>
+        <label>antisuper intelligence</label>
+        <description>Supers with this gene have smoother brains than normal pawns, drastically reducing the rate that they can take in and use new information.</description>
+        <displayOrderInCategory>33</displayOrderInCategory>
+        <biostatMet>3</biostatMet>
+        <statFactors>
+            <ResearchSpeed>0.4</ResearchSpeed>
+            <GlobalLearningFactor>0.4</GlobalLearningFactor>
+            <LearningRateFactor>0.4</LearningRateFactor>
+            <HackingSpeed MayRequire="ludeon.rimworld.ideology">0.4</HackingSpeed>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="AntisuperPerceptionBase">
+        <defName>AntisuperPerception</defName>
+        <label>antisuper perception</label>
+        <description>Supers with this gene have issues perceiving things that even normal humans find painfully obvious to see.</description>
+        <displayOrderInCategory>43</displayOrderInCategory>
+        <biostatMet>2</biostatMet>
+        <statFactors>
+            <ShootingAccuracyPawn>0.8</ShootingAccuracyPawn>
+            <MeleeDodgeChance>0.8</MeleeDodgeChance>
+            <MeleeHitChance>0.8</MeleeHitChance>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Hearing</capacity>
+                <offset>-0.1</offset>
+            </li>
+            <li>
+                <capacity>Sight</capacity>
+                <offset>-0.1</offset>
+            </li>
+        </capMods>
+    </GeneDef>
+
+    <GeneDef ParentName="AntisuperPersuasionBase">
+        <defName>AntisuperPersuasion</defName>
+        <label>antisuper persuasion</label>
+        <description>Supers with this gene became hideously deformed, and their ability to speak has suffered as well.</description>
+        <displayOrderInCategory>53</displayOrderInCategory>
+        <biostatMet>4</biostatMet>
+        <statFactors>
+            <SocialImpact>0.5</SocialImpact>
+            <NegotiationAbility>0.5</NegotiationAbility>
+            <TradePriceImprovement>0.5</TradePriceImprovement>
+            <ConversionPower MayRequire="ludeon.rimworld.ideology">0.5</ConversionPower>
+        </statFactors>
+        <statOffsets>
+            <PawnBeauty>-5</PawnBeauty>
+        </statOffsets>
+        <capMods>
+            <li>
+                <capacity>Talking</capacity>
+                <offset>-0.2</offset>
+            </li>
+        </capMods>
+    </GeneDef>
+
+    <GeneDef ParentName="AntisuperPrecisionBase">
+        <defName>AntisuperPrecision</defName>
+        <label>antisuper precision</label>
+        <description>Supers with this gene are exceptionally clumsy, reducing their combative abilities considerably.</description>
+        <displayOrderInCategory>63</displayOrderInCategory>
+        <biostatMet>4</biostatMet>
+        <statFactors>
+            <ShootingAccuracyPawn>0.6</ShootingAccuracyPawn>
+            <MeleeDodgeChance>0.6</MeleeDodgeChance>
+            <MeleeHitChance>0.6</MeleeHitChance>
+            <PawnTrapSpringChance>10</PawnTrapSpringChance>
+            <IncomingDamageFactor>1.1</IncomingDamageFactor>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>Manipulation</capacity>
+                <offset>-0.1</offset>
+            </li>
+        </capMods>
+    </GeneDef>
+
+    <GeneDef ParentName="AntisuperSpeedBase">
+        <defName>AntisuperSpeed</defName>
+        <label>antisuper speed</label>
+        <description>Supers with this gene are so painfully slow, they may have issues keeping up with a one-legged human.</description>
+        <displayOrderInCategory>73</displayOrderInCategory>
+        <biostatMet>3</biostatMet>
+        <statFactors>
+            <StaggerDurationFactor>2.5</StaggerDurationFactor>
+            <MeleeDodgeChance>0.4</MeleeDodgeChance>
+            <MeleeCooldownFactor>2.5</MeleeCooldownFactor>
+        </statFactors>
+        <statOffsets>
+            <AimingDelayFactor>5</AimingDelayFactor>
+        </statOffsets>
+        <capMods>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <offset>-0.1</offset>
+            </li>
+            <li>
+                <capacity>Moving</capacity>
+                <offset>-0.1</offset>
+            </li>
+        </capMods>
+    </GeneDef>
+
+    <GeneDef ParentName="AntisuperStrengthBase">
+        <defName>AntisuperStrength</defName>
+        <label>antisuper strength</label>
+        <description>Supers with this gene are pitifully weak, making it difficult to fight in melee combat or carry anything with them.</description>
+        <displayOrderInCategory>83</displayOrderInCategory>
+        <biostatMet>3</biostatMet>
+        <statFactors>
+            <CarryingCapacity>0.4</CarryingCapacity>
+            <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.4</VEF_MassCarryCapacity>
+            <CarryBulk MayRequire="ceteam.combatextended">0.4</CarryBulk>
+            <MeleeDamageFactor>0.4</MeleeDamageFactor>
+        </statFactors>
+        <capMods>
+            <li>
+                <capacity>BloodPumping</capacity>
+                <offset>-0.1</offset>
+            </li>
+        </capMods>
+    </GeneDef>
+</Defs>

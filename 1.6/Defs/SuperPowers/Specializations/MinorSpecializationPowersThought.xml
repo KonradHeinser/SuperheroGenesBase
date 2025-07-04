@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThoughtDef>
+        <defName>SHG_Pools_CalmingAura_Pain</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>SHG_Pools_CalmingAura</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>calming aura</label>
+                <description>Helping everyone around like this is quite taxing.</description>
+                <baseMoodEffect>-20</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>SHG_Pools_CalmingAura_Happy</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>SHG_Pools_CalmingAura_Buff</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <label>calming aura</label>
+                <description>My mind feels clear, as though there's a little voice in my head helping me solve all of life's a little easier.</description>
+                <baseMoodEffect>10</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

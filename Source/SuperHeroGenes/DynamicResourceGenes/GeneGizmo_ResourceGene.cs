@@ -15,6 +15,10 @@ namespace SuperHeroGenesBase
 
         private List<Pair<IGeneResourceDrain, float>> tmpDrainGenes = new List<Pair<IGeneResourceDrain, float>>();
 
+        private static bool draggingBar;
+
+        protected override bool DraggingBar { get => draggingBar; set => draggingBar = value; }
+
         public GeneGizmo_ResourceGene(Gene_Resource gene, List<IGeneResourceDrain> drainGenes, Color barColor, Color barhighlightColor)
             : base(gene, drainGenes, barColor, barhighlightColor)
         {
@@ -33,7 +37,7 @@ namespace SuperHeroGenesBase
             {
                 num2 = 1f - (num - 0.25f) / 0.6f;
             }
-            if (((MainTabWindow_Inspect)MainButtonDefOf.Inspect.TabWindow)?.LastMouseoverGizmo is Command_Ability command_Ability && gene.Max != 0f)
+            if (MapGizmoUtility.LastMouseOverGizmo is Command_Ability command_Ability && gene.Max != 0f)
             {
                 foreach (CompAbilityEffect effectComp in command_Ability.Ability.EffectComps)
                 {

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersFireBase">
+        <defName>SHG_FireBlast</defName>
+        <label>fire blast</label>
+        <description>Supers with this power are able to summon a ball of fire that explodes to leave fuel all over the ground.\n\nThis doesn't render you immune to fire, so remember to get protection.</description>
+        <iconPath>Powers/Gene_FireBall</iconPath>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <abilities>
+            <li>SHG_FireBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_FireBlast</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_PyromancerFireBlast</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersAcidBase">
+        <defName>SHG_AcidBlast</defName>
+        <label>acid blast</label>
+        <description>Supers with this power are able to summon a blob of acid that explodes to leave a burning feeling on the skin.\n\nThis doesn't render you immune to acid, so remember to get protection.</description>
+        <iconPath>Powers/Gene_AcidBall</iconPath>
+        <displayOrderInCategory>11</displayOrderInCategory>
+        <abilities>
+            <li>SHG_AcidBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_AcidBlast</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_CaustimancerAcidBlast</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersLightningBase">
+        <defName>SHG_LightningBlast</defName>
+        <label>lightning blast</label>
+        <description>Supers with this power are able to summon a ball of lightning that explodes to cause damage to both flesh and electronics.</description>
+        <iconPath>Powers/Gene_LightningBall</iconPath>
+        <displayOrderInCategory>21</displayOrderInCategory>
+        <abilities>
+            <li>SHG_LightningBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_LightningBlast</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_ElectromancerLightningBlast</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersIceBase">
+        <defName>SHG_IceBlast</defName>
+        <label>ice blast</label>
+        <description>Supers with this power are able to summon a ball of ice explodes to rapidly freeze opponents.\n\nThis doesn't render you immune to ice, so remember to get protection.</description>
+        <iconPath>Powers/Gene_IceBall</iconPath>
+        <displayOrderInCategory>31</displayOrderInCategory>
+        <abilities>
+            <li>SHG_IceBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_IceBlast</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_CryomancerIceBlast</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersToxicBase">
+        <defName>SHG_ToxBlast</defName>
+        <label>toxic blast</label>
+        <description>Supers with this power are able to summon a ball of poison explodes to create a cloud that inflicts toxic buildup.\n\nThis doesn't render you immune to toxins, so remember to get protection.</description>
+        <iconPath>Powers/Gene_ToxicBall</iconPath>
+        <displayOrderInCategory>41</displayOrderInCategory>
+        <abilities>
+            <li>SHG_ToxBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_ToxBlast</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_ToximancerToxicBlast</li>
+            <li>Archetypes_NinjaToxicBlast</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersEMPBase">
+        <defName>SHG_EMPBlast</defName>
+        <label>emp blast</label>
+        <description>Supers with this power are able to summon a ball of electricity that will explode and disable various electronics in an area. This ball is not strong enough to cause damage.</description>
+        <iconPath>Powers/Gene_LightningBall</iconPath>
+        <displayOrderInCategory>51</displayOrderInCategory>
+        <abilities>
+            <li>SHG_EMPBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_EMPBlast</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_ElectromancerEMPBlast</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersFoamBase">
+        <defName>SHG_FoamBlast</defName>
+        <label>foam blast</label>
+        <description>Supers with this power are able to summon a ball of foam that will explode and douse flames and prevent the area from catching on fire.</description>
+        <iconPath>Powers/Gene_FoamBall</iconPath>
+        <displayOrderInCategory>61</displayOrderInCategory>
+        <abilities>
+            <li>SHG_FoamBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_FoamBlast</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_FirefighterFoamBlast</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPetrificationBase">
+        <defName>SHG_PetrificationBlast</defName>
+        <label>petrification blast</label>
+        <description>Supers with this power are able to summon a ball of infused stone that will invade a targets bloodstream like a toxin.</description>
+        <iconPath>Powers/Gene_PetrificationBall</iconPath>
+        <displayOrderInCategory>71</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>Petrification doesn't kill targets by itself, and wears off over time.</li>
+            <li>Petrification is less effective against large targets and targets with higher innate armor.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_PetrificationBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_PetrificationBlast</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_PetrimancerPetrificationBlast</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersWaterBase">
+        <defName>SHG_WaterBlast</defName>
+        <label>water blast</label>
+        <description>Supers with this power are able to shoot a ball of pressurized water that causes some damage on explosion and puts out fires. This also leaves an uncomfortable firefoam-like substance on targets.</description>
+        <iconPath>Powers/Gene_WaterBall</iconPath>
+        <displayOrderInCategory>81</displayOrderInCategory>
+        <abilities>
+            <li>SHG_WaterBlast</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_WaterBlast</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetypes_HydromancerWaterBlast</li>
+            <li>Archetypes_FirefighterWaterBlast</li>
+        </exclusionTags>
+    </GeneDef>
+</Defs>

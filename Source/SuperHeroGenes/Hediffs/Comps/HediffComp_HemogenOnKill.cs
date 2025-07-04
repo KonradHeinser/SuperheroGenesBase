@@ -49,7 +49,6 @@ namespace SuperHeroGenesBase
             }
         }
 
-
         public float BodySizeFactor(Pawn victim)
         {
             return victim.BodySize / parent.pawn.BodySize;

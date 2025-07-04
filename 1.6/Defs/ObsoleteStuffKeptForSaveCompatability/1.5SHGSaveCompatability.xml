@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!--Delete this file when 1.7 rolls around-->
+    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Hemomancer_StarfishSplitting</defName>
+		<label>splitting</label>
+		<description>A clump of hemogen inside this pawn is gradually morphing into a miniature version of this pawn. If the pawn shifts into a different form, this clump will still grow without issue. If they die, it will become a useless mass that the body will quickly destroy should the pawn be revived.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_AsexualReproduction">
+				<reproductionIntervalDays>1</reproductionIntervalDays>
+				<endogeneTransfer>true</endogeneTransfer>
+				<asexualHatchedMessage>SHG_Hemomancer_Starfish</asexualHatchedMessage>
+			</li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.999</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+    </HediffDef>
+
+    <HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>SHG_Hemomancer_TheGiftOfBlood</defName>
+		<label>the gift of blood</label>
+		<description>This hemopriest is constantly turning hemogen into blood pills. They produce one every day.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="AnimalBehaviours.HediffCompProperties_Spawner">
+				<thingToSpawn>SHG_BloodPill</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>60000~60000</spawnIntervalRange>
+				<spawnMaxAdjacent>30</spawnMaxAdjacent>
+				<spawnForbidden>false</spawnForbidden>
+				<showMessageIfOwned>false</showMessageIfOwned>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core,Ludeon.Rimworld.Royalty">
+        <defName>SHG_Psionist_PsionicFlight</defName>
+		<label>old psionic flight</label>
+		<description>This super is always floating just a little bit off the ground, and their ability to move omnidirectionally makes it easier for them to move around quickly. The more psychic sensitivity the soldier has, the more they can propel themselves.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <MoveSpeed>1.25</MoveSpeed>
+                </statFactors>
+                <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
+            </li>
+        </stages>
+		<comps>
+            <li Class="AnimalBehaviours.HediffCompProperties_Floating" />
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-240</severityPerDay>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_CreateOtherHediffs">
+                <hediffSets>
+                    <li>
+                        <hediffDef>SHG_Psionist_New_PsionicFlight</hediffDef>
+                    </li>
+                </hediffSets>
+            </li>
+		</comps>
+	</HediffDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Beelzebub</defName>
+        <label>beelzebub (old)</label>
+        <description>Absorb nutrtition from all living things around you, and even from the very ground you stand on. While the effects to the soil are negligible, this can cause great damage to all living things near you. Both the bonus to the super and the draining only lasts for 1 hour.</description>
+        <iconPath>Powers/Specializations/Gene_Beezlebub</iconPath>
+        <warmupEffecter>Bloodfeed_Warmup</warmupEffecter>
+        <warmupStartSound>Bloodfeed_Cast</warmupStartSound>
+        <cooldownTicksRange>600000</cooldownTicksRange>
+        <verbProperties>
+            <range>10</range>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityRequiresCapacity">
+                <capacity>Eating</capacity>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Beelzebub</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+	<HediffDef>
+        <defName>SHG_Beelzebub</defName>
+        <label>beelzebub</label>
+        <description>This pawn is absorbing nutrients from every source in the area that in can reach, from the living things that naturally store nutrition all the way down to the nutrients in the soil that plants utilize.</description>
+		<initialSeverity>1.0</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+        <stages>
+            <li>
+		        <label>final scraps</label>
+                <minSeverity>0.1</minSeverity>
+                <hungerRateFactor>0.5</hungerRateFactor>
+                <totalBleedFactor>0.6</totalBleedFactor>
+                <statFactors>
+                    <InjuryHealingFactor>1.5</InjuryHealingFactor>
+                    <ImmunityGainSpeed>1.5</ImmunityGainSpeed>
+                </statFactors>
+            </li>
+            <li>
+		        <label>dessert</label>
+                <minSeverity>0.3</minSeverity>
+                <hungerRateFactor>0.1</hungerRateFactor>
+                <totalBleedFactor>0.25</totalBleedFactor>
+                <statFactors>
+                    <InjuryHealingFactor>2</InjuryHealingFactor>
+                    <ImmunityGainSpeed>2</ImmunityGainSpeed>
+                </statFactors>
+            </li>
+            <li>
+		        <label>feasting</label>
+                <minSeverity>0.5</minSeverity>
+                <hungerRateFactor>0.001</hungerRateFactor>
+                <totalBleedFactor>0</totalBleedFactor>
+                <statFactors>
+                    <InjuryHealingFactor>3</InjuryHealingFactor>
+                    <ImmunityGainSpeed>3</ImmunityGainSpeed>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-24</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>9.9</range>
+                <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>true</canTargetAnimals>
+                    <canTargetMechs>false</canTargetMechs>
+                    <onlyTargetColonists>false</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Beelzebub_Feeding</hediff>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Beelzebub_Feeding</defName>
+        <label>beelzebub target</label>
+        <description>A nearby gluttonous pawn is draining this being's strength. This being should try to get away from the gluttonous super to avoid losing all of its food reserves.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>true</isBad>
+        <stages>
+            <li>
+                <hungerRateFactor>2</hungerRateFactor>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>false</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="HediffCompProperties_Link">
+                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+                <maxDistance>10</maxDistance>
+                <customMote>SHG_Mote_Generic</customMote>
+            </li>
+        </comps>
+    </HediffDef>
+
+</Defs>

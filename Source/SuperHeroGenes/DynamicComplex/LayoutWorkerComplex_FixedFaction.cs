@@ -23,7 +23,7 @@ namespace SuperHeroGenesBase
             return null;
         }
 
-        protected override void PostSpawnStructure(List<List<CellRect>> rooms, Map map, List<Thing> allSpawnedThings)
+        protected override void PreSpawnThreats(List<LayoutRoom> rooms, Map map, List<Thing> allSpawnedThings)
         {
             if (Def.rewardThingSetMakerDef != null)
                 if (Def.roomRewardCrateFactor > 0f)
@@ -42,10 +42,11 @@ namespace SuperHeroGenesBase
                         return;
                     }
                     ThingSetMakerDef thingSetMakerDef = Def.rewardThingSetMakerDef ?? ThingSetMakerDefOf.Reward_ItemsStandard;
-                    foreach (List<CellRect> item in rooms.InRandomOrder())
+                    foreach (LayoutRoom item in rooms.InRandomOrder())
                     {
                         bool flag = true;
-                        List<IntVec3> list = item.SelectMany((CellRect r) => r.Cells).ToList();
+                        
+                        List<IntVec3> list = new List<IntVec3>(item.Cells);
                         foreach (IntVec3 item2 in list)
                         {
                             Building edifice = item2.GetEdifice(map);
@@ -59,7 +60,7 @@ namespace SuperHeroGenesBase
                         {
                             continue;
                         }
-                        if (ComplexUtility.TryFindRandomSpawnCell(ThingDefOf.AncientHermeticCrate, list, map, out var spawnPosition, 1, Rot4.South))
+                        if (ComplexUtility.TryFindRandomSpawnCell(ThingDefOf.AncientHermeticCrate, item, map, out var spawnPosition, 1, Rot4.South))
                         {
                             Building_Crate building_Crate = (Building_Crate)GenSpawn.Spawn(ThingMaker.MakeThing(ThingDefOf.AncientHermeticCrate), spawnPosition, map, Rot4.South);
                             List<Thing> list2 = thingSetMakerDef.root.Generate(default(ThingSetMakerParams));

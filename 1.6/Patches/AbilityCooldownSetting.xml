@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>baseAbilityCooldown</setting>
+        <option1 Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHGPowerAbilitiesBase"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>2500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHG_HemoShifter_WarriorBuffAbilityBase"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>2500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_BasicLaserEyes"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>2500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_NewLaserEyes"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>2500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Flight_WorldTravel"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>2500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_PsionicFlight"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>2500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_CompelledDuel"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>2500</cooldownTicksRange></value>
+                </li>
+            </operations>
+        </option1>
+        <option2 Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHGPowerAbilitiesBase"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHG_HemoShifter_WarriorBuffAbilityBase"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_BasicLaserEyes"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_NewLaserEyes"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Flight_WorldTravel"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_PsionicFlight"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_CompelledDuel"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+
+                <!--New stuff for this level-->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_Drain"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_StealPerceptiveness"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_StealDefense"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_StealStrength"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_Reap"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_BloodBoil"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Radiomancer_Mutate"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_PsychicDisconnection"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_UntouchableBeauty"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Telepush"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Telepull"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_Utopia"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_Entrench"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>7500</cooldownTicksRange></value>
+                </li>
+            </operations>
+        </option2>
+        <option3 Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHGPowerAbilitiesBase"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHG_HemoShifter_WarriorBuffAbilityBase"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_BasicLaserEyes"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_NewLaserEyes"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Flight_WorldTravel"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_PsionicFlight"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_CompelledDuel"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+
+                <!--Stuff from the second level-->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_Drain"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_StealPerceptiveness"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_StealDefense"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_StealStrength"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_Reap"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_BloodBoil"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Radiomancer_Mutate"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_PsychicDisconnection"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_UntouchableBeauty"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Telepush"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Telepull"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_Utopia"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_Entrench"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+
+                <!--New stuff for this level-->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHG_Radiomancer_DrainLinkAbility"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Invisibility"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Flight"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>15000</cooldownTicksRange></value>
+                </li>
+            </operations>
+        </option3>
+        <option4 Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHGPowerAbilitiesBase"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHG_HemoShifter_WarriorBuffAbilityBase"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_BasicLaserEyes"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_NewLaserEyes"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Flight_WorldTravel"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_PsionicFlight"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_CompelledDuel"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+
+                <!--Stuff from the second level-->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_Drain"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_StealPerceptiveness"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_StealDefense"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_StealStrength"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_Reap"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_BloodBoil"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Radiomancer_Mutate"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_PsychicDisconnection"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_UntouchableBeauty"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Telepush"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Telepull"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_Utopia"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_Entrench"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+
+                <!--Stuff from third level-->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHG_Radiomancer_DrainLinkAbility"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Invisibility"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Flight"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+            </operations>
+        </option4>
+        <option5 Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHGPowerAbilitiesBase"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHG_HemoShifter_WarriorBuffAbilityBase"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>30000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_BasicLaserEyes"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_NewLaserEyes"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Flight_WorldTravel"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_PsionicFlight"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_CompelledDuel"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+
+                <!--Stuff from the second level-->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_Drain"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_StealPerceptiveness"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_StealDefense"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_StealStrength"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_Reap"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Hemomancer_BloodBoil"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Radiomancer_Mutate"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_PsychicDisconnection"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_UntouchableBeauty"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Telepush"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Telepull"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_Utopia"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                    <xpath>Defs/AbilityDef[defName="SHG_Psionist_Entrench"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+
+                <!--Stuff from third level-->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[@Name="SHG_Radiomancer_DrainLinkAbility"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Invisibility"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/AbilityDef[defName="SHG_Flight"]/cooldownTicksRange</xpath>
+                    <value><cooldownTicksRange>60000</cooldownTicksRange></value>
+                </li>
+            </operations>
+        </option5>
+    </Operation>
+</Patch>

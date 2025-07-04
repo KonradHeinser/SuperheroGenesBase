@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThoughtDef[defName="Bloodfeeders_Reviled_Opinion_Bloodfeeder" or defName="BloodfeederDied_Reviled" or defName="Bloodfeeder_ReviledBloodfeeder" or defName="BloodfeederColonist_Reviled"]/nullifyingGenes</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/ThoughtDef[defName="Bloodfeeders_Reviled_Opinion_Bloodfeeder" or defName="BloodfeederDied_Reviled" or defName="Bloodfeeder_ReviledBloodfeeder" or defName="BloodfeederColonist_Reviled"]/nullifyingGenes</xpath>
+            <value><li>SHG_Hemomancer_Initiate</li></value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThoughtDef[defName="Bloodfeeders_Reviled_Opinion_Bloodfeeder" or defName="BloodfeederDied_Reviled" or defName="Bloodfeeder_ReviledBloodfeeder" or defName="BloodfeederColonist_Reviled"]</xpath>
+            <value>
+                <nullifyingGenes>
+                    <li>SHG_Hemomancer_Initiate</li>
+                </nullifyingGenes>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThoughtDef[defName="Bloodfeeders_Reviled_Opinion_Bloodfeeder" or defName="BloodfeederDied_Reviled" or defName="Bloodfeeder_ReviledBloodfeeder" or defName="BloodfeederColonist_Reviled"]/nullifyingHediffs</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/ThoughtDef[defName="Bloodfeeders_Reviled_Opinion_Bloodfeeder" or defName="BloodfeederDied_Reviled" or defName="Bloodfeeder_ReviledBloodfeeder" or defName="BloodfeederColonist_Reviled"]/nullifyingHediffs</xpath>
+            <value>
+                <li>SHG_Hemomancer_Priest_Buff</li>
+                <li>SHG_BloodPillHigh</li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThoughtDef[defName="Bloodfeeders_Reviled_Opinion_Bloodfeeder" or defName="BloodfeederDied_Reviled" or defName="Bloodfeeder_ReviledBloodfeeder" or defName="BloodfeederColonist_Reviled"]</xpath>
+            <value>
+                <nullifyingHediffs>
+                    <li>SHG_Hemomancer_Priest_Buff</li>
+                    <li>SHG_BloodPillHigh</li>
+                </nullifyingHediffs>
+            </value>
+        </nomatch>
+    </Operation>
+</Patch>

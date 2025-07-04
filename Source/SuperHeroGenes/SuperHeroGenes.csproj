@@ -21,48 +21,31 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
-    <OutputPath>..\..\1.5\Assemblies</OutputPath>
+    <OutputPath>..\..\1.6\Assemblies\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+  <ItemDefinitionGroup>
+    <Reference>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <ProjectReference>
       <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Xml">
-      <HintPath>..\..\..\..\RimWorldLinux_Data\Managed\System.Xml.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-  </ItemGroup>
+    </ProjectReference>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <Compile Include="Abilities\CompAbilityEffects\CompAbilityEffect_AbsorbPower.cs" />
     <Compile Include="Abilities\CompProperties\CompProperties_AbilityAbsorbPower.cs" />
-    <Compile Include="Hediffs\CompProperties\HediffCompProperties_AttachMote.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_CreateItems.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_InvisibleAtStage.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_SpawnHumanlike.cs" />
-    <Compile Include="Hediffs\Comps\HediffComp_AttachMote.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_CreateItems.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_CreateOtherHediffs.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_InvisibleAtStage.cs" />
+    <Compile Include="Hediffs\Comps\HediffComp_SetterBase.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_SpawnHumanlike.cs" />
     <Compile Include="Hediffs\ThingCreationItem.cs" />
     <Compile Include="IngestionOutcomeDoer_AlterGenes.cs" />
@@ -148,7 +131,6 @@
     <Compile Include="Abilities\Verb_CastAbilityLaserEyes.cs" />
     <Compile Include="AbilityAndGeneLink.cs" />
     <Compile Include="Abilities\ThingPatternPart.cs" />
-    <Compile Include="Hediffs\Comps\HediffComp_CreateOtherHediffs.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_ExplodeOnDeath.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_FactionBond.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_GainRandomGeneSet.cs" />
@@ -206,8 +188,6 @@
     <Compile Include="Thoughts\Thought_Situational_HediffSeverity.cs" />
     <Compile Include="Thoughts\Thought_Situational_PeopleInColony.cs" />
     <Compile Include="Thoughts\ThoughtWorker_PeopleInColony.cs" />
-    <Compile Include="Hediffs\Comps\HediffComp_HediffsOnRemoval.cs" />
-    <Compile Include="Hediffs\CompProperties\HediffCompProperties_HediffsOnRemoval.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_HemogenOnKill.cs" />
     <Compile Include="Hediffs\Comps\HediffComp_HemogenOnKill.cs" />
     <Compile Include="Need_BloodThirst.cs" />
@@ -273,6 +253,27 @@
     <Compile Include="IncidentWorker_DiseaseGene.cs" />
     <Compile Include="Quest\QuestNode_LogMessage.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\mscorlib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

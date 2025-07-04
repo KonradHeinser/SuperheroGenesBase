@@ -8,7 +8,6 @@ namespace SuperHeroGenesBase
         // Overrides severity to be based on the number of nearby pawns. Default behaviour makes a severity of 1 mean that there is no nearby pawn
 
         public float range;
-        public StatDef rangeStat;
         public bool onlyEnemies; // Only counts pawns that are hostile to the pawn
         public bool onlyDifferentFaction; // Only counts pawns that aren't in the player's faction
         public bool onlySameFaction; // Only counts pawns in the same faction

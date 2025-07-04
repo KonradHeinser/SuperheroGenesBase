@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_CommandAnimal</defName>
+        <label>command animal</label>
+        <description>Command an animal to fight for the colony for several hours.</description>
+        <iconPath>UI/Abilities/AnimalWarcall</iconPath>
+        <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+        <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+        <groupAbility>True</groupAbility>
+        <statBases>
+            <Ability_Duration>720</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <label>super's command</label>
+            <range>50</range>
+            <drawAimPie>True</drawAimPie>      
+            <requireLineOfSight>False</requireLineOfSight>
+            <warmupEffecter>AnimalWarcall_Warmup</warmupEffecter>
+            <targetParams>
+                <canTargetLocations>False</canTargetLocations>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetHumans>False</canTargetHumans>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetSelf>False</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveMentalState">
+                <compClass>CompAbilityEffect_GiveMentalState</compClass>
+                <stateDef>SHG_CommandAnimal</stateDef>
+                <goodwillImpact>-75</goodwillImpact>
+                <casterEffect>AnimalWarcall_Cast</casterEffect>
+                <targetEffect>AnimalWarcall_CastOnTarget</targetEffect>
+                <excludeNPCFactions>False</excludeNPCFactions>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_HeroicLeap</defName>
+        <label>heroic leap</label>
+        <description>Jump to a distant location.</description>
+        <iconPath>UI/Abilities/Longjump</iconPath>
+        <hostile>false</hostile>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityJump</verbClass>
+            <label>leap</label>
+            <violent>False</violent>
+            <forceNormalTimeSpeed>False</forceNormalTimeSpeed>
+            <range>40</range>
+            <requireLineOfSight>True</requireLineOfSight>
+            <soundCast>Longjump_Jump</soundCast>
+            <soundLanding>Longjump_Land</soundLanding>
+            <targetParams>
+                <canTargetLocations>True</canTargetLocations>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetBuildings>False</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+        <jobDef>CastJump</jobDef>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_SealWounds</defName>
+        <label>seal wounds</label>
+        <description>Seals a pawn's wounds to prevent further bleading.</description>
+        <iconPath>Powers/Gene_SealWounds</iconPath>
+        <hostile>False</hostile>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <warmupMote>Mote_CoagulateStencil</warmupMote>
+        <warmupEffecter>Coagulate</warmupEffecter>
+        <warmupStartSound>Coagulate_Cast</warmupStartSound>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <label>heal</label>
+            <violent>False</violent>
+            <range>20</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <drawAimPie>False</drawAimPie>
+            <targetParams>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetBloodfeeders>True</canTargetBloodfeeders>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityCoagulate">
+                <tendQualityRange>0.98~0.99</tendQualityRange>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_ThrowSpike</defName>
+        <label>throw spike</label>
+        <description>Summon and throw a fast moving spike at a target.</description>
+        <iconPath>Powers/Gene_ThrowSpike</iconPath>
+        <aiCanUse>True</aiCanUse>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>30</range>
+            <soundCast>PiercingSpine_Launch</soundCast>
+        </verbProperties>
+        <comps>
+        <li Class="CompProperties_AbilityLaunchProjectile">
+            <projectileDef>SHG_Spike</projectileDef>
+        </li>
+        </comps>
+    </AbilityDef>
+    <ThingDef ParentName="BaseBullet">
+        <defName>SHG_Spike</defName>
+        <label>summoned spike</label>
+        <graphicData>
+            <texPath>Things/Projectile/PiercingSpine</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.8</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>RangedStab</damageDef>
+            <damageAmountBase>5</damageAmountBase>
+            <armorPenetrationBase>1</armorPenetrationBase>
+            <stoppingPower>1</stoppingPower>
+            <speed>100</speed>
+        </projectile>
+    </ThingDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Revive</defName>
+        <label>revive</label>
+        <description>Revive a once living thing. This process takes a while to complete, and may be interrupted if the reviver is attacked.</description>
+        <iconPath>UI/Abilities/Resurrect</iconPath>
+        <warmupMote>Mote_ResurrectAbility</warmupMote>
+        <warmupStartSound>Resurrect_Cast</warmupStartSound>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <hostile>False</hostile>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>5</range>
+            <warmupTime>60</warmupTime>
+            <soundCast>Resurrect_Resolve</soundCast>
+            <targetParams>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetCorpses>True</canTargetCorpses>
+                <canTargetMechs>False</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_Resurrect" />
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Invisibility</defName>
+        <label>invisibility</label>
+        <description>Become invisible for some time. This is quite taxing on the body, so it can only be maintained for half an hour, and requires a few hours to recharge.</description>
+        <iconPath>Powers/Gene_Invisibility</iconPath>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <showCastingProgressBar>True</showCastingProgressBar>
+        <cooldownTicksRange>10000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>21</Ability_Duration>
+        </statBases>
+        <aiCanUse>true</aiCanUse>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <range>0.1</range>
+            <drawAimPie>False</drawAimPie>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Invisibility</hediffDef>
+            </li>
+            <li Class="CompProperties_AbilityFleckOnTarget">
+                <fleckDef>PsycastPsychicEffect</fleckDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Blink</defName>
+        <label>blink</label>
+        <description>Teleport yourself randomly between 20 and 30 tiles away. This can be used to get yourself out of sticky situations quickly.</description>
+        <iconPath>Powers/Gene_Blink</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <targetRequired>False</targetRequired>
+        <verbProperties>
+            <range>30</range>
+            <warmupTime>0.1</warmupTime>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityTeleport">
+                <compClass>CompAbilityEffect_Teleport</compClass>
+                <destination>RandomInRange</destination>
+                <randomRange>20~30</randomRange>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>10</clamorRadius>
+                <destClamorType>Ability</destClamorType>
+                <destClamorRadius>10</destClamorRadius>
+                <stunTicks>1~2</stunTicks>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Teleport</defName>
+        <label>teleport</label>
+        <description>Teleport a living thing to a desired position near where you currently stand.</description>
+        <iconPath>Powers/Gene_Teleport</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <range>1</range>
+            <warmupTime>0.5</warmupTime>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetMechs>False</canTargetMechs>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityTeleport">
+                <compClass>CompAbilityEffect_Teleport</compClass>
+                <destination>Selected</destination>
+                <requiresLineOfSight>False</requiresLineOfSight>
+                <range>50</range>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>3</clamorRadius>
+                <destClamorType>Ability</destClamorType>
+                <destClamorRadius>3</destClamorRadius>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Gate</defName>
+        <label>open gate</label>
+        <description>Teleport yourself and everyone within 10 tiles to a distant location.</description>
+        <iconPath>Powers/Gene_Gate</iconPath>
+        <hotKey>Misc12</hotKey>
+        <targetWorldCell>True</targetWorldCell>
+        <showGizmoOnWorldView>True</showGizmoOnWorldView>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <hostile>false</hostile>
+        <jobDef Inherit="False" />
+        <statBases>
+            <Ability_EffectRadius>10</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>10</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_LongDistanceTeleport">
+                <stunTicks>1~2</stunTicks>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>10</clamorRadius>
+                <requireAllyAtDestination>False</requireAllyAtDestination>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Rift</defName>
+        <label>open rift</label>
+        <description>Open a rift in the space time continuum that instantly teleports everyone within 200 tiles to a location.</description>
+        <iconPath>Powers/Gene_Rift</iconPath>
+        <hotKey>Misc12</hotKey>
+        <targetWorldCell>True</targetWorldCell>
+        <showGizmoOnWorldView>True</showGizmoOnWorldView>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <hostile>false</hostile>
+        <jobDef Inherit="False" />
+        <statBases>
+            <Ability_EffectRadius>200</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>200</range>
+            <warmupTime>5</warmupTime>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_LongDistanceTeleport">
+                <stunTicks>1~2</stunTicks>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>10</clamorRadius>
+                <requireAllyAtDestination>False</requireAllyAtDestination>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_PsychicDisconnection</defName>
+        <label>psychic disconnection</label>
+        <description>Disconnect a pawn from the psychic field, making them immune to many psychic effects and incapable of using psychic abilities for an hour. This will also interupt the pawn's ability to dispel neural heat and safely store neural heat.</description>
+        <iconPath>Powers/Gene_PsychicDisconnection</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <showCastingProgressBar>True</showCastingProgressBar>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <aiCanUse>true</aiCanUse>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <range>30</range>
+            <drawAimPie>False</drawAimPie>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_PsychicDisconnection</hediffDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_MassStoneShift</defName>
+        <label>mass stone shift</label>
+        <description>Teleport the closest 30 stone chunks to a target location.</description>
+        <iconPath>Powers/Gene_MassStoneShift</iconPath>
+        <writeCombatLog>True</writeCombatLog>
+        <hotKey>Misc10</hotKey>
+        <hostile>false</hostile>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <range>29.9</range>
+            <targetParams>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityChunkskip">
+                <chunkCount>30</chunkCount>
+                <scatterRadius>3.9</scatterRadius>
+                <psychic>False</psychic>
+                <clamorType>Ability</clamorType>
+                <clamorRadius>60</clamorRadius>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_StunningAttraction</defName>
+        <label>stunning attraction</label>
+        <description>Make every being around this pawn become inexplicably attracted to them for a brief time. The targets will automatically crowd around the caster. This is affected by stun susceptibility.\n\nThe super will also be stunned for some time as they pose for their adoring audience.</description>
+        <iconPath>Powers/Gene_StunningAttraction</iconPath>
+        <jobDef>CastAbilityOnThingUninterruptible</jobDef>
+        <targetRequired>False</targetRequired>
+        <statBases>
+            <Ability_Duration>15</Ability_Duration>
+            <Ability_EffectRadius>10</Ability_EffectRadius>
+        </statBases>
+        <writeCombatLog>True</writeCombatLog>
+        <verbProperties>
+            <range>10</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityForceJob">
+                <compClass>CompAbilityEffect_ForceJob</compClass>
+                <jobDef>GotoMindControlled</jobDef>
+                <destination>Caster</destination>
+                <durationMultiplier>SHG_StunSusceptibility</durationMultiplier>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Narcissus</defName>
+        <label>narcissus</label>
+        <description>Put a seed of narcissistic thoughts into a target's head, blooming into an internal distraction with a duration based on how much beauty they have.</description>
+        <iconPath>Powers/Gene_Narcissus</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <statBases>
+            <Ability_Duration>5</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>True</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityEffectWithDuration">
+                <compClass>CompAbilityEffect_Stun</compClass>
+                <durationMultiplier>PawnBeauty</durationMultiplier>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Distraction</defName>
+        <label>distraction</label>
+        <description>Distract a target, stunning them for a duration based on the stun susceptibility. Base time is 10 seconds.</description>
+        <iconPath>Powers/Gene_Distraction</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <statBases>
+            <Ability_Duration>10</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>True</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetPawns>True</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityEffectWithDuration">
+                <compClass>CompAbilityEffect_Stun</compClass>
+                <durationMultiplier>SHG_StunSusceptibility</durationMultiplier>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_UntouchableBeauty</defName>
+        <label>untouchable beauty</label>
+        <description>Melee dodge chance increases based on how much beauty this pawn has for an hour.</description>
+        <iconPath>Powers/Gene_UntouchableBeauty</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <targetRequired>False</targetRequired>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>0.9</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_UntouchableBeauty</hediffDef>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Regenesis</defName>
+        <label>regenesis</label>
+        <description>Put a colonist into a regenerating coma.</description>
+        <iconPath>Powers/Gene_Regenesis</iconPath>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <aiCanUse>false</aiCanUse>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <range>-1</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <onlyTargetColonists>True</onlyTargetColonists>
+                <canTargetBuildings>False</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Regenesis</hediffDef>
+                <severity>0.001</severity>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_RegenesisWake</defName>
+        <label>wake from regenesis</label>
+        <description>Removes a regenesis state.</description>
+        <iconPath>Powers/Ability_RegenesisWake</iconPath>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <aiCanUse>false</aiCanUse>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <range>-1</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <onlyTargetColonists>True</onlyTargetColonists>
+                <canTargetBuildings>False</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityRemoveHediff">
+                <compClass>CompAbilityEffect_RemoveHediff</compClass>
+                <hediffDef>SHG_Regenesis</hediffDef>
+                <applyToTarget>True</applyToTarget>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_BasicLaserEyes</defName>
+        <label>laser eyes</label>
+        <description>Shoot a focused laser at a target. Will deal significantly less damage than the superhero version.</description>
+        <iconPath>Powers/BasicLaserEyes</iconPath>
+        <cooldownTicksRange>300</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <showCastingProgressBar>false</showCastingProgressBar>
+        <verbProperties>
+            <verbClass>SuperHeroGenesBase.Verb_CastAbilityLaserEyes</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <hasStandardCommand>true</hasStandardCommand>
+            <warmupTime>0.1</warmupTime>
+            <range>40</range>
+            <beamFullWidthRange>7</beamFullWidthRange>
+            <burstShotCount>7</burstShotCount>
+            <beamWidth>5</beamWidth>
+            <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+            <beamDamageDef>SHG_Beam</beamDamageDef>
+            <soundCastBeam>SHG_Laser_Shooting</soundCastBeam>
+            <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+            <beamCurvature>0.3</beamCurvature>
+            <beamMoteDef>SHG_Mote_LaserEyeBeam</beamMoteDef>
+            <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
+            <beamTotalDamage>25</beamTotalDamage>
+            <beamStartOffset>0.8</beamStartOffset>
+            <targetParams>
+                <canTargetLocations>True</canTargetLocations>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetBuildings>True</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_NewLaserEyes</defName>
+        <label>superhero laser eyes</label>
+        <description>Shoot a highly focused laser that even other supers have difficulties defending themselves from.\n\nWARNING: Try to avoid using this ability on high value things unless you want to parody that Homelander "saves" a plane scene. The laser deals a large amount of damage in a really short time, so the chances of corpses and items surviving the situation are less than ideal.</description>
+        <iconPath>Powers/LaserEyes</iconPath>
+        <cooldownTicksRange>300</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <showCastingProgressBar>false</showCastingProgressBar>
+        <verbProperties>
+            <verbClass>SuperHeroGenesBase.Verb_CastAbilityLaserEyes</verbClass>
+            <requireLineOfSight>False</requireLineOfSight>
+            <hasStandardCommand>true</hasStandardCommand>
+            <warmupTime>0.1</warmupTime>
+            <range>40</range>
+            <beamFullWidthRange>7</beamFullWidthRange>
+            <burstShotCount>7</burstShotCount>
+            <beamWidth>5</beamWidth>
+            <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+            <beamDamageDef>SHG_Beam</beamDamageDef>
+            <soundCastBeam>SHG_Laser_Shooting</soundCastBeam>
+            <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+            <beamCurvature>0.3</beamCurvature>
+            <beamMoteDef>SHG_Mote_LaserEyeBeam</beamMoteDef>
+            <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
+            <beamStartOffset>0.8</beamStartOffset>
+            <targetParams>
+                <canTargetLocations>True</canTargetLocations>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetBuildings>True</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <SoundDef>
+        <defName>SHG_Laser_Shooting</defName>
+        <sustain>true</sustain>
+        <context>MapOnly</context>
+        <maxSimultaneous>2</maxSimultaneous>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+            <li>
+                <tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+                <grains>
+                    <li Class="AudioGrain_Folder">
+                        <clipFolderPath>Weapon/Beamgraser/Fire</clipFolderPath>
+                    </li>
+                </grains>
+                <pitchRange>0.75</pitchRange>
+                <volumeRange>30</volumeRange>
+                <sustainRelease>2</sustainRelease>
+            </li>
+        </subSounds>
+    </SoundDef>
+    
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Flight</defName>
+        <label>faster flight</label>
+        <description>Push yourself to fly even faster than before.</description>
+        <iconPath>Powers/Gene_Flight</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>10000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Soaring</hediffDef>
+                <onlyBrain>True</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Flight_WorldTravel</defName>
+        <label>world travel</label>
+        <description>Allows the pawn to launch themselves to a distant location. When they arrive at their destination they'll need to take a brief break to reorient themselves and determine where they need to go.\n\nThe super will be unable to fly if their caravan's mass exceeds their maximum carry weight, and may need to seperate from a caravan if they want to move quickly.\n\nThe more movement speed the super has, the further they can travel in one burst. Temporary move speed changes from things like go-juice do extend this range.\n\nDue to potential bugs and performance issues, this ability won't allow pawns to fly together, and their speed is statically set to be the same as transport pods.</description>
+        <iconPath>Powers/Gene_Flight</iconPath>
+        <targetWorldCell>True</targetWorldCell>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>1250</cooldownTicksRange>
+        <showGizmoOnWorldView>true</showGizmoOnWorldView>
+        <hostile>false</hostile>
+        <jobDef />
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>0.9</range>
+            <warmupTime>0.5</warmupTime>
+            <requireLineOfSight>False</requireLineOfSight>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_Launch">
+                <maxDistance>3</maxDistance>
+                <distanceFactorStat>MoveSpeed</distanceFactorStat>
+                <skyfallerLeaving>SuperLeaving</skyfallerLeaving>
+                <worldObject>SuperFlying</worldObject>
+                <disablingBiomes>
+                    <li MayRequire="kentington.saveourship2">OuterSpaceBiome</li>
+                </disablingBiomes>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase" MayRequire="Ludeon.Rimworld.Anomaly">
+        <defName>SHG_DetectMetalHorror</defName>
+        <label>detect metal horror</label>
+        <description>Place marks on the caster and everyone around them that will search through the targets' blood and nervous system for oddities. If a metal horror style oddity is found, the mark releases a pheromone that causes others to know that the individual is infected (check the health tab after half an in-game hour).</description>
+        <iconPath>Things/Pawn/Metalhorror/Metalhorror_Mature_east</iconPath>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <aiCanUse>False</aiCanUse>
+        <hostile>False</hostile>
+        <statBases>
+            <Ability_EffectRadius>10</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>10</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <onlyTargetColonists>True</onlyTargetColonists>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityGiveMultipleHediffs">
+                <hediffsToGive>
+                    <li> <!--This one is just to notify the player for 15 in-game minutes-->
+                        <hediffDef>SHG_DetectMetalHorror</hediffDef>
+                        <severity>0.25</severity>
+                    </li>
+                    <li> <!--This one will either disappear or suddenly become visible, depending on results-->
+                        <hediffDef>SHG_MetalHorrorDetected</hediffDef>
+                        <severity>0.1</severity>
+                    </li>
+                </hediffsToGive>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Telepush</defName>
+        <label>telepush</label>
+        <description>Attempt to teleport a target backwards a bit and stun it for 10 seconds. In the event that the would-be destination is off the map or into an impassable location, this ability will not be usable on the target until it has moved into a valid location. This makes it much harder to use in caves and mountainous regions.</description>
+        <iconPath>Powers/Gene_Telepush</iconPath>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <verbProperties>
+            <range>30</range>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetLocations>False</canTargetLocations>
+                <canTargetPlants>False</canTargetPlants>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityTeleMoveIt">
+                <stunTicks>600</stunTicks>
+                <distanceToMoveIt>20</distanceToMoveIt>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Telepull</defName>
+        <label>telepull</label>
+        <description>Attempt to teleport a target towards the caster a bit and stun it for 10 seconds. In the event that the would-be destination is an impassable location, this ability will not be usable on the target until it has moved into a valid location. This makes it much harder to use in caves and mountainous regions. If the target is close enough to the caster, it will be teleported to the caster.</description>
+        <iconPath>Powers/Gene_Telepull</iconPath>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <verbProperties>
+            <range>100</range>
+            <targetParams>
+                <canTargetSelf>False</canTargetSelf>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetLocations>False</canTargetLocations>
+                <canTargetPlants>False</canTargetPlants>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityTeleMoveIt">
+                <stunTicks>600</stunTicks>
+                <distanceToMoveIt>-20</distanceToMoveIt>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_DeathFromAbove</defName>
+        <label>death from above</label>
+        <description>Create a small interdimensional rift above the target point to launch a bombardment of small asteroid pieces.</description>
+        <iconPath>Powers/Gene_DeathFromAbove</iconPath>
+        <charges>3</charges>
+        <cooldownPerCharge>true</cooldownPerCharge>
+        <cooldownTicksRange>300000</cooldownTicksRange>
+        <hostile>true</hostile>
+        <verbProperties>
+            <range>30</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>true</canTargetBuildings>
+                <canTargetPlants>true</canTargetPlants>
+              </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_OrbitalStrike">
+                <centerMarker>SHG_OrbitalCenter_Colorless</centerMarker>
+                <fireChance>0</fireChance>
+                <explosionSound>Explosion_Thump</explosionSound>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase" MayRequire="EBSG.Framework">
+        <defName>SHG_TemporaryForcefield</defName>
+        <label>forcefield</label>
+        <description>Create a barrier around the pawn that blocks up to 500 points of damage. This barrier does not vanish after the day is up, but will be replaced if this ability is used again.</description>
+        <iconPath>Powers/Gene_Forcefield</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_TemporaryForcefield</hediffDef>
+                <replaceExisting>True</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_MidasTouch</defName>
+        <label>midas touch</label>
+        <description>Turn the target into a pile of gold.</description>
+        <iconPath>Powers/Gene_MidasTouch</iconPath>
+        <jobDef>CastAbilityOnThingMelee</jobDef>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <hostile>true</hostile>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <range>-1</range>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetBuildings>False</canTargetBuildings>
+              </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_InstantKill">
+                <makeFilth>False</makeFilth>
+                <thingToMake>Gold</thingToMake>
+                <bodySizeFactor>10</bodySizeFactor>
+            </li>
+        </comps>
+    </AbilityDef>
+
+</Defs>

@@ -11,8 +11,10 @@ namespace SuperHeroGenesBase
 
         public HediffCompProperties_GiveHediffsInRangeGeneRestricting Props => (HediffCompProperties_GiveHediffsInRangeGeneRestricting)props;
 
-        public override void CompPostTick(ref float severityAdjustment)
+        public override void CompPostTickInterval(ref float severityAdjustment, int delta)
         {
+            base.CompPostTickInterval(ref severityAdjustment, delta);
+
             if (!parent.pawn.Awake() || parent.pawn.health == null || parent.pawn.health.InPainShock || !parent.pawn.Spawned)
             {
                 return;
@@ -57,7 +59,7 @@ namespace SuperHeroGenesBase
                 }
                 else
                 {
-                    hediffComp_Disappears.ticksToDisappear = 5;
+                    hediffComp_Disappears.ticksToDisappear = 30;
                 }
             }
         }

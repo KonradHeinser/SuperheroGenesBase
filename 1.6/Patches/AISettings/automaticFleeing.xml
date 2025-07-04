@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>automaticFleeing</setting>
+        <active Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThinkTreeDef[defName="Abilities_Escape"]/thinkRoot/subNodes</xpath>
+                    <value>
+                        <li Class="ThinkNode_ConditionalColonist">
+                            <subNodes>
+                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalColonistShouldFlee">
+                                    <subNodes>
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasGene">
+                                            <gene>SuperHeroBase</gene>
+                                            <subNodes>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                                    <ability>SHG_Invisibility</ability>
+                                                    <subNodes>
+                                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                                            <ability>SHG_Invisibility</ability>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                                    <ability>SHG_HeroicLeap</ability>
+                                                    <subNodes>
+                                                        <li Class="JobGiver_AIJumpEscapeEnemies">
+                                                            <ability>SHG_HeroicLeap</ability>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                                    <ability>SHG_Teleport</ability>
+                                                    <subNodes>
+                                                        <li Class="SuperHeroGenesBase.JobGiver_AITeleportEscapeEnemies">
+                                                            <ability>SHG_Teleport</ability>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                                    <ability>SHG_Blink</ability>
+                                                    <subNodes>
+                                                        <li Class="JobGiver_AICastAbilityOnSelf">
+                                                            <ability>SHG_Blink</ability>
+                                                        </li>
+                                                    </subNodes>
+                                                </li>
+                                            </subNodes>
+                                        </li>
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable" MayRequire="Ludeon.Rimworld.Royalty">
+                                            <ability>Invisibility</ability>
+                                            <subNodes>
+                                                <li Class="JobGiver_AICastAbilityOnSelf" MayRequire="Ludeon.Rimworld.Royalty">
+                                                    <ability>Invisibility</ability>
+                                                </li>
+                                            </subNodes>
+                                        </li>
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+                                            <ability>SHG_Psionist_AssassinSquad</ability>
+                                            <subNodes>
+                                                <li Class="JobGiver_AICastAbilityOnSelf">
+                                                    <ability>SHG_Psionist_AssassinSquad</ability>
+                                                </li>
+                                            </subNodes>
+                                        </li>
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                            <ability>Longjump</ability>
+                                            <subNodes>
+                                                <li Class="JobGiver_AIJumpEscapeEnemies">
+                                                    <ability>Longjump</ability>
+                                                </li>
+                                            </subNodes>
+                                        </li>
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                            <ability>SHG_Hemomancer_ShiftChameleonInvisibility</ability>
+                                            <subNodes>
+                                                <li Class="SuperHeroGenesBase.ThinkNode_RecordPassage" />
+                                                <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                    <ability>SHG_Hemomancer_ShiftChameleonInvisibility</ability>
+                                                </li>
+                                            </subNodes>
+                                        </li>
+                                    </subNodes>
+                                </li>
+                            </subNodes>
+                        </li>
+                    </value>
+                </li>
+
+                <!--Psycasts don't allow for the gizmo class to be changed-->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/AbilityDef[defName="SHG_Invisibility" or defName="SHG_Blink" 
+                        or defName="Invisibility" or defName="Longjump" or defName="SHG_Hemomancer_ShiftChameleonInvisibility"]</xpath>
+                    <value>
+                        <gizmoClass>SuperHeroGenesBase.Command_AbilityAutocastToggle</gizmoClass>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/AbilityDef[defName="SHG_Invisibility" or defName="SHG_Blink" 
+                        or defName="Invisibility" or defName="Longjump" or defName="SHG_Hemomancer_ShiftChameleonInvisibility"]/comps</xpath>
+                    <value>
+                        <li Class="SuperHeroGenesBase.CompProperties_AbilityAutocastToggle" />
+                    </value>
+                </li>
+            </operations>
+        </active>
+    </Operation>
+</Patch>

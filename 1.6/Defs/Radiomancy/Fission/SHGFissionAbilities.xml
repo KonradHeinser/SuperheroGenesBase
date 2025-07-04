@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Radiomancer_RampantRegeneration</defName>
+        <label>rampant regeneration</label>
+        <description>Inject some radioactive energy into a pawn's blood to cause them to start recovering from wounds at an unbelievable pace. This comes with an extreme risk that some of their cells will be negatively affected by the radioactive energy, resulting in carcinoma.\n\nThis will not work on other radiomancers as their body will just reject the invasive radiation.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_RampantRegeneration</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <statBases>
+            <Ability_Duration>84</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>5</range>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityAbilityValidator">
+                <targetHasNoneOfGenes>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </targetHasNoneOfGenes>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Radiomancer_RampantRegeneration</hediffDef>
+                <replaceExisting>true</replaceExisting>
+            </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>0.50</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Radiomancer_MiniatureSun</defName>
+        <label>miniature sun</label>
+        <description>Create an exceptionally small star that lets out a massive amount of heat and light. This star will be stable for about a day before it dissipates.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_MiniatureSun</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <statBases>
+            <Ability_Duration>1000</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+            <targetParams>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetLocations>True</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>SHG_Psionist_Star</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+            </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>0.90</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Radiomancer_ExcitableCells</defName>
+        <label>excitable cells</label>
+        <description>Inject some radioactive energy into a pawn's blood to cause them to start recovering from infections at an unbelievable pace due to the energy that was injected into their body. This comes with an notable risk that some of their cells will be negatively affected by the radioactive energy.\n\nThis will not work on other radiomancers as their body will just reject the invasive radiation.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_ExcitableCells</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <statBases>
+            <Ability_Duration>168</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>5</range>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityAbilityValidator">
+                <targetHasNoneOfGenes>
+                    <li>SHG_Archetypes_Radiomancer</li>
+                </targetHasNoneOfGenes>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Radiomancer_ExcitableCells</hediffDef>
+                <replaceExisting>true</replaceExisting>
+            </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>0.20</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Radiomancer_EverEvolving</defName>
+        <label>ever-evolving</label>
+        <description>Use a large amount of radiation to permanently alter this pawn's somatic cells. This has two effects on the pawn.\n\nFirst, it gives them progress in ever evolving (foodless), which reduces the pawn's food need.\n\nThe second, and more immediate, change is that the pawn attempts to gain any of the other Radiomancer genes. The chance of this succeeding goes down as they gain more Radiomancer genes. Genes gained through this ability can't be inherited.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_EverEvolving</iconPath>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>360000</cooldownTicksRange>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityGiveMultipleHediffs">
+                <hediffsToGive>
+                    <li><hediffDef>SHG_Radiomancer_EverEvolving</hediffDef></li>
+                    <li><hediffDef>SHG_EverEvolving_Foodless</hediffDef></li>
+                </hediffsToGive>
+            </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>1</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Radiomancer_Mutate</defName>
+        <label>mutate</label>
+        <description>Use a small amount of radiation to forcefully trigger a genetic super mutation. This ability allows the radiomancer to gain a mutation even if they do not have the superhero base gene. If they have no mutation when this ability is activated, they are given a completely random one, and if they do have a mutation they have an extremely high chance (over 90%) to have that mutation changed into another one.\n\nThere are two risks with this ability. First, there is no way to control what mutation the pawn gains, so it may be one that is counterproductive for what the pawn is intended to do. The second risk is that the selected mutation may cause some of the pawn's current genes to become temporarily inactive until the mutation is gone.\n\nNote that if you have multiple mutations active in the settings and active on this pawn, only one mutation will be created through this ability, meaning the other ones will simply vanish.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_Mutate</iconPath>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Radiomancer_Mutate</hediffDef>
+                <replaceExisting>true</replaceExisting>
+            </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>0.10</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Radiomancer_ReformPart</defName>
+        <label>reform part</label>
+        <description>Focus a bunch of radiation on the cells in an area to cause rapid cellular reconstruction of a missing part. This ability may be interrupted if the Radiomancer takes damage while regrowing the part, and things like fingers will require special attention to avoid accidental malformation. This may regrow eyes even if you have the blindsight precept, though something like scaring will not be removed by this ability.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_ReformPart</iconPath>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+        <verbProperties>
+            <warmupTime>10</warmupTime>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityRemoveHediff">
+                <compClass>CompAbilityEffect_RemoveHediff</compClass>
+                <hediffDef>MissingBodyPart</hediffDef>
+                <applyToSelf>True</applyToSelf>
+            </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>0.50</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Radiomancer_ReverseAging</defName>
+        <label>reverse aging</label>
+        <description>Apply a small amount of radiation on a pawn to rejuvenate internal parts, reducing the pawn's biological age by a year. Due to the nature of this ability, it can't reduce the age of a pawn below 18 years old, and can't help much to get rid of chronic ailments.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_ReverseAging</iconPath>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>10</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Radiomancer_ReverseAging</hediffDef>
+                <replaceExisting>true</replaceExisting>
+            </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>0.10</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Radiomancer_RefocusEnergy_Wakefulness</defName>
+        <label>refocus energy (wake)</label>
+        <description>Convert radioactive energy into an internal pocket of energy that refreshes the body to avoid some of the physical effects of staying up a long time.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_RefocusEnergy_Wakefulness</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityAbilityValidator">
+                <casterHasNoneOfHediffs>
+                    <li>SHG_Radiomancer_RefocusEnergy_Sleepy</li>
+                </casterHasNoneOfHediffs>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Radiomancer_RefocusEnergy_Wakefulness</hediffDef>
+            </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>0.10</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Radiomancer_RefocusEnergy_Sleepy</defName>
+        <label>refocus energy (sleepy)</label>
+        <description>Convert the body's internal reserves of energy into radioactive energy. Pawn's with the never sleep gene can use this without reprecussion.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_RefocusEnergy_Sleepy</iconPath>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityAbilityValidator">
+                <casterHasNoneOfHediffs>
+                    <li>SHG_Radiomancer_RefocusEnergy_Wakefulness</li>
+                </casterHasNoneOfHediffs>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Radiomancer_RefocusEnergy_Sleepy</hediffDef>
+            </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityResourceCost">
+                <resourceCost>-0.10</resourceCost>
+                <mainResourceGene>SHG_Archetypes_Radiomancer</mainResourceGene>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

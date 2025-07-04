@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="OrbitalStrikeBase">
+        <defName>SHG_OrbitalCenter_Colorless</defName>
+        <label>orital strike ability center</label>
+        <thingClass>SuperHeroGenesBase.CustomizeableOrbitalStrike</thingClass>
+        <comps>
+            <li Class="CompProperties_OrbitalBeam">
+                <width>0.2</width>
+                <color>(1, 1, 1, 0)</color>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="MoteBase" Name="SHG_GenericMoteBase">
+        <defName>SHG_Mote_Generic</defName>
+        <thingClass>MoteDualAttached</thingClass>
+        <altitudeLayer>MoteLow</altitudeLayer>
+        <drawOffscreen>true</drawOffscreen>
+        <mote>
+            <fadeInTime>0.1</fadeInTime>
+            <fadeOutTime>0.1</fadeOutTime>
+            <solidTime>999999</solidTime>
+            <needsMaintenance>True</needsMaintenance>
+            <rotateTowardsTarget>True</rotateTowardsTarget>
+            <scaleToConnectTargets>True</scaleToConnectTargets>
+        </mote>
+        <graphicData>
+            <shaderType>MoteGlow</shaderType>
+            <texPath>Things/Mote/GraserBeam</texPath>
+            <color>(0.65, 0.52, 0.48, 1.0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_GenericMoteBase">
+        <defName>SHG_Mote_Calming</defName>
+        <graphicData>
+            <color>(0.60, 0.60, 1.00, 1.0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_GenericMoteBase">
+        <defName>SHG_Mote_Combat</defName>
+        <graphicData>
+            <color>(1.00, 0.60, 0.60, 1.0)</color>
+        </graphicData>
+    </ThingDef>
+    
+    <ThingDef ParentName="SHG_GenericMoteBase">
+        <defName>SHG_Mote_Healing</defName>
+        <graphicData>
+            <color>(0.60, 1.0, 0.60, 1.0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_GenericMoteBase">
+        <defName>SHG_Mote_Debuff</defName>
+        <graphicData>
+            <color>(0.40, 0.40, 0.40, 1.0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_GenericMoteBase">
+        <defName>SHG_Mote_Psionic</defName>
+        <graphicData>
+            <color>(0.8, 0.2, 0.8, 1.0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_GenericMoteBase">
+        <defName>SHG_Mote_Hemomancer</defName>
+        <graphicData>
+            <color>(1.0, 0.2, 0.2, 1.0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_GenericMoteBase" Name="SHG_LaserEyeBeamBase">
+        <defName>SHG_Mote_LaserEyeBeam</defName>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <mote>
+            <fadeInTime>0.2</fadeInTime>
+            <fadeOutTime>0.3</fadeOutTime>
+            <fadeOutUnmaintained>True</fadeOutUnmaintained>
+        </mote>
+        <graphicData>
+            <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+            <shaderType>MoteBeam</shaderType>
+            <shaderParameters>
+                <_ExtraTexA>/Things/Mote/BeamSecondaryNoise_A</_ExtraTexA>
+                <_ExtraTexB>/Things/Mote/BeamSecondaryNoise_B</_ExtraTexB>
+                <_ScrollSpeedA>-4 </_ScrollSpeedA>
+                <_ScrollSpeedB>3</_ScrollSpeedB>
+                <_Intensity>2</_Intensity>
+            </shaderParameters>
+            <color>(1, 0.1, 0)</color>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="EtherealThingBase" Name="SHG_ShieldBase" Abstract="True">
+        <thingClass>ThingWithComps</thingClass>
+        <tickerType>Normal</tickerType>
+        <drawerType>RealtimeOnly</drawerType>
+        <drawOffscreen>true</drawOffscreen>
+        <graphicData>
+            <color>(180, 231, 237)</color>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>OtherSHG/Ripple</texPath> <!--Use OtherSHG/Line to create a blinking circle-->
+            <shaderType>SHG_Shield</shaderType>
+            <shaderParameters>
+                <_PulseInterval>0.5</_PulseInterval>
+                <_DistortionScale>0.5</_DistortionScale>
+                <_DistortionIntensity>0.15</_DistortionIntensity>
+                <_MinAlpha>0.1</_MinAlpha>
+                <_MaxAlpha>0.3</_MaxAlpha>
+                <_DistortionTex>/Things/Mote/SmokeTiled</_DistortionTex>
+            </shaderParameters>
+        </graphicData>
+    </ThingDef>
+
+    <ShaderTypeDef>
+        <defName>SHG_Shield</defName>
+        <shaderPath>Map/BulletShieldPsychic</shaderPath> <!--I don't know what this means or why it works, but it works-->
+    </ShaderTypeDef>    
+
+        <!--Psionic Things-->
+    <ThingDef ParentName="SHG_ShieldBase">
+        <defName>SHG_Psionist_PsionicShield</defName>
+        <label>psionic shield</label>
+        <graphicData>
+            <drawSize>3</drawSize>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_ProjectileInterceptor">
+                <radius>1</radius>
+                <interceptGroundProjectiles>true</interceptGroundProjectiles>
+                <interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+                <interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+                <interceptAirProjectiles>true</interceptAirProjectiles>
+                <color>(0.8, 0.2, 0.8)</color>
+                <minAlpha>0.2</minAlpha>
+                <interceptEffect>Interceptor_BlockedProjectile</interceptEffect>
+            </li>
+            <li Class="CompProperties_DestroyAfterDelay">
+                <delayTicks>2500</delayTicks>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_ShieldBase">
+        <defName>SHG_Psionist_MassProtection</defName>
+        <label>large psionic forcefield</label>
+        <graphicData>
+            <drawSize>9.9</drawSize>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_ProjectileInterceptor">
+                <radius>12</radius>
+                <interceptGroundProjectiles>true</interceptGroundProjectiles>
+                <interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+                <interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+                <interceptAirProjectiles>true</interceptAirProjectiles>
+                <color>(0.8, 0.2, 0.8)</color>
+                <minAlpha>0.2</minAlpha>
+                <interceptEffect>Interceptor_BlockedProjectile</interceptEffect>
+            </li>
+            <li Class="CompProperties_DestroyAfterDelay">
+                <delayTicks>10000</delayTicks>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="EtherealThingBase">
+        <defName>SHG_Psionist_Star</defName>
+        <label>star</label>
+        <thingClass>ThingWithComps</thingClass>
+        <tickerType>Normal</tickerType>
+        <drawerType>RealtimeOnly</drawerType>
+        <drawOffscreen>true</drawOffscreen>
+        <category>PsychicEmitter</category>
+        <altitudeLayer>MoteOverheadLow</altitudeLayer>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>OtherSHG/Circle</texPath>
+            <shaderType>MoteGlowDistorted</shaderType>
+            <color>(255, 255, 245)</color>
+            <drawSize>10</drawSize>
+            <shaderParameters>
+                <_DistortionTex>/Other/Ripples</_DistortionTex>
+                <_distortionIntensity>0.05</_distortionIntensity>
+                <_DistortionScale>0.7</_DistortionScale>
+                <_distortionScrollSpeed>(0.07, 0.07, 0.0)</_distortionScrollSpeed>
+            </shaderParameters>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <overlightRadius>10</overlightRadius>
+                <glowRadius>20</glowRadius>
+                <glowColor>(217,217,208,0)</glowColor>
+            </li>
+            <li Class="CompProperties_HeatPusher">
+                <compClass>CompHeatPusherPowered</compClass>
+                <heatPerSecond>1000</heatPerSecond>
+                <heatPushMaxTemperature>1000</heatPushMaxTemperature>
+            </li>
+            <li Class="CompProperties_DestroyAfterDelay">
+                <delayTicks>300000</delayTicks>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_ShieldBase">
+        <defName>SHG_Psionist_DebufferShield</defName>
+        <label>psionic shield</label>
+        <graphicData>
+            <color>(180, 231, 237)</color>
+            <drawSize>3</drawSize>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_ProjectileInterceptor">
+                <radius>1</radius>
+                <interceptGroundProjectiles>true</interceptGroundProjectiles>
+                <interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+                <interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+                <interceptAirProjectiles>true</interceptAirProjectiles>
+                <color>(0.8, 0.2, 0.8)</color>
+                <minAlpha>0.2</minAlpha>
+                <interceptEffect>Interceptor_BlockedProjectile</interceptEffect>
+            </li>
+            <li Class="CompProperties_DestroyAfterDelay">
+                <delayTicks>10000</delayTicks>
+            </li>
+        </comps>
+    </ThingDef>
+
+        <!--Hemomancy-->
+    <ThingDef ParentName="DrugBase">
+        <defName>SHG_BloodPill</defName>
+        <label>blood pill</label>
+        <description>A drug for preventing wound infections and increasing the ability to heal wounds and fight current infections. If the pawn's ideology would make them hate bloodfeeders, that thought is suppressed for the duration.\n\nThis will NOT give a hemogenic pawn any hemogen.</description>
+        <possessionCount>10</possessionCount>
+        <descriptionHyperlinks><HediffDef>SHG_BloodPillHigh</HediffDef></descriptionHyperlinks>
+        <graphicData>
+            <texPath>Drug/SHG_BloodPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <socialPropernessMatters>false</socialPropernessMatters>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>600</WorkToMake>
+            <MarketValue>50</MarketValue>
+            <Mass>0.01</Mass>
+            <Flammability>0.1</Flammability>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <tradeTags Inherit="False">
+            <li>ExoticMisc</li>
+        </tradeTags>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>100</baseIngestTicks>
+            <chairSearchRadius>0</chairSearchRadius>
+            <ingestSound>Ingest_Pill</ingestSound>
+            <ingestHoldUsesTable>false</ingestHoldUsesTable>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <drugCategory>Medical</drugCategory>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>SHG_BloodPillHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <thingSetMakerTags>
+            <li>SHGDrug</li>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <comps>
+            <li Class="CompProperties_Drug">
+                <listOrder>1000</listOrder>
+                <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>SHG_Hemomancer_BloodSpear</defName>
+        <label>blood spear</label>
+        <graphicData>
+            <texPath>Projectiles/SHG_Hemomancer_BloodSpear</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>RangedStab</damageDef>
+            <damageAmountBase>50</damageAmountBase>
+            <armorPenetrationBase>0.05</armorPenetrationBase>
+            <stoppingPower>1</stoppingPower>
+            <speed>70</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_ShieldBase">
+        <defName>SHG_Hemomancer_HemogenBarrier</defName>
+        <label>hemogen barrier</label>
+        <graphicData>
+            <color>(230, 23, 23)</color>
+            <drawSize>1</drawSize>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_ProjectileInterceptor">
+                <radius>1</radius>
+                <interceptGroundProjectiles>true</interceptGroundProjectiles>
+                <interceptNonHostileProjectiles>true</interceptNonHostileProjectiles>
+                <interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+                <interceptAirProjectiles>true</interceptAirProjectiles>
+                <color>(0.8, 0.2, 0.2)</color>
+                <minAlpha>0.2</minAlpha>
+                <interceptEffect>Interceptor_BlockedProjectile</interceptEffect>
+            </li>
+            <li Class="CompProperties_DestroyAfterDelay">
+                <delayTicks>2500</delayTicks>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

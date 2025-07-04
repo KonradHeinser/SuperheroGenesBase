@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersHemoThiefBase">
+        <defName>SHG_Hemomancer_Thief</defName>
+        <label>hemothief</label>
+        <description>Hemothieves, just as their name implies, are known for stealing blood and other things from their enemies.</description>
+        <iconPath>Hemomancer/Thief/Gene_Hemomancer_Thief</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <statOffsets>
+            <SHG_HemomancyProficiency>0.5</SHG_HemomancyProficiency>
+        </statOffsets>
+        <exclusionTags>
+            <li>SHG_HemomancerThief</li>
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersHemoThiefBase">
+        <defName>SHG_Hemomancer_Drain</defName>
+        <label>drain</label>
+        <description>Hemothieves with this gene can drain a target of blood once per hour.</description>
+        <iconPath>Hemomancer/Thief/Gene_Hemomancer_Drain</iconPath>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <prerequisite>SHG_Hemomancer_Thief</prerequisite>
+        <customEffectDescriptions>
+            <li>Range affected by proficiency.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Hemomancer_Drain</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Hemomancer_Drain</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersHemoThiefBase">
+        <defName>SHG_Hemomancer_StealPerceptiveness</defName>
+        <label>steal perceptiveness</label>
+        <description>Hemothieves with this gene can drain a target of blood once per hour. This will leave a mark on the target that reduces their accuracy for an hour and buffs the hemothief.</description>
+        <iconPath>Hemomancer/Thief/Gene_Hemomancer_StealPerceptiveness</iconPath>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <prerequisite>SHG_Hemomancer_Thief</prerequisite>
+        <customEffectDescriptions>
+            <li>Range and buff affected by proficiency.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Hemomancer_StealPerceptiveness</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Hemomancer_StealPerceptiveness</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersHemoThiefBase">
+        <defName>SHG_Hemomancer_StealDefense</defName>
+        <label>steal defense</label>
+        <description>Hemothieves with this gene can drain a target of blood once per hour. This will leave a mark on the target that removes all of their innate armor, assuming they have any, for an hour, while buffing the hemothief if they have innate armor.\n\nMost pawns do not have innate armor unless they have special genes like the superhero gene, certain implants like the stoneskin gland, or buffs like the Psionic Soldier's Stasis ability.</description>
+        <iconPath>Hemomancer/Thief/Gene_Hemomancer_StealDefense</iconPath>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <prerequisite>SHG_Hemomancer_Thief</prerequisite>
+        <customEffectDescriptions>
+            <li>Range and buff affected by proficiency.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Hemomancer_StealDefense</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Hemomancer_StealDefense</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersHemoThiefBase">
+        <defName>SHG_Hemomancer_StealStrength</defName>
+        <label>steal strength</label>
+        <description>Hemothieves with this gene can drain a target of blood once per hour. This will leave a mark on the target that reduces their strength for an hour and buffs the hemothief.</description>
+        <iconPath>Hemomancer/Thief/Gene_Hemomancer_StealStrength</iconPath>
+        <displayOrderInCategory>4</displayOrderInCategory>
+        <prerequisite>SHG_Hemomancer_Thief</prerequisite>
+        <customEffectDescriptions>
+            <li>Range and buff affected by proficiency.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Hemomancer_StealStrength</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Hemomancer_StealStrength</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersHemoThiefBase">
+        <defName>SHG_Hemomancer_Reaper</defName>
+        <label>reaper</label>
+        <description>Reapers can often decide the life and death of their targets by healing their allies and draining their enemies.</description>
+        <iconPath>Hemomancer/Thief/Gene_Hemomancer_Reaper</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <prerequisite>SHG_Hemomancer_Thief</prerequisite>
+        <displayOrderInCategory>10</displayOrderInCategory>
+        <statOffsets>
+            <SHG_HemomancyProficiency>0.5</SHG_HemomancyProficiency>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersHemoThiefBase">
+        <defName>SHG_Hemomancer_Reap</defName>
+        <label>reap</label>
+        <description>Reapers with this gene can drain a target of most of their blood once per hour, usually killing targets that are already injured.</description>
+        <iconPath>Hemomancer/Thief/Gene_Hemomancer_Reap</iconPath>
+        <displayOrderInCategory>11</displayOrderInCategory>
+        <prerequisite>SHG_Hemomancer_Reaper</prerequisite>
+        <customEffectDescriptions>
+            <li>Range affected by proficiency.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Hemomancer_Reap</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Hemomancer_Reap</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersHemoThiefBase">
+        <defName>SHG_Hemomancer_Sow</defName>
+        <label>sow</label>
+        <description>Reapers with this gene can instantly cure a target of most injuries, including lost limbs.</description>
+        <iconPath>Hemomancer/Thief/Gene_Hemomancer_Sow</iconPath>
+        <displayOrderInCategory>12</displayOrderInCategory>
+        <prerequisite>SHG_Hemomancer_Reaper</prerequisite>
+        <customEffectDescriptions>
+            <li>Range affected by proficiency.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Hemomancer_Sow</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Hemomancer_Sow</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersHemoThiefBase">
+        <defName>SHG_Hemomancer_MarkForDeath</defName>
+        <label>mark for death</label>
+        <description>Reapers with this gene can place a mark a pawn that removes any innate armor they have, and makes the target bleed three times faster than normal.\n\nIf the target survives the Reaper's mark for 5 hours, the debuff is lost and they gain a single-use ability for 19 hours that can instantly heal most wounds.</description>
+        <iconPath>Hemomancer/Thief/Gene_Hemomancer_MarkForDeath</iconPath>
+        <displayOrderInCategory>13</displayOrderInCategory>
+        <prerequisite>SHG_Hemomancer_Reaper</prerequisite>
+        <customEffectDescriptions>
+            <li>Range affected by proficiency.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Hemomancer_MarkForDeath</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Hemomancer_MarkForDeath</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersHemoThiefBase">
+        <defName>SHG_Hemomancer_BloodBoil</defName>
+        <label>blood boil</label>
+        <description>Reapers with this gene can release invisible balls of hemogen all around them that causes everyone nearby to suddenly suffer sever burns as some of their blood evaporates.\n\nThis will return some hemogen based on how many people are hit, and create a cloud around the Reaper that makes it harder for people to shoot.</description>
+        <iconPath>Hemomancer/Thief/Gene_Hemomancer_BloodBoil</iconPath>
+        <displayOrderInCategory>14</displayOrderInCategory>
+        <prerequisite>SHG_Hemomancer_Reaper</prerequisite>
+        <abilities>
+            <li>SHG_Hemomancer_BloodBoil</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Hemomancer_BloodBoil</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+</Defs>

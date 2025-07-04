@@ -118,9 +118,9 @@ namespace SuperHeroGenesBase
                 && GetAllSubquests(QuestGen.Root).Any() && Find.Storyteller.difficulty.allowViolentQuests;
         }
 
-        private bool TryFindSiteTile(out int tile, bool exitOnFirstTileFound = false)
+        private bool TryFindSiteTile(out PlanetTile tile, bool exitOnFirstTileFound = false)
         {
-            return TileFinder.TryFindNewSiteTile(out tile, 7, 27, false, TileFinderMode.Near, -1, exitOnFirstTileFound);
+            return TileFinder.TryFindNewSiteTile(out tile, exitOnFirstTileFound: exitOnFirstTileFound);
         }
 
         private IEnumerable<QuestScriptDef> GetAllSubquests(QuestScriptDef parent)

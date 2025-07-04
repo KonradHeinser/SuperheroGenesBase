@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGHemomancyBase">
+        <defName>SHG_Hemomancer_ConvertBlood</defName>
+        <label>convert blood</label>
+        <description>Convert some of this hemoinitiate's blood into hemogen.</description>
+        <iconPath>Hemomancer/Initiate/Gene_Hemomancer_ConvertBlood</iconPath>
+        <aiCanUse>false</aiCanUse>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0.1</warmupTime>
+            <range>0.9</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityBloodDrain">
+                <hemogenGain>0</hemogenGain>
+                <bloodFilthToSpawnRange>0</bloodFilthToSpawnRange>
+                <resistanceGain>1</resistanceGain>
+                <nutritionGain>0</nutritionGain>
+                <targetBloodLoss>0.3</targetBloodLoss>
+                <damageSelf>True</damageSelf>
+            </li>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>-0.3</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGHemomancyBase">
+        <defName>SHG_Hemomancer_Hemoclotting</defName>
+        <label>hemoclotting</label>
+        <description>Seal a pawn's wounds and stop them from bleeding from any other wounds they may suffer from over the next day.\n\nTrying to use this on a pawn that doesn't have tendable wounds will result in the hemogen being wasted.</description>
+        <iconPath>Hemomancer/Initiate/Gene_Hemomancer_Hemoclotting</iconPath>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <statBases>
+            <Ability_Duration>1000</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>5</range>
+            <rangeStat>SHG_HemomancerRange_Short</rangeStat>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_Hemoclotting</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <replaceExisting>True</replaceExisting>
+            </li>
+            <li Class="CompProperties_AbilityCoagulate">
+                <tendQualityRange>0.99~0.99</tendQualityRange>
+            </li>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>0.2</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGHemomancyBase">
+        <defName>SHG_Hemomancer_Bloodlust</defName>
+        <label>bloodlust</label>
+        <description>Drive target pawn into a murderous rage, while also giving them immunity to pain, increased melee damage, and melee accuracy.</description>
+        <iconPath>Hemomancer/Initiate/Gene_Hemomancer_Bloodlust</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <statBases>
+            <Ability_Duration>84</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>12</range>
+            <rangeStat>SHG_HemomancerRange_Medium</rangeStat>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_Bloodlust</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <replaceExisting>True</replaceExisting>
+            </li>
+            <li Class = "CompProperties_AbilityGiveMentalState">
+                <compClass>CompAbilityEffect_GiveMentalState</compClass>
+                <stateDef>SHG_Bloodlust</stateDef>
+            </li>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>0.2</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGHemomancyBase">
+        <defName>SHG_Hemomancer_BloodCloud</defName>
+        <label>blood cloud</label>
+        <description>Release a burst of hemogen that gives the hemopriest and all allies around them the benefits of bloodlust without removing their ability to think rationally.\n\nThis does not stack with bloodlust, and will not stop a pawn under the effects of bloodlust from berserking.</description>
+        <iconPath>Hemomancer/Initiate/Gene_Hemomancer_BloodCloud</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <targetRequired>False</targetRequired>
+        <statBases>
+            <Ability_Duration>84</Ability_Duration>
+            <Ability_EffectRadius>10</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>10</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <onlyTargetColonists>true</onlyTargetColonists>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Hemomancer_Bloodlust</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <replaceExisting>True</replaceExisting>
+            </li>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>0.1</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGHemomancyBase">
+        <defName>SHG_Hemomancer_ReplenishBlood</defName>
+        <label>replenish blood</label>
+        <description>Release a burst of hemogen that seals the wounds of the hemopriest and all allies around them, and removes and blood loss they may have suffered.\n\nThe hemogen cost listed is per pawn, so using this in a large group can drain all available hemogen. The cost will not differentiate between wounded and non-wounded targets.</description>
+        <iconPath>Hemomancer/Initiate/Gene_Hemomancer_ReplenishBlood</iconPath>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_EffectRadius>10</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <range>10</range>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+                <onlyTargetColonists>true</onlyTargetColonists>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityCoagulate">
+                <tendQualityRange>0.99~0.99</tendQualityRange>
+            </li>
+            <li Class="CompProperties_AbilityRemoveHediff">
+                <compClass>CompAbilityEffect_RemoveHediff</compClass>
+                <hediffDef>BloodLoss</hediffDef>
+                <applyToSelf>True</applyToSelf>
+                <applyToTarget>True</applyToTarget>
+            </li>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>0.1</hemogenCost>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

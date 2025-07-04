@@ -38,21 +38,5 @@ namespace SuperHeroGenesBase
                 SHGUtilities.AddOrAppendHediffs(parent.pawn, Props.severityForFirstKill, Props.severityPerExtraKill, Props.hediff);
             }
         }
-
-        public bool CheckGenderViability(Pawn victim)
-        {
-            if (!Props.onlyMaleVictims && !Props.onlyFemaleVictims) return true;
-            if (Props.onlyMaleVictims && Props.onlyFemaleVictims) return false;
-            Gender gender = victim.gender;
-            if (gender == Gender.Male)
-            {
-                if (Props.onlyMaleVictims) return true;
-            }
-            else if (gender == Gender.Female)
-            {
-                if (Props.onlyFemaleVictims) return true;
-            }
-            return false;
-        }
     }
 }

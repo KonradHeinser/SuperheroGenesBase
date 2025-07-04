@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef>
+        <defName>SHG_Radiomancer_LimitlessPotential</defName>
+        <label>potential danger</label>
+        <description>This pawn had a Radiomancer use a bit of refined radioactive energy on their brain, and now they need to keep an eye out for side effects.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1,0,0.25)</defaultLabelColor>
+        <stages>
+            <li>
+                <hediffGivers>
+                    <li Class="HediffGiver_Random">
+                        <hediff>Carcinoma</hediff>
+                        <mtbDays>10</mtbDays>
+                        <canAffectAnyLivePart>true</canAffectAnyLivePart>
+                    </li>
+                </hediffGivers>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Radiomancer_ExplosiveBlows</defName>
+        <label>explosive blows</label>
+        <description>Every time this pawn hits something with a melee attack, they deal additional damage to all hostiles nearby.</description>
+        <initialSeverity>1</initialSeverity>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityChangePerAttack">
+                <changePerMeleeAttack>-1</changePerMeleeAttack>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_ExplodingMeleeAttacks">
+                <radius>2</radius>
+                <damageDef>Burn</damageDef>
+                <injureSelf>false</injureSelf>
+                <injureAllies>false</injureAllies>
+                <injureNonHostiles>false</injureNonHostiles>
+                <explosionSound>Explosion_Flame</explosionSound>
+                <extraGasType>None</extraGasType>
+                <damageAmount>20</damageAmount>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_DisplaySeverity">
+                <appendString> charge(s) left</appendString>
+                <roundDigits>0</roundDigits>
+            </li>
+        </comps>
+    </HediffDef>
+</Defs>

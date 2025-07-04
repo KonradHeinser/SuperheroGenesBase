@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="DrugBase" Name="SHG_SuperCreatingDrugBase" Abstract="True">
+        <possessionCount>10</possessionCount>
+        <socialPropernessMatters>false</socialPropernessMatters>
+        <rotatable>false</rotatable>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <WorkToMake>600</WorkToMake>
+            <Mass>0.01</Mass>
+            <Flammability>0.1</Flammability>
+        </statBases>
+        <tradeTags Inherit="False">
+            <li>ExoticMisc</li>
+            <li>SuperCreatingDrug</li>
+        </tradeTags>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>100</baseIngestTicks>
+            <chairSearchRadius>0</chairSearchRadius>
+            <ingestSound>Ingest_Pill</ingestSound>
+            <ingestHoldUsesTable>false</ingestHoldUsesTable>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <drugCategory>Medical</drugCategory>
+        </ingestible>
+        <thingSetMakerTags>
+            <li>SuperCreatingDrug</li>
+            <li>SHGDrug</li>
+            <li>RewardStandardLowFreq</li>
+        </thingSetMakerTags>
+        <comps>
+            <li Class="CompProperties_Drug">
+                <listOrder>1000</listOrder>
+                <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_SuperCreatingPill</defName>
+        <label>super creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene without side effects. The gene will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <graphicData>
+            <texPath>Drug/SHG_SuperPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>1000</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
+                    <alwaysAddedGenes>
+                        <li>SuperHeroBase</li>
+                    </alwaysAddedGenes>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_SuperActivationPill</defName>
+        <label>super activation pill</label>
+        <description>A pill that removes the dormant super gene from the ingester. This does not grant the superhero base gene, so if the individual doesn't have the dormant super gene, this does nothing.</description>
+        <graphicData>
+            <texPath>Drug/SHG_SuperPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>100</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
+                    <alwaysRemovedGenes>
+                        <li>SHG_DormantSuper</li>
+                    </alwaysRemovedGenes>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_MundaneSuperPill</defName>
+        <label>mundane super creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into super geniuses or super persuasive individuals.  Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome. Consuming the same pill mutiple times has weaker but more consistent side effects as the pill only allows for one of its super types to take effect.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
+        <graphicData>
+            <texPath>Drug/SHG_MundaneSuperPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>1500</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
+                    <alwaysAddedGenes>
+                        <li>SuperHeroBase</li>
+                    </alwaysAddedGenes>
+                    <geneSets>
+                        <li> <!--Brainiac-->
+                            <geneSet>
+                                <li>SuperIntelligence</li>
+                                <li>SuperPerception</li>
+                                <li>UnsuperHealing</li>
+                                <li>AntisuperHealing</li>
+                                <li>Body_Thin</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Influencer-->
+                            <geneSet>
+                                <li>SuperPerception</li>
+                                <li>UnsuperDurability</li>
+                                <li>UnsuperPrecision</li>
+                                <li>UnsuperStrength</li>
+                                <li>AntisuperStrength</li>
+                                <li>SuperPersuasion</li>
+                                <li>Body_Thin</li>
+                            </geneSet>
+                        </li>
+                    </geneSets>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_SoldierSuperPill</defName>
+        <label>super soldier creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into a type of super soldier, ranging from deadeyes to speedsters.  Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome. Consuming the same pill mutiple times has weaker but more consistent side effects as the pill only allows for one of its super types to take effect.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
+        <graphicData>
+            <texPath>Drug/SHG_SoldierSuperPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>1500</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
+                    <alwaysAddedGenes>
+                        <li>SuperHeroBase</li>
+                    </alwaysAddedGenes>
+                    <geneSets>
+                        <li> <!--Deadeye-->
+                            <geneSet>
+                                <li>SuperPrecision</li>
+                                <li>SuperPerception</li>
+                                <li>UnsuperIntelligence</li>
+                                <li>AntisuperIntelligence</li>
+                                <li>UnsuperStrength</li>
+                                <li>UnsuperPersuasion</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Bruiser-->
+                            <geneSet>
+                                <li>UnsuperIntelligence</li>
+                                <li>UnsuperPerception</li>
+                                <li>AntisuperPerception</li>
+                                <li>SuperDurability</li>
+                                <li>SuperStrength</li>
+                                <li>UnsuperPersuasion</li>
+                                <li>AntisuperPersuasion</li>
+                                <li>Body_Hulk</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Immortal-->
+                            <geneSet>
+                                <li>UnsuperIntelligence</li>
+                                <li>SuperDurability</li>
+                                <li>SuperHealing</li>
+                                <li>UnsuperPrecision</li>
+                                <li>UnsuperPersuasion</li>
+                                <li>AntisuperPersuasion</li>
+                                <li>UnsuperSpeed</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Speedster-->
+                            <geneSet>
+                                <li>UnsuperIntelligence</li>
+                                <li>AntisuperIntelligence</li>
+                                <li>UnsuperDurability</li>
+                                <li>AntisuperDurability</li>
+                                <li>SuperHealing</li>
+                                <li>UnsuperPrecision</li>
+                                <li>SuperSpeed</li>
+                                <li>UnsuperPersuasion</li>
+                                <li>Body_Thin</li>
+                            </geneSet>
+                        </li>
+                    </geneSets>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_MundaneMancerPill</defName>
+        <label>mundane mancer creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into one of the archetypes that rely on elemental attacks along with some additional genes that provide related bonuses and penalties that balance the metabolic cost. Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome. Consuming the same pill mutiple times has weaker but more consistent side effects as the pill only allows for one of its super types to take effect.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
+        <graphicData>
+            <texPath>Drug/SHG_MundaneMancerPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>3000</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
+                    <alwaysAddedGenes>
+                        <li>SuperHeroBase</li>
+                    </alwaysAddedGenes>
+                    <geneSets>
+                        <li> <!--Electromancer-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Electromancer</li>
+                                <li>UnsuperIntelligence</li>
+                                <li>AntisuperIntelligence</li>
+                                <li>SuperSpeed</li>
+                                <li>UnsuperStrength</li>
+                                <li>AntisuperStrength</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Petrimancer-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Petrimancer</li>
+                                <li>SuperDurability</li>
+                                <li>UnsuperHealing</li>
+                                <li>AntisuperHealing</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Pyromancer-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Pyromancer</li>
+                                <li>UnsuperIntelligence</li>
+                                <li>SuperPerception</li>
+                                <li>UnsuperPersuasion</li>
+                                <li>AntisuperPersuasion</li>
+                                <li>UnsuperStrength</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Cryomancer-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Cryomancer</li>
+                                <li>SuperDurability</li>
+                                <li>UnsuperHealing</li>
+                                <li>AntisuperHealing</li>
+                                <li>SuperPerception</li>
+                                <li>UnsuperSpeed</li>
+                                <li>AntisuperSpeed</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Caustimancer-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Caustimancer</li>
+                                <li>SuperIntelligence</li>
+                                <li>UnsuperPersuasion</li>
+                                <li>AntisuperPersuasion</li>
+                                <li>UnsuperSpeed</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Toximancer-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Toximancer</li>
+                                <li>SuperHealing</li>
+                                <li>UnsuperPrecision</li>
+                                <li>AntisuperPrecision</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Hydromancer-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Hydromancer</li>
+                                <li>UnsuperDurability</li>
+                                <li>UnsuperHealing</li>
+                                <li>AntisuperHealing</li>
+                                <li>SuperPrecision</li>
+                                <li>UnsuperStrength</li>
+                            </geneSet>
+                        </li>
+                    </geneSets>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_WarSuperPill</defName>
+        <label>war super creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into one of the combative archetypes with some additional genes that provide related bonuses and penalties that balance the metabolic cost. Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome. Consuming the same pill mutiple times has weaker but more consistent side effects as the pill only allows for one of its super types to take effect.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
+        <graphicData>
+            <texPath>Drug/SHG_WarSuperPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>3000</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
+                            <alwaysAddedGenes>
+                        <li>SuperHeroBase</li>
+                    </alwaysAddedGenes>
+                    <geneSets>
+                        <li> <!--Pugulist-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Pugilist</li>
+                                <li>UnsuperIntelligence</li>
+                                <li>UnsuperPerception</li>
+                                <li>UnsuperPrecision</li>
+                                <li>AntisuperPrecision</li>
+                                <li>SuperStrength</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Druid-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Druid</li>
+                                <li>SuperIntelligence</li>
+                                <li>UnsuperPerception</li>
+                                <li>AntisuperPerception</li>
+                                <li>UnsuperSpeed</li>
+                                <li>AntisuperIntelligence</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Skirmisher-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Skirmisher</li>
+                                <li>UnsuperIntelligence</li>
+                                <li>UnsuperPerception</li>
+                                <li>UnsuperPrecision</li>
+                                <li>AntisuperPrecision</li>
+                                <li>SuperStrength</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Analyzer-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Analyzer</li>
+                                <li>UnsuperDurability</li>
+                                <li>UnsuperHealing</li>
+                                <li>AntisuperHealing</li>
+                                <li>SuperPrecision</li>
+                                <li>SuperPerception</li>
+                                <li>UnsuperStrength</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Hacker-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Hacker</li>
+                                <li>SuperIntelligence</li>
+                                <li>UnsuperPerception</li>
+                                <li>AntisuperPerception</li>
+                                <li>UnsuperSpeed</li>
+                                <li>AntisuperIntelligence</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Phantom-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Phantom</li>
+                                <li>UnsuperPerception</li>
+                                <li>AntisuperPerception</li>
+                                <li>UnsuperPersuasion</li>
+                                <li>AntisuperPersuasion</li>
+                                <li>SuperSpeed</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Ninja-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Skirmisher</li>
+                                <li>UnsuperIntelligence</li>
+                                <li>UnsuperPersuasion</li>
+                                <li>AntisuperPersuasion</li>
+                                <li>SuperSpeed</li>
+                            </geneSet>
+                        </li>
+                    </geneSets>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_SupportSuperPill</defName>
+        <label>support super creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into one of the supporter archetypes with some additional genes that provide related bonuses and penalties that balance the metabolic cost. Pawns that ingest a variety of these pills are prone to occassionally suffer unpredictable and irreversable effects on their genetic code, with the most common ones involving the pill erasing or suppressing parts of the genome. Consuming the same pill mutiple times has weaker but more consistent side effects as the pill only allows for one of its super types to take effect.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
+        <graphicData>
+            <texPath>Drug/SHG_SupportSuperPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>3000</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
+                        <alwaysAddedGenes>
+                        <li>SuperHeroBase</li>
+                    </alwaysAddedGenes>
+                    <geneSets>
+                        <li> <!--Medic-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Medic</li>
+                                <li>SuperHealing</li>
+                                <li>UnsuperPerception</li>
+                                <li>AntisuperPerception</li>
+                                <li>UnsuperStrength</li>
+                                <li>AntisuperStrength</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Life Bringer-->
+                            <geneSet>
+                                <li>SHG_Archetypes_LifeBringer</li>
+                                <li>SuperHealing</li>
+                                <li>UnsuperPerception</li>
+                                <li>UnsuperPrecision</li>
+                                <li>AntisuperPrecision</li>
+                                <li>UnsuperStrength</li>
+                                <li>AntisuperStrength</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Porter-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Porter</li>
+                                <li>UnsuperIntelligence</li>
+                                <li>AntisuperIntelligence</li>
+                                <li>UnsuperPerception</li>
+                                <li>UnsuperPersuasion</li>
+                                <li>AntisuperPersuasion</li>
+                                <li>UnsuperPrecision</li>
+                                <li>SuperStrength</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Anti-hero-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Antihero</li>
+                                <li>SuperDurability</li>
+                                <li>UnsuperPerception</li>
+                                <li>UnsuperPersuasion</li>
+                                <li>AntisuperPersuasion</li>
+                                <li>UnsuperPrecision</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Firefighter-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Firefighter</li>
+                                <li>UnsuperIntelligence</li>
+                                <li>AntisuperIntelligence</li>
+                                <li>UnsuperPerception</li>
+                                <li>UnsuperPersuasion</li>
+                                <li>AntisuperPersuasion</li>
+                                <li>UnsuperPrecision</li>
+                                <li>SuperSpeed</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Stunner-->
+                            <geneSet>
+                                <li>SHG_Archetypes_Stunner</li>
+                                <li>UnsuperIntelligence</li>
+                                <li>SuperPersuasion</li>
+                                <li>UnsuperPerception</li>
+                                <li>UnsuperPrecision</li>
+                                <li>AntisuperPrecision</li>
+                            </geneSet>
+                        </li>
+                    </geneSets>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_SummonerPill</defName>
+        <label>summoner creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene along with some genes that turn them into a summoner. Unlike the other advanced super creating pills, this has a consistent side effect that turns the pawn into a super reclusive individual. This side effect is beneficial in small colonies, but can lower mood considerably at high population. Consuming the same pill mutiple times will attempt to switch what type of summoner they are.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
+        <graphicData>
+            <texPath>Drug/SHG_SummonerPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
+                        <alwaysAddedGenes>
+                        <li>SuperHeroBase</li>
+                        <li>SHG_Flaw_SuperRecluse</li>
+                    </alwaysAddedGenes>
+                    <geneSets>
+                        <li>
+                            <geneSet>
+                                <li>SHG_Archetypes_Biomancer</li>
+                            </geneSet>
+                        </li>
+                        <li>
+                            <geneSet>
+                                <li>SHG_Archetypes_Farmer</li>
+                            </geneSet>
+                        </li>
+                        <li>
+                            <geneSet>
+                                <li>SHG_Archetypes_Chemist</li>
+                            </geneSet>
+                        </li>
+                        <li>
+                            <geneSet>
+                                <li>SHG_Archetypes_Geomancer</li>
+                            </geneSet>
+                        </li>
+                        <li>
+                            <geneSet>
+                                <li>SHG_Archetypes_Ferromancer</li>
+                            </geneSet>
+                        </li>
+                        <li>
+                            <geneSet>
+                                <li>SHG_Archetypes_Midas</li>
+                            </geneSet>
+                        </li>
+                    </geneSets>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_HemomancerCreatingPill</defName>
+        <label>hemomancer creating pill</label>
+        <description>A pill that gives the pawn the Hemomancer gene, the Bloodthirsty gene, and most of the genes of a random hemomantic path. If the pawn has any genes from a different hemomancer path from the selected one, those genes will be removed. Consuming the same pill mutiple times will attempt to switch what type of hemomancer they are.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
+        <graphicData>
+            <texPath>Drug/SHG_HemomancerPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
+                    <alwaysAddedGenes>
+                        <li>SHG_Archetypes_Hemomancer</li>
+                        <li>SHG_Flaw_Bloodthirsty</li>
+                    </alwaysAddedGenes>
+                    <geneSets>
+                        <li> <!--Initiate-->
+                            <geneSet>
+                                <li>SHG_Hemomancer_Initiate</li>
+                                <li>SHG_Hemomancer_Priest</li>
+                                <li>SHG_Hemomancer_Praise</li>
+                                <li>SHG_Hemomancer_TheGiftOfBlood</li>
+                                <li>SHG_Hemomancer_ReplenishBlood</li>
+                                <li>SHG_Hemomancer_BloodCloud</li>
+                                <li>SHG_Hemomancer_Hemoclotting</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Shifter-->
+                            <geneSet>
+                                <li>SHG_Hemomancer_Shifter</li>
+                                <li>SHG_Hemomancer_Morph</li>
+                                <li>SHG_Hemomancer_Chameleon</li>
+                                <li>SHG_Hemomancer_Bear</li>
+                                <li>SHG_Hemomancer_Snake</li>
+                                <li>SHG_Hemomancer_Starfish</li>
+                                <li>SHG_Hemomancer_Turtle</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Thief-->
+                            <geneSet>
+                                <li>SHG_Hemomancer_Thief</li>
+                                <li>SHG_Hemomancer_Reaper</li>
+                                <li>SHG_Hemomancer_Drain</li>
+                                <li>SHG_Hemomancer_Reap</li>
+                                <li>SHG_Hemomancer_Sow</li>
+                                <li>SHG_Hemomancer_BloodBoil</li>
+                                <li>SHG_Hemomancer_MarkForDeath</li>
+                            </geneSet>
+                        </li>
+                        <li> <!--Warrior-->
+                            <geneSet>
+                                <li>SHG_Hemomancer_Warrior</li>
+                                <li>SHG_Hemomancer_Champion</li>
+                                <li>SHG_Hemomancer_BloodClaws</li>
+                                <li>SHG_Hemomancer_BloodArmor</li>
+                                <li>SHG_Hemomancer_BloodInfusement</li>
+                                <li>SHG_Hemomancer_BloodSpear</li>
+                                <li>SHG_Hemomancer_TrueRegeneration</li>
+                            </geneSet>
+                        </li>
+                    </geneSets>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_RadiomancerCreatingPill</defName>
+        <label>summoner creating pill</label>
+        <description>A pill that gives the pawn the pawn the Radiomancer, Ever-evolving, Solar Recharging, and Overcharged Pocket genes. If the ingester has all of the listed genes already, then the pill will be wasted. Consuming the same pill mutiple times will not grant any additional effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
+        <graphicData>
+            <texPath>Drug/SHG_RadiomancerPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>5000</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
+                    <alwaysAddedGenes>
+                        <li>SHG_Archetypes_Radiomancer</li>
+                        <li>SHG_Radiomancer_EverEvolving</li>
+                        <li>SHG_Radiomancer_SolarRecharging</li>
+                        <li>SHG_Flaw_OverchargedPocket</li>
+                    </alwaysAddedGenes>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_SuperMutationPill</defName>
+        <label>mutating super creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene along with a random super mutation. Any existing mutation will be removed. Unlike most advanced super creating pills, this has no risk of side effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
+        <graphicData>
+            <texPath>Drug/SHG_SuperMutationPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>1500</MarketValue>
+        </statBases>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
+                    <alwaysAddedGenes>
+                        <li>SuperHeroBase</li>
+                    </alwaysAddedGenes>
+                    <alwaysRemovedGenes>
+                        <li>SHG_DoubleHearted</li>
+                        <li>SHG_HALK</li>
+                    </alwaysRemovedGenes>
+                    <geneSets>
+                        <li><geneSet><li>SHG_SuperPsychicPotential</li></geneSet></li>
+                        <li><geneSet><li>SHG_SuperDenseBones</li></geneSet></li>
+                        <li><geneSet><li>SHG_Blindsight</li></geneSet></li>
+                        <li><geneSet><li>SHG_GhostlyPresence</li></geneSet></li>
+                        <li><geneSet><li>SHG_Prey</li></geneSet></li>
+                        <li><geneSet><li>SHG_Predator</li></geneSet></li>
+                        <li><geneSet><li>SHG_AdrenalineJunkie</li></geneSet></li>
+                        <li><geneSet><li>SHG_Berserker</li></geneSet></li>
+                        <li><geneSet><li>SHG_MadGenius</li></geneSet></li>
+                        <li><geneSet><li>SHG_Technophile</li></geneSet></li>
+                        <li><geneSet><li>SHG_Naturalist</li></geneSet></li>
+                        <li><geneSet><li>SHG_UncontrollableMindReading</li></geneSet></li>
+                    </geneSets>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+</Defs>

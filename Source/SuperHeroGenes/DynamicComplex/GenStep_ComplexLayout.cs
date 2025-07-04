@@ -81,7 +81,7 @@ namespace SuperHeroGenesBase
 
         protected override void ScatterAt(IntVec3 c, Map map, GenStepParams parms, int stackCount = 1)
         {
-            ResolveParams resolveParams = default(ResolveParams);
+            ResolveParams resolveParams = default;
             resolveParams.ancientLayoutStructureSketch = structureSketch;
 
             SitePartParams parms2 = parms.sitePart.parms;
@@ -109,11 +109,11 @@ namespace SuperHeroGenesBase
             {
                 CellRect cellRect = CellRect.CenteredOn(c, 10, 10).ClipInsideMap(map);
                 sitePart.conditionCauserWasSpawned = true;
-                ResolveParams ccResolveParams = default(ResolveParams);
-                ccResolveParams.rect = cellRect;
-                ccResolveParams.faction = map.ParentFaction;
-                ccResolveParams.conditionCauser = sitePart.conditionCauser;
-                BaseGen.symbolStack.Push("conditionCauserRoom", ccResolveParams);
+                ResolveParams ccSketchResolveParams = default(ResolveParams);
+                ccSketchResolveParams.rect = cellRect;
+                ccSketchResolveParams.faction = map.ParentFaction;
+                ccSketchResolveParams.conditionCauser = sitePart.conditionCauser;
+                BaseGen.symbolStack.Push("conditionCauserRoom", ccSketchResolveParams);
             }
 
             BaseGen.symbolStack.Push(ruleDef.symbol, parms3);

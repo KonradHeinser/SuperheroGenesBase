@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef>
+        <defName>SHG_Pools_EndurePain</defName>
+        <label>endure pain</label>
+        <description>This super utilized their durability in a large burst to become more resistant to damage and completely immune to pain. Once this wears off, the durability portion of the base Superhero Gene will require about a day to recover.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>true</isBad>
+		<initialSeverity>1.0</initialSeverity>
+        <stages>
+            <li>
+                <minSeverity>0.001</minSeverity>
+                <label>recovering</label>
+                <statFactors>
+                    <IncomingDamageFactor>1.333</IncomingDamageFactor>
+                </statFactors>
+                <statOffsets>
+                    <PainShockThreshold>-0.50</PainShockThreshold>
+                    <ArmorRating_Blunt>-0.1</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>-0.1</ArmorRating_Sharp>
+                    <ArmorRating_Heat>-0.1</ArmorRating_Heat>
+                    <ComfyTemperatureMin>10</ComfyTemperatureMin>
+                    <ComfyTemperatureMax>-10</ComfyTemperatureMax>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>0.875</minSeverity>
+                <label>enduring</label>
+                <painFactor>0</painFactor>
+                <statFactors>
+                    <IncomingDamageFactor>0.75</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1</severityPerDay>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Pools_EmergencyShutdown</defName>
+        <label>recovering from emergency shutdown</label>
+        <description>After hacking a mechanoid, this pawn needs some time to recover. The intelligence portion of their basic superhero gene will take about a day to recover.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>true</isBad>
+		<initialSeverity>1.0</initialSeverity>
+        <stages>
+            <li>
+                <label>recovering</label>
+                <statFactors>
+                    <ResearchSpeed>0.833</ResearchSpeed>
+                    <GlobalLearningFactor>0.667</GlobalLearningFactor>
+                    <LearningRateFactor>0.667</LearningRateFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1</severityPerDay>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_LesserPortent</defName>
+		<label>lesser portent</label>
+		<description>This super is focusing their senses to such an extent that they can avoid most melee attacks, and have heightened melee accuracy. Once the ability wears off, the pawn temporarily loses the Perception portion of the base Superhero gene.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>1.0</initialSeverity>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <minSeverity>0.001</minSeverity>
+		        <label>recovering</label>
+                <statOffsets>
+                    <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
+                    <MeleeDodgeChance>-1.5</MeleeDodgeChance>
+                    <MeleeHitChance>-1.5</MeleeHitChance>
+                    <TameAnimalChance>-0.1</TameAnimalChance>
+                    <TrainAnimalChance>-0.1</TrainAnimalChance>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>0.95</minSeverity>
+                <statFactors>
+                    <MeleeDodgeChance>2</MeleeDodgeChance>
+                    <MeleeHitChance>2</MeleeHitChance>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1</severityPerDay>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Pools_CalmingAura</defName>
+        <label>calming aura</label>
+        <description>This super is releasing a calming aura for a day that improves the mood of everyone around them for a day at the expense of both the super's mood and persuasive abilities.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>true</isBad>
+		<initialSeverity>1.0</initialSeverity>
+        <stages>
+            <li>
+                <statOffsets>
+                    <PawnBeauty>-3</PawnBeauty>
+                    <SocialImpact>-0.5</SocialImpact>
+                    <NegotiationAbility>-0.5</NegotiationAbility>
+                    <ConversionPower MayRequire="ludeon.rimworld.ideology">-0.5</ConversionPower>
+                </statOffsets>
+                <painOffset>0.1</painOffset>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>50</range>
+                <mote>SHG_Mote_Calming</mote>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>false</canTargetAnimals>
+                    <canTargetMechs>false</canTargetMechs>
+                    <onlyTargetColonists>true</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Pools_CalmingAura_Buff</hediff>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Pools_CalmingAura_Buff</defName>
+        <label>calm</label>
+        <defaultLabelColor>(0.52, 0.52, 0.95)</defaultLabelColor>
+        <description>A nearby super is calming this person's mind. This pawn feels calmer, and their mind feels a little clearer.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <postFactor>1.1</postFactor>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>false</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_Link">
+                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+                <maxDistance>50</maxDistance>
+                <customMote>SHG_Mote_Calming</customMote>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Pools_SniperSquad</defName>
+        <label>sniper squad</label>
+        <description>This super is releasing an aura that increases the accuracy of all allies around the super for a day at the expense of both the super's manipulation and precision abilities.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>true</isBad>
+		<initialSeverity>1.0</initialSeverity>
+        <stages>
+            <li>
+                <statFactors>
+                    <PawnTrapSpringChance>10</PawnTrapSpringChance>
+                </statFactors>
+                <statOffsets>
+                    <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
+                    <MeleeDodgeChance>-1.5</MeleeDodgeChance>
+                    <MeleeHitChance>-1.5</MeleeHitChance>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <postFactor>0.75</postFactor>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>10</range>
+                <mote>SHG_Mote_Combat</mote>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>false</canTargetAnimals>
+                    <canTargetMechs>false</canTargetMechs>
+                    <onlyTargetColonists>true</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Pools_SniperSquad_Buff</hediff>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Pools_SniperSquad_Buff</defName>
+        <label>focused shooting</label>
+        <defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor>
+        <description>A nearby super is enhancing this pawn's ability to perceive their environment.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>false</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_Link">
+                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+                <maxDistance>10</maxDistance>
+                <customMote>SHG_Mote_Combat</customMote>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Pools_CrushingStrength</defName>
+		<label>crushing blows</label>
+		<description>This super is focusing their strength into a big burst that lasts for an hour, during which their melee blows will be far stronger than usual. Once the ability wears off, the pawn temporarily loses the Strength portion of the base Superhero gene.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<initialSeverity>1.0</initialSeverity>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <minSeverity>0.001</minSeverity>
+		        <label>recovering</label>
+                <statFactors>
+                    <MeleeDamageFactor>0.667</MeleeDamageFactor>
+                </statFactors>
+                <statOffsets>
+                    <CarryingCapacity>-25</CarryingCapacity>
+                    <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">-25</VEF_MassCarryCapacity>
+                    <MentalBreakThreshold>0.15</MentalBreakThreshold>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>0.95</minSeverity>
+                <statFactors>
+                    <MeleeDamageFactor>5</MeleeDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1</severityPerDay>
+            </li>
+        </comps>
+	</HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Pools_HealAllies</defName>
+        <label>healing</label>
+        <description>This super is providing their regeneration abilities to everyone around them for a day.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>False</isBad>
+		<initialSeverity>1.0</initialSeverity>
+        <stages>
+            <li>
+                <minSeverity>0.001</minSeverity>
+                <statFactors>
+                    <ImmunityGainSpeed>0.667</ImmunityGainSpeed>
+                    <InjuryHealingFactor>0.5</InjuryHealingFactor>
+                    <LifespanFactor>0.5</LifespanFactor>
+                </statFactors>
+                <statOffsets>
+                    <ToxicResistance>-0.1</ToxicResistance>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>10</range>
+                <mote>SHG_Mote_Healing</mote>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetAnimals>false</canTargetAnimals>
+                    <canTargetMechs>false</canTargetMechs>
+                    <onlyTargetColonists>true</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Pools_HealAllies_Buff</hediff>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Pools_HealAllies_Buff</defName>
+        <label>healing</label>
+        <defaultLabelColor>(0.52, 1, 0.52)</defaultLabelColor>
+        <description>A nearby super is healing the wounds of everyone around them. To keep this benefit, it is best to stick close to the super.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <totalBleedFactor>0.25</totalBleedFactor>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>false</showRemainingTime>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
+                <regenSets>
+                    <li>
+                        <healAmount>0.01</healAmount>
+                    </li>
+                </regenSets>
+            </li>
+            <li Class="HediffCompProperties_Link">
+                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+                <maxDistance>10</maxDistance>
+                <customMote>SHG_Mote_Healing</customMote>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>SHG_Pools_NewWindStep</defName>
+		<label>wind step</label>
+		<description>This super is clumsily floating just a little bit off the ground, allowing them to move over all obstacles with some minor mobility issues.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <StaggerDurationFactor>1.333</StaggerDurationFactor>
+                </statFactors>
+                <statOffsets>
+                    <MoveSpeed>-3</MoveSpeed>
+                    <AimingDelayFactor>0.1</AimingDelayFactor>
+                </statOffsets>
+            </li>
+        </stages>
+		<comps>
+			<li Class="SuperHeroGenesBase.HediffCompProperties_TerrainCostOverride">
+                <universalCostOverride>0</universalCostOverride>
+            </li>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>60000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+		</comps>
+	</HediffDef>
+</Defs>

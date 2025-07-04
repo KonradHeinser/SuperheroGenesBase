@@ -25,7 +25,7 @@ namespace SuperHeroGenesBase
             new CurvePoint(10000f, 5000f)
         };
 
-        public override SitePartParams GenerateDefaultParams(float myThreatPoints, int tile, Faction faction)
+        public override SitePartParams GenerateDefaultParams(float myThreatPoints, PlanetTile tile, Faction faction)
         {
             SitePartParams sitePartParams = base.GenerateDefaultParams(myThreatPoints, tile, faction);
             sitePartParams.mortarsCount = Rand.RangeInclusive(0, 1);

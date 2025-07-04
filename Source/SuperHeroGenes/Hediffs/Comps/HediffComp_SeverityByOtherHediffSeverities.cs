@@ -5,14 +5,13 @@ using System;
 
 namespace SuperHeroGenesBase
 {
-    public class HediffComp_SeverityByOtherHediffSeverities : HediffComp
+    public class HediffComp_SeverityByOtherHediffSeverities : HediffComp_SetterBase
     {
         public HediffCompProperties_SeverityByOtherHediffSeverities Props => (HediffCompProperties_SeverityByOtherHediffSeverities)props;
 
-        public override void CompPostTick(ref float severityAdjustment)
+        protected override void SetSeverity()
         {
-            if (!Pawn.IsHashIntervalTick(200)) return;
-
+            base.SetSeverity();
             float newSeverity = Props.baseSeverity;
 
             if (!Props.hediffSets.NullOrEmpty())
@@ -31,6 +30,7 @@ namespace SuperHeroGenesBase
             }
 
             parent.Severity = newSeverity;
+            ticksToNextCheck = 120;
         }
     }
 }

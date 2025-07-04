@@ -9,6 +9,8 @@ namespace SuperHeroGenesBase
 
         public List<GeneDef> addedGenes;
 
+        private FloatRange previousRange = FloatRange.Zero;
+
         public override void CompPostPostAdd(DamageInfo? dinfo)
         {
             if (addedGenes == null)
@@ -38,12 +40,13 @@ namespace SuperHeroGenesBase
 
         public override void CompPostTick(ref float severityAdjustment)
         {
-            if (!parent.pawn.IsHashIntervalTick(50)) return;
+            if (!parent.pawn.IsHashIntervalTick(60) || previousRange.Includes(parent.Severity)) return;
 
             foreach (GenesAtSeverity geneSet in Props.genesAtSeverities)
             {
                 if (geneSet.severities.Includes(parent.Severity))
                 {
+                    previousRange = geneSet.severities;
                     if (SHGUtilities.EquivalentGeneLists(new List<GeneDef>(addedGenes), new List<GeneDef>(geneSet.genes))) break;
                     SHGUtilities.RemoveGenesFromPawn(parent.pawn, addedGenes);
                     addedGenes.Clear();

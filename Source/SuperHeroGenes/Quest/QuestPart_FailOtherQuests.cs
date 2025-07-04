@@ -37,6 +37,5 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref inSignal, "inSignal");
             Scribe_Values.Look(ref outcome, "outcome");
         }
-
     }
 }

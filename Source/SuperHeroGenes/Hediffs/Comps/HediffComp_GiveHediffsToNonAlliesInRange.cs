@@ -10,8 +10,10 @@ namespace SuperHeroGenesBase
         private Mote mote;
         public HediffCompProperties_GiveHediffsToNonAlliesInRange Props => (HediffCompProperties_GiveHediffsToNonAlliesInRange)props;
 
-        public override void CompPostTick(ref float severityAdjustment)
+        public override void CompPostTickInterval(ref float severityAdjustment, int delta)
         {
+            base.CompPostTickInterval(ref severityAdjustment, delta);
+
             if (!Pawn.Awake() || Pawn.health == null || Pawn.health.InPainShock || !Pawn.Spawned || (Props.onlyWhileDrafted && !Pawn.Drafted && Pawn.IsPlayerControlled))
                 return;
 
@@ -55,7 +57,7 @@ namespace SuperHeroGenesBase
                     if (hediffComp_Disappears == null)
                         Log.Error("HediffComp_GiveHediffsToNonAlliesInRange has a hediff in props which does not have a HediffComp_Disappears");
                     else
-                        hediffComp_Disappears.ticksToDisappear = 20;
+                        hediffComp_Disappears.ticksToDisappear = 30;
                 }
             }
         }
