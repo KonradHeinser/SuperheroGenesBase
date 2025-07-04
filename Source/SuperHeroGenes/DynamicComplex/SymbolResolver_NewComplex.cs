@@ -4,7 +4,6 @@ using RimWorld;
 using RimWorld.BaseGen;
 using UnityEngine;
 using Verse;
-using Verse.AI;
 using Verse.AI.Group;
 
 namespace SuperHeroGenesBase
@@ -83,7 +82,7 @@ namespace SuperHeroGenesBase
             if (outdoorPathTerrainDef != null)
             {
                 ResolveParams resolveParams3 = rp;
-                resolveParams3.floorDef = outdoorPathTerrainDef;
+                resolveParams3.pathwayFloorDef = outdoorPathTerrainDef;
                 BaseGen.symbolStack.Push("outdoorsPath", resolveParams3);
             }
 
@@ -103,11 +102,10 @@ namespace SuperHeroGenesBase
 
             ResolveComplex(rp);
 
-            // Not sure what this is, but it's from the ancient complex stuff and removing it might break some stuff
             ResolveParams resolveParams4 = rp;
             resolveParams4.rect = rp.rect.ExpandedBy(5);
-            resolveParams4.floorDef = TerrainDefOf.Gravel;
-            resolveParams4.chanceToSkipFloor = 0.05f;
+            resolveParams4.floorDef = defaultFlooring ?? TerrainDefOf.Gravel;
+            resolveParams4.chanceToSkipFloor = 0;
             resolveParams4.floorOnlyIfTerrainSupports = true;
             BaseGen.symbolStack.Push("floor", resolveParams4);
 
@@ -248,19 +246,6 @@ namespace SuperHeroGenesBase
                         if (fourthLayerFilth != null)
                             ScatterDebrisUtility.ScatterFilthAroundThing(placedThing, map, fourthLayerFilth, fourthLayerFilthChance, 0);
                     }
-        }
-
-        private bool CanReachEntrance(IntVec3 cell, List<IntVec3> entrancePositions)
-        {
-            Map map = BaseGen.globalSettings.map;
-            for (int i = 0; i < entrancePositions.Count; i++)
-            {
-                if (map.reachability.CanReach(cell, entrancePositions[i], PathEndMode.OnCell, TraverseParms.For(TraverseMode.PassDoors)))
-                {
-                    return true;
-                }
-            }
-            return false;
         }
 
         private bool TryPlaceThing(ThingDef thingDef, IntVec3 position, out Thing placedThing, Rot4? rot = null)

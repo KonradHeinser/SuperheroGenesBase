@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using RimWorld;
 using RimWorld.BaseGen;
 using RimWorld.Planet;
-using RimWorld.QuestGen;
 using Verse;
-using RimWorld;
 
 namespace SuperHeroGenesBase
 {
-    public class GenStep_ComplexLayout : GenStep_ScattererBestFit
+    public class GenStep_ComplexLayout : GenStep_LargeRuins
     {
         private LayoutStructureSketch structureSketch;
 
@@ -17,7 +15,34 @@ namespace SuperHeroGenesBase
 
         public override int SeedPart => 235635649;
 
-        protected override IntVec2 Size => new IntVec2(structureSketch.structureLayout.container.Width + 10, structureSketch.structureLayout.container.Height + 10);
+        private IntVec2 Size => new IntVec2(structureSketch.structureLayout.container.Width + 10, structureSketch.structureLayout.container.Height + 10);
+
+        protected override IntRange RuinsMinMaxRange => IntRange.One;
+
+        protected override LayoutDef LayoutDef => null;
+
+        private Faction faction = null;
+
+        private bool checkedFaction = false;
+
+        protected override Faction Faction
+        {
+            get
+            {
+                if (faction == null && !checkedFaction)
+                {
+                    checkedFaction = true;
+                    foreach (SymbolResolver resolver in ruleDef.resolvers)
+                        if (resolver is SymbolResolver_NewComplex complexResolver 
+                            && complexResolver.defaultLayout is ComplexLayoutDef complexLayout)
+                        {
+                            faction = Find.FactionManager.FirstFactionOfDef(complexLayout.threats[0].def.faction);
+                            break;
+                        }
+                }
+                return faction;
+            }
+        }
 
         private GenStepParams currentParams;
 
@@ -25,29 +50,13 @@ namespace SuperHeroGenesBase
 
         public float internalPointsMultiplier = 1;
 
-        public override bool CollisionAt(IntVec3 cell, Map map)
-        {
-            List<Thing> thingList = cell.GetThingList(map);
-            for (int i = 0; i < thingList.Count; i++)
-            {
-                if (thingList[i].def.IsBuildingArtificial)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
         public override void Generate(Map map, GenStepParams parms)
         {
-            count = 1;
-            nearMapCenter = true;
             currentParams = parms;
             structureSketch = parms.sitePart.parms.ancientLayoutStructureSketch;
             if (structureSketch?.structureLayout == null)
-            {
                 TryRecoverEmptySketch(parms);
-            }
+            map.layoutStructureSketches.Add(structureSketch);
             base.Generate(map, parms);
         }
 
@@ -79,7 +88,7 @@ namespace SuperHeroGenesBase
             }
         }
 
-        protected override void ScatterAt(IntVec3 c, Map map, GenStepParams parms, int stackCount = 1)
+        protected override LayoutStructureSketch GenerateAndSpawn(CellRect rect, Map map, GenStepParams parms, LayoutDef layout)
         {
             ResolveParams resolveParams = default;
             resolveParams.ancientLayoutStructureSketch = structureSketch;
@@ -88,7 +97,7 @@ namespace SuperHeroGenesBase
             resolveParams.threatPoints = parms2.threatPoints;
             resolveParams.interiorThreatPoints = ((parms2.interiorThreatPoints > 0f) ? new float?(parms2.interiorThreatPoints) : null) * internalPointsMultiplier;
             resolveParams.exteriorThreatPoints = ((parms2.exteriorThreatPoints > 0f) ? new float?(parms2.exteriorThreatPoints) : null) * externalPointsMultiplier;
-            resolveParams.rect = CellRect.CenteredOn(c, structureSketch.structureLayout.container.Width, structureSketch.structureLayout.container.Height);
+            resolveParams.rect = structureSketch.structureLayout.container;
 
             if (structureSketch.layoutDef is ComplexLayoutDef complex)
                 resolveParams.thingSetMakerDef = complex.rewardThingSetMakerDef;
@@ -98,18 +107,16 @@ namespace SuperHeroGenesBase
             ResolveParams parms3 = resolveParams;
             FormCaravanComp component = parms.sitePart.site.GetComponent<FormCaravanComp>();
             if (component != null)
-            {
                 component.foggedRoomsCheckRect = parms3.rect;
-            }
 
             BaseGen.globalSettings.map = map;
             SitePart sitePart = currentParams.sitePart;
 
             if (sitePart.conditionCauser != null)
             {
-                CellRect cellRect = CellRect.CenteredOn(c, 10, 10).ClipInsideMap(map);
+                CellRect cellRect = CellRect.CenteredOn(rect.CenterCell, 10, 10).ClipInsideMap(map);
                 sitePart.conditionCauserWasSpawned = true;
-                ResolveParams ccSketchResolveParams = default(ResolveParams);
+                ResolveParams ccSketchResolveParams = default;
                 ccSketchResolveParams.rect = cellRect;
                 ccSketchResolveParams.faction = map.ParentFaction;
                 ccSketchResolveParams.conditionCauser = sitePart.conditionCauser;
@@ -118,6 +125,8 @@ namespace SuperHeroGenesBase
 
             BaseGen.symbolStack.Push(ruleDef.symbol, parms3);
             BaseGen.Generate();
+
+            return structureSketch;
         }
     }
 }
