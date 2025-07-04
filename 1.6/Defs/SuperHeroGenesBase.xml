@@ -548,7 +548,7 @@
         <defName>SuperFlying</defName>
         <label>super flying</label>
         <description>Super in flight.</description>
-        <worldObjectClass>TravelingTransportPods</worldObjectClass>
+        <worldObjectClass>TravellingTransporters</worldObjectClass>
         <texture>Base/SuperheroGeneBase</texture>
         <useDynamicDrawer>true</useDynamicDrawer>
         <expandingIcon>true</expandingIcon>
