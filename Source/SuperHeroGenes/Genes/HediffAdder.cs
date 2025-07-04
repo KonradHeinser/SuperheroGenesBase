@@ -43,12 +43,12 @@ namespace SuperHeroGenesBase
         {
             base.PostRemove();
             SHGExtension SHGextension = def.GetModExtension<SHGExtension>();
-            if (SHGextension?.noHediffRemoval == true)
+            if (SHGextension?.noHediffRemoval != true)
                 HediffRemoving(pawn, this);
 
             if (!addedAbilities.NullOrEmpty())
                 SHGUtilities.RemovePawnAbilities(pawn, addedAbilities);
-
+                
             if (!def.statOffsets.NullOrEmpty())
                 foreach (var offset in def.statOffsets)
                     if (offset.stat == SHGDefOf.SHG_HemomancyProficiency)
