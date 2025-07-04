@@ -305,6 +305,38 @@ namespace SuperHeroGenesBase
             return firstHediffOfDef;
         }
 
+        public static List<Hediff> GetHediffFromParts(this Pawn pawn, HediffDef hediff, List<BodyPartDef> bodyParts)
+        {
+            List<Hediff> hediffs = new List<Hediff>();
+            if (pawn.health?.hediffSet?.hediffs.NullOrEmpty() == false)
+            {
+                Dictionary<BodyPartDef, int> partCounts = new Dictionary<BodyPartDef, int>();
+                foreach (Hediff h in pawn.health.hediffSet.hediffs)
+                {
+                    if (hediff != h.def)
+                        continue;
+
+                    if (!bodyParts.NullOrEmpty())
+                    {
+                        if (h.Part == null)
+                            continue;
+                        if (!bodyParts.Contains(h.Part.def))
+                            continue;
+                        if (partCounts.ContainsKey(h.Part.def) &&
+                            partCounts[h.Part.def] == bodyParts.Where(arg => arg == h.Part.def).Count())
+                            continue;
+
+                        if (partCounts.ContainsKey(h.Part.def))
+                            partCounts[h.Part.def]++;
+                        else
+                            partCounts[h.Part.def] = 1;
+                    }
+                    hediffs.Add(h);
+                }
+            }
+            return hediffs;
+        }
+
         public static void AddHediffsToParts(Pawn pawn, List<HediffsToParts> hediffs = null, HediffsToParts hediffToParts = null)
         {
             if (hediffToParts != null)
