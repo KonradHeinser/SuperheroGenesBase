@@ -176,6 +176,15 @@
         </verbProperties>
     </AbilityDef>
 
+    <AbilityDef Abstract="True" ParentName="SHGSelfCastBase" Name="SHGToggleSelf">
+        <aiCanUse>False</aiCanUse>
+        <showCastingProgressBar>False</showCastingProgressBar>
+        <cooldownTicksRange>0</cooldownTicksRange>
+        <verbProperties>
+            <warmupTime>0.1</warmupTime>
+        </verbProperties>
+    </AbilityDef>
+
     <AbilityDef Abstract="True" Name="SHGPsionicBase" ParentName="SHGPowerAbilitiesBase">
         <abilityClass>Psycast</abilityClass>
         <statBases>
