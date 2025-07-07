@@ -6,6 +6,8 @@ namespace SuperHeroGenesBase
     {
         public HediffCompProperties_SeverityByMentalState Props => (HediffCompProperties_SeverityByMentalState)props;
 
+        protected override bool MustBeSpawned => true;
+
         protected override void SetSeverity()
         {
             base.SetSeverity();
