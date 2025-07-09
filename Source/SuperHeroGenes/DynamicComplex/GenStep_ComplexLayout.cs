@@ -81,6 +81,13 @@ namespace SuperHeroGenesBase
             base.Generate(map, parms);
         }
 
+        protected override bool IsValidRect(CellRect rect, Map map)
+        {
+            if (!map.reachability.CanReachMapEdge(rect.CenterCell, TraverseParms.For(TraverseMode.ByPawn)))
+                return false;
+            return base.IsValidRect(rect, map);
+        }
+
         private void TryRecoverEmptySketch(GenStepParams parms)
         {
             bool flag = false;
@@ -95,7 +102,6 @@ namespace SuperHeroGenesBase
                         };
                         structureSketch = newComplex.defaultLayout.Worker.GenerateStructureSketch(parms2);
                         MapGenUtility.TryGetLargestClearRect(out var rect);
-                        structureSketch.center = rect.CenterCell;
                         flag = true;
                         break;
                     }
