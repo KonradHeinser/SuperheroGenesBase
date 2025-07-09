@@ -65,6 +65,11 @@ namespace SuperHeroGenesBase
 
         public override bool GizmoDisabled(out string reason)
         {
+            if (parent.pawn.InBed())
+            {
+                reason = "StatsReport_InBed".Translate();
+                return true;
+            }
             if (!Props.disablingBiomes.NullOrEmpty())
             {
                 if (parent.pawn.Map != null)
@@ -99,7 +104,6 @@ namespace SuperHeroGenesBase
 
             // If the pawn isn't in a map or a caravan, get the fuck out of here
             if (!parent.pawn.Spawned && caravan == null) return false;
-            if (parent.pawn.InBed()) return false;
 
             if (caravan != null && (Props.noMapTravelWhileImmobilized || Props.noMapTravelWhenTooMuchMass))
             {
