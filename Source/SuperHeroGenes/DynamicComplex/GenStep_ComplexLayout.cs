@@ -124,6 +124,7 @@ namespace SuperHeroGenesBase
             }
 
             BaseGen.symbolStack.Push(ruleDef.symbol, parms3);
+            MapGenerator.UsedRects.Add(resolveParams.rect);
             BaseGen.Generate();
 
             return structureSketch;
