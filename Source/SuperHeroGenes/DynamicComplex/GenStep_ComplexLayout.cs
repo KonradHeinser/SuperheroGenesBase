@@ -91,9 +91,11 @@ namespace SuperHeroGenesBase
                     {
                         StructureGenParams parms2 = new StructureGenParams
                         {
-                            size = newComplex.minRectSize
+                            size = newComplex.minRectSize,
                         };
                         structureSketch = newComplex.defaultLayout.Worker.GenerateStructureSketch(parms2);
+                        MapGenUtility.TryGetLargestClearRect(out var rect);
+                        structureSketch.center = rect.CenterCell;
                         flag = true;
                         break;
                     }

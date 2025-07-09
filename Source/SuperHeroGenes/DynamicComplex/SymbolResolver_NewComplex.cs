@@ -101,7 +101,6 @@ namespace SuperHeroGenesBase
                 }
             }
 
-
             ResolveComplex(rp);
 
             ResolveParams resolveParams4 = rp;
