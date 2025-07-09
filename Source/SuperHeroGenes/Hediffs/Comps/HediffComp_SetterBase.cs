@@ -11,7 +11,9 @@ namespace SuperHeroGenesBase
         public override void CompPostPostAdd(DamageInfo? dinfo)
         {
             base.CompPostPostAdd(dinfo);
-            SetSeverity();
+
+            if (!MustBeSpawned || Pawn.Spawned)
+                SetSeverity();
         }
 
         public override void CompPostTickInterval(ref float severityAdjustment, int delta)
