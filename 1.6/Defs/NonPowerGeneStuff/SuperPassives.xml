@@ -308,6 +308,9 @@
                     <hediff>SHG_Phasing</hediff>
                 </hediff>
             </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityAbilityValidator">
+                <doStandableCheck>True</doStandableCheck>
+            </li>
         </comps>
     </AbilityDef>
 

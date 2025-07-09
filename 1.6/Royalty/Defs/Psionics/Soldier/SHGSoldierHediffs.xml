@@ -33,11 +33,11 @@
     <HediffDef ParentName="SHG_SpecialHediffBase">
         <defName>SHG_Psionist_New_PsionicFlight</defName>
 		<label>psionic flight</label>
-		<description>This Psionic Soldier is always floating just a little bit off the ground, and their ability to move omnidirectionally makes it easier for them to move around quickly. The more psychic sensitivity they have, the faster they can propel themselves.</description>
+		<description>This Psionic Soldier is always floating just a little bit off the ground, and their ability to move omnidirectionally makes it easier for them to move around quickly.</description>
         <stages>
             <li>
                 <statFactors>
-                    <MoveSpeed>1.25</MoveSpeed>
+                    <MoveSpeed>1.1</MoveSpeed>
                 </statFactors>
                 <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
             </li>
@@ -52,13 +52,13 @@
     <HediffDef>
         <defName>SHG_Psionist_PsionicInfusement</defName>
         <label>psionic infusement</label>
-        <description>This Commando infuses their melee attacks with psionic energy to make them stronger. The multiplier listed here is the base amount, and are multiplied by psychic sensitivity.</description>
+        <description>This Commando infuses their melee attacks with psionic energy to make them stronger.</description>
         <isBad>false</isBad>
         <everCurableByItem>False</everCurableByItem>
         <stages>
 			<li>
                 <statFactors>
-                    <MeleeDamageFactor>1.5</MeleeDamageFactor>
+                    <MeleeDamageFactor>1.3</MeleeDamageFactor>
                 </statFactors>
                 <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
             </li>
@@ -76,9 +76,9 @@
                 </statFactors>
                 <statOffsets>
                     <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
-                    <ArmorRating_Blunt>.1</ArmorRating_Blunt>
-                    <ArmorRating_Sharp>.1</ArmorRating_Sharp>
-                    <ArmorRating_Heat>.1</ArmorRating_Heat>
+                    <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.1</ArmorRating_Heat>
                 </statOffsets>
                 <statOffsetEffectMultiplier>PsychicSensitivity</statOffsetEffectMultiplier>
             </li>
@@ -114,9 +114,9 @@
 		<stages>
 			<li>
                 <statOffsets>
-                    <ArmorRating_Blunt>.1</ArmorRating_Blunt>
-                    <ArmorRating_Sharp>.1</ArmorRating_Sharp>
-                    <ArmorRating_Heat>.1</ArmorRating_Heat>
+                    <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.1</ArmorRating_Heat>
                     <ComfyTemperatureMin>-0.5</ComfyTemperatureMin>
                     <ComfyTemperatureMax>0.5</ComfyTemperatureMax>
                 </statOffsets>
@@ -132,7 +132,7 @@
         <stages>
 			<li>
                 <statFactors>
-                    <ImmunityGainSpeed>1.5</ImmunityGainSpeed>
+                    <ImmunityGainSpeed>1.2</ImmunityGainSpeed>
                 </statFactors>
                 <statFactorEffectMultiplier>PsychicSensitivity</statFactorEffectMultiplier>
             </li>

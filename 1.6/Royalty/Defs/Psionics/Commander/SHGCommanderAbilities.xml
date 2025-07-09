@@ -173,7 +173,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_RaiseFort</defName>
         <label>raise fort</label>
-        <description>Raise a series of temporary walls around the General to provide cover for their squad. This version is larger than Fortify Postion, which makes it harder to use, but provides cover for more allies.\n\nAll terrain within the radius must be standable. This means that things like trees, buildings, and chunks will disrupt this ability, but things mud and shallow water will not.</description>
+        <description>Raise a series of temporary walls around the General to provide cover for their squad. This version is larger than Fortify Position, which makes it harder to use, but provides cover for more allies.\n\nAll terrain within the radius must be standable. This means that things like trees, buildings, and chunks will disrupt this ability, but things mud and shallow water will not.</description>
         <iconPath>Psionist/Commander/Gene_Psionist_RaiseFort</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <targetRequired>False</targetRequired>
