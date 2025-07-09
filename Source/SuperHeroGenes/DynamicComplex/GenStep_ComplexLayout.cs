@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using System.Collections.Generic;
+using RimWorld;
 using RimWorld.BaseGen;
 using RimWorld.Planet;
 using UnityEngine;
@@ -109,10 +110,15 @@ namespace SuperHeroGenesBase
             }
         }
 
+        protected override IEnumerable<CellRect> GetRects(CellRect area, Map map)
+        {
+            yield return area.CenterCell.RectAbout(MinSize);
+        }
+
         protected override LayoutStructureSketch GenerateAndSpawn(CellRect rect, Map map, GenStepParams parms, LayoutDef layout)
         {
             CellRect cont = structureSketch.structureLayout.container;
-            if (!rect.TryFindRandomInnerRect(new IntVec2(cont.Width, cont.Height), out var rect2, (arg => arg.DistanceToEdge(arg.CenterCell) > 20f)))
+            if (!rect.TryFindRandomInnerRect(new IntVec2(cont.Width, cont.Height), out var rect2))
             {
                 rect2 = rect;
                 Log.Error("Failed to generate and spawn complex.");
