@@ -298,10 +298,7 @@ namespace SuperHeroGenesBase
             }
             BaseGen.symbolStack.Push("ancientComplexSketch", rp);
             ResolveParams resolveParams2 = rp;
-            if (defaultFlooring != null)
-                resolveParams2.floorDef = defaultFlooring;
-            else
-                resolveParams2.floorDef = TerrainDefOf.Concrete;
+            resolveParams2.floorDef = defaultFlooring ?? TerrainDefOf.Concrete;
             resolveParams2.allowBridgeOnAnyImpassableTerrain = true;
             resolveParams2.floorOnlyIfTerrainSupports = false;
 

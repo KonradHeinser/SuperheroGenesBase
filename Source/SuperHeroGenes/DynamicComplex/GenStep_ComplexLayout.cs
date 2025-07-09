@@ -1,6 +1,7 @@
 ﻿using RimWorld;
 using RimWorld.BaseGen;
 using RimWorld.Planet;
+using UnityEngine;
 using Verse;
 
 namespace SuperHeroGenesBase
@@ -15,8 +16,6 @@ namespace SuperHeroGenesBase
 
         public override int SeedPart => 235635649;
 
-        private IntVec2 Size => new IntVec2(structureSketch.structureLayout.container.Width + 10, structureSketch.structureLayout.container.Height + 10);
-
         protected override IntRange RuinsMinMaxRange => IntRange.One;
 
         protected override LayoutDef LayoutDef => null;
@@ -24,6 +23,28 @@ namespace SuperHeroGenesBase
         private Faction faction = null;
 
         private bool checkedFaction = false;
+
+        protected override IntVec2 MinSize => GetMinSize();
+
+        private IntVec2 GetMinSize()
+        {
+            if (ruleDef.resolvers?.NullOrEmpty() == false)
+                foreach (var resolver in ruleDef.resolvers)
+                    if (resolver is SymbolResolver_NewComplex complex)
+                        return complex.minRectSize;
+            return DefaultComplexSize;
+        }
+
+        protected override IntVec2 MaxSize => GetMaxSize();
+
+        private IntVec2 GetMaxSize()
+        {
+            if (ruleDef.resolvers?.NullOrEmpty() == false)
+                foreach (var resolver in ruleDef.resolvers)
+                    if (resolver is SymbolResolver_NewComplex complex)
+                        return new IntVec2(Mathf.CeilToInt(complex.minRectSize.x + complex.defendRadius), Mathf.CeilToInt(complex.minRectSize.z + complex.defendRadius));
+            return new IntVec2(100, 100);
+        }
 
         protected override Faction Faction
         {
