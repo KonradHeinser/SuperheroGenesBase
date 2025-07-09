@@ -99,7 +99,6 @@ namespace SuperHeroGenesBase
                             size = newComplex.minRectSize,
                         };
                         structureSketch = newComplex.defaultLayout.Worker.GenerateStructureSketch(parms2);
-                        MapGenUtility.TryGetLargestClearRect(out var rect);
                         flag = true;
                         break;
                     }
@@ -117,6 +116,13 @@ namespace SuperHeroGenesBase
 
         protected override LayoutStructureSketch GenerateAndSpawn(CellRect rect, Map map, GenStepParams parms, LayoutDef layout)
         {
+            CellRect cont = structureSketch.structureLayout.container;
+            if (!rect.TryFindRandomInnerRect(new IntVec2(cont.Width, cont.Height), out var rect2))
+            {
+                rect2 = rect;
+                Log.Error("Failed to generate and spawn complex.");
+            }
+
             ResolveParams resolveParams = default;
             resolveParams.ancientLayoutStructureSketch = structureSketch;
 
@@ -124,7 +130,7 @@ namespace SuperHeroGenesBase
             resolveParams.threatPoints = parms2.threatPoints;
             resolveParams.interiorThreatPoints = ((parms2.interiorThreatPoints > 0f) ? new float?(parms2.interiorThreatPoints) : null) * internalPointsMultiplier;
             resolveParams.exteriorThreatPoints = ((parms2.exteriorThreatPoints > 0f) ? new float?(parms2.exteriorThreatPoints) : null) * externalPointsMultiplier;
-            resolveParams.rect = structureSketch.structureLayout.container;
+            resolveParams.rect = rect2;
 
             if (structureSketch.layoutDef is ComplexLayoutDef complex)
                 resolveParams.thingSetMakerDef = complex.rewardThingSetMakerDef;
