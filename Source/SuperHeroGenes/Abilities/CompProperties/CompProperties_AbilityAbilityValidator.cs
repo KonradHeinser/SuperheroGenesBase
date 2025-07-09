@@ -50,6 +50,8 @@ namespace SuperHeroGenesBase
         public List<GameConditionDef> requireOneOfCondition;
         public List<GameConditionDef> forbiddenMapConditions;
 
+        public bool doStandableCheck = false;
+
         public CompProperties_AbilityAbilityValidator()
         {
             compClass = typeof(CompAbilityEffect_AbilityValidator);

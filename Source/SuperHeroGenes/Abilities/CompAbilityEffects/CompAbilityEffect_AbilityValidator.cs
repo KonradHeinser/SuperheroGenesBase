@@ -18,12 +18,19 @@ namespace SuperHeroGenesBase
 
             string baseExplanation = "CannotUseAbility".Translate(parent.def.label) + ": ";
 
+            if (Props.doStandableCheck && !target.Cell.Standable(parent.pawn.MapHeld))
+            {
+                if (throwMessages)
+                    Messages.Message(baseExplanation + "SHG_Standable".Translate(), target.ToTargetInfo(parent.pawn.MapHeld), MessageTypeDefOf.RejectInput, false);
+                return false;
+            }
+
             // Caster checks
             if (!CheckCasterLight(out string casterLightExplanation))
             {
                 if (throwMessages)
                     Messages.Message(baseExplanation + casterLightExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
-                return true;
+                return false;
             }
             if (!CheckCasterHediffs(out string casterHediffExplanation))
             {
@@ -35,7 +42,7 @@ namespace SuperHeroGenesBase
             {
                 if (throwMessages)
                     Messages.Message(baseExplanation + casterExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
-                return true;
+                return false;
             }
 
             // Caster map checks
@@ -83,7 +90,7 @@ namespace SuperHeroGenesBase
                 {
                     if (throwMessages)
                         Messages.Message(baseExplanation + targetExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
-                    return true;
+                    return false;
                 }
             }
 

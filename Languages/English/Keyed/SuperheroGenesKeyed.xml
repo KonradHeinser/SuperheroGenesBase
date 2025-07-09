@@ -14,6 +14,7 @@
     <MessagePawnArrived>A pawn has arrived at their destination and needs new orders.</MessagePawnArrived>
     <SHG_HasFinishedForming>has popped out into the world!</SHG_HasFinishedForming>
     <SHG_Formed>formed</SHG_Formed>
+    <SHG_Standable>Pawn cannot stand at location</SHG_Standable>
     
     <SHG_CompSpawnPawn>{0} {1}</SHG_CompSpawnPawn>
     <SHG_CompSpawnPawnText>A child has finished developing in {0} and became a healthy baby!</SHG_CompSpawnPawnText>
