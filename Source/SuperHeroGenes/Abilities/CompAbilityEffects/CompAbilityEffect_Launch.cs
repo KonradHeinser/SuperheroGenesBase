@@ -70,6 +70,11 @@ namespace SuperHeroGenesBase
                 reason = "StatsReport_InBed".Translate();
                 return true;
             }
+            if (parent.pawn.MapHeld != null && !parent.pawn.PositionHeld.Standable(parent.pawn.MapHeld))
+            {
+                reason = "";
+                return true;
+            }
             if (!Props.disablingBiomes.NullOrEmpty())
             {
                 if (parent.pawn.Map != null)
@@ -103,7 +108,7 @@ namespace SuperHeroGenesBase
             Caravan caravan = parent.pawn.GetCaravan();
 
             // If the pawn isn't in a map or a caravan, get the fuck out of here
-            if (!parent.pawn.Spawned && caravan == null) return false;
+            if (parent.pawn.Spawned && caravan == null) return false;
 
             if (caravan != null && (Props.noMapTravelWhileImmobilized || Props.noMapTravelWhenTooMuchMass))
             {
