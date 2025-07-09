@@ -135,7 +135,7 @@ namespace SuperHeroGenesBase
 
             if (sitePart.conditionCauser != null)
             {
-                CellRect cellRect = CellRect.CenteredOn(rect.CenterCell, 10, 10).ClipInsideMap(map);
+                CellRect cellRect = CellRect.CenteredOn(resolveParams.rect.CenterCell, 10, 10).ClipInsideMap(map);
                 sitePart.conditionCauserWasSpawned = true;
                 ResolveParams ccSketchResolveParams = default;
                 ccSketchResolveParams.rect = cellRect;
