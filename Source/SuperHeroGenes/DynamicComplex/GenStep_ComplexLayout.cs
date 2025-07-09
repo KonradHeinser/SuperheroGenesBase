@@ -24,7 +24,7 @@ namespace SuperHeroGenesBase
 
         private bool checkedFaction = false;
 
-        private float maxDistanceFromCenterOffset = 20f;
+        private float maxDistanceFromCenterOffset = 50f;
 
         protected override IntVec2 MinSize => GetMinSize();
 
