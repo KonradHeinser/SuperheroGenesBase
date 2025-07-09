@@ -110,9 +110,10 @@ namespace SuperHeroGenesBase
             resolveParams4.floorOnlyIfTerrainSupports = true;
             BaseGen.symbolStack.Push("floor", resolveParams4);
 
+            Map map = BaseGen.globalSettings.map;
             foreach (IntVec3 item in resolveParams4.rect)
             {
-                Building edifice = item.GetEdificeSafe(BaseGen.globalSettings.map);
+                Building edifice = item.GetEdificeSafe(map);
                 if (edifice?.def.destroyable == true)
                     edifice.Destroy();
             }
@@ -150,8 +151,6 @@ namespace SuperHeroGenesBase
                 }
                 else
                 {
-                    Map map = BaseGen.globalSettings.map;
-
                     // These ones will always be defenders
                     if (rp.exteriorThreatPoints.HasValue)
                     {
@@ -162,7 +161,7 @@ namespace SuperHeroGenesBase
                         resolveParams2.singlePawnLord = lord;
                         resolveParams2.singlePawnSpawnCellExtraPredicate = rp.singlePawnSpawnCellExtraPredicate ?? ((IntVec3 x) => map.reachability.CanReachMapEdge(x, traverseParms));
                         resolveParams2.rect = rp.rect.ExpandedBy(10);
-
+                        resolveParams2.spawnNear = rp.rect.CenterCell;
                         resolveParams2.pawnGroupMakerParams = new PawnGroupMakerParms
                         {
                             tile = map.Tile,
