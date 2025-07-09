@@ -108,7 +108,7 @@ namespace SuperHeroGenesBase
             Caravan caravan = parent.pawn.GetCaravan();
 
             // If the pawn isn't in a map or a caravan, get the fuck out of here
-            if (parent.pawn.Spawned && caravan == null) return false;
+            if ((!parent.pawn.Spawned || parent.pawn.PositionHeld.Roofed(parent.pawn.Map)) && caravan == null) return false;
 
             if (caravan != null && (Props.noMapTravelWhileImmobilized || Props.noMapTravelWhenTooMuchMass))
             {
