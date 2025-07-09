@@ -28,7 +28,7 @@ namespace SuperHeroGenesBase
                 transportComp.GetDirectlyHeldThings().TryAddOrTransfer(parent.pawn.SplitOff(1));
                 ThingOwner directlyHeldThings = transportComp.GetDirectlyHeldThings();
 
-                ActiveTransporter activeTransporter = (ActiveTransporter)ThingMaker.MakeThing(ThingDefOf.TransportPod);
+                ActiveTransporter activeTransporter = (ActiveTransporter)ThingMaker.MakeThing(ThingDefOf.ActiveDropPod);
                 activeTransporter.Contents = new ActiveTransporterInfo();
                 activeTransporter.Contents.innerContainer.TryAddRangeOrTransfer(directlyHeldThings, true, true);
 
