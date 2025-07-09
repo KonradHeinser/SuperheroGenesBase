@@ -112,13 +112,9 @@ namespace SuperHeroGenesBase
 
             foreach (IntVec3 item in resolveParams4.rect)
             {
-                if (!item.InBounds(BaseGen.globalSettings.map))
-                    continue;
-                Building edifice = item.GetEdifice(BaseGen.globalSettings.map);
-                if (edifice != null && edifice.def.destroyable && edifice.def.IsBuildingArtificial)
-                {
+                Building edifice = item.GetEdificeSafe(BaseGen.globalSettings.map);
+                if (edifice?.def.destroyable == true)
                     edifice.Destroy();
-                }
             }
 
             if (defaultLayout is ComplexLayoutDef complexLayout && complexLayout.Worker is LayoutWorkerComplex complexWorker && complexWorker.GetFixedHostileFactionForThreats() != null)
