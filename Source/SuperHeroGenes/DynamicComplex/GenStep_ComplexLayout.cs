@@ -105,7 +105,7 @@ namespace SuperHeroGenesBase
                     size = DefaultComplexSize
                 };
                 structureSketch = LayoutDefOf.AncientComplex.Worker.GenerateStructureSketch(parms2);
-                Log.Warning("Failed to recover lost complex from any quest. Generating an ancient complex.");
+                Log.Warning("Failed to recover complex from anything. Generating an ancient complex.");
             }
         }
 

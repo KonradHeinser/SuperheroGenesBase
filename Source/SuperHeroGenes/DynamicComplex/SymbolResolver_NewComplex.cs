@@ -8,7 +8,7 @@ using Verse.AI.Group;
 
 namespace SuperHeroGenesBase
 {
-    public class SymbolResolver_NewComplex : SymbolResolver
+    public class SymbolResolver_NewComplex : SymbolResolver_AncientComplex_Base
     {
         public List<ComplexSet> filthSet;
 
@@ -57,6 +57,8 @@ namespace SuperHeroGenesBase
         public float fourthLayerFilthChance;
 
         public float defendRadius = 50;
+
+        protected override LayoutDef DefaultLayoutDef => defaultLayout;
 
         public override void Resolve(ResolveParams rp)
         {
@@ -281,36 +283,6 @@ namespace SuperHeroGenesBase
             }
             placedThing = GenSpawn.Spawn(ThingMaker.MakeThing(thingDef), position, map, rot ?? thingDef.defaultPlacingRot);
             return true;
-        }
-
-        public void ResolveComplex(ResolveParams rp)
-        {
-            if (rp.ancientLayoutStructureSketch == null)
-            {
-                StructureGenParams parms = new StructureGenParams
-                {
-                    size = new IntVec2(rp.rect.Width, rp.rect.Height)
-                };
-                if (defaultLayout != null)
-                    rp.ancientLayoutStructureSketch = defaultLayout.Worker.GenerateStructureSketch(parms);
-                else
-                    rp.ancientLayoutStructureSketch = LayoutDefOf.AncientComplex.Worker.GenerateStructureSketch(parms);
-            }
-            BaseGen.symbolStack.Push("ancientComplexSketch", rp);
-            ResolveParams resolveParams2 = rp;
-            resolveParams2.floorDef = defaultFlooring ?? TerrainDefOf.Concrete;
-            resolveParams2.allowBridgeOnAnyImpassableTerrain = true;
-            resolveParams2.floorOnlyIfTerrainSupports = false;
-
-            foreach (LayoutRoom room in rp.ancientLayoutStructureSketch.structureLayout.Rooms)
-            {
-                foreach (CellRect rect in room.rects)
-                {
-                    resolveParams2.rect = rect.MovedBy(rp.rect.Min);
-                    BaseGen.symbolStack.Push("floor", resolveParams2);
-                    BaseGen.symbolStack.Push("clear", resolveParams2);
-                }
-            }
         }
     }
 }
