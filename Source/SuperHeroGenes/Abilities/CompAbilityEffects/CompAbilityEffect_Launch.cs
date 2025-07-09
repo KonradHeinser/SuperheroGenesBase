@@ -25,7 +25,7 @@ namespace SuperHeroGenesBase
                 transportComp.groupID = parent.pawn.thingIDNumber;
                 transportComp.TryRemoveLord(map);
 
-                transportComp.GetDirectlyHeldThings().TryAddOrTransfer(parent.pawn.SplitOff(1));
+                transportComp.GetDirectlyHeldThings().TryAddOrTransfer(parent.pawn);
                 ThingOwner directlyHeldThings = transportComp.GetDirectlyHeldThings();
 
                 ActiveTransporter activeTransporter = (ActiveTransporter)ThingMaker.MakeThing(ThingDefOf.ActiveDropPod);

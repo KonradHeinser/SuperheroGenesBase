@@ -26,7 +26,7 @@ namespace SuperHeroGenesBase
             }
 
             // Caster checks
-            if (Props.checkCasterRoof && parent.pawn.Spawned && parent.pawn.Position.Roofed(parent.pawn.Map))
+            if (Props.checkCasterRoof && parent.pawn.MapHeld != null && parent.pawn.PositionHeld.Roofed(parent.pawn.MapHeld))
             {
                 if (throwMessages)
                     Messages.Message(baseExplanation + "Roofed".Translate(), parent.pawn, MessageTypeDefOf.RejectInput, false);
