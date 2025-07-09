@@ -1,4 +1,5 @@
 ﻿using RimWorld.Planet;
+using Verse.AI.Group;
 using Verse;
 using RimWorld;
 using System;
@@ -11,10 +12,11 @@ namespace SuperHeroGenesBase
 
         public override void Apply(GlobalTargetInfo target)
         {
-            Map map = parent.pawn.Map;
+            Map map = parent.pawn.MapHeld;
+            parent.pawn.GetLord()?.RemovePawn(parent.pawn);
             if (map != null)
             {
-                IntVec3 position = parent.pawn.Position;
+                IntVec3 position = parent.pawn.PositionHeld;
 
                 Thing transporter = ThingMaker.MakeThing(ThingDefOf.TransportPod);
                 GenSpawn.Spawn(transporter, position, map);
