@@ -24,6 +24,8 @@ namespace SuperHeroGenesBase
 
         private bool checkedFaction = false;
 
+        private float maxDistanceFromCenterOffset = 20f;
+
         protected override IntVec2 MinSize => GetMinSize();
 
         private IntVec2 GetMinSize()
@@ -71,11 +73,6 @@ namespace SuperHeroGenesBase
 
         public float internalPointsMultiplier = 1;
 
-        protected override CellRect GetBounds(Map map)
-        {
-            return map.Center.RectAbout(MinSize);
-        }
-
         public override void Generate(Map map, GenStepParams parms)
         {
             currentParams = parms;
@@ -117,7 +114,7 @@ namespace SuperHeroGenesBase
         protected override LayoutStructureSketch GenerateAndSpawn(CellRect rect, Map map, GenStepParams parms, LayoutDef layout)
         {
             CellRect cont = structureSketch.structureLayout.container;
-            if (!rect.TryFindRandomInnerRect(new IntVec2(cont.Width, cont.Height), out var rect2))
+            if (!rect.TryFindRandomInnerRect(new IntVec2(cont.Width, cont.Height), out var rect2, (arg => arg.CenterCell.DistanceTo(map.Center) < cont.Width + maxDistanceFromCenterOffset)))
             {
                 rect2 = rect;
                 Log.Error("Failed to generate and spawn complex.");
