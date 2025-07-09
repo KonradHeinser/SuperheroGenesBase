@@ -113,6 +113,8 @@ namespace SuperHeroGenesBase
 
             foreach (IntVec3 item in resolveParams4.rect)
             {
+                if (!item.InBounds(BaseGen.globalSettings.map))
+                    continue;
                 Building edifice = item.GetEdifice(BaseGen.globalSettings.map);
                 if (edifice != null && edifice.def.destroyable && edifice.def.IsBuildingArtificial)
                 {
