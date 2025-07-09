@@ -100,10 +100,10 @@ namespace SuperHeroGenesBase
 
         public override bool CanApplyOn(GlobalTargetInfo target)
         {
-            return Valid(target, true);
+            return Valid(target, false);
         }
 
-        public override bool Valid(GlobalTargetInfo target, bool throwMessages = false)
+        public override bool Valid(GlobalTargetInfo target, bool throwMessages = true)
         {
             Caravan caravan = parent.pawn.GetCaravan();
 
@@ -111,7 +111,7 @@ namespace SuperHeroGenesBase
             if (!parent.pawn.Spawned && caravan == null) return false;
             if (parent.pawn.Spawned && parent.pawn.Position.Roofed(parent.pawn.Map))
             {
-                if (throwMessages)
+                if (!throwMessages)
                     Messages.Message("CannotUseAbility".Translate(parent.def.label) + ": " + "Roofed".Translate(), parent.pawn, MessageTypeDefOf.RejectInput, false);
                 return false;
             }
