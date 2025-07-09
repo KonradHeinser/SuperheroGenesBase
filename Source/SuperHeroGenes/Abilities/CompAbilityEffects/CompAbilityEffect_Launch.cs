@@ -25,7 +25,7 @@ namespace SuperHeroGenesBase
                 transportComp.groupID = parent.pawn.thingIDNumber;
                 transportComp.TryRemoveLord(map);
 
-                transportComp.GetDirectlyHeldThings().TryAddOrTransfer(parent.pawn);
+                transportComp.GetDirectlyHeldThings().TryAddOrTransfer(parent.pawn.SplitOff(1));
                 ThingOwner directlyHeldThings = transportComp.GetDirectlyHeldThings();
 
                 ActiveTransporter activeTransporter = (ActiveTransporter)ThingMaker.MakeThing(ThingDefOf.ActiveDropPod);
@@ -98,8 +98,8 @@ namespace SuperHeroGenesBase
             Caravan caravan = parent.pawn.GetCaravan();
 
             // If the pawn isn't in a map or a caravan, get the fuck out of here
-            if (parent.pawn.Map == null && caravan == null) return false;
-            if (parent.pawn.Map != null && !parent.pawn.Spawned) return false;
+            if (!parent.pawn.Spawned && caravan == null) return false;
+            if (parent.pawn.InBed()) return false;
 
             if (caravan != null && (Props.noMapTravelWhileImmobilized || Props.noMapTravelWhenTooMuchMass))
             {
