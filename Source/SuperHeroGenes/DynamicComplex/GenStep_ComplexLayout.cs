@@ -139,24 +139,12 @@ namespace SuperHeroGenesBase
                 resolveParams.thingSetMakerDef = parms.sitePart.parms.ancientComplexRewardMaker;
 
             ResolveParams parms3 = resolveParams;
+            parms3.sitePart = parms.sitePart;
             FormCaravanComp component = parms.sitePart.site.GetComponent<FormCaravanComp>();
             if (component != null)
                 component.foggedRoomsCheckRect = parms3.rect;
 
             BaseGen.globalSettings.map = map;
-            SitePart sitePart = currentParams.sitePart;
-
-            if (sitePart.conditionCauser != null)
-            {
-                CellRect cellRect = CellRect.CenteredOn(resolveParams.rect.CenterCell, 10, 10).ClipInsideMap(map);
-                sitePart.conditionCauserWasSpawned = true;
-                ResolveParams ccSketchResolveParams = default;
-                ccSketchResolveParams.rect = cellRect;
-                ccSketchResolveParams.faction = map.ParentFaction;
-                ccSketchResolveParams.conditionCauser = sitePart.conditionCauser;
-                BaseGen.symbolStack.Push("conditionCauserRoom", ccSketchResolveParams);
-            }
-
             BaseGen.symbolStack.Push(ruleDef.symbol, parms3);
             MapGenerator.UsedRects.Add(resolveParams.rect);
             BaseGen.Generate();
