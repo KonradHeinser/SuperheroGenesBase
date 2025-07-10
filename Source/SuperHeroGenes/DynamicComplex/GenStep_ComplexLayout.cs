@@ -71,6 +71,11 @@ namespace SuperHeroGenesBase
 
         public float internalPointsMultiplier = 1;
 
+        protected override CellRect GetBounds(Map map)
+        {
+            return map.Center.RectAbout(MinSize);
+        }
+
         public override void Generate(Map map, GenStepParams parms)
         {
             currentParams = parms;
