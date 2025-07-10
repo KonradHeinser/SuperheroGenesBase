@@ -25,7 +25,9 @@ namespace SuperHeroGenesBase
         protected override bool CanResolveInt(SketchResolveParams parms)
         {
             if (parms.rect.HasValue)
+            {
                 return parms.sketch != null;
+            }
             return false;
         }
 
