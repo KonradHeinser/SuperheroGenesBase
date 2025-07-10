@@ -40,6 +40,9 @@ namespace SuperHeroGenesBase
         public float minCasterLightLevel = 0f;
         public float maxCasterLightLevel = 1f;
 
+        // Other Caster checks
+        public bool checkCasterRoof = false;
+
         // % of progress through the day
         public float minPartOfDay = 0f;
         public float maxPartOfDay = 1f;

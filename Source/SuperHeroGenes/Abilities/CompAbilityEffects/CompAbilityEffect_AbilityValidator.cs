@@ -26,22 +26,28 @@ namespace SuperHeroGenesBase
             }
 
             // Caster checks
+            if (Props.checkCasterRoof && parent.pawn.Spawned && parent.pawn.Position.Roofed(parent.pawn.Map))
+            {
+                if (throwMessages)
+                    Messages.Message(baseExplanation + "Roofed".Translate(), parent.pawn, MessageTypeDefOf.RejectInput, false);
+                return false;
+            }
             if (!CheckCasterLight(out string casterLightExplanation))
             {
                 if (throwMessages)
-                    Messages.Message(baseExplanation + casterLightExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
+                    Messages.Message(baseExplanation + casterLightExplanation, parent.pawn, MessageTypeDefOf.RejectInput, false);
                 return false;
             }
             if (!CheckCasterHediffs(out string casterHediffExplanation))
             {
                 if (throwMessages)
-                    Messages.Message(baseExplanation + casterHediffExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
+                    Messages.Message(baseExplanation + casterHediffExplanation, parent.pawn, MessageTypeDefOf.RejectInput, false);
                 return false;
             }
             if (!CheckCasterPawn(out string casterExplanation))
             {
                 if (throwMessages)
-                    Messages.Message(baseExplanation + casterExplanation, target.ToTargetInfo(parent.pawn.Map), MessageTypeDefOf.RejectInput, false);
+                    Messages.Message(baseExplanation + casterExplanation, parent.pawn, MessageTypeDefOf.RejectInput, false);
                 return false;
             }
 
