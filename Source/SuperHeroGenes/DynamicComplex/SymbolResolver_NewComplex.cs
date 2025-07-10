@@ -64,6 +64,18 @@ namespace SuperHeroGenesBase
         {
             ResolveParams resolveParams = rp;
 
+            Map map = BaseGen.globalSettings.map;
+            foreach (IntVec3 item in resolveParams.rect)
+            {
+                Building edifice = item.GetEdificeSafe(map);
+                if (edifice?.def.destroyable == true)
+                    edifice.Destroy(DestroyMode.QuestLogic);
+                List<Thing> things = new List<Thing>(item.GetThingList(map));
+                if (!things.NullOrEmpty())
+                    foreach (Thing thing in things)
+                        thing.Destroy(DestroyMode.QuestLogic);
+            }
+
             if (!filthSet.NullOrEmpty())
                 foreach (ComplexSet set in filthSet)
                 {
@@ -109,14 +121,6 @@ namespace SuperHeroGenesBase
             resolveParams4.chanceToSkipFloor = 0;
             resolveParams4.floorOnlyIfTerrainSupports = true;
             BaseGen.symbolStack.Push("floor", resolveParams4);
-
-            Map map = BaseGen.globalSettings.map;
-            foreach (IntVec3 item in resolveParams4.rect)
-            {
-                Building edifice = item.GetEdificeSafe(map);
-                if (edifice?.def.destroyable == true)
-                    edifice.Destroy(DestroyMode.QuestLogic);
-            }
 
             if (defaultLayout is ComplexLayoutDef complexLayout && complexLayout.Worker is LayoutWorkerComplex complexWorker && complexWorker.GetFixedHostileFactionForThreats() != null)
             {
