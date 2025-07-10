@@ -115,7 +115,7 @@ namespace SuperHeroGenesBase
             {
                 Building edifice = item.GetEdificeSafe(map);
                 if (edifice?.def.destroyable == true)
-                    edifice.Destroy();
+                    edifice.Destroy(DestroyMode.QuestLogic);
             }
 
             if (defaultLayout is ComplexLayoutDef complexLayout && complexLayout.Worker is LayoutWorkerComplex complexWorker && complexWorker.GetFixedHostileFactionForThreats() != null)
