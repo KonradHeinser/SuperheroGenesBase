@@ -65,7 +65,7 @@ namespace SuperHeroGenesBase
             ResolveParams resolveParams = rp;
 
             Map map = BaseGen.globalSettings.map;
-            foreach (IntVec3 item in resolveParams.rect)
+            foreach (IntVec3 item in resolveParams.rect.ExpandedBy(5))
             {
                 Building edifice = item.GetEdificeSafe(map);
                 if (edifice?.def.destroyable == true)
