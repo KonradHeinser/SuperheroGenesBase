@@ -114,7 +114,7 @@ namespace SuperHeroGenesBase
             }
 
             ResolveComplex(rp);
-            if (rp.sitePart.conditionCauser != null)
+            if (rp.sitePart?.conditionCauser != null)
                 foreach (LayoutRoom room in rp.ancientLayoutStructureSketch.structureLayout.Rooms)
                 {
                     if (rp.sitePart.conditionCauserWasSpawned)

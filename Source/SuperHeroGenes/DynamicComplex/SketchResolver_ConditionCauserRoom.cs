@@ -19,17 +19,9 @@ namespace SuperHeroGenesBase
 
         }
 
-        public ThingDef cornerThing;
-
         protected override void ResolveInt(SketchResolveParams parms)
         {
-            if (cornerThing != null)
-            {
-                SketchResolveParams parms2 = parms;
-                parms2.cornerThing = cornerThing;
-                parms2.requireFloor = true;
-                SketchResolverDefOf.AddCornerThings.Resolve(parms2);
-            }
+            return;
         }
     }
 }
