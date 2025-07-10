@@ -139,6 +139,7 @@ namespace SuperHeroGenesBase
                 resolveParams.thingSetMakerDef = parms.sitePart.parms.ancientComplexRewardMaker;
 
             ResolveParams parms3 = resolveParams;
+            parms3.sitePart = parms.sitePart;
             FormCaravanComp component = parms.sitePart.site.GetComponent<FormCaravanComp>();
             if (component != null)
                 component.foggedRoomsCheckRect = parms3.rect;
