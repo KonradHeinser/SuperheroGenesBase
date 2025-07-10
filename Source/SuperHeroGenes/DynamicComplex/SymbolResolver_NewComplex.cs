@@ -114,21 +114,6 @@ namespace SuperHeroGenesBase
             }
 
             ResolveComplex(rp);
-            if (rp.sitePart?.conditionCauser != null)
-                foreach (LayoutRoom room in rp.ancientLayoutStructureSketch.structureLayout.Rooms)
-                {
-                    if (rp.sitePart.conditionCauserWasSpawned)
-                        break;
-                    foreach (LayoutRoomDef layRoom in room.defs)
-                        if (layRoom.sketchResolverDef.resolver is SketchResolver_ConditionCauserRoom)
-                        {
-                            rp.sitePart.conditionCauserWasSpawned = true;
-                            ResolveParams causerParams = rp;
-                            resolveParams.singleThingToSpawn = rp.sitePart.conditionCauser;
-                            BaseGen.symbolStack.Push("thing", causerParams);
-                            break;
-                        }
-                }
 
             ResolveParams resolveParams4 = rp;
             resolveParams4.rect = rp.rect.ExpandedBy(5);

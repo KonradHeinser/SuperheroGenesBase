@@ -41,7 +41,6 @@
     <Compile Include="Abilities\CompAbilityEffects\CompAbilityEffect_ToggleHediffExistence.cs" />
     <Compile Include="Abilities\CompProperties\CompProperties_AbilityAbsorbPower.cs" />
     <Compile Include="Abilities\CompProperties\CompProperties_AbilityToggleHediffExistence.cs" />
-    <Compile Include="DynamicComplex\SketchResolver_ConditionCauserRoom.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_CreateItems.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_InvisibleAtStage.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_SpawnHumanlike.cs" />
