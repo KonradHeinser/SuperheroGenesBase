@@ -139,7 +139,7 @@
 		<label>It's Like Removing and Regrowing a Limb</label>
 		<description>Use the Hemomorph's Starfish split ability. Please don't try this at home.</description>
 		<tracker Class="AchievementsExpanded.HediffTracker">
-			<def>SHG_Hemomancer_StarfishSplitting</def>
+			<def>SHG_Hemomancer_StarfishSplit</def>
 			<count>1</count>
 		</tracker>
 		<texPath>Hemomancer/Shifter/Gene_Hemomancer_Starfish</texPath>
