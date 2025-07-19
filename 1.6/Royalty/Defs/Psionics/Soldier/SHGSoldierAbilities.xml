@@ -69,6 +69,8 @@
                 <worldObject>PsionistFlying</worldObject>
                 <disablingBiomes>
                     <li MayRequire="kentington.saveourship2">OuterSpaceBiome</li>
+                    <li MayRequire="Ludeon.Rimworld.Odyssey">Space</li>
+                    <li MayRequire="Ludeon.Rimworld.Odyssey">Orbit</li>
                 </disablingBiomes>
             </li>
         </comps>

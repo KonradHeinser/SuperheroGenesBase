@@ -55,8 +55,8 @@
 
     <GeneDef ParentName="SuperPowersSummoningBase" MayRequire="Ludeon.Rimworld.Odyssey">
         <defName>SHG_SummonArcheanSeed</defName>
-        <label>summon shard</label>
-        <description>Carriers of this gene can create an archean seed at a location of their choosing once per year.</description>
+        <label>summon archean seed</label>
+        <description>Carriers of this gene can create an archean seed at a location of their choosing once every other quadrum.</description>
         <iconPath>Things/Plant/TreeArchean/ArcheanTree</iconPath>
         <displayOrderInCategory>1.6</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
