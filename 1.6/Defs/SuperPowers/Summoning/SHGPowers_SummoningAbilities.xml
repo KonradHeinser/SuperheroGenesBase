@@ -47,6 +47,21 @@
         </comps>
     </AbilityDef>
 
+    <AbilityDef ParentName="SHGSummoningBase" MayRequire="Ludeon.Rimworld.Odyssey">
+        <defName>SHG_SummonArcheanSeed</defName>
+        <label>summon archean seed</label>
+        <description>Create an archean seed that can be planted to terraform nearby terrain.</description>
+        <iconPath>Things/Plant/TreeArchean/ArcheanTree</iconPath>
+        <cooldownTicksRange>3600000</cooldownTicksRange> <!--1 year-->
+        <comps>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>ArcheanSeed</thingDef>
+                <allowOnBuildings>False</allowOnBuildings>
+                <sendSkipSignal>False</sendSkipSignal>
+            </li>
+        </comps>
+    </AbilityDef>
+
     <AbilityDef ParentName="SHGSummoningBase">
         <defName>SHG_SummonEnhancedCorn</defName>
         <label>summon enhanced corn</label>

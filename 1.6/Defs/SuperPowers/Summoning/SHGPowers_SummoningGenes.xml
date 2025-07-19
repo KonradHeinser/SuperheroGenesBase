@@ -53,6 +53,24 @@
         </descriptionHyperlinks>
     </GeneDef>
 
+    <GeneDef ParentName="SuperPowersSummoningBase" MayRequire="Ludeon.Rimworld.Odyssey">
+        <defName>SHG_SummonArcheanSeed</defName>
+        <label>summon shard</label>
+        <description>Carriers of this gene can create an archean seed at a location of their choosing once per year.</description>
+        <iconPath>Things/Plant/TreeArchean/ArcheanTree</iconPath>
+        <displayOrderInCategory>1.6</displayOrderInCategory>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>SHG_SummonArcheanSeed</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_SummonArcheanSeed</AbilityDef>
+        </descriptionHyperlinks>
+        <exclusionTags>
+            <li>Archetype_BiomancerArchean</li>
+        </exclusionTags>
+    </GeneDef>
+
     <GeneDef ParentName="SuperPowersSummoningBase">
         <defName>SHG_SummonEnhancedCorn</defName>
         <label>summon enhanced corn</label>

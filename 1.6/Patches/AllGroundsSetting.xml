@@ -24,6 +24,9 @@
                                 <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
                                 <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
                                 <ArmorRating_Heat>0.25</ArmorRating_Heat>
+                                <ComfyTemperatureMin>-5</ComfyTemperatureMin>
+                                <ComfyTemperatureMax>5</ComfyTemperatureMax>
+                                <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.25</VacuumResistance>
                             </statOffsets>
                         </GeneDef>
 
@@ -44,6 +47,9 @@
                                 <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
                                 <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
                                 <ArmorRating_Heat>0.75</ArmorRating_Heat>
+                                <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+                                <ComfyTemperatureMax>15</ComfyTemperatureMax>
+                                <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.75</VacuumResistance>
                             </statOffsets>
                         </GeneDef>
 
