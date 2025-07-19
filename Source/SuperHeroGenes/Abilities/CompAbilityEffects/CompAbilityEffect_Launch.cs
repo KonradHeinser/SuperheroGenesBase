@@ -82,7 +82,7 @@ namespace SuperHeroGenesBase
                     if (Props.disablingBiomes.Contains(parent.pawn.Map.Biome))
                     {
                         reason = "SHG_Biome".Translate(parent.pawn.Map.Biome.LabelCap);
-                        return false;
+                        return true;
                     }
                 }
                 else
@@ -91,7 +91,7 @@ namespace SuperHeroGenesBase
                     if (caravan != null && Props.disablingBiomes.Contains(caravan.Biome))
                     {
                         reason = "SHG_Biome".Translate(parent.pawn.Map.Biome.LabelCap);
-                        return false;
+                        return true;
                     }
                 }
             }
