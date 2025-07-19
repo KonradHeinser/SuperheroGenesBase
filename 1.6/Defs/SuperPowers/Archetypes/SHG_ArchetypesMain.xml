@@ -993,6 +993,7 @@
             <li>SHG_SummonPoluxTree</li>
             <li>SHG_SummonGlowPod</li>
             <li MayRequire="Ludeon.RimWorld.Ideology">SHG_SummonGauranlenPod</li>
+            <li MayRequire="Ludeon.RimWorld.Odyssey">SHG_SummonArcheanSeed</li>
             <li>SHG_SummonMineableWood</li>
         </abilities>
         <descriptionHyperlinks>
@@ -1000,11 +1001,13 @@
             <AbilityDef>SHG_SummonPoluxTree</AbilityDef>
             <AbilityDef>SHG_SummonGlowPod</AbilityDef>
             <AbilityDef MayRequire="Ludeon.RimWorld.Ideology">SHG_SummonGauranlenPod</AbilityDef>
+            <AbilityDef MayRequire="Ludeon.RimWorld.Odyssey">SHG_SummonArcheanSeed</AbilityDef>
             <AbilityDef>SHG_SummonMineableWood</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
             <li>Archetype_BiomancerAnima</li>
             <li>Archetype_BiomancerPolux</li>
+            <li>Archetype_BiomancerArchean</li>
             <li>Archetype_BiomancerGlowPod</li>
             <li>Archetype_BiomancerGauranlen</li>
             <li>Archetype_BiomancerWood</li>

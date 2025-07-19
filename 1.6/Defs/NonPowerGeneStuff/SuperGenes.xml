@@ -106,6 +106,9 @@
             <ArmorRating_Blunt>1</ArmorRating_Blunt>
             <ArmorRating_Sharp>1</ArmorRating_Sharp>
             <ArmorRating_Heat>1</ArmorRating_Heat>
+            <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+            <ComfyTemperatureMax>20</ComfyTemperatureMax>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1</VacuumResistance>
         </statOffsets>
     </GeneDef>
 
