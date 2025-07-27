@@ -20,6 +20,7 @@
             <mineableThing>WoodLog</mineableThing>
             <mineableYield>350</mineableYield>
             <smoothedThing />
+            <mineablePreventMeteorite>true</mineablePreventMeteorite>
         </building>
     </ThingDef>
 
@@ -37,6 +38,7 @@
             <mineableScatterCommonality>0</mineableScatterCommonality>
             <mineableScatterLumpSizeRange>0</mineableScatterLumpSizeRange>
             <smoothedThing />
+            <mineablePreventMeteorite>true</mineablePreventMeteorite>
         </building>
     </ThingDef>
 

@@ -27,7 +27,10 @@
         <setting>condensedMeteors</setting>
         <inactive Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[@Name="SHG_MineableResourceBase"]/building</xpath>
-            <value><smoothedThing /></value>
+            <value>
+                <smoothedThing />
+                <mineablePreventMeteorite>true</mineablePreventMeteorite>
+        </value>
         </inactive>
     </Operation>
 
