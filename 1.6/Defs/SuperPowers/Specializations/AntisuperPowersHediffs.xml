@@ -61,11 +61,6 @@
                 <showRemainingTime>false</showRemainingTime>
             </li>
             <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>5</maxDistance>
-                <customMote>SHG_Mote_Debuff</customMote>
-            </li>
         </comps>
     </HediffDef>
 
@@ -75,11 +70,6 @@
                 <showRemainingTime>false</showRemainingTime>
             </li>
             <li Class="HediffCompProperties_DisappearsOnDeath"/>
-            <li Class="HediffCompProperties_Link">
-                <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
-                <maxDistance>20</maxDistance>
-                <customMote>SHG_Mote_Debuff</customMote>
-            </li>
         </comps>
     </HediffDef>
 
@@ -92,6 +82,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
@@ -132,6 +123,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
@@ -173,6 +165,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
@@ -213,6 +206,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
@@ -261,6 +255,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
@@ -297,6 +292,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
@@ -333,6 +329,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
@@ -371,6 +368,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
@@ -416,6 +414,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
@@ -453,6 +452,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
@@ -498,6 +498,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
@@ -537,6 +538,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
@@ -580,6 +582,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
@@ -618,6 +621,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
@@ -666,6 +670,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>5</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
@@ -703,6 +708,7 @@
             <li Class="HediffCompProperties_GiveHediffsInRange">
                 <range>20</range>
                 <hideMoteWhenNotDrafted>false</hideMoteWhenNotDrafted>
+                <onlyPawnsInSameFaction>False</onlyPawnsInSameFaction>
                 <targetingParameters>
                     <canTargetBuildings>false</canTargetBuildings>
                     <canTargetAnimals>true</canTargetAnimals>
