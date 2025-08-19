@@ -36,7 +36,7 @@ namespace SuperHeroGenesBase
                 }
                 else if (value is int num) // Handling "dropdowns"
                 {
-                    if (options.Count > num && options[num] != null)
+                    if (options.Count > num && options[num] != null && options[num].GetType() != typeof(PatchOperation))
                         return options[num].Apply(xml);
                 }
             }
