@@ -53,6 +53,7 @@ namespace SuperHeroGenesBase
         public static bool noPsionicNeurotrainers;
         public static bool antiSupeDisease;
         public static bool disableEvolvingHemomancers;
+        public static bool noSHGBasePrereq;
 
         // AI stuff
         public static bool disableColonistAI;
@@ -154,7 +155,8 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref noPsionicNeurotrainers, "noPsionicNeurotrainers", false);
             Scribe_Values.Look(ref antiSupeDisease, "antiSupeDisease", false);
             Scribe_Values.Look(ref disableEvolvingHemomancers, "disableEvolvingHemomancers", false);
-
+            Scribe_Values.Look(ref noSHGBasePrereq, "noSHGBasePrereq", false);
+            
             // AI stuff
             Scribe_Values.Look(ref disableColonistAI, "disableColonistAI");
             Scribe_Values.Look(ref automaticHealer, "automaticHealer");
@@ -260,6 +262,9 @@ namespace SuperHeroGenesBase
                     optionsMenu.Gap(10f);
                     optionsMenu.CheckboxLabeled("SHG_DisableEvolvingHemomancers".Translate(), ref disableEvolvingHemomancers, "SHG_DisableEvolvingHemomancersDescription".Translate());
                     optionsMenu.Gap(10f);
+                    optionsMenu.CheckboxLabeled("SHG_NoSHGBasePrereq".Translate(), ref noSHGBasePrereq, "SHG_NoSHGBasePrereqDescription".Translate());
+                    optionsMenu.Gap(10f);
+                    
                     if (optionsMenu.ButtonTextLabeledPct("SHG_BaseAbilityCooldown".Translate(), baseAbilityCooldownOptions[baseAbilityCooldown].Translate(), 0.75f,
                         tooltip: "SHG_BaseAbilityCooldownDesc".Translate()))
                     {

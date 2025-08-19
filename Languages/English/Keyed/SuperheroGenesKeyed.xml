@@ -129,6 +129,8 @@
     <SHG_AntiSupeDiseaseDescription>This setting makes it so all biomes which may have a disease have a small chance to give the anti-super disease to any pawns with the base superhero gene. This disease has a notably higher chance of killing supers than most ailments, though it seldom affects those without the gene.</SHG_AntiSupeDiseaseDescription>
     <SHG_DisableEvolvingHemomancers>    Disable Evolving Hemomancers</SHG_DisableEvolvingHemomancers>
     <SHG_DisableEvolvingHemomancersDescription>This setting makes it so hemomancers do not have a chance to gain a hemomancer gene when the consume a hemogen pack. The evolution was added as a way to give players a consistent way to gain hemomancy abilities and effects throughout the game similar to the Radiomancer Ever-Evolving ability and Psionist Neurotrainers. Enabling this setting will make it much harder to get hemomancy genes consistently mid-game.</SHG_DisableEvolvingHemomancersDescription>
+    <SHG_NoSHGBasePrereq>    Remove SHG Base Prereq</SHG_NoSHGBasePrereq>
+    <SHG_NoSHGBasePrereqDescription>Enabling this removes the Base Superhero Gene as a prerequisite from all genes. Other prerequisites (i.e. Antisuper requiring Unsuper) will not be changed.</SHG_NoSHGBasePrereqDescription>
 
     <!--Removed at the moment due to how neutrotrainers are generated normally-->
     <SHG_NoPsionicNeurotrainers>    No Psionic Neurotrainers</SHG_NoPsionicNeurotrainers>
