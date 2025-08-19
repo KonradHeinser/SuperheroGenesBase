@@ -235,8 +235,11 @@ namespace SuperHeroGenesBase
                     {
                         optionsMenu.CheckboxLabeled("SHG_ArchetypesEverywhere".Translate(), ref archetypesEverywhere, "SHG_ArchetypesEverywhereDescription".Translate());
                         optionsMenu.Gap(10f);
-                        optionsMenu.CheckboxLabeled("SHG_MutationsAnywhere".Translate(), ref mutationsAnywhere, "SHG_MutationsAnywhereDescription".Translate());
-                        optionsMenu.Gap(10f);
+                        if (ModsConfig.IsActive("SuperheroGenes.Villains"))
+                        {
+                            optionsMenu.CheckboxLabeled("SHG_MutationsAnywhere".Translate(), ref mutationsAnywhere, "SHG_MutationsAnywhereDescription".Translate());
+                            optionsMenu.Gap(10f);
+                        }
                     }
                     optionsMenu.CheckboxLabeled("SHG_ActivatableSuperGenes".Translate(), ref activatableSuperGenes, "SHG_ActivatableSuperGenesDescription".Translate());
                     optionsMenu.Gap(10f);
