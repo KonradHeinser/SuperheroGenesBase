@@ -224,7 +224,7 @@
                             <statFactors>
                                 <CarryingCapacity>10</CarryingCapacity>
                                 <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">10</VEF_MassCarryCapacity>
-                                                                <MeleeDamageFactor>4</MeleeDamageFactor>
+                                <MeleeDamageFactor>4</MeleeDamageFactor>
                             </statFactors>
                             <capMods>
                                 <li>

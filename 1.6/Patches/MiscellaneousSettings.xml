@@ -47,4 +47,11 @@
             </operations>
         </active>
     </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>noSHGBasePrereq</setting>
+        <active Class="PatchOperationRemove">
+            <xpath>Defs/GeneDef/prerequisite[text()="SuperHeroBase"]</xpath>
+        </active>
+    </Operation>
 </Patch>
