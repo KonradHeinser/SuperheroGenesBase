@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Flight</defName>
+        <label>faster flight</label>
+        <description>Push yourself to fly even faster than before.</description>
+        <iconPath>Powers/Gene_Flight</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>10000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Soaring</hediffDef>
+                <onlyBrain>True</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Soaring</defName>
+		<label>soaring</label>
+		<description>This super is soaring high through the air, where those on the ground cannot touch them and they are free to fly as they please.</description>
+		<maxSeverity>1.0</maxSeverity>
+        <stages>
+            <li>
+                <statFactors>
+                    <MoveSpeed>10</MoveSpeed>
+                    <MeleeDodgeChance>100</MeleeDodgeChance>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-12</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+	</HediffDef>
+
+</Defs>

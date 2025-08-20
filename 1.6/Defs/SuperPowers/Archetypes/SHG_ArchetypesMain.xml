@@ -961,11 +961,9 @@
         </statFactors>
         <abilities>
             <li>SHG_Invisibility</li>
-            <li>SHG_Flight</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_Invisibility</AbilityDef>
-            <AbilityDef>SHG_Flight</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
             <li>Archetype_PhantomFlight</li>

@@ -189,27 +189,6 @@
 		</comps>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_SpecialHediffBase">
-        <defName>SHG_Soaring</defName>
-		<label>soaring</label>
-		<description>This super is soaring high through the air, where those on the ground cannot touch them and they are free to fly as they please.</description>
-		<maxSeverity>1.0</maxSeverity>
-        <stages>
-            <li>
-                <statFactors>
-                    <MoveSpeed>10</MoveSpeed>
-                    <MeleeDodgeChance>100</MeleeDodgeChance>
-                </statFactors>
-            </li>
-        </stages>
-        <comps>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-12</severityPerDay>
-                <showHoursToRecover>true</showHoursToRecover>
-            </li>
-        </comps>
-	</HediffDef>
-
     <HediffDef ParentName="SHG_SpecialHediffBase" MayRequire="Ludeon.Rimworld.Anomaly">
         <defName>SHG_DetectMetalHorror</defName>
         <label>detect metal horror</label>

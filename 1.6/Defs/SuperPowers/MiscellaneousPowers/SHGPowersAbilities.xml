@@ -645,28 +645,6 @@
             </li>
         </subSounds>
     </SoundDef>
-    
-    <AbilityDef ParentName="SHGSelfCastBase">
-        <defName>SHG_Flight</defName>
-        <label>faster flight</label>
-        <description>Push yourself to fly even faster than before.</description>
-        <iconPath>Powers/Gene_Flight</iconPath>
-        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
-        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
-        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-        <cooldownTicksRange>10000</cooldownTicksRange>
-        <statBases>
-            <Ability_Duration>42</Ability_Duration>
-        </statBases>
-        <comps>
-            <li Class="CompProperties_AbilityGiveHediff">
-                <compClass>CompAbilityEffect_GiveHediff</compClass>
-                <hediffDef>SHG_Soaring</hediffDef>
-                <onlyBrain>True</onlyBrain>
-            </li>
-        </comps>
-    </AbilityDef>
 
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_Flight_WorldTravel</defName>
