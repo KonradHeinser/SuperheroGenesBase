@@ -203,7 +203,7 @@ namespace SuperHeroGenesBase
                     if (caravan.ImmobilizedByMass) return false;
                 }
             }
-            int tile = parent.pawn.Tile;
+            PlanetTile tile = parent.pawn.Tile;
             PlanetLayer layer = target.Tile.Layer;
             PlanetTile layerTile = layer.GetClosestTile(tile);
             if (!Props.disablingBiomes.NullOrEmpty() && Props.disablingBiomes.Contains(target.Tile.Tile.PrimaryBiome))
@@ -212,7 +212,7 @@ namespace SuperHeroGenesBase
             int distance = Props.maxDistance;
             if (Props.distanceFactorStat != null)
                 distance = (int)Math.Floor(distance * parent.pawn.GetStatValue(Props.distanceFactorStat));
-            distance = Mathf.CeilToInt((float)distance / (float)layer.Def.rangeDistanceFactor);
+            distance = Mathf.RoundToInt((float)distance / (float)layer.Def.rangeDistanceFactor);
 
             GenDraw.DrawWorldRadiusRing(layerTile, distance, CompPilotConsole.GetFuelRadiusMat(layerTile));
 
