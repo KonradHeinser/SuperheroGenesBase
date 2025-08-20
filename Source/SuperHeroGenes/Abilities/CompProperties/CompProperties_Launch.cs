@@ -12,6 +12,8 @@ namespace SuperHeroGenesBase
 
         public List<BiomeDef> disablingBiomes; // Mostly for SoS2 compatability and similar
 
+        public ThingDef pawnLanded;
+
         public ThingDef skyfallerLeaving;
 
         public WorldObjectDef worldObject;

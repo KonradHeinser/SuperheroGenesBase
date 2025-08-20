@@ -278,6 +278,7 @@
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <hostile>false</hostile>
         <jobDef Inherit="False" />
         <statBases>
@@ -285,6 +286,7 @@
         </statBases>
         <verbProperties>
             <range>10</range>
+            <warmupTime>0</warmupTime>
             <drawAimPie>False</drawAimPie>
             <requireLineOfSight>False</requireLineOfSight>
         </verbProperties>
@@ -310,13 +312,14 @@
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <hostile>false</hostile>
+        <cooldownTicksRange>10000</cooldownTicksRange>
         <jobDef Inherit="False" />
         <statBases>
             <Ability_EffectRadius>200</Ability_EffectRadius>
         </statBases>
         <verbProperties>
             <range>200</range>
-            <warmupTime>5</warmupTime>
+            <warmupTime>0</warmupTime>
             <drawAimPie>False</drawAimPie>
             <requireLineOfSight>False</requireLineOfSight>
         </verbProperties>
@@ -668,7 +671,7 @@
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_Flight_WorldTravel</defName>
         <label>world travel</label>
-        <description>Allows the pawn to launch themselves to a distant location. When they arrive at their destination they'll need to take a brief break to reorient themselves and determine where they need to go.\n\nThe super will be unable to fly if their caravan's mass exceeds their maximum carry weight, and may need to seperate from a caravan if they want to move quickly.\n\nThe more movement speed the super has, the further they can travel in one burst. Temporary move speed changes from things like go-juice do extend this range.\n\nDue to potential bugs and performance issues, this ability won't allow pawns to fly together, and their speed is statically set to be the same as transport pods.</description>
+        <description>Allows the pawn to launch themselves to a distant location.\n\nNote: Some targets give a menu, but if the game decides your mouse strayed too far without clicking an option, the game will cancel the flight without refunding the cooldown. I can't find any solution for this that doesn't risk even worse effects, so please make sure to actually click an option before moving on.</description>
         <iconPath>Powers/Gene_Flight</iconPath>
         <targetWorldCell>True</targetWorldCell>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -680,19 +683,17 @@
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <range>0.9</range>
-            <warmupTime>0.5</warmupTime>
+            <warmupTime>0</warmupTime>
             <requireLineOfSight>False</requireLineOfSight>
         </verbProperties>
         <comps>
             <li Class="SuperHeroGenesBase.CompProperties_Launch">
-                <maxDistance>3</maxDistance>
+                <maxDistance>4</maxDistance>
                 <distanceFactorStat>MoveSpeed</distanceFactorStat>
                 <skyfallerLeaving>SuperLeaving</skyfallerLeaving>
                 <worldObject>SuperFlying</worldObject>
                 <disablingBiomes>
                     <li MayRequire="kentington.saveourship2">OuterSpaceBiome</li>
-                    <li MayRequire="Ludeon.Rimworld.Odyssey">Space</li>
-                    <li MayRequire="Ludeon.Rimworld.Odyssey">Orbit</li>
                 </disablingBiomes>
             </li>
         </comps>

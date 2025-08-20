@@ -41,6 +41,10 @@
     <Compile Include="Abilities\CompAbilityEffects\CompAbilityEffect_ToggleHediffExistence.cs" />
     <Compile Include="Abilities\CompProperties\CompProperties_AbilityAbsorbPower.cs" />
     <Compile Include="Abilities\CompProperties\CompProperties_AbilityToggleHediffExistence.cs" />
+    <Compile Include="Abilities\FlyingPawn.cs" />
+    <Compile Include="Abilities\FlyPawnArriving.cs" />
+    <Compile Include="Abilities\FlyPawnLanding.cs" />
+    <Compile Include="Abilities\FlyPawnLeaving.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_CreateItems.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_InvisibleAtStage.cs" />
     <Compile Include="Hediffs\CompProperties\HediffCompProperties_SpawnHumanlike.cs" />

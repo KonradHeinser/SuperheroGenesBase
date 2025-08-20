@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
 using RimWorld;
+using RimWorld.Planet;
 using Verse;
 using System.Text;
 using Verse.AI;
@@ -52,13 +53,12 @@ namespace SuperHeroGenesBase
                 postfix: new HarmonyMethod(patchType, nameof(GeneConflictsWithPostfix)));
             harmony.Patch(AccessTools.Method(typeof(IncidentWorker_CaravanArrivalTributeCollector), "TraderKindCommonality"),
                 postfix: new HarmonyMethod(patchType, nameof(TributeFactionPostfix)));
-
-            /*
-            harmony.Patch(AccessTools.Method(typeof(ThingDefGenerator_Neurotrainer), "ImpliedThingDefs"),
-                postfix: new HarmonyMethod(patchType, nameof(ImpliedThingDefsPostfix)));
-            */
+            harmony.Patch(AccessTools.Method(typeof(TransportersArrivalActionUtility), "AnyNonDownedColonist"),
+                postfix: new HarmonyMethod(patchType, nameof(AnyNonDownedColonistPostfix)));
+            harmony.Patch(AccessTools.Method(typeof(TransportersArrivalActionUtility), "AnyPotentialCaravanOwner"),
+                postfix: new HarmonyMethod(patchType, nameof(AnyNonDownedColonistPostfix)));
         }
-
+        
         public static void TributeFactionPostfix(ref float __result, TraderKindDef traderKind, Faction faction)
         {
             if (traderKind.faction != faction.def) __result = 0f;
@@ -275,24 +275,10 @@ namespace SuperHeroGenesBase
             }
         }
 
-        // Not implemented due to it never actually running for some reason
-        public static void ImpliedThingDefsPostfix(ref IEnumerable<ThingDef> __result)
+        public static void AnyNonDownedColonistPostfix(ref bool __result, IEnumerable<IThingHolder> pods)
         {
-            List<ThingDef> originals = __result.ToList();
-            List<ThingDef> removal = new List<ThingDef>();
-
-            foreach (ThingDef thing in originals)
-            {
-                CompProperties_UseEffect_GainAbility abilityComp = thing.GetCompProperties<CompProperties_UseEffect_GainAbility>();
-                if (abilityComp != null && abilityComp.ability.HasModExtension<NoNeurotrainer>())
-                    removal.Add(thing);
-            }
-
-            if (!removal.NullOrEmpty())
-                foreach (ThingDef thing in removal)
-                    originals.Remove(thing);
-
-            __result = originals.AsEnumerable();
+            if (!__result && pods.First() is CompTransporter transporter && transporter.parent.def == SHGDefOf.SHG_FlightPod)
+                __result = true;
         }
     }
 }

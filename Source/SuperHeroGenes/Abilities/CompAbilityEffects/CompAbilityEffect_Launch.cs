@@ -2,7 +2,10 @@
 using Verse.AI.Group;
 using Verse;
 using RimWorld;
+using System.Collections.Generic;
 using System;
+using System.Linq;
+using UnityEngine;
 
 namespace SuperHeroGenesBase
 {
@@ -10,15 +13,67 @@ namespace SuperHeroGenesBase
     {
         public new CompProperties_Launch Props => (CompProperties_Launch)props;
 
+        private Thing transporter = null;
+
+        private IEnumerable<IThingHolder> Pod
+        {
+            get
+            {
+                if (transporter == null)
+                    transporter = ThingMaker.MakeThing(SHGDefOf.SHG_FlightPod);
+                yield return transporter.TryGetComp<CompTransporter>();
+            }
+        }
+
         public override void Apply(GlobalTargetInfo target)
         {
+            var options = DropOptions(target.Tile, TryLaunch).ToList();
+            if (options.Count == 2) // The second action will be cancel
+                options.First().action();
+            else if (options.Count > 2)
+                Find.WindowStack.Add(new FloatMenu(options));
+        }
+
+        private IEnumerable<FloatMenuOption> DropOptions(PlanetTile destination, Action<PlanetTile, TransportersArrivalAction> action)
+        {
+            if (TransportersArrivalAction_FormCaravan.CanFormCaravanAt(Pod, destination))
+                yield return new FloatMenuOption("FormCaravanHere".Translate(), delegate
+                {
+                    action(destination, new TransportersArrivalAction_FormCaravan("MessagePawnArrived"));
+                });
+
+            var objects = Find.WorldObjects.ObjectsAt(destination);
+
+            if (!objects.EnumerableNullOrEmpty())
+                foreach (var obj in objects)
+                {
+                    if (ModsConfig.OdysseyActive && obj.RequiresSignalJammerToReach)
+                        continue;
+                    if (obj is Settlement settlement)
+                        foreach (FloatMenuOption option in TransportersArrivalAction_AttackSettlement.GetFloatMenuOptions(action, Pod, settlement))
+                            yield return option;
+                    else
+                        foreach (FloatMenuOption option in obj.GetTransportersFloatMenuOptions(Pod, action))
+                            yield return option;
+                }
+
+            yield return new FloatMenuOption("Cancel".Translate(), delegate
+            {
+                parent.ResetCooldown();
+            });
+        }
+
+        private void TryLaunch(PlanetTile destination, TransportersArrivalAction action)
+        {
+            if (Pod == null)
+                return;
+
             Map map = parent.pawn.MapHeld;
             parent.pawn.GetLord()?.RemovePawn(parent.pawn);
             if (map != null)
             {
                 IntVec3 position = parent.pawn.PositionHeld;
 
-                Thing transporter = ThingMaker.MakeThing(ThingDefOf.TransportPod);
                 GenSpawn.Spawn(transporter, position, map);
 
                 CompTransporter transportComp = transporter.TryGetComp<CompTransporter>();
@@ -31,12 +86,15 @@ namespace SuperHeroGenesBase
                 ActiveTransporter activeTransporter = (ActiveTransporter)ThingMaker.MakeThing(ThingDefOf.ActiveDropPod);
                 activeTransporter.Contents = new ActiveTransporterInfo();
                 activeTransporter.Contents.innerContainer.TryAddRangeOrTransfer(directlyHeldThings, true, true);
+                activeTransporter.Contents.sentTransporterDef = SHGDefOf.SHG_FlightPod;
 
                 FlyShipLeaving obj = (FlyShipLeaving)SkyfallerMaker.MakeSkyfaller(Props.skyfallerLeaving ?? ThingDefOf.ActiveDropPod, activeTransporter);
                 obj.groupID = transportComp.groupID;
-                obj.destinationTile = target.Tile;
-                obj.arrivalAction = new TransportersArrivalAction_FormCaravan("MessagePawnArrived");
+                obj.destinationTile = destination;
+                obj.arrivalAction = action;
                 obj.worldObjectDef = Props.worldObject ?? WorldObjectDefOf.TravellingTransporters;
+                if (obj is FlyPawnLeaving pawnLeaving)
+                    pawnLeaving.pawn = parent.pawn;
 
                 transportComp.CleanUpLoadingVars(map);
                 transportComp.parent.Destroy();
@@ -51,16 +109,20 @@ namespace SuperHeroGenesBase
                 if (newCaravan is TravellingTransporters transport)
                 {
                     transport.Tile = caravan.Tile;
-                    transport.destinationTile = target.Tile;
-                    transport.arrivalAction = new TransportersArrivalAction_FormCaravan("MessagePawnArrived");
+                    transport.destinationTile = destination;
+                    transport.arrivalAction = action;
+                    if (transport is FlyingPawn flyingPawn)
+                        flyingPawn.pawn = parent.pawn;
                     ActiveTransporterInfo podInfo = new ActiveTransporterInfo();
                     podInfo.innerContainer.TryAddRangeOrTransfer(caravan.AllThings);
                     podInfo.innerContainer.TryAddRangeOrTransfer(caravan.pawns);
+                    podInfo.sentTransporterDef = SHGDefOf.SHG_FlightPod;
                     transport.AddTransporter(podInfo, false);
                     Find.WorldObjects.Add(transport);
                     caravan.Destroy();
                 }
             }
+            transporter = null;
         }
 
         public override bool GizmoDisabled(out string reason)
@@ -141,16 +203,23 @@ namespace SuperHeroGenesBase
                     if (caravan.ImmobilizedByMass) return false;
                 }
             }
-
             int tile = parent.pawn.Tile;
+            PlanetLayer layer = target.Tile.Layer;
+            PlanetTile layerTile = layer.GetClosestTile(tile);
+            if (!Props.disablingBiomes.NullOrEmpty() && Props.disablingBiomes.Contains(target.Tile.Tile.PrimaryBiome))
+                return false;
 
             int distance = Props.maxDistance;
-            if (Props.distanceFactorStat != null) distance = (int)Math.Floor(distance * parent.pawn.GetStatValue(Props.distanceFactorStat));
+            if (Props.distanceFactorStat != null)
+                distance = (int)Math.Floor(distance * parent.pawn.GetStatValue(Props.distanceFactorStat));
+            distance = Mathf.CeilToInt((float)distance / (float)layer.Def.rangeDistanceFactor);
 
-            GenDraw.DrawWorldRadiusRing(tile, distance);
+            GenDraw.DrawWorldRadiusRing(layerTile, distance, CompPilotConsole.GetFuelRadiusMat(layerTile));
 
-            if (Find.WorldGrid.TraversalDistanceBetween(tile, target.Tile) > distance) return false;
-            if (Find.World.Impassable(target.Tile)) return false;
+            if (Find.WorldGrid.TraversalDistanceBetween(layerTile, target.Tile, canTraverseLayers: true) > distance)
+                return false;
+            if (DropOptions(target.Tile, null).ToList().Count == 1)
+                return false;
 
             return base.Valid(target, throwMessages);
         }

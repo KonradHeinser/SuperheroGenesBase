@@ -525,7 +525,7 @@
     <ThingDef ParentName="SkyfallerBase">
         <defName>SuperLeaving</defName>
         <label>super (leaving)</label>
-        <thingClass>FlyShipLeaving</thingClass>
+        <thingClass>SuperHeroGenesBase.FlyPawnLeaving</thingClass>
         <graphicData>
             <texPath>Things/Mote/SparkFlash</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -533,28 +533,81 @@
           <drawSize>10</drawSize>
         </graphicData>
         <skyfaller>
-          <movementType>Decelerate</movementType>
-          <reversed>true</reversed>
-          <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
-          <shadowSize>(1, 1)</shadowSize>
-          <anticipationSound>DropPod_Leaving</anticipationSound>
-          <anticipationSoundTicks>-10</anticipationSoundTicks>
-          <ticksToImpactRange><min>-30</min><max>-15</max></ticksToImpactRange>
+            <movementType>Decelerate</movementType>
+            <reversed>true</reversed>
+            <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+            <shadowSize>(1, 1)</shadowSize>
+            <anticipationSound>DropPod_Leaving</anticipationSound>
+            <anticipationSoundTicks>-10</anticipationSoundTicks>
+            <ticksToImpactRange><min>-30</min><max>-15</max></ticksToImpactRange>
         </skyfaller>
+    </ThingDef>
+
+    <ThingDef ParentName="DropPodIncoming" Name="SuperArriving">
+        <defName>SuperArriving</defName>
+        <label>flying pawn</label>
+        <thingClass>SuperHeroGenesBase.FlyPawnArriving</thingClass>
+        <graphicData>
+            <texPath>Things/Mote/SparkFlash</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutFlying</shaderType>
+            <drawSize>10</drawSize>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName="ActiveDropPod">
+        <defName>SuperLanding</defName>
+        <label>super landing</label>
+        <thingClass>SuperHeroGenesBase.FlyPawnLanding</thingClass>
+        <graphicData>
+            <texPath>Things/Mote/SparkFlash</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutFlying</shaderType>
+            <drawSize>2</drawSize>
+        </graphicData>
+        <soundOpen />
     </ThingDef>
 
     <WorldObjectDef Name="SuperFlying">
         <defName>SuperFlying</defName>
         <label>super flying</label>
         <description>Super in flight.</description>
-        <worldObjectClass>TravellingTransporters</worldObjectClass>
-        <texture>Base/SuperheroGeneBase</texture>
-        <useDynamicDrawer>true</useDynamicDrawer>
-        <expandingIcon>False</expandingIcon>
-        <expandingIconTexture>Base/SuperheroGeneBase</expandingIconTexture>
-        <expandingIconPriority>60</expandingIconPriority>
-        <expandMore>False</expandMore>
-        <allowCaravanIncidentsWhichGenerateMap>false</allowCaravanIncidentsWhichGenerateMap>
+        <worldObjectClass>SuperHeroGenesBase.FlyingPawn</worldObjectClass>
+        <useDynamicDrawer>True</useDynamicDrawer>
+        <allowCaravanIncidentsWhichGenerateMap>False</allowCaravanIncidentsWhichGenerateMap>
     </WorldObjectDef>
+
+    <!--This handles the pawn's ability to launch themselves into orbit-->
+    <ThingDef ParentName="BuildingBase">
+        <defName>SHG_FlightPod</defName>
+        <label>flying pawn</label>
+        <description>A super capable of transporting themselves to various places in the world.</description>
+        <graphicData>
+            <texPath>Things/Mote/SparkFlash</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutFlying</shaderType>
+            <drawSize>10</drawSize>
+        </graphicData>
+        <size>(1,1)</size>
+        <rotatable>false</rotatable>
+        <tickerType>Normal</tickerType>
+        <altitudeLayer>BuildingOnTop</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <castEdgeShadows>false</castEdgeShadows>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <dropPodFaller>SuperArriving</dropPodFaller>
+        <dropPodActive>SuperLanding</dropPodActive>
+        <statBases>
+            <MaxHitPoints>250</MaxHitPoints>
+            <WorkToBuild>1600</WorkToBuild>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Transporter">
+                <restEffectiveness>0</restEffectiveness>
+                <canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+            </li>
+        </comps>
+    </ThingDef>
 
 </Defs>

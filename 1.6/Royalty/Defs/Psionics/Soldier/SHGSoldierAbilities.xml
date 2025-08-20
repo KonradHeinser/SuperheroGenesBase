@@ -43,7 +43,7 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_PsionicFlight</defName>
         <label>world travel</label>
-        <description>Allows the pawn to launch themselves to a distant location using a burst of psionic energy. When they arrive at their destination they'll need to take a brief break to reorient themselves and determine where they need to go next. The super will be unable to fly if their caravan's mass exceeds their maximum carry weight, and may need to seperate from a caravan if they want to move quickly.\n\nThe more psychic sensitivity the psionist has, the further they can travel in one burst. Anything that temporarily alters psychic sensitivity will impact the maximum range by the same amount.\n\nDue to potential bugs and performance issues, this ability won't allow pawns to fly together, and their speed is statically set to be the same as transport pods.</description>
+        <description>Allows the pawn to launch themselves to a distant location using a burst of psionic energy.\n\nNote: Some targets give a menu, but if the game decides your mouse strayed too far without clicking an option, the game will cancel the flight without refunding the cooldown. I can't find any solution for this that doesn't risk even worse effects, so please make sure to actually click an option before moving on.</description>
         <iconPath>Psionist/Soldier/Gene_Psionist_PsionicFlight</iconPath>
         <targetWorldCell>True</targetWorldCell>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -58,7 +58,7 @@
         <verbProperties>
             <verbClass>Verb_CastAbility</verbClass>
             <range>0.9</range>
-            <warmupTime>0.5</warmupTime>
+            <warmupTime>0</warmupTime>
             <requireLineOfSight>False</requireLineOfSight>
         </verbProperties>
         <comps>
@@ -69,8 +69,6 @@
                 <worldObject>PsionistFlying</worldObject>
                 <disablingBiomes>
                     <li MayRequire="kentington.saveourship2">OuterSpaceBiome</li>
-                    <li MayRequire="Ludeon.Rimworld.Odyssey">Space</li>
-                    <li MayRequire="Ludeon.Rimworld.Odyssey">Orbit</li>
                 </disablingBiomes>
             </li>
         </comps>
