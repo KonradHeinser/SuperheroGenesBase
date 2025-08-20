@@ -47,7 +47,7 @@ namespace SuperHeroGenesBase
             if (!objects.EnumerableNullOrEmpty())
                 foreach (var obj in objects)
                 {
-                    if (ModsConfig.OdysseyActive && obj.RequiresSignalJammerToReach)
+                    if (ModsConfig.OdysseyActive && obj.RequiresSignalJammerToReach && !SuperheroGenes_Settings.noJammerReq)
                         continue;
                     if (obj is Settlement settlement)
                         foreach (FloatMenuOption option in TransportersArrivalAction_AttackSettlement.GetFloatMenuOptions(action, Pod, settlement))

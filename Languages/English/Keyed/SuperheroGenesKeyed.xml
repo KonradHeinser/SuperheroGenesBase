@@ -131,6 +131,8 @@
     <SHG_DisableEvolvingHemomancersDescription>This setting makes it so hemomancers do not have a chance to gain a hemomancer gene when the consume a hemogen pack. The evolution was added as a way to give players a consistent way to gain hemomancy abilities and effects throughout the game similar to the Radiomancer Ever-Evolving ability and Psionist Neurotrainers. Enabling this setting will make it much harder to get hemomancy genes consistently mid-game.</SHG_DisableEvolvingHemomancersDescription>
     <SHG_NoSHGBasePrereq>    Remove SHG Base Prereq</SHG_NoSHGBasePrereq>
     <SHG_NoSHGBasePrereqDescription>Enabling this removes the Base Superhero Gene as a prerequisite from all genes. Other prerequisites (i.e. Antisuper requiring Unsuper) will not be changed.</SHG_NoSHGBasePrereqDescription>
+    <SHG_NoSignalJammer>    Ignore Signal Jammer Requirement</SHG_NoSignalJammer>
+    <SHG_NoSignalJammerDescription>Enabling this allows the world travel abilities (the flight genes' abilties) to ignore Signal Jammer Requirements that the destination requires. This is disabled by default because teleportation is the only intended way to ignore the jammer requirement.</SHG_NoSignalJammerDescription>
 
     <!--Removed at the moment due to how neutrotrainers are generated normally-->
     <SHG_NoPsionicNeurotrainers>    No Psionic Neurotrainers</SHG_NoPsionicNeurotrainers>
