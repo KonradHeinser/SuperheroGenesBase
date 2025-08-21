@@ -192,7 +192,7 @@
         <displayPriorityInXenotype>969.996</displayPriorityInXenotype>
     </GeneCategoryDef>
 
-    <!--960.0~969.8 are for outside paths. If base reaches this far, it's gone too far-->
+    <!--960.0~969.8 are for outside paths-->
 
     <GeneCategoryDef> 
         <defName>SHG_XenotypeRandomizer</defName>
@@ -288,62 +288,7 @@
         <marketValueFactor>1.1</marketValueFactor>
     </GeneDef>
 
-        <!--Psionic bases-->
-    <GeneDef Name="SuperPowersPsychicDimensionalBase" Abstract="True">
-        <displayCategory>SuperPowersPsychicDimensional</displayCategory>
-        <biostatMet>-1</biostatMet>
-        <biostatCpx>1</biostatCpx>
-        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
-        <marketValueFactor>1.1</marketValueFactor>
-    </GeneDef>
-
-    <GeneDef Name="SuperPowersPsychicCommanderBase" Abstract="True">
-        <displayCategory>SuperPowersPsychicCommander</displayCategory>
-        <biostatMet>-1</biostatMet>
-        <biostatCpx>1</biostatCpx>
-        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
-        <marketValueFactor>1.1</marketValueFactor>
-    </GeneDef>
-
-    <GeneDef Name="SuperPowersPsychicGuardianBase" Abstract="True">
-        <displayCategory>SuperPowersPsychicGuardian</displayCategory>
-        <biostatMet>-1</biostatMet>
-        <biostatCpx>1</biostatCpx>
-        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
-        <marketValueFactor>1.1</marketValueFactor>
-    </GeneDef>
-
-    <GeneDef Name="SuperPowersPsychicTyrantBase" Abstract="True">
-        <displayCategory>SuperPowersPsychicTyrant</displayCategory>
-        <biostatMet>-1</biostatMet>
-        <biostatCpx>1</biostatCpx>
-        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
-        <marketValueFactor>1.1</marketValueFactor>
-    </GeneDef>
-
-    <GeneDef Name="SuperPowersPsychicSoldierBase" Abstract="True">
-        <displayCategory>SuperPowersPsychicSoldier</displayCategory>
-        <biostatMet>-1</biostatMet>
-        <biostatCpx>1</biostatCpx>
-        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
-        <marketValueFactor>1.1</marketValueFactor>
-    </GeneDef>
-
-    <GeneDef Name="SuperPowersPsychicEmpathBase" Abstract="True">
-        <displayCategory>SuperPowersPsychicEmpath</displayCategory>
-        <biostatMet>-1</biostatMet>
-        <biostatCpx>1</biostatCpx>
-        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
-        <marketValueFactor>1.1</marketValueFactor>
-    </GeneDef>
-
-    <GeneDef Name="SuperPowersPsychicDebufferBase" Abstract="True">
-        <displayCategory>SuperPowersPsychicDebuffer</displayCategory>
-        <biostatMet>-1</biostatMet>
-        <biostatCpx>1</biostatCpx>
-        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
-        <marketValueFactor>1.1</marketValueFactor>
-    </GeneDef>
+        <!--Psionic bases can be found in the Royalty folder-->
 
         <!--Hemomancer bases-->
     <GeneDef Name="SuperPowersHemoThiefBase" Abstract="True">

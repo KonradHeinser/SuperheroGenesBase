@@ -84,7 +84,7 @@
                                             </li>
                                         </subNodes>
                                     </li>
-                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable" MayRequire="Ludeon.Rimworld.Royalty">
                                         <ability>SHG_Psionist_Asteroid</ability>
                                         <subNodes>
                                             <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
@@ -203,7 +203,7 @@
                                                         </li>
                                                     </subNodes>
                                                 </li>
-                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable" MayRequire="Ludeon.Rimworld.Royalty">
                                                     <ability>SHG_Psionist_Asteroid</ability>
                                                     <subNodes>
                                                         <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasTargetNoFriendlyFire" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">

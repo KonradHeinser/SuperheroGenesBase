@@ -408,7 +408,7 @@
                                 </li>
                             </subNodes>
                         </li>
-                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasPsylink">
+                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasPsylink" MayRequire="Ludeon.Rimworld.Royalty">
                             <subNodes>
                                 <li Class="ThinkNode_ConditionalHasAbility">
                                     <ability>SHG_Psionist_MassLevitation</ability>
