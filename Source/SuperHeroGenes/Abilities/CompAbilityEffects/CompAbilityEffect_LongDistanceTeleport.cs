@@ -249,7 +249,8 @@ namespace SuperHeroGenesBase
             {
                 if (Find.WorldGrid.TraversalDistanceBetween(parent.pawn.Tile, target.Tile, true) > Props.maxDistance) return false;
             }
-            if (Find.World.Impassable(target.Tile)) return false;
+            if (Find.World.Impassable(target.Tile) || (target.WorldObject == null && !target.Tile.Layer.Def.canFormCaravans)) 
+                return false;
 
             Caravan caravan = parent.pawn.GetCaravan();
 
@@ -296,9 +297,12 @@ namespace SuperHeroGenesBase
                 if (Find.WorldGrid.TraversalDistanceBetween(parent.pawn.Tile, target.Tile, true) > Props.maxDistance) return "AbilityTooFarToTeleport".Translate();
             }
 
-            if (!Valid(target) && Props.requireAllyAtDestination) return "AbilityNeedAllyToSkip".Translate();
-
-            if (!Valid(target)) return "AbilityPassableOnly".Translate();
+            if (!Valid(target))
+            {
+                if (Props.requireAllyAtDestination)
+                    return "AbilityNeedAllyToSkip".Translate();
+                return "AbilityPassableOnly".Translate();
+            }
 
             if (ShouldJoinCaravan(target)) return "AbilitySkipToJoinCaravan".Translate();
 
