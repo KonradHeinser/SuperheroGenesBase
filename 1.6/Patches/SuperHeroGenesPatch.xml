@@ -28,9 +28,8 @@
         <inactive Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[@Name="SHG_MineableResourceBase"]/building</xpath>
             <value>
-                <smoothedThing />
                 <mineablePreventMeteorite>true</mineablePreventMeteorite>
-        </value>
+            </value>
         </inactive>
     </Operation>
 
