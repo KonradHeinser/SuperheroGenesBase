@@ -35,9 +35,9 @@
   </loadAfter>
 
   <description>
-Ever wanted your pawns to be able to lift extreme weights? Want them to be able to research things at frankly ridiculous speeds? This mod allows you to give pawns various super powers that, much like in superhero movies, allows them to ignore the laws of common sense. This currently adds hundreds new genes that aim to make pawns significantly more powerful without becoming so overpowered that they are completely untouchable. This mod will also remove the armor cap for vanilla, assuming a mod before it in your list hasn't already done so.
+Ever wanted your pawns to be able to lift extreme weights or research things at frankly ridiculous speeds? This mod allows you to give pawns various super powers that, much like in superhero movies, allows them to ignore the laws of common sense without becoming so overpowered nothing can touch them.
 
-[url=https://github.com/KonradHeinser/SuperheroGenesBase/wiki]This wiki gives a full list of the genes available and a generic explanation of their effects[/url]
+[url=https://github.com/KonradHeinser/SuperheroGenesBase/wiki]This wiki gives more in-depth details about what this mod contains.[/url]
 _______________________________________________________
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3088653906]Superhero Genes - Villain and Stereotypes[/url] adds xenotypes that use these genes and a hostile faction. It's separate from this one so that people don't have a bunch of extra xenotypes filling their list, or a hostile faction of strong opponents disrupting their colony constantly.
@@ -54,26 +54,19 @@ _______________________________________________________
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3112549163]The EBSG Framework is required for a variety of genes, including the equipment flaws, forcefields, and specialized damage boosts.[/url]
 
-_______________________________________________________
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3046776238]Better Gene Inheritence is recommended for avoiding some weird issues.[/url]
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2967228692]Dynamic Carry Capacity[/url] helps fix a vanilla bug that causes carry capacity to not function outside of hauling.
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2838035829]Scrollable Gizmos may be needed if a pawn has too many abilities.[/url]
 
-To help avoid inheritance issues caused by the vanilla system, try using a mod like the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3046776238]Better Gene Inheritence[/url] mod made by RedMattis.
-
-If you want to give a pawn a bunch of powers, you may need something like [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2838035829]Scrollable Gizmos[/url] to make the abilities easier to go look through.
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3487386360]CE users should use this patch of the mod. If someone informs me that the CE team has put a patch within CE itself, I'll change this note.[/url]
 
 _______________________________________________________
-
 
 [url=https://steamcommunity.com/profiles/76561199377833097/myworkshopfiles/]The preview and mod icon were made by Elseud[/url]
-[url=https://steamcommunity.com/id/alite/myworkshopfiles/?appid=294100]Easy link to all of my Rimworld mods[/url]
+[url=https://discord.gg/fYP8qkcNDh]Link to the discord server[/url]
 
 [url=https://github.com/KonradHeinser/SuperheroGenesBase][img]https://i.imgur.com/kTkpTOE.png[/img][/url]
 [url=https://ko-fi.com/alite56114][img]https://i.imgur.com/Utx6OIH.png[/img][/url]
-[url=https://discord.gg/fYP8qkcNDh][img]https://i.imgur.com/0dG2g3t.png[/img][/url]
-
-
-For those who are wondering, yes, I have added a CE compatibility patch. Not a particularly good one, but it's there. I do not, nor do I ever plan to, use CE, so the patch is about as balanced as I am personally capable of getting it to. I am not planning on updating the patch, so outside of CE adding a patch in its own mod, it is unlikely that the patch will change.
   </description>
 </ModMetaData>
 
