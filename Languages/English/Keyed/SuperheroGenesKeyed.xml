@@ -3,7 +3,7 @@
 	<SHG_Hemomancer_Starfish>{0}'s clump of hemogen has successfully developed.</SHG_Hemomancer_Starfish>
     <SHG_GeneticRomanceChance>Carrier Gene(s)</SHG_GeneticRomanceChance>
     <AbilityHomeTeleport>Teleport home</AbilityHomeTeleport>
-    <AbilityAllyTeleport>Teleport to random ally</AbilityAllyTeleport>
+    <AbilityAllyTeleport>Teleport to ally</AbilityAllyTeleport>
     <AbilityMapTeleport>Teleport to random area in map</AbilityMapTeleport>
     <AbilityTileTeleport>Teleport to tile</AbilityTileTeleport>
     <AbilityCaravanTeleport>Teleport to caravan</AbilityCaravanTeleport>
