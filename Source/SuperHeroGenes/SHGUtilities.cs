@@ -198,30 +198,26 @@ namespace SuperHeroGenesBase
             }
         }
 
-        public static IntVec3 FindDestination(Map targetMap, bool targetCenter = false)
+        public static IntVec3 FindDestination(this Map targetMap, bool targetCenter = false)
         {
-
-            IntVec3 target = IntVec3.Invalid;
-            if (targetCenter)
+            IntVec3 target;
+            if (targetCenter) // If prioritizing center, start with seeing if it or a nearby cell is clear
             {
                 target = targetMap.Center;
                 if (target.Standable(targetMap))
-                {
                     return target;
-                }
-                target = CellFinder.StandableCellNear(target, targetMap, 50);
-                if (target.IsValid) return target;
+                target = CellFinder.StandableCellNear(target, targetMap, 20);
+                if (target.IsValid)
+                    return target;
             }
+            
+            // Get a random edge cell and see if it's available 
             target = CellFinder.RandomEdgeCell(targetMap);
             if (target.Standable(targetMap)) return target;
-            target = CellFinder.StandableCellNear(target, targetMap, 30);
-            if (target.IsValid) return target;
-
-            target = CellFinder.RandomEdgeCell(targetMap);
-            target = CellFinder.StandableCellNear(target, targetMap, 30); // If the first time fails try a second time just to see if the first one was bad luck
-            if (target.IsValid) return target;
-
-            return IntVec3.Invalid;
+            // Just find anything at this point, starting from that edge cell
+            if (RCellFinder.TryFindRandomClearCellsNear(target, 1, targetMap, out var cells))
+                return cells.First();
+            return IntVec3.Invalid; // At this point just give up
         }
 
         public static void AddOrAppendHediffs(this Pawn pawn, float initialSeverity = 1, float severityChange = 0, HediffDef hediff = null, List<HediffDef> hediffs = null)

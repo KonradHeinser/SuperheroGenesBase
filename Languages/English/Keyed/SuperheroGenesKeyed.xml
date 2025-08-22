@@ -2,11 +2,14 @@
 <LanguageData>
 	<SHG_Hemomancer_Starfish>{0}'s clump of hemogen has successfully developed.</SHG_Hemomancer_Starfish>
     <SHG_GeneticRomanceChance>Carrier Gene(s)</SHG_GeneticRomanceChance>
-    <AbilityHomeTeleport>Skip to random area in home</AbilityHomeTeleport>
-    <AbilityMapTeleport>Skip to random area in map</AbilityMapTeleport>
-    <AbilityTileTeleport>Skip to tile</AbilityTileTeleport>
-    <AbilityPassableOnly>Only passable tiles can be picked</AbilityPassableOnly>
-    <AbilityTooFarToTeleport>This tile is too far for this teleportation ability</AbilityTooFarToTeleport>
+    <AbilityHomeTeleport>Teleport home</AbilityHomeTeleport>
+    <AbilityAllyTeleport>Teleport to random ally</AbilityAllyTeleport>
+    <AbilityMapTeleport>Teleport to random area in map</AbilityMapTeleport>
+    <AbilityTileTeleport>Teleport to tile</AbilityTileTeleport>
+    <AbilityCaravanTeleport>Teleport to caravan</AbilityCaravanTeleport>
+    <AbilityTileTeleportTo>Teleport to {0}</AbilityTileTeleportTo>
+    <AbilityPassableOnly>Only tiles you can enter or make caravans on can be picked</AbilityPassableOnly>
+    <AbilityTooFarToTeleport>This tile is too far</AbilityTooFarToTeleport>
     <SHG_NeedOffsets>Base need offsets:</SHG_NeedOffsets>
     <SHG_Random>Random option</SHG_Random>
     <SHG_DestinationBlocked>Something is blocking the destination.</SHG_DestinationBlocked>

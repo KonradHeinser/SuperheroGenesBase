@@ -48,6 +48,7 @@
         <targetWorldCell>True</targetWorldCell>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <cooldownTicksRange>1250</cooldownTicksRange>
         <showGizmoOnWorldView>true</showGizmoOnWorldView>
         <hostile>false</hostile>
