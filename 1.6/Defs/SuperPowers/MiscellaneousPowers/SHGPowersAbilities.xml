@@ -235,7 +235,7 @@
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_Teleport</defName>
         <label>teleport</label>
-        <description>Teleport a living thing to a desired position near where you currently stand.</description>
+        <description>Teleport a living thing to a desired position near where you currently stand.\n\nNote: Animals must be in the same faction as the super, and if teleporting from home to a biome where no animals naturally reside they will generally be ignored to avoid exposing them to the environment (i.e. most destinations in orbit are inhospitable to animals).</description>
         <iconPath>Powers/Gene_Teleport</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -270,7 +270,7 @@
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_Gate</defName>
         <label>open gate</label>
-        <description>Teleport yourself and every person and animal within 10 tiles to a distant location.</description>
+        <description>Teleport yourself and every person and animal within 10 tiles to a distant location.\n\nNote: Animals must be in the same faction as the super, and if teleporting from home to a biome where no animals naturally reside they will generally be ignored to avoid exposing them to the environment (i.e. most destinations in orbit are inhospitable to animals).</description>
         <iconPath>Powers/Gene_Gate</iconPath>
         <hotKey>Misc12</hotKey>
         <targetWorldCell>True</targetWorldCell>
@@ -278,7 +278,7 @@
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-        <cooldownTicksRange>2500</cooldownTicksRange>
+        <cooldownTicksRange>1250</cooldownTicksRange>
         <hostile>false</hostile>
         <jobDef Inherit="False" />
         <statBases>
