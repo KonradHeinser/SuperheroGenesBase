@@ -3,7 +3,7 @@
     <GeneDef ParentName="SHG_ResistanceBase">
         <defName>SHG_LaserImmune</defName>
         <label>eye laser immune</label> 
-        <description>Supers with this gene are immune to beam damage.</description>
+        <description>Super durable pawns with this gene are immune to beam damage.</description>
         <iconPath>Powers/Gene_LaserEyeImmunity</iconPath>
         <displayOrderInCategory>999</displayOrderInCategory>
         <prerequisite>SuperDurability</prerequisite>
@@ -23,7 +23,7 @@
     <GeneDef ParentName="SHG_ResistanceBase">
         <defName>BombResistant</defName>
         <label>bomb resistant</label>
-        <description>Supers with this gene always seem to suffer less from normal explosions than normal.\n\nThere are technically two types of bomb damage in vanilla, which is why bomb is listed twice.</description>
+        <description>Supers with this gene always seem to suffer less damage from bombs.\n\nThere are technically two types of bomb damage in vanilla, which is why bomb is listed twice.</description>
         <prerequisite>SuperHeroBase</prerequisite>
         <iconPath>Powers/Gene_PartialExplosionResistance</iconPath>
         <displayOrderInCategory>990</displayOrderInCategory>
@@ -51,7 +51,7 @@
     <GeneDef ParentName="SHG_ResistanceBase">
         <defName>SHG_LightningImmune</defName>
         <label>lightning immune</label> 
-        <description>Carriers of this gene are immune to lightning.</description>
+        <description>Carriers of this gene are immune to lightning and electric damage.</description>
         <iconPath>Powers/Gene_LightningImmunity</iconPath>
         <displayOrderInCategory>991</displayOrderInCategory>
         <damageFactors>
@@ -73,7 +73,7 @@
     <GeneDef ParentName="SHG_ResistanceBase">
         <defName>SHG_LightningResistant</defName>
         <label>lightning resistant</label> 
-        <description>Carriers of this gene are resistant to lightning.</description>
+        <description>Carriers of this gene are resistant to lightning and electric damage.</description>
         <iconPath>Powers/Gene_LightningResistant</iconPath>
         <displayOrderInCategory>992</displayOrderInCategory>
         <damageFactors>
@@ -95,7 +95,7 @@
     <GeneDef ParentName="SHG_ResistanceBase">
         <defName>SHG_LightningVulnernable</defName>
         <label>lightning vulnerable</label> 
-        <description>Carriers of this gene are vulnerable to lightning.</description>
+        <description>Carriers of this gene are vulnerable to lightning and electric damage.</description>
         <iconPath>Powers/Gene_LightningVulnerability</iconPath>
         <displayOrderInCategory>993</displayOrderInCategory>
         <damageFactors>
@@ -117,7 +117,7 @@
     <GeneDef ParentName="SHG_ResistanceBase">
         <defName>SHG_LightningWeakness</defName>
         <label>lightning weakness</label> 
-        <description>Carriers of this gene are very weak to lightning.</description>
+        <description>Carriers of this gene are very weak to lightning and electric damage.</description>
         <iconPath>Powers/Gene_LightningWeakness</iconPath>
         <displayOrderInCategory>994</displayOrderInCategory>
         <damageFactors>
