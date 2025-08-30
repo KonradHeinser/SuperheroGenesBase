@@ -232,7 +232,7 @@
         <description>A constant forcefield is being generated around this pawn to protect them from damage.</description>
         <comps>
             <li Class="EBSGFramework.HediffCompProperties_Shield">
-                <maxEnergy>5</maxEnergy>
+                <maxEnergy>3</maxEnergy>
                 <energyRechargeRate>0</energyRechargeRate>
                 <blocksMeleeDamage>True</blocksMeleeDamage>
                 <gizmoTip>A constant forcefield protects this pawn from most harm.</gizmoTip>
