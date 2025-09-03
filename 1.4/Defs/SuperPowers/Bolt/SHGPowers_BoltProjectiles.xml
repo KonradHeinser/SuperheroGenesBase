@@ -16,7 +16,7 @@
         <defName>SHG_Proj_Bolt_Fire</defName>
         <label>fire bolt</label>
         <graphicData>
-            <texPath>Projectiles/Projectile_FireBolt</texPath>
+            <texPath>Projectiles/OtherBolts/Firebolt</texPath>
         </graphicData>
         <projectile>
             <ai_IsIncendiary>true</ai_IsIncendiary>
@@ -31,7 +31,7 @@
         <defName>SHG_Proj_Bolt_Acid</defName>
         <label>acid bolt</label>
         <graphicData>
-            <texPath>Projectiles/Projectile_AcidBolt</texPath>
+            <texPath>Projectiles/OtherBolts/Acidbolt</texPath>
         </graphicData>
         <projectile>
             <damageDef>AcidBurn</damageDef>
@@ -45,7 +45,8 @@
         <defName>SHG_Proj_Bolt_Lightning</defName>
         <label>lightning bolt</label>
         <graphicData>
-            <texPath>Projectiles/Projectile_LightningBolt</texPath>
+            <texPath>Projectiles/Thunderbolt</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
         </graphicData>
         <projectile>
             <speed>200</speed>
@@ -58,7 +59,7 @@
         <defName>SHG_Proj_Bolt_Ice</defName>
         <label>ice bolt</label>
         <graphicData>
-            <texPath>Projectiles/Projectile_IceBolt</texPath>
+            <texPath>Projectiles/OtherBolts/Frostbolt</texPath>
         </graphicData>
         <projectile>
             <damageDef>SHG_Ice</damageDef>
@@ -70,7 +71,7 @@
         <defName>SHG_Proj_Bolt_Toxic</defName>
         <label>toxic bolt</label>
         <graphicData>
-            <texPath>Projectiles/Projectile_ToxicBolt</texPath>
+            <texPath>Projectiles/OtherBolts/Toxicbolt</texPath>
         </graphicData>
         <projectile>
             <damageDef>SHG_ToxicBolt</damageDef>
@@ -81,7 +82,8 @@
         <defName>SHG_Proj_Bolt_EMP</defName>
         <label>electricity bolt</label>
         <graphicData>
-            <texPath>Projectiles/Projectile_LightningBolt</texPath>
+            <texPath>Projectiles/Thunderbolt</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
         </graphicData>
         <projectile>
             <ai_IsIncendiary>false</ai_IsIncendiary>
@@ -94,7 +96,7 @@
         <defName>SHG_Proj_Bolt_Foam</defName>
         <label>foam bolt</label>
         <graphicData>
-            <texPath>Projectiles/Projectile_FoamBolt</texPath>
+            <texPath>Projectiles/OtherBolts/Foambolt</texPath>
         </graphicData>
         <projectile>
             <ai_IsIncendiary>false</ai_IsIncendiary>
@@ -107,7 +109,7 @@
         <defName>SHG_Proj_Bolt_Petrification</defName>
         <label>petrifying bolt</label>
         <graphicData>
-            <texPath>Projectiles/Projectile_PetrifyBolt</texPath>
+            <texPath>Projectiles/OtherBolts/Petrifyingbolt</texPath>
         </graphicData>
         <projectile>
             <ai_IsIncendiary>false</ai_IsIncendiary>
@@ -120,7 +122,7 @@
         <defName>SHG_Proj_Bolt_Water</defName>
         <label>water bolt</label>
         <graphicData>
-            <texPath>Projectiles/Projectile_WaterBolt</texPath>
+            <texPath>Projectiles/OtherBolts/Waterbolt</texPath>
         </graphicData>
         <projectile>
             <ai_IsIncendiary>false</ai_IsIncendiary>

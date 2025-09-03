@@ -310,7 +310,7 @@
         <defName>SHG_Hemomancer_BloodSpear</defName>
         <label>blood spear</label>
         <graphicData>
-            <texPath>Projectiles/SHG_Hemomancer_BloodSpear</texPath>
+            <texPath>Projectiles/OtherBolts/Hemolance</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <projectile>

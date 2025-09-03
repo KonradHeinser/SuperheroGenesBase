@@ -143,8 +143,8 @@
         <defName>SHG_Psionist_Asteroid</defName>
         <label>small asteroid</label>
         <graphicData>
-            <texPath>Projectiles/Projectile_Asteroid</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Projectiles/Meteor</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
             <shaderType>MoteGlow</shaderType>
             <drawSize>0.5</drawSize>
         </graphicData>
