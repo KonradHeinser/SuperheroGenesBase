@@ -147,7 +147,7 @@
         </descriptionHyperlinks>
     </GeneDef>
 
-        <!--Yes, I did play Hades-->
+    <!--Yes, I did play Hades-->
     <GeneDef ParentName="SuperPowersHemoWarriorBase">
         <defName>SHG_Hemomancer_BloodAndDarkness</defName>
         <label>blood and darkness</label>
