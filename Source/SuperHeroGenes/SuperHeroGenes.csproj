@@ -56,6 +56,7 @@
     <Compile Include="Hediffs\ThingCreationItem.cs" />
     <Compile Include="IngestionOutcomeDoer_AlterGenes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quest\QuestNode_CopyIdeology.cs" />
     <Compile Include="SHGDefOf.cs" />
     <Compile Include="SHGExtension.cs" />
     <Compile Include="HarmonyPatches.cs" />
