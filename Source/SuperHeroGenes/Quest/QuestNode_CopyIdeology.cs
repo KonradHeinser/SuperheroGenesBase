@@ -13,7 +13,9 @@ namespace SuperHeroGenesBase
         {
             Slate slate = QuestGen.slate;
 
-            // Mainly used to ensure site generation doesn't generate a target without an ideo
+            // Mainly used to ensure site generation doesn't generate pawns without an ideo
+            if (origin.GetValue(slate)?.Ideo == null)
+                return;
             if (target.GetValue(slate)?.ideo == null)
                 return;
 
@@ -22,11 +24,6 @@ namespace SuperHeroGenesBase
 
         protected override bool TestRunInt(Slate slate)
         {
-            if (origin.GetValue(slate)?.Ideo == null)
-                return false;
-            // Can only check the target for ideo if the target is obtained before run
-            if (target.GetValue(slate) != null && target.GetValue(slate).ideo == null)
-                return false;
             return true;
         }
     }
