@@ -952,7 +952,6 @@
         <iconPath>Archetypes/Gene_Phantom</iconPath>
 		<customEffectDescriptions>
 			<li>Super will always be floating at least a little bit over the ground.</li>
-            <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">Super can phase through walls at will.</li>
 		</customEffectDescriptions>
         <biostatMet>-3</biostatMet>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
@@ -973,7 +972,6 @@
 			<li Class="SuperHeroGenesBase.SHGExtension">
                 <hediffsToApply>
                     <li><hediff>SHG_Powers_Flight</hediff></li>
-                    <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core"><hediff>SHG_Phasing</hediff></li>
                 </hediffsToApply>
 			</li>
 		</modExtensions>

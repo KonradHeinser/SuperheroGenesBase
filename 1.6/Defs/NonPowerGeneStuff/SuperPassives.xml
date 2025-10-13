@@ -285,6 +285,9 @@
         <biostatMet>-5</biostatMet>
         <iconPath>Powers/Gene_Phasing</iconPath>
         <displayOrderInCategory>4</displayOrderInCategory>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <passOnDirectly>false</passOnDirectly>
+        <selectionWeight>0</selectionWeight>
         <abilities>
             <li>SHG_Phasing</li>
         </abilities>
@@ -295,6 +298,9 @@
 			<li Class="SuperHeroGenesBase.SHGExtension">
 				<hediffsToApply><li><hediff>SHG_Phasing</hediff></li></hediffsToApply>
 			</li>
+          	<li Class="VEF.Genes.GeneExtension">	
+                <hideGene>True</hideGene>
+            </li>
 		</modExtensions>
     </GeneDef>
 
