@@ -50,8 +50,15 @@
 
     <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
         <setting>noSHGBasePrereq</setting>
-        <active Class="PatchOperationRemove">
-            <xpath>Defs/GeneDef/prerequisite[text()="SuperHeroBase"]</xpath>
+        <active Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef/prerequisite[text()="SuperHeroBase"]</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef[contains(defName, "SuperPill")]/ingestible/outcomeDoers/li[@Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes" and geneSets]/alwaysAddedGenes</xpath>
+                </li>
+            </operations>
         </active>
     </Operation>
 </Patch>
