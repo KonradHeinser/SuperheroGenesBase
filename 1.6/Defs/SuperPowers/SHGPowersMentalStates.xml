@@ -11,7 +11,7 @@
         <recoveryMessage>{0} must return to the wild to rest.</recoveryMessage>
         <baseInspectLine>Mental state: Super's summons</baseInspectLine>
         <stateEffecter>AnimalWarcallMentalState</stateEffecter>
-        <recoverFromSleep>true</recoverFromSleep>
+        <recoverFromSleep>false</recoverFromSleep>
         <inCaravanCanDo>true</inCaravanCanDo>
         <blocksDefendAndExpandHive>true</blocksDefendAndExpandHive>
     </MentalStateDef>
@@ -27,7 +27,7 @@
         <recoveryMessage>{0} has become hostile once more.</recoveryMessage>
         <baseInspectLine>Mental state: Hacked</baseInspectLine>
         <stateEffecter>AnimalWarcallMentalState</stateEffecter>
-        <recoverFromSleep>true</recoverFromSleep>
+        <recoverFromSleep>false</recoverFromSleep>
         <inCaravanCanDo>true</inCaravanCanDo>
         <blocksDefendAndExpandHive>true</blocksDefendAndExpandHive>
     </MentalStateDef>
