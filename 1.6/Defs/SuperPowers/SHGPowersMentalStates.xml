@@ -27,7 +27,6 @@
         <recoveryMessage>{0} has become hostile once more.</recoveryMessage>
         <baseInspectLine>Mental state: Hacked</baseInspectLine>
         <stateEffecter>AnimalWarcallMentalState</stateEffecter>
-        <recoverFromSleep>false</recoverFromSleep>
         <inCaravanCanDo>true</inCaravanCanDo>
         <blocksDefendAndExpandHive>true</blocksDefendAndExpandHive>
     </MentalStateDef>
