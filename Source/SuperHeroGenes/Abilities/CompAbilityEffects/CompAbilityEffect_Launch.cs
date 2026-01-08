@@ -205,7 +205,7 @@ namespace SuperHeroGenesBase
             }
             PlanetTile tile = parent.pawn.Tile;
             PlanetLayer layer = target.Tile.Layer;
-            PlanetTile layerTile = layer.GetClosestTile(tile);
+            PlanetTile layerTile = layer.GetClosestTile_NewTemp(tile);
             if (!Props.disablingBiomes.NullOrEmpty() && Props.disablingBiomes.Contains(target.Tile.Tile.PrimaryBiome))
                 return false;
 

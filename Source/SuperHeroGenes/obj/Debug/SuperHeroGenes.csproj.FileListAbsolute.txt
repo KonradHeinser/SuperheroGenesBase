@@ -6,9 +6,10 @@
 /home/robert/.steam/debian-installation/steamapps/common/RimWorld/Mods/SuperheroGenesBase/Source/SuperHeroGenes/obj/Debug/SuperHeroGenesBase.pdb
 /home/robert/.steam/debian-installation/steamapps/common/RimWorld/Mods/SuperheroGenesBase/1.5/Assemblies/SuperHeroGenesBase.dll
 /home/robert/.steam/debian-installation/steamapps/common/RimWorld/Mods/SuperheroGenesBase/1.5/Assemblies/SuperHeroGenesBase.pdb
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SuperheroGenesBase\Source\SuperHeroGenes\obj\Debug\SuperHeroGenes.csproj.AssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SuperheroGenesBase\Source\SuperHeroGenes\obj\Debug\SuperHeroGenes.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SuperheroGenesBase\Source\SuperHeroGenes\obj\Debug\SuperHeroGenesBase.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SuperheroGenesBase\Source\SuperHeroGenes\obj\Debug\SuperHeroGenesBase.pdb
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SuperheroGenesBase\1.5\Assemblies\SuperHeroGenesBase.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SuperheroGenesBase\1.5\Assemblies\SuperHeroGenesBase.pdb
+C:/Program Files (x86)/Steam/steamapps/common/RimWorld/Mods/SuperheroGenesBase/Source/SuperHeroGenes/obj/Debug/SuperHeroGenes.csproj.AssemblyReference.cache
+C:/Program Files (x86)/Steam/steamapps/common/RimWorld/Mods/SuperheroGenesBase/Source/SuperHeroGenes/obj/Debug/SuperHeroGenes.csproj.CoreCompileInputs.cache
+C:/Program Files (x86)/Steam/steamapps/common/RimWorld/Mods/SuperheroGenesBase/Source/SuperHeroGenes/obj/Debug/SuperHeroGenesBase.dll
+C:/Program Files (x86)/Steam/steamapps/common/RimWorld/Mods/SuperheroGenesBase/Source/SuperHeroGenes/obj/Debug/SuperHeroGenesBase.pdb
+C:/Program Files (x86)/Steam/steamapps/common/RimWorld/Mods/SuperheroGenesBase/1.5/Assemblies/SuperHeroGenesBase.dll
+C:/Program Files (x86)/Steam/steamapps/common/RimWorld/Mods/SuperheroGenesBase/1.5/Assemblies/SuperHeroGenesBase.pdb
+/home/robert/.steam/debian-installation/steamapps/common/RimWorld/Mods/SuperheroGenesBase/Source/SuperHeroGenes/obj/Debug/SuperHeroGenes.csproj.CopyComplete

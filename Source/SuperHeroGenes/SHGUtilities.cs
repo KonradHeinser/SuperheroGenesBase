@@ -22,6 +22,15 @@ namespace SuperHeroGenesBase
             return false;
         }
 
+        public static bool ValidValue(this FloatRange range, float value, bool min = true)
+        {
+            if (range.min == range.max)
+                if (min)
+                    return value >= range.min;
+                else
+                    return value <= range.min;
+            return range.Includes(value);
+        }
 
         public static float StatOrOne(this Thing thing, StatDef statDef = null, StatRequirement statReq = StatRequirement.Always)
         {
