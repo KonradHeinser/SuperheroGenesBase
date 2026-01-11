@@ -3,7 +3,7 @@
     <GeneDef ParentName="SuperPowersPassiveBase">
         <defName>SHG_LesserSuperRegeneration</defName>
         <label>lesser super regeneration</label>
-        <description>Supers with this gene can regrow a part every 24 hours. Appendages tend to take longer as fingers and toes will require an extra day each due to the complexity of the nerve rewiring.</description>
+        <description>Supers with this gene can regrow a part every 24 hours. Appendages take longer as fingers and toes will require an extra day each to rewire nerves.</description>
         <biostatMet>-2</biostatMet>
         <iconPath>Powers/Gene_SuperRegeneration</iconPath>
         <displayOrderInCategory>1</displayOrderInCategory>
@@ -54,6 +54,7 @@
                 <regenSets>
                     <li>
                         <ticksToRegrowPart>10000</ticksToRegrowPart>
+                        <ticksToHealInterval>600</ticksToHealInterval>
                         <repeatHealCount>10</repeatHealCount>
                         <healAmount>0.3</healAmount>
                     </li>
@@ -192,7 +193,7 @@
     <GeneDef ParentName="SuperPowersPassiveBase" MayRequire="EBSG.Framework">
         <defName>SHG_EverGrowingPower</defName>
         <label>ever-growing power</label>
-        <description>Supers with this gene constantly grow stronger as they fight more. Every time they are hit they become more durable, and every time they kill another humanlike foe they gain an increase in the damage they deal against all foes.</description>
+        <description>Supers with this gene constantly grow stronger as they fight more, becoming more durable when hit and stronger when killing humanlike foes.</description>
         <biostatArc>1</biostatArc>
         <iconPath>Powers/Gene_EverGrowingPower</iconPath>
         <displayOrderInCategory>10</displayOrderInCategory>
@@ -246,7 +247,7 @@
     <GeneDef ParentName="SuperPowersPassiveBase" MayRequire="EBSG.Framework">
         <defName>SHG_Forcefield</defName>
         <label>forcefield</label>
-        <description>Supers with this gene have a constantly regenerating forcefield around them that can block most bodily threats.\n\nThe strength and regeneration rate of this shield do not scale with anything, meaning the maximum will always be 200, and the recharge rate will always be 20/sec. If enough damage is dealt to break the shield, it will remain completely inactive for 10 seconds, afterwhich it will return at full strength.</description>
+        <description>Supers with this gene have a constantly regenerating forcefield around them that can block most bodily threats.</description>
         <biostatMet>-3</biostatMet>
         <iconPath>Powers/Gene_Forcefield</iconPath>
         <displayOrderInCategory>3</displayOrderInCategory>
@@ -267,7 +268,7 @@
         <comps>
             <li Class="EBSGFramework.HediffCompProperties_Shield">
                 <maxEnergy>1</maxEnergy>
-                <energyRechargeRate>0.2</energyRechargeRate>
+                <energyRechargeRate>0.1</energyRechargeRate>
                 <blocksMeleeDamage>True</blocksMeleeDamage>
                 <gizmoTip>A constant forcefield protects this pawn from most harm.</gizmoTip>
                 <resetDelay>600</resetDelay>

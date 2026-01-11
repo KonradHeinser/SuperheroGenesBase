@@ -31,7 +31,13 @@ namespace SuperHeroGenesBase
             if (curSet?.ValidSeverity.ValidValue(parent.Severity) != true) // This checks if the hediff is in a new set
                 curSet = Props.regenSets.FirstOrDefault(r => r.ValidSeverity.ValidValue(parent.Severity));
 
-            if (healInProgress)
+            if (curSet == null)
+            {
+                healInProgress = false;
+                regrowTicksRemaining = -1;
+                healTicksRemaining = -1;
+            }
+            else if (healInProgress)
             {
                 // Regrowth stuff
                 if (regrowTicksRemaining >= 0)
