@@ -594,7 +594,7 @@
 
     <ThingDef ParentName="SHG_SuperCreatingDrugBase">
         <defName>SHG_RadiomancerCreatingPill</defName>
-        <label>summoner creating pill</label>
+        <label>radiomancer creating pill</label>
         <description>A pill that gives the pawn the pawn the Radiomancer, Ever-evolving, Solar Recharging, and Overcharged Pocket genes. If the ingester has all of the listed genes already, then the pill will be wasted. Consuming the same pill mutiple times will not grant any additional effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
         <graphicData>
             <texPath>Drug/SHG_RadiomancerPill</texPath>
