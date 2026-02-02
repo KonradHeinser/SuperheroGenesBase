@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D23E7441-7B1F-449D-92F3-5FA9B885B2D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D23E7441-7B1F-449D-92F3-5FA9B885B2D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D23E7441-7B1F-449D-92F3-5FA9B885B2D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D23E7441-7B1F-449D-92F3-5FA9B885B2D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D23E7441-7B1F-449D-92F3-5FA9B885B2D5}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{D23E7441-7B1F-449D-92F3-5FA9B885B2D5}.Debug|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		outputpath = ../../1.5/Assemblies
