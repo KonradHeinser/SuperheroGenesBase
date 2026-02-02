@@ -538,6 +538,7 @@
             <outcomeDoers>
                 <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
                     <alwaysAddedGenes>
+                        <li>Hemogenic</li>
                         <li>SHG_Archetypes_Hemomancer</li>
                         <li>SHG_Flaw_Bloodthirsty</li>
                     </alwaysAddedGenes>
