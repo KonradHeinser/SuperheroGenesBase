@@ -161,99 +161,99 @@
                 <minSeverity>2</minSeverity>
                 <label>duo</label>
                 <statFactors>
-                    <WorkSpeedGlobal>1.20</WorkSpeedGlobal>
-                    <ShootingAccuracyPawn>1.20</ShootingAccuracyPawn>
-                    <MeleeHitChance>1.20</MeleeHitChance>
+                    <WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>1.1</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.1</MeleeHitChance>
                 </statFactors>
             </li>
             <li>
                 <minSeverity>3</minSeverity>
                 <label>trio</label>
                 <statFactors>
-                    <WorkSpeedGlobal>1.30</WorkSpeedGlobal>
-                    <ShootingAccuracyPawn>1.30</ShootingAccuracyPawn>
-                    <MeleeHitChance>1.30</MeleeHitChance>
+                    <WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>1.2</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.2</MeleeHitChance>
                 </statFactors>
             </li>
             <li>
                 <minSeverity>4</minSeverity>
                 <label>small team</label>
                 <statFactors>
-                    <WorkSpeedGlobal>1.40</WorkSpeedGlobal>
-                    <ShootingAccuracyPawn>1.40</ShootingAccuracyPawn>
-                    <MeleeHitChance>1.40</MeleeHitChance>
+                    <WorkSpeedGlobal>1.3</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>1.3</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.3</MeleeHitChance>
                 </statFactors>
             </li>
             <li>
                 <minSeverity>6</minSeverity>
                 <label>team</label>
                 <statFactors>
-                    <WorkSpeedGlobal>1.60</WorkSpeedGlobal>
-                    <ShootingAccuracyPawn>1.60</ShootingAccuracyPawn>
-                    <MeleeHitChance>1.60</MeleeHitChance>
+                    <WorkSpeedGlobal>1.4</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>1.4</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.4</MeleeHitChance>
                 </statFactors>
             </li>
             <li>
                 <minSeverity>8</minSeverity>
                 <label>large team</label>
                 <statFactors>
-                    <WorkSpeedGlobal>1.80</WorkSpeedGlobal>
-                    <ShootingAccuracyPawn>1.80</ShootingAccuracyPawn>
-                    <MeleeHitChance>1.80</MeleeHitChance>
+                    <WorkSpeedGlobal>1.5</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.5</MeleeHitChance>
                 </statFactors>
             </li>
             <li>
                 <minSeverity>10</minSeverity>
                 <label>mini legion</label>
                 <statFactors>
-                    <WorkSpeedGlobal>2.00</WorkSpeedGlobal>
-                    <ShootingAccuracyPawn>2.00</ShootingAccuracyPawn>
-                    <MeleeHitChance>2.00</MeleeHitChance>
+                    <WorkSpeedGlobal>1.75</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>1.75</ShootingAccuracyPawn>
+                    <MeleeHitChance>1.75</MeleeHitChance>
                 </statFactors>
             </li>
             <li>
                 <minSeverity>12</minSeverity>
                 <label>tiny legion</label>
                 <statFactors>
-                    <WorkSpeedGlobal>2.40</WorkSpeedGlobal>
-                    <ShootingAccuracyPawn>2.40</ShootingAccuracyPawn>
-                    <MeleeHitChance>2.40</MeleeHitChance>
+                    <WorkSpeedGlobal>2.0</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>2.0</ShootingAccuracyPawn>
+                    <MeleeHitChance>2.0</MeleeHitChance>
                 </statFactors>
             </li>
             <li>
                 <minSeverity>14</minSeverity>
                 <label>small legion</label>
                 <statFactors>
-                    <WorkSpeedGlobal>2.80</WorkSpeedGlobal>
-                    <ShootingAccuracyPawn>2.80</ShootingAccuracyPawn>
-                    <MeleeHitChance>2.80</MeleeHitChance>
+                    <WorkSpeedGlobal>2.25</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>2.25</ShootingAccuracyPawn>
+                    <MeleeHitChance>2.25</MeleeHitChance>
                 </statFactors>
             </li>
             <li>
                 <minSeverity>16</minSeverity>
                 <label>minor legion</label>
                 <statFactors>
-                    <WorkSpeedGlobal>3.20</WorkSpeedGlobal>
-                    <ShootingAccuracyPawn>3.20</ShootingAccuracyPawn>
-                    <MeleeHitChance>3.20</MeleeHitChance>
+                    <WorkSpeedGlobal>2.5</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>2.5</ShootingAccuracyPawn>
+                    <MeleeHitChance>2.5</MeleeHitChance>
                 </statFactors>
             </li>
             <li>
                 <minSeverity>18</minSeverity>
                 <label>notable legion</label>
                 <statFactors>
-                    <WorkSpeedGlobal>3.60</WorkSpeedGlobal>
-                    <ShootingAccuracyPawn>3.60</ShootingAccuracyPawn>
-                    <MeleeHitChance>3.60</MeleeHitChance>
+                    <WorkSpeedGlobal>2.75</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>2.75</ShootingAccuracyPawn>
+                    <MeleeHitChance>2.75</MeleeHitChance>
                 </statFactors>
             </li>
             <li>
                 <minSeverity>20</minSeverity>
                 <label>we are legion</label>
                 <statFactors>
-                    <WorkSpeedGlobal>4.00</WorkSpeedGlobal>
-                    <ShootingAccuracyPawn>4.00</ShootingAccuracyPawn>
-                    <MeleeHitChance>4.00</MeleeHitChance>
+                    <WorkSpeedGlobal>3.00</WorkSpeedGlobal>
+                    <ShootingAccuracyPawn>3.00</ShootingAccuracyPawn>
+                    <MeleeHitChance>3.00</MeleeHitChance>
                 </statFactors>
             </li>
         </stages>
