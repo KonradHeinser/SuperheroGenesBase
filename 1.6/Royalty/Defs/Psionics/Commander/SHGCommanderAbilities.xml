@@ -7,6 +7,7 @@
         <iconPath>Psionist/Commander/Gene_Psionist_FortifyPosition</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <targetRequired>False</targetRequired>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>60</Ability_EntropyGain>
         </statBases>
@@ -117,6 +118,7 @@
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>5000</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>10</Ability_EntropyGain>
             <Ability_Duration>120</Ability_Duration>
@@ -148,6 +150,7 @@
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>50</Ability_EntropyGain>
             <Ability_Duration>168</Ability_Duration>
@@ -177,6 +180,7 @@
         <iconPath>Psionist/Commander/Gene_Psionist_RaiseFort</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <targetRequired>False</targetRequired>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>110</Ability_EntropyGain>
         </statBases>
@@ -273,6 +277,7 @@
         <iconPath>Psionist/Commander/Gene_Psionist_AssassinSquad</iconPath>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <targetRequired>False</targetRequired>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>150</Ability_EntropyGain>
             <Ability_Duration>42</Ability_Duration>
@@ -306,6 +311,7 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>100</Ability_EntropyGain>
             <Ability_Duration>42</Ability_Duration>
@@ -339,6 +345,7 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>5000</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>100</Ability_EntropyGain>
             <Ability_Duration>168</Ability_Duration>
@@ -371,6 +378,7 @@
         <iconPath>Psionist/Commander/Gene_Psionist_RaiseBastion</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <targetRequired>False</targetRequired>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>150</Ability_EntropyGain>
         </statBases>
@@ -510,6 +518,7 @@
         <writeCombatLog>True</writeCombatLog>
         <targetRequired>False</targetRequired>
         <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>300</Ability_EntropyGain>
             <Ability_EffectRadius>12</Ability_EffectRadius>
@@ -544,6 +553,7 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>150</Ability_EntropyGain>
             <Ability_Duration>168</Ability_Duration>

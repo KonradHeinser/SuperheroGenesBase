@@ -45,6 +45,7 @@
         <description>Psychically trigger the fear portions of a target's brain to make them feel terrified. This requires the target to not be psychically deaf, and the duration will be impacted by fear susceptibility.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_Dread</iconPath>
         <writeCombatLog>True</writeCombatLog>
+        <cooldownTicksRange>625</cooldownTicksRange>
         <descriptionHyperlinks>
             <HediffDef>SHG_Fear</HediffDef>
         </descriptionHyperlinks>
@@ -74,9 +75,10 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_GraspHeart</defName>
         <label>grasp heart</label>
-        <description>Cause a pawn to start having heart issues for an hour. This reduces blood pumping and has a small chance to cause a heart attack. The duration of this effect is influenced by psychic sensitivity.</description>
+        <description>Cause a pawn to start having heart issues for an hour. This reduces blood pumping significantly, and has a small chance to cause a heart attack. The duration of this effect is influenced by psychic sensitivity.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_GraspHeart</iconPath>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <cooldownTicksRange>625</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>50</Ability_EntropyGain>
             <Ability_Duration>42</Ability_Duration>
@@ -113,6 +115,7 @@
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>100</Ability_EntropyGain>
         </statBases>
@@ -125,14 +128,6 @@
             </targetParams>
         </verbProperties>
         <comps>
-            <li Class="SuperHeroGenesBase.CompProperties_AbilityAbilityValidator">
-                <targetStatLimiters>
-                    <li>
-                        <minStatValue>0.001</minStatValue>
-                        <stat>PsychicSensitivity</stat>
-                    </li>
-                </targetStatLimiters>
-            </li>
             <li Class="CompProperties_AbilityOffsetPrisonerResistance">
                 <offset>-100</offset>
                 <psychic>True</psychic>
@@ -152,6 +147,7 @@
         <targetRequired>False</targetRequired>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>1250</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>100</Ability_EntropyGain>
             <Ability_Duration>84</Ability_Duration>
@@ -186,6 +182,7 @@
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>1250</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>100</Ability_EntropyGain>
             <Ability_Duration>10</Ability_Duration>
@@ -219,6 +216,7 @@
         <description>Induce an angry psychosis into a group of people, causing them to begin fighting everything around them for at least an hour.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_InstigateConflict</iconPath>
         <writeCombatLog>True</writeCombatLog>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>100</Ability_EntropyGain>
             <Ability_Duration>42</Ability_Duration>
@@ -255,6 +253,7 @@
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>200</Ability_EntropyGain>
             <Ability_EffectRadius>10</Ability_EffectRadius>
@@ -284,6 +283,7 @@
         <description>Create a little voice in another pawn's head that forcefully starts an argument with the pawn.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_InternalDebate</iconPath>
         <writeCombatLog>True</writeCombatLog>
+        <cooldownTicksRange>1250</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>80</Ability_EntropyGain>
             <Ability_Duration>21</Ability_Duration>
@@ -312,6 +312,7 @@
         <description>Psychically trigger the fear portions of several people's brains to make them feel terrified. Duration is based on fear susceptibility.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_Despair</iconPath>
         <writeCombatLog>True</writeCombatLog>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <descriptionHyperlinks>
             <HediffDef>SHG_Fear</HediffDef>
         </descriptionHyperlinks>
@@ -333,7 +334,7 @@
                 <hediffDef>SHG_Fear</hediffDef>
                 <durationMultiplier>SHG_FearSusceptibility</durationMultiplier>
                 <psychic>True</psychic>
-                <severity>0.6</severity>
+                <severity>0.8</severity>
                 <applicableToMechs>False</applicableToMechs>
                 <onlyBrain>True</onlyBrain>
                 <ignoreSelf>True</ignoreSelf>
@@ -348,6 +349,7 @@
         <iconPath>Psionist/Tyrant/Gene_Psionist_TyrantConqueror</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <cooldownTicksRange>625</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>150</Ability_EntropyGain>
             <Ability_Duration>100</Ability_Duration>
@@ -433,6 +435,7 @@
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>300</Ability_EntropyGain>
             <Ability_EffectRadius>20</Ability_EffectRadius>
@@ -466,6 +469,7 @@
         <description>Psychically trigger the fear portions of several people's brains to make them question their very existence as they lie paralyzed with fear. Duration impacted by fear susceptibility.</description>
         <iconPath>Psionist/Tyrant/Gene_Psionist_GazeIntoTheAbyss</iconPath>
         <writeCombatLog>True</writeCombatLog>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <descriptionHyperlinks>
             <HediffDef>SHG_Fear</HediffDef>
         </descriptionHyperlinks>

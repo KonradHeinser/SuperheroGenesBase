@@ -36,6 +36,7 @@
         <description>Create an exceptionally small star that lets out a massive amount of heat and light. This star will be stable for about a day before it dissipates.</description>
         <iconPath>Radiomancer/Fission/Gene_Radiomancer_MiniatureSun</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_Duration>1000</Ability_Duration>
         </statBases>
@@ -134,7 +135,7 @@
     <AbilityDef ParentName="SHGSelfCastBase">
         <defName>SHG_Radiomancer_ReformPart</defName>
         <label>reform part</label>
-        <description>Focus a bunch of radiation on the cells in an area to cause rapid cellular reconstruction of a missing part. This ability may be interrupted if the Radiomancer takes damage while regrowing the part, and things like fingers will require special attention to avoid accidental malformation. This may regrow eyes even if you have the blindsight precept, though something like scaring will not be removed by this ability.</description>
+        <description>Focus a bunch of radiation on the cells in an area to cause rapid cellular reconstruction of a missing part. This ability might be interrupted if the Radiomancer takes damage while regrowing the part, and things like fingers will require special attention to avoid accidental malformation. This may regrow eyes even if you have the blindsight precept, though something like scaring will not be removed by this ability.</description>
         <iconPath>Radiomancer/Fission/Gene_Radiomancer_ReformPart</iconPath>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>

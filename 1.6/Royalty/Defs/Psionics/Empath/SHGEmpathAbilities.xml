@@ -8,6 +8,7 @@
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>50</Ability_EntropyGain>
             <Ability_Duration>8000</Ability_Duration>
@@ -78,6 +79,7 @@
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>10000</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>100</Ability_EntropyGain>
             <Ability_Duration>8000</Ability_Duration>

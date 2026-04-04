@@ -29,6 +29,7 @@
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <verbProperties>
             <range>10</range>
             <targetParams>
@@ -114,6 +115,7 @@
         <label>detonation</label>
         <description>Create a blast of energy containing half of currently stored radiation. The more radiation stored, the larger and more damaging this blast is. Radius is equal to one quarter of the radiomancer's stored radiation, and damage is equal to half of the stored radiation amount at the center. This energy blast only damages buildings and hostile pawns.</description>
         <iconPath>Radiomancer/Emission/Gene_Radiomancer_Detonation</iconPath>
+        <cooldownTicksRange>1250</cooldownTicksRange>
         <verbProperties>
             <range>40</range>
             <requireLineOfSight>False</requireLineOfSight>
@@ -140,6 +142,7 @@
         <label>ashes to ashes</label>
         <description>Use a bit of radioactive energy to trigger spontaneous combustion in an area. This will release a blast of energy in the area that instantly sets every flammable thing on fire. Walls block this blast of energy, though if said wall is flammable, it will also catch fire. If the wall itself is targeted, then the energy will attempt to go through both sides of the wall.</description>
         <iconPath>Radiomancer/Emission/Gene_Radiomancer_AshesToAshes</iconPath>
+        <cooldownTicksRange>1250</cooldownTicksRange>
         <comps>
             <li Class="SuperHeroGenesBase.CompProperties_SHGBlast">
                 <damageDef>Flame</damageDef>
@@ -195,6 +198,7 @@
         <description>Create a burst of energy containing every bit of radiation currently stored. The more radiation stored, the larger and more damaging this burst is. Radius is equal to half of the radiomancer's stored radiation, and damage is 10 times stored radiation at the center. The only safe pawn in this burst is the caster.\n\nThis ability usually leaves everything around the caster dead, and can outright destroy buildings at high radiation levels. At full radiation levels, this can destroy almost everything on around 20-30% of the map.</description>
         <iconPath>Radiomancer/Emission/Gene_Radiomancer_IAmBecomeDeath</iconPath>
         <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <verbProperties>
             <warmupTime>3</warmupTime>
         </verbProperties>

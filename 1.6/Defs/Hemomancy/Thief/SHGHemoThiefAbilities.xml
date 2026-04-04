@@ -2,6 +2,7 @@
 <Defs>
     <AbilityDef Abstract="true" Name="SHGHemoThiefBase" ParentName="SHGHemomancyBase">
         <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+        <cooldownTicksRange>2500</cooldownTicksRange>
         <verbProperties>
             <requireLineOfSight>False</requireLineOfSight>
         </verbProperties>
@@ -12,7 +13,6 @@
         <label>drain</label>
         <description>Drain a target of some of their blood, and instantly convert it into hemogen.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_Drain</iconPath>
-        <cooldownTicksRange>2500</cooldownTicksRange>
         <verbProperties>
             <range>5</range>
             <rangeStat>SHG_HemomancerRange_Short</rangeStat>
@@ -32,7 +32,6 @@
         <label>steal perceptiveness</label>
         <description>Drain a distant target of some of their blood, and instantly convert it into hemogen and a perception buff. This leaves a mark on the target that makes them less perceptive for an hour.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_StealPerceptiveness</iconPath>
-        <cooldownTicksRange>2500</cooldownTicksRange>
         <verbProperties>
             <range>5</range>
             <rangeStat>SHG_HemomancerRange_Short</rangeStat>
@@ -54,7 +53,6 @@
         <label>steal defense</label>
         <description>Drain a distant target of some of their blood, and instantly convert it into hemogen and a defense buff. This leaves a mark on the target that removes all innate armor they may have for an hour.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_StealDefense</iconPath>
-        <cooldownTicksRange>2500</cooldownTicksRange>
         <verbProperties>
             <range>2</range>
             <rangeStat>SHG_HemomancerRange_Short</rangeStat>
@@ -76,7 +74,6 @@
         <label>steal strength</label>
         <description>Drain a distant target of some of their blood, and instantly convert it into hemogen and a strength buff. This leaves a mark on the target that makes them have less strength for an hour.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_StealStrength</iconPath>
-        <cooldownTicksRange>2500</cooldownTicksRange>
         <verbProperties>
             <range>2</range>
             <rangeStat>SHG_HemomancerRange_Short</rangeStat>
@@ -98,7 +95,6 @@
         <label>reap</label>
         <description>Drain a target of large quantities blood, usually killing those who are already missing some, and instantly convert it into hemogen.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_Drain</iconPath>
-        <cooldownTicksRange>2500</cooldownTicksRange>
         <verbProperties>
             <range>2</range>
             <rangeStat>SHG_HemomancerRange_Short</rangeStat>
@@ -178,6 +174,7 @@
         <label>mark for death</label>
         <description>Mark a pawn for death, removing any innate armor they may have and making them bleed three times faster than normal. This will return some of the hemogen used to cast it by draining a little bit of blood from the target.\n\nIf the target survives for 5 hours after being marked for death, their hediff will change from doomed to defiance, giving them a single-use ability that completely removes all injuries, excluding body part loss.</description>
         <iconPath>Hemomancer/Thief/Gene_Hemomancer_MarkForDeath</iconPath>
+        <cooldownTicksRange>500</cooldownTicksRange>
         <verbProperties>
             <range>23</range>
             <rangeStat>SHG_HemomancerRange_Long</rangeStat>
@@ -250,7 +247,6 @@
         <ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
         <targetRequired>false</targetRequired>
         <showCastingProgressBar>true</showCastingProgressBar>
-        <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_EffectRadius>10</Ability_EffectRadius>
         </statBases>

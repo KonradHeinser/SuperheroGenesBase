@@ -121,6 +121,7 @@
         <label>rapid aging</label>
         <description>Shoot a small amount of radiation into another pawn's body to cause their cells to begin rapidly deteriorating, making them age an entire decade over the span of one hour.</description>
         <iconPath>Radiomancer/Decay/Gene_Radiomancer_RapidAging</iconPath>
+        <cooldownTicksRange>1250</cooldownTicksRange>
         <statBases>
             <Ability_Duration>42</Ability_Duration>
         </statBases>

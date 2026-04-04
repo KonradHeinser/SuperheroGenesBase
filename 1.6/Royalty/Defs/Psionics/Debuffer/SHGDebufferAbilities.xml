@@ -87,6 +87,7 @@
         <iconPath>Psionist/Debuffer/Gene_Psionist_AuraBurst</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
+        <cooldownTicksRange>10000</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>50</Ability_EntropyGain>
             <Ability_Duration>168</Ability_Duration>
@@ -120,6 +121,7 @@
         <iconPath>Psionist/Debuffer/Gene_Psionist_ChannelAura</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
+        <cooldownTicksRange>10000</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>100</Ability_EntropyGain>
             <Ability_Duration>168</Ability_Duration>
@@ -160,6 +162,7 @@
         <iconPath>Psionist/Debuffer/Gene_Psionist_RuinTheWorld</iconPath>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <targetRequired>False</targetRequired>
+        <cooldownTicksRange>10000</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>200</Ability_EntropyGain>
             <Ability_Duration>168</Ability_Duration>

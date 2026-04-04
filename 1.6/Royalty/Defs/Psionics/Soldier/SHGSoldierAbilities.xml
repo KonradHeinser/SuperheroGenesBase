@@ -14,6 +14,7 @@
         <warmupStartSound>Coagulate_Cast</warmupStartSound>
         <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
         <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+        <cooldownTicksRange>500</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>10</Ability_EntropyGain>
         </statBases>
@@ -92,6 +93,7 @@
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <writeCombatLog>True</writeCombatLog>
+        <cooldownTicksRange>1250</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>30</Ability_EntropyGain>
             <Ability_EffectRadius>1</Ability_EffectRadius>
@@ -138,7 +140,7 @@
         <description>Psionically force a distant target to attempt to fight you hand to hand. Enemies with a low enough psychic sensitivity are more likely to break free before reaching the Psionic Commando.</description>
         <iconPath>Psionist/Soldier/Gene_Psionist_CompelledDuel</iconPath>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
-        <cooldownTicksRange>1000</cooldownTicksRange>
+        <cooldownTicksRange>1250</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>75</Ability_EntropyGain>
             <Ability_Duration>15</Ability_Duration>
@@ -200,6 +202,7 @@
         <iconPath>Psionist/Soldier/Gene_Psionist_PsionicShield</iconPath>
         <writeCombatLog>True</writeCombatLog>
         <targetRequired>False</targetRequired>
+        <cooldownTicksRange>625</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>100</Ability_EntropyGain>
             <Ability_EffectRadius>1</Ability_EffectRadius>
