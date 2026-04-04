@@ -38,8 +38,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Compile Include="Abilities\CompAbilityEffects\CompAbilityEffect_AbsorbPower.cs" />
+    <Compile Include="Abilities\CompAbilityEffects\CompAbilityEffect_FlecksibleWaterskip.cs" />
     <Compile Include="Abilities\CompAbilityEffects\CompAbilityEffect_ToggleHediffExistence.cs" />
     <Compile Include="Abilities\CompProperties\CompProperties_AbilityAbsorbPower.cs" />
+    <Compile Include="Abilities\CompProperties\CompProperties_AbilityFlecksibleWaterskip.cs" />
     <Compile Include="Abilities\CompProperties\CompProperties_AbilityToggleHediffExistence.cs" />
     <Compile Include="Abilities\FlyingPawn.cs" />
     <Compile Include="Abilities\FlyPawnArriving.cs" />

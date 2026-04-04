@@ -168,7 +168,9 @@
                 <preExplosionThingChance>1</preExplosionThingChance>
                 <explosionSound>Foam_Impact</explosionSound>
             </li>
-            <li Class="CompProperties_AbilityWaterskip" />
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityFlecksibleWaterskip">
+                <fleck MayRequire="Ludeon.Rimworld.Royalty">WaterskipSplashParticles</fleck>
+            </li>
         </comps>
     </AbilityDef>
 </Defs>
