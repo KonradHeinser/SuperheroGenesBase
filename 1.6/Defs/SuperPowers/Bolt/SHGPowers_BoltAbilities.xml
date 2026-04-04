@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <AbilityDef Abstract="true" Name="SHGPowerBoltBase" ParentName="SHGPowerAbilitiesBase">
+        <cooldownTicksRange>300</cooldownTicksRange>
         <verbProperties>
             <range>40</range>
         </verbProperties>

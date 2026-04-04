@@ -45,7 +45,7 @@
                                                         <avoidSelfHit>false</avoidSelfHit>
                                                         <subNodes>
                                                             <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
-                                                                <hashInterval>1</hashInterval> 
+                                                                <hashInterval>20</hashInterval> 
                                                                 <abilities>
                                                                     <li>SHG_NewLaserEyes</li>
                                                                 </abilities>
@@ -59,7 +59,7 @@
                                                 <minEnemies>3</minEnemies>
                                                 <subNodes>
                                                     <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
-                                                        <hashInterval>2</hashInterval>
+                                                        <hashInterval>20</hashInterval>
                                                         <abilities>
                                                             <li>SHG_AcidBlast</li>
                                                             <li>SHG_LightningBlast</li>
@@ -70,7 +70,7 @@
                                                 </subNodes>
                                             </li>
                                             <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget"> 
-                                                <hashInterval>1</hashInterval> 
+                                                <hashInterval>20</hashInterval> 
                                                 <abilities>
                                                     <li>SHG_ThrowSpike</li>
                                                     <li>SHG_FireBolt</li>
@@ -92,7 +92,7 @@
                                                 <minEnemies>3</minEnemies>
                                                 <subNodes>
                                                     <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
-                                                        <hashInterval>2</hashInterval>
+                                                        <hashInterval>20</hashInterval>
                                                         <abilities>
                                                             <li>SHG_Psionist_Asteroid</li>
                                                         </abilities>
@@ -105,7 +105,7 @@
                                         <gene>SHG_Archetypes_Hemomancer</gene>
                                         <subNodes>
                                             <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
-                                                <hashInterval>1</hashInterval>
+                                                <hashInterval>20</hashInterval>
                                                 <abilities>
                                                     <li>SHG_Hemomancer_Drain</li>
                                                     <li>SHG_Hemomancer_Reap</li>
@@ -161,7 +161,7 @@
                                                             <minEnemies>3</minEnemies>
                                                             <subNodes>
                                                                 <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
-                                                                    <hashInterval>2</hashInterval>
+                                                                    <hashInterval>20</hashInterval>
                                                                     <abilities>
                                                                         <li>SHG_AcidBlast</li>
                                                                         <li>SHG_LightningBlast</li>
@@ -179,7 +179,7 @@
                                                                     <avoidSelfHit>false</avoidSelfHit>
                                                                     <subNodes>
                                                                         <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
-                                                                            <hashInterval>1</hashInterval>
+                                                                            <hashInterval>20</hashInterval>
                                                                             <abilities>
                                                                                 <li>SHG_NewLaserEyes</li>
                                                                             </abilities>
@@ -189,7 +189,7 @@
                                                             </subNodes>
                                                         </li>
                                                         <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
-                                                            <hashInterval>1</hashInterval>
+                                                            <hashInterval>20</hashInterval>
                                                             <abilities>
                                                                 <li>SHG_ThrowSpike</li>
                                                                 <li>SHG_FireBolt</li>
@@ -211,7 +211,7 @@
                                                             <minEnemies>3</minEnemies>
                                                             <subNodes>
                                                                 <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
-                                                                    <hashInterval>2</hashInterval>
+                                                                    <hashInterval>20</hashInterval>
                                                                     <abilities>
                                                                         <li>SHG_Psionist_Asteroid</li>
                                                                     </abilities>
@@ -224,7 +224,7 @@
                                                     <gene>SHG_Archetypes_Hemomancer</gene>
                                                     <subNodes>
                                                         <li Class="SuperHeroGenesBase.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
-                                                            <hashInterval>1</hashInterval>
+                                                            <hashInterval>20</hashInterval>
                                                             <abilities>
                                                                 <li>SHG_Hemomancer_Drain</li>
                                                                 <li>SHG_Hemomancer_Reap</li>

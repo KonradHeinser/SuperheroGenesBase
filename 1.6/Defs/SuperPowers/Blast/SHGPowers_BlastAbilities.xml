@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <AbilityDef Abstract="true" Name="SHGPowerBlastBase" ParentName="SHGPowerAbilitiesBase">
+        <cooldownTicksRange>1250</cooldownTicksRange>
         <verbProperties>
             <range>25</range>
             <warmupTime>2</warmupTime>
