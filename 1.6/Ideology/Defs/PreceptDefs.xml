@@ -98,7 +98,7 @@
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <relatedGenes>
                     <li>SuperHeroBase</li>
-                    <li>SHG_Archetypes_Psionist</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Archetypes_Psionist</li>
                     <li>SHG_Archetypes_Hemomancer</li>
                     <li>SHG_Archetypes_Radiomancer</li>
                 </relatedGenes>
@@ -122,7 +122,7 @@
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <relatedGenes>
                     <li>SuperHeroBase</li>
-                    <li>SHG_Archetypes_Psionist</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Archetypes_Psionist</li>
                     <li>SHG_Archetypes_Hemomancer</li>
                     <li>SHG_Archetypes_Radiomancer</li>
                 </relatedGenes>
@@ -173,7 +173,7 @@
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <relatedGenes>
                     <li>SuperHeroBase</li>
-                    <li>SHG_Archetypes_Psionist</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Archetypes_Psionist</li>
                     <li>SHG_Archetypes_Hemomancer</li>
                     <li>SHG_Archetypes_Radiomancer</li>
                 </relatedGenes>
@@ -229,7 +229,7 @@
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <relatedGenes>
                     <li>SuperHeroBase</li>
-                    <li>SHG_Archetypes_Psionist</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Archetypes_Psionist</li>
                     <li>SHG_Archetypes_Hemomancer</li>
                     <li>SHG_Archetypes_Radiomancer</li>
                 </relatedGenes>
@@ -252,7 +252,7 @@
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <relatedGenes>
                     <li>SuperHeroBase</li>
-                    <li>SHG_Archetypes_Psionist</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Archetypes_Psionist</li>
                     <li>SHG_Archetypes_Hemomancer</li>
                     <li>SHG_Archetypes_Radiomancer</li>
                 </relatedGenes>
@@ -302,7 +302,7 @@
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <relatedGenes>
                     <li>SuperHeroBase</li>
-                    <li>SHG_Archetypes_Psionist</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Archetypes_Psionist</li>
                     <li>SHG_Archetypes_Hemomancer</li>
                     <li>SHG_Archetypes_Radiomancer</li>
                 </relatedGenes>
@@ -352,7 +352,7 @@
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <relatedGenes>
                     <li>SuperHeroBase</li>
-                    <li>SHG_Archetypes_Psionist</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Archetypes_Psionist</li>
                     <li>SHG_Archetypes_Hemomancer</li>
                     <li>SHG_Archetypes_Radiomancer</li>
                 </relatedGenes>
@@ -375,7 +375,7 @@
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <relatedGenes>
                     <li>SuperHeroBase</li>
-                    <li>SHG_Archetypes_Psionist</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Archetypes_Psionist</li>
                     <li>SHG_Archetypes_Hemomancer</li>
                     <li>SHG_Archetypes_Radiomancer</li>
                 </relatedGenes>
@@ -415,7 +415,7 @@
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <relatedGenes>
                     <li>SuperHeroBase</li>
-                    <li>SHG_Archetypes_Psionist</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Archetypes_Psionist</li>
                     <li>SHG_Archetypes_Hemomancer</li>
                     <li>SHG_Archetypes_Radiomancer</li>
                 </relatedGenes>
@@ -469,7 +469,7 @@
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <relatedGenes>
                     <li>SuperHeroBase</li>
-                    <li>SHG_Archetypes_Psionist</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Archetypes_Psionist</li>
                     <li>SHG_Archetypes_Hemomancer</li>
                     <li>SHG_Archetypes_Radiomancer</li>
                 </relatedGenes>
@@ -492,7 +492,7 @@
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <relatedGenes>
                     <li>SuperHeroBase</li>
-                    <li>SHG_Archetypes_Psionist</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Archetypes_Psionist</li>
                     <li>SHG_Archetypes_Hemomancer</li>
                     <li>SHG_Archetypes_Radiomancer</li>
                 </relatedGenes>
@@ -532,7 +532,7 @@
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <relatedGenes>
                     <li>SuperHeroBase</li>
-                    <li>SHG_Archetypes_Psionist</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Archetypes_Psionist</li>
                     <li>SHG_Archetypes_Hemomancer</li>
                     <li>SHG_Archetypes_Radiomancer</li>
                 </relatedGenes>
@@ -591,7 +591,7 @@
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <relatedGenes>
                     <li>SuperHeroBase</li>
-                    <li>SHG_Archetypes_Psionist</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Archetypes_Psionist</li>
                     <li>SHG_Archetypes_Hemomancer</li>
                     <li>SHG_Archetypes_Radiomancer</li>
                 </relatedGenes>
@@ -614,7 +614,7 @@
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <relatedGenes>
                     <li>SuperHeroBase</li>
-                    <li>SHG_Archetypes_Psionist</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Archetypes_Psionist</li>
                     <li>SHG_Archetypes_Hemomancer</li>
                     <li>SHG_Archetypes_Radiomancer</li>
                 </relatedGenes>
@@ -654,7 +654,7 @@
             <li Class="SuperHeroGenesBase.SHGExtension">
                 <relatedGenes>
                     <li>SuperHeroBase</li>
-                    <li>SHG_Archetypes_Psionist</li>
+                    <li MayRequire="Ludeon.Rimworld.Royalty">SHG_Archetypes_Psionist</li>
                     <li>SHG_Archetypes_Hemomancer</li>
                     <li>SHG_Archetypes_Radiomancer</li>
                 </relatedGenes>
