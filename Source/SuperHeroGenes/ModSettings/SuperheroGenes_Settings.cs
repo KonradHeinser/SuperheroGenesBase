@@ -201,7 +201,7 @@ namespace SuperHeroGenesBase
             Widgets.DrawBoxSolid(scrollContainer, new ColorInt(37, 37, 37).ToColor);
             var frameRect = innerContainer.ContractedBy(5);
             frameRect.y += 15;
-            //frameRect.height -= 15;
+            frameRect.height -= 5;
             var contentRect = frameRect.ContractedBy(10);
 
             if (tabInt == 0)
@@ -214,7 +214,7 @@ namespace SuperHeroGenesBase
                 if (middleGrounds)
                     num += 1;
                 if (num > 1)
-                    contentRect.height += num * 35;
+                    contentRect.height += num * 35 + 20;
             }
 
             Widgets.BeginScrollView(frameRect, ref scrollPosition, contentRect);
