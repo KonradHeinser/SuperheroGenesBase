@@ -93,6 +93,7 @@
         <defName>SHG_Unrestrained</defName>
         <label>unrestrained</label>
         <description>No holding back.</description>
+        <iconPath>Powers/Gene_Restraint_Unrestrained</iconPath>
         <comps>
             <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
@@ -109,6 +110,7 @@
         <defName>SHG_Restrained</defName>
         <label>restrained</label>
         <description>Multiplies melee damage factor by 0.1.</description>
+        <iconPath>Powers/Gene_Restraint_Restrained</iconPath>
         <comps>
             <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
@@ -125,6 +127,7 @@
         <defName>SHG_VeryRestrained</defName>
         <label>very restrained</label>
         <description>Multiplies melee damage factor by 0.01.</description>
+        <iconPath>Powers/Gene_Restraint_VeryRestrained</iconPath>
         <comps>
             <li Class="CompProperties_AbilityGiveHediff">
                 <compClass>CompAbilityEffect_GiveHediff</compClass>
