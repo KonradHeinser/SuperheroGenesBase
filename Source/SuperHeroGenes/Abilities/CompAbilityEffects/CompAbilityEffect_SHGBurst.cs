@@ -13,8 +13,11 @@ namespace SuperHeroGenesBase
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            List<Thing> ignoreList = new List<Thing>();
-            Pawn caster = parent.pawn;
+            var ignoreList = new List<Thing>();
+            var caster = parent.pawn;
+            if (caster.MapHeld == null || !caster.PositionHeld.IsValid)
+                return;
+            
             float radius = Props.radius;
             if (Props.statRadius != null)
             {
@@ -22,15 +25,13 @@ namespace SuperHeroGenesBase
                 else radius = 0;
             }
             if (!Props.injureSelf)
-            {
                 ignoreList.Add(caster);
-            }
 
             int damageAmount = Props.damageStat != null ? Mathf.FloorToInt(caster.StatOrOne(Props.damageStat)) : Props.damageAmount;
 
             if ((int)Props.extraGasType != 1)
             {
-                GenExplosion.DoExplosion(caster.Position, caster.Map, radius, Props.damageDef, caster, damageAmount,
+                GenExplosion.DoExplosion(caster.PositionHeld, caster.MapHeld, radius, Props.damageDef, caster, damageAmount,
                     Props.armorPenetration, Props.explosionSound, null, null, null, Props.postExplosionThing, Props.postExplosionThingChance,
                     Props.postExplosionSpawnThingCount, (GasType)(int)Props.extraGasType, null, 255, Props.applyDamageToExplosionCellsNeighbors,
                     Props.preExplosionThing, Props.preExplosionThingChance, Props.preExplosionSpawnThingCount, Props.chanceToStartFire,
@@ -39,7 +40,7 @@ namespace SuperHeroGenesBase
             }
             else
             {
-                GenExplosion.DoExplosion(caster.Position, caster.Map, radius, Props.damageDef, caster, damageAmount,
+                GenExplosion.DoExplosion(caster.PositionHeld, caster.MapHeld, radius, Props.damageDef, caster, damageAmount,
                     Props.armorPenetration, Props.explosionSound, null, null, null, Props.postExplosionThing, Props.postExplosionThingChance,
                     Props.postExplosionSpawnThingCount, null, null, 255, Props.applyDamageToExplosionCellsNeighbors, Props.preExplosionThing,
                     Props.preExplosionThingChance, Props.preExplosionSpawnThingCount, Props.chanceToStartFire, Props.damageFalloff, null, ignoreList,

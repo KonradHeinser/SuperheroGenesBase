@@ -72,6 +72,7 @@ namespace SuperHeroGenesBase
         // Villains and Stereotypes stuff
         public static bool medievalVillains;
         public static bool vengefulOne = true;
+        public static bool dontBlowUpTheWorld = false;
 
         // Hero Organization stuff
         public static bool medievalHeroes;
@@ -175,6 +176,7 @@ namespace SuperHeroGenesBase
             // Villains and Stereotypes stuff
             Scribe_Values.Look(ref medievalVillains, "medievalVillains");
             Scribe_Values.Look(ref vengefulOne, "vengefulOne", true);
+            Scribe_Values.Look(ref dontBlowUpTheWorld, "dontBlowUpTheWorld");
 
             // Villains and Stereotypes stuff
             Scribe_Values.Look(ref medievalHeroes, "medievalHeroes");
@@ -191,7 +193,7 @@ namespace SuperHeroGenesBase
                 yMin = 80,
                 height = 40
             };
-            TabDrawer.DrawTabs<TabRecord>(tabs, TabsList, Mathf.CeilToInt(TabsList.Count / 5), Mathf.FloorToInt(tabs.width / 5));
+            TabDrawer.DrawTabs(tabs, TabsList, Mathf.CeilToInt(TabsList.Count / 5), Mathf.FloorToInt(tabs.width / 5));
 
             var scrollContainer = new Rect(inRect);
             scrollContainer.height -= optionsMenu.CurHeight + tabs.height;
@@ -291,6 +293,13 @@ namespace SuperHeroGenesBase
                     optionsMenu.Gap(10f);
                     optionsMenu.CheckboxLabeled("SHG_VengefulOne".Translate(), ref vengefulOne, "SHG_VengefulOneDescription".Translate());
                     optionsMenu.Gap(10f);
+                    if (ModsConfig.RoyaltyActive)
+                    {
+                        optionsMenu.CheckboxLabeled("SHG_DontBlowUpTheWorld".Translate(), ref dontBlowUpTheWorld,
+                            "SHG_DontBlowUpTheWorldDescription".Translate());
+                        optionsMenu.Gap(10f);
+                    }
+
                     break;
                 case 2:
                     optionsMenu.CheckboxLabeled("SHG_MedievalHeroes".Translate(), ref medievalHeroes, "SHG_MedievalHeroesDescription".Translate());

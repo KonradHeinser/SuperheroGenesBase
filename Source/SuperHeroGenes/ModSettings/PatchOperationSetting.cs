@@ -41,7 +41,7 @@ namespace SuperHeroGenesBase
                 }
             }
             else if (setting != null) 
-                Log.Error($"A patch is using {setting}, which is either mispelled or unhandled");
+                Log.Error($"A patch is using {setting}, which is either misspelled or unhandled");
             else 
                 Log.Error("A patch is using this mod's settings, but doesn't specify which one.");
             return true;
