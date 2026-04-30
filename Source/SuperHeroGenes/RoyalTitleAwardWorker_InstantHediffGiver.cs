@@ -9,13 +9,13 @@ namespace SuperHeroGenesBase
         {
             if (currentTitle != null && currentTitle.HasModExtension<SHGExtension>())
             {
-                SHGExtension extension = currentTitle.GetModExtension<SHGExtension>();
+                var extension = currentTitle.GetModExtension<SHGExtension>();
                 SHGUtilities.RemoveHediffsFromParts(pawn, extension.hediffsToApply);
             }
 
             if (newTitle != null && newTitle.HasModExtension<SHGExtension>())
             {
-                SHGExtension extension = newTitle.GetModExtension<SHGExtension>();
+                var extension = newTitle.GetModExtension<SHGExtension>();
                 SHGUtilities.AddHediffsToParts(pawn, extension.hediffsToApply);
             }
         }

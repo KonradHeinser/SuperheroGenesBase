@@ -479,9 +479,7 @@ namespace SuperHeroGenesBase
 
         public static bool HasHediff(this Pawn pawn, HediffDef hediff) // Only made this to make checking for null hediffSets require less work
         {
-            if (pawn.health.hediffSet == null) return false;
-            if (pawn.health.hediffSet.HasHediff(hediff)) return true;
-            return false;
+            return pawn?.health?.hediffSet?.HasHediff(hediff) == true;
         }
 
         public static bool HasHediff(this Pawn pawn, HediffDef hediff, out Hediff result)

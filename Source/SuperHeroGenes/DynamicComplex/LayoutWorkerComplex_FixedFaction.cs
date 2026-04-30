@@ -25,61 +25,60 @@ namespace SuperHeroGenesBase
 
         protected override void PreSpawnThreats(List<LayoutRoom> rooms, Map map, List<Thing> allSpawnedThings)
         {
-            if (Def.rewardThingSetMakerDef != null)
-                if (Def.roomRewardCrateFactor > 0f)
+            if (Def.rewardThingSetMakerDef != null && Def.roomRewardCrateFactor > 0f)
+            {
+                int num = 0;
+                for (int i = 0; i < allSpawnedThings.Count; i++)
                 {
-                    int num = 0;
-                    for (int i = 0; i < allSpawnedThings.Count; i++)
+                    if (allSpawnedThings[i] is Building_Crate)
                     {
-                        if (allSpawnedThings[i] is Building_Crate)
-                        {
-                            num++;
-                        }
+                        num++;
                     }
-                    int num2 = Mathf.RoundToInt((float)rooms.Count * Def.roomRewardCrateFactor) - num;
-                    if (num2 <= 0)
-                    {
-                        return;
-                    }
-                    ThingSetMakerDef thingSetMakerDef = Def.rewardThingSetMakerDef ?? ThingSetMakerDefOf.Reward_ItemsStandard;
-                    foreach (LayoutRoom item in rooms.InRandomOrder())
-                    {
-                        bool flag = true;
+                }
+                int num2 = Mathf.RoundToInt((float)rooms.Count * Def.roomRewardCrateFactor) - num;
+                if (num2 <= 0)
+                {
+                    return;
+                }
+                ThingSetMakerDef thingSetMakerDef = Def.rewardThingSetMakerDef ?? ThingSetMakerDefOf.Reward_ItemsStandard;
+                foreach (LayoutRoom item in rooms.InRandomOrder())
+                {
+                    bool flag = true;
                         
-                        List<IntVec3> list = new List<IntVec3>(item.Cells);
-                        foreach (IntVec3 item2 in list)
+                    List<IntVec3> list = new List<IntVec3>(item.Cells);
+                    foreach (IntVec3 item2 in list)
+                    {
+                        Building edifice = item2.GetEdifice(map);
+                        if (edifice != null && edifice is Building_Crate)
                         {
-                            Building edifice = item2.GetEdifice(map);
-                            if (edifice != null && edifice is Building_Crate)
-                            {
-                                flag = false;
-                                break;
-                            }
-                        }
-                        if (!flag)
-                        {
-                            continue;
-                        }
-                        if (ComplexUtility.TryFindRandomSpawnCell(ThingDefOf.AncientHermeticCrate, item, map, out var spawnPosition, 1, Rot4.South))
-                        {
-                            Building_Crate building_Crate = (Building_Crate)GenSpawn.Spawn(ThingMaker.MakeThing(ThingDefOf.AncientHermeticCrate), spawnPosition, map, Rot4.South);
-                            List<Thing> list2 = thingSetMakerDef.root.Generate(default(ThingSetMakerParams));
-                            for (int num3 = list2.Count - 1; num3 >= 0; num3--)
-                            {
-                                Thing thing = list2[num3];
-                                if (!building_Crate.TryAcceptThing(thing, false))
-                                {
-                                    thing.Destroy();
-                                }
-                            }
-                            num2--;
-                        }
-                        if (num2 <= 0)
-                        {
+                            flag = false;
                             break;
                         }
                     }
+                    if (!flag)
+                    {
+                        continue;
+                    }
+                    if (ComplexUtility.TryFindRandomSpawnCell(ThingDefOf.AncientHermeticCrate, item, map, out var spawnPosition, 1, Rot4.South))
+                    {
+                        Building_Crate building_Crate = (Building_Crate)GenSpawn.Spawn(ThingMaker.MakeThing(ThingDefOf.AncientHermeticCrate), spawnPosition, map, Rot4.South);
+                        List<Thing> list2 = thingSetMakerDef.root.Generate(default(ThingSetMakerParams));
+                        for (int num3 = list2.Count - 1; num3 >= 0; num3--)
+                        {
+                            Thing thing = list2[num3];
+                            if (!building_Crate.TryAcceptThing(thing, false))
+                            {
+                                thing.Destroy();
+                            }
+                        }
+                        num2--;
+                    }
+                    if (num2 <= 0)
+                    {
+                        break;
+                    }
                 }
+            }
         }
     }
 }

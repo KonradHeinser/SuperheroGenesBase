@@ -58,11 +58,9 @@
     <Compile Include="Hediffs\ThingCreationItem.cs" />
     <Compile Include="IngestionOutcomeDoer_AlterGenes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quest\QuestNode_CopyIdeology.cs" />
     <Compile Include="SHGDefOf.cs" />
     <Compile Include="SHGExtension.cs" />
     <Compile Include="HarmonyPatches.cs" />
-    <Compile Include="GameCondition_ArmageddonClock.cs" />
     <Compile Include="Hediffs\RandomXenoGenes.cs" />
     <Compile Include="Hediffs\RegenSet.cs" />
     <Compile Include="Genes\Hediff_SecondHeart.cs" />
@@ -131,7 +129,6 @@
     <Compile Include="SuperAI\Condtionals\ThinkNode_ConditionalNearbyEnemyTarget.cs" />
     <Compile Include="SuperAI\ThinkNode_RecordPassage.cs" />
     <Compile Include="SuperAI\JobGivers\JobGiver_AICastAbilityGoToTarget.cs" />
-    <Compile Include="IncidentWorker_CaravanArrivalBetterTributeCollector.cs" />
     <Compile Include="Hediffs\BurstHediffCompBase.cs" />
     <Compile Include="Hediffs\MentalStateEffect.cs" />
     <Compile Include="Hediffs\BurstHediffPropertiesBase.cs" />
@@ -246,29 +243,19 @@
     <Compile Include="DynamicComplex\SketchResolver_FlexibleRoom.cs" />
     <Compile Include="DynamicComplex\LayoutWorkerComplex_FixedFaction.cs" />
     <Compile Include="DynamicComplex\ComplexSet.cs" />
-    <Compile Include="Quest\QuestNode_Ceiling.cs" />
-    <Compile Include="Quest\QuestNode_GetSameQuestsSuccessOnly.cs" />
-    <Compile Include="Quest\QuestNode_Root_StopTheLeague.cs" />
-    <Compile Include="Quest\QuestPart_SubquestGenerator_StopTheLeague.cs" />
     <Compile Include="CompProperties_GiveHediffsToColonistsOnDestroy.cs" />
     <Compile Include="CompGiveHediffsToColonistsOnDestroy.cs" />
-    <Compile Include="GameCondition_ArmageddonClockFailure.cs" />
-    <Compile Include="Quest\QuestNode_FailOtherQuests.cs" />
-    <Compile Include="Quest\QuestPart_FailOtherQuests.cs" />
-    <Compile Include="Quest\QuestNode_NotAllowedIfOthersPassed.cs" />
-    <Compile Include="NoNeurotrainer.cs" />
     <Compile Include="SuperAI\JobGivers\JobGiver_AICastAbilityOnOwnLocation.cs" />
     <Compile Include="SuperAI\Condtionals\ThinkNode_ConditionalOver25YearsOld.cs" />
     <Compile Include="IncidentWorker_DiseaseGene.cs" />
-    <Compile Include="Quest\QuestNode_LogMessage.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4633" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>..\..\..\..\..\..\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4759-beta" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

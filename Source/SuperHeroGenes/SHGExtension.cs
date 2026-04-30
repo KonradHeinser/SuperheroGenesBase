@@ -22,25 +22,12 @@ namespace SuperHeroGenesBase
         public HediffDef hediff;
         public SimpleCurve curve;
 
-        public float speed = 0.00025f;
-        public StatDef relatedStat;
-
         public List<AbilityAndGeneLink> geneAbilities;
-        public NeedDef need;
 
         // Used in ThoughtWorker_Gene_GeneSocial
         public bool compoundingHatred = false; // When true, each gene that is found in checked genes increases the stage
-        public int maxStages = 1; // Required if compoundingHatred is true
         public List<GeneDef> checkedGenes; // Genes checked for opinions
         public List<GeneDef> nullifyingGenes; // Genes checked for early nullification. These cause the thought to never appear
         public List<GeneDef> requiredGenes; // The observer musthave one of these genes to feel anything. Acts as a reverse nullifyingGenes
-
-        public List<FactionDef> factions; // For anything that needs a list of factions. Currently not used
-
-        public FactionDef faction; // For the tribute class, or anything else that needs a single faction
-        public string category; // For the tribute class, or anything else that needs a category listing
-        public string descriptionOverrideA; // For the tribute acceptance, or anything else that needs a partial description override
-        public string descriptionOverrideB; // For the tribute acceptance, or anything else that needs a partial description override
-        public string descriptionOverrideC; // For the tribute acceptance, or anything else that needs a partial description override
     }
 }
