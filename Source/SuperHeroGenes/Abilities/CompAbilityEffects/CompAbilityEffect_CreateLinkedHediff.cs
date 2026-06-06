@@ -9,25 +9,30 @@ namespace SuperHeroGenesBase
 
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            Pawn targetPawn = target.Pawn;
-            Pawn caster = parent.pawn;
+            var targetPawn = target.Pawn;
+            var caster = parent.pawn;
             if (targetPawn?.health == null || targetPawn == caster) return;
 
             if (Props.hediffOnTarget != null)
             {
-                Hediff firstHediffOfDef = targetPawn.health.hediffSet.GetFirstHediffOfDef(Props.hediffOnTarget);
+                var firstHediffOfDef = targetPawn.health.hediffSet.GetFirstHediffOfDef(Props.hediffOnTarget);
                 if (firstHediffOfDef != null)
                 {
                     targetPawn.health.RemoveHediff(firstHediffOfDef);
                 }
-                HediffWithTarget targetHediff = (HediffWithTarget)HediffMaker.MakeHediff(Props.hediffOnTarget, targetPawn, Props.targetHediffOnBrain ? targetPawn.health.hediffSet.GetBrain() : null);
+                var targetHediff = HediffMaker.MakeHediff(Props.hediffOnTarget, targetPawn, Props.targetHediffOnBrain ? targetPawn.health.hediffSet.GetBrain() : null) as HediffWithTarget;
+                if (targetHediff == null)
+                {
+                    Log.Error("Failed to make a hediff on the target: " + Props.hediffOnTarget.defName);
+                    return;
+                }
                 targetHediff.target = caster;
                 if (Props.psychic)
                 {
-                    HediffComp_Disappears hediffComp_Disappears = targetHediff.TryGetComp<HediffComp_Disappears>();
+                    var hediffComp_Disappears = targetHediff.TryGetComp<HediffComp_Disappears>();
                     if (hediffComp_Disappears != null)
                     {
-                        float num = parent.def.EffectDuration(parent.pawn);
+                        var num = parent.def.EffectDuration(parent.pawn);
                         num *= targetPawn.GetStatValue(StatDefOf.PsychicSensitivity);
                         num *= caster.GetStatValue(StatDefOf.PsychicSensitivity);
                         hediffComp_Disappears.ticksToDisappear = num.SecondsToTicks();
@@ -39,19 +44,24 @@ namespace SuperHeroGenesBase
             if (Props.hediffOnCaster != null)
             {
 
-                Hediff firstHediffOfDef = caster.health.hediffSet.GetFirstHediffOfDef(Props.hediffOnCaster);
+                var firstHediffOfDef = caster.health.hediffSet.GetFirstHediffOfDef(Props.hediffOnCaster);
                 if (firstHediffOfDef != null)
                 {
                     caster.health.RemoveHediff(firstHediffOfDef);
                 }
-                HediffWithTarget casterHediff = (HediffWithTarget)HediffMaker.MakeHediff(Props.hediffOnCaster, caster, Props.casterHediffOnBrain ? caster.health.hediffSet.GetBrain() : null);
+                var casterHediff = HediffMaker.MakeHediff(Props.hediffOnCaster, caster, Props.casterHediffOnBrain ? caster.health.hediffSet.GetBrain() : null) as HediffWithTarget;
+                if (casterHediff == null)
+                {
+                    Log.Error("Failed to make a hediff on the caster: " + Props.hediffOnCaster.defName);
+                    return;
+                }
                 casterHediff.target = targetPawn;
                 if (Props.psychic)
                 {
-                    HediffComp_Disappears hediffComp_Disappears = casterHediff.TryGetComp<HediffComp_Disappears>();
+                    var hediffComp_Disappears = casterHediff.TryGetComp<HediffComp_Disappears>();
                     if (hediffComp_Disappears != null)
                     {
-                        float num = parent.def.EffectDuration(parent.pawn);
+                        var num = parent.def.EffectDuration(parent.pawn);
                         num *= caster.GetStatValue(StatDefOf.PsychicSensitivity);
                         num *= targetPawn.GetStatValue(StatDefOf.PsychicSensitivity);
                         hediffComp_Disappears.ticksToDisappear = num.SecondsToTicks();

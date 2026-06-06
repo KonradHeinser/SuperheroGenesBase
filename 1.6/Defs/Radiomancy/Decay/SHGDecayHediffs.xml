@@ -33,6 +33,7 @@
     <HediffDef ParentName="SHG_SpecialHediffBase" Name="SHG_Radiomancer_DecayLink" Abstract="True">
         <initialSeverity>1</initialSeverity>
         <maxSeverity>1.0</maxSeverity>
+        <hediffClass>HediffWithTarget</hediffClass>
         <comps>
             <li Class="HediffCompProperties_Disappears">
                 <disappearsAfterTicks>10000</disappearsAfterTicks>
@@ -97,7 +98,7 @@
                     <MeleeDamageFactor>0.75</MeleeDamageFactor>
                     <CarryingCapacity>0.75</CarryingCapacity>
                     <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.75</VEF_MassCarryCapacity>
-                                    </statFactors>
+                </statFactors>
             </li>
         </stages>
     </HediffDef>
