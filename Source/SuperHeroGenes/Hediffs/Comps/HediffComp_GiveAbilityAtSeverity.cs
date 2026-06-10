@@ -27,50 +27,52 @@ namespace SuperHeroGenesBase
 
         private void CheckAbilities()
         {
+            if (Pawn?.abilities == null) return;
             previousSeverity = parent.Severity;
             validAbilities = new List<AbilityDef>();
 
-            foreach (AbilitiesAtSeverities severitySet in Props.abilitiesAtSeverities)
+            foreach (var severitySet in Props.abilitiesAtSeverities)
             {
                 if (parent.Severity >= severitySet.minSeverity && parent.Severity <= severitySet.maxSeverity)
                 {
                     if (severitySet.abilityDef != null)
                     {
-                        parent.pawn.abilities.GainAbility(severitySet.abilityDef);
+                        Pawn.abilities.GainAbility(severitySet.abilityDef);
                         validAbilities.Add(severitySet.abilityDef);
                     }
 
                     if (!severitySet.abilityDefs.NullOrEmpty())
-                        for (int i = 0; i < severitySet.abilityDefs.Count; i++)
+                        for (var i = 0; i < severitySet.abilityDefs.Count; i++)
                         {
-                            parent.pawn.abilities.GainAbility(severitySet.abilityDefs[i]);
+                            Pawn.abilities.GainAbility(severitySet.abilityDefs[i]);
                             validAbilities.Add(severitySet.abilityDefs[i]);
                         }
                 }
-                else if (!parent.pawn.abilities.AllAbilitiesForReading.NullOrEmpty())
-                    foreach (Ability ability in parent.pawn.abilities.AllAbilitiesForReading)
+                else if (!Pawn.abilities.AllAbilitiesForReading.NullOrEmpty())
+                    foreach (var ability in Pawn.abilities.AllAbilitiesForReading)
                     {
                         if (severitySet.abilityDef != null && (validAbilities.NullOrEmpty() || !validAbilities.Contains(severitySet.abilityDef)))
                             if (ability.def == severitySet.abilityDef)
-                                parent.pawn.abilities.RemoveAbility(severitySet.abilityDef);
+                                Pawn.abilities.RemoveAbility(severitySet.abilityDef);
 
                         if (!severitySet.abilityDefs.NullOrEmpty())
                             if (severitySet.abilityDefs.Contains(ability.def) && (validAbilities.NullOrEmpty() || !validAbilities.Contains(ability.def)))
-                                parent.pawn.abilities.RemoveAbility(ability.def);
+                                Pawn.abilities.RemoveAbility(ability.def);
                     }
             }
         }
 
         public override void CompPostPostRemoved()
         {
-            foreach (AbilitiesAtSeverities severitySet in Props.abilitiesAtSeverities)
+            if (Pawn?.abilities == null) return;
+            foreach (var severitySet in Props.abilitiesAtSeverities)
             {
                 if (severitySet.abilityDef != null)
-                    parent.pawn.abilities.RemoveAbility(severitySet.abilityDef);
+                    Pawn.abilities.RemoveAbility(severitySet.abilityDef);
 
                 if (!severitySet.abilityDefs.NullOrEmpty())
-                    for (int i = 0; i < severitySet.abilityDefs.Count; i++)
-                        parent.pawn.abilities.RemoveAbility(severitySet.abilityDefs[i]);
+                    for (var i = 0; i < severitySet.abilityDefs.Count; i++)
+                        Pawn.abilities.RemoveAbility(severitySet.abilityDefs[i]);
             }
         }
     }
