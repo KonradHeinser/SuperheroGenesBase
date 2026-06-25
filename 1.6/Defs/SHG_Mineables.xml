@@ -145,7 +145,7 @@
         </statBases>
         <building>
             <mineableThing>Silver</mineableThing>
-            <mineableYield>20000</mineableYield>
+            <mineableYield>16000</mineableYield>
         </building>
     </ThingDef>
 
@@ -163,7 +163,7 @@
         </statBases>
         <building>
             <mineableThing>Gold</mineableThing>
-            <mineableYield>6400</mineableYield>
+            <mineableYield>1600</mineableYield>
         </building>
     </ThingDef>
 

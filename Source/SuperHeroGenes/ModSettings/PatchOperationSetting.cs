@@ -23,27 +23,35 @@ namespace SuperHeroGenesBase
 
             if (value != null) // This happens if the setting provided exists
             {
-                if (value is bool toggle) // Handling toggles
+                switch (value)
                 {
-                    if (toggle)
+                    // Handling toggles
+                    case bool toggle:
                     {
-                        if (active != null)
-                            return active.Apply(xml);
-                    }
-                    else
+                        if (toggle)
+                        {
+                            if (active != null)
+                                return active.Apply(xml);
+                        }
+                        else
                         if (inactive != null)
                             return inactive.Apply(xml);
-                }
-                else if (value is int num) // Handling "dropdowns"
-                {
-                    if (options.Count > num && options[num] != null && options[num].GetType() != typeof(PatchOperation))
-                        return options[num].Apply(xml);
+
+                        break;
+                    }
+                    // Handling "dropdowns"
+                    case int num:
+                    {
+                        if (options.Count > num && options[num] != null && options[num].GetType() != typeof(PatchOperation))
+                            return options[num].Apply(xml);
+                        break;
+                    }
                 }
             }
             else if (setting != null) 
-                Log.Error($"A patch is using {setting}, which is either misspelled or unhandled");
+                Log.Error($"A patch is using {setting}, which is either misspelled, nonexistent, or unhandled");
             else 
-                Log.Error("A patch is using this mod's settings, but doesn't specify which one.");
+                Log.Error("A patch is trying to use this mod's settings, but doesn't specify which one.");
             return true;
         }
     }

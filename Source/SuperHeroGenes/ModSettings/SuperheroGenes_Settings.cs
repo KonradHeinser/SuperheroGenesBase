@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
-using RimWorld;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -23,11 +24,6 @@ namespace SuperHeroGenesBase
         {
             base.DoSettingsWindowContents(inRect);
             settings.DoWindowContents(inRect);
-        }
-
-        public override void WriteSettings()
-        {
-            base.WriteSettings();
         }
     }
 
@@ -55,6 +51,9 @@ namespace SuperHeroGenesBase
         public static bool disableEvolvingHemomancers;
         public static bool noSHGBasePrereq;
         public static bool noJammerReq;
+        public static bool removeArmorCap = true;
+        public static float mineableMultiplier = 1f;
+        public static bool smallerMineableSilver;
 
         // AI stuff
         public static bool disableColonistAI;
@@ -72,7 +71,7 @@ namespace SuperHeroGenesBase
         // Villains and Stereotypes stuff
         public static bool medievalVillains;
         public static bool vengefulOne = true;
-        public static bool dontBlowUpTheWorld = false;
+        public static bool dontBlowUpTheWorld;
 
         // Hero Organization stuff
         public static bool medievalHeroes;
@@ -91,50 +90,46 @@ namespace SuperHeroGenesBase
 
         private List<TabRecord> tabsList;
 
-        private int tabInt = 0;
+        private int tabInt;
 
         public List<TabRecord> TabsList
         {
             get
             {
-                if (tabsList.NullOrEmpty())
+                if (!tabsList.NullOrEmpty()) return tabsList;
+                tabsList = new List<TabRecord>()
                 {
-                    tabsList = new List<TabRecord>()
+                    new TabRecord("SHG_ModName".Translate(), delegate
                     {
-                        new TabRecord("SHG_ModName".Translate(), delegate ()
-                        {
-                            tabInt = 0;
-                            tabsList.Clear();
-                        }, tabInt == 0),
-                        new TabRecord("SHG_SuperAI".Translate(), delegate ()
-                        {
-                            tabInt = 3;
-                            tabsList.Clear();
-                        }, tabInt == 3),
-                    };
+                        tabInt = 0;
+                        tabsList.Clear();
+                    }, tabInt == 0),
+                    new TabRecord("SHG_SuperAI".Translate(), delegate
+                    {
+                        tabInt = 3;
+                        tabsList.Clear();
+                    }, tabInt == 3),
+                };
 
-                    if (ModsConfig.IsActive("SuperheroGenes.Villains"))
-                        tabsList.Insert(1, new TabRecord("SHG_Villains_ModName".Translate(),
-                                delegate ()
-                                {
-                                    tabInt = 1;
-                                    tabsList.Clear();
-                                }, tabInt == 1)
-                            );
-                    if (ModsConfig.IsActive("SuperheroGenes.Heroes"))
-                        tabsList.Insert(2, new TabRecord("SHG_Heroes_ModName".Translate(),
-                                delegate ()
-                                {
-                                    tabInt = 2;
-                                    tabsList.Clear();
-                                }, tabInt == 2)
-                            );
-                }
+                if (ModsConfig.IsActive("SuperheroGenes.Villains"))
+                    tabsList.Insert(1, new TabRecord("SHG_Villains_ModName".Translate(),
+                        delegate
+                        {
+                            tabInt = 1;
+                            tabsList.Clear();
+                        }, tabInt == 1)
+                    );
+                if (ModsConfig.IsActive("SuperheroGenes.Heroes"))
+                    tabsList.Insert(2, new TabRecord("SHG_Heroes_ModName".Translate(),
+                        delegate
+                        {
+                            tabInt = 2;
+                            tabsList.Clear();
+                        }, tabInt == 2)
+                    );
                 return tabsList;
             }
         }
-
-        public SuperheroGenes_Settings() { }
 
         public override void ExposeData()
         {
@@ -153,12 +148,15 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref radiomancerOvercharge, "radiomancerOvercharge", true);
             Scribe_Values.Look(ref superDrugNoTrader, "superDrugNoTrader");
             Scribe_Values.Look(ref superDrugNoReward, "superDrugNoReward");
-            Scribe_Values.Look(ref baseAbilityCooldown, "baseAbilityCooldown", 0);
-            Scribe_Values.Look(ref noPsionicNeurotrainers, "noPsionicNeurotrainers", false);
-            Scribe_Values.Look(ref antiSupeDisease, "antiSupeDisease", false);
-            Scribe_Values.Look(ref disableEvolvingHemomancers, "disableEvolvingHemomancers", false);
-            Scribe_Values.Look(ref noSHGBasePrereq, "noSHGBasePrereq", false);
-            Scribe_Values.Look(ref noJammerReq, "noJammerReq", false);
+            Scribe_Values.Look(ref baseAbilityCooldown, "baseAbilityCooldown");
+            Scribe_Values.Look(ref noPsionicNeurotrainers, "noPsionicNeurotrainers");
+            Scribe_Values.Look(ref antiSupeDisease, "antiSupeDisease");
+            Scribe_Values.Look(ref disableEvolvingHemomancers, "disableEvolvingHemomancers");
+            Scribe_Values.Look(ref noSHGBasePrereq, "noSHGBasePrereq");
+            Scribe_Values.Look(ref noJammerReq, "noJammerReq");
+            Scribe_Values.Look(ref removeArmorCap, "removeArmorCap", true);
+            Scribe_Values.Look(ref mineableMultiplier, "mineableMultiplier", 1f);
+            Scribe_Values.Look(ref smallerMineableSilver, "smallerMineableSilver");
 
             // AI stuff
             Scribe_Values.Look(ref disableColonistAI, "disableColonistAI");
@@ -183,12 +181,12 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref leagueGathering, "leagueGathering");
             Scribe_Values.Look(ref radiantQuests, "radiantQuests", true);
         }
-
+        
         public void DoWindowContents(Rect inRect)
         {
-            Listing_Standard optionsMenu = new Listing_Standard();
+            var optionsMenu = new Listing_Standard();
 
-            Rect tabs = new Rect(inRect)
+            var tabs = new Rect(inRect)
             {
                 yMin = 80,
                 height = 40
@@ -202,21 +200,24 @@ namespace SuperHeroGenesBase
             var innerContainer = scrollContainer.ContractedBy(1);
             Widgets.DrawBoxSolid(scrollContainer, new ColorInt(37, 37, 37).ToColor);
             var frameRect = innerContainer.ContractedBy(5);
-            frameRect.y += 15;
+            frameRect.y += 5;
             frameRect.height -= 5;
             var contentRect = frameRect.ContractedBy(10);
-
+            
             if (tabInt == 0)
             {
-                var num = 0;
+                var num = 3; // Increases by 1 for each new setting
                 if (supersEverywhere)
-                    num += 2;
+                {
+                    num++;
+                    if (ModsConfig.IsActive("SuperheroGenes.Villains"))
+                        num++;
+                }
                 if (activatableSuperGenes)
-                    num += 1;
+                    num++;
                 if (middleGrounds)
-                    num += 1;
-                if (num > 1)
-                    contentRect.height += num * 35 + 20;
+                    num++;
+                contentRect.height += num * (Text.LineHeight + 12f) + 5f;
             }
 
             Widgets.BeginScrollView(frameRect, ref scrollPosition, contentRect);
@@ -273,18 +274,20 @@ namespace SuperHeroGenesBase
                     optionsMenu.Gap(10f);
                     optionsMenu.CheckboxLabeled("SHG_NoSignalJammer".Translate(), ref noJammerReq, "SHG_NoSignalJammerDescription".Translate());
                     optionsMenu.Gap(10f);
-
+                    optionsMenu.CheckboxLabeled("SHG_RemoveAmorCap".Translate(), ref removeArmorCap, "SHG_RemoveAmorCapDescription".Translate());
+                    optionsMenu.Gap(10f);
+                    var mineableSlider = mineableMultiplier;
+                    mineableMultiplier = (float)Math.Round(optionsMenu.SliderLabeled("SHG_MineableMultiplier".Translate() + $" ({mineableSlider})", mineableSlider, 0.1f, 1f, 0.5f,  "SHG_MineableMultiplierDescription".Translate()), 1);
+                    optionsMenu.Gap(10f);
+                    optionsMenu.CheckboxLabeled("SHG_SmallerMineableSilver".Translate(), ref smallerMineableSilver, "SHG_SmallerMineableSilverDescription".Translate());
+                    optionsMenu.Gap(10f);
+                    
+                    // If cooldowns are not at the bottom, things look weird
                     if (optionsMenu.ButtonTextLabeledPct("SHG_BaseAbilityCooldown".Translate(), baseAbilityCooldownOptions[baseAbilityCooldown].Translate(), 0.75f,
                         tooltip: "SHG_BaseAbilityCooldownDesc".Translate()))
                     {
-                        List<FloatMenuOption> options = new List<FloatMenuOption>();
-                        foreach (var option in baseAbilityCooldownOptions)
-                        {
-                            options.Add(new FloatMenuOption(option.Value.Translate(), delegate
-                            {
-                                baseAbilityCooldown = option.Key;
-                            }));
-                        }
+                        var options = baseAbilityCooldownOptions.Select(option => 
+                            new FloatMenuOption(option.Value.Translate(), delegate { baseAbilityCooldown = option.Key; })).ToList();
                         Find.WindowStack.Add(new FloatMenu(options));
                     }
                     break;

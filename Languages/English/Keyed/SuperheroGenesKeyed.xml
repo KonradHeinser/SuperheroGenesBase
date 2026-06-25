@@ -136,6 +136,12 @@
     <SHG_NoSHGBasePrereqDescription>Enabling this removes the Base Superhero Gene as a prerequisite from all genes. Other prerequisites (i.e. Antisuper requiring Unsuper) will not be changed.</SHG_NoSHGBasePrereqDescription>
     <SHG_NoSignalJammer>    Ignore Signal Jammer Requirement</SHG_NoSignalJammer>
     <SHG_NoSignalJammerDescription>Enabling this allows the world travel abilities (from the flight genes) to ignore any signal jammer requirement that the destination may have. This is disabled by default because teleportation is the only intended way to ignore the jammer requirement.</SHG_NoSignalJammerDescription>
+    <SHG_RemoveAmorCap>    No Armor Cap</SHG_RemoveAmorCap>
+    <SHG_RemoveAmorCapDescription>Removes the armor limit of 200%. Disabling this will cause all genes related to durability and armor to be far weaker than intended unless another mod is removing the cap. This mod makes an additional check when removing the armor limit to properly make sure that no mod loaded before it has already removed the armor limit and is generally safe to load after pretty much any other mod, so if in doubt you can leave this setting enabled and send the mod lower in your load order.</SHG_RemoveAmorCapDescription>
+    <SHG_MineableMultiplier>    Super Compacted Mineables Multiplier</SHG_MineableMultiplier>
+    <SHG_MineableMultiplierDescription>Super Compacted pillars are filled with mineable materials that usually contain 8 to 40 times as much material as their normal counterparts (with the exception of silver, which is 400 times the size of the normal mineable silver because it is a small volume material and low in value). This slider multiplies the amount they give to allow for fewer materials for those who want to nerf the related abilities/events, down to a minimum of 2 to 4 times the normal size.</SHG_MineableMultiplierDescription>
+    <SHG_SmallerMineableSilver>    Smaller Super Compacted Silver</SHG_SmallerMineableSilver>
+    <SHG_SmallerMineableSilverDescription>Divides the amount of silver given by super compacted silver by 10 to bring it closer to the same values as the other super compacted materials.</SHG_SmallerMineableSilverDescription>
 
     <!--Removed at the moment due to how neutrotrainers are generated normally-->
     <SHG_NoPsionicNeurotrainers>    No Psionic Neurotrainers</SHG_NoPsionicNeurotrainers>

@@ -16,11 +16,14 @@
         </nomatch>
     </Operation>
 
-    <Operation Class="PatchOperationConditional">
-        <xpath>Defs/StatDef[@Name="ArmorRatingBase"]/maxValue</xpath>
-        <match Class="PatchOperationRemove">
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>removeArmorCap</setting>
+        <active Class="PatchOperationConditional">
             <xpath>Defs/StatDef[@Name="ArmorRatingBase"]/maxValue</xpath>
-        </match>
+            <match Class="PatchOperationRemove">
+                <xpath>Defs/StatDef[@Name="ArmorRatingBase"]/maxValue</xpath>
+            </match>
+        </active>
     </Operation>
 
     <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
