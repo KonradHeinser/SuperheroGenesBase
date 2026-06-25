@@ -141,7 +141,7 @@
     <SHG_MineableMultiplier>    Super Compacted Mineables Multiplier</SHG_MineableMultiplier>
     <SHG_MineableMultiplierDescription>Super Compacted pillars are filled with mineable materials that usually contain 8 to 40 times as much material as their normal counterparts (with the exception of silver, which is 400 times the size of the normal mineable silver because it is a small volume material and low in value). This slider multiplies the amount they give to allow for fewer materials for those who want to nerf the related abilities/events, down to a minimum of 2 to 4 times the normal size.</SHG_MineableMultiplierDescription>
     <SHG_SmallerMineableSilver>    Smaller Super Compacted Silver</SHG_SmallerMineableSilver>
-    <SHG_SmallerMineableSilverDescription>Divides the amount of silver given by super compacted silver by 10 to bring it closer to the same values as the other super compacted materials.</SHG_SmallerMineableSilverDescription>
+    <SHG_SmallerMineableSilverDescription>Divides the amount of silver given by super compacted silver by 10 to bring it closer to the same values as the other super compacted materials. This stacks with the Super Compacted Mineables Multiplier setting.</SHG_SmallerMineableSilverDescription>
 
     <!--Removed at the moment due to how neutrotrainers are generated normally-->
     <SHG_NoPsionicNeurotrainers>    No Psionic Neurotrainers</SHG_NoPsionicNeurotrainers>
