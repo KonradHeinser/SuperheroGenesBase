@@ -11,9 +11,6 @@
         <label>unsuper durability</label>
         <iconPath>Base/UnsuperDurability</iconPath>
         <displayOrderInCategory>5</displayOrderInCategory>
-        <damageFactors>
-            <SHG_Beam>1.33</SHG_Beam>
-        </damageFactors>
         <statFactors>
             <IncomingDamageFactor>1.333</IncomingDamageFactor>
         </statFactors>
@@ -44,8 +41,7 @@
             <LifespanFactor>0.5</LifespanFactor>
         </statFactors>
         <statOffsets>
-            <ToxicEnvironmentResistance>-.1</ToxicEnvironmentResistance>
-            <ToxicResistance>-.1</ToxicResistance>
+            <ToxicResistance>-0.1</ToxicResistance>
         </statOffsets>
         <exclusionTags>
             <li>SuperHealings</li>
@@ -60,7 +56,7 @@
         <iconPath>Base/UnsuperIntelligence</iconPath>
         <displayOrderInCategory>35</displayOrderInCategory>
         <statFactors>
-            <ResearchSpeed>0.83</ResearchSpeed>
+            <ResearchSpeed>0.833</ResearchSpeed>
             <GlobalLearningFactor>0.667</GlobalLearningFactor>
             <LearningRateFactor>0.667</LearningRateFactor>
         </statFactors>
@@ -99,7 +95,7 @@
             <PawnBeauty>-3</PawnBeauty>
             <SocialImpact>-0.5</SocialImpact>
             <NegotiationAbility>-0.5</NegotiationAbility>
-            <ConversionPower MayRequire="ludeon.rimworld.ideology">-0.5</ConversionPower>
+            <ConversionPower MayRequire="Ludeon.Rimworld.Ideology">-0.5</ConversionPower>
         </statOffsets>
         <exclusionTags>
             <li>SuperPersuasions</li>
@@ -114,7 +110,7 @@
         <iconPath>Base/UnsuperPrecision</iconPath>
         <displayOrderInCategory>65</displayOrderInCategory>
         <statFactors>
-            <PawnTrapSpringChance>100</PawnTrapSpringChance>
+            <PawnTrapSpringChance>10</PawnTrapSpringChance>
         </statFactors>
         <statOffsets>
             <ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
@@ -139,7 +135,7 @@
         </statFactors>
         <statOffsets>
             <MoveSpeed>-3</MoveSpeed>
-            <AimingDelayFactor>.1</AimingDelayFactor>
+            <AimingDelayFactor>0.1</AimingDelayFactor>
         </statOffsets>
         <exclusionTags>
             <li>SuperSpeeds</li>
@@ -159,7 +155,7 @@
         <statOffsets>
             <CarryingCapacity>-25</CarryingCapacity>
             <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">-25</VEF_MassCarryCapacity>
-                        <MentalBreakThreshold>.15</MentalBreakThreshold>
+            <MentalBreakThreshold>0.15</MentalBreakThreshold>
         </statOffsets>
         <exclusionTags>
             <li>SuperStrengths</li>
