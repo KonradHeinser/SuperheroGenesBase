@@ -3,7 +3,7 @@
     <GeneDef ParentName="SuperPowersFireBase">
         <defName>SHG_FireBurst</defName>
         <label>fire burst</label>
-        <description>Carriers of this gene are able to set everything in the area around them on fire.\n\nThis doesn't render you immune to fire, so remember to get protection. This is doubly true for bursts as even the user will be affected.</description>
+        <description>Carriers of this gene are able to set everything in the area around them on fire.\n\nThis doesn't render you immune to fire, so remember to get protection.</description>
         <iconPath>Powers/FireBurst</iconPath>
         <displayOrderInCategory>3</displayOrderInCategory>
         <abilities>
@@ -26,7 +26,7 @@
     <GeneDef ParentName="SuperPowersAcidBase">
         <defName>SHG_AcidBurst</defName>
         <label>acid burst</label>
-        <description>Carriers of this gene are able to release a burst of acid that corrodes everything in the area around them.\n\nThis doesn't render you completely immune to acid, so remember to get protection. This is doubly true for bursts as even the user will be affected.</description>
+        <description>Carriers of this gene are able to release a burst of acid that corrodes everything in the area around them.</description>
         <iconPath>Powers/Gene_AcidBurst</iconPath>
         <displayOrderInCategory>13</displayOrderInCategory>
         <abilities>
@@ -46,7 +46,7 @@
     <GeneDef ParentName="SuperPowersLightningBase">
         <defName>SHG_LightningBurst</defName>
         <label>lightning burst</label>
-        <description>Carriers of this gene are able to release a burst of lightning that electrocutes everything around them. The damage caused by this lightning is so destructive it burns straight through electronics instead of disabling them.\n\nThis doesn't render you completely immune to lightning, so remember to get protection. This is doubly true for bursts as even the user will be affected.</description>
+        <description>Carriers of this gene are able to release a burst of lightning that electrocutes everything around them. The damage caused by this lightning is so destructive it burns straight through electronics instead of disabling them.</description>
         <iconPath>Powers/Gene_LightningBurst</iconPath>
         <displayOrderInCategory>23</displayOrderInCategory>
         <abilities>
@@ -66,7 +66,7 @@
     <GeneDef ParentName="SuperPowersIceBase">
         <defName>SHG_IceBurst</defName>
         <label>ice burst</label>
-        <description>Carriers of this gene are able to release a burst of freezing cold that inflicts frostbite on everything around them.\n\nThis doesn't render you completely immune to ice and frostbite, so remember to get protection. This is doubly true for bursts as even the user will be affected.</description>
+        <description>Carriers of this gene are able to release a burst of freezing cold that inflicts frostbite on everything around them.</description>
         <iconPath>Powers/Gene_IceBurst</iconPath>
         <displayOrderInCategory>33</displayOrderInCategory>
         <abilities>
@@ -87,7 +87,7 @@
     <GeneDef ParentName="SuperPowersToxicBase">
         <defName>SHG_ToxicBurst</defName>
         <label>toxic burst</label>
-        <description>Carriers of this gene are able to release a burst of toxins that poison everyone around the area.\n\nThis doesn't render you completely immune to acid, so remember to get protection. This is doubly true for bursts as even the user will be affected.</description>
+        <description>Carriers of this gene are able to release a burst of toxins that poison everyone around the area.</description>
         <iconPath>Powers/Gene_ToxicBurst</iconPath>
         <displayOrderInCategory>43</displayOrderInCategory>
         <abilities>
@@ -144,7 +144,7 @@
     <GeneDef ParentName="SuperPowersPetrificationBase">
         <defName>SHG_PetrificationBurst</defName>
         <label>petrification burst</label>
-        <description>Carriers of this gene are able to release a burst of infused stone dust that invades the blood streams of everyone in the area around tham, including themselves, like a toxin. The dust collects around veins and muscles, gradually restricting the individual's ability to move freely as it becomes denser.</description>
+        <description>Carriers of this gene are able to release a burst of infused stone dust that invades the blood streams of everyone in the area around them, like a toxin. The dust collects around veins and muscles, gradually restricting the individual's ability to move freely as it becomes denser.</description>
         <iconPath>Powers/Gene_PetrifyBurst</iconPath>
         <displayOrderInCategory>73</displayOrderInCategory>
         <customEffectDescriptions>

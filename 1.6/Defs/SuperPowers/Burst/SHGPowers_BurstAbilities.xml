@@ -30,7 +30,7 @@
             <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
                 <radius>5</radius>
 				<damageDef>AcidBurn</damageDef>
-				<injureSelf>true</injureSelf>
+				<injureSelf>False</injureSelf>
 				<explosionSound>AcidSpray_Resolve</explosionSound>
 				<postExplosionThing>SHG_AcidGas</postExplosionThing>
 				<postExplosionThingChance>50</postExplosionThingChance>
@@ -48,7 +48,7 @@
             <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
                 <radius>5</radius>
 				<damageDef>SHG_Lightning</damageDef>
-				<injureSelf>true</injureSelf>
+				<injureSelf>False</injureSelf>
 				<explosionSound>Explosion_EMP</explosionSound>
 				<postExplosionThing>SHG_ElectricrifiedCloud</postExplosionThing>
 				<postExplosionThingChance>50</postExplosionThingChance>
@@ -66,7 +66,7 @@
             <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
                 <radius>5</radius>
 				<damageDef>SHG_Ice</damageDef>
-				<injureSelf>true</injureSelf>
+				<injureSelf>False</injureSelf>
 				<explosionSound>Foam_Impact</explosionSound>
 				<postExplosionThing>SHG_IceCloud</postExplosionThing>
 				<postExplosionThingChance>50</postExplosionThingChance>
@@ -84,7 +84,7 @@
             <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
                 <radius>5</radius>
 				<damageDef>SHG_ToxicCloud</damageDef>
-				<injureSelf>true</injureSelf>
+				<injureSelf>False</injureSelf>
 				<explosionSound>Explosion_Smoke</explosionSound>
 				<postExplosionThing>SHG_ToxicGas</postExplosionThing>
 				<postExplosionThingChance>50</postExplosionThingChance>
@@ -102,7 +102,7 @@
             <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
                 <radius>5</radius>
 				<damageDef>EMP</damageDef>
-				<injureSelf>true</injureSelf>
+				<injureSelf>False</injureSelf>
 				<explosionSound>Explosion_EMP</explosionSound>
 				<postExplosionThing>SHG_ElectricrifiedCloud</postExplosionThing>
 				<postExplosionThingChance>50</postExplosionThingChance>
@@ -121,7 +121,7 @@
             <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
                 <radius>5</radius>
 				<damageDef>Extinguish</damageDef>
-				<injureSelf>true</injureSelf>
+				<injureSelf>True</injureSelf>
 				<explosionSound>Foam_Impact</explosionSound>
 				<postExplosionThing>Filth_FireFoam</postExplosionThing>
 				<postExplosionThingChance>50</postExplosionThingChance>
@@ -139,7 +139,7 @@
             <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
                 <radius>5</radius>
 				<damageDef>SHG_Petrification</damageDef>
-				<injureSelf>true</injureSelf>
+				<injureSelf>False</injureSelf>
 				<explosionSound>BuildingDestroyed_Stone_Big</explosionSound>
 				<postExplosionThing>Filth_RubbleRock</postExplosionThing>
 				<postExplosionThingChance>50</postExplosionThingChance>
@@ -160,7 +160,7 @@
             <li Class="SuperHeroGenesBase.CompProperties_SHGBurst">
                 <radius>5</radius>
 				<damageDef>SHG_Water</damageDef>
-				<injureSelf>true</injureSelf>
+				<injureSelf>False</injureSelf>
 				<explosionSound>Foam_Impact</explosionSound>
 				<postExplosionThing>Filth_Water</postExplosionThing>
 				<postExplosionThingChance>50</postExplosionThingChance>
