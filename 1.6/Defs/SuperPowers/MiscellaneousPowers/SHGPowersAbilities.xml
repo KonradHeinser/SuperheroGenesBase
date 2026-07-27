@@ -429,12 +429,12 @@
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_Narcissus</defName>
         <label>narcissus</label>
-        <description>Put a seed of narcissistic thoughts into a target's head, blooming into an internal distraction with a duration based on how much beauty they have.</description>
+        <description>Put a seed of narcissistic thoughts into a target's head, blooming into an internal distraction with a duration based on how much beauty they have. Base time is 2 seconds.</description>
         <iconPath>Powers/Gene_Narcissus</iconPath>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
-        <cooldownTicksRange>625</cooldownTicksRange>
+        <cooldownTicksRange>600</cooldownTicksRange>
         <statBases>
-            <Ability_Duration>5</Ability_Duration>
+            <Ability_Duration>2</Ability_Duration>
         </statBases>
         <verbProperties>
             <range>50</range>
@@ -456,12 +456,12 @@
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_Distraction</defName>
         <label>distraction</label>
-        <description>Distract a target, stunning them for a duration based on the stun susceptibility. Base time is 10 seconds.</description>
+        <description>Distract a target, stunning them for a duration based on the stun susceptibility. Base time is 5 seconds.</description>
         <iconPath>Powers/Gene_Distraction</iconPath>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
-        <cooldownTicksRange>625</cooldownTicksRange>
+        <cooldownTicksRange>600</cooldownTicksRange>
         <statBases>
-            <Ability_Duration>10</Ability_Duration>
+            <Ability_Duration>5</Ability_Duration>
         </statBases>
         <verbProperties>
             <range>50</range>
