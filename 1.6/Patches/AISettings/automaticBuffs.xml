@@ -167,13 +167,19 @@
                                                         <severityRange>100</severityRange>
                                                         <invert>True</invert>
                                                         <subNodes>
-                                                            <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
-                                                                <gene>SHG_Archetypes_Radiomancer</gene>
-                                                                <useTargetValue>False</useTargetValue>
-                                                                <minLevel>0.1</minLevel>
+                                                            <li Class="ThinkNode_ConditionalHasHediff">
+                                                                <hediff>SHG_Radiomancer_LimitlessPotential</hediff>
+                                                                <invert>True</invert>
                                                                 <subNodes>
-                                                                    <li Class="JobGiver_AICastAbilityOnSelf"> 
-                                                                        <ability>SHG_Radiomancer_LimitlessPotential</ability>
+                                                                    <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
+                                                                        <gene>SHG_Archetypes_Radiomancer</gene>
+                                                                        <useTargetValue>False</useTargetValue>
+                                                                        <minLevel>0.1</minLevel>
+                                                                        <subNodes>
+                                                                            <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                                                <ability>SHG_Radiomancer_LimitlessPotential</ability>
+                                                                            </li>
+                                                                        </subNodes>
                                                                     </li>
                                                                 </subNodes>
                                                             </li>
