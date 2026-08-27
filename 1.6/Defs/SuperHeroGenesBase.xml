@@ -59,12 +59,6 @@
     </GeneCategoryDef>
 
     <GeneCategoryDef>
-        <defName>SuperPowersPools</defName>
-        <label>super powers - minor specializations</label>
-        <displayPriorityInXenotype>999.894</displayPriorityInXenotype>
-    </GeneCategoryDef>
-
-    <GeneCategoryDef>
         <defName>SuperPowersOffensive</defName>
         <label>super powers - attacks</label>
         <displayPriorityInXenotype>999.893</displayPriorityInXenotype>
@@ -208,6 +202,8 @@
 
     <GeneDef Name="SHG_SpecializationBase" Abstract="True">
         <displayCategory>SuperPowersSpecialization</displayCategory>
+        <displayOrderInCategory>100</displayOrderInCategory>
+        <prerequisite>SuperHeroBase</prerequisite>
         <biostatCpx>1</biostatCpx>
         <biostatMet>-3</biostatMet>
         <exclusionTags>
@@ -216,7 +212,8 @@
     </GeneDef>
 
     <GeneDef Name="SHG_MinorSpecializationBase" Abstract="True">
-        <displayCategory>SuperPowersPools</displayCategory>
+        <displayCategory>SuperPowersSpecialization</displayCategory>
+        <prerequisite>SuperHeroBase</prerequisite>
         <biostatCpx>1</biostatCpx>
     </GeneDef>
 

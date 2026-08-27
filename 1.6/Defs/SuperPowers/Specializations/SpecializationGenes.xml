@@ -6,6 +6,7 @@
         <description>Supers with this gene can temporarily sacrifice their super durability to fortify themselves further, reducing their movement greatly and making them immune to most attacks.</description>
         <iconPath>Powers/Specializations/Gene_Fortress</iconPath>
         <prerequisite>SuperDurability</prerequisite>
+        <displayOrderInCategory>101</displayOrderInCategory>
         <abilities>
             <li>SHG_Fortress</li>
         </abilities>
@@ -40,6 +41,7 @@
         <description>Supers with this gene can temporarily sacrifice their super healing to enhance their regenerative abilities to extreme levels for a couple hours.</description>
         <iconPath>Powers/Specializations/Gene_Regenerator</iconPath>
         <prerequisite>SuperHealing</prerequisite>
+        <displayOrderInCategory>102</displayOrderInCategory>
         <abilities>
             <li>SHG_Regenerator</li>
         </abilities>
@@ -54,6 +56,7 @@
         <description>Supers with this gene can quickly hack any mechanoid that they can touch, forcing it to turn violent against everything near it, a feat that makes the pawn fall unconscious for some time.</description>
         <iconPath>Powers/Specializations/Gene_HackMech</iconPath>
         <prerequisite>SuperIntelligence</prerequisite>
+        <displayOrderInCategory>103</displayOrderInCategory>
         <abilities>
             <li>SHG_HackMech</li>
         </abilities>
@@ -71,6 +74,7 @@
         <description>Supers with this gene can temporarily sacrifice their super perception to predict what other beings around them will do, allowing them to avoid taking damage and improving their accuracy.</description>
         <iconPath>Powers/Specializations/Gene_Portent</iconPath>
         <prerequisite>SuperPerception</prerequisite>
+        <displayOrderInCategory>104</displayOrderInCategory>
         <abilities>
             <li>SHG_Portent</li>
         </abilities>
@@ -85,6 +89,7 @@
         <description>Supers with this gene can temporarily sacrifice their super persuasion to beguile a hostile pawn, causing it to go berserk and attack everything around it.</description>
         <iconPath>Powers/Specializations/Gene_Beguile</iconPath>
         <prerequisite>SuperPersuasion</prerequisite>
+        <displayOrderInCategory>105</displayOrderInCategory>
         <abilities>
             <li>SHG_Beguile</li>
         </abilities>
@@ -116,6 +121,7 @@
         <description>Supers with this gene can to push themselves to become nigh unstoppable in melee combat for several hours before falling unconscious for about 10 days due to overexertion.</description>
         <iconPath>Powers/Specializations/Gene_Sprinter</iconPath>
         <prerequisite>SuperSpeed</prerequisite>
+        <displayOrderInCategory>106</displayOrderInCategory>
         <abilities>
             <li>SHG_Sprinter</li>
         </abilities>
@@ -130,6 +136,7 @@
         <description>Supers with this gene can temporarily sacrifice their super strength to increase the melee damage they deal to extreme levels for an hour.</description>
         <iconPath>Powers/Specializations/Gene_TitanStrength</iconPath>
         <prerequisite>SuperStrength</prerequisite>
+        <displayOrderInCategory>107</displayOrderInCategory>
         <abilities>
             <li>SHG_TitanStrength</li>
         </abilities>

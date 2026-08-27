@@ -5,7 +5,7 @@
         <label>endure pain</label>
         <description>Supers with this gene can temporarily sacrifice their innate super durability to become immune to pain and more resistant to all sources of mundane damage for a couple hours.</description>
         <iconPath>Powers/Specializations/Gene_EndurePain</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>1</displayOrderInCategory>
         <biostatMet>-1</biostatMet>
         <abilities>
             <li>SHG_Pools_EndurePain</li>
@@ -24,7 +24,7 @@
         <label>healing aura</label>
         <description>Supers with this gene can temporarily sacrifice their innate super healing to give all nearby allies accelerated healing for a day.</description>
         <iconPath>Powers/Specializations/Gene_HealAllies</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>2</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
         <abilities>
             <li>SHG_Pools_HealAllies</li>
@@ -44,7 +44,7 @@
         <label>emergency shutdown</label>
         <description>Supers with this gene can temporarily sacrifice their innate super intelligence by remotely triggering an emergency shutdown of any mechanoid that lasts about half an hour.</description>
         <iconPath>Powers/Specializations/Gene_Shutdown</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>3</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
         <abilities>
             <li>SHG_Pools_EmergencyShutdown</li>
@@ -63,7 +63,7 @@
         <label>lesser portent</label>
         <description>Supers with this gene can temporarily sacrifice their innate super perception to predict what other beings around them will do for a few hours, increasing dodge and accuracy.</description>
         <iconPath>Powers/Specializations/Gene_LesserPortent</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>4</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
         <abilities>
             <li>SHG_LesserPortent</li>
@@ -82,7 +82,7 @@
         <label>calming aura</label>
         <description>Supers with this gene can temporarily sacrifice their innate super persuasion to soothe the minds everyone in a wide area around them for a day.</description>
         <iconPath>Powers/Specializations/Gene_CalmingAura</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>5</displayOrderInCategory>
         <biostatMet>-1</biostatMet>
         <abilities>
             <li>SHG_Pools_CalmingAura</li>
@@ -100,7 +100,7 @@
         <label>sniping aura</label>
         <description>Supers with this gene can temporarily sacrifice their innate super precision to grant everyone around them some of their precision abilities for a day.</description>
         <iconPath>Powers/Specializations/Gene_SniperSquad</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>6</displayOrderInCategory>
         <biostatMet>-2</biostatMet>
         <abilities>
             <li>SHG_Pools_SniperSquad</li>
@@ -118,7 +118,7 @@
         <label>wind step</label>
         <description>Supers with this gene can temporarily sacrifice their innate super speed to start hovering for a day.</description>
         <iconPath>Powers/Specializations/Gene_WindStep</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>7</displayOrderInCategory>
         <biostatMet>-1</biostatMet>
         <abilities>
             <li>SHG_Pools_WindStep</li>
@@ -136,7 +136,7 @@
         <label>crushing strength</label>
         <description>Supers with this gene can temporarily sacrifice their innate super strength in one great burst to increase their melee damage considerably for an hour.</description>
         <iconPath>Powers/Specializations/Gene_CrushingStrength</iconPath>
-        <prerequisite>SuperHeroBase</prerequisite>
+        <displayOrderInCategory>8</displayOrderInCategory>
         <biostatMet>-3</biostatMet>
         <abilities>
             <li>SHG_Pools_CrushingStrength</li>
