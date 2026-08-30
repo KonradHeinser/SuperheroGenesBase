@@ -277,7 +277,7 @@ namespace SuperHeroGenesBase
 
         public static void AnyNonDownedColonistPostfix(ref bool __result, IEnumerable<IThingHolder> pods)
         {
-            if (!__result && pods.First() is CompTransporter transporter && transporter.parent.def == SHGDefOf.SHG_FlightPod)
+            if (!__result && pods?.Count() == 1 && pods.First() is CompTransporter transporter && transporter.parent.def == SHGDefOf.SHG_FlightPod)
                 __result = true;
         }
     }
