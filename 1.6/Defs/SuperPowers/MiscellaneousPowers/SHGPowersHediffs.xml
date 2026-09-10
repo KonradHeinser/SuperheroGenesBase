@@ -192,7 +192,7 @@
     <HediffDef ParentName="SHG_SpecialHediffBase" MayRequire="Ludeon.Rimworld.Anomaly">
         <defName>SHG_DetectMetalHorror</defName>
         <label>detect metal horror</label>
-        <description>A super put a special invisible mark on this pawn that searches their body for hidden metal horrors. It will not be able to tell where the exact location of the target is within the pawn as it uses oddities in the marked pawn's blood and nervous system as an indicator.\n\nIf this goes away without metal horror detected appearing, the pawn is safe. For now.</description>
+        <description>A super put a special invisible mark on this pawn that searches their body for hidden metal horrors. It will not be able to tell where the exact location of the target is within the pawn as it just uses oddities in the marked pawn's blood and nervous system as an indicator.\n\nIf this goes away without metal horror detected appearing, the pawn is safe. For now.</description>
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
                 <severityPerDay>-24</severityPerDay>
@@ -222,23 +222,6 @@
                     </li>
                 </hediffSets>
                 <baseSeverity>0</baseSeverity>
-            </li>
-        </comps>
-    </HediffDef>
-
-    <HediffDef ParentName="SHG_HiddenHediffBase" MayRequire="EBSG.Framework">
-        <defName>SHG_TemporaryForcefield</defName>
-        <label>forcefield</label>
-        <description>A constant forcefield is being generated around this pawn to protect them from damage.</description>
-        <comps>
-            <li Class="EBSGFramework.HediffCompProperties_Shield">
-                <maxEnergy>3</maxEnergy>
-                <energyRechargeRate>0</energyRechargeRate>
-                <blocksMeleeDamage>True</blocksMeleeDamage>
-                <gizmoTip>A constant forcefield protects this pawn from most harm.</gizmoTip>
-                <energyOnReset>1</energyOnReset>
-                <energyPerDamageModifier>0.01</energyPerDamageModifier>
-                <removeOnBreak>True</removeOnBreak>
             </li>
         </comps>
     </HediffDef>

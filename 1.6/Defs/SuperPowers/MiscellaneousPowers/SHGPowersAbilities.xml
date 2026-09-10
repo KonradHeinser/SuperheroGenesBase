@@ -795,23 +795,6 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHGSelfCastBase" MayRequire="EBSG.Framework">
-        <defName>SHG_TemporaryForcefield</defName>
-        <label>forcefield</label>
-        <description>Create a barrier around the pawn that blocks up to 500 points of damage. This barrier does not vanish after the day is up, but will be replaced if this ability is used again.</description>
-        <iconPath>Powers/Gene_Forcefield</iconPath>
-        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
-        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
-        <cooldownTicksRange>60000</cooldownTicksRange>
-        <comps>
-            <li Class="CompProperties_AbilityGiveHediff">
-                <compClass>CompAbilityEffect_GiveHediff</compClass>
-                <hediffDef>SHG_TemporaryForcefield</hediffDef>
-                <replaceExisting>True</replaceExisting>
-            </li>
-        </comps>
-    </AbilityDef>
-
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_MidasTouch</defName>
         <label>midas touch</label>

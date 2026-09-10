@@ -541,20 +541,6 @@
         </descriptionHyperlinks>
     </GeneDef>
 
-    <GeneDef ParentName="SuperPowersSupportBase" MayRequire="EBSG.Framework">
-        <defName>SHG_TemporaryForcefield</defName>
-        <label>temporary forcefield</label>
-        <description>Carriers of this gene can create a forcefield around themselves that blocks up to 500 points of damage once per day.</description>
-        <iconPath>Powers/Gene_Forcefield</iconPath>
-        <biostatMet>-1</biostatMet>
-        <abilities>
-            <li>SHG_TemporaryForcefield</li>
-        </abilities>
-        <exclusionTags>
-            <li>SHG_Forcefield</li>
-        </exclusionTags>
-    </GeneDef>
-
     <GeneDef ParentName="SuperPowersOffensiveBase">
         <defName>SHG_MidasTouch</defName>
         <label>midas touch</label>
@@ -570,5 +556,4 @@
             <AbilityDef>SHG_MidasTouch</AbilityDef>
         </descriptionHyperlinks>
     </GeneDef>
-
 </Defs>
