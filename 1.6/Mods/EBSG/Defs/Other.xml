@@ -16,6 +16,11 @@
             <li>SHG_Telepush</li>
             <li>SHG_Telepull</li>
         </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef MayRequire="Ludeon.Rimworld.Anomaly">SHG_DetectMetalHorror</AbilityDef>
+            <AbilityDef>SHG_Telepush</AbilityDef>
+            <AbilityDef>SHG_Telepull</AbilityDef>
+        </descriptionHyperlinks>
         <modExtensions>
             <li Class="EBSGFramework.EBSGExtension">
                 <conflictingGenes>

@@ -12,6 +12,9 @@
         <exclusionTags>
             <li>SHG_Forcefield</li>
         </exclusionTags>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_TemporaryForcefield</AbilityDef>
+        </descriptionHyperlinks>
     </GeneDef>
 
     <AbilityDef ParentName="SHGSelfCastBase">
@@ -60,6 +63,9 @@
         <abilities>
             <li>SHG_CopySelf</li>
         </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_CopySelf</AbilityDef>
+        </descriptionHyperlinks>
     </GeneDef>
 
     <AbilityDef ParentName="SHGSelfCastBase">

@@ -1,4 +1,207 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <!--These are given their own file to avoid cluttering Powers.xml too much-->
+    <AbilityDef ParentName="SHGPowerAbilitiesBase" Name="SHG_RePowerBase" Abstract="True">
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <casterMustBeCapableOfViolence>False</casterMustBeCapableOfViolence>
+        <aiCanUse>False</aiCanUse>
+        <verbProperties>
+            <requireLineOfSight>false</requireLineOfSight>
+            <range>4.9</range>
+            <drawAimPie>false</drawAimPie>
+            <targetParams>
+                <canTargetPawns>False</canTargetPawns>
+                <canTargetItems>True</canTargetItems>
+                <thingCategory>Item</thingCategory>
+                <mapObjectTargetsMustBeAutoAttackable>False</mapObjectTargetsMustBeAutoAttackable>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Refine</defName>
+        <label>refine</label>
+        <description>Supers with this gene can improve the quality of a nearby item once per day.</description>
+        <iconPath>Flaws/Gene_Weaponless</iconPath>
+        <biostatMet>-1</biostatMet>
+        <displayOrderInCategory>420</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Refine</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Refine</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <AbilityDef ParentName="SHG_RePowerBase">
+        <defName>SHG_Refine</defName>
+        <label>refine</label>
+        <description>Improve the quality of a nearby item.</description>
+        <comps>
+            <li Class="EBSGFramework.CompProperties_AbilityAlterItem">
+                <increaseQuality>True</increaseQuality>
+                <requireQuality>True</requireQuality>
+            </li>
+        </comps>
+    </AbilityDef>
+    
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Refurbish</defName>
+        <label>refurbish</label>
+        <description>Supers with this gene can remove tainting and/or biocoding from one item every day.</description>
+        <iconPath>Flaws/Gene_Weaponless</iconPath>
+        <biostatMet>-1</biostatMet>
+        <displayOrderInCategory>420</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Refurbish</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Refurbish</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <AbilityDef ParentName="SHG_RePowerBase">
+        <defName>SHG_Refurbish</defName>
+        <label>refurbish</label>
+        <description>Remove tainting and/or biocoding from a nearby item.</description>
+        <verbProperties>
+            <targetParams>
+                <canTargetBuildings>False</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="EBSGFramework.CompProperties_AbilityAlterItem">
+                <requireAny>True</requireAny>
+                <uncode>True</uncode>
+                <untaint>True</untaint>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Repair</defName>
+        <label>repair</label>
+        <description>Supers with this gene can remove all damage on one item every day.</description>
+        <iconPath>Flaws/Gene_Weaponless</iconPath>
+        <biostatMet>-1</biostatMet>
+        <displayOrderInCategory>420</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Repair</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Repair</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <AbilityDef ParentName="SHG_RePowerBase">
+        <defName>SHG_Repair</defName>
+        <label>repair</label>
+        <description>Remove all damage on an item.</description>
+        <verbProperties>
+            <targetParams>
+                <onlyTargetDamagedThings>True</onlyTargetDamagedThings>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="EBSGFramework.CompProperties_AbilityAlterItem">
+                <maxHPPercentRestore>1</maxHPPercentRestore>
+                <requireHitPoints>True</requireHitPoints>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <GeneDef ParentName="SuperPowersSupportBase">
+        <defName>SHG_Reforge</defName>
+        <label>reforge</label>
+        <description>Supers with this gene can replace the metals used for an item with a better metal once per day. This ability cannot be used to change raw materials directly.</description>
+        <iconPath>Flaws/Gene_Weaponless</iconPath>
+        <biostatMet>-2</biostatMet>
+        <displayOrderInCategory>420</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Reforge</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Reforge</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <AbilityDef ParentName="SHG_RePowerBase">
+        <defName>SHG_Reforge</defName>
+        <label>reforge</label>
+        <description>Replace the metals used for the item with stuff of a better quality.</description>
+        <comps>
+            <li Class="EBSGFramework.CompProperties_AbilityAlterItem">
+                <requireStuffing>True</requireStuffing>
+                <stuffingChange>
+                    <li>
+                        <li>Steel</li>
+                        <li>Plasteel</li>
+                    </li>
+                    <li>
+                        <li>Silver</li>
+                        <li>Gold</li>
+                    </li>
+                    <li MayRequire="Ludeon.Rimworld.Odyssey">
+                        <li>BlocksSlate</li>
+                        <li>Obsidian</li>
+                        <li>Plasteel</li>
+                    </li>
+                </stuffingChange>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <GeneDef ParentName="SHG_ArchetypeBase">
+        <defName>SHG_Revitalizer</defName>
+        <label>revitalizer</label>
+        <description>Revitalizers are the embodiment of the saying "one man's trash is another man's treasure". They are able to restore items to pristine condition while also sometimes improving the quality or materials of the item, and unlike supers with individual abilities that accomplish this task, they can all of those at the same time with only a quarter of the downtime in-between.</description>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>SHG_Revitalizer</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Revitalizer</AbilityDef>
+        </descriptionHyperlinks>
+        <modExtensions>
+            <li Class="EBSGFramework.EBSGExtension">
+                <conflictingGenes>
+                    <li>SHG_Refurbish</li>
+                    <li>SHG_Refine</li>
+                    <li>SHG_Repair</li>
+                    <li>SHG_Reforge</li>
+                </conflictingGenes>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+    <AbilityDef ParentName="SHG_RePowerBase">
+        <defName>SHG_Revitalizer</defName>
+        <label>revitalize</label>
+        <description>Restore all lost hit points, purify tainting, remove biocoding, upgrade quality, and improve materials all at the same time. Depending on the material they are made with, some items might not have their materials upgraded.</description>
+        <cooldownTicksRange>15000</cooldownTicksRange>
+        <comps>
+            <li Class="EBSGFramework.CompProperties_AbilityAlterItem">
+                <requireAny>True</requireAny>
+                <maxHPPercentRestore>1</maxHPPercentRestore>
+                <uncode>True</uncode>
+                <untaint>True</untaint>
+                <increaseQuality>True</increaseQuality>
+                <stuffingChange>
+                    <li>
+                        <li>Steel</li>
+                        <li>Plasteel</li>
+                    </li>
+                    <li>
+                        <li>Silver</li>
+                        <li>Gold</li>
+                    </li>
+                    <li MayRequire="Ludeon.Rimworld.Odyssey">
+                        <li>BlocksSlate</li>
+                        <li>Obsidian</li>
+                        <li>Plasteel</li>
+                    </li>
+                </stuffingChange>
+            </li>
+        </comps>
+    </AbilityDef>
 </Defs>
