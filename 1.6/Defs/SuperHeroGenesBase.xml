@@ -525,8 +525,8 @@
         <label>flying pawn</label>
         <description>A super capable of transporting themselves to various places in the world.</description>
         <graphicData>
-            <texPath>Things/Mote/SparkFlash</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Mote/SparkThrown</texPath>
+            <graphicClass>Graphic_Mote</graphicClass>
             <shaderType>CutoutFlying</shaderType>
             <drawSize>10</drawSize>
         </graphicData>
