@@ -21,8 +21,8 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Refine</defName>
         <label>refine</label>
-        <description>Supers with this gene can improve the quality of a nearby item once per day.</description>
-        <iconPath>Flaws/Gene_Weaponless</iconPath>
+        <description>Supers with this gene can improve the quality of a nearby item once per day.\n\nThis ability can only be used on items which can be targeted by themselves (unequipped and not hidden inside an object like a cryptosleep casket).</description>
+        <iconPath>Powers/Refine</iconPath>
         <biostatMet>-1</biostatMet>
         <displayOrderInCategory>420</displayOrderInCategory>
         <abilities>
@@ -36,7 +36,8 @@
     <AbilityDef ParentName="SHG_RePowerBase">
         <defName>SHG_Refine</defName>
         <label>refine</label>
-        <description>Improve the quality of a nearby item.</description>
+        <description>Improve the quality of a nearby item.\n\nThis ability can only be used on items which can be targeted by themselves (unequipped and not hidden inside an object like a cryptosleep casket).</description>
+        <iconPath>Powers/Refine</iconPath>
         <comps>
             <li Class="EBSGFramework.CompProperties_AbilityAlterItem">
                 <increaseQuality>True</increaseQuality>
@@ -48,8 +49,8 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Refurbish</defName>
         <label>refurbish</label>
-        <description>Supers with this gene can remove tainting and/or biocoding from one item every day.</description>
-        <iconPath>Flaws/Gene_Weaponless</iconPath>
+        <description>Supers with this gene can remove tainting and/or biocoding from one item every day.\n\nThis ability can only be used on items which can be targeted by themselves (unequipped and not hidden inside an object like a cryptosleep casket).</description>
+        <iconPath>Powers/Refurbish</iconPath>
         <biostatMet>-1</biostatMet>
         <displayOrderInCategory>420</displayOrderInCategory>
         <abilities>
@@ -63,7 +64,8 @@
     <AbilityDef ParentName="SHG_RePowerBase">
         <defName>SHG_Refurbish</defName>
         <label>refurbish</label>
-        <description>Remove tainting and/or biocoding from a nearby item.</description>
+        <description>Remove tainting and/or biocoding from a nearby item.\n\nThis ability can only be used on items which can be targeted by themselves (unequipped and not hidden inside an object like a cryptosleep casket).</description>
+        <iconPath>Powers/Refurbish</iconPath>
         <verbProperties>
             <targetParams>
                 <canTargetBuildings>False</canTargetBuildings>
@@ -81,8 +83,8 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Repair</defName>
         <label>repair</label>
-        <description>Supers with this gene can remove all damage on one item every day.</description>
-        <iconPath>Flaws/Gene_Weaponless</iconPath>
+        <description>Supers with this gene can remove all damage on one item every day.\n\nThis ability can only be used on items which can be targeted by themselves (unequipped and not hidden inside an object like a cryptosleep casket), or damaged buildings.</description>
+        <iconPath>Powers/Repair</iconPath>
         <biostatMet>-1</biostatMet>
         <displayOrderInCategory>420</displayOrderInCategory>
         <abilities>
@@ -96,7 +98,8 @@
     <AbilityDef ParentName="SHG_RePowerBase">
         <defName>SHG_Repair</defName>
         <label>repair</label>
-        <description>Remove all damage on an item.</description>
+        <description>Remove all damage on an item.\n\nThis ability can only be used on items which can be targeted by themselves (unequipped and not hidden inside an object like a cryptosleep casket), or damaged buildings.</description>
+        <iconPath>Powers/Repair</iconPath>
         <verbProperties>
             <targetParams>
                 <onlyTargetDamagedThings>True</onlyTargetDamagedThings>
@@ -113,10 +116,14 @@
     <GeneDef ParentName="SuperPowersSupportBase">
         <defName>SHG_Reforge</defName>
         <label>reforge</label>
-        <description>Supers with this gene can replace the metals used for an item with a better metal once per day. This ability cannot be used to change raw materials directly.</description>
-        <iconPath>Flaws/Gene_Weaponless</iconPath>
+        <description>Supers with this gene can replace the metals used for an item with a better metal once per day. This ability cannot be used to change raw materials directly.\n\nThis ability can only be used on items which can be targeted by themselves (unequipped and not hidden inside an object like a cryptosleep casket), or buildings.</description>
+        <iconPath>Powers/Reforge</iconPath>
         <biostatMet>-2</biostatMet>
         <displayOrderInCategory>420</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>The ability can turn steel items into plasteel items, or silver items into gold.</li>
+            <li MayRequire="Ludeon.Rimworld.Odyssey">It also includes a bonus transformation for slate items for those with Odyssey enabled.</li>
+        </customEffectDescriptions>
         <abilities>
             <li>SHG_Reforge</li>
         </abilities>
@@ -128,7 +135,8 @@
     <AbilityDef ParentName="SHG_RePowerBase">
         <defName>SHG_Reforge</defName>
         <label>reforge</label>
-        <description>Replace the metals used for the item with stuff of a better quality.</description>
+        <description>Replace the metals used for the item with stuff of a better quality.\n\nThis ability can only be used on items which can be targeted by themselves (unequipped and not hidden inside an object like a cryptosleep casket), or buildings.</description>
+        <iconPath>Powers/Reforge</iconPath>
         <comps>
             <li Class="EBSGFramework.CompProperties_AbilityAlterItem">
                 <requireStuffing>True</requireStuffing>
@@ -155,6 +163,7 @@
         <defName>SHG_Revitalizer</defName>
         <label>revitalizer</label>
         <description>Revitalizers are the embodiment of the saying "one man's trash is another man's treasure". They are able to restore items to pristine condition while also sometimes improving the quality or materials of the item, and unlike supers with individual abilities that accomplish this task, they can all of those at the same time with only a quarter of the downtime in-between.</description>
+        <iconPath>Archetypes/Revitalizer</iconPath>
         <biostatMet>-2</biostatMet>
         <abilities>
             <li>SHG_Revitalizer</li>
@@ -177,8 +186,9 @@
     <AbilityDef ParentName="SHG_RePowerBase">
         <defName>SHG_Revitalizer</defName>
         <label>revitalize</label>
-        <description>Restore all lost hit points, purify tainting, remove biocoding, upgrade quality, and improve materials all at the same time. Depending on the material they are made with, some items might not have their materials upgraded.</description>
+        <description>Restore all lost hit points, purify tainting, remove biocoding, upgrade quality, and improve materials all at the same time. Depending on the material they are made with, some items might not have their materials upgraded.\n\nThis ability can only be used on items which can be targeted by themselves (unequipped and not hidden inside an object like a cryptosleep casket), or buildings.</description>
         <cooldownTicksRange>15000</cooldownTicksRange>
+        <iconPath>Archetypes/Revitalizer</iconPath>
         <comps>
             <li Class="EBSGFramework.CompProperties_AbilityAlterItem">
                 <requireAny>True</requireAny>

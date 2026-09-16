@@ -55,7 +55,7 @@
         <defName>SHG_CopySelf</defName>
         <label>copy self</label>
         <description>Carriers of this gene can create a permanent copy of themselves once per quadrum.</description>
-        <iconPath>Powers/Gene_Telepull</iconPath>
+        <iconPath>Powers/CopySelf</iconPath>
         <marketValueFactor>3</marketValueFactor>
         <displayOrderInCategory>-1</displayOrderInCategory>
         <biostatArc>1</biostatArc>
@@ -72,7 +72,7 @@
         <defName>SHG_CopySelf</defName>
         <label>copy self</label>
         <description>Create a permanent copy of the caster, including any current health effects they may have. This copy will start without any of the equipment the caster, but will be able to also copy itself once it has been around for a quadrum.</description>
-        <iconPath>Things/Mote/SpeechSymbols/Speech</iconPath>
+        <iconPath>Powers/CopySelf</iconPath>
         <sendMessageOnCooldownComplete>True</sendMessageOnCooldownComplete>
         <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
