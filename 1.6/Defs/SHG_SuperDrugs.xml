@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <ThingDef ParentName="DrugBase" Name="SHG_SuperCreatingDrugBase" Abstract="True">
+    <ThingDef ParentName="MakeableDrugPillBase" Name="SHG_SuperCreatingDrugBase" Abstract="True">
         <possessionCount>10</possessionCount>
         <socialPropernessMatters>false</socialPropernessMatters>
         <rotatable>false</rotatable>
@@ -15,15 +15,19 @@
             <li>SuperCreatingDrug</li>
         </tradeTags>
         <ingestible>
-            <foodType>Processed</foodType>
-            <baseIngestTicks>100</baseIngestTicks>
-            <chairSearchRadius>0</chairSearchRadius>
-            <ingestSound>Ingest_Pill</ingestSound>
-            <ingestHoldUsesTable>false</ingestHoldUsesTable>
-            <ingestCommandString>Take {0}</ingestCommandString>
-            <ingestReportString>Taking {0}.</ingestReportString>
             <drugCategory>Medical</drugCategory>
         </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>Archogenetics</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <displayPriority>2100</displayPriority>
+        </recipeMaker>
+        <costList>
+            <ArchiteCapsule>1</ArchiteCapsule>
+            <Neutroamine>10</Neutroamine>
+        </costList>
         <thingSetMakerTags>
             <li>SuperCreatingDrug</li>
             <li>SHGDrug</li>
@@ -40,7 +44,7 @@
     <ThingDef ParentName="SHG_SuperCreatingDrugBase">
         <defName>SHG_SuperCreatingPill</defName>
         <label>super creating pill</label>
-        <description>A pill that gives the pawn the superhero base gene without side effects. The gene will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already have the base superhero gene.</description>
+        <description>A pill that gives the pawn the superhero base gene without side effects. The gene will be inheritable, even if the pawn's other genes are not. If the pawn has the dormant super archetype, that gene will be removed. The pill will be wasted if the consumer already has the base superhero gene and does not have the dormant super gene.</description>
         <graphicData>
             <texPath>Drug/SHG_SuperPill</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -54,12 +58,15 @@
                     <alwaysAddedGenes>
                         <li>SuperHeroBase</li>
                     </alwaysAddedGenes>
+                    <alwaysRemovedGenes>
+                        <li>SHG_DormantSuper</li>
+                    </alwaysRemovedGenes>
                 </li>
             </outcomeDoers>
         </ingestible>
     </ThingDef>
 
-    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase"> <!--This will be removed in 1.7-->
         <defName>SHG_SuperActivationPill</defName>
         <label>super activation pill</label>
         <description>A pill that removes the dormant super gene from the ingester. This does not grant the superhero base gene, so if the individual doesn't have the dormant super gene, this does nothing.</description>
@@ -70,6 +77,10 @@
         <statBases>
             <MarketValue>100</MarketValue>
         </statBases>
+        <tradeTags Inherit="False" />
+        <costList Inherit="False" />
+        <recipeMaker Inherit="False" />
+        <thingSetMakerTags Inherit="False" />
         <ingestible>
             <outcomeDoers>
                 <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
@@ -92,6 +103,9 @@
         <statBases>
             <MarketValue>1500</MarketValue>
         </statBases>
+        <costList>
+            <WoodLog>150</WoodLog>
+        </costList>
         <ingestible>
             <outcomeDoers>
                 <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
@@ -136,6 +150,9 @@
         <statBases>
             <MarketValue>1500</MarketValue>
         </statBases>
+        <costList>
+            <Steel>150</Steel>
+        </costList>
         <ingestible>
             <outcomeDoers>
                 <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
@@ -206,6 +223,9 @@
         <statBases>
             <MarketValue>3000</MarketValue>
         </statBases>
+        <costList>
+            <Chemfuel>150</Chemfuel>
+        </costList>
         <ingestible>
             <outcomeDoers>
                 <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
@@ -296,6 +316,9 @@
         <statBases>
             <MarketValue>3000</MarketValue>
         </statBases>
+        <costList>
+            <Plasteel>75</Plasteel>
+        </costList>
         <ingestible>
             <outcomeDoers>
                 <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
@@ -390,6 +413,9 @@
         <statBases>
             <MarketValue>3000</MarketValue>
         </statBases>
+        <costList>
+            <Silver>1000</Silver>
+        </costList>
         <ingestible>
             <outcomeDoers>
                 <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
@@ -479,6 +505,9 @@
         <statBases>
             <MarketValue>5000</MarketValue>
         </statBases>
+        <costList>
+            <Gold>250</Gold>
+        </costList>
         <ingestible>
             <outcomeDoers>
                 <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
@@ -534,6 +563,9 @@
         <statBases>
             <MarketValue>5000</MarketValue>
         </statBases>
+        <costList>
+            <HemogenPack>50</HemogenPack>
+        </costList>
         <ingestible>
             <outcomeDoers>
                 <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
@@ -604,6 +636,9 @@
         <statBases>
             <MarketValue>5000</MarketValue>
         </statBases>
+        <costList>
+            <Uranium>150</Uranium>
+        </costList>
         <ingestible>
             <outcomeDoers>
                 <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
@@ -629,6 +664,9 @@
         <statBases>
             <MarketValue>1500</MarketValue>
         </statBases>
+        <costList>
+            <Jade>75</Jade>
+        </costList>
         <ingestible>
             <outcomeDoers>
                 <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
@@ -657,4 +695,30 @@
             </outcomeDoers>
         </ingestible>
     </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase" MayRequire="Ludeon.Rimworld.Royalty">
+        <defName>SHG_PsionistCreatingPill</defName>
+        <label>psionist creating pill</label>
+        <description>A pill that gives the pawn the psionist gene without side effects. The gene will be inheritable, even if the pawn's other genes are not. The pill will be wasted if the consumer already has the psionist gene. This will grant the pawn a psylink if they don't already have one, but obtaining psionist specific abilities will require finding psytrainers.</description>
+        <graphicData>
+            <texPath>Drug/SHG_PsionistPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>1000</MarketValue>
+        </statBases>
+        <costList>
+            <PsychicAmplifier>1</PsychicAmplifier>
+        </costList>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
+                    <alwaysAddedGenes>
+                        <li>SHG_Archetypes_Psionist</li>
+                    </alwaysAddedGenes>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
 </Defs>
