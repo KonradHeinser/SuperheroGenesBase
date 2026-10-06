@@ -6,9 +6,9 @@
         <rotatable>false</rotatable>
         <techLevel>Spacer</techLevel>
         <statBases>
-            <WorkToMake>600</WorkToMake>
             <Mass>0.01</Mass>
             <Flammability>0.1</Flammability>
+            <WorkToMake>10000</WorkToMake>
         </statBases>
         <tradeTags Inherit="False">
             <li>ExoticMisc</li>
@@ -23,6 +23,11 @@
                 <li>DrugLab</li>
             </recipeUsers>
             <displayPriority>2100</displayPriority>
+            <bulkRecipeCount>-1</bulkRecipeCount>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+                <Intellectual>10</Intellectual>
+            </skillRequirements>
         </recipeMaker>
         <costList>
             <ArchiteCapsule>1</ArchiteCapsule>
@@ -49,41 +54,12 @@
             <texPath>Drug/SHG_SuperPill</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
-        <statBases>
-            <MarketValue>1000</MarketValue>
-        </statBases>
         <ingestible>
             <outcomeDoers>
                 <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
                     <alwaysAddedGenes>
                         <li>SuperHeroBase</li>
                     </alwaysAddedGenes>
-                    <alwaysRemovedGenes>
-                        <li>SHG_DormantSuper</li>
-                    </alwaysRemovedGenes>
-                </li>
-            </outcomeDoers>
-        </ingestible>
-    </ThingDef>
-
-    <ThingDef ParentName="SHG_SuperCreatingDrugBase"> <!--This will be removed in 1.7-->
-        <defName>SHG_SuperActivationPill</defName>
-        <label>super activation pill</label>
-        <description>A pill that removes the dormant super gene from the ingester. This does not grant the superhero base gene, so if the individual doesn't have the dormant super gene, this does nothing.</description>
-        <graphicData>
-            <texPath>Drug/SHG_SuperPill</texPath>
-            <graphicClass>Graphic_StackCount</graphicClass>
-        </graphicData>
-        <statBases>
-            <MarketValue>100</MarketValue>
-        </statBases>
-        <tradeTags Inherit="False" />
-        <costList Inherit="False" />
-        <recipeMaker Inherit="False" />
-        <thingSetMakerTags Inherit="False" />
-        <ingestible>
-            <outcomeDoers>
-                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
                     <alwaysRemovedGenes>
                         <li>SHG_DormantSuper</li>
                     </alwaysRemovedGenes>
@@ -100,9 +76,6 @@
             <texPath>Drug/SHG_MundaneSuperPill</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
-        <statBases>
-            <MarketValue>1500</MarketValue>
-        </statBases>
         <costList>
             <WoodLog>150</WoodLog>
         </costList>
@@ -147,9 +120,6 @@
             <texPath>Drug/SHG_SoldierSuperPill</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
-        <statBases>
-            <MarketValue>1500</MarketValue>
-        </statBases>
         <costList>
             <Steel>150</Steel>
         </costList>
@@ -220,9 +190,6 @@
             <texPath>Drug/SHG_MundaneMancerPill</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
-        <statBases>
-            <MarketValue>3000</MarketValue>
-        </statBases>
         <costList>
             <Chemfuel>150</Chemfuel>
         </costList>
@@ -313,9 +280,6 @@
             <texPath>Drug/SHG_WarSuperPill</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
-        <statBases>
-            <MarketValue>3000</MarketValue>
-        </statBases>
         <costList>
             <Plasteel>75</Plasteel>
         </costList>
@@ -410,11 +374,8 @@
             <texPath>Drug/SHG_SupportSuperPill</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
-        <statBases>
-            <MarketValue>3000</MarketValue>
-        </statBases>
         <costList>
-            <Silver>1000</Silver>
+            <Jade>75</Jade>
         </costList>
         <ingestible>
             <outcomeDoers>
@@ -502,11 +463,8 @@
             <texPath>Drug/SHG_SummonerPill</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
-        <statBases>
-            <MarketValue>5000</MarketValue>
-        </statBases>
         <costList>
-            <Gold>250</Gold>
+            <Gold>50</Gold>
         </costList>
         <ingestible>
             <outcomeDoers>
@@ -553,6 +511,46 @@
     </ThingDef>
 
     <ThingDef ParentName="SHG_SuperCreatingDrugBase">
+        <defName>SHG_SuperMutationPill</defName>
+        <label>mutating super creating pill</label>
+        <description>A pill that gives the pawn the superhero base gene along with a random super mutation. Any existing mutation will be removed. Unlike most advanced super creating pills, this has no risk of side effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
+        <graphicData>
+            <texPath>Drug/SHG_SuperMutationPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <costList>
+            <Silver>100</Silver>
+        </costList>
+        <ingestible>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
+                    <alwaysAddedGenes>
+                        <li>SuperHeroBase</li>
+                    </alwaysAddedGenes>
+                    <alwaysRemovedGenes>
+                        <li>SHG_DoubleHearted</li>
+                        <li>SHG_HALK</li>
+                    </alwaysRemovedGenes>
+                    <geneSets>
+                        <li><geneSet><li>SHG_SuperPsychicPotential</li></geneSet></li>
+                        <li><geneSet><li>SHG_SuperDenseBones</li></geneSet></li>
+                        <li><geneSet><li>SHG_Blindsight</li></geneSet></li>
+                        <li><geneSet><li>SHG_GhostlyPresence</li></geneSet></li>
+                        <li><geneSet><li>SHG_Prey</li></geneSet></li>
+                        <li><geneSet><li>SHG_Predator</li></geneSet></li>
+                        <li><geneSet><li>SHG_AdrenalineJunkie</li></geneSet></li>
+                        <li><geneSet><li>SHG_Berserker</li></geneSet></li>
+                        <li><geneSet><li>SHG_MadGenius</li></geneSet></li>
+                        <li><geneSet><li>SHG_Technophile</li></geneSet></li>
+                        <li><geneSet><li>SHG_Naturalist</li></geneSet></li>
+                        <li><geneSet><li>SHG_UncontrollableMindReading</li></geneSet></li>
+                    </geneSets>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
         <defName>SHG_HemomancerCreatingPill</defName>
         <label>hemomancer creating pill</label>
         <description>A pill that gives the pawn the Hemomancer gene, the Bloodthirsty gene, and most of the genes of a random hemomantic path. If the pawn has any genes from a different hemomancer path from the selected one, those genes will be removed. Consuming the same pill mutiple times will attempt to switch what type of hemomancer they are.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
@@ -560,11 +558,10 @@
             <texPath>Drug/SHG_HemomancerPill</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
-        <statBases>
-            <MarketValue>5000</MarketValue>
-        </statBases>
-        <costList>
-            <HemogenPack>50</HemogenPack>
+        <costList Inherit="False">
+            <HemogenPack>30</HemogenPack>
+            <MechSerumHealer>1</MechSerumHealer>
+            <ArchiteCapsule>2</ArchiteCapsule>
         </costList>
         <ingestible>
             <outcomeDoers>
@@ -633,11 +630,10 @@
             <texPath>Drug/SHG_RadiomancerPill</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
-        <statBases>
-            <MarketValue>5000</MarketValue>
-        </statBases>
         <costList>
-            <Uranium>150</Uranium>
+            <Uranium>75</Uranium>
+            <ArchiteCapsule>2</ArchiteCapsule>
+            <TechprofSubpersonaCore>1</TechprofSubpersonaCore>
         </costList>
         <ingestible>
             <outcomeDoers>
@@ -653,49 +649,6 @@
         </ingestible>
     </ThingDef>
 
-    <ThingDef ParentName="SHG_SuperCreatingDrugBase">
-        <defName>SHG_SuperMutationPill</defName>
-        <label>mutating super creating pill</label>
-        <description>A pill that gives the pawn the superhero base gene along with a random super mutation. Any existing mutation will be removed. Unlike most advanced super creating pills, this has no risk of side effects.\n\nThe genes will be inheritable, even if the pawn's other genes are not.</description>
-        <graphicData>
-            <texPath>Drug/SHG_SuperMutationPill</texPath>
-            <graphicClass>Graphic_StackCount</graphicClass>
-        </graphicData>
-        <statBases>
-            <MarketValue>1500</MarketValue>
-        </statBases>
-        <costList>
-            <Jade>75</Jade>
-        </costList>
-        <ingestible>
-            <outcomeDoers>
-                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
-                    <alwaysAddedGenes>
-                        <li>SuperHeroBase</li>
-                    </alwaysAddedGenes>
-                    <alwaysRemovedGenes>
-                        <li>SHG_DoubleHearted</li>
-                        <li>SHG_HALK</li>
-                    </alwaysRemovedGenes>
-                    <geneSets>
-                        <li><geneSet><li>SHG_SuperPsychicPotential</li></geneSet></li>
-                        <li><geneSet><li>SHG_SuperDenseBones</li></geneSet></li>
-                        <li><geneSet><li>SHG_Blindsight</li></geneSet></li>
-                        <li><geneSet><li>SHG_GhostlyPresence</li></geneSet></li>
-                        <li><geneSet><li>SHG_Prey</li></geneSet></li>
-                        <li><geneSet><li>SHG_Predator</li></geneSet></li>
-                        <li><geneSet><li>SHG_AdrenalineJunkie</li></geneSet></li>
-                        <li><geneSet><li>SHG_Berserker</li></geneSet></li>
-                        <li><geneSet><li>SHG_MadGenius</li></geneSet></li>
-                        <li><geneSet><li>SHG_Technophile</li></geneSet></li>
-                        <li><geneSet><li>SHG_Naturalist</li></geneSet></li>
-                        <li><geneSet><li>SHG_UncontrollableMindReading</li></geneSet></li>
-                    </geneSets>
-                </li>
-            </outcomeDoers>
-        </ingestible>
-    </ThingDef>
-
     <ThingDef ParentName="SHG_SuperCreatingDrugBase" MayRequire="Ludeon.Rimworld.Royalty">
         <defName>SHG_PsionistCreatingPill</defName>
         <label>psionist creating pill</label>
@@ -704,11 +657,9 @@
             <texPath>Drug/SHG_PsionistPill</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
-        <statBases>
-            <MarketValue>1000</MarketValue>
-        </statBases>
-        <costList>
+        <costList Inherit="False">
             <PsychicAmplifier>1</PsychicAmplifier>
+            <Neutroamine>30</Neutroamine>
         </costList>
         <ingestible>
             <outcomeDoers>

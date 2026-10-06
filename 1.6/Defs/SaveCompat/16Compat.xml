@@ -96,4 +96,30 @@
         </comps>
     </HediffDef>
 
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase"> <!--This will be removed in 1.7-->
+        <defName>SHG_SuperActivationPill</defName>
+        <label>super activation pill</label>
+        <description>A pill that removes the dormant super gene from the ingester. This does not grant the superhero base gene, so if the individual doesn't have the dormant super gene, this does nothing.</description>
+        <graphicData>
+            <texPath>Drug/SHG_SuperPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>100</MarketValue>
+        </statBases>
+        <tradeTags Inherit="False" />
+        <costList Inherit="False" />
+        <recipeMaker Inherit="False" IsNull="True" />
+        <thingSetMakerTags Inherit="False" />
+        <ingestible>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
+                    <alwaysRemovedGenes>
+                        <li>SHG_DormantSuper</li>
+                    </alwaysRemovedGenes>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
 </Defs>
