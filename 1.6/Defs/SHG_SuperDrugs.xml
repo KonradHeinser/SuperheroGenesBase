@@ -631,9 +631,9 @@
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <costList>
-            <Uranium>75</Uranium>
+            <Uranium>20</Uranium>
             <ArchiteCapsule>2</ArchiteCapsule>
-            <TechprofSubpersonaCore>1</TechprofSubpersonaCore>
+            <Shell_AntigrainWarhead>1</Shell_AntigrainWarhead>
         </costList>
         <ingestible>
             <outcomeDoers>

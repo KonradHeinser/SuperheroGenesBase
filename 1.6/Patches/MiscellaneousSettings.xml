@@ -22,6 +22,20 @@
     </Operation>
 
     <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>superDrugNoCraft</setting>
+        <active Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef[@Name="SHG_SuperCreatingDrugBase"]/recipeMaker/researchPrerequisite</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef[@Name="SHG_SuperCreatingDrugBase"]/recipeMaker/recipeUsers</xpath>
+                </li>
+            </operations>
+        </active>
+    </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
         <setting>antiSupeDisease</setting>
         <active Class="PatchOperationAdd">
             <xpath>Defs/BiomeDef/diseases</xpath>

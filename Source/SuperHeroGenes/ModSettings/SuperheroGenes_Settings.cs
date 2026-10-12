@@ -45,6 +45,7 @@ namespace SuperHeroGenesBase
         public static bool radiomancerOvercharge = true;
         public static bool superDrugNoTrader;
         public static bool superDrugNoReward;
+        public static bool superDrugNoCraft;
         public static int baseAbilityCooldown;
         public static bool noPsionicNeurotrainers;
         public static bool antiSupeDisease;
@@ -148,6 +149,7 @@ namespace SuperHeroGenesBase
             Scribe_Values.Look(ref radiomancerOvercharge, "radiomancerOvercharge", true);
             Scribe_Values.Look(ref superDrugNoTrader, "superDrugNoTrader");
             Scribe_Values.Look(ref superDrugNoReward, "superDrugNoReward");
+            Scribe_Values.Look(ref superDrugNoCraft, "superDrugNoCraft");
             Scribe_Values.Look(ref baseAbilityCooldown, "baseAbilityCooldown");
             Scribe_Values.Look(ref noPsionicNeurotrainers, "noPsionicNeurotrainers");
             Scribe_Values.Look(ref antiSupeDisease, "antiSupeDisease");
@@ -206,7 +208,7 @@ namespace SuperHeroGenesBase
             
             if (tabInt == 0)
             {
-                var num = 3; // Increases by 1 for each new setting
+                var num = 4; // Increases by 1 for each new setting
                 if (supersEverywhere)
                 {
                     num++;
@@ -217,7 +219,7 @@ namespace SuperHeroGenesBase
                     num++;
                 if (middleGrounds)
                     num++;
-                contentRect.height += num * (Text.LineHeight + 12f) + 5f;
+                contentRect.height += num * (Text.LineHeight + 13f) + 5f;
             }
 
             Widgets.BeginScrollView(frameRect, ref scrollPosition, contentRect);
@@ -265,6 +267,8 @@ namespace SuperHeroGenesBase
                     optionsMenu.CheckboxLabeled("SHG_SuperDrugs_NoTrader".Translate(), ref superDrugNoTrader, "SHG_SuperDrugs_NoTraderDescription".Translate());
                     optionsMenu.Gap(10f);
                     optionsMenu.CheckboxLabeled("SHG_SuperDrugs_NoReward".Translate(), ref superDrugNoReward, "SHG_SuperDrugs_NoRewardDescription".Translate());
+                    optionsMenu.Gap(10f);
+                    optionsMenu.CheckboxLabeled("SHG_SuperDrugs_NoCrafting".Translate(), ref superDrugNoCraft, "SHG_SuperDrugs_NoCraftingDescription".Translate());
                     optionsMenu.Gap(10f);
                     optionsMenu.CheckboxLabeled("SHG_AntiSupeDisease".Translate(), ref antiSupeDisease, "SHG_AntiSupeDiseaseDescription".Translate());
                     optionsMenu.Gap(10f);

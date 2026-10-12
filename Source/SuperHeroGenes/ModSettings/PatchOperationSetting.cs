@@ -18,7 +18,7 @@ namespace SuperHeroGenesBase
         {
             // This line goes through the settings class to see if it's a setting that exists
             // If it is, it'll grab the value and assign it to value
-            // If it isn't, value will be null and we tell the user something went wrong
+            // If it isn't, value will be null, and we tell the user something went wrong
             var value = typeof(SuperheroGenes_Settings).GetField(setting)?.GetValue(typeof(SuperheroGenes_Settings));
 
             if (value != null) // This happens if the setting provided exists

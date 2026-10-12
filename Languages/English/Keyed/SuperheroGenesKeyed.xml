@@ -127,6 +127,8 @@
     <SHG_SuperDrugs_NoTraderDescription>This option makes it so most traders are incapable of having any super creating drug types in their lists. This won't impact certain super faction traders, nor will it remove any permits that grant them.\n\nWhen combined with the no reward setting, it is usually impossible to get without certain super factions.</SHG_SuperDrugs_NoTraderDescription>
     <SHG_SuperDrugs_NoReward>    No Super Drugs in Generic Rewards</SHG_SuperDrugs_NoReward>
     <SHG_SuperDrugs_NoRewardDescription>This option makes it so none of the super creating drug variants will appear in normal reward sets. This won't impact any reward sets that specifically look for super creating pill types if anything creates a group like that.\n\nWhen combined with the no trader setting, it is usually impossible to get without certain super factions.</SHG_SuperDrugs_NoRewardDescription>
+    <SHG_SuperDrugs_NoCrafting>    No Super Drug Crafting</SHG_SuperDrugs_NoCrafting>
+    <SHG_SuperDrugs_NoCraftingDescription>This option makes it so super drugs can no longer be crafted. The details for the pills will still show the ingredients due to those being used for value calculation, but they will not appear in the archogenetics research description nor the drug lab.</SHG_SuperDrugs_NoCraftingDescription>
 
     <SHG_AntiSupeDisease>    Anti-Super Disease</SHG_AntiSupeDisease>
     <SHG_AntiSupeDiseaseDescription>This setting makes it so all biomes which may have a disease have a small chance to give the anti-super disease to any pawns with the base superhero gene. This disease has a notably higher chance of killing supers than most ailments, though it seldom affects those without the gene.</SHG_AntiSupeDiseaseDescription>
