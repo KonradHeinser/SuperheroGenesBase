@@ -591,10 +591,10 @@
         <iconPath>Archetypes/Gene_LifeBringer</iconPath>
         <biostatMet>-5</biostatMet>
         <statFactors>
-            <MedicalTendQuality>2</MedicalTendQuality>
-            <MedicalTendSpeed>2</MedicalTendSpeed>
-            <MedicalOperationSpeed>2</MedicalOperationSpeed>
-            <MedicalSurgerySuccessChance>2</MedicalSurgerySuccessChance>
+            <MedicalTendQuality>1.5</MedicalTendQuality>
+            <MedicalTendSpeed>1.5</MedicalTendSpeed>
+            <MedicalOperationSpeed>1.5</MedicalOperationSpeed>
+            <MedicalSurgerySuccessChance>1.5</MedicalSurgerySuccessChance>
         </statFactors>
         <abilities>
             <li>SHG_SealWounds</li>
