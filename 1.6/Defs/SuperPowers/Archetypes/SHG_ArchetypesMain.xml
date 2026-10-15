@@ -295,7 +295,7 @@
         <label>petrimancer</label>
         <description>Petrimancers specialize in petrifying opponents, and are vital in any colony that relies on large numbers of prisoners or slaves.</description>
         <iconPath>Archetypes/Gene_Petrimancer</iconPath>
-        <biostatMet>-3</biostatMet>
+        <biostatMet>-5</biostatMet>
         <damageFactors>
             <SHG_Petrification>0</SHG_Petrification>
         </damageFactors>
@@ -492,7 +492,7 @@
         <label>hydromancer</label>
         <description>Hydromancers shoot out streams of water at high pressures that can both kill fires and put out enemies.</description>
         <iconPath>Archetypes/Gene_Hydromancer</iconPath>
-        <biostatMet>-4</biostatMet>
+        <biostatMet>-2</biostatMet>
         <damageFactors>
             <SHG_Water>0</SHG_Water>
         </damageFactors>
@@ -833,7 +833,7 @@
         <label>firefighter</label>
         <description>Firefighters specialize in exactly what their name states, fighting fires. Should push come to shove their water abilties can also be turned to a more violent purpose as the high pressure water those abilities shoot is capable of destroying limbs.</description>
         <iconPath>Archetypes/Gene_Firefighter</iconPath>
-        <biostatMet>-5</biostatMet>
+        <biostatMet>-4</biostatMet>
         <statFactors>
             <Flammability>0</Flammability>
         </statFactors>

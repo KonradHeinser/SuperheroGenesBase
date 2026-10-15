@@ -274,7 +274,7 @@
     <AbilityDef ParentName="SHGHemomancyBase">
         <defName>SHG_Hemomancer_ShiftChameleonInvisibility</defName>
         <label>chameleon</label>
-        <description>Use a large amount of hemogen to become invisible for an hour. Successive uses will extend the duration by another hour.</description>
+        <description>Use a large amount of hemogen to become invisible for half an hour. Successive uses will extend the duration by another hour.</description>
         <iconPath>Hemomancer/Shifter/Ability_Hemomancer_Chameleon</iconPath>
         <aiCanUse>true</aiCanUse>
         <targetRequired>False</targetRequired>

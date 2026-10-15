@@ -167,7 +167,7 @@
     <AbilityDef ParentName="SHGPowerAbilitiesBase">
         <defName>SHG_Invisibility</defName>
         <label>invisibility</label>
-        <description>Become invisible for some time. This is quite taxing on the body, so it can only be maintained for half an hour, and requires a few hours to recharge.</description>
+        <description>Become invisible for some time. This is quite taxing on the body, so it can only be maintained for a quarter of an hour, and requires a few hours to recharge.</description>
         <iconPath>Powers/Gene_Invisibility</iconPath>
         <jobDef>CastAbilityOnThingMelee</jobDef>
         <targetRequired>False</targetRequired>
@@ -177,7 +177,7 @@
         <showCastingProgressBar>True</showCastingProgressBar>
         <cooldownTicksRange>10000</cooldownTicksRange>
         <statBases>
-            <Ability_Duration>21</Ability_Duration>
+            <Ability_Duration>10</Ability_Duration>
         </statBases>
         <aiCanUse>true</aiCanUse>
         <verbProperties>

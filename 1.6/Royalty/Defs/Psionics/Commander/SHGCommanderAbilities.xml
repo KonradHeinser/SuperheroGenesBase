@@ -273,14 +273,14 @@
     <AbilityDef ParentName="SHGPsionicBase">
         <defName>SHG_Psionist_AssassinSquad</defName>
         <label>assassin squad</label>
-        <description>Release a psychic field that makes both the General and nearby allies invisible for a couple hours.</description>
+        <description>Release a psychic field that makes both the General and nearby allies invisible for half an hour.</description>
         <iconPath>Psionist/Commander/Gene_Psionist_AssassinSquad</iconPath>
         <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
         <targetRequired>False</targetRequired>
         <cooldownTicksRange>2500</cooldownTicksRange>
         <statBases>
             <Ability_EntropyGain>150</Ability_EntropyGain>
-            <Ability_Duration>42</Ability_Duration>
+            <Ability_Duration>21</Ability_Duration>
         </statBases>
         <verbProperties>
             <range>10</range>
