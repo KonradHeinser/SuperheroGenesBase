@@ -19,6 +19,7 @@
             <texPath>Projectiles/OtherBolts/Firebolt</texPath>
         </graphicData>
         <projectile>
+            <damageAmountBase>25</damageAmountBase>
             <ai_IsIncendiary>true</ai_IsIncendiary>
             <damageDef>Flame</damageDef>
             <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
@@ -34,6 +35,7 @@
             <texPath>Projectiles/OtherBolts/Acidbolt</texPath>
         </graphicData>
         <projectile>
+            <damageAmountBase>30</damageAmountBase>
             <damageDef>AcidBurn</damageDef>
             <preExplosionSpawnThingDef>Filth_SpentAcid</preExplosionSpawnThingDef>
             <filthCount>1</filthCount>
@@ -49,6 +51,7 @@
             <graphicClass>Graphic_Random</graphicClass>
         </graphicData>
         <projectile>
+            <damageAmountBase>30</damageAmountBase>
             <speed>200</speed>
             <damageDef>SHG_Lightning</damageDef>
             <soundExplode>Explosion_EMP</soundExplode>

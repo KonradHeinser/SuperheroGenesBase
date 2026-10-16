@@ -8,6 +8,7 @@
         <deathMessage>{0} has been electrocuted to death.</deathMessage>
         <makesBlood>false</makesBlood>
         <impactSoundType>Electric</impactSoundType>
+        <armorCategory>Heat</armorCategory>
         <hediff>Burn</hediff>
         <defaultDamage>50</defaultDamage>
         <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
@@ -25,6 +26,7 @@
         <externalViolence>false</externalViolence>
         <deathMessage>{0} has been frozen to death.</deathMessage>
         <hediff>Frostbite</hediff>
+        <armorCategory>Heat</armorCategory>
         <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
         <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
         <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
@@ -110,7 +112,7 @@
         <additionalHediffs>
             <li>
                 <hediff>SHG_Petrification</hediff> <!--See HediffDefs for more information-->
-                <severityPerDamageDealt>0.15</severityPerDamageDealt>
+                <severityPerDamageDealt>0.1</severityPerDamageDealt>
                 <victimSeverityScaling>ArmorRating_Blunt</victimSeverityScaling>
                 <inverseStatScaling>true</inverseStatScaling>
                 <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
@@ -155,6 +157,7 @@
         <makesBlood>true</makesBlood>
         <defaultDamage>20</defaultDamage>
         <hediff>Cut</hediff>
+        <armorCategory>Sharp</armorCategory>
         <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
         <explosionColorEdge>(50, 50, 255, 0.05)</explosionColorEdge>
         <soundExplosion>Foam_Impact</soundExplosion>

@@ -9,6 +9,9 @@
             <li>
                 <label>body sluggish</label>
                 <minSeverity>0.1</minSeverity>
+                <statOffsets>
+                    <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+                </statOffsets>
                 <capMods>
                     <li>
                         <capacity>Moving</capacity>
@@ -24,7 +27,7 @@
                 <label>body struggling</label>
                 <minSeverity>0.25</minSeverity>
                 <statOffsets>
-                    <ArmorRating_Blunt>.1</ArmorRating_Blunt>
+                    <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
                 </statOffsets>
                 <capMods>
                     <li>
@@ -41,7 +44,7 @@
                 <label>body stiffening</label>
                 <minSeverity>0.4</minSeverity>
                 <statOffsets>
-                    <ArmorRating_Blunt>.4</ArmorRating_Blunt>
+                    <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
                 </statOffsets>
                 <capMods>
                     <li>
@@ -58,7 +61,7 @@
                 <label>body leadened</label>
                 <minSeverity>0.6</minSeverity>
                 <statOffsets>
-                    <ArmorRating_Blunt>.7</ArmorRating_Blunt>
+                    <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
                 </statOffsets>
                 <capMods>
                     <li>
