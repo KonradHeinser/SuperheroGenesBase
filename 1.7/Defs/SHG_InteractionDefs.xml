@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <InteractionDef>
+        <defName>SHG_Psionist_Tyrant_BreakWills</defName>
+        <label>break will</label>
+        <workerClass>InteractionWorker</workerClass>
+        <ignoreTimeSinceLastInteraction>True</ignoreTimeSinceLastInteraction>
+        <symbol>Things/Mote/SpeechSymbols/WordOfTrust</symbol>
+        <logRulesInitiator>
+        <rulesStrings>
+            <li>r_logentry->[INITIATOR_nameDef] psychically broke [RECIPIENT_nameDef]'s will.</li>
+        </rulesStrings>
+        </logRulesInitiator>
+    </InteractionDef>
+
+    <InteractionDef>
+        <defName>SHG_Psionist_EmpathOpinionManipulation</defName>
+        <label>empath manipulation</label>
+        <workerClass>InteractionWorker</workerClass>
+        <ignoreTimeSinceLastInteraction>True</ignoreTimeSinceLastInteraction>
+        <symbol>Psionist/Empath/Gene_Psionist_DropTheirGuard</symbol>
+        <logRulesInitiator>
+            <rulesStrings>
+                <li>r_logentry->[RECIPIENT_nameDef]'s perception of [INITIATOR_nameDef] has been psychically improved for a time.</li>
+            </rulesStrings>
+        </logRulesInitiator>
+    </InteractionDef>
+</Defs>

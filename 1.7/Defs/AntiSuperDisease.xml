@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <IncidentDef ParentName="DiseaseIncident">
+        <defName>SHG_AntiSupeDisease</defName>
+        <label>anti-supe disease</label>
+        <workerClass>SuperHeroGenesBase.IncidentWorker_DiseaseGene</workerClass>
+        <diseaseIncident>SHG_AntiSupeDisease</diseaseIncident>
+        <letterLabel>Disease: Anti-Super</letterLabel>
+        <modExtensions>
+            <li Class="SuperHeroGenesBase.SHGExtension">
+                <checkedGenes>
+                    <li>SuperHeroBase</li>
+                </checkedGenes>
+            </li>
+        </modExtensions>
+    </IncidentDef>
+
+    <HediffDef ParentName="InfectionBase">
+        <defName>SHG_AntiSupeDisease</defName>
+        <label>anti-supe disease</label>
+        <description>An artificially created gene created by a group of supe revilers that causes a rapid decline in health.</description>
+        <makesSickThought>true</makesSickThought>
+        <lethalSeverity>1</lethalSeverity>
+        <tendable>true</tendable>
+        <comps>
+            <li Class="HediffCompProperties_TendDuration">
+                <baseTendDurationHours>12</baseTendDurationHours>
+                <severityPerDayTended>-0.222</severityPerDayTended>
+            </li>
+            <li Class="HediffCompProperties_Immunizable">
+                <severityPerDayNotImmune>0.666</severityPerDayNotImmune>
+                <immunityPerDaySick>0.5224</immunityPerDaySick>
+                <severityPerDayImmune>-0.333</severityPerDayImmune>
+                <immunityPerDayNotSick>-0.02</immunityPerDayNotSick>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>minor</label>
+                <painOffset>0.2</painOffset>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.1</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.1</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.2</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.6</minSeverity>
+                <label>major</label>
+                <painOffset>0.35</painOffset>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.4</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.4</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.4</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.8</minSeverity>
+                <label>extreme</label>
+                <painOffset>0.6</painOffset>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.6</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.6</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.6</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.9</minSeverity>
+                <label>extreme</label>
+                <lifeThreatening>true</lifeThreatening>
+                <painOffset>0.85</painOffset>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.6</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.6</offset>
+                    </li>
+                    <li>
+                        <capacity>Breathing</capacity>
+                        <offset>-0.5</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>-0.8</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>

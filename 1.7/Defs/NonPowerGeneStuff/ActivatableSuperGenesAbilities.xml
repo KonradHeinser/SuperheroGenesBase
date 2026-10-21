@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef Abstract="True" Name="SuperActivatableAbilityBase">
+        <jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+        <targetRequired>False</targetRequired>
+        <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <cooldownTicksRange>6000</cooldownTicksRange>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <aiCanUse>true</aiCanUse>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>0.1</warmupTime>
+            <range>0.9</range>
+            <drawAimPie>False</drawAimPie>
+            <requireLineOfSight>False</requireLineOfSight>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>SuperDurability</defName>
+        <label>super durability</label>
+        <description>With considerable focus, the skin can be hardened to be nigh-impenetrable.\n\nIf this is used before the previous one is cancelled, it will progress the stage by half a day.</description>
+        <iconPath>Base/SuperDurability</iconPath>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SuperDurability</hediffDef>
+                <onlyBrain>True</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>false</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>RemoveSuperDurability</defName>
+        <label>remove super durability</label>
+        <description>Relax focus to return the skin to normal.</description>
+        <iconPath>Base/SuperDurability</iconPath>
+        <comps>
+          <li Class="CompProperties_AbilityRemoveHediff">
+            <compClass>CompAbilityEffect_RemoveHediff</compClass>
+            <hediffDef>SuperDurability</hediffDef>
+            <applyToSelf>True</applyToSelf>
+          </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>SuperHealing</defName>
+        <label>super healing</label>
+        <description>By forcefully accelerating the heart, healing and immunity rates can be drastically increased for a time.\n\nIf this is used before the previous one is cancelled, it will progress the stage by half a day.</description>
+        <iconPath>Base/SuperHealing</iconPath>
+        <comps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>SuperHealing</hediffDef>
+            <onlyBrain>True</onlyBrain>
+            <onlyApplyToSelf>True</onlyApplyToSelf>
+            <replaceExisting>false</replaceExisting>
+          </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>RemoveSuperHealing</defName>
+        <label>remove super healing</label>
+        <description>Slow heart to bring healing and immunity speed to normal levels.</description>
+        <iconPath>Base/SuperHealing</iconPath>
+        <comps>
+          <li Class="CompProperties_AbilityRemoveHediff">
+            <compClass>CompAbilityEffect_RemoveHediff</compClass>
+            <hediffDef>SuperHealing</hediffDef>
+            <applyToSelf>True</applyToSelf>
+          </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>SuperIntelligence</defName>
+        <label>super intelligence</label>
+        <description>Enter a brief moment of extreme concentration, during which all truths may be revealed.\n\nIf this is used before the previous one is cancelled, it will progress the stage by half a day.</description>
+        <iconPath>Base/SuperIntelligence</iconPath>
+        <aiCanUse>false</aiCanUse>
+        <comps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>SuperIntelligence</hediffDef>
+            <onlyBrain>True</onlyBrain>
+            <onlyApplyToSelf>True</onlyApplyToSelf>
+            <replaceExisting>false</replaceExisting>
+          </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>RemoveSuperIntelligence</defName>
+        <label>remove super intelligence</label>
+        <description>Relax concentration to bring thoughts back to a normal level.</description>
+        <iconPath>Base/SuperIntelligence</iconPath>
+        <comps>
+          <li Class="CompProperties_AbilityRemoveHediff">
+            <compClass>CompAbilityEffect_RemoveHediff</compClass>
+            <hediffDef>SuperIntelligence</hediffDef>
+            <applyToSelf>True</applyToSelf>
+          </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>SuperPerception</defName>
+        <label>super perception</label>
+        <description>Opening the mind can reveal much in the area that may have been difficult to notice before.\n\nIf this is used before the previous one is cancelled, it will progress the stage by half a day.</description>
+        <iconPath>Base/SuperPerception</iconPath>
+        <comps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>SuperPerception</hediffDef>
+            <onlyBrain>True</onlyBrain>
+            <onlyApplyToSelf>True</onlyApplyToSelf>
+            <replaceExisting>false</replaceExisting>
+          </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>RemoveSuperPerception</defName>
+        <label>remove super intelligence</label>
+        <description>Relax focus to bring perception back to normal levels.</description>
+        <iconPath>Base/SuperPerception</iconPath>
+        <comps>
+          <li Class="CompProperties_AbilityRemoveHediff">
+            <compClass>CompAbilityEffect_RemoveHediff</compClass>
+            <hediffDef>SuperPerception</hediffDef>
+            <applyToSelf>True</applyToSelf>
+          </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>SuperPersuasion</defName>
+        <label>super persuasion</label>
+        <description>Turn on the charm, and influence people to do as you wish.\n\nIf this is used before the previous one is cancelled, it will progress the stage by half a day.</description>
+        <iconPath>Base/SuperPersuasion</iconPath>
+        <aiCanUse>false</aiCanUse>
+        <comps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>SuperPersuasion</hediffDef>
+            <onlyBrain>True</onlyBrain>
+            <onlyApplyToSelf>True</onlyApplyToSelf>
+            <replaceExisting>false</replaceExisting>
+          </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>RemoveSuperPersuasion</defName>
+        <label>remove super persuasion</label>
+        <description>Turn off the charm, and everyone around you.</description>
+        <iconPath>Base/SuperPersuasion</iconPath>
+        <comps>
+          <li Class="CompProperties_AbilityRemoveHediff">
+            <compClass>CompAbilityEffect_RemoveHediff</compClass>
+            <hediffDef>SuperPersuasion</hediffDef>
+            <applyToSelf>True</applyToSelf>
+          </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>SuperPrecision</defName>
+        <label>super precision</label>
+        <description>With intense focus every shot and blow will find their mark.\n\nIf this is used before the previous one is cancelled, it will progress the stage by half a day.</description>
+        <iconPath>Base/SuperPrecision</iconPath>
+        <comps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>SuperPrecision</hediffDef>
+            <onlyBrain>True</onlyBrain>
+            <onlyApplyToSelf>True</onlyApplyToSelf>
+            <replaceExisting>false</replaceExisting>
+          </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>RemoveSuperPrecision</defName>
+        <label>remove super precision</label>
+        <description>Relax focus to return accuracy to a normal level.</description>
+        <iconPath>Base/SuperPrecision</iconPath>
+        <comps>
+          <li Class="CompProperties_AbilityRemoveHediff">
+            <compClass>CompAbilityEffect_RemoveHediff</compClass>
+            <hediffDef>SuperPrecision</hediffDef>
+            <applyToSelf>True</applyToSelf>
+          </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>SuperSpeed</defName>
+        <label>super speed</label>
+        <description>Take a sprinter's stance, and become naught but a blur to those around you.\n\nIf this is used before the previous one is cancelled, it will progress the stage by half a day.</description>
+        <iconPath>Base/SuperSpeed</iconPath>
+        <comps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>SuperSpeed</hediffDef>
+            <onlyBrain>True</onlyBrain>
+            <onlyApplyToSelf>True</onlyApplyToSelf>
+            <replaceExisting>false</replaceExisting>
+          </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>RemoveSuperSpeed</defName>
+        <label>remove super precision</label>
+        <description>Relax muscles to return speed to a normal level.</description>
+        <iconPath>Base/SuperSpeed</iconPath>
+        <comps>
+          <li Class="CompProperties_AbilityRemoveHediff">
+            <compClass>CompAbilityEffect_RemoveHediff</compClass>
+            <hediffDef>SuperSpeed</hediffDef>
+            <applyToSelf>True</applyToSelf>
+          </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>SuperStrength</defName>
+        <label>super strength</label>
+        <description>Strain the muscles to achieve feats of strength that even machines find difficult to match.\n\nIf this is used before the previous one is cancelled, it will progress the stage by half a day.</description>
+        <iconPath>Base/SuperStrength</iconPath>
+        <comps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>SuperStrength</hediffDef>
+            <onlyBrain>True</onlyBrain>
+            <onlyApplyToSelf>True</onlyApplyToSelf>
+            <replaceExisting>false</replaceExisting>
+          </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SuperActivatableAbilityBase">
+        <defName>RemoveSuperStrength</defName>
+        <label>remove super strength</label>
+        <description>Relax muscles to return strength to a normal level.</description>
+        <iconPath>Base/SuperStrength</iconPath>
+        <comps>
+          <li Class="CompProperties_AbilityRemoveHediff">
+            <compClass>CompAbilityEffect_RemoveHediff</compClass>
+            <hediffDef>SuperStrength</hediffDef>
+            <applyToSelf>True</applyToSelf>
+          </li>
+        </comps>
+    </AbilityDef>
+</Defs>

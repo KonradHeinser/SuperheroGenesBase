@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Pools_EndurePain</defName>
+        <label>endure pain</label>
+        <description>Become immune to pain and resistant to damage for a few hours. Afterwards, the durability portion of the basic superhero gene will be depleted for some time.</description>
+        <iconPath>Powers/Specializations/Gene_EndurePain</iconPath>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>136</Ability_Duration>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Pools_EndurePain</hediffDef>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+        <defName>SHG_Pools_EmergencyShutdown</defName>
+        <label>hack mech</label>
+        <description>Hack a mech to make it shutdown for about half an hour. This will disable the intelligence portion of the super's base Superhero Gene for about a day.</description>
+        <iconPath>Powers/Specializations/Gene_Shutdown</iconPath>
+        <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <groupAbility>True</groupAbility>
+        <stunTargetWhileCasting>true</stunTargetWhileCasting>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>21</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <label>shutting down</label>
+            <range>20</range>
+            <drawAimPie>True</drawAimPie>      
+            <requireLineOfSight>true</requireLineOfSight>
+            <warmupEffecter>CommsConsoleBossgroupSummoned</warmupEffecter>
+            <targetParams>
+                <canTargetLocations>False</canTargetLocations>
+                <canTargetPawns>True</canTargetPawns>
+                <canTargetAnimals>False</canTargetAnimals>
+                <canTargetBuildings>False</canTargetBuildings>
+                <canTargetHumans>False</canTargetHumans>
+                <canTargetMechs>True</canTargetMechs>
+                <canTargetSelf>False</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityEffectWithDuration">
+                <compClass>CompAbilityEffect_Stun</compClass>
+                <psychic>False</psychic>
+                <goodwillImpact>-15</goodwillImpact>
+                <sendLetter>False</sendLetter>
+            </li>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Pools_EmergencyShutdown</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_LesserPortent</defName>
+        <label>lesser portent</label>
+        <description>Focus your senses to predict the future actions of everything around you to increase melee accuracy and dodge chance. Once this wears off, the perception benefits from the basic superhero gene will be lost for about a day.</description>
+        <iconPath>Powers/Specializations/Gene_LesserPortent</iconPath>
+        <cooldownTicksRange>600000</cooldownTicksRange>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_LesserPortent</hediffDef>
+                <onlyBrain>False</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Pools_CalmingAura</defName>
+        <label>calming aura</label>
+        <description>Release a calming aura that improves the mood of all allies around the super for a day at the expense of both the super's mood and persuasive abilities.</description>
+        <iconPath>Powers/Specializations/Gene_CalmingAura</iconPath>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_Duration>1000</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>50</range>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Pools_CalmingAura</hediffDef>
+                <onlyBrain>True</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <applicableToMechs>False</applicableToMechs>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Pools_SniperSquad</defName>
+        <label>sniper squad</label>
+        <description>Release an aura for a day that increases the accuracy of all allies around the super for a day at the expense of both the super's manipulation and precision abilities.</description>
+        <iconPath>Powers/Specializations/Gene_SniperSquad</iconPath>
+        <statBases>
+            <Ability_Duration>1000</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <range>10</range>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Pools_SniperSquad</hediffDef>
+                <onlyBrain>True</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <applicableToMechs>False</applicableToMechs>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Pools_CrushingStrength</defName>
+        <label>crushing strength</label>
+        <description>Increase your melee damage considerably for an hour. Afterwards, the strength portion of the basic superhero gene will be depleted for some time.</description>
+        <iconPath>Powers/Specializations/Gene_CrushingStrength</iconPath>
+        <statBases>
+            <Ability_Duration>1000</Ability_Duration>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Pools_CrushingStrength</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <applicableToMechs>False</applicableToMechs>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Pools_HealAllies</defName>
+        <label>heal allies</label>
+        <description>Release a healing aura for your allies for a day, during which the basic healing granted by the superhero gene will be lost, and the super's injuries will not be able to heal naturally.</description>
+        <iconPath>Powers/Specializations/Gene_HealAllies</iconPath>
+        <cooldownTicksRange>60000</cooldownTicksRange>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <statBases>
+            <Ability_Duration>1000</Ability_Duration>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Pools_HealAllies</hediffDef>
+                <replaceExisting>true</replaceExisting>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Pools_WindStep</defName>
+        <label>wind step</label>
+        <description>Take flight for a day. During this day, you will be unaffected by ground obstacles, but will lose both your innate speed bonuses from the Superhero base gene along with an additional penalty on general moving abilities.</description>
+        <iconPath>Powers/Specializations/Gene_WindStep</iconPath>
+        <statBases>
+            <Ability_Duration>1000</Ability_Duration>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Pools_NewWindStep</hediffDef>
+                <onlyBrain>False</onlyBrain>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+                <applicableToMechs>False</applicableToMechs>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

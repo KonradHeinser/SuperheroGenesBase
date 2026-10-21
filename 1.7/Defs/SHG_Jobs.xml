@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <JobDef>
+        <defName>SHG_Psionist_CompelledDuel</defName>
+        <driverClass>JobDriver_GotoMindControlled</driverClass>
+        <reportString>duelling.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+        <waitAfterArriving>10</waitAfterArriving>
+        <casualInterruptible>false</casualInterruptible>
+        <playerInterruptible>false</playerInterruptible>
+        <suspendable>false</suspendable>
+    </JobDef>
+</Defs>

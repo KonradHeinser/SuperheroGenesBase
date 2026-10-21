@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Radiomancer_RampantRegeneration</defName>
+        <label>rampant regeneration</label>
+        <description>This pawn's body is recovering from wounds at an unbelievable pace. Unfortunately, this comes with an extreme risk that some of their cells will be negatively affected by the radioactive energy.</description>
+        <stages>
+            <li>
+                <vomitMtbDays>0.1</vomitMtbDays>
+                <hediffGivers>
+                    <li Class="HediffGiver_Random">
+                        <hediff>Carcinoma</hediff>
+                        <mtbDays>0.1</mtbDays>
+                        <canAffectAnyLivePart>true</canAffectAnyLivePart>
+                    </li>
+                </hediffGivers>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_TieredRegeneration">
+                <healWhileRegrowing>True</healWhileRegrowing>
+                <regenSets>
+                    <li>
+                        <ticksToRegrowPart>2000</ticksToRegrowPart>
+                        <repeatHealCount>10</repeatHealCount>
+                        <minSeverity>1</minSeverity>
+                        <healAmount>0.3</healAmount>
+                    </li>
+                </regenSets>
+            </li>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>5000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Radiomancer_ExcitableCells</defName>
+        <label>excitable cells</label>
+        <description>This pawn's body is recovering from infections at an unbelievable pace. Unfortunately, this comes with an notable risk that some of their cells will be negatively affected by the radioactive energy.</description>
+        <stages>
+            <li>
+                <vomitMtbDays>0.3</vomitMtbDays>
+                <statFactors>
+                    <InjuryHealingFactor>2</InjuryHealingFactor>
+                    <ImmunityGainSpeed>2</ImmunityGainSpeed>
+                    <EBSG_BloodlossRecoveryBonus MayRequire="EBSG.Framework">2.00</EBSG_BloodlossRecoveryBonus>
+                </statFactors>
+                <hediffGivers>
+                    <li Class="HediffGiver_Random">
+                        <hediff>Carcinoma</hediff>
+                        <mtbDays>1</mtbDays>
+                        <canAffectAnyLivePart>true</canAffectAnyLivePart>
+                    </li>
+                </hediffGivers>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>10000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_HiddenHediffBase">
+        <defName>SHG_Radiomancer_EverEvolving</defName>       
+        <label>ever-evolving</label>
+        <description>This pawn will generate new genes once you STOP LOOKING AT DEVMODE STUFF AND UNPAUSE YOU CHEATER. Unless you're a fellow modder, in which case welcome! You won't get much use from this tooltip, but the SHGFissionHediffs.xml file contains the randomization data for the ever evolving hediff itself.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
+                <removeGenesFromOtherLists>False</removeGenesFromOtherLists>
+                <showMessage>False</showMessage>
+                <inheritable>False</inheritable>
+                <geneSets>
+                    <li><geneSet><li>SHG_Flaw_OverchargedPocket</li></geneSet></li>
+
+<!-- <xpath>Defs/HediffDef[defName="SHG_Radiomancer_EverEvolving"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets</xpath> -->
+                    <!--Decay Genes-->
+                    <li><geneSet><li>SHG_Radiomancer_CellularDestabilization</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_DrainEnergy</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_WeakenSkin</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_SapStrength</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_DrainLife</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_SlowSynapses</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_RapidAging</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_DangerousAura</li></geneSet></li>
+
+                    <!--Emission Genes-->
+                    <li><geneSet><li>SHG_Radiomancer_ExplosiveBlows</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_InstantRecharge</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_LimitlessPotential</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_NuclearWinter</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_Detonation</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_AshesToAshes</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_DustToDust</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_IAmBecomeDeath</li></geneSet></li>
+
+                    <!--Fission Genes-->
+                    <li><geneSet><li>SHG_Radiomancer_RampantRegeneration</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_MiniatureSun</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_ExcitableCells</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_Mutate</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_ReformPart</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_ReverseAging</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_RefocusEnergy</li></geneSet></li>
+
+                    <!--Fusion Genes-->
+                    <li><geneSet><li>SHG_Radiomancer_Bioreactor</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_InfusedMuscles</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_EnergizedNeurons</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_CondenseRadiation</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_EnergyArmor</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_SolarRecharging</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_SolarRegeneration</li></geneSet></li>
+                    <li><geneSet><li>SHG_Radiomancer_UndyingSun</li></geneSet></li>
+                </geneSets>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_HiddenHediffBase">
+        <defName>SHG_Radiomancer_Mutate</defName>       
+        <label>mutating</label>
+        <description>This pawn will generate new genes once you STOP LOOKING AT DEVMODE STUFF AND UNPAUSE YOU CHEATER. Unless you're a fellow modder, in which case welcome! You won't get much use from this tooltip, but the SHGFissionHediffs.xml file contains the randomization data for the mutating hediff.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
+                <showMessage>False</showMessage>
+                <geneSets>
+                    <li><geneSet><li>SHG_DoubleHearted</li></geneSet></li>
+                    <li><geneSet><li>SHG_SuperPsychicPotential</li></geneSet></li>
+                    <li><geneSet><li>SHG_SuperDenseBones</li></geneSet></li>
+                    <li><geneSet><li>SHG_Blindsight</li></geneSet></li>
+                    <li><geneSet><li>SHG_GhostlyPresence</li></geneSet></li>
+                    <li><geneSet><li>SHG_Prey</li></geneSet></li>
+                    <li><geneSet><li>SHG_Predator</li></geneSet></li>
+                    <li><geneSet><li>SHG_AdrenalineJunkie</li></geneSet></li>
+                    <li><geneSet><li>SHG_Berserker</li></geneSet></li>
+                    <li><geneSet><li>SHG_MadGenius</li></geneSet></li>
+                    <li><geneSet><li>SHG_Technophile</li></geneSet></li>
+                    <li><geneSet><li>SHG_Naturalist</li></geneSet></li>
+                    <li><geneSet><li>SHG_HALK</li></geneSet></li>
+                </geneSets>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Radiomancer_ReverseAging</defName>
+        <label>reverse aging</label>
+        <description>This pawn is gradually becoming younger.</description>
+        <initialSeverity>1</initialSeverity>
+        <stages />
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_Aging">
+                <ageChangePerHour>-1</ageChangePerHour>
+            </li>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>2500</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Radiomancer_RefocusEnergy_Wakefulness</defName>
+        <label>refocus energy</label>
+        <description>This pawn is feeling more awake due to an extra pocket of energy refreshes their body constantly.</description>
+        <stages>
+            <li>
+                <statFactors>
+                    <RestFallRateFactor>0.8</RestFallRateFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.25</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Radiomancer_RefocusEnergy_Sleepy</defName>
+        <label>refocus energy</label>
+        <description>This pawn is feeling very sleepy after generating a bunch of energy by draining their body's reserves.</description>
+        <stages>
+            <li>
+                <statFactors>
+                    <RestFallRateFactor>1.25</RestFallRateFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.25</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
+            </li>
+        </comps>
+    </HediffDef>
+</Defs>

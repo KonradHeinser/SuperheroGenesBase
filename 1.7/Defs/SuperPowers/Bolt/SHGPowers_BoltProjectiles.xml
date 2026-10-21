@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef Abstract="true" Name="SuperPowersBoltBase" ParentName="BaseBullet">
+        <graphicData>
+            <shaderType>MoteGlow</shaderType>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<projectile>
+			<damageAmountBase>15</damageAmountBase>
+			<stoppingPower>3</stoppingPower>
+			<speed>100</speed>
+		</projectile>
+	</ThingDef>
+
+    <ThingDef ParentName="SuperPowersBoltBase">
+        <defName>SHG_Proj_Bolt_Fire</defName>
+        <label>fire bolt</label>
+        <graphicData>
+            <texPath>Projectiles/OtherBolts/Firebolt</texPath>
+        </graphicData>
+        <projectile>
+            <damageAmountBase>25</damageAmountBase>
+            <ai_IsIncendiary>true</ai_IsIncendiary>
+            <damageDef>Flame</damageDef>
+            <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+            <filthCount>1</filthCount>
+            <soundExplode>Explosion_Flame</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBoltBase">
+        <defName>SHG_Proj_Bolt_Acid</defName>
+        <label>acid bolt</label>
+        <graphicData>
+            <texPath>Projectiles/OtherBolts/Acidbolt</texPath>
+        </graphicData>
+        <projectile>
+            <damageAmountBase>30</damageAmountBase>
+            <damageDef>AcidBurn</damageDef>
+            <preExplosionSpawnThingDef>Filth_SpentAcid</preExplosionSpawnThingDef>
+            <filthCount>1</filthCount>
+            <soundExplode>AcidSpray_Resolve</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBoltBase">
+        <defName>SHG_Proj_Bolt_Lightning</defName>
+        <label>lightning bolt</label>
+        <graphicData>
+            <texPath>Projectiles/Thunderbolt</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageAmountBase>30</damageAmountBase>
+            <speed>200</speed>
+            <damageDef>SHG_Lightning</damageDef>
+            <soundExplode>Explosion_EMP</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBoltBase">
+        <defName>SHG_Proj_Bolt_Ice</defName>
+        <label>ice bolt</label>
+        <graphicData>
+            <texPath>Projectiles/OtherBolts/Frostbolt</texPath>
+        </graphicData>
+        <projectile>
+            <damageDef>SHG_Ice</damageDef>
+            <soundExplode>Foam_Impact</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBoltBase">
+        <defName>SHG_Proj_Bolt_Toxic</defName>
+        <label>toxic bolt</label>
+        <graphicData>
+            <texPath>Projectiles/OtherBolts/Toxicbolt</texPath>
+        </graphicData>
+        <projectile>
+            <damageDef>SHG_ToxicBolt</damageDef>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBoltBase">
+        <defName>SHG_Proj_Bolt_EMP</defName>
+        <label>electricity bolt</label>
+        <graphicData>
+            <texPath>Projectiles/Thunderbolt</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
+        </graphicData>
+        <projectile>
+            <ai_IsIncendiary>false</ai_IsIncendiary>
+            <damageDef>EMP</damageDef>
+            <soundExplode>Explosion_EMP</soundExplode>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBoltBase">
+        <defName>SHG_Proj_Bolt_Foam</defName>
+        <label>foam bolt</label>
+        <graphicData>
+            <texPath>Projectiles/OtherBolts/Waterbolt</texPath>
+        </graphicData>
+        <projectile>
+            <ai_IsIncendiary>false</ai_IsIncendiary>
+            <damageAmountBase>9999</damageAmountBase>
+            <damageDef>Extinguish</damageDef>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBoltBase">
+        <defName>SHG_Proj_Bolt_Petrification</defName>
+        <label>petrifying bolt</label>
+        <graphicData>
+            <texPath>Projectiles/OtherBolts/Petrifyingbolt</texPath>
+        </graphicData>
+        <projectile>
+            <ai_IsIncendiary>false</ai_IsIncendiary>
+            <damageAmountBase>3</damageAmountBase>
+            <damageDef>SHG_Petrification</damageDef>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="SuperPowersBoltBase">
+        <defName>SHG_Proj_Bolt_Water</defName>
+        <label>water bolt</label>
+        <graphicData>
+            <texPath>Projectiles/OtherBolts/Waterbolt</texPath>
+        </graphicData>
+        <projectile>
+            <ai_IsIncendiary>false</ai_IsIncendiary>
+            <damageDef>SHG_Water</damageDef>
+            <preExplosionSpawnThingDef>Filth_Water</preExplosionSpawnThingDef>
+            <filthCount>1</filthCount>
+            <soundExplode>Foam_Impact</soundExplode>
+            <speed>500</speed>      
+    <!--It's really fast to both represent the high speed of pressurized water, and to help make the waterskip portion less intrusive-->
+        </projectile>
+    </ThingDef>
+</Defs>

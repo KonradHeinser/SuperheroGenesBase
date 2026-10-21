@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/GeneDef[defName="SHG_Hemomancer_Praise" or defName="SHG_Hemomancer_Worship"]/geneClass</xpath>
+        <value><geneClass>SuperHeroGenesBase.Gene_HemoHediffAdder</geneClass></value>
+    </Operation>
+</Patch>

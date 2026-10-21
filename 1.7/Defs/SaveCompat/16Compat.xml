@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef ParentName="SHGSelfCastBase">
+        <defName>SHG_Flight</defName>
+        <label>faster flight</label>
+        <description>Push yourself to fly even faster than before.</description>
+        <iconPath>Powers/Gene_Flight</iconPath>
+        <jobDef>CastAbilityOnThingWithoutWeapon</jobDef>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>10000</cooldownTicksRange>
+        <statBases>
+            <Ability_Duration>42</Ability_Duration>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>SHG_Soaring</hediffDef>
+                <onlyBrain>True</onlyBrain>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase">
+        <defName>SHG_Soaring</defName>
+		<label>soaring</label>
+		<description>This super is soaring high through the air, where those on the ground cannot touch them and they are free to fly as they please.</description>
+		<maxSeverity>1.0</maxSeverity>
+        <stages>
+            <li>
+                <statFactors>
+                    <MoveSpeed>10</MoveSpeed>
+                    <MeleeDodgeChance>100</MeleeDodgeChance>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-12</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+	</HediffDef>
+
+        <GeneDef ParentName="SuperPowersPassiveBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Phasing</defName>
+        <label>phasing</label>
+        <description>Supers with this gene can phase through walls and objects at will.</description>
+        <biostatMet>-5</biostatMet>
+        <iconPath>Powers/Gene_Phasing</iconPath>
+        <displayOrderInCategory>4</displayOrderInCategory>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <passOnDirectly>false</passOnDirectly>
+        <selectionWeight>0</selectionWeight>
+        <abilities>
+            <li>SHG_Phasing</li>
+        </abilities>
+        <exclusionTags>
+            <li>SHG_Phasing</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_Phasing</hediff></li></hediffsToApply>
+			</li>
+          	<li Class="VEF.Genes.GeneExtension">	
+                <hideGene>True</hideGene>
+            </li>
+		</modExtensions>
+    </GeneDef>
+
+    <AbilityDef ParentName="SHGToggleSelf" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Phasing</defName>
+        <label>toggle phasing</label>
+        <description>Use this to toggle whether the pawn can phase through walls.\n\nThis was mostly added because some have found weird edge case scenarios that result in errors, and I am unable to fix them due that part of the code being out of my hands.\n\nFor safest results, keep phasing constantly disabled until you need the pawn to fight stuff.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityToggleHediffExistence">
+                <hediff>
+                    <hediff>SHG_Phasing</hediff>
+                </hediff>
+            </li>
+            <li Class="SuperHeroGenesBase.CompProperties_AbilityAbilityValidator">
+                <doStandableCheck>True</doStandableCheck>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+        <defName>SHG_Phasing</defName>
+        <label>phasing</label>
+        <description>This pawn phases through obstacles.</description>
+        <comps>
+            <li Class="HediffCompProperties">
+				<compClass>VEF.Hediffs.HediffComp_Phasing</compClass>
+			</li>
+        </comps>
+    </HediffDef>
+
+    <ThingDef ParentName="SHG_SuperCreatingDrugBase"> <!--This will be removed in 1.7-->
+        <defName>SHG_SuperActivationPill</defName>
+        <label>super activation pill</label>
+        <description>A pill that removes the dormant super gene from the ingester. This does not grant the superhero base gene, so if the individual doesn't have the dormant super gene, this does nothing.</description>
+        <graphicData>
+            <texPath>Drug/SHG_SuperPill</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>100</MarketValue>
+        </statBases>
+        <tradeTags Inherit="False" />
+        <costList Inherit="False" />
+        <recipeMaker Inherit="False" IsNull="True" />
+        <thingSetMakerTags Inherit="False" />
+        <ingestible>
+            <outcomeDoers>
+                <li Class="SuperHeroGenesBase.IngestionOutcomeDoer_AlterGenes">
+                    <alwaysRemovedGenes>
+                        <li>SHG_DormantSuper</li>
+                    </alwaysRemovedGenes>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+    </ThingDef>
+
+</Defs>

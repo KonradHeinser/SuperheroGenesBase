@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch> <!--The abilities and hediffs are always enabled so other things are able to use them even when this setting is not enabled-->
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>activatableSuperGenes</setting>
+        <active Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName="SuperDurability"]/statOffsets</xpath>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/GeneDef[defName="SuperDurability"]</xpath>
+                    <value>
+                        <abilities>
+                            <li>SuperDurability</li>
+                        </abilities>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="SuperHealing"]/statFactors</xpath>
+                    <value>
+                        <statFactors>
+                            <LifespanFactor>3</LifespanFactor>
+                        </statFactors>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName="SuperHealing"]/statOffsets</xpath>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/GeneDef[defName="SuperHealing"]</xpath>
+                    <value>
+                        <abilities>
+                            <li>SuperHealing</li>
+                        </abilities>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName="SuperIntelligence"]/statFactors</xpath>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/GeneDef[defName="SuperIntelligence"]</xpath>
+                    <value>
+                        <abilities>
+                            <li>SuperIntelligence</li>
+                        </abilities>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName="SuperPerception"]/statFactors</xpath>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/GeneDef[defName="SuperPerception"]</xpath>
+                    <value>
+                        <abilities>
+                            <li>SuperPerception</li>
+                        </abilities>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/GeneDef[defName="SuperPersuasion"]/statFactors</xpath>
+                    <value>
+                        <statFactors>
+                            <Beauty>5</Beauty>
+                        </statFactors>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName="SuperPersuasion"]/capMods/li[2]</xpath>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/GeneDef[defName="SuperPersuasion"]</xpath>
+                    <value>
+                        <abilities>
+                            <li>SuperPersuasion</li>
+                        </abilities>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName="SuperPrecision"]/statFactors</xpath>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/GeneDef[defName="SuperPrecision"]</xpath>
+                    <value>
+                        <abilities>
+                            <li>SuperPrecision</li>
+                        </abilities>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName="SuperSpeed"]/statFactors</xpath>
+                </li>
+
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName="SuperSpeed"]/statOffsets</xpath>
+                </li>
+
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName="SuperSpeed"]/capMods/li[3]</xpath>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/GeneDef[defName="SuperSpeed"]</xpath>
+                    <value>
+                        <abilities>
+                            <li>SuperSpeed</li>
+                        </abilities>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName="SuperStrength"]/statFactors</xpath>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/GeneDef[defName="SuperStrength"]</xpath>
+                    <value>
+                        <abilities>
+                            <li>SuperStrength</li>
+                        </abilities>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationFindMod">
+                    <mods><li>Combat Extended</li></mods>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/HediffDef[defName="SuperDurability"]/stages/li/statOffsets</xpath>
+                                <value>
+                                    <statOffsets>
+                                        <ArmorRating_Blunt>100</ArmorRating_Blunt>
+                                        <ArmorRating_Sharp>100</ArmorRating_Sharp>
+                                        <ArmorRating_Heat>1</ArmorRating_Heat>
+                                    </statOffsets>
+                                </value>
+                            </li>
+
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/HediffDef[defName="SuperPerception"]/stages/li/statFactors</xpath>
+                                <value>
+                                    <statFactors>
+                                        <ShootingAccuracyPawn>1.66</ShootingAccuracyPawn>
+                                        <AimingAccuracy>1.5</AimingAccuracy>
+                                        <MeleeDodgeChance>1.1</MeleeDodgeChance>
+                                        <MeleeHitChance>1.2</MeleeHitChance>
+                                        <MeleeParryChance>1.2</MeleeParryChance>
+                                    </statFactors>
+                                </value>
+                            </li>
+
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/HediffDef[defName="SuperPrecision"]/stages/li/statFactors</xpath>
+                                <value>
+                                    <statFactors>
+                                        <ShootingAccuracyPawn>2.33</ShootingAccuracyPawn>
+                                        <AimingAccuracy>2</AimingAccuracy>
+                                        <MeleeDodgeChance>1.15</MeleeDodgeChance>
+                                        <MeleeHitChance>1.25</MeleeHitChance>
+                                        <MeleeParryChance>1.25</MeleeParryChance>
+                                        <PawnTrapSpringChance>0.1</PawnTrapSpringChance>
+                                        <IncomingDamageFactor>0.9</IncomingDamageFactor>
+                                    </statFactors>
+                                </value>
+                            </li>
+
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/HediffDef[defName="SuperSpeed"]/stages/li/statOffsets</xpath>
+                                <value>
+                                    <statOffsets>
+                                        <AimingDelayFactor>-2.5</AimingDelayFactor>
+                                    </statOffsets>
+                                </value>
+                            </li>
+
+                            <li Class="PatchOperationReplace">
+                                <xpath>Defs/HediffDef[defName="SuperSpeed"]/stages/li/statFactors</xpath>
+                                <value>
+                                    <statFactors>
+                                        <StaggerDurationFactor>0.1</StaggerDurationFactor>
+                                        <MeleeDodgeChance>1.15</MeleeDodgeChance>
+                                        <MeleeHitChance>1.25</MeleeHitChance>
+                                        <MeleeParryChance>1.25</MeleeParryChance>
+                                    </statFactors>
+                                </value>
+                            </li>
+
+                            <li Class="PatchOperationAdd">
+                                <xpath>Defs/HediffDef[defName="SuperStrength"]/stages/li/statFactors</xpath>
+                                <value>
+                                    <CarryBulk>100</CarryBulk>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
+                </li>
+            </operations>
+        </active>
+    </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>interruptibleActivatables</setting>
+        <active Class="PatchOperationReplace">
+            <xpath>Defs/AbilityDef[@Name="SuperActivatableAbilityBase"]/verbProperties/warmupTime</xpath>
+            <value><warmupTime>10</warmupTime></value>
+        </active>
+    </Operation>
+</Patch>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HediffDef ParentName="SHG_HiddenHediffBase">
+        <defName>SHG_Flaw_Bloodthirsty</defName>
+        <label>bloodthirsty</label>
+        <description>This pawn constantly needs to kill things, and will gain some hemogen for the effort.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_HemogenOnKill" />
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_HiddenHediffBase">
+        <defName>SHG_Flaw_SuperMoodyAura</defName>
+        <label>super moody aura</label>
+        <description>This pawn constantly releases a depressing aura.</description>
+        <comps>
+            <li Class="HediffCompProperties_GiveHediffsInRange">
+                <range>50</range>
+                <hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+                <targetingParameters>
+                    <canTargetBuildings>False</canTargetBuildings>
+                    <canTargetAnimals>False</canTargetAnimals>
+                    <canTargetMechs>False</canTargetMechs>
+                    <onlyTargetColonists>False</onlyTargetColonists>
+                </targetingParameters>
+                <hediff>SHG_Flaw_SuperMoodyAura_Debuff</hediff>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_HiddenHediffBase">
+        <defName>SHG_Flaw_SuperMoodyAura_Debuff</defName>
+        <label>super moody aura debuff</label>
+        <description>Be sad.</description>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <showRemainingTime>false</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_HiddenHediffBase">
+        <defName>SHG_Flaw_OverchargedPocket</defName>
+        <label>overcharged pocket</label>
+        <description>Try not to die or you'll probably end up killing everyone around you.</description>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_ExplodeOnDeath">
+                <radius>25</radius>
+                <damageDef>BombSuper</damageDef>
+                <damageAmount>250</damageAmount>
+                <injureSelf>True</injureSelf>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+        <defName>SHG_Flaw_Moonbound</defName>
+        <label>moonbound</label>
+        <description>If standing in an area with over 40% brightness, this psionist will lose all psychic sensitivity.</description>
+        <stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>1</minSeverity>
+                <statFactors>
+                    <PsychicSensitivity>0</PsychicSensitivity>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_InvisibleAtStage">
+                <invisibleStages>
+                    <li>1</li>
+                </invisibleStages>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityByLightLevel">
+                <lightToSeverityCurve>
+                    <points>
+                        <li>(0, 0.9)</li>
+                        <li>(0.4, 1)</li>
+                    </points>
+                </lightToSeverityCurve>
+                <timeToSeverityCurve>
+                    <points>
+                        <li>(0, 0.9)</li>
+                        <li>(0.25, 1)</li>
+                        <li>(0.75, 1)</li>
+                        <li>(1, 0.9)</li>
+                    </points>
+                </timeToSeverityCurve>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="SHG_SpecialHediffBase" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+        <defName>SHG_Flaw_Sunbound</defName>
+        <label>sunbound</label>
+        <description>If standing in an area with under 60% brightness, this psionist will lose all psychic sensitivity.</description>
+        <stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+            </li>
+            <li>
+                <minSeverity>1</minSeverity>
+                <statFactors>
+                    <PsychicSensitivity>0</PsychicSensitivity>
+                </statFactors>
+            </li>
+        </stages>
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_InvisibleAtStage">
+                <invisibleStages>
+                    <li>1</li>
+                </invisibleStages>
+            </li>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_SeverityByLightLevel">
+                <lightToSeverityCurve>
+                    <points>
+                        <li>(0.6, 1)</li>
+                        <li>(1, 0.9)</li>
+                    </points>
+                </lightToSeverityCurve>
+                <timeToSeverityCurve>
+                    <points>
+                        <li>(0, 1)</li>
+                        <li>(0.25, 0.9)</li>
+                        <li>(0.75, 0.9)</li>
+                        <li>(1, 1)</li>
+                    </points>
+                </timeToSeverityCurve>
+            </li>
+        </comps>
+    </HediffDef>
+</Defs>

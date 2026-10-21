@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersPsychicDebufferBase">
+        <defName>SHG_Psionist_Debuffer</defName>
+        <label>psionic debuffer</label>
+        <description>Psionic Debuffers create constant auras around them that make their enemies easier to kill.</description>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_Debuffer</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>2.0</MeditationFocusGain>
+        </statFactors>
+        <exclusionTags>
+            <li>SHG_PsionicDebuffer</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Psionist_Debuffer_Base</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDebufferBase">
+        <defName>SHG_Psionist_TunnelVisionAura</defName>
+        <label>tunnel vision aura</label>
+        <description>This gene creates a constant aura that decrease accuracy and melee dodge chance.</description>
+        <prerequisite>SHG_Psionist_Debuffer</prerequisite>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_TunnelVisionAura</iconPath>
+        <displayOrderInCategory>0.1</displayOrderInCategory>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Psionist_TunnelVisionAura</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDebufferBase">
+        <defName>SHG_Psionist_MolassesAura</defName>
+        <label>molasses aura</label>
+        <description>This gene creates a constant aura that decrease move speed and melee dodge chance.</description>
+        <prerequisite>SHG_Psionist_Debuffer</prerequisite>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_MolassesAura</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <displayOrderInCategory>0.2</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Psionist_MolassesAura</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDebufferBase">
+        <defName>SHG_Psionist_PsychicAlterationAura</defName>
+        <label>psychic alteration aura</label>
+        <description>This gene creates a constant aura that alters psychic sensitivity.</description>
+        <prerequisite>SHG_Psionist_Debuffer</prerequisite>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_PsychicAlterationAura</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <displayOrderInCategory>0.3</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Psionist_PsychicAura_Sensitive</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDebufferBase">
+        <defName>SHG_Psionist_AuraBurst</defName>
+        <label>aura burst</label>
+        <description>Psionists with this gene can expand their aura temporarily by releasing large amounts of energy at once.</description>
+        <prerequisite>SHG_Psionist_Debuffer</prerequisite>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_AuraBurst</iconPath>
+        <displayOrderInCategory>0.4</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Psionist_AuraBurst</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_AuraBurst</AbilityDef>
+        </descriptionHyperlinks>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDebufferBase">
+        <defName>SHG_Psionist_DebufferDebilitator</defName>
+        <label>psionic debilitator</label>
+        <description>Psionic Debilitators often have auras that go into the bodies of their enemies directly, making their enemies much easier to kill.</description>
+        <prerequisite>SHG_Psionist_Debuffer</prerequisite>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_DebufferDebilitator</iconPath>
+        <displayOrderInCategory>5</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>2.0</MeditationFocusGain>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDebufferBase">
+        <defName>SHG_Psionist_GlassAura</defName>
+        <label>glass aura</label>
+        <description>This gene creates a constant aura that reduces innate armor and healing rate.</description>
+        <prerequisite>SHG_Psionist_DebufferDebilitator</prerequisite>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_GlassAura</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <displayOrderInCategory>5.1</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Psionist_GlassAura</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDebufferBase">
+        <defName>SHG_Psionist_WoundErodingAura</defName>
+        <label>wound eroding aura</label>
+        <description>This gene creates a constant aura that constantly worsens the wounds of their enemies.</description>
+        <prerequisite>SHG_Psionist_DebufferDebilitator</prerequisite>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_WoundErodingAura</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <displayOrderInCategory>5.2</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Psionist_WoundErodingAura</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDebufferBase">
+        <defName>SHG_Psionist_EnergyBurnerAura</defName>
+        <label>energy burning aura</label>
+        <description>This gene creates a constant aura that constantly drains nutrition and strength of their enemies.</description>
+        <prerequisite>SHG_Psionist_DebufferDebilitator</prerequisite>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_EnergyBurnerAura</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <displayOrderInCategory>5.3</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Psionist_EnergyBurnerAura</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDebufferBase">
+        <defName>SHG_Psionist_ChannelAura</defName>
+        <label>channel aura</label>
+        <description>Psionists with this gene gain access to a stronger variation of aura burst that stuns the debuffer and gives them a psychic shield.</description>
+        <prerequisite>SHG_Psionist_DebufferDebilitator</prerequisite>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_ChannelAura</iconPath>
+        <displayOrderInCategory>5.4</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Psionist_ChannelAura</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_ChannelAura</AbilityDef>
+        </descriptionHyperlinks>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDebufferBase">
+        <defName>SHG_Psionist_DebufferRuiner</defName>
+        <label>psionic ruiner</label>
+        <description>Psionic Ruiners tend to have few enemies that survive the first battle due to their ability to make large numbers of enemies vulnerable at the same time.</description>
+        <prerequisite>SHG_Psionist_DebufferDebilitator</prerequisite>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_DebufferRuiner</iconPath>
+        <displayOrderInCategory>10</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>2.0</MeditationFocusGain>
+        </statFactors>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDebufferBase">
+        <defName>SHG_Psionist_NauseousAura</defName>
+        <label>nauseous aura</label>
+        <description>This gene creates a constant aura that makes nearby enemies have to stop to vomit frequently.</description>
+        <prerequisite>SHG_Psionist_DebufferRuiner</prerequisite>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_NauseousAura</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <displayOrderInCategory>10.1</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Psionist_NauseousAura</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDebufferBase">
+        <defName>SHG_Psionist_SiphonAura</defName>
+        <label>siphon aura</label>
+        <description>This gene creates a constant aura that makes nearby non-player pawns take more damage, heal slower, and gain immunity slower, while also granting the carrier regeneration, immunity gain, and damage reduction based on the number of nearby non-player pawns.</description>
+        <prerequisite>SHG_Psionist_DebufferRuiner</prerequisite>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_SiphonAura</iconPath>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <displayOrderInCategory>10.2</displayOrderInCategory>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <hediffsToApply><li><hediff>SHG_Psionist_SiphonAura</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersPsychicDebufferBase">
+        <defName>SHG_Psionist_RuinTheWorld</defName>
+        <label>ruin the world</label>
+        <description>Psionists with this gene gain access to a stronger variation of channel aura that extends the range even more.</description>
+        <prerequisite>SHG_Psionist_DebufferRuiner</prerequisite>
+        <iconPath>Psionist/Debuffer/Gene_Psionist_RuinTheWorld</iconPath>
+        <displayOrderInCategory>10.3</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Psionist_RuinTheWorld</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>SHG_Psionist_RuinTheWorld</AbilityDef>
+        </descriptionHyperlinks>
+        <statFactors>
+            <MeditationFocusGain>0.9</MeditationFocusGain>
+        </statFactors>
+    </GeneDef>
+</Defs>

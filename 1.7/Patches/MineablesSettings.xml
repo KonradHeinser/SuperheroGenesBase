@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>smallerMineableSilver</setting>
+        <active Class="SuperHeroGenesBase.PatchOperationMultSetting">
+            <xpath>Defs/ThingDef[defName="SHG_MineableSilver"]/building/mineableYield</xpath>
+            <mult>0.1</mult>
+            <min>40</min>
+        </active>
+    </Operation>
+
+    <!--Handles all mineables except the components due to those having lower minimums-->
+    <Operation Class="SuperHeroGenesBase.PatchOperationMultSetting">
+        <setting>mineableMultiplier</setting>
+        <xpath>Defs/ThingDef[@ParentName="SHG_MineableResourceBase" and not(defName="SHG_MineableComponentsIndustrial") and not(defName="SHG_MineableComponentsSpacer")]/building/mineableYield</xpath>
+        <min>40</min>
+    </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationMultSetting">
+        <setting>mineableMultiplier</setting>
+        <xpath>Defs/ThingDef[defName="SHG_MineableComponentsIndustrial"]/building/mineableYield</xpath>
+        <min>4</min>
+    </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationMultSetting">
+        <setting>mineableMultiplier</setting>
+        <xpath>Defs/ThingDef[defName="SHG_MineableComponentsSpacer"]/building/mineableYield</xpath>
+        <min>2</min>
+    </Operation>
+</Patch>

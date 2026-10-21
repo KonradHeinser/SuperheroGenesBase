@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="SuperPowersRadiomancyFissionBase">
+        <defName>SHG_Radiomancer_RampantRegeneration</defName>
+        <label>rampant regeneration</label>
+        <description>Radiomancers with this gene can inject some radioactive energy into a pawn's blood to cause them to start recovering from wounds at an unbelievable pace.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_RampantRegeneration</iconPath>
+        <displayOrderInCategory>0</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Radiomancer_RampantRegeneration</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyFissionBase">
+        <defName>SHG_Radiomancer_MiniatureSun</defName>
+        <label>miniature sun</label>
+        <description>Radiomancers with this gene can create an exceptionally small star that lets out a massive amount of heat and light, and dissipates after one day.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_MiniatureSun</iconPath>
+        <displayOrderInCategory>1</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>If the radiomancer has the solar recharging gene, standing next to this will recharge them.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_MiniatureSun</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyFissionBase">
+        <defName>SHG_Radiomancer_ExcitableCells</defName>
+        <label>excitable cells</label>
+        <description>Radiomancers with this gene can inject some radioactive energy into a pawn's blood to cause them to start recovering from infections at an unbelievable rate.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_ExcitableCells</iconPath>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Radiomancer_ExcitableCells</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyFissionBase">
+        <defName>SHG_Radiomancer_EverEvolving</defName>
+        <label>ever-evolving</label>
+        <description>Radiomancers with this gene can use a large amount of radiation to permanently alter their somatic cells, permanently reducing their food need and giving them a chance to gain a random Radiomancer gene.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_EverEvolving</iconPath>
+        <displayOrderInCategory>3</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>The more radiomancer genes the pawn has, the less likely they are to gain a new one.</li>
+            <li>It will take the pawn over a decade to reach the maximum bonus from ever evolving (foodless).</li>
+            <li>Genes generated through the ability can't be inherited, though they can be extracted.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_EverEvolving</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyFissionBase">
+        <defName>SHG_Radiomancer_Mutate</defName>
+        <label>mutate</label>
+        <description>Radiomancers with this gene can use a small amount of radiation to forcefully gain a genetic super mutation, replacing any existing one they may have had.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_Mutate</iconPath>
+        <displayOrderInCategory>4</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Radiomancer_Mutate</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyFissionBase">
+        <defName>SHG_Radiomancer_ReformPart</defName>
+        <label>reform part</label>
+        <description>Radiomancers with this gene can focus a bunch of radiation on the cells in an area to cause rapid cellular reconstruction of a missing part.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_ReformPart</iconPath>
+        <displayOrderInCategory>5</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Radiomancer_ReformPart</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyFissionBase">
+        <defName>SHG_Radiomancer_ReverseAging</defName>
+        <label>reverse aging</label>
+        <description>Radiomancers with this gene can apply a small amount of radiation on another pawn to rejuvenate internal parts, reducing the pawn's biological age by a year.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_ReverseAging</iconPath>
+        <displayOrderInCategory>6</displayOrderInCategory>
+        <abilities>
+            <li>SHG_Radiomancer_ReverseAging</li>
+        </abilities>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperPowersRadiomancyFissionBase">
+        <defName>SHG_Radiomancer_RefocusEnergy</defName>
+        <label>refocus energy</label>
+        <description>Radiomancers with this gene can use their body's internal reserve of energy as either a source or a storage, increasing or decreasing rest fall rate for a couple days when the related ability is used, and also locking the other one for a couple days.</description>
+        <iconPath>Radiomancer/Fission/Gene_Radiomancer_RefocusEnergy_Wakefulness</iconPath>
+        <displayOrderInCategory>7</displayOrderInCategory>
+        <customEffectDescriptions>
+            <li>If the radiomancer also has the Never Sleep gene, then they will not gain nor lose anything from using the abilities, mostly turning them into generic generators and burners. The locking will still be present.</li>
+        </customEffectDescriptions>
+        <abilities>
+            <li>SHG_Radiomancer_RefocusEnergy_Wakefulness</li>
+            <li>SHG_Radiomancer_RefocusEnergy_Sleepy</li>
+        </abilities>
+    </GeneDef>
+</Defs>
