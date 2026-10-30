@@ -20,7 +20,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef ParentName="SHG_SpecialHediffBase">
+    <HediffDef ParentName="SHG_SpecialHediffBase" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
         <defName>SHG_Invisibility</defName>
         <label>invisible super</label>
         <description>This super has become invisible to the naked eye.</description>

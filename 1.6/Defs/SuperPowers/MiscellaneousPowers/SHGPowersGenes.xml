@@ -139,7 +139,7 @@
         </exclusionTags>
     </GeneDef>
 
-    <GeneDef ParentName="SuperPowersSupportBase">
+    <GeneDef ParentName="SuperPowersSupportBase" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
         <defName>SHG_Invisibility</defName>
         <label>invisibility</label>
         <description>Supers with this gene are able to turn invisible for a short time every few hours.</description>

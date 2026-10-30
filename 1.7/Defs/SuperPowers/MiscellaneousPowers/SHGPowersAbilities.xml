@@ -164,7 +164,7 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHGPowerAbilitiesBase">
+    <AbilityDef ParentName="SHGPowerAbilitiesBase" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
         <defName>SHG_Invisibility</defName>
         <label>invisibility</label>
         <description>Become invisible for some time. This is quite taxing on the body, so it can only be maintained for a quarter of an hour, and requires a few hours to recharge.</description>

@@ -750,12 +750,12 @@
         <abilities>
             <li>SHG_Pools_EmergencyShutdown</li>
             <li>SHG_HackMech</li>
-            <li>SHG_Invisibility</li>
+            <li MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">SHG_Invisibility</li>
         </abilities>
         <descriptionHyperlinks>
             <AbilityDef>SHG_Pools_EmergencyShutdown</AbilityDef>
             <AbilityDef>SHG_HackMech</AbilityDef>
-            <AbilityDef>SHG_Invisibility</AbilityDef>
+            <AbilityDef MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">SHG_Invisibility</AbilityDef>
         </descriptionHyperlinks>
         <exclusionTags>
             <li>Archetypes_HackerShutdown</li>
@@ -945,7 +945,7 @@
         </symbolPack>
     </GeneDef>
 
-    <GeneDef ParentName="SHG_ArchetypeBase">
+    <GeneDef ParentName="SHG_ArchetypeBase" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
         <defName>SHG_Archetypes_Phantom</defName>
         <label>phantom</label>
         <description>Phantoms are master assassins, capable of ignoring every minefield and barricade in their way, while also having the ability to camouflage themselves in any environment. When their invisibility falls, they become easier to stop, but by then it may be too late.</description>

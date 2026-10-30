@@ -14,7 +14,7 @@
                                         <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasGene">
                                             <gene>SuperHeroBase</gene>
                                             <subNodes>
-                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                                <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
                                                     <ability>SHG_Invisibility</ability>
                                                     <subNodes>
                                                         <li Class="JobGiver_AICastAbilityOnSelf">

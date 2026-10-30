@@ -212,7 +212,7 @@
                         <xpath>Defs/AbilityDef[@Name="SHG_Radiomancer_DrainLinkAbility"]/cooldownTicksRange</xpath>
                         <value><cooldownTicksRange>15000</cooldownTicksRange></value>
                     </li>
-                    <li Class="PatchOperationReplace">
+                    <li Class="PatchOperationReplace" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
                         <xpath>Defs/AbilityDef[defName="SHG_Invisibility"]/cooldownTicksRange</xpath>
                         <value><cooldownTicksRange>15000</cooldownTicksRange></value>
                     </li>
@@ -312,7 +312,7 @@
                         <xpath>Defs/AbilityDef[@Name="SHG_Radiomancer_DrainLinkAbility"]/cooldownTicksRange</xpath>
                         <value><cooldownTicksRange>30000</cooldownTicksRange></value>
                     </li>
-                    <li Class="PatchOperationReplace">
+                    <li Class="PatchOperationReplace" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
                         <xpath>Defs/AbilityDef[defName="SHG_Invisibility"]/cooldownTicksRange</xpath>
                         <value><cooldownTicksRange>30000</cooldownTicksRange></value>
                     </li>
@@ -412,7 +412,7 @@
                         <xpath>Defs/AbilityDef[@Name="SHG_Radiomancer_DrainLinkAbility"]/cooldownTicksRange</xpath>
                         <value><cooldownTicksRange>60000</cooldownTicksRange></value>
                     </li>
-                    <li Class="PatchOperationReplace">
+                    <li Class="PatchOperationReplace" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
                         <xpath>Defs/AbilityDef[defName="SHG_Invisibility"]/cooldownTicksRange</xpath>
                         <value><cooldownTicksRange>60000</cooldownTicksRange></value>
                     </li>
