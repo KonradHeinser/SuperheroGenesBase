@@ -159,7 +159,7 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHG_HemoShifter_ShiftAbilityBase">
+    <AbilityDef ParentName="SHG_HemoShifter_ShiftAbilityBase" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
         <defName>SHG_Hemomancer_Chameleon</defName>
         <label>hemoshift(chameleon)</label>
         <description>Gain an ability to turn invisible.</description>
@@ -271,7 +271,7 @@
         </comps>
     </AbilityDef>
 
-    <AbilityDef ParentName="SHGHemomancyBase">
+    <AbilityDef ParentName="SHGHemomancyBase" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
         <defName>SHG_Hemomancer_ShiftChameleonInvisibility</defName>
         <label>chameleon</label>
         <description>Use a large amount of hemogen to become invisible for half an hour. Successive uses will extend the duration by another hour.</description>

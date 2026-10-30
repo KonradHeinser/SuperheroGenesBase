@@ -163,7 +163,7 @@
 		</comps>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_SpecialHediffBase">
+    <HediffDef ParentName="SHG_SpecialHediffBase" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
         <defName>SHG_Hemomancer_ChameleonInvisibility</defName>
         <label>chameleon</label>
         <description>This hemomorph is blending into their surroundings.</description>

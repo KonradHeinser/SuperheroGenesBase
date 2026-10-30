@@ -341,7 +341,7 @@
                                 <li>AntisuperIntelligence</li>
                             </geneSet>
                         </li>
-                        <li> <!--Phantom-->
+                        <li MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty"> <!--Phantom-->
                             <geneSet>
                                 <li>SHG_Archetypes_Phantom</li>
                                 <li>UnsuperPerception</li>

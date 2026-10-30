@@ -140,7 +140,7 @@
                     <li><geneSet><li>SHG_Hemomancer_Snake</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_Starfish</li></geneSet></li>
                     <li><geneSet><li>SHG_Hemomancer_Bear</li></geneSet></li>
-                    <li><geneSet><li>SHG_Hemomancer_Chameleon</li></geneSet></li>
+                    <li MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty"><geneSet><li>SHG_Hemomancer_Chameleon</li></geneSet></li>
 
                     <!--Thief-->
                     <li><geneSet><li>SHG_Hemomancer_Thief</li></geneSet></li>

@@ -28,4 +28,14 @@
 		<li IfModActive="Ludeon.Rimworld.Royalty">1.6/Royalty</li>
 		<li IfModActive="Ludeon.Rimworld.Ideology">1.6/Ideology</li>
 	</v1.6>
+	<v1.7>
+		<li>/</li>
+		<li>1.7</li>
+		<li IfModActive="vanillaexpanded.achievements">1.7/Mods/VAE</li>
+		<li IfModActive="RedMattis.BetterPrerequisites">1.7/Mods/BIGsmall</li>
+		<li IfModActive="EBSG.Framework">1.7/Mods/EBSG</li>
+		<li IfModActive="Grimworld.Core">1.7/Mods/Grimworld</li>
+		<li IfModActive="Ludeon.Rimworld.Royalty">1.7/Royalty</li>
+		<li IfModActive="Ludeon.Rimworld.Ideology">1.7/Ideology</li>
+	</v1.7>
 </loadFolders>
