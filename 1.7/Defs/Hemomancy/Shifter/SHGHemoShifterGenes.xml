@@ -151,7 +151,7 @@
         </descriptionHyperlinks>
     </GeneDef>
 
-    <GeneDef ParentName="SuperPowersHemoShifterBase">
+    <GeneDef ParentName="SuperPowersHemoShifterBase" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
         <defName>SHG_Hemomancer_Chameleon</defName>
         <label>hemoshift(chameleon)</label>
         <description>Hemomorphs with this gene can alter their body to gain an ability to turn invisible.</description>

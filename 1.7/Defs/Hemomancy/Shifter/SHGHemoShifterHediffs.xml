@@ -109,7 +109,7 @@
                         <minSeverity>6.0</minSeverity>
                         <maxSeverity>6.9</maxSeverity>
                     </li>
-                    <li>
+                    <li MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
                         <abilityDef>SHG_Hemomancer_ShiftChameleonInvisibility</abilityDef>
                         <minSeverity>7.0</minSeverity>
                         <maxSeverity>7.9</maxSeverity>
@@ -163,7 +163,7 @@
 		</comps>
 	</HediffDef>
 
-    <HediffDef ParentName="SHG_SpecialHediffBase">
+    <HediffDef ParentName="SHG_SpecialHediffBase" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
         <defName>SHG_Hemomancer_ChameleonInvisibility</defName>
         <label>chameleon</label>
         <description>This hemomorph is blending into their surroundings.</description>

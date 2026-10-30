@@ -587,7 +587,7 @@
                             <geneSet>
                                 <li>SHG_Hemomancer_Shifter</li>
                                 <li>SHG_Hemomancer_Morph</li>
-                                <li>SHG_Hemomancer_Chameleon</li>
+                                <li MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">SHG_Hemomancer_Chameleon</li>
                                 <li>SHG_Hemomancer_Bear</li>
                                 <li>SHG_Hemomancer_Snake</li>
                                 <li>SHG_Hemomancer_Starfish</li>

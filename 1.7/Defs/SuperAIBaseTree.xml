@@ -345,7 +345,7 @@
                         <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHighResourceLevels">
                             <gene>Hemogenic</gene>
                             <subNodes>
-                                <li Class="ThinkNode_ConditionalHasAbility">
+                                <li Class="ThinkNode_ConditionalHasAbility" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
                                     <ability>SHG_Hemomancer_Snake</ability>
                                     <subNodes>
                                         <li Class="ThinkNode_ConditionalHasHediff">
