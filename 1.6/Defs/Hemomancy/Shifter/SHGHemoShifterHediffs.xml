@@ -109,7 +109,7 @@
                         <minSeverity>6.0</minSeverity>
                         <maxSeverity>6.9</maxSeverity>
                     </li>
-                    <li>
+                    <li MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
                         <abilityDef>SHG_Hemomancer_ShiftChameleonInvisibility</abilityDef>
                         <minSeverity>7.0</minSeverity>
                         <maxSeverity>7.9</maxSeverity>

@@ -67,7 +67,6 @@ namespace SuperHeroGenesBase
         {
             if (Pod == null)
                 return;
-
             Map map = parent.pawn.MapHeld;
             parent.pawn.GetLord()?.RemovePawn(parent.pawn);
             if (map != null)
@@ -114,7 +113,6 @@ namespace SuperHeroGenesBase
                     if (transport is FlyingPawn flyingPawn)
                         flyingPawn.pawn = parent.pawn;
                     ActiveTransporterInfo podInfo = new ActiveTransporterInfo();
-                    podInfo.innerContainer.TryAddRangeOrTransfer(caravan.AllThings);
                     podInfo.innerContainer.TryAddRangeOrTransfer(caravan.pawns);
                     podInfo.sentTransporterDef = SHGDefOf.SHG_FlightPod;
                     transport.AddTransporter(podInfo, false);
@@ -122,6 +120,7 @@ namespace SuperHeroGenesBase
                     caravan.Destroy();
                 }
             }
+            Log.Message("Z");
             transporter = null;
         }
 

@@ -72,11 +72,10 @@
                                                 </li>
                                             </subNodes>
                                         </li>
-                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable">
+                                        <li Class="SuperHeroGenesBase.ThinkNode_ConditionalHasAbilityUsable" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty">
                                             <ability>SHG_Hemomancer_ShiftChameleonInvisibility</ability>
                                             <subNodes>
-                                                <li Class="SuperHeroGenesBase.ThinkNode_RecordPassage" />
-                                                <li Class="JobGiver_AICastAbilityOnSelf"> 
+                                                <li Class="JobGiver_AICastAbilityOnSelf" MayRequireAnyOf="Ludeon.Rimworld.Anomaly,Ludeon.Rimworld.Royalty"> 
                                                     <ability>SHG_Hemomancer_ShiftChameleonInvisibility</ability>
                                                 </li>
                                             </subNodes>
